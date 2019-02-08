@@ -25,4 +25,4 @@ Hi, guys! The website you are previewing is a demonstration for Mundana Jekyll t
 
 Made with <i class="fa fa-heart text-danger"></i> by Sal [@wowthemesnet](https://www.wowthemes.net/category/free-themes-templates/).
 
-<a class="btn btn-success btn-round" href="{{site.baseurl}}/buy-me-a-coffee.html"><i class="fa fa-download"></i> Free Download</a> <a class="btn btn-warning btn-round" href="{{site.baseurl}}/buy-me-a-coffee.html"><i class="fa fa-coffee"></i> Buy me a coffee</a>
+<a class="btn btn-warning btn-round" href="{{site.baseurl}}/buy-me-a-coffee.html"><i class="fa fa-coffee"></i> Buy me a coffee</a>

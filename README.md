@@ -48,21 +48,21 @@ image: "/assets/images/screenshot.jpg"
 
 ### Contribute to Mundana repository
 
-1. In the top-right corner of this page, click Fork.
+1. In the top-right corner of this page, click **Fork**.
 
 2. `git clone https://github.com/YOUR-USERNAME/mundana-theme-jekyll`
 
-Now, you have a local copy of your fork of Mundana Theme Jekyll repository.
+Now, **you have a local copy of your fork** of Mundana Theme Jekyll repository.
 
-3. Create a branch: `git checkout -b <my-new-feature-or-fix>`
+3. **Create a branch**: `git checkout -b <my-new-feature-or-fix>`
 
-4. Make necessary changes and commit those changes:
+4. **Make necessary changes and commit those changes**:
 
 `git add .`
 
 `git commit -m "new feature or fix"`
 
-5. Push changes:
+5. **Push changes**:
 
 `git push origin <add-your-branch-name>`
 
@@ -70,7 +70,7 @@ Replacing `<add-your-branch-name>` with the name of the branch you created earli
 
 6. Submit your changes for review. Go to your repository on GitHub, you'll see a **Compare & pull request** button. Click on that button. Now submit the pull request.
 
-That's it! Soon I'll be merging all your changes into the master branch of this project. You will get a notification email once the changes have been merged. Thank you for your contribution.
+That's it! Soon I'll be merging your changes into the master branch of this project. You will get a notification email once the changes have been merged. Thank you for your contribution.
 
 
 ### Copyright

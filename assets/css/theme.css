@@ -578,6 +578,9 @@ footer {
 .sticky-top-offset {   
     top: 100px;
 }
+.homefirstpage .main-loop .main-loop-card:nth-child(-n+5) {
+    display:none !important;
+}
 article {
   font-size: 20px;
   line-height: 1.7; }

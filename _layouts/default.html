@@ -32,7 +32,7 @@
     
 </head>
     
-<body>
+<body class="{% if page.url == "/" %} homefirstpage {% endif %}">
     
     <!-- Navbar -->
     <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
@@ -78,18 +78,11 @@
         <div class="container">
         <div class="row align-items-center justify-content-between">
             <div>
-                <span class="navbar-brand mr-2 mb-0"><strong>Mundana</strong></span> Copyright ©
-                <script>document.write(new Date().getFullYear())</script>
-                 . All rights reserved.
-
-                <!--  Replace footer social links here -->
-
-                <li class="d-inline-block ml-1 mr-1"><a target="_blank" href="https://www.facebook.com/wowthemesnet" class="text-muted"><i class="fab fa-facebook-f"></i></a>
-                </li>
-
-                <li class="d-inline-block ml-1 mr-1"><a target="_blank" href="https://github.com/wowthemesnet" class="text-muted"><i class="fab fa-github"></i></a></li>
-
-                <li class="d-inline-block ml-1 mr-1"><a target="_blank" href="https://twitter.com/wowthemesnet" class="text-muted"><i class="fab fa-twitter"></i></a></li>
+                <span class="navbar-brand mr-2 mb-0"><strong>Mundana</strong></span> 
+                <span>Copyright © <script>document.write(new Date().getFullYear())</script>.</span>
+                
+                <!--  Github Repo Star Btn-->
+                <a class="text-dark ml-1" target="_blank" href="https://github.com/wowthemesnet/mundana-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
 
             </div>
             <div>

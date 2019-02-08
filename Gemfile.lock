@@ -29,8 +29,7 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.11.0)
       jekyll (~> 3.3)
-    jekyll-paginate-v2 (2.1.0)
-      jekyll (~> 3.0)
+    jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-seo-tag (2.5.0)
@@ -67,7 +66,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll-feed
-  jekyll-paginate-v2
+  jekyll-paginate
   jekyll-seo-tag
   jekyll-sitemap
   wdm (>= 0.1.0)

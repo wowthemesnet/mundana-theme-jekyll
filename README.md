@@ -13,6 +13,7 @@
 - [Download](https://github.com/wowthemesnet/mundana-theme-jekyll/archive/master.zip) or `git clone https://github.com/wowthemesnet/mundana-theme-jekyll.git`
 - In Mundana's newly created directory `bundle`
 - Change your configuration in `_config.yml`. If your site is in root, for `baseurl`, make sure this is set to `baseurl: ''`
+- `jekyll serve --watch`
 
 ### Use
 
@@ -45,13 +46,31 @@ image: "/assets/images/screenshot.jpg"
 ---
 ```
 
-### Contribute
+### Contribute to Mundana repository
 
-- [Clone the repo](https://github.com/wowthemesnet/mundana-theme-jekyll).
-- Create a branch off of master and give it a meaningful name (e.g. this-new-feature).
-- Open a pull request on GitHub and describe the feature or fix.
+1. In the top-right corner of this page, click Fork.
 
-Thank you so much for your contribution!
+2. `git clone https://github.com/YOUR-USERNAME/mundana-theme-jekyll`
+
+Now, you have a local copy of your fork of Mundana Theme Jekyll repository.
+
+3. Create a branch: `git checkout -b <my-new-feature-or-fix>`
+
+4. Make necessary changes and commit those changes:
+
+`git add .`
+
+`git commit -m "new feature or fix"`
+
+5. Push changes:
+
+`git push origin <add-your-branch-name>`
+
+Replacing `<add-your-branch-name>` with the name of the branch you created earlier at step #3.
+
+6. Submit your changes for review. Go to your repository on GitHub, you'll see a **Compare & pull request** button. Click on that button. Now submit the pull request.
+
+That's it! Soon I'll be merging all your changes into the master branch of this project. You will get a notification email once the changes have been merged. Thank you for your contribution.
 
 
 ### Copyright

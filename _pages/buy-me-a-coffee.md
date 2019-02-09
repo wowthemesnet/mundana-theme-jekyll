@@ -12,7 +12,7 @@ Thank you so much!
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 
 <!-- Identify your business so that you can collect the payments. -->
-<input type="hidden" name="business" value="saleswowthemes@gmail.com">
+<input type="hidden" name="business" value="F8CU3MPC2LA72">
 
 <!-- Identify the message of the kind contributor. -->
 <input type="hidden" name="contributor-message" value="Your message">

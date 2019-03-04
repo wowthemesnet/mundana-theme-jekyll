@@ -9,4 +9,4 @@ You have my permission to use the free items I develop in your personal, commerc
 
 Thank you so much!
 
-<a class="btn btn-danger" href="https://www.wowthemes.net/donate/">Buy me a coffe</a>
+<a class="btn btn-danger" href="https://www.wowthemes.net/donate/">Buy me a coffee</a>

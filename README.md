@@ -2,7 +2,7 @@
 
 [Live Demo](https://wowthemesnet.github.io/mundana-theme-jekyll/) &nbsp; | &nbsp; 
 [Download](https://github.com/wowthemesnet/mundana-theme-jekyll/archive/master.zip) &nbsp; | &nbsp; 
-[Buy me a coffe](https://wowthemesnet.github.io/mundana-theme-jekyll//buy-me-a-coffee.html)
+[Buy me a coffe](https://www.wowthemes.net/donate/)
 
 ![mundana jekyll theme screenshot](assets/images/screenshot.jpg)
 

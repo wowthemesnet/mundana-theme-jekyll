@@ -9,7 +9,7 @@
 
 ### Documentation
 
-(How to install & use)[https://bootstrapstarter.com/bootstrap-templates/mundana-theme-jekyll/]
+[How to install & use](https://bootstrapstarter.com/bootstrap-templates/mundana-theme-jekyll/)
 
 ### Contribute to Mundana repository
 

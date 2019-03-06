@@ -7,43 +7,9 @@
 
 ![mundana jekyll theme screenshot](assets/images/screenshot.jpg)
 
-### Install Mundana
+### Documentation
 
-- [Download](https://github.com/wowthemesnet/mundana-theme-jekyll/archive/master.zip) or `git clone https://github.com/wowthemesnet/mundana-theme-jekyll.git`
-- In Mundana's newly created directory `bundle`
-- Change your configuration in `_config.yml`. If your site is in root, for `baseurl`, make sure this is set to `baseurl: ''`
-- `jekyll serve --watch`
-
-### Use
-
-**YAML Post Example**:
-
-```
----
-layout: post
-title:  "We all wait for summer"
-author: john
-categories: [ Jekyll, tutorial ]
-image: assets/images/5.jpg
----
-```
-
-`comments: false` - disable comments in posts
-
-`image: "https://www.myexternal.com/image.jpg"`  - set external featured image
-
-`tags: [featured]` - to display Featured posts on homepage
-
-
-**YAML Page Example**:
-
-```
----
-title: "About"
-permalink: "/about.html"
-image: "/assets/images/screenshot.jpg"
----
-```
+Docs[https://bootstrapstarter.com/bootstrap-templates/mundana-theme-jekyll/]
 
 ### Contribute to Mundana repository
 

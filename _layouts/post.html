@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% assign author = site.data.authors[page.author] %}
+{% assign author = site.authors[page.author] %}
 <div class="container">
 <div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
 		<div class="h-100 tofront">
@@ -10,11 +10,11 @@ layout: default
 					<p class="text-uppercase font-weight-bold">
                         <span class="catlist">
 						{% for category in page.categories %}
-                          <a class="text-danger" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category | downcase }}</a><span class="sep">, </span>
+                          <a class="sscroll text-danger" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category | downcase }}</a><span class="sep">, </span>
                         {% endfor %}
                         </span>
 					</p>
-					<h1 class="display-4 mb-3 font-weight-bold">{{ page.title }}</h1>
+					<h1 class="display-4 mb-4 article-headline">{{ page.title }}</h1>
 					<div class="d-flex align-items-center">
                         {% if author.avatar %}
                         <img class="rounded-circle" src="{{site.baseurl}}/{{author.avatar}}" alt="{{author.name}}" width="70"/>
@@ -38,7 +38,7 @@ layout: default
 
 
 
-<div class="container pt-4 pb-4">
+<div class="container-lg pt-4 pb-4">
 	<div class="row justify-content-center">
         
         

@@ -7,15 +7,17 @@ permalink: "/categories.html"
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-        <h1 class="font-weight-bold title h6 text-uppercase">Categories</h1>
+        <h1 class="font-weight-bold title h6 text-uppercase mb-4">Categories</h1>
             
         {% for category in site.categories %} 
-        <h3 class="mt-4 text-capitalize font-weight-bold" id="{{ category[0] | downcase }}">{{ category[0] }}</h3><hr>
+        <h4 class="font-weight-bold spanborder text-capitalize" id="{{ category[0] | downcase }}"><span>{{ category[0] }}</span></h4>
+            
         {% assign pages_list = category[1] %}
         {% for post in pages_list %}
         {% if post.title != null %}
           {% if group == null or group == post.group %}
-          <li><a class="text-muted" href="{{site.baseurl}}/{{post.url}}">{{ post.title }}</a></li>
+         
+            {% include main-loop-card.html %}
           {% endif %}
         {% endif %}
         {% endfor %}
@@ -25,5 +27,10 @@ permalink: "/categories.html"
         {% endfor %}
 
         </div>
+        
+            <div class="col-md-4">
+        {% include sidebar-featured.html %}    
+    </div>
+        
     </div>
 </div>

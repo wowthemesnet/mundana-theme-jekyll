@@ -3290,7 +3290,7 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem; }
+  padding: 0.3rem 1rem; }
   .navbar > .container,
   .navbar > .container-fluid {
     display: flex;
@@ -7374,7 +7374,11 @@ html {
       max-width: 960px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1140px; } }
+      max-width: 1070px; } }
+.container-lg {
+    max-width:1140px;
+    margin: 0px auto;
+}
 
 .container-fluid {
   width: 100%;

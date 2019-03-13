@@ -11,25 +11,10 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
     
 {% if page.url == "/" %}
     
-<!-- Home Intro -->
-<div class="jumbotron jumbotron-fluid pt-0 pb-0 mb-2rem bg-lightblue position-relative remove-site-content-margin">
-    <div class="pl-4 pr-0 h-100 tofront">
-        <div class="row justify-content-between">
-            <div class="col-md-5 pt-6 pb-6 align-self-center">
-                <h1 class="mb-3 font-weight-bold">"Mundana" Jekyll Theme for Bloggers</h1>
-                <p class="mb-3">
-                    Beautifully crafted, Mundana is the perfect design for your Jekyll blog. Homepage, search, post article and category layouts available. Fully compatible with Github pages.
-                </p>
-                <a href="{{site.baseurl}}/about.html" class="btn btn-dark">Read More</a>
-            </div>
-            <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({{site.baseurl}}/assets/images/home.jpg);">	</div>
-        </div>
-    </div>
-</div>
     
     
 <!-- Begin post excerpts, let's highlight the first 4 posts on top -->
-<div class="row mb-2rem">
+<div class="row remove-site-content-margin">
     
     <!-- latest post -->
     {% assign latest_post = site.posts[0] %}
@@ -43,7 +28,7 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
     <a class="text-dark" href="{{site.baseurl}}{{latest_post.url}}">{{ latest_post.title }}</a>
     </h2>
     <p class="card-text">
-        <a class="text-muted" href="{{site.baseurl}}{{latest_post.url}}">{{ latest_post.excerpt | strip_html | strip_newlines | truncate: 136 }}</a>
+        <a class="excerpt" href="{{site.baseurl}}{{latest_post.url}}">{{ latest_post.excerpt | strip_html | strip_newlines | truncate: 136 }}</a>
     </p>
     <div>
         <small class="d-block text-muted">
@@ -146,11 +131,32 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
         
     </div>
     
-    
-    
 </div>
+    
+    
+    
+    
+<!-- Highlight (your own choice of highlighting a link, no post here) -->
+<div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mb-2rem bg-lightblue position-relative">
+    <div class="pl-4 pr-0 h-100 tofront">
+        <div class="row justify-content-between">
+            <div class="col-md-6 pt-6 pb-6 align-self-center">
+                <h1 class="mb-3">Could we reinvent the charm of old cities ?</h1>
+                <p class="mb-3 lead">
+                    Beautifully crafted, Mundana is the perfect design for your Jekyll blog. Fully compatible with Github pages.
+                </p>
+                <a href="{{site.baseurl}}/about.html" class="btn btn-dark">Read More</a>
+            </div>
+            <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({{site.baseurl}}/assets/images/home.jpg);">	</div>
+        </div>
+    </div>
+</div>
+    
 
-{% endif %}
+
+{% endif %} <!--endif page url is / -->
+    
+
 
 <!-- Now the rest of the posts with the usual loop but with an offset:4 on the first page so we can skeep the first 4 posts displayed above -->
     
@@ -163,33 +169,8 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
 
         {% for post in paginator.posts %}
         
-        <div class="mb-5 d-flex justify-content-between main-loop-card">
-            <div class="pr-3">
-                <h2 class="mb-1 h4 font-weight-bold">
-                <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
-                </h2>
-                <p class="text-muted">
-                   {{ post.excerpt  | strip_html | strip_newlines | truncate: 186}}
-                </p>
-                <small class="d-block text-muted">
-                    In <span class="catlist">
-                    {% for category in post.categories %}
-                    <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
-                    {% endfor %}
-                    </span>
-                </small>
-                <small class="text-muted">
-                    {{ post.date | date: '%b %d, %Y' }}
-                </small>
-            </div>
-            {% if post.image %}
-                <div class="col-md-3 pr-0 text-right">
-                <a href="{{site.baseurl}}{{post.url}}">
-                <img class="w-100" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">
-                </a>
-                </div>
-            {% endif %}
-        </div>
+            {% include main-loop-card.html %}
+        
         {% endfor %}
         
         <div class="mt-5">
@@ -224,27 +205,7 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
     </div>
     
     <div class="col-md-4">
-        <div class="sticky-top sticky-top-offset">
-        <h4 class="font-weight-bold spanborder"><span>Featured</span></h4>  
-        <ol class="list-featured">				
-        {% for post in site.tags.featured %}                
-            <li class="mb-4">
-                <span>
-                <h6 class="font-weight-bold">
-                <a href="{{site.baseurl}}{{ post.url }}" class="text-dark">{{ post.title }}</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    {% for category in post.categories %}
-                    <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
-                    {% endfor %}
-                    </span>
-                </span>
-                </span>
-            </li>                
-        {% endfor %}   
-        </ol>
-        </div>       
+        {% include sidebar-featured.html %}    
     </div>
     
 </div>

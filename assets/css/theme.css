@@ -5,10 +5,9 @@
 body {
 	overflow-x:hidden;
 	padding-top:69.75px;
-	font-family:Nunito;
 }
 .site-content {
-	margin-top:50px;
+	margin-top:30px;
 	min-height:400px;
 }
 .remove-site-content-margin {
@@ -83,7 +82,7 @@ a.text-dark:hover {
 	border-radius:30px !important;
 }
 .btn {
-	padding:0.45rem 1.2rem;
+	padding:0.35rem 1.1rem;
 	font-size:1rem;
 	line-height:1.6;
 	border-radius:0.25rem;
@@ -189,7 +188,6 @@ a.text-dark:hover {
 	border-radius:0px 30px 30px 0px;
 }
 .navbar {
-	box-shadow:0 0px 1px 0 rgba(0,0,0,0.05);
 	transition:top 0.2s ease-in-out;
 	font-weight:400;
 }
@@ -206,7 +204,8 @@ a.text-dark:hover {
 }
 .navbar-brand {
 	margin-right:2rem;
-	font-size:1.45rem;
+	font-size:1.55rem;
+    font-family:"Georgia","Times New Roman",serif;
 }
 .dropdown-item {
 	font-weight:400;
@@ -296,6 +295,12 @@ a.text-dark:hover {
 		left:0;
 		right:0;
 	}
+    .jumbotron-home h1 {
+        font-family: Georgia,Times,"Times New Roman",serif;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.1;
+    }
 }
 .bg-black {
 	background-color:#000;
@@ -619,13 +624,13 @@ ol.list-featured li {
 	font-size:0.8rem;
 }
 ol.list-featured li:before {
-	content:"0" counter(my-awesome-counter);
-	font-weight:bold;
-	font-size:3rem;
-	margin-right:0.5rem;
-	font-family:'Abril Fatface',serif;
-	line-height:1;
-	opacity:.1;
+    content: "0" counter(my-awesome-counter);
+    font-weight: bold;
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    font-family: Arial;
+    line-height: 1;
+    opacity: .1;
 }
 .catlist .sep:last-child {
 	display:none;
@@ -641,9 +646,21 @@ footer {
 .homefirstpage .main-loop .main-loop-card:nth-child(-n+5) {
 	display:none !important;
 }
+.excerpt {
+    color: rgba(0,0,0,0.59);
+    margin-top:10px;
+}
 article {
 	font-size:20px;
-	line-height:1.7;
+	line-height:1.86;
+    font-family:Lora;
+}
+.article-headline {
+    font-family: Georgia,Times,"Times New Roman",serif;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 1.15;
+    color: #222222;
 }
 article p,article pre,article figure,article img,article blockquote,article iframed,article embed {
 	margin-bottom:2rem;
@@ -737,6 +754,11 @@ article h1,article h2,article h3,article h4,article h5,article h6,article .h1,ar
 		line-height:40px !important;
 		width:40px !important;
 	}
+    .a2a_mini_services .a2a_svg, .a2a_menu_show_more_less .a2a_svg, .a2a_full .a2a_svg {
+		height:20px !important;
+		line-height:20px !important;
+		width:20px !important;
+	}
 }
 @media (min-width:992px) {
 	.fixedsidebar {
@@ -759,3 +781,8 @@ article h1,article h2,article h3,article h4,article h5,article h6,article .h1,ar
 		margin-left: 260px;
 	}
 }
+a.a2a_i, i.a2a_i, .a2a_menu a.a2a_i:visited, .a2a_menu a.a2a_more {
+    font-size:13px !important;
+    color:#999 !important;
+}
+div.a2a_full_footer {display:none;}

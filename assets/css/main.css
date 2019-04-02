@@ -7377,7 +7377,10 @@ html {
       max-width: 1070px; } }
 .container-lg {
     max-width:1140px;
-    margin: 0px auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .container-fluid {

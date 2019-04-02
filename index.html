@@ -27,8 +27,8 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
     <h2 class="h4 font-weight-bold">
     <a class="text-dark" href="{{site.baseurl}}{{latest_post.url}}">{{ latest_post.title }}</a>
     </h2>
-    <p class="card-text">
-        <a class="excerpt" href="{{site.baseurl}}{{latest_post.url}}">{{ latest_post.excerpt | strip_html | strip_newlines | truncate: 136 }}</a>
+    <p class="excerpt">
+        {{ latest_post.excerpt | strip_html | strip_newlines | truncate: 136 }}
     </p>
     <div>
         <small class="d-block text-muted">
@@ -133,24 +133,28 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
     
 </div>
     
-    
-    
-    
-<!-- Highlight (your own choice of highlighting a link, no post here) -->
+<!-- Sticky - add sticky tag to the post you want to highlight here - tags: [sticky] -->
+{% for post in site.posts %} 
+{% if post.tags contains "sticky" %}
 <div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mb-2rem bg-lightblue position-relative">
     <div class="pl-4 pr-0 h-100 tofront">
         <div class="row justify-content-between">
-            <div class="col-md-6 pt-6 pb-6 align-self-center">
-                <h1 class="mb-3">Could we reinvent the charm of old cities ?</h1>
+            <div class="col-md-6 pt-6 pb-6 pr-lg-4 align-self-center">
+                <h1 class="mb-3">{{post.title}}</h1>
                 <p class="mb-3 lead">
-                    Beautifully crafted, Mundana is the perfect design for your Jekyll blog. Fully compatible with Github pages.
+                    {{ post.excerpt | strip_html | strip_newlines | truncate: 136 }}
                 </p>
-                <a href="{{site.baseurl}}/about.html" class="btn btn-dark">Read More</a>
+                <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark">Read More</a>
             </div>
-            <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({{site.baseurl}}/assets/images/home.jpg);">	</div>
+            <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({{post.image | absolute_url}});">	
+            </div>
         </div>
     </div>
-</div>
+</div> 
+{% endif %}
+{% endfor %}
+
+
     
 
 

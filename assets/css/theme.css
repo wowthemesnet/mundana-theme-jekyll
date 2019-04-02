@@ -235,6 +235,7 @@ a.text-dark:hover {
 }
 .navbar-light .navbar-nav .nav-link {
 	color:rgba(0,0,0,0.5);
+	font-size: .93rem;
 }
 .navbar-light .navbar-nav .nav-link:hover,.navbar-light .navbar-nav .nav-link:focus {
 	color:rgba(0,0,0,0.7);
@@ -641,7 +642,7 @@ footer {
 	position:relative;
 }
 .sticky-top-offset {
-	top:100px;
+	top:70px;
 }
 .homefirstpage .main-loop .main-loop-card:nth-child(-n+5) {
 	display:none !important;

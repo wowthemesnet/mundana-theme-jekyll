@@ -787,3 +787,20 @@ a.a2a_i, i.a2a_i, .a2a_menu a.a2a_i:visited, .a2a_menu a.a2a_more {
     color:#999 !important;
 }
 div.a2a_full_footer {display:none;}
+@media (min-width: 1920px) {
+	html {font-size:17px;}
+	.container, .container-lg {    
+	 width: 1522px;
+	 max-width: 1522px;
+	 }
+	 h6,.h6 { 
+		 font-size: 1.1rem; 
+	 }
+	 article {
+		 font-size:1.24rem;
+	 }
+	 .topfirstimage {
+		 height:280px !Important;
+	 }
+ }
+ 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Empieza a escribir en Problemon
-author: jane
+author: Xavi
 categories:
 - Jekyll
 - tutorial

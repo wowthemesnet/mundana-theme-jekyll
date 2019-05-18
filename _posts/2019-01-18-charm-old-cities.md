@@ -1,20 +1,27 @@
 ---
 layout: post
-title:  "Could we reinvent the charm of old cities"
+title: Empieza a escribir en Problemon
 author: jane
-categories: [ Jekyll, tutorial ]
+categories:
+- Jekyll
+- tutorial
 image: assets/images/home.jpg
-tags: [sticky]
+tags:
+- sticky
+
 ---
+### Nuestra Misión
 
-Bucharest’s history alternated periods of development and decline from the early settlements in antiquity until its consolidation as the national capital of Romania late in the 19th century. First mentioned as the “Citadel of București” in 1459, it became the residence of the famous Wallachian prince Vlad III the Impaler.
+En Problemón queremos poner al alcance de todos una plataforma en la que la gente pueda expresarse libremente, sin filtros. Un lugar en la que poder informarte e informar sin influencias externas. Para ello estamos buscando a personas que tengan algo que decir, personas que quieran compartir sus pensamientos y reflexiones con miles de lectores, para así crear un impacto real.
 
-#### Early 18th century woodcut of Bucharest
+### Programa de Recompensas
 
-The Ottomans appointed Greek administrators (Phanariotes) to run the town from the 18th century. A short-lived revolt initiated by Tudor Vladimirescu in 1821 led to the end of the rule of Constantinople Greeks in Bucharest.[19]
+Nuestro planteamiento es el siguiente: Funcionaremos por un sistema de publicidad estándar. Los beneficios los repartiremos entre los escritores basándonos en la repercusión de sus artículos.
 
-The Old Princely Court (Curtea Veche) was erected by Mircea Ciobanul in the mid-16th century. Under subsequent rulers, Bucharest was established as the summer residence of the royal court. During the years to come, it competed with Târgoviște on the status of capital city after an increase in the importance of southern Muntenia brought about by the demands of the suzerain power – the Ottoman Empire.
+Si estás interesado/a en escribir en [Problemon.com](http://problemon.com/) puedes registrarte [**aquí**](https://problemon.com/registration/).
 
-Bucharest finally became the permanent location of the Wallachian court after 1698 (starting with the reign of Constantin Brâncoveanu).
+[REGISTRATE](https://problemon.com/registration/)
 
-Partly destroyed by natural disasters and rebuilt several times during the following 200 years, and hit by Caragea’s plague in 1813–14, the city was wrested from Ottoman control and occupied at several intervals by the Habsburg Monarchy (1716, 1737, 1789) and Imperial Russia (three times between 1768 and 1806). It was placed under Russian administration between 1828 and the Crimean War, with an interlude during the Bucharest-centred 1848 Wallachian revolution. Later, an Austrian garrison took possession after the Russian departure (remaining in the city until March 1857). On 23 March 1847, a fire consumed about 2,000 buildings, destroying a third of the city.
+Por favor, si crees en este proyecto, sería de gran ayuda que lo compartieras con esas personas que creas que podrían estar interesadas en escribir o en leer el contenido de Problemon.
+
+Muchas gracias por tu interés, y no dudes en contactarnos si tienes cualquier duda!

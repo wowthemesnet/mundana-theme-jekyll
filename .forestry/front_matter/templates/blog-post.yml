@@ -24,5 +24,4 @@ fields:
     display_utc: false
   label: Fecha Publicacion
 pages:
-- _posts/prueba-cloud.md
 - _posts/2019-05-19-hello.md

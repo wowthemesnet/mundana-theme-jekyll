@@ -17,6 +17,8 @@ fields:
 - type: text
   name: email
   label: email
+  config:
+    required: true
 - type: text
   name: twitter
   label: twitter

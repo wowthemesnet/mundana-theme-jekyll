@@ -15,4 +15,4 @@ fields:
   name: image
   label: image
 pages:
-- _posts/hello.md
+- _posts/2019-05-19-hello.md

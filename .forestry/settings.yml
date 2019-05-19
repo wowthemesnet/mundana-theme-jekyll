@@ -19,10 +19,10 @@ sections:
 - type: jekyll-posts
   label: Posts
   create: all
-upload_dir: ''
-public_path: ''
-front_matter_path: ''
-use_front_matter_path: 
+upload_dir: image/upload
+public_path: https://res.cloudinary.com/problemon/image/upload/c_scale,w_auto:100,dpr_auto
+front_matter_path: https://res.cloudinary.com/problemon/image/upload
+use_front_matter_path: true
 file_template: ":filename:"
 build:
   preview_command: bundle exec jekyll build --drafts --unpublished --future -d _site

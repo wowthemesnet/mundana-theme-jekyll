@@ -26,6 +26,7 @@ defaults:
   - scope:
       path: "_posts"
     values:
+  # TODO: Replace deafult author
       layout: post
       author: sal
       avatar: /assets/images/avatar1.jpg

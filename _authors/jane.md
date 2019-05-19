@@ -6,3 +6,4 @@ jane:
   bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
   email:          fakemail@gmail.com
   twitter:        https://twitter.com/wowthemesnet
+---

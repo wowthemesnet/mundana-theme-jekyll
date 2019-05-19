@@ -1406,7 +1406,6 @@ lunr.TokenSet.fromString = function (str) {
       node.edges[char] = next
       node = next
 
-      // TODO: is this needed anymore?
       if (wildcardFound) {
         node.edges["*"] = root
       }

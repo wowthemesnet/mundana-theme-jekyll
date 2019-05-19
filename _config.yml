@@ -4,9 +4,9 @@ description: 'Comparte tu opinión con miles de personas.'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: ''
-disqus: 'demowebsite'
+disqus: 'problemon'
 email: 'hola@problemon.com'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+mailchimp-list: 'https://gmail.us20.list-manage.com/subscribe/post?u=2f67f9b0d76ee2852c1048af3&amp;id=309f4bd676'
 
 include: ["_pages"]
 permalink: /:title/

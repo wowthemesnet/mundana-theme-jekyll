@@ -22,6 +22,10 @@ fields:
 - type: text
   name: twitter
   label: twitter
+  default: https://www.facebook.com/Problemon-2066778243626498/
 - type: datetime
   name: registro
   label: registro
+  default: now
+  config:
+    date_format: DD/MM/YYYY

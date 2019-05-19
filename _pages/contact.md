@@ -1,6 +1,6 @@
 ---
-title: "Contact"
-permalink: "/contact.html"
+title: "Contacto"
+permalink: "/contacto.html"
 ---
 
 <form action="https://formspree.io/{{site.email}}" method="POST">    

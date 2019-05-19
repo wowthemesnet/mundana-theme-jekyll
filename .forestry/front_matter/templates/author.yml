@@ -1,0 +1,25 @@
+---
+label: Author
+hide_body: true
+fields:
+- type: text
+  name: name
+  label: name
+- type: text
+  name: site
+  label: site
+- type: file
+  name: avatar
+  label: avatar
+- type: text
+  name: bio
+  label: bio
+- type: text
+  name: email
+  label: email
+- type: text
+  name: twitter
+  label: twitter
+- type: datetime
+  name: registro
+  label: registro

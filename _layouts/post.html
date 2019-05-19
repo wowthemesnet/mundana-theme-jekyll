@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-{% assign author = site.authors[page.author] %}
+{% assign author = site.authors | where: 'name', page.author | first %}
+{% if author %}
 <div class="container">
 <div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
 		<div class="h-100 tofront">
@@ -29,6 +30,7 @@ layout: default
 					<img class="rounded" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
 				</div>
                 {% endif %}
+								{% endif %}
 			</div>
 		</div>
 	</div>
@@ -40,8 +42,8 @@ layout: default
 
 <div class="container-lg pt-4 pb-4">
 	<div class="row justify-content-center">
-        
-        
+
+
         <!-- Share -->
 		<div class="col-lg-2 pr-4 mb-4 col-md-12">
 			<div class="sticky-top sticky-top-offset text-center">
@@ -60,15 +62,15 @@ layout: default
 				</div>
 			</div>
 		</div>
-        
-        
+
+
 		<div class="col-md-12 col-lg-8">
-            
+
             <!-- Article -->
-			<article class="article-post">                
-			{{ content }}                
+			<article class="article-post">
+			{{ content }}
 			</article>
-			
+
 			<!-- Tags -->
 			<div class="mb-4">
 				<span class="taglist">
@@ -77,7 +79,7 @@ layout: default
 				{% endfor %}
 				</span>
 			</div>
- 
+
             <!-- Mailchimp Subscribe Form -->
             {% if site.mailchimp-list %}
 			<div class="border p-5 bg-lightblue">
@@ -90,12 +92,12 @@ layout: default
 						<div class="row">
                             <form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate w-100" target="_blank" novalidate>
                             <div class="mc-field-group">
-							
+
 								<input type="email" placeholder="Enter e-mail address" name="EMAIL" class="required email form-control w-100" id="mce-EMAIL" autocomplete="on" required>
-							
-							
+
+
 								<button type="submit" value="Subscribe" name="subscribe" class="heart btn btn-success btn-block w-100 mt-2">Subscribe</button>
-							
+
                             </div>
                             </form>
 						</div>
@@ -103,31 +105,31 @@ layout: default
 				</div>
 			</div>
             {% endif %}
-            
-            
+
+
              <!-- Author Box -->
-                {% if page.author %}				
+                {% if page.author %}
 				<div class="row mt-5">
 					<div class="col-md-2 align-self-center">
                          {% if author.avatar %}
                         <img class="rounded-circle" src="{{site.baseurl}}/{{author.avatar}}" alt="{{author.name}}" width="90"/>
-                        {% endif %} 
+                        {% endif %}
 					</div>
-					<div class="col-md-10">		
+					<div class="col-md-10">
                         <h5 class="font-weight-bold">Written by {{ author.name }} {% if author.twitter %}<span><a target="_blank" href="{{ author.twitter }}" class="btn btn-outline-success btn-sm btn-round ml-2">Follow</a></span>{% endif %}</h5>
-						{{ author.bio }}					
+						{{ author.bio }}
 					</div>
-				</div>				
+				</div>
                 {% endif %}
-            
+
             <!-- Comments -->
             {% if page.comments != false %}
                 {% include comments.html %}
             {% endif %}
-            
+
 		</div>
-        
-        
+
+
 	</div>
 </div>
 

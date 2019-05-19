@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "About Bundler"
-author: sal
+author: Xavi
 categories: [ Jekyll ]
 image: assets/images/2.jpg
 ---

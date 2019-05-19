@@ -30,6 +30,7 @@ defaults:
       layout: post
       author: sal
       avatar: /assets/images/avatar1.jpg
+      permalink: /posts/:path
 
   # all pages
   - scope:
@@ -50,7 +51,11 @@ highlighter: rouge
 # Paginate
 paginate: 10
 
-
+# collections
+collections:
+  authors:
+    output: true
+    permalink: /author/:path
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
 exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]

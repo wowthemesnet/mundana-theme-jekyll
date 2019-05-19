@@ -6,5 +6,5 @@ sal:
   bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
   email:          wowthemesnet@gmail.com
   twitter:        https://twitter.com/wowthemesnet
-  permalink: "/newa"
+  permalink: /newa/
 ---

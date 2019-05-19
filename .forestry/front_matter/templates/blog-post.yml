@@ -23,5 +23,3 @@ fields:
     time_format: h:mm
     display_utc: false
   label: Fecha Publicacion
-pages:
-- _posts/2019-05-19-hello.md

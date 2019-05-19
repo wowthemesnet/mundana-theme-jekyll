@@ -24,6 +24,4 @@ fields:
     display_utc: false
   label: Fecha Publicacion
 pages:
-- _posts/titulo-2.md
-- _posts/prueba-2.md
 - _posts/2019-05-19-hello.md

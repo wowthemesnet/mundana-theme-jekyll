@@ -20,7 +20,7 @@ fields:
   config:
     required: false
     date_format: DD/MM/YYYY
-    time_format: kk:mm Z
+    time_format: h:mm
     display_utc: false
   label: Fecha Publicacion
 pages:

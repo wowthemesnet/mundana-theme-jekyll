@@ -1,7 +1,7 @@
 ---
 title: "Authors"
 layout: default
-permalink: "/authors-list.html"
+permalink: "/authors/"
 ---
 
 <div class="container">
@@ -13,15 +13,17 @@ permalink: "/authors-list.html"
             <div class="row">
             <div class="col-md-3 mb-4 mb-md-0"><img alt="{{ author[1].name }}" src="{{site.baseurl}}/{{ author[1].avatar }}" class="rounded-circle" height="80" width="80"></div>
             <div class="col-md-9">
-            <a href="{{site.baseurl}}/author-{{ author[1].name | slugify }}">
+            <a href="{{site.baseurl}}/authors/{{ author[1].name | slugify }}">
             <h4 class="text-dark mb-0"> {{ author[1].name }} </h4>
             <small class="d-inline-block mt-1 mb-3 font-weight-normal">(View Posts)</small>
             <div class="excerpt">{{ author[1].bio }}</div>
             </a>
-            <div class="icon-block mt-3 d-flex justify-content-between">  
+            <div class="icon-block mt-3 d-flex justify-content-between">
             <div>
-            <a target="_blank" href="{{ author[1].twitter }}"><i class="fab fa-twitter text-muted" aria-hidden="true"></i></a>  &nbsp;
-            <a target="_blank" href="{{ author[1].site }}"><i class="fa fa-globe text-muted" aria-hidden="true"></i></a> &nbsp;
+            {% if author[1].twitter contains 'twitter.com/' %}<a target="_blank" href="{{ author[1].twitter }}"><i class="fab fa-twitter text-muted" aria-hidden="true"></i></a>  &nbsp;{% endif %}
+            {% if author[1].site contains '://' %}<a target="_blank" href="{{ author[1].site }}"><i class="fa fa-globe text-muted" aria-hidden="true"></i></a> &nbsp;{% endif %}
+            {% if author[1].github contains 'github.com/' %}<a target="_blank" href="{{ author[1].github }}"><i class="fab fa-github text-muted" aria-hidden="true"></i></a> &nbsp;{% endif %}
+            {% if author[1].gitlab contains 'gitlab.com/' %}<a target="_blank" href="{{ author[1].gitlab }}"><i class="fab fa-gitlab text-muted" aria-hidden="true"></i></a> &nbsp;{% endif %}
             </div>
             </div>
             </div>

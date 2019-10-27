@@ -46,41 +46,48 @@ find in this page if you don't know the symbol that you are using[](https://en.w
 8) Batchnormalization -> 9) Resnet
 
 #### Today's implementation goal: 1) matmul -> 4) FC backward
-
 &nbsp;
-
 ### 2) Library development using jupyter notebook
-
 https://dbader.org/blog/python-assert-tutorial
 &nbsp;
 #### jupyter notebook certainly can make module
 
-There will be *#export* tag that Howard want to extract&nbsp;
-and special program *notebook2script.py* will put codes of following *#expert* into python module
+- There will be *#export* tag that Howard (and we) want to extract
+- special *notebook2script.py* will detect sign of *#expert* and convert following into python module
 &nbsp;
-#### 2 Python scripts, which are *run\_notebook* and *notebook\_to\_script*
+- and test it
 
-where should i stop? 
 
-what is **run_notebook.py**? Dose it related to with order of
+<code>	test\_eq(TEST,'test')&nbsp;test\_eq(TEST,'test1')</code>
+	
+- what is **run_notebook.py**?
+	- when you want to test your module in command line interface
 
-	test -> test01 
-	test01 -> test
+<code>		!python run\_notebook.py 01_matmul.ipynb</code>
 
-..?	 -> In any case, two of them are Assertion error, so replication of assersion error apears.
+- Is there any difference between 1) and 2)?
+
+1) test -> test01 
+2) test01 -> test
+
+In any case, two of them are Assertion error, but 1) case, assersion error apears once more.
 &nbsp;
-#### [Python Fire](https://opensource.googleblog.com/2017/03/python-fire-command-line.html)
-in *run_notebook.py*
 
-read and run the code in a notebook, and in the process, Jeremy used library called !Fire!, which takes any kind of function and converts into CLI.
+- look into *run_notebook.py*, package **fire** Jeremy used. What is that?
+
+
+ 
+read and run the code in a notebook, and in the process, Jeremy made [Python Fire](https://opensource.googleblog.com/2017/03/python-fire-command-line.html) library called!shockingly, fire takes any kind of function and converts into CLI command.
 
 *fire library was released by Google open source, Thursday, March 2, 2017*
 
 &nbsp;
+
 ### 3) Get data
 
-- c explains how many pixels there are in in MNIST
-- PyTorch's *view()* method: used in conjunction with other neural network components.
+- c explains how many pixels there are in in MNIST, 28 pixels
+- PyTorch's *view()* method: torch function that manipulating tensor, and squeeze() in torch & mathmatical operation similar function 
+- [Rao & McMahan]() said usually this functions result in feature vector.
 - In part 1, you can use view function several times.
 &nbsp;
 

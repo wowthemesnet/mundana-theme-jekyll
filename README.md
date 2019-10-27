@@ -2,7 +2,7 @@ Dionne's blog repo
 ==========
 
 
-Visit site: 🐈 [Click here]((https://spellonyou.github.io/))
+Visit site: 🐈 [Click here](https://spellonyou.github.io/)
 
 
 ### Copyright

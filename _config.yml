@@ -1,15 +1,22 @@
 # Site
-name: 'Mundana'
-description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+name: 'SpellOnYou'
+description: "Be afraid only of standing still. Remain fresh, body and soul."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
-baseurl: '/mundana-theme-jekyll'
-disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+baseurl: ''
+# disqus: 'demowebsite'
+email: 'kimjiwon08@snu.ac.kr'
+# mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 include: ["_pages"]
-permalink: /:title/
+permalink: /:year/:month/:title/
+
+twitter_username: karma_Aleph
+# github_username:  SpellOnYou
+# disqus_shortname: dionne
+# favicon:     "/images/favicon.ico"
+# aboutme: In the face of ambiguity, refuse the temptation to guess.
+# aboutme_photo: "/images/IMG_0610.JPG"
 
 # Plugins
 plugins: 
@@ -20,20 +27,13 @@ plugins:
   
 authors:
     sal:
-      name:           Sal
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
-      email:          wowthemesnet@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
+      name:           Dionne
+      site:           https://spellonyou.github.io
+      avatar:         /assets/images/my_photo.JPG
+      bio:            "Welcome, I'm Dionne, and you? I hope you enjoy my articles!"
+      email:          kimjiwon08@snu.ac.kr
+      twitter:        https://twitter.com/karma_Aleph
 
-    jane:
-      name:           Jane
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar2.jpg
-      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
-      email:          fakemail@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
  
 # Defaults
 defaults:
@@ -43,8 +43,8 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: sal
-      avatar: /assets/images/avatar1.jpg
+      author: Dionne
+      avatar: /assets/images/my_photo.JPG
       
   # all pages
   - scope:

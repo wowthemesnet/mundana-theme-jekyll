@@ -1,15 +1,22 @@
 # Site
 name: 'SpellOnYou'
-description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+description: "Be afraid only of standing still. Remain fresh, body and soul."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
-baseurl: '/mundana-theme-jekyll'
-disqus: 'demowebsite'
+baseurl: ''
+# disqus: 'demowebsite'
 email: 'kimjiwon08@snu.ac.kr'
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 include: ["_pages"]
-permalink: /:title/
+permalink: /:year/:month/:title/
+
+twitter_username: karma_Aleph
+# github_username:  SpellOnYou
+# disqus_shortname: dionne
+# favicon:     "/images/favicon.ico"
+# aboutme: In the face of ambiguity, refuse the temptation to guess.
+# aboutme_photo: "/images/IMG_0610.JPG"
 
 # Plugins
 plugins: 
@@ -20,12 +27,12 @@ plugins:
   
 authors:
     sal:
-      name:           Sal
+      name:           Dionne
       site:           https://spellonyou.github.io
       avatar:         /assets/images/my_photo.JPG
-      bio:            "Hi, I am Dionne, the author of Mundana, the theme you're currently previewing. I hope you like it!"
+      bio:            "Welcome, I'm Dionne, and you? I hope you enjoy my articles!"
       email:          kimjiwon08@snu.ac.kr
-      twitter:        https://twitter.com/wowthemesnet
+      twitter:        https://twitter.com/karma_Aleph
 
  
 # Defaults
@@ -36,8 +43,8 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: sal
-      avatar: /assets/images/avatar1.jpg
+      author: Dionne
+      avatar: /assets/images/my_photo.JPG
       
   # all pages
   - scope:

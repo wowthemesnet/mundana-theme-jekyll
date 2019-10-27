@@ -1,17 +1,10 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-categories: [ Jekyll ]
-image: assets/images/demo1.jpg
-
----
-
----
-layout: post
 title: "Lecture 08 - Deep Learning From Foundations"
 categories: [fast.ai-v3]
 image:
 ---
+
 &nbsp;
 *I don't know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free*
 &nbsp;

@@ -2,7 +2,7 @@
 layout: post
 title: "Lecture 08 - Deep Learning From Foundations"
 categories: [fast.ai-v3]
-image:
+image: assets/images/cnn.png
 ---
 
 &nbsp;

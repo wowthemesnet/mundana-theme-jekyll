@@ -1,13 +1,14 @@
 ---
 
 layout: post
-title: 5 reasons took much time to setting GPU for fast.ai than I expected
+title: "5 reasons took much time to setting GPU for fast.ai than I expected"
 modified: 2019-10-23
-categories: [Diversity]
+image: assets/images/asia-east1.png
+categories: [Resource]
 tags: 
   - fast.ai
 comments: true
-
+tags: [sticky]
 ---
 
 ## Motivation

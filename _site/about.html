@@ -69,15 +69,15 @@
 <li class="nav-item">
 <a class="nav-link" href="/contact.html">Contact</a>
 </li>
-<li class="nav-item">
+<!-- <li class="nav-item">
 <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mundana-wordpress/">WP</a>
-</li>
-<li class="nav-item">
+</li> -->
+<!-- <li class="nav-item">
 <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mundana-ghost/">Ghost</a>
 </li>
 <li class="nav-item">
 <a target="_blank" class="nav-link" href="https://www.wowthemes.net/donate/">Buy me a coffee <i class="fa fa-coffee text-danger"></i></a>
-</li>
+</li> -->
 
             </ul>
             <ul class="navbar-nav ml-auto d-flex align-items-center">
@@ -101,38 +101,44 @@ var documents = [{
     "id": 1,
     "url": "http://localhost:4000/about.html",
     "title": "About",
-    "body": "Made with by Sal @wowthemesnet. "
+    "body": "Made with by Dionne @karma_Aleph. "
     }, {
     "id": 2,
-    "url": "http://localhost:4000/author-jane.html",
-    "title": "Jane",
-    "body": "                        {{page. title}} Follow:         {{ site. authors. jane. site }}         {{ site. authors. jane. bio }}                                   Posts by {{page. title}}:       {% assign posts = site. posts | where: author , jane  %}      {% for post in posts %}      {% include main-loop-card. html %}      {% endfor %}  "
-    }, {
+    "url": "http://localhost:4000/author-dionne.html",
+    "title": "Dionne",
+    "body": "                        {{page. title}} Follow:         {{ site. authors. dionne. site }}         {{ site. authors. dionne. bio }}                                   Posts by {{page. title}}:       {% assign posts = site. posts | where: author , dionne  %}      {% for post in posts %}      {% include main-loop-card. html %}      {% endfor %}  "
+    }, 
+    {
     "id": 3,
     "url": "http://localhost:4000/author-sal.html",
     "title": "Sal",
     "body": "                        {{page. title}} Follow:         {{ site. authors. sal. site }}         {{ site. authors. sal. bio }}                                   Posts by {{page. title}}:       {% assign posts = site. posts | where: author , sal  %}      {% for post in posts %}      {% include main-loop-card. html %}      {% endfor %}  "
-    }, {
+    },
+    {
     "id": 4,
     "url": "http://localhost:4000/authors-list.html",
     "title": "Authors",
     "body": "{{page. title}}:     {% for author in site. authors %}                                         {{ author[1]. name }} :       (View Posts)      {{ author[1]. bio }}                          &nbsp;       &nbsp;                                    {% endfor %}  "
-    }, {
+    }, 
+    {
     "id": 5,
     "url": "http://localhost:4000/buy-me-a-coffee.html",
     "title": "Buy me a coffee",
     "body": "Hi! I am Sal, web designer &amp; developer at WowThemes. net. The free items I create are my side projects and Mundana for Jekyll is one of them. You can find all the work I release for free here. You have my permission to use the free items I develop in your personal, commercial or client projects. If you’d like to reward my work, I would be honored and I could dedicate more time maintaining the free projects. Thank you so much! Buy me a coffee "
-    }, {
+    }, 
+    {
     "id": 6,
     "url": "http://localhost:4000/categories.html",
     "title": "Categories",
     "body": "          Categories          {% for category in site. categories %}     {{ category[0] }}:           {% assign pages_list = category[1] %}    {% for post in pages_list %}    {% if post. title != null %}     {% if group == null or group == post. group %}           {% include main-loop-card. html %}     {% endif %}    {% endif %}    {% endfor %}    {% assign pages_list = nil %}    {% assign group = nil %}    {% endfor %}                  {% include sidebar-featured. html %}          "
-    }, {
+    }, 
+    {
     "id": 7,
     "url": "http://localhost:4000/contact.html",
     "title": "Contact",
     "body": "  Please send your message to {{site. name}}. We will reply as soon as possible!   "
-    }, {
+    }, 
+    {
     "id": 8,
     "url": "http://localhost:4000/",
     "title": "Mundana Free Jekyll Theme",

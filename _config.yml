@@ -29,7 +29,7 @@ authors:
     sal:
       name:           Dionne
       site:           https://spellonyou.github.io
-      avatar:         /assets/images/my_photo.JPG
+      avatar:         /assets/images/my_photo.jpg
       bio:            "Welcome, I'm Dionne, and you? I hope you enjoy my articles!"
       email:          kimjiwon08@snu.ac.kr
       twitter:        https://twitter.com/karma_Aleph
@@ -44,7 +44,7 @@ defaults:
     values:
       layout: post
       author: Dionne
-      avatar: /assets/images/my_photo.JPG
+      avatar: /assets/images/my_photo.jpg
       
   # all pages
   - scope:

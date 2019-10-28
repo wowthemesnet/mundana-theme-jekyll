@@ -47,7 +47,7 @@ find in this page if you don't know the symbol that you are using[](https://en.w
 
 #### Today's implementation goal: 1) matmul -> 4) FC backward
 &nbsp;
-### 2) Library development using jupyter notebook
+### Library development using jupyter notebook
 https://dbader.org/blog/python-assert-tutorial
 &nbsp;
 #### jupyter notebook certainly can make module
@@ -83,16 +83,25 @@ read and run the code in a notebook, and in the process, Jeremy made [Python Fir
 
 &nbsp;
 
-### 3) Get data
+### Get data
 
+- tensor will almost function similar with numpy array
 - c explains how many pixels there are in in MNIST, 28 pixels
 - PyTorch's *view()* method: torch function that manipulating tensor, and squeeze() in torch & mathmatical operation similar function 
 - [Rao & McMahan]() said usually this functions result in feature vector.
 - In part 1, you can use view function several times.
 &nbsp;
 
-### 4) Linear Model, Xw+a = Y
+### Initial python model 
 
-- If you don't know hou [matmul visulization site](http://matrixmultiplication.xyz)
+- Which is Linear, like $Xw$(weight)$+a$(bias) $= Y$
 
-weights, bias
+- If you don't know hou to multiple matrix, refer this site [matmul visulization site](http://matrixmultiplication.xyz)
+
+- function <span style="color:blue">matmul</span>, typical matrix multiplication function, takes about 1 second for calculating 1 single train data! (maybe assumed stochastic, 5 data points in validation)
+
+- it takes about 11.36 hours to update parameters even single layer and 1 iteration! (if that was my computer, it would be 14 hours..)🤪
+
+- THIS is why we need to consider 'time'&'space'
+
+### 

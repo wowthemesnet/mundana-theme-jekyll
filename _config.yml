@@ -1,8 +1,8 @@
 # Site
 name: 'SpellOnYou'
 description: "Be afraid only of standing still. Remain fresh, body and soul."
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/favicon.ico'
+logo: '/assets/images/logo.png'
+favicon: '/assets/images/favicon.ico'
 baseurl: ''
 # disqus: 'demowebsite'
 email: 'kimjiwon08@snu.ac.kr'

@@ -1,10 +1,10 @@
 # Site
 name: 'SpellOnYou'
 description: "Be afraid only of standing still. Remain fresh, body and soul."
-logo: '/assets/images/logo.png'
-favicon: '/assets/images/favicon.ico'
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/favicon.ico'
 baseurl: ''
-# disqus: 'demowebsite'
+disqus: 'dionne'
 email: 'kimjiwon08@snu.ac.kr'
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
@@ -27,10 +27,10 @@ plugins:
   
 authors:
     sal:
-      name:           Dionne
+      name:           dionne
       site:           https://spellonyou.github.io
-      avatar:         /assets/images/my_photo.jpg
-      bio:            "Welcome, I'm Dionne, and you? I hope you enjoy my articles!"
+      avatar:         /assets/images/my_photo.png
+      bio:            "Welcome, I'm dionne.? I hope you enjoy my articles!"
       email:          kimjiwon08@snu.ac.kr
       twitter:        https://twitter.com/karma_Aleph
 
@@ -44,7 +44,7 @@ defaults:
     values:
       layout: post
       author: Dionne
-      avatar: /assets/images/my_photo.jpg
+      avatar: assets/images/my_photo.png
       
   # all pages
   - scope:

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-10-27T16:57:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">5 reasons took much time to setting GPU for fast.ai than I expected</title><link href="http://localhost:4000/2019/10/5-reasons-took-much-time-to-setting-GPU-for-fast.ai-than-I-expected/" rel="alternate" type="text/html" title="5 reasons took much time to setting GPU for fast.ai than I expected" /><published>2019-10-23T00:00:00+09:00</published><updated>2019-10-23T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/5-reasons-took-much-time-to-setting-GPU-for-fast.ai-than-I-expected</id><content type="html" xml:base="http://localhost:4000/2019/10/5-reasons-took-much-time-to-setting-GPU-for-fast.ai-than-I-expected/">&lt;h2 id=&quot;motivation&quot;&gt;Motivation&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-10-29T01:07:55+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">5 reasons took much time to setting GPU for fast.ai than I expected</title><link href="http://localhost:4000/2019/10/5-reasons-took-much-time-to-setting-GPU-for-fast.ai-than-I-expected/" rel="alternate" type="text/html" title="5 reasons took much time to setting GPU for fast.ai than I expected" /><published>2019-10-23T00:00:00+09:00</published><updated>2019-10-23T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/5-reasons-took-much-time-to-setting-GPU-for-fast.ai-than-I-expected</id><content type="html" xml:base="http://localhost:4000/2019/10/5-reasons-took-much-time-to-setting-GPU-for-fast.ai-than-I-expected/">&lt;h2 id=&quot;motivation&quot;&gt;Motivation&lt;/h2&gt;
 
 &lt;p&gt;Before now, me as a undergraduate student, I was parsimony who usually depend on colab, kaggle, friend’s server(occasional) whenever i need GPU.. 
  
@@ -86,7 +86,7 @@ On these days, I could not get a resources from taiwan...
 4. Anyway, as a result I tried myself gcp myself and aws ec2 with fast.ai But I think doing on my self surely takes much time (in this point I wonder why I'm doing this, and should remind me, especially I was studying disk volume optimization)
 
 4. disk volume exceed - https://askubuntu.com/questions/919748/no-space-left-on-device-even-though-there-is
---&gt;</content><author><name>Dionne</name></author><category term="fast.ai" /><summary type="html">Motivation</summary></entry><entry><title type="html">Lecture 08 - Deep Learning From Foundations</title><link href="http://localhost:4000/2019/10/lecture08-fast.ai-v3-part2-copy/" rel="alternate" type="text/html" title="Lecture 08 - Deep Learning From Foundations" /><published>2019-10-18T00:00:00+09:00</published><updated>2019-10-18T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/lecture08-fast.ai-v3-part2%20copy</id><content type="html" xml:base="http://localhost:4000/2019/10/lecture08-fast.ai-v3-part2-copy/">&lt;p&gt; 
+--&gt;</content><author><name>Dionne</name></author><category term="sticky" /><summary type="html">Motivation</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/asia-east1.png" /></entry><entry><title type="html">Lecture 08 - Deep Learning From Foundations</title><link href="http://localhost:4000/2019/10/lecture08-fast.ai-v3-part2/" rel="alternate" type="text/html" title="Lecture 08 - Deep Learning From Foundations" /><published>2019-10-18T00:00:00+09:00</published><updated>2019-10-18T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/lecture08-fast.ai-v3-part2</id><content type="html" xml:base="http://localhost:4000/2019/10/lecture08-fast.ai-v3-part2/">&lt;p&gt; 
 &lt;em&gt;I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free&lt;/em&gt;
  
 &lt;strong&gt;Contents&lt;/strong&gt;
@@ -130,54 +130,141 @@ On these days, I could not get a resources from taiwan...
 &lt;/blockquote&gt;
 
 &lt;h4 id=&quot;todays-implementation-goal-1-matmul---4-fc-backward&quot;&gt;Today’s implementation goal: 1) matmul -&amp;gt; 4) FC backward&lt;/h4&gt;
-
 &lt;p&gt; &lt;/p&gt;
-
-&lt;h3 id=&quot;2-library-development-using-jupyter-notebook&quot;&gt;2) Library development using jupyter notebook&lt;/h3&gt;
-
+&lt;h3 id=&quot;library-development-using-jupyter-notebook&quot;&gt;Library development using jupyter notebook&lt;/h3&gt;
 &lt;p&gt;https://dbader.org/blog/python-assert-tutorial
  &lt;/p&gt;
 &lt;h4 id=&quot;jupyter-notebook-certainly-can-make-module&quot;&gt;jupyter notebook certainly can make module&lt;/h4&gt;
 
-&lt;p&gt;There will be &lt;em&gt;#export&lt;/em&gt; tag that Howard want to extract 
-and special program &lt;em&gt;notebook2script.py&lt;/em&gt; will put codes of following &lt;em&gt;#expert&lt;/em&gt; into python module
- &lt;/p&gt;
-&lt;h4 id=&quot;2-python-scripts-which-are-run_notebook-and-notebook_to_script&quot;&gt;2 Python scripts, which are &lt;em&gt;run_notebook&lt;/em&gt; and &lt;em&gt;notebook_to_script&lt;/em&gt;&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;There will be &lt;em&gt;#export&lt;/em&gt; tag that Howard (and we) want to extract&lt;/li&gt;
+  &lt;li&gt;special &lt;em&gt;notebook2script.py&lt;/em&gt; will detect sign of &lt;em&gt;#expert&lt;/em&gt; and convert following into python module
+ &lt;/li&gt;
+  &lt;li&gt;and test it&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;where should i stop?&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;test\_eq(TEST,'test')&amp;nbsp;test\_eq(TEST,'test1')&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;what is &lt;strong&gt;run_notebook.py&lt;/strong&gt;? Dose it related to with order of&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;what is &lt;strong&gt;run_notebook.py&lt;/strong&gt;?
+    &lt;ul&gt;
+      &lt;li&gt;when you want to test your module in command line interface&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;test -&amp;gt; test01 
-test01 -&amp;gt; test
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;		!python run\_notebook.py 01_matmul.ipynb&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;..?	 -&amp;gt; In any case, two of them are Assertion error, so replication of assersion error apears.
- &lt;/p&gt;
-&lt;h4 id=&quot;python-fire&quot;&gt;&lt;a href=&quot;https://opensource.googleblog.com/2017/03/python-fire-command-line.html&quot;&gt;Python Fire&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;in &lt;em&gt;run_notebook.py&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Is there any difference between 1) and 2)?&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;read and run the code in a notebook, and in the process, Jeremy used library called !Fire!, which takes any kind of function and converts into CLI.&lt;/p&gt;
+&lt;p&gt;1) test -&amp;gt; test01 
+2) test01 -&amp;gt; test&lt;/p&gt;
+
+&lt;p&gt;#TODO I don’t know yet&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;look into &lt;em&gt;run_notebook.py&lt;/em&gt;, package &lt;strong&gt;fire&lt;/strong&gt; Jeremy used. What is that?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;read and run the code in a notebook, and in the process, Jeremy made &lt;a href=&quot;https://opensource.googleblog.com/2017/03/python-fire-command-line.html&quot;&gt;Python Fire&lt;/a&gt; library called!shockingly, fire takes any kind of function and converts into CLI command.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;fire library was released by Google open source, Thursday, March 2, 2017&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
-&lt;h3 id=&quot;3-get-data&quot;&gt;3) Get data&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;01_matmul-(1).ipynb ends&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;01_matmul-(2).ipynb starts&lt;/p&gt;
+
+&lt;h3 id=&quot;get-data&quot;&gt;Get data&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;c explains how many pixels there are in in MNIST&lt;/li&gt;
-  &lt;li&gt;PyTorch’s &lt;em&gt;view()&lt;/em&gt; method: used in conjunction with other neural network components.&lt;/li&gt;
+  &lt;li&gt;pytorch and numpy are pretty much same.&lt;/li&gt;
+  &lt;li&gt;variable c explains how many pixels there are in in MNIST, 28 pixels&lt;/li&gt;
+  &lt;li&gt;PyTorch’s &lt;em&gt;view()&lt;/em&gt; method: torch function that manipulating tensor, and squeeze() in torch &amp;amp; mathmatical operation similar function&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.oreilly.com/library/view/natural-language-processing/9781491978221/&quot;&gt;Rao &amp;amp; McMahan&lt;/a&gt; said usually this functions result in feature vector.&lt;/li&gt;
   &lt;li&gt;In part 1, you can use view function several times.
  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;4-linear-model-xwa--y&quot;&gt;4) Linear Model, Xw+a = Y&lt;/h3&gt;
+&lt;h3 id=&quot;initial-python-model&quot;&gt;Initial python model&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;If you don’t know hou &lt;a href=&quot;http://matrixmultiplication.xyz&quot;&gt;matmul visulization site&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Which is Linear, like $Xw$(weight)$+a$(bias) $= Y$&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you don’t know hou to multiple matrix, refer this site &lt;a href=&quot;http://matrixmultiplication.xyz&quot;&gt;matmul visulization site&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;weights, bias&lt;/p&gt;</content><author><name>Dionne</name></author><summary type="html">  I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free   Contents   1) What is going on in this course 2) Library development using jupyter notebook   Resources notebooks material video broadcasting excel  </summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/2019/02/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-02-04T00:00:00+09:00</published><updated>2019-02-04T00:00:00+09:00</updated><id>http://localhost:4000/2019/02/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/2019/02/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+&lt;h4 id=&quot;how-many-time-spends-if-we-we-use-pure-python&quot;&gt;How many time spends if we we use pure python&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;function &lt;span style=&quot;color:blue&quot;&gt;matmul&lt;/span&gt;, typical matrix multiplication function, takes about 1 second for calculating 1 single train data! (maybe assumed stochastic, 5 data points in validation)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;it takes about 11.36 hours to update parameters even single layer and 1 iteration! (if that was my computer, it would be 14 hours..)🤪&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;THIS is why we need to consider ‘time’&amp;amp;’space’&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is kinda slow - what if we could speed it up by 50,000 times? Let’s try!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h3 id=&quot;elementwise-ops&quot;&gt;Elementwise ops&lt;/h3&gt;
+
+&lt;h4 id=&quot;how-can-we-make-python-faster&quot;&gt;How can we make python faster?&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If we want to calculate faster, then do remove pythonic calcuation, by passing its computation down to something that is written something other than python, like pytorch.&lt;/li&gt;
+  &lt;li&gt;According to PyTorch &lt;a href=&quot;https://pytorch.org/cppdocs/#aten&quot;&gt;doc&lt;/a&gt; it  uses C++ (via ATen), so we are going to implement that function with python.
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;what-is-element-wise-operation&quot;&gt;What is element wise operation?&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;items makes a pair, operate corresponding component
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;frobenius-norm&quot;&gt;Frobenius norm&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;$ | A |&lt;em&gt;F = \left( \sum&lt;/em&gt;{i,j=1}^n&lt;/td&gt;
+      &lt;td&gt;a_{ij}&lt;/td&gt;
+      &lt;td&gt;^2 \right)^{1/2} $&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;above converted into&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;(m\*m).sum().sqrt()&lt;/code&gt;&amp;gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Plus, don’t suffer from mathmatical symbols. He also copy and paste that equations from wikipedia.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;and if you need latex form, download it from archive.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Dionne</name></author><summary type="html">  I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free   Contents   1) What is going on in this course 2) Library development using jupyter notebook   Resources notebooks material video broadcasting excel  </summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn.png" /></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/2019/02/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-02-04T00:00:00+09:00</published><updated>2019-02-04T00:00:00+09:00</updated><id>http://localhost:4000/2019/02/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/2019/02/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 

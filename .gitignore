@@ -3,3 +3,5 @@ _candidate
 .jekyll-metadata
 node_modules
 Gemfile.lock
+# ---
+_previous-owner/*

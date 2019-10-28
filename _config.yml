@@ -24,7 +24,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
-  
+
+# assets/images/my_photo.png
 authors:
     sal:
       name:           dionne

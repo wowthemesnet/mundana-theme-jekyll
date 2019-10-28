@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Lecture 08 - Deep Learning From Foundations"
-author: Dionne
+author: dionne
 categories: [fast.ai-v3]
 image: assets/images/cnn.png
 ---

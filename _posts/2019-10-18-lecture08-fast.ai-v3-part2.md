@@ -46,46 +46,89 @@ find in this page if you don't know the symbol that you are using[](https://en.w
 8) Batchnormalization -> 9) Resnet
 
 #### Today's implementation goal: 1) matmul -> 4) FC backward
-
 &nbsp;
-
-### 2) Library development using jupyter notebook
-
+### Library development using jupyter notebook
 https://dbader.org/blog/python-assert-tutorial
 &nbsp;
 #### jupyter notebook certainly can make module
 
-There will be *#export* tag that Howard want to extract&nbsp;
-and special program *notebook2script.py* will put codes of following *#expert* into python module
+- There will be *#export* tag that Howard (and we) want to extract
+- special *notebook2script.py* will detect sign of *#expert* and convert following into python module
 &nbsp;
-#### 2 Python scripts, which are *run\_notebook* and *notebook\_to\_script*
+- and test it
 
-where should i stop? 
 
-what is **run_notebook.py**? Dose it related to with order of
+<code>	test\_eq(TEST,'test')&nbsp;test\_eq(TEST,'test1')</code>
+	
+- what is **run_notebook.py**?
+	- when you want to test your module in command line interface
 
-	test -> test01 
-	test01 -> test
+<code>		!python run\_notebook.py 01_matmul.ipynb</code>
 
-..?	 -> In any case, two of them are Assertion error, so replication of assersion error apears.
-&nbsp;
-#### [Python Fire](https://opensource.googleblog.com/2017/03/python-fire-command-line.html)
-in *run_notebook.py*
+- Is there any difference between 1) and 2)?
 
-read and run the code in a notebook, and in the process, Jeremy used library called !Fire!, which takes any kind of function and converts into CLI.
+1) test -> test01 
+2) test01 -> test
+
+\#TODO I don't know yet
+
+- look into *run_notebook.py*, package **fire** Jeremy used. What is that?
+
+
+ 
+read and run the code in a notebook, and in the process, Jeremy made [Python Fire](https://opensource.googleblog.com/2017/03/python-fire-command-line.html) library called!shockingly, fire takes any kind of function and converts into CLI command.
 
 *fire library was released by Google open source, Thursday, March 2, 2017*
 
 &nbsp;
-### 3) Get data
 
-- c explains how many pixels there are in in MNIST
-- PyTorch's *view()* method: used in conjunction with other neural network components.
+---
+- notebook part2
+
+### Get data
+
+- tensor will almost function similar with numpy array
+- c explains how many pixels there are in in MNIST, 28 pixels
+- PyTorch's *view()* method: torch function that manipulating tensor, and squeeze() in torch & mathmatical operation similar function 
+- [Rao & McMahan](https://www.oreilly.com/library/view/natural-language-processing/9781491978221/) said usually this functions result in feature vector.
 - In part 1, you can use view function several times.
 &nbsp;
 
-### 4) Linear Model, Xw+a = Y
+### Initial python model 
 
-- If you don't know hou [matmul visulization site](http://matrixmultiplication.xyz)
+- Which is Linear, like $Xw$(weight)$+a$(bias) $= Y$
 
-weights, bias
+- If you don't know hou to multiple matrix, refer this site [matmul visulization site](http://matrixmultiplication.xyz)
+
+#### How many time spends if we we use pure python
+- function <span style="color:blue">matmul</span>, typical matrix multiplication function, takes about 1 second for calculating 1 single train data! (maybe assumed stochastic, 5 data points in validation)
+
+
+
+- it takes about 11.36 hours to update parameters even single layer and 1 iteration! (if that was my computer, it would be 14 hours..)🤪
+
+- THIS is why we need to consider 'time'&'space'
+
+> This is kinda slow - what if we could speed it up by 50,000 times? Let's try!
+
+### Elementwise ops 
+
+#### How can we make python faster?
+
+- If we want to calculate faster, then do remove pythonic calcuation, by passing its computation down to something that is written something other than python, like pytorch. 
+- According to PyTorch [doc](https://pytorch.org/cppdocs/#aten) it  uses C++ (via ATen), so we are going to implement that function with python.
+
+#### What is element wise operation?
+- items makes a pair, operate corresponding component
+
+#### Frobenius norm
+
+$ \| A \|_F = \left( \sum_{i,j=1}^n | a_{ij} |^2 \right)^{1/2} $
+
+- above converted into 
+
+<code>			(m*m).sum().sqrt()</code>
+
+- Plus, don't suffer from mathmatical symbols. He also copy and paste that equations from wikipedia.
+- and if you need latex form, download it from archive.
+	

@@ -12,7 +12,7 @@ include: ["_pages"]
 permalink: /:year/:month/:title/
 
 twitter_username: karma_Aleph
-# github_username:  SpellOnYou
+github_username:  SpellOnYou
 # disqus_shortname: dionne
 # favicon:     "/images/favicon.ico"
 # aboutme: In the face of ambiguity, refuse the temptation to guess.
@@ -30,8 +30,8 @@ authors:
     sal:
       name:           dionne
       site:           https://spellonyou.github.io
-      avatar:         /assets/images/my_photo.png
-      bio:            "Welcome, I'm dionne.? I hope you enjoy my articles!"
+      avatar:         assets/images/my_photo.png
+      bio:            "Welcome, I'm dionne. My old hobby is collecting and systemizing data related with me. (I'm with my kindergarten newsletter) I am an observationist. In the meantime, I enjoy the difference between my expectation and result which I've been facinated(my korean-sarcasm project). And I love a film written and directed by Paul Thomas Anderson."
       email:          kimjiwon08@snu.ac.kr
       twitter:        https://twitter.com/karma_Aleph
 

@@ -1,12 +1,13 @@
 ---
-title: "Buy me a coffee"
-permalink: "/buy-me-a-coffee.html"
+title: "Buy Sal a coffee"
+permalink: "/buy-sal-a-coffee.html"
 ---
 
-Hi! I am Sal, web designer & developer at WowThemes.net. The free items I create are my side projects and **Mundana for Jekyll** is one of them. You can find **all the work I release for free [here](https://www.wowthemes.net/category/free-themes-templates/)**. 
+Hello, Sal, web designer & developer at WowThemes.net. I think it's a great template, so I gave him a token of my gratitude. 
 
-You have my permission to use the free items I develop in your personal, commercial or client projects. If you'd like to reward my work, I would be honored and I could dedicate more time maintaining the free projects. 
+I also believe in open source philosophy and we can grow up together. 
 
-Thank you so much!
+You can find **further release sal made in [here](https://www.wowthemes.net/category/free-themes-templates/)**. 
+
 
 <a class="btn btn-danger" href="https://www.wowthemes.net/donate/">Buy me a coffee</a>

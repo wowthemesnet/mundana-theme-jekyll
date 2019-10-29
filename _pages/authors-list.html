@@ -8,13 +8,13 @@ permalink: "/authors-list.html"
 <h4 class="font-weight-bold spanborder"><span>{{page.title}}</span></h4>
     <div class="row gap-y listrecent listrecent listauthor">
     {% for author in site.authors %}
-        <div class="col-lg-6 mb-4">
-            <div class="p-4 border rounded">
-            <div class="row">
-            <div class="col-md-3 mb-4 mb-md-0"><img alt="{{ author[1].name }}" src="{{ author[1].avatar }}" class="rounded-circle" height="80" width="80"></div>
+        <div class="col-lg-12 pr-4"> <!-- overall box --> 
+            <div class="pl-6 pt-2 pb-2 border rounded"> <!-- shape -->
+            <div class="row"> 
+            <div class="col-md-3 mb-4 mb-md-0"><img alt="{{ author[1].name }}" src="{{ author[1].avatar }}" class="rounded-circle" height="180" width="145"></div> <!-- picture -->
             <div class="col-md-9">
             <a href="{{site.baseurl}}/author-{{ author[1].name | slugify }}">
-            <h4 class="text-dark mb-0"> {{ author[1].name }} </h4>
+            <h4 class="text-dark mb-0"> {{ author[1].name }} |  jiwon kim </h4>
             <small class="d-inline-block mt-1 mb-3 font-weight-normal">(View Posts)</small>
             <div class="excerpt">{{ author[1].bio }}</div>
             </a>

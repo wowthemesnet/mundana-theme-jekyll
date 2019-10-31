@@ -106,4 +106,4 @@ On these days, I could not get a resources from taiwan...
 4. Anyway, as a result I tried myself gcp myself and aws ec2 with fast.ai But I think doing on my self surely takes much time (in this point I wonder why I'm doing this, and should remind me, especially I was studying disk volume optimization)
 
 4. disk volume exceed - https://askubuntu.com/questions/919748/no-space-left-on-device-even-though-there-is
--->
+---

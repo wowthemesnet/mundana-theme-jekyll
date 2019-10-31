@@ -33,7 +33,7 @@ image: assets/images/cnn.png
 #### Evade Overfitting 
 
 Overfit : validation error getting worse
-~training loss < validation loss~
+~~training loss < validation loss~~
 &nbsp;
 #### Know the name of the symbol you use
 

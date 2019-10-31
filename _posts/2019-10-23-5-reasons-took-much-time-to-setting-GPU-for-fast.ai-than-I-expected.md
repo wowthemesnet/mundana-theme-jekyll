@@ -3,7 +3,7 @@ layout: post
 title: "5 reasons took much time to setting GPU for fast.ai than I expected"
 author: dionne
 categories: [ Resource ]
-image: /assets/images/asia-east1.png
+image: assets/images/asia-east1.png
 tags: [sticky]
 ---
 
@@ -24,7 +24,7 @@ And this time it's been for a while to install GPU than I expected and I share t
 At the first time when GCP came out, there was no **AI  Platform** service. So from starting vm instance to launching jupyter and installing packages, I did all of the things myself. (but I learned 🤗)
 
 
-![installing-conda-cli](/assets/images/installing-conda-cli.png)
+![installing-conda-cli](assets/images/installing-conda-cli.png)
 
 
 	$	curl -O https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh

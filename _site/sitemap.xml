@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/2019/10/lecture08-fast.ai-v3-part2/</loc>
+<loc>http://localhost:4000/2019/10/note08-fastai-1/</loc>
 <lastmod>2019-10-18T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2019/10/5-reasons-took-much-time-to-setting-GPU-for-fast.ai-than-I-expected/</loc>
+<loc>http://localhost:4000/2019/10/GPU-time/</loc>
 <lastmod>2019-10-23T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2019/10/Git-Merge/</loc>
+<lastmod>2019-10-30T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2019/11/note08-fastai-2/</loc>
+<lastmod>2019-11-01T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/404/</loc>

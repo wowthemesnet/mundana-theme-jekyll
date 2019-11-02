@@ -1,36 +1,27 @@
 ---
 layout: post
-title: ELMO, OpenAI GPT, BERT 3가지 NLP SOTA 정리 - 모델편 (editing)
+title: ELMO, OpenAI GPT, BERT (How these models outperformed their counterparts) - Model Part
 modified: 2019-01-17
-categories: [NLP]
-tags: 
-  - colab
-  - ELMo
-  - OpenAI-GPT
-  - transformer
-  - google-research
-  - bert
+categories: 
 comments: true
 ---
 
+
+
 ## Introduction
 
-종강 후 transformer와 bert를 시작하려고 하니, 수많은 데이터 셋과 논문들 github에 공개된 소스코드들로 인해 혼란스러웠다.
-
-이 글에서는 최근 좋은 결과를 내고 있는 모델, 알고리즘 그리고 이들이 대상으로 하는 데이터셋을 정리할 것이다.
-
-해당 주제는 다음 세가지 섹션으로 나뉜다.
+This Topic will be divided in to 3 section.
 
 - CONTENTS
 	1. [MODEL](https://spellonyou.github.io/2019/01/ELMO,-OpenAI-GPT,-BERT-3%EA%B0%80%EC%A7%80-SOTA-Algorithm-%EC%A0%95%EB%A6%AC/)
 	2. [DATASET]()
 	3. [ALGORITHM]()
 
-*Model* : 모델들의 특징을 위주로 서술한다.
-*Dataset* : 최근 NLP 분야에서 목표로 하는 Task가 무엇인지, 공개된 데이터를 중심으로 살펴본다.
-*Algorithm* : 공개된 소스코드를 <한국어 코퍼스>와 <내가 원하는 Task>에 적용한다.
+*Model* : Charactor of models, what point exactly enhanced the performance
+*Dataset* : What was their dataset? what measure they used?
+*Algorithm* : How can I use this model to other *corpus* and *task*?
 
-본 글에서는 이 중 첫번째인 모델에 관해 설명하도록 한다.
+**In the model part, I will talk about model more specific**
 
 ---
 
@@ -42,7 +33,7 @@ comments: true
 4. [**BERT**](bert)
 
 
-위에 관해 간단하게만 설명하면,
+### when they came out?
 
 > 1. ELMo : 2018. 2. 15, AllenNLP에서 발표한 논문이다.
 > 2. Transformer : 2017. 6. 2, google에서 발표한 논문이다.

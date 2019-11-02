@@ -4,20 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Privacy Policy | SpellOnYou</title>
+    <title>Lecture 08 - Deep Learning From Foundations-part1 | SpellOnYou</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Privacy Policy | SpellOnYou</title>
+<title>Lecture 08 - Deep Learning From Foundations-part1 | SpellOnYou</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Privacy Policy" />
+<meta property="og:title" content="Lecture 08 - Deep Learning From Foundations-part1" />
+<meta name="author" content="dionne" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Be afraid only of standing still. Remain fresh, body and soul." />
-<meta property="og:description" content="Be afraid only of standing still. Remain fresh, body and soul." />
-<link rel="canonical" href="http://localhost:4000/privacy-policy.html" />
-<meta property="og:url" content="http://localhost:4000/privacy-policy.html" />
+<meta name="description" content="  I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free   Contents   1) What is going on in this course 2) Library development using jupyter notebook   Resources notebooks material video broadcasting excel  " />
+<meta property="og:description" content="  I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free   Contents   1) What is going on in this course 2) Library development using jupyter notebook   Resources notebooks material video broadcasting excel  " />
+<link rel="canonical" href="http://localhost:4000/2019/10/note08-fastai-1/" />
+<meta property="og:url" content="http://localhost:4000/2019/10/note08-fastai-1/" />
 <meta property="og:site_name" content="SpellOnYou" />
+<meta property="og:image" content="http://localhost:4000/assets/images/cnn.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-10-18T00:00:00+09:00" />
 <script type="application/ld+json">
-{"description":"Be afraid only of standing still. Remain fresh, body and soul.","@type":"WebPage","url":"http://localhost:4000/privacy-policy.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"}},"headline":"Privacy Policy","@context":"http://schema.org"}</script>
+{"description":"  I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free   Contents   1) What is going on in this course 2) Library development using jupyter notebook   Resources notebooks material video broadcasting excel  ","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/10/note08-fastai-1/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/cnn.png","headline":"Lecture 08 - Deep Learning From Foundations-part1","dateModified":"2019-10-18T00:00:00+09:00","datePublished":"2019-10-18T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/10/note08-fastai-1/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -106,12 +110,12 @@ var documents = [{
     "id": 2,
     "url": "http://localhost:4000/author-dionne.html",
     "title": "dionne",
-    "body": "                        dionne Follow:                                                    Posts by dionne:                   		Lecture 08 - Deep Learning From Foundations-part2	: 		  Frobenius norm	 			In 				fast. ai-v3, 								Nov 01, 2019						            		Why am I not listed as a contributor to a project that merged my PR?	: 		  How did I come to that repository?	 			In 				git, 								Oct 30, 2019						            		5 reasons took much time to setting GPU for fast. ai than I expected	: 		  Motivation	 			In 				Resource, 								Oct 23, 2019						            		Lecture 08 - Deep Learning From Foundations-part1	: 		   I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free Contents 1) What is going on in this. . . 	 			In 				fast. ai-v3, 								Oct 18, 2019						        "
+    "body": "                        {{page. title}} Follow:         {{ site. authors. dionne. site }}         {{ site. authors. dionne. bio }}                                   Posts by {{page. title}}:       {% assign posts = site. posts | where: author , dionne  %}      {% for post in posts %}      {% include main-loop-card. html %}      {% endfor %}  "
     }, {
     "id": 3,
     "url": "http://localhost:4000/authors-list.html",
     "title": "Authors",
-    "body": "Authors:                                                dionne | jiwon kim :       (View Posts)      Welcome, I'm dionne. My old hobby is collecting and systemizing data related with me. (I'm with my kindergarten newsletter) I am an observationist. In the meantime, I enjoy the difference between my expectation and result which I've been facinated(my korean-sarcasm project). And I love a film written and directed by Paul Thomas Anderson. Now, I'm interested in AI ethics, and especially studying bias.                           &nbsp;       &nbsp;                                      "
+    "body": "{{page. title}}:     {% for author in site. authors %}                                           {{ author[1]. name }} | jiwon kim :       (View Posts)      {{ author[1]. bio }}                          &nbsp;       &nbsp;                                    {% endfor %}  "
     }, {
     "id": 4,
     "url": "http://localhost:4000/buy-sal-a-coffee.html",
@@ -126,22 +130,22 @@ var documents = [{
     "id": 6,
     "url": "http://localhost:4000/categories.html",
     "title": "Categories",
-    "body": "          Categories               fast. ai-v3:                                  		Lecture 08 - Deep Learning From Foundations-part2	: 		  Frobenius norm	 			In 				fast. ai-v3, 								Nov 01, 2019						                                 		Lecture 08 - Deep Learning From Foundations-part1	: 		   I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free Contents 1) What is going on in this. . . 	 			In 				fast. ai-v3, 								Oct 18, 2019						                              Resource:                                  		5 reasons took much time to setting GPU for fast. ai than I expected	: 		  Motivation	 			In 				Resource, 								Oct 23, 2019						                              git:                                  		Why am I not listed as a contributor to a project that merged my PR?	: 		  How did I come to that repository?	 			In 				git, 								Oct 30, 2019						                                             Featured:    				                                          Lecture 08 - Deep Learning From Foundations-part2                          In                     fast. ai-v3,                                                                                           Why am I not listed as a contributor to a project that merged my PR?                          In                     git,                                                                                           5 reasons took much time to setting GPU for fast. ai than I expected                          In                     Resource,                                                                                           Lecture 08 - Deep Learning From Foundations-part1                          In                     fast. ai-v3,                                                                   "
+    "body": "          Categories          {% for category in site. categories %}     {{ category[0] }}:           {% assign pages_list = category[1] %}    {% for post in pages_list %}    {% if post. title != null %}     {% if group == null or group == post. group %}           {% include main-loop-card. html %}     {% endif %}    {% endif %}    {% endfor %}    {% assign pages_list = nil %}    {% assign group = nil %}    {% endfor %}                  {% include sidebar-featured. html %}          "
     }, {
     "id": 7,
     "url": "http://localhost:4000/contact.html",
     "title": "Contact",
-    "body": "  Please send your message to SpellOnYou. I will reply as soon as possible!   "
+    "body": "  Please send your message to {{site. name}}. I will reply as soon as possible!   "
     }, {
     "id": 8,
     "url": "http://localhost:4000/",
     "title": "Jiwon Kim | Dionne Blog",
-    "body": "                                  Lecture 08 - Deep Learning From Foundations-part2  :       Frobenius norm               In                 fast. ai-v3,                                        Nov 01, 2019                                                                                                                             Why am I not listed as a contributor to a project that merged my PR?          :                       In                         git,                                                                  Oct 30, 2019                                                                                                                                     5 reasons took much time to setting GPU for fast. ai than I expected          :                       In                         Resource,                                                                  Oct 23, 2019                                                                                                                                    Lecture 08 - Deep Learning From Foundations-part1          :                       In                         fast. ai-v3,                                                                  Oct 18, 2019                                                        5 reasons took much time to setting GPU for fast. ai than I expected                  Motivation                 Read More            	                               All Stories:                   		Lecture 08 - Deep Learning From Foundations-part2	: 		  Frobenius norm	 			In 				fast. ai-v3, 								Nov 01, 2019						                  		Why am I not listed as a contributor to a project that merged my PR?	: 		  How did I come to that repository?	 			In 				git, 								Oct 30, 2019						                  		5 reasons took much time to setting GPU for fast. ai than I expected	: 		  Motivation	 			In 				Resource, 								Oct 23, 2019						                  		Lecture 08 - Deep Learning From Foundations-part1	: 		   I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free Contents 1) What is going on in this. . . 	 			In 				fast. ai-v3, 								Oct 18, 2019						                                                  Featured:    				                                          Lecture 08 - Deep Learning From Foundations-part2                          In                     fast. ai-v3,                                                                                           Why am I not listed as a contributor to a project that merged my PR?                          In                     git,                                                                                           5 reasons took much time to setting GPU for fast. ai than I expected                          In                     Resource,                                                                                           Lecture 08 - Deep Learning From Foundations-part1                          In                     fast. ai-v3,                                                               "
+    "body": "  {% if page. url ==  /  %}            {% assign latest_post = site. posts[0] %}          &lt;div class= topfirstimage  style= background-image: url({% if latest_post. image contains  ://  %}{{ latest_post. image }}{% else %} {{site. baseurl}}/{{ latest_post. image}}{% endif %}); height: 200px;  background-size: cover;  background-repeat: no-repeat; &gt;&lt;/div&gt;           {{ latest_post. title }}  :       {{ latest_post. excerpt | strip_html | strip_newlines | truncate: 136 }}               In         {% for category in latest_post. categories %}        {{ category }},         {% endfor %}                                {{ latest_post. date | date: '%b %d, %Y' }}                            {%- assign second_post = site. posts[1] -%}                        {% if second_post. image %}                         &lt;img class= w-100  src= {% if second_post. image contains  ://  %}{{ second_post. image }}{% else %}{{ second_post. image | absolute_url }}{% endif %}  alt= {{ second_post. title }} &gt;                        {% endif %}                                    {{ second_post. title }}          :                       In             {% for category in second_post. categories %}            {{ category }},             {% endfor %}                                                      {{ second_post. date | date: '%b %d, %Y' }}                                    {%- assign third_post = site. posts[2] -%}                        {% if third_post. image %}                         &lt;img class= w-100  src= {% if third_post. image contains  ://  %}{{ third_post. image }}{% else %}{{site. baseurl}}/{{ third_post. image }}{% endif %}  alt= {{ third_post. title }} &gt;                        {% endif %}                                    {{ third_post. title }}          :                       In             {% for category in third_post. categories %}            {{ category }},             {% endfor %}                                                      {{ third_post. date | date: '%b %d, %Y' }}                                    {%- assign fourth_post = site. posts[3] -%}                        {% if fourth_post. image %}                        &lt;img class= w-100  src= {% if fourth_post. image contains  ://  %}{{ fourth_post. image }}{% else %}{{site. baseurl}}/{{ fourth_post. image }}{% endif %}  alt= {{ fourth_post. title }} &gt;                        {% endif %}                                    {{ fourth_post. title }}          :                       In             {% for category in fourth_post. categories %}            {{ category }},             {% endfor %}                                                      {{ fourth_post. date | date: '%b %d, %Y' }}                                  {% for post in site. posts %} {% if post. tags contains  sticky  %}                    {{post. title}}                  {{ post. excerpt | strip_html | strip_newlines | truncate: 136 }}                 Read More            	             {% endif %}{% endfor %}  {% endif %}                All Stories:         {% for post in paginator. posts %}          {% include main-loop-card. html %}        {% endfor %}                   {% if paginator. total_pages &gt; 1 %}              {% if paginator. previous_page %}        &laquo; Prev       {% else %}        &laquo;       {% endif %}       {% for page in (1. . paginator. total_pages) %}        {% if page == paginator. page %}        {{ page }}        {% elsif page == 1 %}        {{ page }}        {% else %}        {{ page }}        {% endif %}       {% endfor %}       {% if paginator. next_page %}        Next &raquo;       {% else %}        &raquo;       {% endif %}            {% endif %}                     {% include sidebar-featured. html %}      "
     }, {
     "id": 9,
     "url": "http://localhost:4000/privacy-policy.html",
     "title": "Privacy Policy",
-    "body": "“SpellOnYou” takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used. Collection of Routine Information: This website track basic information about their visitors. This information includes, but is not limited to, IP addresses, browser details, timestamps and referring pages. None of this information can personally identify specific visitor to this website. The information is tracked for routine administration and maintenance purposes. Cookies: Where necessary, this website uses cookies to store information about a visitor’s preferences and history in order to better serve the visitor and/or present the visitor with customized content. Advertisement and Other Third Parties: Advertising partners and other third parties may use cookies, scripts and/or web beacons to track visitor activities on this website in order to display advertisements and other useful information. Such tracking is done directly by the third parties through their own servers and is subject to their own privacy policies. This website has no access or control over these cookies, scripts and/or web beacons that may be used by third parties. Learn how to opt out of Google’s cookie usage. Links to Third Party Websites: We have included links on this website for your use and reference. We are not responsible for the privacy policies on these websites. You should be aware that the privacy policies of these websites may differ from our own. Security: The security of your personal information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security. Changes To This Privacy Policy: This Privacy Policy is effective and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page. We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our website. Contact Information: For any questions or concerns regarding the privacy policy, please contact us here. "
+    "body": "”{{site. name}}” takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used. Collection of Routine Information: This website track basic information about their visitors. This information includes, but is not limited to, IP addresses, browser details, timestamps and referring pages. None of this information can personally identify specific visitor to this website. The information is tracked for routine administration and maintenance purposes. Cookies: Where necessary, this website uses cookies to store information about a visitor’s preferences and history in order to better serve the visitor and/or present the visitor with customized content. Advertisement and Other Third Parties: Advertising partners and other third parties may use cookies, scripts and/or web beacons to track visitor activities on this website in order to display advertisements and other useful information. Such tracking is done directly by the third parties through their own servers and is subject to their own privacy policies. This website has no access or control over these cookies, scripts and/or web beacons that may be used by third parties. Learn how to opt out of Google’s cookie usage. Links to Third Party Websites: We have included links on this website for your use and reference. We are not responsible for the privacy policies on these websites. You should be aware that the privacy policies of these websites may differ from our own. Security: The security of your personal information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security. Changes To This Privacy Policy: This Privacy Policy is effective and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page. We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our website. Contact Information: For any questions or concerns regarding the privacy policy, please contact us here. "
     }, {
     "id": 10,
     "url": "http://localhost:4000/tags.html",
@@ -239,45 +243,294 @@ function lunr_search(term) {
 
     <!-- Content -->
     <main role="main" class="site-content">
-        <div class="container">
-<h3 class="font-weight-bold spanborder"><span>Privacy Policy</span></h3>
-<div class="page-content">
-<p>“SpellOnYou” takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used.</p>
-
-<h4 id="collection-of-routine-information">Collection of Routine Information</h4>
-
-<p>This website track basic information about their visitors. This information includes, but is not limited to, IP addresses, browser details, timestamps and referring pages. None of this information can personally identify specific visitor to this website. The information is tracked for routine administration and maintenance purposes.</p>
-
-<h4 id="cookies">Cookies</h4>
-
-<p>Where necessary, this website uses cookies to store information about a visitor’s preferences and history in order to better serve the visitor and/or present the visitor with customized content.</p>
-
-<h4 id="advertisement-and-other-third-parties">Advertisement and Other Third Parties</h4>
-
-<p>Advertising partners and other third parties may use cookies, scripts and/or web beacons to track visitor activities on this website in order to display advertisements and other useful information. Such tracking is done directly by the third parties through their own servers and is subject to their own privacy policies. This website has no access or control over these cookies, scripts and/or web beacons that may be used by third parties. Learn how to <a href="http://www.google.com/privacy_ads.html">opt out of Google’s cookie usage</a>.</p>
-
-<h4 id="links-to-third-party-websites">Links to Third Party Websites</h4>
-
-<p>We have included links on this website for your use and reference. We are not responsible for the privacy policies on these websites. You should be aware that the privacy policies of these websites may differ from our own.</p>
-
-<h4 id="security">Security</h4>
-
-<p>The security of your personal information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.</p>
-
-<h4 id="changes-to-this-privacy-policy">Changes To This Privacy Policy</h4>
-
-<p>This Privacy Policy is effective and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.</p>
-
-<p>We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our website.</p>
-
-<h4 id="contact-information">Contact Information</h4>
-
-<p>For any questions or concerns regarding the privacy policy, please <a href="/contact.html">contact us here</a>.</p>
-
-<!-- Comments -->
-
+        
+<div class="container">
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+		<div class="h-100 tofront">
+			<div class="row  justify-content-between ">
+				<div class=" col-md-6  pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+					<p class="text-uppercase font-weight-bold">
+                        <span class="catlist">
+						
+                          <a class="sscroll text-danger" href="/categories.html#fast.ai-v3">fast.ai-v3</a><span class="sep">, </span>
+                        
+                        </span>
+					</p>
+					<h1 class="display-4 mb-4 article-headline">Lecture 08 - Deep Learning From Foundations-part1</h1>
+					<div class="d-flex align-items-center">
+                        
+						<small class="ml-3">  <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
+                            <span class="text-muted d-block mt-1">Oct 18, 2019 · <span class="reading-time">
+  
+  
+    3 mins read
+  
+</span>
+    </span>
+						</small>
+					</div>
+				</div>
+                
+				<div class="col-md-6 pr-0 align-self-center">
+					<img class="rounded" src="/assets/images/cnn.png" alt="Lecture 08 - Deep Learning From Foundations-part1">
+				</div>
+                
+			</div>
+		</div>
+	</div>
 </div>
+
+
+
+
+
+<div class="container-lg pt-4 pb-4">
+	<div class="row justify-content-center">
+        
+        
+        <!-- Share -->
+		<div class="col-lg-2 pr-4 mb-4 col-md-12">
+			<div class="sticky-top sticky-top-offset text-center">
+				<div class="text-muted">
+					Share this
+				</div>
+				<div class="share d-inline-block">
+					<!-- AddToAny BEGIN -->
+					<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+						<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+						<a class="a2a_button_facebook"></a>
+						<a class="a2a_button_twitter"></a>
+					</div>
+					<script async src="https://static.addtoany.com/menu/page.js"></script>
+					<!-- AddToAny END -->
+				</div>
+			</div>
+		</div>
+        
+        
+		<div class="col-md-12 col-lg-8">
+            
+            <!-- Article -->
+			<article class="article-post">                
+			<p> 
+<em>I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free</em>
+ 
+<strong>Contents</strong>
+ 
+1) <a href="#whats-going-on-in-this-course">What is going on in this course</a>
+2) <a href="#library-development-using-jupyter-notebook">Library development using jupyter notebook</a>
+ 
+<strong>Resources</strong></p>
+<ul>
+  <li><a href="https://github.com/fastai/course-v3/blob/master/nbs/dl2/01_matmul.ipynb">notebooks</a></li>
+  <li><a href="https://drive.google.com/file/d/18QwDI25Lf0ld0-cEugu7LxjwTc2NRkha/view">material</a></li>
+  <li><a href="https://course.fast.ai/videos/?lesson=8">video</a></li>
+  <li><a href="https://docs.google.com/spreadsheets/d/1bIPBcf-p9iqNG8BGmIVlJCFa4jEsbOZvcPXGTYe5pjI/edit#gid=0">broadcasting excel</a>
+ </li>
+</ul>
+
+<h2 id="what-is-going-on-in-this-course">What is going on in this course?</h2>
+
+<p> </p>
+<h4 id="what-is-from-foundations">What is <em>‘from foundations’</em>?</h4>
+
+<p>1) Recreate fast.ai and Pytorch</p>
+
+<p>2) using pure python
+ </p>
+<h4 id="evade-overfitting">Evade Overfitting</h4>
+
+<p>Overfit : validation error getting worse
+<del>training loss &lt; validation loss</del>
+ </p>
+<h4 id="know-the-name-of-the-symbol-you-use">Know the name of the symbol you use</h4>
+
+<p>find in this page if you don’t know the symbol that you are using<a href="https://en.wikipedia.org/wiki/List_of_mathematical_symbols"></a> or just draw it <a href="http://detexify.kirelabs.org/classify.html">here</a> (run by ML!)</p>
+
+<h4 id="steps-to-a-basic-modern-cnn-model">Steps to a basic modern CNN model</h4>
+
+<blockquote>
+  <p>1) Matrix multiplication -&gt; 2) Relu/Initialization -&gt; 3) Fully-connected Forward
+-&gt; 4) Fully-connected Backward -&gt; 5) Train loop -&gt; 6) Convolution-&gt; 7) Optimization -&gt;
+8) Batchnormalization -&gt; 9) Resnet</p>
+</blockquote>
+
+<h4 id="todays-implementation-goal-1-matmul---4-fc-backward">Today’s implementation goal: 1) matmul -&gt; 4) FC backward</h4>
+<p> </p>
+<h3 id="library-development-using-jupyter-notebook">Library development using jupyter notebook</h3>
+<p>https://dbader.org/blog/python-assert-tutorial
+ </p>
+<h4 id="jupyter-notebook-certainly-can-make-module">jupyter notebook certainly can make module</h4>
+
+<ul>
+  <li>There will be <em>#export</em> tag that Howard (and we) want to extract</li>
+  <li>special <em>notebook2script.py</em> will detect sign of <em>#expert</em> and convert following into python module
+ </li>
+  <li>and test it</li>
+</ul>
+
+<p><code>test\_eq(TEST,'test')&nbsp;test\_eq(TEST,'test1')</code></p>
+
+<ul>
+  <li>what is <strong>run_notebook.py</strong>?
+    <ul>
+      <li>when you want to test your module in command line interface</li>
+    </ul>
+  </li>
+</ul>
+
+<p><code>		!python run\_notebook.py 01_matmul.ipynb</code></p>
+
+<ul>
+  <li>Is there any difference between 1) and 2)?</li>
+</ul>
+
+<p>1) test -&gt; test01 
+2) test01 -&gt; test</p>
+
+<p>#TODO I don’t know yet</p>
+
+<ul>
+  <li>look into <em>run_notebook.py</em>, package <strong>fire</strong> Jeremy used. What is that?</li>
+</ul>
+
+<p>read and run the code in a notebook, and in the process, Jeremy made <a href="https://opensource.googleblog.com/2017/03/python-fire-command-line.html">Python Fire</a> library called!shockingly, fire takes any kind of function and converts into CLI command.</p>
+
+<p><em>fire library was released by Google open source, Thursday, March 2, 2017</em></p>
+
+<p> </p>
+
+<h3 id="get-data">Get data</h3>
+
+<ul>
+  <li>pytorch and numpy are pretty much same.</li>
+  <li>variable c explains how many pixels there are in in MNIST, 28 pixels</li>
+  <li>PyTorch’s <em>view()</em> method: torch function that manipulating tensor, and squeeze() in torch &amp; mathmatical operation similar function</li>
+  <li><a href="https://www.oreilly.com/library/view/natural-language-processing/9781491978221/">Rao &amp; McMahan</a> said usually this functions result in feature vector.</li>
+  <li>In part 1, you can use view function several times.
+ </li>
+</ul>
+
+<h3 id="initial-python-model">Initial python model</h3>
+
+<ul>
+  <li>
+    <p>Which is Linear, like $Xw$(weight)$+a$(bias) $= Y$</p>
+  </li>
+  <li>
+    <p>If you don’t know hou to multiple matrix, refer this site <a href="http://matrixmultiplication.xyz">matmul visulization site</a></p>
+  </li>
+</ul>
+
+<h4 id="how-many-time-spends-if-we-we-use-pure-python">How many time spends if we we use pure python</h4>
+<ul>
+  <li>
+    <p>function <span style="color:blue">matmul</span>, typical matrix multiplication function, takes about 1 second for calculating 1 single train data! (maybe assumed stochastic, 5 data points in validation)</p>
+  </li>
+  <li>
+    <p>it takes about 11.36 hours to update parameters even single layer and 1 iteration! (if that was my computer, it would be 14 hours..)🤪</p>
+  </li>
+  <li>
+    <p>THIS is why we need to consider ‘time’&amp;’space’</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>This is kinda slow - what if we could speed it up by 50,000 times? Let’s try!</p>
+</blockquote>
+
+<p> </p>
+
+<h3 id="elementwise-ops">Elementwise ops</h3>
+
+<h4 id="how-can-we-make-python-faster">How can we make python faster?</h4>
+
+<ul>
+  <li>If we want to calculate faster, then do remove pythonic calcuation, by passing its computation down to something that is written something other than python, like pytorch.</li>
+  <li>According to PyTorch <a href="https://pytorch.org/cppdocs/#aten">doc</a> it  uses C++ (via ATen), so we are going to implement that function with python.
+ </li>
+</ul>
+
+<p><img src="assets/images/6.png" alt="" /></p>
+
+<h4 id="what-is-element-wise-operation">What is element wise operation?</h4>
+<ul>
+  <li>items makes a pair, operate corresponding component
+ </li>
+</ul>
+
+                
+			</article>
+			
+			<!-- Tags -->
+			<div class="mb-4">
+				<span class="taglist">
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/tags.html#featured">featured</a>
+				
+				</span>
+			</div>
+ 
+            <!-- Mailchimp Subscribe Form -->
+            
+            
+            
+             <!-- Author Box -->
+                				
+				<div class="row mt-5">
+					<div class="col-md-2 align-self-center">
+                          
+					</div>
+					<div class="col-md-10">		
+                        <h5 class="font-weight-bold">Written by  </h5>
+											
+					</div>
+				</div>				
+                
+            
+            <!-- Comments -->
+            
+                <!--  Don't edit anything here. Set your disqus id in _config.yml -->
+
+<div id="comments" class="mt-5">
+    <div id="disqus_thread">
+    </div>
+    <script type="text/javascript">
+        var disqus_shortname = 'dionne'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>
+    Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
 </div>
+            
+            
+		</div>
+        
+        
+	</div>
+</div>
+
+
+<!-- Aletbar Prev/Next -->
+<div class="alertbar">
+    <div class="container">
+        <div class="row prevnextlinks small font-weight-bold">
+          
+          
+            <div class="col-md-6 text-right pr-0">
+                <a class="text-dark" href="/2019/10/GPU-time/"> 5 reasons took much time to setting GPU for fast.ai than I expected  <img height="30px" class="ml-1" src="/assets/images/asia-east1.png"> </a>
+            </div>
+          
+        </div>
+    </div>
+</div>
+
     </main>
 
 

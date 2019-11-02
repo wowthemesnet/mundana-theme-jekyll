@@ -1,4 +1,150 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-10-29T18:52:18+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">5 reasons took much time to setting GPU for fast.ai than I expected</title><link href="http://localhost:4000/2019/10/5-reasons-took-much-time-to-setting-GPU-for-fast.ai-than-I-expected/" rel="alternate" type="text/html" title="5 reasons took much time to setting GPU for fast.ai than I expected" /><published>2019-10-23T00:00:00+09:00</published><updated>2019-10-23T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/5-reasons-took-much-time-to-setting-GPU-for-fast.ai-than-I-expected</id><content type="html" xml:base="http://localhost:4000/2019/10/5-reasons-took-much-time-to-setting-GPU-for-fast.ai-than-I-expected/">&lt;h2 id=&quot;motivation&quot;&gt;Motivation&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-02T18:18:12+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Lecture 08 - Deep Learning From Foundations-part2</title><link href="http://localhost:4000/2019/11/note08-fastai-2/" rel="alternate" type="text/html" title="Lecture 08 - Deep Learning From Foundations-part2" /><published>2019-11-01T00:00:00+09:00</published><updated>2019-11-01T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-2/">&lt;h4 id=&quot;frobenius-norm&quot;&gt;Frobenius norm&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;$ | A |&lt;em&gt;F = \left( \sum&lt;/em&gt;{i,j=1}^n&lt;/td&gt;
+      &lt;td&gt;a_{ij}&lt;/td&gt;
+      &lt;td&gt;^2 \right)^{1/2} $  &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;above converted into  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;(m\*m).sum().sqrt()&lt;/code&gt; &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Plus, don’t suffer from mathmatical symbols. He also copy and paste that equations from wikipedia.&lt;/li&gt;
+  &lt;li&gt;and if you need latex form, download it from archive.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&quot;what-is-the-meaning-of-elementwise&quot;&gt;What is the meaning of elementwise?&lt;/h6&gt;
+&lt;ul&gt;
+  &lt;li&gt;We do not calculate each component. But all of the component at once. Because, length of column of A and row of B are fixed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;how-much-time-we-saved&quot;&gt;How much time we saved?&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;So now that takes 1.37ms. We have removed one line of code and it is a 178 times faster…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;#TODO
+I don’t know where the &lt;code class=&quot;highlighter-rouge&quot;&gt;5&lt;/code&gt; from. but keep it.
+Maybe this is related with frobenius norm…?
+  
+as a result, &lt;strong&gt;the code before&lt;/strong&gt; 
+ &lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;for k in range(ac):
+    c[i,j] += a[i,k] + b[k,j]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;the code after 
+  &lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;c[i,j] = (a[i,:] * b[:,j]).sum()&lt;/code&gt;
+   &lt;/p&gt;
+
+&lt;p&gt;To compare it (result betweet &lt;em&gt;original&lt;/em&gt; and &lt;em&gt;adjusted&lt;/em&gt; version) we use not test_eq but other function. The reason for this is that due to rounding errors from math operations, matrices may not be exactly the same. As a result, we want a function that will “is a equal to b &lt;strong&gt;within some tolerance&lt;/strong&gt;”&lt;/p&gt;
+
+&lt;p&gt; 
+`#export
+def near(a,b): 
+    return torch.allclose(a, b, rtol=1e-3, atol=1e-5)&lt;/p&gt;
+
+&lt;p&gt;def test_near(a,b): 
+    test(a,b,near)&lt;/p&gt;
+
+&lt;p&gt;test_near(t1, matmul(m1, m2))`
+ &lt;/p&gt;
+
+&lt;h3 id=&quot;broadcasting&quot;&gt;Broadcasting&lt;/h3&gt;
+
+&lt;p&gt;Now, we will use the broadcasting and remove&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;c[i,j] = (a[i,:] * b[:,j]).sum()&lt;/code&gt;
+ &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How it works?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;a=tensor([[10,10,10],
+          [20,20,20],
+          [30,30,30]])
+b=tensor([1,2,3,])
+a,b&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;(tensor([[10, 10, 10],
+         [20, 20, 20],
+         [30, 30, 30]]), tensor([1, 2, 3]))&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;a+b&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;tensor([[11, 12, 13],
+        [21, 22, 23],
+        [31, 32, 33]])&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;Figure 2. demonstrated how array **b** is broadcast to compatible with **a** *Adopted from* [*numpy_tutorial*](https://www.tutorialspoint.com/numpy/numpy_broadcasting.htm)&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;there is no loop, but it seems there is exactly the loop.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;This is not from jeremy but i wondered How to broadcast an array by columns?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mathworld.wolfram.com/TensorRank.html&quot;&gt;TensorRank&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forums.fast.ai/t/forum-markdown-notes-lesson-8/41896&quot;&gt;ti note&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">Frobenius norm</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/5.png" /></entry><entry><title type="html">Why am I not listed as a contributor to a project that merged my PR?</title><link href="http://localhost:4000/2019/10/Git-Merge/" rel="alternate" type="text/html" title="Why am I not listed as a contributor to a project that merged my PR?" /><published>2019-10-30T00:00:00+09:00</published><updated>2019-10-30T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/Git-Merge</id><content type="html" xml:base="http://localhost:4000/2019/10/Git-Merge/">&lt;h3 id=&quot;how-did-i-come-to-that-repository&quot;&gt;How did I come to that repository?&lt;/h3&gt;
+
+&lt;p&gt;When I’m stuck, I would prefer to code, than to go deep in theory. (It must be so.. too much to understand 🤒) 
+It was &lt;a href=&quot;https://arxiv.org/pdf/1810.04805.pdf&quot;&gt;BERT released by Google AI&lt;/a&gt; I felt keenly the necessity of implementing, because not only couldn’t understand the way they figured out positional encoding formula, but how it actually works. What does it mean to “scale” dot product in Attention? (Now I know it’s far from my section 😂) &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;&amp;quot;https://www.tensorflow.org/images/tutorials/transformer/scaled_attention&amp;quot;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;Figure 1. Scaled Dot Product. *Adopted from* [*tensorflow blog*](www.tensorflow.org)&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h3 id=&quot;what-was-the-code-error&quot;&gt;What was the code error?&lt;/h3&gt;
+
+&lt;p&gt;For implement code in paper, I read the papers &lt;a href=&quot;https://arxiv.org/pdf/1706.03762.pdf&quot;&gt;Transformer&lt;/a&gt; and &lt;a href=&quot;https://arxiv.org/pdf/1810.04805.pdf&quot;&gt;BERT&lt;/a&gt;, structured the model, and refered the others’ code.  &lt;/p&gt;
+
+&lt;p&gt;Meanwhile, I found out a small error in tokenization process, which was changing a token into [MASK], enabled bidirectional representation.&lt;/p&gt;
+
+&lt;h3 id=&quot;ive-made-pr-and-got-merged-but-i-was-not-in-contributors-why&quot;&gt;I’ve made PR, and got merged. But I was not in contributors. Why?&lt;/h3&gt;
+
+&lt;p&gt;Actually I happened to know I was exception, after that I became curious. 
+So… Doesn’t it means we can cover up someone’s traces? 
+Did I something wrong? &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;Figure 2. Merged Pull request *Adopted from* [*graykode project*](https://github.com/graykode/nlp-tutorial/pull/9)&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;According to &lt;a href=&quot;https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges&quot;&gt;About pull request merges&lt;/a&gt; and &lt;a href=&quot;https://git-scm.com/docs/git-merge#_fast_forward_merge&quot;&gt;git&lt;/a&gt;, it’s because a person who has a write permission had selected squash (fast-forward) merge option on a pull request. 
+Since it dose fetch from the remote first and immediately execute &lt;code&gt;git merge&lt;/code&gt; to create a merge commit, this option append a commit to master without creating a commit.&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mchromiak.github.io/articles/2017/Sep/12/Transformer-Attention-is-all-you-need/&quot;&gt;Michał Chromiak’s blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://shinglyu.com/web/2016/11/08/servo-rebase-and-squash-guide.html&quot;&gt;Shing Lyu blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://git-scm.com/docs/git-merge#_fast_forward_merge&quot;&gt;Git-docs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile&quot;&gt;Github: why are my contributions are not showing on my profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.atlassian.com/git/tutorials/syncing/git-fetch&quot;&gt;atlassian-gitfetch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">How did I come to that repository?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1.png" /></entry><entry><title type="html">5 reasons took much time to setting GPU for fast.ai than I expected</title><link href="http://localhost:4000/2019/10/GPU-time/" rel="alternate" type="text/html" title="5 reasons took much time to setting GPU for fast.ai than I expected" /><published>2019-10-23T00:00:00+09:00</published><updated>2019-10-23T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/GPU-time</id><content type="html" xml:base="http://localhost:4000/2019/10/GPU-time/">&lt;h2 id=&quot;motivation&quot;&gt;Motivation&lt;/h2&gt;
 
 &lt;p&gt;Before now, me as a undergraduate student, I was parsimony who usually depend on colab, kaggle, friend’s server(occasional) whenever i need GPU.. 
  
@@ -12,7 +158,7 @@ And this time it’s been for a while to install GPU than I expected and I share
 
 &lt;p&gt;At the first time when GCP came out, there was no &lt;strong&gt;AI  Platform&lt;/strong&gt; service. So from starting vm instance to launching jupyter and installing packages, I did all of the things myself. (but I learned 🤗)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/why-it-took-so-much/installing-conda-cli.png&quot; alt=&quot;installing-conda-cli&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/installing-conda-cli.png&quot; alt=&quot;installing-conda-cli&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$	curl -O https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -24,7 +170,7 @@ I created VM instance,selected zone, machine type and disk type. Then, define fi
 
 &lt;p&gt;But you can do all of these things AI Platform.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/why-it-took-so-much/AI.png&quot; alt=&quot;installing-conda-cli&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/AI.png&quot; alt=&quot;installing-conda-cli&quot; /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;[AI Platform]&lt;/p&gt;
 
 &lt;p&gt;I think if you are at Asia-Pacific, it can save your time.&lt;/p&gt;
@@ -57,6 +203,9 @@ I didn’t know fast.ai has manual to running GCP, and I think it’s as good a 
 &lt;p&gt; 
 It helped me so much when I had aws and shortened time.&lt;/p&gt;
 
+&lt;p&gt;I don’t want to read all of the manual in amazno.. (It is recommended.. but I’d rather read &lt;a href=&quot;https://git-scm.com/book/en/v2&quot;&gt;GIT PRO&lt;/a&gt; for now…)
+&lt;code&gt;ssh -i ~/.ssh/&lt;your_private_key_pair&gt; -L localhost:8888:localhost:8888 ubuntu@&lt;your instance=&quot;&quot; IP=&quot;&quot;&gt;&amp;lt;/code&amp;gt;&lt;/your&gt;&lt;/your_private_key_pair&gt;&lt;/code&gt;&lt;/p&gt;
+
 &lt;p&gt;     &lt;/p&gt;
 &lt;h3 id=&quot;4-you-should-wait-to-add-more-volume-just-after-add-volume-by-building-aws-ec2&quot;&gt;4. You should wait to add more volume just after add volume, by building AWS EC2.&lt;/h3&gt;
 &lt;p&gt; 
@@ -72,21 +221,26 @@ Unfortunately, at the first time, I didn’t know it (again 👻) and when VM la
 그냥 더 추가하면 되겠지라고생각했으나 optimizing 중입니다.. 안됩니다 라고 했따 ㅠ
 맨 위에 내가 뭘 뭘 해봤던 사람인지  적기. 저기 적힌 것중엔 Kaggle, Golab, google colud, Azure, amazon ec2가 있군.--&gt;
 
-&lt;!--
+&lt;p&gt;&amp;lt;!–&lt;/p&gt;
 
-this time I installed GPU in two years, and it became little complicated compared to 2 years ago.
-And this time for the first time(maybe not the first time.. but i handled it in my class or with my friend. but it's my first time on my own.) I 
-very I'm started to using used google colab, kaggle
+&lt;p&gt;this time I installed GPU in two years, and it became little complicated compared to 2 years ago.
+And this time for the first time(maybe not the first time.. but i handled it in my class or with my friend. but it’s my first time on my own.) I 
+very I’m started to using used google colab, kaggle
 and, GCP-JupyterLab, ec2 - friend made, 
 aws vm machine but I had a environment variable but i did not know of it.
-On these days, I could not get a resources from taiwan... 
+On these days, I could not get a resources from taiwan…&lt;/p&gt;
 
-3. I couldn't notice a deliberate 
-
-4. Anyway, as a result I tried myself gcp myself and aws ec2 with fast.ai But I think doing on my self surely takes much time (in this point I wonder why I'm doing this, and should remind me, especially I was studying disk volume optimization)
-
-4. disk volume exceed - https://askubuntu.com/questions/919748/no-space-left-on-device-even-though-there-is
---&gt;</content><author><name>dionne</name></author><category term="sticky" /><summary type="html">Motivation</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/asia-east1.png" /></entry><entry><title type="html">Lecture 08 - Deep Learning From Foundations</title><link href="http://localhost:4000/2019/10/lecture08-fast.ai-v3-part2/" rel="alternate" type="text/html" title="Lecture 08 - Deep Learning From Foundations" /><published>2019-10-18T00:00:00+09:00</published><updated>2019-10-18T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/lecture08-fast.ai-v3-part2</id><content type="html" xml:base="http://localhost:4000/2019/10/lecture08-fast.ai-v3-part2/">&lt;p&gt; 
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;I couldn’t notice a deliberate&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Anyway, as a result I tried myself gcp myself and aws ec2 with fast.ai But I think doing on my self surely takes much time (in this point I wonder why I’m doing this, and should remind me, especially I was studying disk volume optimization)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;disk-volume-exceed---httpsaskubuntucomquestions919748no-space-left-on-device-even-though-there-is&quot;&gt;disk volume exceed - https://askubuntu.com/questions/919748/no-space-left-on-device-even-though-there-is&lt;/h2&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>dionne</name></author><category term="sticky" /><category term="featured" /><summary type="html">Motivation</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/asia-east1.png" /></entry><entry><title type="html">Lecture 08 - Deep Learning From Foundations-part1</title><link href="http://localhost:4000/2019/10/note08-fastai-1/" rel="alternate" type="text/html" title="Lecture 08 - Deep Learning From Foundations-part1" /><published>2019-10-18T00:00:00+09:00</published><updated>2019-10-18T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/note08-fastai-1</id><content type="html" xml:base="http://localhost:4000/2019/10/note08-fastai-1/">&lt;p&gt; 
 &lt;em&gt;I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free&lt;/em&gt;
  
 &lt;strong&gt;Contents&lt;/strong&gt;
@@ -115,7 +269,7 @@ On these days, I could not get a resources from taiwan...
 &lt;h4 id=&quot;evade-overfitting&quot;&gt;Evade Overfitting&lt;/h4&gt;
 
 &lt;p&gt;Overfit : validation error getting worse
-~training loss &amp;lt; validation loss~
+&lt;del&gt;training loss &amp;lt; validation loss&lt;/del&gt;
  &lt;/p&gt;
 &lt;h4 id=&quot;know-the-name-of-the-symbol-you-use&quot;&gt;Know the name of the symbol you use&lt;/h4&gt;
 
@@ -174,14 +328,6 @@ On these days, I could not get a resources from taiwan...
 
 &lt;p&gt; &lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;p&gt;01_matmul-(1).ipynb ends&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;01_matmul-(2).ipynb starts&lt;/p&gt;
-
 &lt;h3 id=&quot;get-data&quot;&gt;Get data&lt;/h3&gt;
 
 &lt;ul&gt;
@@ -233,35 +379,10 @@ On these days, I could not get a resources from taiwan...
  &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;img src=&quot;assets/images/6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
 &lt;h4 id=&quot;what-is-element-wise-operation&quot;&gt;What is element wise operation?&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;items makes a pair, operate corresponding component
  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;frobenius-norm&quot;&gt;Frobenius norm&lt;/h4&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;$ | A |&lt;em&gt;F = \left( \sum&lt;/em&gt;{i,j=1}^n&lt;/td&gt;
-      &lt;td&gt;a_{ij}&lt;/td&gt;
-      &lt;td&gt;^2 \right)^{1/2} $&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;above converted into&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code&gt;(m\*m).sum().sqrt()&lt;/code&gt;&amp;gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Plus, don’t suffer from mathmatical symbols. He also copy and paste that equations from wikipedia.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;and if you need latex form, download it from archive.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><summary type="html">  I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free   Contents   1) What is going on in this course 2) Library development using jupyter notebook   Resources notebooks material video broadcasting excel  </summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn.png" /></entry></feed>
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">  I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free   Contents   1) What is going on in this course 2) Library development using jupyter notebook   Resources notebooks material video broadcasting excel  </summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn.png" /></entry></feed>

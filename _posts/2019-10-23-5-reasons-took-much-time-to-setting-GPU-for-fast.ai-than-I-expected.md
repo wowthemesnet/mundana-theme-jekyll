@@ -76,6 +76,9 @@ I didn't know fast.ai has manual to running GCP, and I think it's as good a reas
 &nbsp;
 It helped me so much when I had aws and shortened time.
 
+I don't want to read all of the manual in amazno.. (It is recommended.. but I'd rather read [GIT PRO](https://git-scm.com/book/en/v2) for now...)
+<code>ssh -i ~/.ssh/<your_private_key_pair> -L localhost:8888:localhost:8888 ubuntu@<your instance IP></code>
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ### 4. You should wait to add more volume just after add volume, by building AWS EC2.
 &nbsp;

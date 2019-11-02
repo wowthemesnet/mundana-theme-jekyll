@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lecture 08 - Deep Learning From Foundations"
+title: "Lecture 08 - Deep Learning From Foundations-part1"
 author: dionne
 categories: [fast.ai-v3]
 image: assets/images/cnn.png
@@ -80,15 +80,6 @@ read and run the code in a notebook, and in the process, Jeremy made [Python Fir
 
 &nbsp;
 
-
----
-
-01_matmul-(1).ipynb ends
-
----
-
-01_matmul-(2).ipynb starts
-
 ### Get data
 
 - pytorch and numpy are pretty much same.
@@ -129,15 +120,4 @@ read and run the code in a notebook, and in the process, Jeremy made [Python Fir
 - items makes a pair, operate corresponding component
 &nbsp;
 
-#### Frobenius norm
 
-$ \| A \|_F = \left( \sum_{i,j=1}^n | a_{ij} |^2 \right)^{1/2} $
-
-- above converted into 
-
-<code>(m\*m).sum().sqrt()</code>>
-
-
-- Plus, don't suffer from mathmatical symbols. He also copy and paste that equations from wikipedia.
-
-- and if you need latex form, download it from archive.

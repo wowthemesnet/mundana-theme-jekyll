@@ -1,0 +1,71 @@
+<h4 id="frobenius-norm">Frobenius norm</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$ | A |<em>F = \left( \sum</em>{i,j=1}^n</td>
+      <td>a_{ij}</td>
+      <td>^2 \right)^{1/2} $  </td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>above converted into  </li>
+</ul>
+
+<p><code>(m\*m).sum().sqrt()</code> </p>
+<ul>
+  <li>Plus, don’t suffer from mathmatical symbols. He also copy and paste that equations from wikipedia.</li>
+  <li>and if you need latex form, download it from archive.</li>
+</ul>
+
+<h6 id="what-is-the-meaning-of-elementwise">What is the meaning of elementwise?</h6>
+<ul>
+  <li>We do not calculate each component. But all of the component at once. Because, length of column of A and row of B are fixed.</li>
+</ul>
+
+<h4 id="how-much-time-we-saved">How much time we saved?</h4>
+
+<p>So now that takes 1.45ms. We have removed one line of code and it is a 178 times faster…</p>
+
+<p><code>%timeit -n 10 _=matmul(m1,m2)</code>
+ 1.45 ms ± 353 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)</p>
+
+<p><code>890.1/5</code></p>
+<blockquote>
+  <p>178.02</p>
+</blockquote>
+
+<p>#TODO
+I don’t know where the <code class="highlighter-rouge">5</code> from. but keep it.
+Maybe this is related with frobenius norm…?
+  
+as a result, <strong>the code before</strong> 
+ 
+<code class="highlighter-rouge">for k in range(ac):
+    c[i,j] += a[i,k] + b[k,j]</code></p>
+
+<p>the code after 
+  </p>
+
+<p><code class="highlighter-rouge">c[i,j] = (a[i,:] * b[:,j]).sum()</code>
+   </p>
+
+<p>so we multiplied row of A and column of b, and that gives us back a rank one tensor, which we add up.</p>
+
+<p>To test it we will write another function to compare matrices. The reason for this is that due to rounding errors from math operations, matrices may not be exactly the same. As a result, we want a function that will “is a equal to b within <strong>some tolerance</strong>”</p>
+
+<p>`#export
+def near(a,b): 
+    return torch.allclose(a, b, rtol=1e-3, atol=1e-5)</p>
+
+<p>def test_near(a,b): 
+    test(a,b,near)`</p>
+
+<h3 id="reference">Reference</h3>
+
+<ul>
+  <li><a href="http://mathworld.wolfram.com/TensorRank.html">TensorRank</a></li>
+  <li><a href="https://forums.fast.ai/t/forum-markdown-notes-lesson-8/41896">ti note</a></li>
+</ul>

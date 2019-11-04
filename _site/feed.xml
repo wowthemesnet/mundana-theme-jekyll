@@ -1,9 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-03T01:07:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Lecture 08 - Deep Learning From Foundations-part2</title><link href="http://localhost:4000/2019/11/note08-fastai-2/" rel="alternate" type="text/html" title="Lecture 08 - Deep Learning From Foundations-part2" /><published>2019-11-01T00:00:00+09:00</published><updated>2019-11-01T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-2/">&lt;h4 id=&quot;frobenius-norm&quot;&gt;Frobenius norm&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-04T15:49:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Douglas Rushkoff</title><link href="http://localhost:4000/2019/11/douglas-rushoff/" rel="alternate" type="text/html" title="Douglas Rushkoff" /><published>2019-11-04T00:00:00+09:00</published><updated>2019-11-04T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/douglas-rushoff</id><content type="html" xml:base="http://localhost:4000/2019/11/douglas-rushoff/">&lt;p&gt;“Humans are no longer valued for our creativity.&lt;br /&gt;
+Now we are just valued for our data”&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/7.png&quot; alt=&quot;&quot; /&gt;  &lt;/p&gt;
+&lt;p&gt;It does require specific conditions that people are living in the competitive.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I think, no doubt, It’s a supercompetitive world.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;After watching this vedio, I remembered meeting an acountant partner at a Big 4 firm, 3 years ago.&lt;/em&gt;&lt;br /&gt;
+I met him via mentoring system in university, so the acountant partner encouraged me to be a acountant, because they rate SNU highly.&lt;br /&gt;
+Besides, the acountant said, to be frankly said, what neighborhood &amp;amp; school(even high school), where they are living now(commute time!) and single or married are more liable than anything.&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Well You know, those values are relatively objective than cover letter or your apperance… anything.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When I left his firm, after mentoring, he happened a junior staff.&lt;/p&gt;
+
+&lt;p&gt;“She is married women and graduated from just that schoo. But her performance quite good. Outlier.”&lt;/p&gt;
+
+&lt;p&gt;And the acountant’s word, which I’ve heard 3 years ago, coincides in “Digital Future”&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; that regard creativity creates noise.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.ted.com/talks/douglas_rushkoff_how_to_be_team_human_in_the_digital_future&quot;&gt;Ted talk&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.ted.com/talks/douglas_rushkoff_how_to_be_team_human_in_the_digital_future#t-174064&quot;&gt;Digital Future&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">“Humans are no longer valued for our creativity. Now we are just valued for our data”1 Ted talk &amp;#8617;</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/12.jpg" /></entry><entry><title type="html">Lecture 08 - Deep Learning From Foundations-part2</title><link href="http://localhost:4000/2019/11/note08-fastai-2/" rel="alternate" type="text/html" title="Lecture 08 - Deep Learning From Foundations-part2" /><published>2019-11-01T00:00:00+09:00</published><updated>2019-11-01T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-2/">&lt;h4 id=&quot;frobenius-norm&quot;&gt;Frobenius norm&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/7.png&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;above converted into  &lt;/li&gt;
+  &lt;li&gt;above converted into &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
@@ -14,7 +44,7 @@
   &lt;li&gt;and if you need latex form, download it from archive.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h6 id=&quot;what-is-the-meaning-of-elementwise&quot;&gt;What is the meaning of elementwise?&lt;/h6&gt;
+&lt;h5 id=&quot;what-is-the-meaning-of-elementwise&quot;&gt;What is the meaning of elementwise?&lt;/h5&gt;
 &lt;ul&gt;
   &lt;li&gt;We do not calculate each component. But all of the component at once. Because, length of column of A and row of B are fixed.&lt;/li&gt;
 &lt;/ul&gt;
@@ -30,20 +60,20 @@
 &lt;p&gt;#TODO
 I don’t know where the &lt;code class=&quot;highlighter-rouge&quot;&gt;5&lt;/code&gt; from. but keep it.
 Maybe this is related with frobenius norm…?
-  
-as a result, &lt;strong&gt;the code before&lt;/strong&gt; 
- &lt;/p&gt;
+&lt;br /&gt;&lt;br /&gt;
+as a result, &lt;strong&gt;the code before&lt;/strong&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;the code after 
-  &lt;/p&gt;
+&lt;p&gt;the code after&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;To compare it (result betweet &lt;em&gt;original&lt;/em&gt; and &lt;em&gt;adjusted&lt;/em&gt; version) we use not test_eq but other function. The reason for this is that due to rounding errors from math operations, matrices may not be exactly the same. As a result, we want a function that will “is a equal to b &lt;strong&gt;within some tolerance&lt;/strong&gt;”&lt;/p&gt;
 
@@ -59,7 +89,9 @@ as a result, &lt;strong&gt;the code before&lt;/strong&gt; 
 
 &lt;h3 id=&quot;broadcasting&quot;&gt;Broadcasting&lt;/h3&gt;
 
-&lt;p&gt;Now, we will use the broadcasting and remove&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Now, we will use the broadcasting and remove&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -82,25 +114,29 @@ as a result, &lt;strong&gt;the code before&lt;/strong&gt; 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;*tensor([[11, 12, 13],
+&lt;p&gt;&lt;em&gt;tensor([[11, 12, 13],
         [21, 22, 23],
-        [31, 32, 33]])    *&lt;/p&gt;
+        [31, 32, 33]])&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/3.png&quot; alt=&quot;&quot; /&gt;
-Figure 2. demonstrated how array &lt;strong&gt;b&lt;/strong&gt; is broadcast to compatible with &lt;strong&gt;a&lt;/strong&gt; Adopted from a &lt;a href=&quot;https://www.tutorialspoint.com/numpy/numpy_broadcasting.htm&quot;&gt;numpy_tutorial&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h6 id=&quot;figure-2-demonstrated-how-array-b-is-broadcastingor-copied-but-not-occupy-memory-to-compatible-with-a-refered-from-numpy_tutorial&quot;&gt;&amp;lt;Figure 2&amp;gt; demonstrated how array &lt;strong&gt;b&lt;/strong&gt; is broadcasting(or copied but not occupy memory) to compatible with &lt;strong&gt;a&lt;/strong&gt;. &lt;em&gt;Refered from &lt;a href=&quot;https://www.tutorialspoint.com/numpy/numpy_broadcasting.htm&quot;&gt;numpy_tutorial&lt;/a&gt;&lt;/em&gt;&lt;/h6&gt;
 
-&lt;p&gt;there is no loop, but it seems there is exactly the loop.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;This is &lt;a href=&quot;#what-if-columns&quot;&gt;not from jeremy&lt;/a&gt;(actually after a moment he cover it) but i wondered How to broadcast an array by columns?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;there is no loop, but it seems there is exactly the loop.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;This is not from jeremy (actually after a moment he cover it) but i wondered How to broadcast an array by columns?&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;*tensor([[11, 11, 11],
+&lt;p&gt;&lt;em&gt;tensor([[11, 11, 11],
         [22, 22, 22],
-        [33, 33, 33]])
-*&lt;/p&gt;
+        [33, 33, 33]])&lt;/em&gt;s&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -109,17 +145,18 @@ Figure 2. demonstrated how array &lt;strong&gt;b&lt;/strong&gt; is broadcast to 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;help&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stride&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;em&gt;Help on built-in function stride:
-stride(…) method of torch.Tensor instance
-stride(dim) -&amp;gt; tuple or int
-Returns the stride of :attr:&lt;code class=&quot;highlighter-rouge&quot;&gt;self&lt;/code&gt; tensor.
-Stride is the jump necessary to go from one element to the next one in the
-specified dimension :attr:&lt;code class=&quot;highlighter-rouge&quot;&gt;dim&lt;/code&gt;. A tuple of all strides is returned when no
-argument is passed in. Otherwise, an integer value is returned as the stride in
-the particular dimension :attr:&lt;code class=&quot;highlighter-rouge&quot;&gt;dim&lt;/code&gt;.
-Args:
+&lt;p&gt;&lt;em&gt;Help on built-in function stride:&lt;br /&gt;
+    stride(…) method of torch.&lt;br /&gt;
+Tensor instance&lt;br /&gt;
+stride(dim) -&amp;gt; tuple or int&lt;br /&gt;
+Returns the stride of :attr:’self’ tensor.&lt;br /&gt;
+Stride is the jump necessary to go from one element to the next one in the specified dimension :attr:’dim’.&lt;br /&gt;
+A tuple of all strides is returned when no argument is passed in.&lt;br /&gt;
+Otherwise, an integer value is returned as the stride in the particular dimension :attr:’dim’.&lt;br /&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Args:
     dim (int, optional): the desired dimension in which stride is required
-Example::&lt;/em&gt;&lt;/p&gt;
+Example::*{::}&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;
 &lt;span class=&quot;sb&quot;&gt;`x.stride()`&lt;/span&gt;
@@ -149,7 +186,17 @@ Example::&lt;/em&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#   c[i,j] = (a[i,:]).          *[:,j].sum() #previous
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unsqueeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unsqueeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;And Using None also(howard teached)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unsqueeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#howard
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][:,&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# using None
+&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;⭐️Tips🌟  &lt;br /&gt;
@@ -163,120 +210,114 @@ Example::&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://mathworld.wolfram.com/TensorRank.html&quot;&gt;TensorRank&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://forums.fast.ai/t/forum-markdown-notes-lesson-8/41896&quot;&gt;ti note&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">Frobenius norm</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/5.png" /></entry><entry><title type="html">Why am I not listed as a contributor to a project that merged my PR?</title><link href="http://localhost:4000/2019/10/Git-Merge/" rel="alternate" type="text/html" title="Why am I not listed as a contributor to a project that merged my PR?" /><published>2019-10-30T00:00:00+09:00</published><updated>2019-10-30T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/Git-Merge</id><content type="html" xml:base="http://localhost:4000/2019/10/Git-Merge/">&lt;h3 id=&quot;how-did-i-come-to-that-repository&quot;&gt;How did I come to that repository?&lt;/h3&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">Frobenius norm</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/5.png" /></entry><entry><title type="html">Why am I not listed as a contributor after I contributed?</title><link href="http://localhost:4000/2019/10/Git-Merge/" rel="alternate" type="text/html" title="Why am I not listed as a contributor after I contributed?" /><published>2019-10-30T00:00:00+09:00</published><updated>2019-10-30T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/Git-Merge</id><content type="html" xml:base="http://localhost:4000/2019/10/Git-Merge/">&lt;p&gt;From the end of last year, big changes have witnessed in NLP research.&lt;br /&gt;
+Embracing an unprecedented growth, I started to study new exciting results and advances.&lt;br /&gt;
+In doing so, I noticed I’m not listed as contributor of repo which my PR accessed.&lt;/p&gt;
 
-&lt;p&gt;When I’m stuck, I would prefer to code, than to go deep in theory. (It must be so.. too much to understand 🤒) 
-It was &lt;a href=&quot;https://arxiv.org/pdf/1810.04805.pdf&quot;&gt;BERT released by Google AI&lt;/a&gt; I felt keenly the necessity of implementing, because not only couldn’t understand the way they figured out positional encoding formula, but how it actually works. What does it mean to “scale” dot product in Attention? (Now I know it’s far from my section 😂) &lt;/p&gt;
+&lt;h3 id=&quot;how-did-i-come-to-a-repository&quot;&gt;How did I come to a repository?&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;&amp;quot;https://www.tensorflow.org/images/tutorials/transformer/scaled_attention&amp;quot;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;When I’m stuck, I would prefer to code, than to go deep in theory. (It must be so.. too much to understand 🤒)&lt;br /&gt;
+It was &lt;a href=&quot;https://arxiv.org/pdf/1810.04805.pdf&quot;&gt;BERT released by Google AI&lt;/a&gt; I felt keenly the necessity of implementing, because not only couldn’t understand the way they figured out positional encoding formula, but how it actually works.&lt;br /&gt;What does it mean to “scale” dot product in Attention? (Now I know it’s far from my section 😂)&lt;br /&gt;&lt;/p&gt;
 
-&lt;p style=&quot;text-align: center;&quot;&gt;Figure 1. Scaled Dot Product. *Adopted from* [*tensorflow blog*](www.tensorflow.org)&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h6 id=&quot;figure-1-scaled-dot-product-adopted-from-tensorflow-blog&quot;&gt;Figure 1. Scaled Dot Product. &lt;em&gt;Adopted from&lt;/em&gt; &lt;a href=&quot;www.tensorflow.org&quot;&gt;&lt;em&gt;tensorflow blog&lt;/em&gt;&lt;/a&gt;&lt;/h6&gt;
 
 &lt;h3 id=&quot;what-was-the-code-error&quot;&gt;What was the code error?&lt;/h3&gt;
 
-&lt;p&gt;For implement code in paper, I read the papers &lt;a href=&quot;https://arxiv.org/pdf/1706.03762.pdf&quot;&gt;Transformer&lt;/a&gt; and &lt;a href=&quot;https://arxiv.org/pdf/1810.04805.pdf&quot;&gt;BERT&lt;/a&gt;, structured the model, and refered the others’ code.  &lt;/p&gt;
+&lt;p&gt;For implement code in paper, I read the papers &lt;a href=&quot;https://arxiv.org/pdf/1706.03762.pdf&quot;&gt;Transformer&lt;/a&gt; and &lt;a href=&quot;https://arxiv.org/pdf/1810.04805.pdf&quot;&gt;BERT&lt;/a&gt;, structured the model, and refered the others’ code.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Meanwhile, I found out a small error in tokenization process, which was changing a token into [MASK], enabled bidirectional representation.&lt;/p&gt;
 
 &lt;h3 id=&quot;ive-made-pr-and-got-merged-but-i-was-not-in-contributors-why&quot;&gt;I’ve made PR, and got merged. But I was not in contributors. Why?&lt;/h3&gt;
 
-&lt;p&gt;Actually I happened to know I was exception, after that I became curious. 
-So… Doesn’t it means we can cover up someone’s traces? 
-Did I something wrong? &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h6 id=&quot;figure-2-merged-pull-request-adopted-from-graykode-project&quot;&gt;Figure 2. Merged Pull request &lt;em&gt;Adopted from&lt;/em&gt; &lt;a href=&quot;https://github.com/graykode/nlp-tutorial/pull/9&quot;&gt;&lt;em&gt;graykode project&lt;/em&gt;&lt;/a&gt;&lt;/h6&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Actually I happened to know there can be couple of reasons github doesn’t include my name as contributor.&lt;br /&gt;&lt;/p&gt;
 
-&lt;p style=&quot;text-align: center;&quot;&gt;Figure 2. Merged Pull request *Adopted from* [*graykode project*](https://github.com/graykode/nlp-tutorial/pull/9)&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Well, if contributors tab has more than 100 people, in which case it shows you up only if you are in the top 100 contributors because displaying too many contributors can make webpages down.&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;According to &lt;a href=&quot;https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges&quot;&gt;About pull request merges&lt;/a&gt; and &lt;a href=&quot;https://git-scm.com/docs/git-merge#_fast_forward_merge&quot;&gt;git&lt;/a&gt;, it’s because a person who has a write permission had selected squash (fast-forward) merge option on a pull request. 
-Since it dose fetch from the remote first and immediately execute &lt;code&gt;git merge&lt;/code&gt; to create a merge commit, this option append a commit to master without creating a commit.&lt;/p&gt;
+&lt;p&gt;Somethimes, however, it doesn’t that problem. Why not?&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Two possibilities are there.&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;First, According to &lt;a href=&quot;https://www.quora.com/Why-doesnt-GitHub-include-my-name-as-a-contributor-even-after-I-contributed&quot;&gt;Joel-Glovier&lt;/a&gt;, if repository maintainer &lt;a href=&quot;https://shinglyu.com/web/2018/03/25/merge-pull-requests-without-merge-commits.html&quot;&gt;merged-as-a-rebase&lt;/a&gt; PR will end up showing as maintainer’s commit. But maintainer shouldn’t normally do this.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Second, if you happend to commit using a different git email that what is in your GitHub profile, it will not be attached to your Github user, and “doesn’t show up” as you.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://mchromiak.github.io/articles/2017/Sep/12/Transformer-Attention-is-all-you-need/&quot;&gt;Michał Chromiak’s blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://shinglyu.com/web/2016/11/08/servo-rebase-and-squash-guide.html&quot;&gt;Shing Lyu blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://git-scm.com/docs/git-merge#_fast_forward_merge&quot;&gt;Git-docs&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://help.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile&quot;&gt;Github: why are my contributions are not showing on my profile&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.atlassian.com/git/tutorials/syncing/git-fetch&quot;&gt;atlassian-gitfetch&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">How did I come to that repository?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1.png" /></entry><entry><title type="html">5 reasons took much time to setting GPU for fast.ai than I expected</title><link href="http://localhost:4000/2019/10/GPU-time/" rel="alternate" type="text/html" title="5 reasons took much time to setting GPU for fast.ai than I expected" /><published>2019-10-23T00:00:00+09:00</published><updated>2019-10-23T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/GPU-time</id><content type="html" xml:base="http://localhost:4000/2019/10/GPU-time/">&lt;h2 id=&quot;motivation&quot;&gt;Motivation&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">From the end of last year, big changes have witnessed in NLP research. Embracing an unprecedented growth, I started to study new exciting results and advances. In doing so, I noticed I’m not listed as contributor of repo which my PR accessed.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1.png" /></entry><entry><title type="html">5 reasons took much time to setting GPU for fast.ai than I expected</title><link href="http://localhost:4000/2019/10/GPU-time/" rel="alternate" type="text/html" title="5 reasons took much time to setting GPU for fast.ai than I expected" /><published>2019-10-23T00:00:00+09:00</published><updated>2019-10-23T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/GPU-time</id><content type="html" xml:base="http://localhost:4000/2019/10/GPU-time/">&lt;h2 id=&quot;motivation&quot;&gt;Motivation&lt;/h2&gt;
 
-&lt;p&gt;Before now, me as a undergraduate student, I was parsimony who usually depend on colab, kaggle, friend’s server(occasional) whenever i need GPU.. 
- 
-And this time it’s been for a while to install GPU than I expected and I share the several component that stood in my way. 
- 
-&lt;strong&gt;&lt;span style=&quot;color:red&quot;&gt;Written at Oct 24 2019, if you think this is deprecated, please do not have a leap of faith.&lt;/span&gt;&lt;/strong&gt;
- 
-      &lt;/p&gt;
+&lt;p&gt;Before now, me as a undergraduate student, I was parsimony who usually depend on colab, kaggle, friend’s server(occasional) whenever i need GPU..&lt;br /&gt;
+&lt;br /&gt;
+And this time it’s been for a while to install GPU than I expected and I share the several component that stood in my way.&lt;br /&gt;
+&lt;br /&gt;
+&lt;strong&gt;&lt;span style=&quot;color:red&quot;&gt;Written at Oct 24 2019, if you think this is deprecated, please do not have a leap of faith.&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;1-did-not-know-there-is-jupyterlab-in-google-cloud-platform&quot;&gt;1. Did not know there is &lt;em&gt;JupyterLab&lt;/em&gt; in &lt;strong&gt;Google Cloud Platform&lt;/strong&gt;.&lt;/h3&gt;
+&lt;p&gt;Just for the record, I’ve used Kaggle, Colab, GCP, Azure, EC2 as GPU cloud.
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;At the first time when GCP came out, there was no &lt;strong&gt;AI  Platform&lt;/strong&gt; service. So from starting vm instance to launching jupyter and installing packages, I did all of the things myself. (but I learned 🤗)&lt;/p&gt;
+&lt;h3 id=&quot;1-did-not-know-there-is-jupyterlab-option-in-google-cloud-platform&quot;&gt;1. Did not know there is &lt;em&gt;JupyterLab&lt;/em&gt; option in &lt;strong&gt;Google Cloud Platform&lt;/strong&gt;.&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/installing-conda-cli.png&quot; alt=&quot;installing-conda-cli&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;At the first time when GCP came out, there was no &lt;strong&gt;AI  Platform&lt;/strong&gt; service. So from starting vm instance to launching jupyter and installing packages, I did all of the things myself. (and I learned 🤗)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/8.png&quot; alt=&quot;installing-conda-cli&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$	curl -O https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;[Downloading conda in ssh]&lt;/p&gt;
 
-&lt;p&gt; 
-I created VM instance,selected zone, machine type and disk type. Then, define firewall rules and in ssh terminal, install jupyter and other packages.&lt;/p&gt;
+&lt;p&gt;I created VM instance,selected zone, machine type and disk type. Then, define firewall rules and in ssh terminal, install jupyter and other packages.&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;But you can do all of these things AI Platform.&lt;/p&gt;
+&lt;p&gt;But you can do all of these things just using AI Platform.&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/AI.png&quot; alt=&quot;installing-conda-cli&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/9.png&quot; alt=&quot;installing-conda-cli&quot; /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;[AI Platform]&lt;/p&gt;
 
-&lt;p&gt;I think if you are at Asia-Pacific, it can save your time.&lt;/p&gt;
+&lt;p&gt;I think it especially save your time if you are living in Asia-Pacific, which google doesn’t support not that much GPU resources.&lt;/p&gt;
 
-&lt;p&gt;     &lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h3 id=&quot;2-consider-if-the-platform-has-limited-resources-in-a-region-you-live-in&quot;&gt;2. Consider if the platform has limited resources in a region you live in.&lt;/h3&gt;
-&lt;p&gt; 
-I live in &lt;em&gt;South Korea, East Asia&lt;/em&gt;, and it seems like this region has lots of limitation in GPU (except quite expensive AWS).&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+I live in &lt;em&gt;South Korea, East Asia&lt;/em&gt;, and it seems like this region has lots of limitation in GPU (except quite expensive AWS)&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt; 
-And the Taiwan which was the only one region where I can launch my own VM with GPU (I tried all the other regions in the list) sometimes do normaly, but not always. 😥&lt;/p&gt;
-
-&lt;p&gt; 
+&lt;p&gt;And the Taiwan which was the only one region where I can launch my own VM with GPU (I tried all the other regions in the list) sometimes do normaly, but not always. 😥&lt;br /&gt;
 After launching, I did several works and next day I could not start VM. (I didn’t count it, but tried it a few hours because I didn’t want cost any more time…)&lt;/p&gt;
 
-&lt;p&gt; 
+&lt;p&gt;&lt;br /&gt;
 Endlessly failed to start instance, then I choose to move AWS as an alternative way.&lt;/p&gt;
 
-&lt;p&gt;     &lt;/p&gt;
 &lt;h3 id=&quot;3-fastai-gives-deliberate-guide-and-i-didnt-know-it&quot;&gt;3. &lt;span style=&quot;color:blue&quot;&gt;Fast.ai gives deliberate &lt;a href=&quot;https://course.fast.ai/start_gcp.html&quot;&gt;guide&lt;/a&gt; and I didn’t know it.&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt; 
-Fast.ai offer the guide for all available platform. (Colab, salamander, Gradient, Kaggle, Colab, and so on)&lt;/p&gt;
 
-&lt;p&gt; 
-It is so important, and really needs, because cloud computing options are vary as occasion and purpose arise.&lt;/p&gt;
+&lt;p&gt;Fast.ai offer the guide for all available platform. (Colab, salamander, Gradient, Kaggle, Colab, and so on)&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt; 
-I didn’t know fast.ai has manual to running GCP, and I think it’s as good a reason as any for me to be have taken time.&lt;/p&gt;
+&lt;p&gt;It is so important, and really needs, because cloud computing options are vary as occasion and purpose arise.&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt; 
-It helped me so much when I had aws and shortened time.&lt;/p&gt;
+&lt;p&gt;I didn’t know fast.ai has manual to running GCP, and I think it’s as good a reason as any for me to be have taken time.&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;I don’t want to read all of the manual in amazno.. (It is recommended.. but I’d rather read &lt;a href=&quot;https://git-scm.com/book/en/v2&quot;&gt;GIT PRO&lt;/a&gt; for now…)
-&lt;code&gt;ssh -i ~/.ssh/&lt;your_private_key_pair&gt; -L localhost:8888:localhost:8888 ubuntu@&lt;your instance=&quot;&quot; IP=&quot;&quot;&gt;&amp;lt;/code&amp;gt;&lt;/your&gt;&lt;/your_private_key_pair&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;It helped me so much when I had aws and shortened my time.&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;     &lt;/p&gt;
+&lt;p&gt;I don’t want to read all of the manual in amazno.. (It is recommended.. but I’d rather read &lt;a href=&quot;https://git-scm.com/book/en/v2&quot;&gt;GIT PRO&lt;/a&gt; now…)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -i ~/.ssh/&amp;lt;your_private_key_pair&amp;gt; -L localhost:8888:localhost:8888 ubuntu@&amp;lt;your instance IP&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;h3 id=&quot;4-you-should-wait-to-add-more-volume-just-after-add-volume-by-building-aws-ec2&quot;&gt;4. You should wait to add more volume just after add volume, by building AWS EC2.&lt;/h3&gt;
-&lt;p&gt; 
-Since Elastic Block Store(EBS) storage supports optimized storage, users can’t extend storage volume two times in a row.&lt;/p&gt;
 
-&lt;p&gt; 
-Unfortunately, at the first time, I didn’t know it (again 👻) and when VM lacked volume, I doubled dist capacity (76*2) at a rough but It needs more.&lt;/p&gt;
+&lt;p&gt;Since Elastic Block Store(EBS) storage supports optimized storage, users can’t extend storage volume two times in a row. &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt; &lt;/p&gt;
-
-&lt;!--# TODO
-
-그냥 더 추가하면 되겠지라고생각했으나 optimizing 중입니다.. 안됩니다 라고 했따 ㅠ
-맨 위에 내가 뭘 뭘 해봤던 사람인지  적기. 저기 적힌 것중엔 Kaggle, Golab, google colud, Azure, amazon ec2가 있군.--&gt;
+&lt;p&gt;Unfortunately, at the first time, I didn’t know it (again 👻) and when VM lacked volume, I doubled dist capacity (76*2) at a rough but It needs more. &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;lt;!–&lt;/p&gt;
 
@@ -297,37 +338,37 @@ On these days, I could not get a resources from taiwan…&lt;/p&gt;
   &lt;li&gt;
     &lt;h2 id=&quot;disk-volume-exceed---httpsaskubuntucomquestions919748no-space-left-on-device-even-though-there-is&quot;&gt;disk volume exceed - https://askubuntu.com/questions/919748/no-space-left-on-device-even-though-there-is&lt;/h2&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>dionne</name></author><category term="sticky" /><category term="featured" /><summary type="html">Motivation</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/asia-east1.png" /></entry><entry><title type="html">Lecture 08 - Deep Learning From Foundations-part1</title><link href="http://localhost:4000/2019/10/note08-fastai-1/" rel="alternate" type="text/html" title="Lecture 08 - Deep Learning From Foundations-part1" /><published>2019-10-18T00:00:00+09:00</published><updated>2019-10-18T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/note08-fastai-1</id><content type="html" xml:base="http://localhost:4000/2019/10/note08-fastai-1/">&lt;p&gt; 
+&lt;/ol&gt;</content><author><name>dionne</name></author><category term="sticky" /><category term="featured" /><summary type="html">Motivation</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/10.png" /></entry><entry><title type="html">Lecture 08 - Deep Learning From Foundations-part1</title><link href="http://localhost:4000/2019/10/note08-fastai-1/" rel="alternate" type="text/html" title="Lecture 08 - Deep Learning From Foundations-part1" /><published>2019-10-18T00:00:00+09:00</published><updated>2019-10-18T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/note08-fastai-1</id><content type="html" xml:base="http://localhost:4000/2019/10/note08-fastai-1/">&lt;p&gt;&lt;br /&gt;
 &lt;em&gt;I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free&lt;/em&gt;
- 
+&lt;br /&gt;
 &lt;strong&gt;Contents&lt;/strong&gt;
- 
+&lt;br /&gt;
 1) &lt;a href=&quot;#whats-going-on-in-this-course&quot;&gt;What is going on in this course&lt;/a&gt;
 2) &lt;a href=&quot;#library-development-using-jupyter-notebook&quot;&gt;Library development using jupyter notebook&lt;/a&gt;
- 
+&lt;br /&gt;
 &lt;strong&gt;Resources&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/fastai/course-v3/blob/master/nbs/dl2/01_matmul.ipynb&quot;&gt;notebooks&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/18QwDI25Lf0ld0-cEugu7LxjwTc2NRkha/view&quot;&gt;material&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://course.fast.ai/videos/?lesson=8&quot;&gt;video&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1bIPBcf-p9iqNG8BGmIVlJCFa4jEsbOZvcPXGTYe5pjI/edit#gid=0&quot;&gt;broadcasting excel&lt;/a&gt;
- &lt;/li&gt;
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;what-is-going-on-in-this-course&quot;&gt;What is going on in this course?&lt;/h2&gt;
 
-&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h4 id=&quot;what-is-from-foundations&quot;&gt;What is &lt;em&gt;‘from foundations’&lt;/em&gt;?&lt;/h4&gt;
 
 &lt;p&gt;1) Recreate fast.ai and Pytorch&lt;/p&gt;
 
 &lt;p&gt;2) using pure python
- &lt;/p&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;h4 id=&quot;evade-overfitting&quot;&gt;Evade Overfitting&lt;/h4&gt;
 
 &lt;p&gt;Overfit : validation error getting worse
 &lt;del&gt;training loss &amp;lt; validation loss&lt;/del&gt;
- &lt;/p&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;h4 id=&quot;know-the-name-of-the-symbol-you-use&quot;&gt;Know the name of the symbol you use&lt;/h4&gt;
 
 &lt;p&gt;find in this page if you don’t know the symbol that you are using&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_mathematical_symbols&quot;&gt;&lt;/a&gt; or just draw it &lt;a href=&quot;http://detexify.kirelabs.org/classify.html&quot;&gt;here&lt;/a&gt; (run by ML!)&lt;/p&gt;
@@ -341,20 +382,20 @@ On these days, I could not get a resources from taiwan…&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h4 id=&quot;todays-implementation-goal-1-matmul---4-fc-backward&quot;&gt;Today’s implementation goal: 1) matmul -&amp;gt; 4) FC backward&lt;/h4&gt;
-&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h3 id=&quot;library-development-using-jupyter-notebook&quot;&gt;Library development using jupyter notebook&lt;/h3&gt;
 &lt;p&gt;https://dbader.org/blog/python-assert-tutorial
- &lt;/p&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;h4 id=&quot;jupyter-notebook-certainly-can-make-module&quot;&gt;jupyter notebook certainly can make module&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;There will be &lt;em&gt;#export&lt;/em&gt; tag that Howard (and we) want to extract&lt;/li&gt;
   &lt;li&gt;special &lt;em&gt;notebook2script.py&lt;/em&gt; will detect sign of &lt;em&gt;#expert&lt;/em&gt; and convert following into python module
- &lt;/li&gt;
+&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;and test it&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;test\_eq(TEST,'test')&amp;nbsp;test\_eq(TEST,'test1')&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;test\_eq(TEST,'test')&lt;br /&gt;test\_eq(TEST,'test1')&lt;/code&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;what is &lt;strong&gt;run_notebook.py&lt;/strong&gt;?
@@ -383,7 +424,7 @@ On these days, I could not get a resources from taiwan…&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;fire library was released by Google open source, Thursday, March 2, 2017&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;get-data&quot;&gt;Get data&lt;/h3&gt;
 
@@ -393,7 +434,7 @@ On these days, I could not get a resources from taiwan…&lt;/p&gt;
   &lt;li&gt;PyTorch’s &lt;em&gt;view()&lt;/em&gt; method: torch function that manipulating tensor, and squeeze() in torch &amp;amp; mathmatical operation similar function&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.oreilly.com/library/view/natural-language-processing/9781491978221/&quot;&gt;Rao &amp;amp; McMahan&lt;/a&gt; said usually this functions result in feature vector.&lt;/li&gt;
   &lt;li&gt;In part 1, you can use view function several times.
- &lt;/li&gt;
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;initial-python-model&quot;&gt;Initial python model&lt;/h3&gt;
@@ -424,7 +465,7 @@ On these days, I could not get a resources from taiwan…&lt;/p&gt;
   &lt;p&gt;This is kinda slow - what if we could speed it up by 50,000 times? Let’s try!&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;elementwise-ops&quot;&gt;Elementwise ops&lt;/h3&gt;
 
@@ -433,13 +474,13 @@ On these days, I could not get a resources from taiwan…&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;If we want to calculate faster, then do remove pythonic calcuation, by passing its computation down to something that is written something other than python, like pytorch.&lt;/li&gt;
   &lt;li&gt;According to PyTorch &lt;a href=&quot;https://pytorch.org/cppdocs/#aten&quot;&gt;doc&lt;/a&gt; it  uses C++ (via ATen), so we are going to implement that function with python.
- &lt;/li&gt;
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;what-is-element-wise-operation&quot;&gt;What is element wise operation?&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;items makes a pair, operate corresponding component
- &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">  I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free   Contents   1) What is going on in this course 2) Library development using jupyter notebook   Resources notebooks material video broadcasting excel  </summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn.png" /></entry></feed>
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free Contents 1) What is going on in this course 2) Library development using jupyter notebook Resources notebooks material video broadcasting excel</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn.png" /></entry></feed>

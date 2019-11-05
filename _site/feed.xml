@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-04T18:01:30+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Douglas Rushkoff</title><link href="http://localhost:4000/2019/11/douglas-rushoff/" rel="alternate" type="text/html" title="Douglas Rushkoff" /><published>2019-11-04T00:00:00+09:00</published><updated>2019-11-04T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/douglas-rushoff</id><content type="html" xml:base="http://localhost:4000/2019/11/douglas-rushoff/">&lt;p&gt;“Humans are no longer valued for our creativity.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-06T00:19:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Retrospective on Pycon 2019 Korea (CoC Committee)</title><link href="http://localhost:4000/2019/11/coc-retropective/" rel="alternate" type="text/html" title="Retrospective on Pycon 2019 Korea (CoC Committee)" /><published>2019-11-05T00:00:00+09:00</published><updated>2019-11-05T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/coc-retropective</id><content type="html" xml:base="http://localhost:4000/2019/11/coc-retropective/">&lt;p&gt;When I was volunteer, it seems like busy and hectic to managing that crowded conference.&lt;br /&gt;
+In my experience, to get things moving, it needs &lt;strong&gt;hierarchy&lt;/strong&gt;.&lt;br /&gt;
+But it didn’t. Organizers emphasized our responsibility, and if I passed each other’s burden, It could be my burden next time.&lt;br /&gt;
+In solidarity of the obligation, we finished conference well.&lt;br /&gt;
+And after participating PyCon Korea 2018 as volunteer, I’ve joined PyCon Korea Organizer last year.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/28.jpg&quot; alt=&quot;&quot; /&gt; &amp;lt;Figure 1&amp;gt; First meeting of PyCon 2019 Korea Organizer&lt;/p&gt;
+
+&lt;p&gt;It’s been a while since PyCon 2019 finished. It’s held on Aug 15 - 18, at Coex Grand Balloom&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/22.jpg&quot; alt=&quot;&quot; /&gt; &amp;lt;Figure 2&amp;gt; Ongoing session, speaking on news comment processing 
+&lt;img src=&quot;/assets/images/27.jpg&quot; alt=&quot;&quot; /&gt; &amp;lt;Figure 3&amp;gt; Sponsor Booth iin Coex Hall
+&lt;img src=&quot;/assets/images/17.jpg&quot; alt=&quot;&quot; /&gt; &amp;lt;Figure 4&amp;gt; After PyCon 2019, with all of volunteer, organizer, speakers 😍 🥰&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Serving as part of the code of conduct committee, I spent large fraction of last year doing CoC job.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;First half: Before the conference&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Formally we’ve been reusing and modifying PyCon US CoC but we needed fit in Korean, and I was part of that to revise code of conduct.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;toward-diverse-community&quot;&gt;Toward Diverse Community&lt;/h3&gt;
+
+&lt;h3 id=&quot;except-that-diversity-because-it-is-harassment&quot;&gt;Except ‘That’ Diversity, Because it is ‘Harassment’&lt;/h3&gt;
+
+&lt;p&gt;Second half: During the conference&lt;/p&gt;
+
+&lt;h3 id=&quot;handling-the-potential-harassment&quot;&gt;Handling the potential Harassment&lt;/h3&gt;
+
+&lt;h3 id=&quot;disjunction-of-policy-and-real-time-situation&quot;&gt;Disjunction of policy and real-time situation&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This ‘PyCon 2019 Korea retrospective series’ would be devided into 3 Episodes.&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“Retrospective on Pycon 2019 Korea (CoC Committee)”&lt;/li&gt;
+  &lt;li&gt;“Retrospective on Pycon 2019 Korea (Program Chair)” (8 Nov, To Be Update)&lt;/li&gt;
+  &lt;li&gt;“Maintaining participation while still making timely decisions” (11 Nov, To Be Update)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><summary type="html">When I was volunteer, it seems like busy and hectic to managing that crowded conference. In my experience, to get things moving, it needs hierarchy. But it didn’t. Organizers emphasized our responsibility, and if I passed each other’s burden, It could be my burden next time. In solidarity of the obligation, we finished conference well. And after participating PyCon Korea 2018 as volunteer, I’ve joined PyCon Korea Organizer last year.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/14.jpg" /></entry><entry><title type="html">Douglas Rushkoff</title><link href="http://localhost:4000/2019/11/douglas-rushoff/" rel="alternate" type="text/html" title="Douglas Rushkoff" /><published>2019-11-04T00:00:00+09:00</published><updated>2019-11-04T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/douglas-rushoff</id><content type="html" xml:base="http://localhost:4000/2019/11/douglas-rushoff/">&lt;p&gt;“Humans are no longer valued for our creativity.&lt;br /&gt;
 Now we are just valued for our data”&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;It does require specific conditions that people are living in the competitive.&lt;br /&gt;&lt;/p&gt;
@@ -483,4 +525,144 @@ On these days, I could not get a resources from taiwan…&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;items makes a pair, operate corresponding component
 &lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free Contents 1) What is going on in this course 2) Library development using jupyter notebook Resources notebooks material video broadcasting excel</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn.png" /></entry></feed>
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free Contents 1) What is going on in this course 2) Library development using jupyter notebook Resources notebooks material video broadcasting excel</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn.png" /></entry><entry><title type="html">Lecture 16 - Code-First NLP Note</title><link href="http://localhost:4000/2019/09/code-first-course-note-16-original/" rel="alternate" type="text/html" title="Lecture 16 - Code-First NLP Note" /><published>2019-09-03T00:00:00+09:00</published><updated>2019-09-03T00:00:00+09:00</updated><id>http://localhost:4000/2019/09/code-first-course-note-16-original</id><content type="html" xml:base="http://localhost:4000/2019/09/code-first-course-note-16-original/">&lt;p&gt;&lt;strong&gt;Algorithms can encode &amp;amp; magnify human bias&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;case-study-1-facial-recognition--predictive-policing&quot;&gt;Case Study 1: Facial Recognition &amp;amp; Predictive Policing&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://proceedings.mlr.press/v81/buolamwini18a.html&quot;&gt;Joy Buolamwini &amp;amp; Timnit Gebru&lt;/a&gt;, gendershades.org
+    &lt;ul&gt;
+      &lt;li&gt;Microsoft, FACE+, IBM - All of these things are sell now.&lt;/li&gt;
+      &lt;li&gt;Largest gap between $\therefore\  Lighter Male\ &amp;gt;\  Darker\ Female $&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://qz.com/co/2405308/this-us-mayor-joked-cops-should-mount-50-caliber-guns-where-ai-predicts-crime/&quot;&gt;This US mayor joked cops should “mount .50-caliber” guns where AI predicts crime&lt;/a&gt;&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;With machine learning, with automation, there’s a 99% success, so that robot is ㅡwill beㅡ99% accurate in telling us what is going to happen next, which is really interesting.&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;- city official in Lancater, CA, approving on using IBM for public security&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;bias&quot;&gt;Bias&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bias is type of error&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Statistical Bias&lt;/strong&gt;: difference between a statistic’s expected value and the true value&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Unjust Bias&lt;/strong&gt;: disproportionate preference for or prejudice against a group&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Unconscious bias&lt;/strong&gt;: bias that we don’t realize we have&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;But, term bias is too generic to be productive.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Different sources of bias have different causes&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Representation Bias&lt;/strong&gt;: Dataset was not representative of the algorithm that might be used on later.&lt;/p&gt;
+
+&lt;p&gt;Above : Data is okay, but algorithm has some problem.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Below : Data has error. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;For example, object detection production that performs very well in common product of US.&lt;br /&gt;
+But in contrast, change of target product region, like Zimbabwe, Solomon Island, and so on, reduced the performence remarkably.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;It is not the algorithmic problem, so we should care about data volume of region.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Evaluation Bias&lt;/strong&gt;: Benchmark datasets spur on research, 4.4% of IJB-A images are dark-skinned women. 2/3 of ImageNet images from the West (Sharkar et al, 2017) &lt;img src=&quot;https://spellonyou.github.io/images/shankar.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;case-study-2-recidivism-algorithm-used-prison-sentencing&quot;&gt;Case Study 2: Recidivism Algorithm Used Prison Sentencing&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;case-study-3-online-ad-delivery&quot;&gt;Case Study 3: Online Ad Delivery&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;bias-in-nlp&quot;&gt;Bias in NLP&lt;/h3&gt;
+
+&lt;p&gt;( Nothing to do with the course, but I’m researching this field these days.)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;But all about Englsih&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Impact
+The person is doctor. The person is nurse -&amp;gt; 그는 의사다. 그녀는 간호사다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;concept-of-biased-data-often-too-generic-to-be-useful&quot;&gt;Concept of “biased data” often too generic to be useful&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Different sources of bias have different sources&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Data, models and systems are not unchanging numbers on a screen.
+They’re the result of a complex process that starts with years of historical context and involves a series of choices and norms, from data measurement to model evaluation to human interpretation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;- &lt;em&gt;Harini Suresh&lt;/em&gt;, &lt;a href=&quot;https://medium.com/@harinisuresh/the-problem-with-biased-data-5700005e514c&quot;&gt;“The problem with Biased Data”&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;five-sources-of-bias-in-ml&quot;&gt;Five Sources of Bias in ML&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Representation Bias&lt;/li&gt;
+  &lt;li&gt;Evaluation Bias&lt;/li&gt;
+  &lt;li&gt;Measurement Bias&lt;/li&gt;
+  &lt;li&gt;Aggregation Bias(46:02)&lt;/li&gt;
+  &lt;li&gt;Historical Bias(46:26)
+    &lt;ul&gt;
+      &lt;li&gt;A few studies(47:13)&lt;/li&gt;
+      &lt;li&gt;Racial Bias, Even when we have good intentions(new york times)(47:10)&lt;/li&gt;
+      &lt;li&gt;gender(48:59)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;humans-are-biased-so-why-does-algorithmic-bias-matter&quot;&gt;Humans are biased, so why does algorithmic bias matter?&lt;/h3&gt;
+
+&lt;h4 id=&quot;algorithms--humans-are-used-differently-humans-are-usually-decision-maker&quot;&gt;Algorithms &amp;amp; humans are used differently (&lt;em&gt;humans are usually decision maker&lt;/em&gt;)&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Algorithms are accurate and objective&lt;/li&gt;
+  &lt;li&gt;No way to apeal if there if error&lt;/li&gt;
+  &lt;li&gt;processed large scale&lt;/li&gt;
+  &lt;li&gt;cheap&lt;br /&gt; &lt;img src=&quot;https://cphoto.asiae.co.kr/listimglink/1/2018121911092829374_1545185366.jpg&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;machine-learning-can-amplify-bias&quot;&gt;Machine learning can amplify bias&lt;/h4&gt;
+
+&lt;h4 id=&quot;machine-learning-can-create-feedback-loops&quot;&gt;Machine learning can create feedback loops.&lt;/h4&gt;
+
+&lt;h4 id=&quot;technology-is-power-and-with-that-comes-responsibility&quot;&gt;Technology is power. And with that comes responsibility.&lt;/h4&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;solutions&quot;&gt;Solutions&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Analyze a project at work/school:
+    &lt;ul&gt;
+      &lt;li&gt;Questions about AI&lt;/li&gt;
+      &lt;li&gt;5 types of bias &lt;a href=&quot;https://arxiv.org/abs/1901.10002&quot;&gt;(Suresh &amp;amp; Guttag)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Datasheets for datasets, Modelcards for model reporting&lt;/li&gt;
+      &lt;li&gt;Accuracy rate on different sub-groups&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Work with domain experts &amp;amp; those impacted&lt;/li&gt;
+  &lt;li&gt;Increase diversity in our workspace&lt;/li&gt;
+  &lt;li&gt;Advocate for good policy&lt;/li&gt;
+  &lt;li&gt;Be on the ongoing lookout for bias&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>dionne</name></author><summary type="html">Algorithms can encode &amp;amp; magnify human bias</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/13.png" /></entry></feed>

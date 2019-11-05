@@ -4,20 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>dionne | SpellOnYou</title>
+    <title>Lecture 16 - Code-First NLP Note | SpellOnYou</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>dionne | SpellOnYou</title>
+<title>Lecture 16 - Code-First NLP Note | SpellOnYou</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="dionne" />
+<meta property="og:title" content="Lecture 16 - Code-First NLP Note" />
+<meta name="author" content="dionne" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Be afraid only of standing still. Remain fresh, body and soul." />
-<meta property="og:description" content="Be afraid only of standing still. Remain fresh, body and soul." />
-<link rel="canonical" href="http://localhost:4000/author-dionne.html" />
-<meta property="og:url" content="http://localhost:4000/author-dionne.html" />
+<meta name="description" content="Algorithms can encode &amp; magnify human bias" />
+<meta property="og:description" content="Algorithms can encode &amp; magnify human bias" />
+<link rel="canonical" href="http://localhost:4000/2019/09/code-first-course-note-16/" />
+<meta property="og:url" content="http://localhost:4000/2019/09/code-first-course-note-16/" />
 <meta property="og:site_name" content="SpellOnYou" />
+<meta property="og:image" content="http://localhost:4000/assets/images/13.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-09-03T00:00:00+09:00" />
 <script type="application/ld+json">
-{"description":"Be afraid only of standing still. Remain fresh, body and soul.","@type":"WebPage","url":"http://localhost:4000/author-dionne.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"}},"headline":"dionne","@context":"http://schema.org"}</script>
+{"description":"Algorithms can encode &amp; magnify human bias","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/09/code-first-course-note-16/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/13.png","headline":"Lecture 16 - Code-First NLP Note","dateModified":"2019-09-03T00:00:00+09:00","datePublished":"2019-09-03T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/09/code-first-course-note-16/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -106,7 +110,7 @@ var documents = [{
     "id": 2,
     "url": "http://localhost:4000/author-dionne.html",
     "title": "dionne",
-    "body": "                        dionne Follow:                                                    Posts by dionne:                   		Elif Shafak	: 		  For creative-minded people, Istanbul is a treasure. ’ Photo © Chris Boland, licensed under CC BY-NC-ND 2. 0	 			In 				People in the World, 								Nov 05, 2019						            		Retrospective on Pycon 2019 Korea (CoC Committee)	: 		  When I was volunteer, it seems like busy and hectic to managing that crowded conference. In my experience, to get things moving, it needs hierarchy. But it didn’t. Organizers emphasized. . . 	 			In 				Society, 								Nov 05, 2019						            		Douglas Rushkoff	: 		  “Humans are no longer valued for our creativity. Now we are just valued for our data”1      Ted talk &#8617;   	 			In 				People in the World, 								Nov 04, 2019						            		Lecture 08 - Deep Learning From Foundations-part2	: 		  Frobenius norm	 			In 				Fast. AI-v3, 								Nov 01, 2019						            		Why am I not listed as a contributor after I contributed?	: 		  From the end of last year, big changes have witnessed in NLP research. Embracing an unprecedented growth, I started to study new exciting results and advances. In doing so, I noticed I’. . . 	 			In 				Resource, 								Oct 30, 2019						            		5 reasons took much time to setting GPU for fast. ai than I expected	: 		  Motivation	 			In 				Resource, 								Oct 23, 2019						            		Lecture 08 - Deep Learning From Foundations-part1	: 		  I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for freeContents1) What is going on in this co. . . 	 			In 				Fast. AI-v3, 								Oct 18, 2019						            		Lecture 16 - Code-First NLP Note	: 		  Algorithms can encode &amp; magnify human bias	 			In 				Fast. AI-v3, 								Sep 03, 2019						        "
+    "body": "                        {{page. title}} Follow:         {{ site. authors. dionne. site }}         {{ site. authors. dionne. bio }}                                   Posts by {{page. title}}:       {% assign posts = site. posts | where: author , dionne  %}      {% for post in posts %}      {% include main-loop-card. html %}      {% endfor %}  "
     }, {
     "id": 3,
     "url": "http://localhost:4000/authors-list.html",
@@ -254,249 +258,287 @@ function lunr_search(term) {
 
     <!-- Content -->
     <main role="main" class="site-content">
-        <div class="container">
-<div class="row justify-content-center">
-    <div class="col-md-8">        
-        <div class="row align-items-center mb-5">
-            <div class="col-md-9">
-                <h2 class="font-weight-bold">dionne <span class="small btn btn-outline-success btn-sm btn-round"><a href="">Follow</a></span></h2>
-                <p><a href=""></a></p>
-                <p class="excerpt"></p>
+        
+
+<div class="container">
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+		<div class="h-100 tofront">
+			<div class="row  justify-content-between ">
+				<div class=" col-md-6  pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+					<p class="text-uppercase font-weight-bold">
+                        <span class="catlist">
+						
+                          <a class="sscroll text-danger" href="/categories.html#fast.ai-v3">fast.ai-v3</a><span class="sep">, </span>
+                        
+                        </span>
+					</p>
+					<h1 class="display-4 mb-4 article-headline">Lecture 16 - Code-First NLP Note</h1>
+					<div class="d-flex align-items-center">
+                        
+						<small class="ml-3">  <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
+                            <span class="text-muted d-block mt-1">Sep 03, 2019 · <span class="reading-time">
+  
+  
+    3 mins read
+  
+</span>
+    </span>
+						</small>
+					</div>
+				</div>
+                
+				<div class="col-md-6 pr-0 align-self-center">
+					<img class="rounded" src="/assets/images/13.png" alt="Lecture 16 - Code-First NLP Note">
+				</div>
+                
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<div class="container-lg pt-4 pb-4">
+	<div class="row justify-content-center">
+        
+        
+        <!-- Share -->
+		<div class="col-lg-2 pr-4 mb-4 col-md-12">
+			<div class="sticky-top sticky-top-offset text-center">
+				<div class="text-muted">
+					Share this
+				</div>
+				<div class="share d-inline-block">
+					<!-- AddToAny BEGIN -->
+					<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+						<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+						<a class="a2a_button_facebook"></a>
+						<a class="a2a_button_twitter"></a>
+					</div>
+					<script async src="https://static.addtoany.com/menu/page.js"></script>
+					<!-- AddToAny END -->
+				</div>
+			</div>
+		</div>
+        
+        
+		<div class="col-md-12 col-lg-8">
+            
+            <!-- Article -->
+			<article class="article-post">                
+			<p><strong>Algorithms can encode &amp; magnify human bias</strong></p>
+
+<h3 id="case-study-1-facial-recognition--predictive-policing">Case Study 1: Facial Recognition &amp; Predictive Policing</h3>
+
+<ul>
+  <li><a href="http://proceedings.mlr.press/v81/buolamwini18a.html">Joy Buolamwini &amp; Timnit Gebru</a>, gendershades.org
+    <ul>
+      <li>Microsoft, FACE+, IBM - All of these things are sell now.</li>
+      <li>Largest gap between $\therefore\  Lighter Male\ &gt;\  Darker\ Female $</li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://qz.com/co/2405308/this-us-mayor-joked-cops-should-mount-50-caliber-guns-where-ai-predicts-crime/">This US mayor joked cops should “mount .50-caliber” guns where AI predicts crime</a></p>
+
+    <blockquote>
+      <p>With machine learning, with automation, there’s a 99% success, so that robot is ㅡwill beㅡ99% accurate in telling us what is going to happen next, which is really interesting.</p>
+    </blockquote>
+
+    <p>- city official in Lancater, CA, approving on using IBM for public security</p>
+  </li>
+</ul>
+
+<h2 id="bias">Bias</h2>
+
+<ul>
+  <li>Bias is type of error</li>
+  <li><strong>Statistical Bias</strong>: difference between a statistic’s expected value and the true value</li>
+  <li><strong>Unjust Bias</strong>: disproportionate preference for or prejudice against a group</li>
+  <li><strong>Unconscious bias</strong>: bias that we don’t realize we have</li>
+</ul>
+
+<blockquote>
+  <p>But, term bias is too generic to be productive.</p>
+</blockquote>
+
+<p>Different sources of bias have different causes</p>
+
+<p><strong>Representation Bias</strong>: Dataset was not representative of the algorithm that might be used on later.</p>
+
+<p>Above : Data is okay, but algorithm has some problem.<br /></p>
+
+<p>Below : Data has error. <br /></p>
+
+<p>For example, object detection production that performs very well in common product of US.<br />
+But in contrast, change of target product region, like Zimbabwe, Solomon Island, and so on, reduced the performence remarkably.<br /></p>
+
+<p>It is not the algorithmic problem, so we should care about data volume of region.</p>
+
+<p><strong>Evaluation Bias</strong>: Benchmark datasets spur on research, 4.4% of IJB-A images are dark-skinned women. 2/3 of ImageNet images from the West (Sharkar et al, 2017) <img src="https://spellonyou.github.io/images/shankar.png" alt="" /></p>
+
+<hr />
+
+<h3 id="case-study-2-recidivism-algorithm-used-prison-sentencing">Case Study 2: Recidivism Algorithm Used Prison Sentencing</h3>
+
+<hr />
+
+<h3 id="case-study-3-online-ad-delivery">Case Study 3: Online Ad Delivery</h3>
+
+<hr />
+
+<h3 id="bias-in-nlp">Bias in NLP</h3>
+
+<p>( Nothing to do with the course, but I’m researching this field these days.)</p>
+
+<ul>
+  <li>
+    <p>But all about Englsih</p>
+  </li>
+  <li>
+    <p>Impact
+The person is doctor. The person is nurse -&gt; 그는 의사다. 그녀는 간호사다.</p>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="concept-of-biased-data-often-too-generic-to-be-useful">Concept of “biased data” often too generic to be useful</h3>
+
+<ul>
+  <li>Different sources of bias have different sources</li>
+</ul>
+
+<blockquote>
+  <p>Data, models and systems are not unchanging numbers on a screen.
+They’re the result of a complex process that starts with years of historical context and involves a series of choices and norms, from data measurement to model evaluation to human interpretation.</p>
+</blockquote>
+
+<p>- <em>Harini Suresh</em>, <a href="https://medium.com/@harinisuresh/the-problem-with-biased-data-5700005e514c">“The problem with Biased Data”</a></p>
+
+<h2 id="five-sources-of-bias-in-ml">Five Sources of Bias in ML</h2>
+
+<ul>
+  <li>Representation Bias</li>
+  <li>Evaluation Bias</li>
+  <li>Measurement Bias</li>
+  <li>Aggregation Bias(46:02)</li>
+  <li>Historical Bias(46:26)
+    <ul>
+      <li>A few studies(47:13)</li>
+      <li>Racial Bias, Even when we have good intentions(new york times)(47:10)</li>
+      <li>gender(48:59)</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="humans-are-biased-so-why-does-algorithmic-bias-matter">Humans are biased, so why does algorithmic bias matter?</h3>
+
+<h4 id="algorithms--humans-are-used-differently-humans-are-usually-decision-maker">Algorithms &amp; humans are used differently (<em>humans are usually decision maker</em>)</h4>
+<ul>
+  <li>Algorithms are accurate and objective</li>
+  <li>No way to apeal if there if error</li>
+  <li>processed large scale</li>
+  <li>cheap<br /> <img src="https://cphoto.asiae.co.kr/listimglink/1/2018121911092829374_1545185366.jpg" alt="" /></li>
+</ul>
+
+<h4 id="machine-learning-can-amplify-bias">Machine learning can amplify bias</h4>
+
+<h4 id="machine-learning-can-create-feedback-loops">Machine learning can create feedback loops.</h4>
+
+<h4 id="technology-is-power-and-with-that-comes-responsibility">Technology is power. And with that comes responsibility.</h4>
+
+<hr />
+
+<h2 id="solutions">Solutions</h2>
+
+<ol>
+  <li>Analyze a project at work/school:
+    <ul>
+      <li>Questions about AI</li>
+      <li>5 types of bias <a href="https://arxiv.org/abs/1901.10002">(Suresh &amp; Guttag)</a></li>
+      <li>Datasheets for datasets, Modelcards for model reporting</li>
+      <li>Accuracy rate on different sub-groups</li>
+    </ul>
+  </li>
+  <li>Work with domain experts &amp; those impacted</li>
+  <li>Increase diversity in our workspace</li>
+  <li>Advocate for good policy</li>
+  <li>Be on the ongoing lookout for bias</li>
+</ol>
+                
+			</article>
+			
+			<!-- Tags -->
+			<div class="mb-4">
+				<span class="taglist">
+				
+				</span>
+			</div>
+ 
+            <!-- Mailchimp Subscribe Form -->
+            
+            
+<!-- TODO: all of author mal funciton -->            
+             <!-- Author Box -->
+                	
+<!-- 				<div class="row mt-5">
+					<div class="col-md-2 align-self-center">
+                          
+					</div>
+					<div class="col-md-10">		
+                        <h5 class="font-weight-bold">Written by  </h5>
+											
+					</div>
+				</div>				 -->
+                
+            
+            <!-- Comments -->
+            
+                <!--  Don't edit anything here. Set your disqus id in _config.yml -->
+
+<div id="comments" class="mt-5">
+    <div id="disqus_thread">
+    </div>
+    <script type="text/javascript">
+        var disqus_shortname = 'dionne'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>
+    Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+</div>
+            
+            
+		</div>
+        
+        
+	</div>
+</div>
+
+
+<!-- Aletbar Prev/Next -->
+<div class="alertbar">
+    <div class="container">
+        <div class="row prevnextlinks small font-weight-bold">
+          
+          
+            <div class="col-md-6 text-right pr-0">
+                <a class="text-dark" href="/2019/10/note08-fastai-1/"> Lecture 08 - Deep Learning From Foundations-part1  <img height="30px" class="ml-1" src="/assets/images/cnn.png"> </a>
             </div>
-            <div class="col-md-3 text-right">
-                <img alt="" src="/" class="rounded-circle" height="100" width="100">
-            </div>
+          
         </div>
-        <h4 class="font-weight-bold spanborder"><span>Posts by dionne</span></h4>
-            
-            
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/11/elif-shafak/">Elif Shafak</a>
-	</h2>
-	<p class="excerpt">
-	   For creative-minded people, Istanbul is a treasure.’ Photo © Chris Boland, licensed under CC BY-NC-ND 2.0
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#people in the world">People in the World</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Nov 05, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/11/elif-shafak/">
-	<img class="w-100" src="/assets/images/29.jpg" alt="Elif Shafak">
-	</a>
-	</div>
-
-</div>
-            
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/11/coc-retropective/">Retrospective on Pycon 2019 Korea (CoC Committee)</a>
-	</h2>
-	<p class="excerpt">
-	   When I was volunteer, it seems like busy and hectic to managing that crowded conference.In my experience, to get things moving, it needs hierarchy.But it didn’t. Organizers emphasized...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#society">Society</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Nov 05, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/11/coc-retropective/">
-	<img class="w-100" src="/assets/images/14.jpg" alt="Retrospective on Pycon 2019 Korea (CoC Committee)">
-	</a>
-	</div>
-
-</div>
-            
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/11/douglas-rushoff/">Douglas Rushkoff</a>
-	</h2>
-	<p class="excerpt">
-	   “Humans are no longer valued for our creativity.Now we are just valued for our data”1            Ted talk &#8617;      
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#people in the world">People in the World</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Nov 04, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/11/douglas-rushoff/">
-	<img class="w-100" src="/assets/images/12.jpg" alt="Douglas Rushkoff">
-	</a>
-	</div>
-
-</div>
-            
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/11/note08-fastai-2/">Lecture 08 - Deep Learning From Foundations-part2</a>
-	</h2>
-	<p class="excerpt">
-	   Frobenius norm
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Nov 01, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/11/note08-fastai-2/">
-	<img class="w-100" src="/assets/images/30.png" alt="Lecture 08 - Deep Learning From Foundations-part2">
-	</a>
-	</div>
-
-</div>
-            
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/10/Git-Merge/">Why am I not listed as a contributor after I contributed?</a>
-	</h2>
-	<p class="excerpt">
-	   From the end of last year, big changes have witnessed in NLP research.Embracing an unprecedented growth, I started to study new exciting results and advances.In doing so, I noticed I’...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#resource">Resource</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Oct 30, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/10/Git-Merge/">
-	<img class="w-100" src="/assets/images/1.png" alt="Why am I not listed as a contributor after I contributed?">
-	</a>
-	</div>
-
-</div>
-            
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/10/GPU-time/">5 reasons took much time to setting GPU for fast.ai than I expected</a>
-	</h2>
-	<p class="excerpt">
-	   Motivation
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#resource">Resource</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Oct 23, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/10/GPU-time/">
-	<img class="w-100" src="/assets/images/10.png" alt="5 reasons took much time to setting GPU for fast.ai than I expected">
-	</a>
-	</div>
-
-</div>
-            
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/10/note08-fastai-1/">Lecture 08 - Deep Learning From Foundations-part1</a>
-	</h2>
-	<p class="excerpt">
-	   I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for freeContents1) What is going on in this co...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Oct 18, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/10/note08-fastai-1/">
-	<img class="w-100" src="/assets/images/cnn.png" alt="Lecture 08 - Deep Learning From Foundations-part1">
-	</a>
-	</div>
-
-</div>
-            
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/09/code-first-course-note-16/">Lecture 16 - Code-First NLP Note</a>
-	</h2>
-	<p class="excerpt">
-	   Algorithms can encode &amp; magnify human bias
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 03, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/09/code-first-course-note-16/">
-	<img class="w-100" src="/assets/images/13.png" alt="Lecture 16 - Code-First NLP Note">
-	</a>
-	</div>
-
-</div>
-            
     </div>
 </div>
-</div>
+
     </main>
 
 

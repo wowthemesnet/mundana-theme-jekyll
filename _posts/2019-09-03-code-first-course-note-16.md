@@ -2,7 +2,7 @@
 layout: post
 title: "Lecture 16 - Code-First NLP Note"
 author: dionne
-categories: [fast.ai-v3]
+categories: [ Fast.AI-v3 ]
 image: assets/images/13.png
 ---
 

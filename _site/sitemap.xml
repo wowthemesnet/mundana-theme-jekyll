@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/2019/09/code-first-course-note-16-original/</loc>
+<loc>http://localhost:4000/2019/09/code-first-course-note-16/</loc>
 <lastmod>2019-09-03T00:00:00+09:00</lastmod>
 </url>
 <url>
@@ -26,6 +26,10 @@
 </url>
 <url>
 <loc>http://localhost:4000/2019/11/coc-retropective/</loc>
+<lastmod>2019-11-05T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2019/11/elif-shafak/</loc>
 <lastmod>2019-11-05T00:00:00+09:00</lastmod>
 </url>
 <url>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-17T23:07:08+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Retrospective on Pycon 2019 Korea (CoC Committee)</title><link href="http://localhost:4000/2019/11/coc-retropective/" rel="alternate" type="text/html" title="Retrospective on Pycon 2019 Korea (CoC Committee)" /><published>2019-11-05T00:00:00+09:00</published><updated>2019-11-05T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/coc-retropective</id><content type="html" xml:base="http://localhost:4000/2019/11/coc-retropective/">&lt;p&gt;When I was volunteer, it seems like busy and hectic to managing that crowded conference.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-17T23:17:14+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Retrospective on Pycon 2019 Korea (CoC Committee)</title><link href="http://localhost:4000/2019/11/coc-retropective/" rel="alternate" type="text/html" title="Retrospective on Pycon 2019 Korea (CoC Committee)" /><published>2019-11-05T00:00:00+09:00</published><updated>2019-11-05T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/coc-retropective</id><content type="html" xml:base="http://localhost:4000/2019/11/coc-retropective/">&lt;p&gt;When I was volunteer, it seems like busy and hectic to managing that crowded conference.&lt;br /&gt;
 In my experience, to get things moving, it needs &lt;strong&gt;hierarchy&lt;/strong&gt;.&lt;br /&gt;
 But it didn’t. Organizers emphasized our responsibility, and if I passed each other’s burden, It could be my burden next time.&lt;br /&gt;
 In solidarity of the obligation, we finished conference well.&lt;br /&gt;
@@ -135,9 +135,25 @@ Besides, the acountant said, to be frankly said, what neighborhood &amp;amp; sch
       &lt;p&gt;&lt;a href=&quot;https://www.ted.com/talks/douglas_rushkoff_how_to_be_team_human_in_the_digital_future#t-174064&quot;&gt;Digital Future&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">“Humans are no longer valued for our creativity. Now we are just valued for our data”1 Ted talk &amp;#8617;</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/12.jpg" /></entry><entry><title type="html">Matrix Multiplications 02</title><link href="http://localhost:4000/2019/11/note08-fastai-2/" rel="alternate" type="text/html" title="Matrix Multiplications 02" /><published>2019-11-01T00:00:00+09:00</published><updated>2019-11-01T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-2/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">“Humans are no longer valued for our creativity. Now we are just valued for our data”1 Ted talk &amp;#8617;</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/12.jpg" /></entry><entry><title type="html">Matrix Multiplications 02</title><link href="http://localhost:4000/2019/11/note08-fastai-2/" rel="alternate" type="text/html" title="Matrix Multiplications 02" /><published>2019-11-01T00:00:00+09:00</published><updated>2019-11-01T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-2/">&lt;p&gt;«««&amp;lt; HEAD
+“ Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
 
-&lt;h4 id=&quot;homework&quot;&gt;Homework&lt;/h4&gt;
+&lt;h3 id=&quot;homework&quot;&gt;Homework&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;blockquote&gt;
+      &lt;blockquote&gt;
+        &lt;blockquote&gt;
+          &lt;blockquote&gt;
+            &lt;blockquote&gt;
+              &lt;p&gt;parent of 9fd3226… fix&lt;/p&gt;
+            &lt;/blockquote&gt;
+          &lt;/blockquote&gt;
+        &lt;/blockquote&gt;
+      &lt;/blockquote&gt;
+    &lt;/blockquote&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Frobenius Norm Review&lt;/li&gt;
@@ -149,6 +165,8 @@ Besides, the acountant said, to be frankly said, what neighborhood &amp;amp; sch
   &lt;li&gt;torch.allclose Review&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docs.scipy.org/doc/numpy/reference/generated/numpy.einsum.html&quot;&gt;np.einsum Review&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;hr /&gt;
 
 &lt;h4 id=&quot;contents&quot;&gt;CONTENTS&lt;/h4&gt;
 &lt;ul&gt;
@@ -167,8 +185,6 @@ Besides, the acountant said, to be frankly said, what neighborhood &amp;amp; sch
   &lt;li&gt;&lt;a href=&quot;#einstein-summation&quot;&gt;Einstein summation&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#pytorch-op&quot;&gt;Pytorch op&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;hr /&gt;
 
 &lt;h3 id=&quot;elementwise-op&quot;&gt;Elementwise op&lt;/h3&gt;
 &lt;h4 id=&quot;frobenius-norm&quot;&gt;Frobenius norm&lt;/h4&gt;
@@ -304,7 +320,7 @@ Otherwise, an integer value is returned as the stride in the particular dimensio
 
 &lt;p&gt;Args:
     dim (int, optional): the desired dimension in which stride is required
-Example::&lt;br /&gt;&lt;/p&gt;
+Example::*&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;
 &lt;span class=&quot;sb&quot;&gt;`x.stride()`&lt;/span&gt;
@@ -349,12 +365,10 @@ Example::&lt;br /&gt;&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;⭐️Tips🌟  &lt;br /&gt;
-1) &lt;em&gt;Anytime there’s a trailinng(final) colon in numpy or pytorch you can delete it&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;ex) c[i, :] = c [i]
-2) &lt;em&gt;any number of colon commas at the start, you can switch it with the single elipsis.&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;ex) c[:,:,:,:,i] = c […,i]&lt;/li&gt;
-&lt;/ul&gt;
+1) &lt;em&gt;Anytime there’s a trailinng(final) colon in numpy or pytorch you can delete it&lt;/em&gt;
+  &lt;em&gt;ex) c[i, :] = c [i]&lt;/em&gt;
+2) any number of colon commas at the start, you can switch it with the single elipsis.
+  &lt;em&gt;ex) c[:,:,:,:,i] = c […,i]&lt;/em&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;broadcasting-rules&quot;&gt;Broadcasting Rules&lt;/h4&gt;
 
@@ -364,13 +378,15 @@ Example::&lt;br /&gt;&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;What is scale????&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;What if they are one array is &lt;code class=&quot;highlighter-rouge&quot;&gt;times&lt;/code&gt; of the other array?
+  &lt;li&gt;What if they are one array is &lt;code class=&quot;highlighter-rouge&quot;&gt;times&lt;/code&gt; of the other array?
  &lt;br /&gt; ex) 
 &lt;code class=&quot;highlighter-rouge&quot;&gt;Image : 256 x 256 x 3&lt;/code&gt;&lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;Scale : 128 x 256 x 3&lt;/code&gt;&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Result: ?&lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Result: ?&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;«««&amp;lt; HEAD&lt;/p&gt;
+&lt;ul&gt;
   &lt;li&gt;Why I did not inserted axis via None, but happened broadcasting? &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -438,8 +454,8 @@ a.k.a&lt;/li&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://mathworld.wolfram.com/TensorRank.html&quot;&gt;TensorRank&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://forums.fast.ai/t/lesson-8-notes/41442&quot;&gt;fast.ai forum note&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/30.png" /></entry><entry><title type="html">Why am I not listed as a contributor after I contributed?</title><link href="http://localhost:4000/2019/10/Git-Merge/" rel="alternate" type="text/html" title="Why am I not listed as a contributor after I contributed?" /><published>2019-10-30T00:00:00+09:00</published><updated>2019-10-30T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/Git-Merge</id><content type="html" xml:base="http://localhost:4000/2019/10/Git-Merge/">&lt;p&gt;From the end of last year, big changes have witnessed in NLP research.&lt;br /&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forums.fast.ai/t/forum-markdown-notes-lesson-8/41896&quot;&gt;ti note&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">«««&amp;lt; HEAD “ Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/30.png" /></entry><entry><title type="html">Why am I not listed as a contributor after I contributed?</title><link href="http://localhost:4000/2019/10/Git-Merge/" rel="alternate" type="text/html" title="Why am I not listed as a contributor after I contributed?" /><published>2019-10-30T00:00:00+09:00</published><updated>2019-10-30T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/Git-Merge</id><content type="html" xml:base="http://localhost:4000/2019/10/Git-Merge/">&lt;p&gt;From the end of last year, big changes have witnessed in NLP research.&lt;br /&gt;
 Embracing an unprecedented growth, I started to study new exciting results and advances.&lt;br /&gt;
 In doing so, I noticed I’m not listed as contributor of repo which my PR accessed.&lt;/p&gt;
 

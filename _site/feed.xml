@@ -1,51 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-17T23:17:14+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Retrospective on Pycon 2019 Korea (CoC Committee)</title><link href="http://localhost:4000/2019/11/coc-retropective/" rel="alternate" type="text/html" title="Retrospective on Pycon 2019 Korea (CoC Committee)" /><published>2019-11-05T00:00:00+09:00</published><updated>2019-11-05T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/coc-retropective</id><content type="html" xml:base="http://localhost:4000/2019/11/coc-retropective/">&lt;p&gt;When I was volunteer, it seems like busy and hectic to managing that crowded conference.&lt;br /&gt;
-In my experience, to get things moving, it needs &lt;strong&gt;hierarchy&lt;/strong&gt;.&lt;br /&gt;
-But it didn’t. Organizers emphasized our responsibility, and if I passed each other’s burden, It could be my burden next time.&lt;br /&gt;
-In solidarity of the obligation, we finished conference well.&lt;br /&gt;
-And after participating PyCon Korea 2018 as volunteer, I’ve joined PyCon Korea Organizer last year.&lt;br /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-20T04:34:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Julia Evans</title><link href="http://localhost:4000/2019/11/julia-evans/" rel="alternate" type="text/html" title="Julia Evans" /><published>2019-11-20T00:00:00+09:00</published><updated>2019-11-20T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/julia-evans</id><content type="html" xml:base="http://localhost:4000/2019/11/julia-evans/">&lt;p&gt;The women who surprised me in many ways.&lt;br /&gt;
+First, she approached me to teaching some concepts drawing cartoons.&lt;br /&gt;
+It was at Hackers news, which was hightest ranks.&lt;br /&gt;
+Personally I have the use of not to reading title, so and cartoon was so cute and clear.&lt;br /&gt;
+I naturally gonna understood mechanism and astonished by her explaination ability.&lt;br /&gt;
+Her value, which she was taught by many people so want to do same things, moved me.&lt;br /&gt;
+Volume of her knowledge, that just reading post title is a deal of work, amazed me.&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&amp;lt;Figure 1&amp;gt; First meeting of PyCon 2019 Korea Organizers &lt;img src=&quot;/assets/images/28.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It’s been a while since PyCon 2019 finished. It’s held on Aug 15 - 18, at Coex Grand Balloom&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;Figure 2&amp;gt; Ongoing session, speaking on news comment processing  &lt;img src=&quot;/assets/images/22.jpg&quot; alt=&quot;&quot; /&gt;
-&amp;lt;Figure 3&amp;gt; Sponsor Booth iin Coex Hall &lt;img src=&quot;/assets/images/27.jpg&quot; alt=&quot;&quot; /&gt;
-&amp;lt;Figure 4&amp;gt; After PyCon 2019, with all of volunteer, organizer, speakers 😍 🥰 &lt;img src=&quot;/assets/images/17.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Serving as part of the coc TF, I spent large fraction of last year doing CoC job.
-here’s the path what we’ve been grappled with to grasp a solution.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;First half: Before the conference&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;toward-diverse-community&quot;&gt;Toward Diverse Community&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Formally we’ve been reusing and modifying PyCon US CoC, but we needed fit in Korean and I was part of that to revise code of conduct.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;except-that-diversity-because-it-is-harassment&quot;&gt;Except ‘That’ Diversity, Because it is ‘Harassment’&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Specific point was harassment, and the others were not. process of finding the points. How can we settle this point?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Second half: During the conference&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;handling-the-potential-harassment&quot;&gt;Handling the potential Harassment&lt;/h4&gt;
-
-&lt;h4 id=&quot;disjunction-of-policy-and-real-time-situation&quot;&gt;Disjunction of policy and real-time situation&lt;/h4&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;This ‘PyCon 2019 Korea retrospective series’ would be devided into 3 Episodes.&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;“Retrospective on Pycon 2019 Korea (CoC Committee)”&lt;/li&gt;
-  &lt;li&gt;“Retrospective on Pycon 2019 Korea (Program Chair)” (20 Nov, To Be Update)&lt;/li&gt;
-  &lt;li&gt;“Maintaining participation while still making timely decisions” (29 Nov, To Be Update)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><summary type="html">When I was volunteer, it seems like busy and hectic to managing that crowded conference. In my experience, to get things moving, it needs hierarchy. But it didn’t. Organizers emphasized our responsibility, and if I passed each other’s burden, It could be my burden next time. In solidarity of the obligation, we finished conference well. And after participating PyCon Korea 2018 as volunteer, I’ve joined PyCon Korea Organizer last year.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/14.jpg" /></entry><entry><title type="html">Elif Shafak</title><link href="http://localhost:4000/2019/11/elif-shafak/" rel="alternate" type="text/html" title="Elif Shafak" /><published>2019-11-05T00:00:00+09:00</published><updated>2019-11-05T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/elif-shafak</id><content type="html" xml:base="http://localhost:4000/2019/11/elif-shafak/">&lt;p&gt;For creative-minded people, Istanbul is a treasure.’ Photo © Chris Boland, licensed under &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-nd/2.0/&quot;&gt;CC BY-NC-ND 2.0&lt;/a&gt;&lt;/p&gt;
+&lt;!-- neural network부터, 엄청 많은 도메인.  --&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">The women who surprised me in many ways. First, she approached me to teaching some concepts drawing cartoons. It was at Hackers news, which was hightest ranks. Personally I have the use of not to reading title, so and cartoon was so cute and clear. I naturally gonna understood mechanism and astonished by her explaination ability. Her value, which she was taught by many people so want to do same things, moved me. Volume of her knowledge, that just reading post title is a deal of work, amazed me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/evans.jpg" /></entry><entry><title type="html">Elif Shafak</title><link href="http://localhost:4000/2019/11/elif-shafak/" rel="alternate" type="text/html" title="Elif Shafak" /><published>2019-11-05T00:00:00+09:00</published><updated>2019-11-05T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/elif-shafak</id><content type="html" xml:base="http://localhost:4000/2019/11/elif-shafak/">&lt;p&gt;For creative-minded people, Istanbul is a treasure.’ Photo © Chris Boland, licensed under &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-nd/2.0/&quot;&gt;CC BY-NC-ND 2.0&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;blockquote&gt;
@@ -105,7 +66,54 @@ here’s the path what we’ve been grappled with to grasp a solution.&lt;/li&gt
       &lt;p&gt;&lt;a href=&quot;https://www.ted.com/talks/elif_shafak_the_revolutionary_power_of_diverse_thought#t-37432&quot;&gt;Ted Talk&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">For creative-minded people, Istanbul is a treasure.’ Photo © Chris Boland, licensed under CC BY-NC-ND 2.0</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/29.jpg" /></entry><entry><title type="html">Douglas Rushkoff</title><link href="http://localhost:4000/2019/11/douglas-rushoff/" rel="alternate" type="text/html" title="Douglas Rushkoff" /><published>2019-11-04T00:00:00+09:00</published><updated>2019-11-04T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/douglas-rushoff</id><content type="html" xml:base="http://localhost:4000/2019/11/douglas-rushoff/">&lt;p&gt;“Humans are no longer valued for our creativity.&lt;br /&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">For creative-minded people, Istanbul is a treasure.’ Photo © Chris Boland, licensed under CC BY-NC-ND 2.0</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/29.jpg" /></entry><entry><title type="html">Retrospective on Pycon 2019 Korea (CoC Committee)</title><link href="http://localhost:4000/2019/11/coc-retropective/" rel="alternate" type="text/html" title="Retrospective on Pycon 2019 Korea (CoC Committee)" /><published>2019-11-05T00:00:00+09:00</published><updated>2019-11-05T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/coc-retropective</id><content type="html" xml:base="http://localhost:4000/2019/11/coc-retropective/">&lt;p&gt;When I was volunteer, it seems like busy and hectic to managing that crowded conference.&lt;br /&gt;
+In my experience, to get things moving, it needs &lt;strong&gt;hierarchy&lt;/strong&gt;.&lt;br /&gt;
+But it didn’t. Organizers emphasized our responsibility, and if I passed each other’s burden, It could be my burden next time.&lt;br /&gt;
+In solidarity of the obligation, we finished conference well.&lt;br /&gt;
+And after participating PyCon Korea 2018 as volunteer, I’ve joined PyCon Korea Organizer last year.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;Figure 1&amp;gt; First meeting of PyCon 2019 Korea Organizers &lt;img src=&quot;/assets/images/28.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s been a while since PyCon 2019 finished. It’s held on Aug 15 - 18, at Coex Grand Balloom&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;Figure 2&amp;gt; Ongoing session, speaking on news comment processing  &lt;img src=&quot;/assets/images/22.jpg&quot; alt=&quot;&quot; /&gt;
+&amp;lt;Figure 3&amp;gt; Sponsor Booth iin Coex Hall &lt;img src=&quot;/assets/images/27.jpg&quot; alt=&quot;&quot; /&gt;
+&amp;lt;Figure 4&amp;gt; After PyCon 2019, with all of volunteer, organizer, speakers 😍 🥰 &lt;img src=&quot;/assets/images/17.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Serving as part of the coc TF, I spent large fraction of last year doing CoC job.
+here’s the path what we’ve been grappled with to grasp a solution.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;First half: Before the conference&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;toward-diverse-community&quot;&gt;Toward Diverse Community&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Formally we’ve been reusing and modifying PyCon US CoC, but we needed fit in Korean and I was part of that to revise code of conduct.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;except-that-diversity-because-it-is-harassment&quot;&gt;Except ‘That’ Diversity, Because it is ‘Harassment’&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Specific point was harassment, and the others were not. process of finding the points. How can we settle this point?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Second half: During the conference&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;handling-the-potential-harassment&quot;&gt;Handling the potential Harassment&lt;/h4&gt;
+
+&lt;h4 id=&quot;disjunction-of-policy-and-real-time-situation&quot;&gt;Disjunction of policy and real-time situation&lt;/h4&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This ‘PyCon 2019 Korea retrospective series’ would be devided into 3 Episodes.&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“Retrospective on Pycon 2019 Korea (CoC Committee)”&lt;/li&gt;
+  &lt;li&gt;“Retrospective on Pycon 2019 Korea (Program Chair)” (20 Nov, To Be Update)&lt;/li&gt;
+  &lt;li&gt;“Maintaining participation while still making timely decisions” (29 Nov, To Be Update)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><summary type="html">When I was volunteer, it seems like busy and hectic to managing that crowded conference. In my experience, to get things moving, it needs hierarchy. But it didn’t. Organizers emphasized our responsibility, and if I passed each other’s burden, It could be my burden next time. In solidarity of the obligation, we finished conference well. And after participating PyCon Korea 2018 as volunteer, I’ve joined PyCon Korea Organizer last year.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/14.jpg" /></entry><entry><title type="html">Douglas Rushkoff</title><link href="http://localhost:4000/2019/11/douglas-rushoff/" rel="alternate" type="text/html" title="Douglas Rushkoff" /><published>2019-11-04T00:00:00+09:00</published><updated>2019-11-04T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/douglas-rushoff</id><content type="html" xml:base="http://localhost:4000/2019/11/douglas-rushoff/">&lt;p&gt;“Humans are no longer valued for our creativity.&lt;br /&gt;
 Now we are just valued for our data”&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;It does require specific conditions that people are living in the competitive.&lt;br /&gt;&lt;/p&gt;
@@ -135,25 +143,9 @@ Besides, the acountant said, to be frankly said, what neighborhood &amp;amp; sch
       &lt;p&gt;&lt;a href=&quot;https://www.ted.com/talks/douglas_rushkoff_how_to_be_team_human_in_the_digital_future#t-174064&quot;&gt;Digital Future&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">“Humans are no longer valued for our creativity. Now we are just valued for our data”1 Ted talk &amp;#8617;</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/12.jpg" /></entry><entry><title type="html">Matrix Multiplications 02</title><link href="http://localhost:4000/2019/11/note08-fastai-2/" rel="alternate" type="text/html" title="Matrix Multiplications 02" /><published>2019-11-01T00:00:00+09:00</published><updated>2019-11-01T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-2/">&lt;p&gt;«««&amp;lt; HEAD
-“ Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">“Humans are no longer valued for our creativity. Now we are just valued for our data”1 Ted talk &amp;#8617;</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/12.jpg" /></entry><entry><title type="html">Matrix Multiplications 02</title><link href="http://localhost:4000/2019/11/note08-fastai-2/" rel="alternate" type="text/html" title="Matrix Multiplications 02" /><published>2019-11-01T00:00:00+09:00</published><updated>2019-11-01T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-2/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
 
 &lt;h3 id=&quot;homework&quot;&gt;Homework&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;blockquote&gt;
-    &lt;blockquote&gt;
-      &lt;blockquote&gt;
-        &lt;blockquote&gt;
-          &lt;blockquote&gt;
-            &lt;blockquote&gt;
-              &lt;p&gt;parent of 9fd3226… fix&lt;/p&gt;
-            &lt;/blockquote&gt;
-          &lt;/blockquote&gt;
-        &lt;/blockquote&gt;
-      &lt;/blockquote&gt;
-    &lt;/blockquote&gt;
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Frobenius Norm Review&lt;/li&gt;
@@ -378,15 +370,13 @@ Example::*&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;What is scale????&lt;/li&gt;
-  &lt;li&gt;What if they are one array is &lt;code class=&quot;highlighter-rouge&quot;&gt;times&lt;/code&gt; of the other array?
+  &lt;li&gt;
+    &lt;p&gt;What if they are one array is &lt;code class=&quot;highlighter-rouge&quot;&gt;times&lt;/code&gt; of the other array?
  &lt;br /&gt; ex) 
 &lt;code class=&quot;highlighter-rouge&quot;&gt;Image : 256 x 256 x 3&lt;/code&gt;&lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;Scale : 128 x 256 x 3&lt;/code&gt;&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Result: ?&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;«««&amp;lt; HEAD&lt;/p&gt;
-&lt;ul&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Result: ?&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
   &lt;li&gt;Why I did not inserted axis via None, but happened broadcasting? &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -455,7 +445,7 @@ a.k.a&lt;/li&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://mathworld.wolfram.com/TensorRank.html&quot;&gt;TensorRank&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://forums.fast.ai/t/forum-markdown-notes-lesson-8/41896&quot;&gt;ti note&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">«««&amp;lt; HEAD “ Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/30.png" /></entry><entry><title type="html">Why am I not listed as a contributor after I contributed?</title><link href="http://localhost:4000/2019/10/Git-Merge/" rel="alternate" type="text/html" title="Why am I not listed as a contributor after I contributed?" /><published>2019-10-30T00:00:00+09:00</published><updated>2019-10-30T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/Git-Merge</id><content type="html" xml:base="http://localhost:4000/2019/10/Git-Merge/">&lt;p&gt;From the end of last year, big changes have witnessed in NLP research.&lt;br /&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/30.png" /></entry><entry><title type="html">Why am I not listed as a contributor after I contributed?</title><link href="http://localhost:4000/2019/10/Git-Merge/" rel="alternate" type="text/html" title="Why am I not listed as a contributor after I contributed?" /><published>2019-10-30T00:00:00+09:00</published><updated>2019-10-30T00:00:00+09:00</updated><id>http://localhost:4000/2019/10/Git-Merge</id><content type="html" xml:base="http://localhost:4000/2019/10/Git-Merge/">&lt;p&gt;From the end of last year, big changes have witnessed in NLP research.&lt;br /&gt;
 Embracing an unprecedented growth, I started to study new exciting results and advances.&lt;br /&gt;
 In doing so, I noticed I’m not listed as contributor of repo which my PR accessed.&lt;/p&gt;
 

@@ -1,4 +1,99 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-20T04:44:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Julia Evans</title><link href="http://localhost:4000/2019/11/julia-evans/" rel="alternate" type="text/html" title="Julia Evans" /><published>2019-11-20T00:00:00+09:00</published><updated>2019-11-20T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/julia-evans</id><content type="html" xml:base="http://localhost:4000/2019/11/julia-evans/">&lt;p&gt;The women who surprised me in many ways.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-22T18:11:11+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Broadcasting, Einstein sum, Pytorch operator</title><link href="http://localhost:4000/2019/11/v3-notes08-3-fastai/" rel="alternate" type="text/html" title="Broadcasting, Einstein sum, Pytorch operator" /><published>2019-11-21T00:00:00+09:00</published><updated>2019-11-21T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/v3-notes08-3-fastai</id><content type="html" xml:base="http://localhost:4000/2019/11/v3-notes08-3-fastai/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
+
+&lt;h3 id=&quot;homework&quot;&gt;Homework&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;contents&quot;&gt;CONTENTS&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-forward-and-backward-passes&quot;&gt;The forward and backward passes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#foundation-version&quot;&gt;Foundation version&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#frobenius-norm&quot;&gt;Basic architecture&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Loss-function:-MSE&quot;&gt;Loss function: MSE&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Gradients-backward-pass&quot;&gt;Gradients backward pass&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Refactor-model&quot;&gt;Refactor model&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#Layers-as-classes&quot;&gt;Layers as classes&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#module.forawd()&quot;&gt;Module.forward()&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#nn.Linear-and-nn.Module&quot;&gt;nn.Linear and nn.Module&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-forward-and-backward-passes&quot;&gt;The forward and backward passes&lt;/h3&gt;
+
+&lt;h5 id=&quot;nomalization&quot;&gt;Nomalization&lt;/h5&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;train_mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_std&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_std&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1304&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.3073&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dataset, which is x_train, mean and standard deviation is not 0&amp;amp;1. &lt;strong&gt;But we need them to be&lt;/strong&gt; which means we should substract means and divide data by std.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You should not standarlize &lt;em&gt;validation set&lt;/em&gt; because training set and validation set should be aparted.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;after normalize, mean is close to zero, and standard deviation is close to 1.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;variable-definition&quot;&gt;Variable definition&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;n,m&lt;/strong&gt;: size of the training set&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;c&lt;/strong&gt;: the number of activations we need in our model&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;foundation-version&quot;&gt;Foundation Version&lt;/h3&gt;
+&lt;h4 id=&quot;basic-architecture&quot;&gt;Basic architecture&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Our model has one hidden layer, output to have 10 activations, used in cross entropy.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;But in process of building architecture, we will use mean square error, output to have 1 activations and lator change it to cross entropy&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;number of hidden unit; 50&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;see below pic&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/model.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;kaiming-initializating&quot;&gt;kaiming initializating&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We also want to make w1&amp;amp;w2 mean and std be 0&amp;amp;1.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It can made by, in case w1,&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In case w2,&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Why we should divide weight by root of length row?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;loss-function-mse&quot;&gt;Loss function: MSE&lt;/h4&gt;
+
+&lt;h4 id=&quot;gradients-backward-pass&quot;&gt;Gradients backward pass&lt;/h4&gt;
+
+&lt;h3 id=&quot;refactor-model&quot;&gt;Refactor model&lt;/h3&gt;
+&lt;h4 id=&quot;layers-as-classes&quot;&gt;Layers as classes&lt;/h4&gt;
+&lt;h4 id=&quot;modueforward&quot;&gt;Modue.forward()&lt;/h4&gt;
+&lt;h4 id=&quot;nnlinear-and-nnmodule&quot;&gt;nn.Linear and nn.Module&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/5-fc.png" /></entry><entry><title type="html">Julia Evans</title><link href="http://localhost:4000/2019/11/julia-evans/" rel="alternate" type="text/html" title="Julia Evans" /><published>2019-11-20T00:00:00+09:00</published><updated>2019-11-20T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/julia-evans</id><content type="html" xml:base="http://localhost:4000/2019/11/julia-evans/">&lt;p&gt;The women who surprised me in many ways.&lt;br /&gt;
 First, she approached me to teaching some concepts drawing cartoons.&lt;br /&gt;
 It was at Hackers news, which was hightest ranks.&lt;br /&gt;
 Personally I have the use of not to reading title, so and cartoon was so cute and clear.&lt;br /&gt;
@@ -6,54 +101,7 @@ I naturally gonna understood mechanism and astonished by her explaination abilit
 Her value, which she was taught by many people so want to do same things, moved me.&lt;br /&gt;
 Volume of her knowledge, that just reading post title is a deal of work, amazed me.&lt;br /&gt;&lt;/p&gt;
 
-&lt;!-- neural network부터, 엄청 많은 도메인.  --&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">The women who surprised me in many ways. First, she approached me to teaching some concepts drawing cartoons. It was at Hackers news, which was hightest ranks. Personally I have the use of not to reading title, so and cartoon was so cute and clear. I naturally gonna understood mechanism and astonished by her explaination ability. Her value, which she was taught by many people so want to do same things, moved me. Volume of her knowledge, that just reading post title is a deal of work, amazed me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/evans.jpg" /></entry><entry><title type="html">Retrospective on Pycon 2019 Korea (CoC Committee)</title><link href="http://localhost:4000/2019/11/coc-retropective/" rel="alternate" type="text/html" title="Retrospective on Pycon 2019 Korea (CoC Committee)" /><published>2019-11-05T00:00:00+09:00</published><updated>2019-11-05T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/coc-retropective</id><content type="html" xml:base="http://localhost:4000/2019/11/coc-retropective/">&lt;p&gt;When I was volunteer, it seems like busy and hectic to managing that crowded conference.&lt;br /&gt;
-In my experience, to get things moving, it needs &lt;strong&gt;hierarchy&lt;/strong&gt;.&lt;br /&gt;
-But it didn’t. Organizers emphasized our responsibility, and if I passed each other’s burden, It could be my burden next time.&lt;br /&gt;
-In solidarity of the obligation, we finished conference well.&lt;br /&gt;
-And after participating PyCon Korea 2018 as volunteer, I’ve joined PyCon Korea Organizer last year.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;Figure 1&amp;gt; First meeting of PyCon 2019 Korea Organizers &lt;img src=&quot;/assets/images/28.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It’s been a while since PyCon 2019 finished. It’s held on Aug 15 - 18, at Coex Grand Balloom&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;Figure 2&amp;gt; Ongoing session, speaking on news comment processing  &lt;img src=&quot;/assets/images/22.jpg&quot; alt=&quot;&quot; /&gt;
-&amp;lt;Figure 3&amp;gt; Sponsor Booth iin Coex Hall &lt;img src=&quot;/assets/images/27.jpg&quot; alt=&quot;&quot; /&gt;
-&amp;lt;Figure 4&amp;gt; After PyCon 2019, with all of volunteer, organizer, speakers 😍 🥰 &lt;img src=&quot;/assets/images/17.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Serving as part of the coc TF, I spent large fraction of last year doing CoC job.
-here’s the path what we’ve been grappled with to grasp a solution.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;First half: Before the conference&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;toward-diverse-community&quot;&gt;Toward Diverse Community&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Formally we’ve been reusing and modifying PyCon US CoC, but we needed fit in Korean and I was part of that to revise code of conduct.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;except-that-diversity-because-it-is-harassment&quot;&gt;Except ‘That’ Diversity, Because it is ‘Harassment’&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Specific point was harassment, and the others were not. process of finding the points. How can we settle this point?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Second half: During the conference&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;handling-the-potential-harassment&quot;&gt;Handling the potential Harassment&lt;/h4&gt;
-
-&lt;h4 id=&quot;disjunction-of-policy-and-real-time-situation&quot;&gt;Disjunction of policy and real-time situation&lt;/h4&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;This ‘PyCon 2019 Korea retrospective series’ would be devided into 3 Episodes.&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;“Retrospective on Pycon 2019 Korea (CoC Committee)”&lt;/li&gt;
-  &lt;li&gt;“Retrospective on Pycon 2019 Korea (Program Chair)” (20 Nov, To Be Update)&lt;/li&gt;
-  &lt;li&gt;“Maintaining participation while still making timely decisions” (29 Nov, To Be Update)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><summary type="html">When I was volunteer, it seems like busy and hectic to managing that crowded conference. In my experience, to get things moving, it needs hierarchy. But it didn’t. Organizers emphasized our responsibility, and if I passed each other’s burden, It could be my burden next time. In solidarity of the obligation, we finished conference well. And after participating PyCon Korea 2018 as volunteer, I’ve joined PyCon Korea Organizer last year.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/14.jpg" /></entry><entry><title type="html">Elif Shafak</title><link href="http://localhost:4000/2019/11/elif-shafak/" rel="alternate" type="text/html" title="Elif Shafak" /><published>2019-11-05T00:00:00+09:00</published><updated>2019-11-05T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/elif-shafak</id><content type="html" xml:base="http://localhost:4000/2019/11/elif-shafak/">&lt;p&gt;For creative-minded people, Istanbul is a treasure.’ Photo © Chris Boland, licensed under &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-nd/2.0/&quot;&gt;CC BY-NC-ND 2.0&lt;/a&gt;&lt;/p&gt;
+&lt;!-- neural network부터, 엄청 많은 도메인.  --&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">The women who surprised me in many ways. First, she approached me to teaching some concepts drawing cartoons. It was at Hackers news, which was hightest ranks. Personally I have the use of not to reading title, so and cartoon was so cute and clear. I naturally gonna understood mechanism and astonished by her explaination ability. Her value, which she was taught by many people so want to do same things, moved me. Volume of her knowledge, that just reading post title is a deal of work, amazed me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/evans.jpg" /></entry><entry><title type="html">Elif Shafak</title><link href="http://localhost:4000/2019/11/elif-shafak/" rel="alternate" type="text/html" title="Elif Shafak" /><published>2019-11-05T00:00:00+09:00</published><updated>2019-11-05T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/elif-shafak</id><content type="html" xml:base="http://localhost:4000/2019/11/elif-shafak/">&lt;p&gt;For creative-minded people, Istanbul is a treasure.’ Photo © Chris Boland, licensed under &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-nd/2.0/&quot;&gt;CC BY-NC-ND 2.0&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;blockquote&gt;
@@ -113,7 +161,54 @@ here’s the path what we’ve been grappled with to grasp a solution.&lt;/li&gt
       &lt;p&gt;&lt;a href=&quot;https://www.ted.com/talks/elif_shafak_the_revolutionary_power_of_diverse_thought#t-37432&quot;&gt;Ted Talk&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">For creative-minded people, Istanbul is a treasure.’ Photo © Chris Boland, licensed under CC BY-NC-ND 2.0</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/29.jpg" /></entry><entry><title type="html">Douglas Rushkoff</title><link href="http://localhost:4000/2019/11/douglas-rushoff/" rel="alternate" type="text/html" title="Douglas Rushkoff" /><published>2019-11-04T00:00:00+09:00</published><updated>2019-11-04T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/douglas-rushoff</id><content type="html" xml:base="http://localhost:4000/2019/11/douglas-rushoff/">&lt;p&gt;“Humans are no longer valued for our creativity.&lt;br /&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">For creative-minded people, Istanbul is a treasure.’ Photo © Chris Boland, licensed under CC BY-NC-ND 2.0</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/29.jpg" /></entry><entry><title type="html">Retrospective on Pycon 2019 Korea (CoC Committee)</title><link href="http://localhost:4000/2019/11/coc-retropective/" rel="alternate" type="text/html" title="Retrospective on Pycon 2019 Korea (CoC Committee)" /><published>2019-11-05T00:00:00+09:00</published><updated>2019-11-05T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/coc-retropective</id><content type="html" xml:base="http://localhost:4000/2019/11/coc-retropective/">&lt;p&gt;When I was volunteer, it seems like busy and hectic to managing that crowded conference.&lt;br /&gt;
+In my experience, to get things moving, it needs &lt;strong&gt;hierarchy&lt;/strong&gt;.&lt;br /&gt;
+But it didn’t. Organizers emphasized our responsibility, and if I passed each other’s burden, It could be my burden next time.&lt;br /&gt;
+In solidarity of the obligation, we finished conference well.&lt;br /&gt;
+And after participating PyCon Korea 2018 as volunteer, I’ve joined PyCon Korea Organizer last year.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;Figure 1&amp;gt; First meeting of PyCon 2019 Korea Organizers &lt;img src=&quot;/assets/images/28.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s been a while since PyCon 2019 finished. It’s held on Aug 15 - 18, at Coex Grand Balloom&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;Figure 2&amp;gt; Ongoing session, speaking on news comment processing  &lt;img src=&quot;/assets/images/22.jpg&quot; alt=&quot;&quot; /&gt;
+&amp;lt;Figure 3&amp;gt; Sponsor Booth iin Coex Hall &lt;img src=&quot;/assets/images/27.jpg&quot; alt=&quot;&quot; /&gt;
+&amp;lt;Figure 4&amp;gt; After PyCon 2019, with all of volunteer, organizer, speakers 😍 🥰 &lt;img src=&quot;/assets/images/17.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Serving as part of the coc TF, I spent large fraction of last year doing CoC job.
+here’s the path what we’ve been grappled with to grasp a solution.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;First half: Before the conference&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;toward-diverse-community&quot;&gt;Toward Diverse Community&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Formally we’ve been reusing and modifying PyCon US CoC, but we needed fit in Korean and I was part of that to revise code of conduct.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;except-that-diversity-because-it-is-harassment&quot;&gt;Except ‘That’ Diversity, Because it is ‘Harassment’&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Specific point was harassment, and the others were not. process of finding the points. How can we settle this point?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Second half: During the conference&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;handling-the-potential-harassment&quot;&gt;Handling the potential Harassment&lt;/h4&gt;
+
+&lt;h4 id=&quot;disjunction-of-policy-and-real-time-situation&quot;&gt;Disjunction of policy and real-time situation&lt;/h4&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This ‘PyCon 2019 Korea retrospective series’ would be devided into 3 Episodes.&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“Retrospective on Pycon 2019 Korea (CoC Committee)”&lt;/li&gt;
+  &lt;li&gt;“Retrospective on Pycon 2019 Korea (Program Chair)” (20 Nov, To Be Update)&lt;/li&gt;
+  &lt;li&gt;“Maintaining participation while still making timely decisions” (29 Nov, To Be Update)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><summary type="html">When I was volunteer, it seems like busy and hectic to managing that crowded conference. In my experience, to get things moving, it needs hierarchy. But it didn’t. Organizers emphasized our responsibility, and if I passed each other’s burden, It could be my burden next time. In solidarity of the obligation, we finished conference well. And after participating PyCon Korea 2018 as volunteer, I’ve joined PyCon Korea Organizer last year.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/14.jpg" /></entry><entry><title type="html">Douglas Rushkoff</title><link href="http://localhost:4000/2019/11/douglas-rushoff/" rel="alternate" type="text/html" title="Douglas Rushkoff" /><published>2019-11-04T00:00:00+09:00</published><updated>2019-11-04T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/douglas-rushoff</id><content type="html" xml:base="http://localhost:4000/2019/11/douglas-rushoff/">&lt;p&gt;“Humans are no longer valued for our creativity.&lt;br /&gt;
 Now we are just valued for our data”&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;It does require specific conditions that people are living in the competitive.&lt;br /&gt;&lt;/p&gt;

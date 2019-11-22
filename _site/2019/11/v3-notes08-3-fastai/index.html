@@ -4,20 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> | SpellOnYou</title>
+    <title>Broadcasting, Einstein sum, Pytorch operator | SpellOnYou</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>SpellOnYou | Be afraid only of standing still. Remain fresh, body and soul.</title>
+<title>Broadcasting, Einstein sum, Pytorch operator | SpellOnYou</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="SpellOnYou" />
+<meta property="og:title" content="Broadcasting, Einstein sum, Pytorch operator" />
+<meta name="author" content="dionne" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Be afraid only of standing still. Remain fresh, body and soul." />
-<meta property="og:description" content="Be afraid only of standing still. Remain fresh, body and soul." />
-<link rel="canonical" href="http://localhost:4000/404/" />
-<meta property="og:url" content="http://localhost:4000/404/" />
+<meta name="description" content="” Lecture 08 - Deep Learning From Foundations-part2 “" />
+<meta property="og:description" content="” Lecture 08 - Deep Learning From Foundations-part2 “" />
+<link rel="canonical" href="http://localhost:4000/2019/11/v3-notes08-3-fastai/" />
+<meta property="og:url" content="http://localhost:4000/2019/11/v3-notes08-3-fastai/" />
 <meta property="og:site_name" content="SpellOnYou" />
+<meta property="og:image" content="http://localhost:4000/assets/images/5-fc.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-11-21T00:00:00+09:00" />
 <script type="application/ld+json">
-{"description":"Be afraid only of standing still. Remain fresh, body and soul.","@type":"WebPage","url":"http://localhost:4000/404/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"}},"headline":"SpellOnYou","@context":"http://schema.org"}</script>
+{"description":"” Lecture 08 - Deep Learning From Foundations-part2 “","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/11/v3-notes08-3-fastai/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/5-fc.png","headline":"Broadcasting, Einstein sum, Pytorch operator","dateModified":"2019-11-21T00:00:00+09:00","datePublished":"2019-11-21T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/11/v3-notes08-3-fastai/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -254,25 +258,242 @@ function lunr_search(term) {
 
     <!-- Content -->
     <main role="main" class="site-content">
-        <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+        
 
 <div class="container">
-  <h1>404</h1>
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+		<div class="h-100 tofront">
+			<div class="row  justify-content-between ">
+				<div class=" col-md-6  pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+					<p class="text-uppercase font-weight-bold">
+                        <span class="catlist">
+						
+                          <a class="sscroll text-danger" href="/categories.html#fast.ai-v3">fast.ai-v3</a><span class="sep">, </span>
+                        
+                        </span>
+					</p>
+					<h1 class="display-4 mb-4 article-headline">Broadcasting, Einstein sum, Pytorch operator</h1>
+					<div class="d-flex align-items-center">
+                        
+						<small class="ml-3">  <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
+                            <span class="text-muted d-block mt-1">Nov 21, 2019 · <span class="reading-time">
+  
+  
+    2 mins read
+  
+</span>
+    </span>
+						</small>
+					</div>
+				</div>
+                
+				<div class="col-md-6 pr-0 align-self-center">
+					<img class="rounded" src="/assets/images/5-fc.png" alt="Broadcasting, Einstein sum, Pytorch operator">
+				</div>
+                
+			</div>
+		</div>
+	</div>
+</div>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+
+
+
+
+<div class="container-lg pt-4 pb-4">
+	<div class="row justify-content-center">
+        
+        
+        <!-- Share -->
+		<div class="col-lg-2 pr-4 mb-4 col-md-12">
+			<div class="sticky-top sticky-top-offset text-center">
+				<div class="text-muted">
+					Share this
+				</div>
+				<div class="share d-inline-block">
+					<!-- AddToAny BEGIN -->
+					<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+						<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+						<a class="a2a_button_facebook"></a>
+						<a class="a2a_button_twitter"></a>
+					</div>
+					<script async src="https://static.addtoany.com/menu/page.js"></script>
+					<!-- AddToAny END -->
+				</div>
+			</div>
+		</div>
+        
+        
+		<div class="col-md-12 col-lg-8">
+            
+            <!-- Article -->
+			<article class="article-post">                
+			<p>” Lecture 08 - Deep Learning From Foundations-part2 “</p>
+
+<h3 id="homework">Homework</h3>
+
+<hr />
+
+<h4 id="contents">CONTENTS</h4>
+<ul>
+  <li><a href="#the-forward-and-backward-passes">The forward and backward passes</a></li>
+  <li><a href="#foundation-version">Foundation version</a>
+    <ul>
+      <li><a href="#frobenius-norm">Basic architecture</a></li>
+      <li><a href="#Loss-function:-MSE">Loss function: MSE</a></li>
+      <li><a href="#Gradients-backward-pass">Gradients backward pass</a></li>
+    </ul>
+  </li>
+  <li><a href="#Refactor-model">Refactor model</a>
+    <ul>
+      <li><a href="#Layers-as-classes">Layers as classes</a></li>
+      <li><a href="#module.forawd()">Module.forward()</a></li>
+      <li><a href="#nn.Linear-and-nn.Module">nn.Linear and nn.Module</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="the-forward-and-backward-passes">The forward and backward passes</h3>
+
+<h5 id="nomalization">Nomalization</h5>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_mean</span><span class="p">,</span><span class="n">train_std</span> <span class="o">=</span> <span class="n">x_train</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="n">x_train</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">train_mean</span><span class="p">,</span><span class="n">train_std</span>
+<span class="p">(</span><span class="n">tensor</span><span class="p">(</span><span class="mf">0.1304</span><span class="p">),</span> <span class="n">tensor</span><span class="p">(</span><span class="mf">0.3073</span><span class="p">))</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Dataset, which is x_train, mean and standard deviation is not 0&amp;1. <strong>But we need them to be</strong> which means we should substract means and divide data by std.</li>
+  <li>
+    <p>You should not standarlize <em>validation set</em> because training set and validation set should be aparted.</p>
+  </li>
+  <li>after normalize, mean is close to zero, and standard deviation is close to 1.</li>
+</ul>
+
+<h5 id="variable-definition">Variable definition</h5>
+
+<ul>
+  <li><strong>n,m</strong>: size of the training set</li>
+  <li><strong>c</strong>: the number of activations we need in our model</li>
+</ul>
+
+<h3 id="foundation-version">Foundation Version</h3>
+<h4 id="basic-architecture">Basic architecture</h4>
+
+<ul>
+  <li>Our model has one hidden layer, output to have 10 activations, used in cross entropy.</li>
+  <li>
+    <p>But in process of building architecture, we will use mean square error, output to have 1 activations and lator change it to cross entropy</p>
+  </li>
+  <li>number of hidden unit; 50</li>
+</ul>
+
+<p>see below pic</p>
+
+<p><img src="/assets/images/model.jpg" alt="" /></p>
+
+<h4 id="kaiming-initializating">kaiming initializating</h4>
+
+<ul>
+  <li>We also want to make w1&amp;w2 mean and std be 0&amp;1.</li>
+</ul>
+
+<p>It can made by, in case w1,</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">nh</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">nh</span><span class="p">)</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>In case w2,</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">nh</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">nh</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">nh</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Why we should divide weight by root of length row?</strong></p>
+
+<h4 id="loss-function-mse">Loss function: MSE</h4>
+
+<h4 id="gradients-backward-pass">Gradients backward pass</h4>
+
+<h3 id="refactor-model">Refactor model</h3>
+<h4 id="layers-as-classes">Layers as classes</h4>
+<h4 id="modueforward">Modue.forward()</h4>
+<h4 id="nnlinear-and-nnmodule">nn.Linear and nn.Module</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+                
+			</article>
+			
+			<!-- Tags -->
+			<div class="mb-4">
+				<span class="taglist">
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/tags.html#featured">featured</a>
+				
+				</span>
+			</div>
+ 
+            <!-- Mailchimp Subscribe Form -->
+            
+            
+<!-- TODO: all of author mal funciton -->            
+             <!-- Author Box -->
+                	
+<!-- 				<div class="row mt-5">
+					<div class="col-md-2 align-self-center">
+                          
+					</div>
+					<div class="col-md-10">		
+                        <h5 class="font-weight-bold">Written by  </h5>
+											
+					</div>
+				</div>				 -->
+                
+            
+            <!-- Comments -->
+            
+                <!--  Don't edit anything here. Set your disqus id in _config.yml -->
+
+<div id="comments" class="mt-5">
+    <div id="disqus_thread">
+    </div>
+    <script type="text/javascript">
+        var disqus_shortname = 'dionne'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>
+    Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+</div>
+            
+            
+		</div>
+        
+        
+	</div>
+</div>
+
+
+<!-- Aletbar Prev/Next -->
+<div class="alertbar">
+    <div class="container">
+        <div class="row prevnextlinks small font-weight-bold">
+          
+            <div class="col-md-6 rightborder pl-0">
+                <a class="text-dark" href="/2019/11/julia-evans/"> <img height="30px" class="mr-1" src="/assets/images/evans.jpg">  Julia Evans</a>
+            </div>
+          
+          
+        </div>
+    </div>
 </div>
 
     </main>

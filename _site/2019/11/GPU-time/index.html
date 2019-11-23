@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Why am I not listed as a contributor after I contributed? | SpellOnYou</title>
+    <title>5 reasons took much time to setting GPU for fast.ai than I expected | SpellOnYou</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Why am I not listed as a contributor after I contributed? | SpellOnYou</title>
+<title>5 reasons took much time to setting GPU for fast.ai than I expected | SpellOnYou</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Why am I not listed as a contributor after I contributed?" />
+<meta property="og:title" content="5 reasons took much time to setting GPU for fast.ai than I expected" />
 <meta name="author" content="dionne" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="From the end of last year, big changes have witnessed in NLP research. Embracing an unprecedented growth, I started to study new exciting results and advances. In doing so, I noticed I’m not listed as contributor of repo which my PR accessed." />
-<meta property="og:description" content="From the end of last year, big changes have witnessed in NLP research. Embracing an unprecedented growth, I started to study new exciting results and advances. In doing so, I noticed I’m not listed as contributor of repo which my PR accessed." />
-<link rel="canonical" href="http://localhost:4000/2019/10/Git-Merge/" />
-<meta property="og:url" content="http://localhost:4000/2019/10/Git-Merge/" />
+<meta name="description" content="Motivation" />
+<meta property="og:description" content="Motivation" />
+<link rel="canonical" href="http://localhost:4000/2019/11/GPU-time/" />
+<meta property="og:url" content="http://localhost:4000/2019/11/GPU-time/" />
 <meta property="og:site_name" content="SpellOnYou" />
-<meta property="og:image" content="http://localhost:4000/assets/images/1.png" />
+<meta property="og:image" content="http://localhost:4000/assets/images/10.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-10-30T00:00:00+09:00" />
+<meta property="article:published_time" content="2019-11-23T00:00:00+09:00" />
 <script type="application/ld+json">
-{"description":"From the end of last year, big changes have witnessed in NLP research. Embracing an unprecedented growth, I started to study new exciting results and advances. In doing so, I noticed I’m not listed as contributor of repo which my PR accessed.","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/10/Git-Merge/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/1.png","headline":"Why am I not listed as a contributor after I contributed?","dateModified":"2019-10-30T00:00:00+09:00","datePublished":"2019-10-30T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/10/Git-Merge/"},"@context":"http://schema.org"}</script>
+{"description":"Motivation","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/11/GPU-time/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/10.png","headline":"5 reasons took much time to setting GPU for fast.ai than I expected","dateModified":"2019-11-23T00:00:00+09:00","datePublished":"2019-11-23T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/11/GPU-time/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -277,14 +277,14 @@ function lunr_search(term) {
                         
                         </span>
 					</p>
-					<h1 class="display-4 mb-4 article-headline">Why am I not listed as a contributor after I contributed?</h1>
+					<h1 class="display-4 mb-4 article-headline">5 reasons took much time to setting GPU for fast.ai than I expected</h1>
 					<div class="d-flex align-items-center">
                         
 						<small class="ml-3">  <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
-                            <span class="text-muted d-block mt-1">Oct 30, 2019 · <span class="reading-time">
+                            <span class="text-muted d-block mt-1">Nov 23, 2019 · <span class="reading-time">
   
   
-    2 mins read
+    3 mins read
   
 </span>
     </span>
@@ -293,7 +293,7 @@ function lunr_search(term) {
 				</div>
                 
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="/assets/images/1.png" alt="Why am I not listed as a contributor after I contributed?">
+					<img class="rounded" src="/assets/images/10.png" alt="5 reasons took much time to setting GPU for fast.ai than I expected">
 				</div>
                 
 			</div>
@@ -333,55 +333,88 @@ function lunr_search(term) {
             
             <!-- Article -->
 			<article class="article-post">                
-			<p>From the end of last year, big changes have witnessed in NLP research.<br />
-Embracing an unprecedented growth, I started to study new exciting results and advances.<br />
-In doing so, I noticed I’m not listed as contributor of repo which my PR accessed.</p>
+			<h2 id="motivation">Motivation</h2>
 
-<h3 id="how-did-i-come-to-a-repository">How did I come to a repository?</h3>
+<p>Before now, me as a undergraduate student, I was parsimony who usually depend on colab, kaggle, friend’s server(occasional) whenever i need GPU..<br />
+<br />
+And this time it’s been for a while to install GPU than I expected and I share the several component that stood in my way.<br />
+<br />
+<strong><span style="color:red">Written at Oct 24 2019, if you think this is deprecated, please do not have a leap of faith.</span></strong></p>
 
-<p>When I’m stuck, I would prefer to code, than to go deep in theory. (It must be so.. too much to understand 🤒)<br />
-It was <a href="https://arxiv.org/pdf/1810.04805.pdf">BERT released by Google AI</a> I felt keenly the necessity of implementing, because not only couldn’t understand the way they figured out positional encoding formula, but how it actually works.<br />What does it mean to “scale” dot product in Attention? (Now I know it’s far from my section 😂)<br /></p>
+<p>Just for the record, I’ve used Kaggle, Colab, GCP, Azure, EC2 as GPU cloud.
+<br /><br /></p>
 
-<p><img src="/assets/images/11.png" alt="" /></p>
+<h3 id="1-did-not-know-there-is-jupyterlab-option-in-google-cloud-platform">1. Did not know there is <em>JupyterLab</em> option in <strong>Google Cloud Platform</strong>.</h3>
 
-<h6 id="figure-1-scaled-dot-product-adopted-from-tensorflow-blog">Figure 1. Scaled Dot Product. <em>Adopted from</em> <a href="www.tensorflow.org"><em>tensorflow blog</em></a></h6>
+<p>At the first time when GCP came out, there was no <strong>AI  Platform</strong> service. So from starting vm instance to launching jupyter and installing packages, I did all of the things myself. (and I learned 🤗)</p>
 
-<h3 id="what-was-the-code-error">What was the code error?</h3>
+<p><img src="/assets/images/8.png" alt="installing-conda-cli" /></p>
 
-<p>For implement code in paper, I read the papers <a href="https://arxiv.org/pdf/1706.03762.pdf">Transformer</a> and <a href="https://arxiv.org/pdf/1810.04805.pdf">BERT</a>, structured the model, and refered the others’ code.<br /><br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$	curl -O https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
+</code></pre></div></div>
 
-<p>Meanwhile, I found out a small error in tokenization process, which was changing a token into [MASK], enabled bidirectional representation.</p>
+<p align="center">[Downloading conda in ssh]</p>
 
-<h3 id="ive-made-pr-and-got-merged-but-i-was-not-in-contributors-why">I’ve made PR, and got merged. But I was not in contributors. Why?</h3>
+<p>I created VM instance,selected zone, machine type and disk type. Then, define firewall rules and in ssh terminal, install jupyter and other packages.<br /></p>
 
-<p><img src="/assets/images/2.png" alt="" /></p>
-<h6 id="figure-2-merged-pull-request-adopted-from-graykode-project">Figure 2. Merged Pull request <em>Adopted from</em> <a href="https://github.com/graykode/nlp-tutorial/pull/9"><em>graykode project</em></a></h6>
+<p>But you can do all of these things just using AI Platform.<br /></p>
 
-<p>Actually I happened to know there can be couple of reasons github doesn’t include my name as contributor.<br /></p>
+<p><img src="/assets/images/9.png" alt="installing-conda-cli" /></p>
+<p align="center">[AI Platform]</p>
 
-<p>Well, if contributors tab has more than 100 people, in which case it shows you up only if you are in the top 100 contributors because displaying too many contributors can make webpages down.<br /></p>
+<p>I think it especially save your time if you are living in Asia-Pacific, which google doesn’t support not that much GPU resources.</p>
 
-<p>Somethimes, however, it doesn’t that problem. Why not?<br /></p>
+<p><br /><br /></p>
+<h3 id="2-consider-if-the-platform-has-limited-resources-in-a-region-you-live-in">2. Consider if the platform has limited resources in a region you live in.</h3>
+<p><br />
+I live in <em>South Korea, East Asia</em>, and it seems like this region has lots of limitation in GPU (except quite expensive AWS)<br /></p>
 
-<p><strong>Two possibilities are there.</strong><br /></p>
+<p>And the Taiwan which was the only one region where I can launch my own VM with GPU (I tried all the other regions in the list) sometimes do normaly, but not always. 😥<br />
+After launching, I did several works and next day I could not start VM. (I didn’t count it, but tried it a few hours because I didn’t want cost any more time…)</p>
 
-<ul>
+<p><br />
+Endlessly failed to start instance, then I choose to move AWS as an alternative way.</p>
+
+<h3 id="3-fastai-gives-deliberate-guide-and-i-didnt-know-it">3. <span style="color:blue">Fast.ai gives deliberate <a href="https://course.fast.ai/start_gcp.html">guide</a> and I didn’t know it.</span></h3>
+
+<p>Fast.ai offer the guide for all available platform. (Colab, salamander, Gradient, Kaggle, Colab, and so on)<br /></p>
+
+<p>It is so important, and really needs, because cloud computing options are vary as occasion and purpose arise.<br /></p>
+
+<p>I didn’t know fast.ai has manual to running GCP, and I think it’s as good a reason as any for me to be have taken time.<br /></p>
+
+<p>It helped me so much when I had aws and shortened my time.<br /></p>
+
+<p>I don’t want to read all of the manual in amazno.. (It is recommended.. but I’d rather read <a href="https://git-scm.com/book/en/v2">GIT PRO</a> now…)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -i ~/.ssh/&lt;your_private_key_pair&gt; -L localhost:8888:localhost:8888 ubuntu@&lt;your instance IP&gt;
+</code></pre></div></div>
+
+<h3 id="4-you-should-wait-to-add-more-volume-just-after-add-volume-by-building-aws-ec2">4. You should wait to add more volume just after add volume, by building AWS EC2.</h3>
+
+<p>Since Elastic Block Store(EBS) storage supports optimized storage, users can’t extend storage volume two times in a row. <br /></p>
+
+<p>Unfortunately, at the first time, I didn’t know it (again 👻) and when VM lacked volume, I doubled dist capacity (76*2) at a rough but It needs more. <br /></p>
+
+<p>&lt;!–</p>
+
+<p>this time I installed GPU in two years, and it became little complicated compared to 2 years ago.
+And this time for the first time(maybe not the first time.. but i handled it in my class or with my friend. but it’s my first time on my own.) I 
+very I’m started to using used google colab, kaggle
+and, GCP-JupyterLab, ec2 - friend made, 
+aws vm machine but I had a environment variable but i did not know of it.
+On these days, I could not get a resources from taiwan…</p>
+
+<ol>
   <li>
-    <p>First, According to <a href="https://www.quora.com/Why-doesnt-GitHub-include-my-name-as-a-contributor-even-after-I-contributed">Joel-Glovier</a>, if repository maintainer <a href="https://shinglyu.com/web/2018/03/25/merge-pull-requests-without-merge-commits.html">merged-as-a-rebase</a> PR will end up showing as maintainer’s commit. But maintainer shouldn’t normally do this.</p>
+    <p>I couldn’t notice a deliberate</p>
   </li>
   <li>
-    <p>Second, if you happend to commit using a different git email that what is in your GitHub profile, it will not be attached to your Github user, and “doesn’t show up” as you.</p>
+    <p>Anyway, as a result I tried myself gcp myself and aws ec2 with fast.ai But I think doing on my self surely takes much time (in this point I wonder why I’m doing this, and should remind me, especially I was studying disk volume optimization)</p>
   </li>
-</ul>
-
-<h4 id="reference">Reference</h4>
-
-<ul>
-  <li><a href="https://mchromiak.github.io/articles/2017/Sep/12/Transformer-Attention-is-all-you-need/">Michał Chromiak’s blog</a></li>
-  <li><a href="https://help.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile">Github: why are my contributions are not showing on my profile</a></li>
-  <li><a href="https://www.atlassian.com/git/tutorials/syncing/git-fetch">atlassian-gitfetch</a></li>
-</ul>
-
+  <li>
+    <h2 id="disk-volume-exceed---httpsaskubuntucomquestions919748no-space-left-on-device-even-though-there-is">disk volume exceed - https://askubuntu.com/questions/919748/no-space-left-on-device-even-though-there-is</h2>
+  </li>
+</ol>
                 
 			</article>
 			
@@ -446,13 +479,9 @@ It was <a href="https://arxiv.org/pdf/1810.04805.pdf">BERT released by Google AI
         <div class="row prevnextlinks small font-weight-bold">
           
             <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="/2019/10/note08-fastai-1/"> <img height="30px" class="mr-1" src="/assets/images/cnn.png">  Lecture 08 - Deep Learning From Foundations-part1</a>
+                <a class="text-dark" href="/2019/11/v3-notes08-3-fastai/"> <img height="30px" class="mr-1" src="/assets/images/5-fc.png">  Broadcasting, Einstein sum, Pytorch operator</a>
             </div>
           
-          
-            <div class="col-md-6 text-right pr-0">
-                <a class="text-dark" href="/2019/11/douglas-rushoff/"> Douglas Rushkoff  <img height="30px" class="ml-1" src="/assets/images/12.jpg"> </a>
-            </div>
           
         </div>
     </div>

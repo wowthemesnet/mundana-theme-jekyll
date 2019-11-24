@@ -4,20 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Categories | SpellOnYou</title>
+    <title>Broadcasting, Einstein sum, Pytorch operator | SpellOnYou</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Categories | SpellOnYou</title>
+<title>Broadcasting, Einstein sum, Pytorch operator | SpellOnYou</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Categories" />
+<meta property="og:title" content="Broadcasting, Einstein sum, Pytorch operator" />
+<meta name="author" content="dionne" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Be afraid only of standing still. Remain fresh, body and soul." />
-<meta property="og:description" content="Be afraid only of standing still. Remain fresh, body and soul." />
-<link rel="canonical" href="http://localhost:4000/categories.html" />
-<meta property="og:url" content="http://localhost:4000/categories.html" />
+<meta name="description" content="” Lecture 08 - Deep Learning From Foundations-part2 “" />
+<meta property="og:description" content="” Lecture 08 - Deep Learning From Foundations-part2 “" />
+<link rel="canonical" href="http://localhost:4000/2019/11/note08-fastai-2/" />
+<meta property="og:url" content="http://localhost:4000/2019/11/note08-fastai-2/" />
 <meta property="og:site_name" content="SpellOnYou" />
+<meta property="og:image" content="http://localhost:4000/assets/images/30.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-11-21T00:00:00+09:00" />
 <script type="application/ld+json">
-{"description":"Be afraid only of standing still. Remain fresh, body and soul.","@type":"WebPage","url":"http://localhost:4000/categories.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"}},"headline":"Categories","@context":"http://schema.org"}</script>
+{"description":"” Lecture 08 - Deep Learning From Foundations-part2 “","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/11/note08-fastai-2/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/30.png","headline":"Broadcasting, Einstein sum, Pytorch operator","dateModified":"2019-11-21T00:00:00+09:00","datePublished":"2019-11-21T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/11/note08-fastai-2/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -106,12 +110,12 @@ var documents = [{
     "id": 2,
     "url": "http://localhost:4000/author-dionne.html",
     "title": "dionne",
-    "body": "                        dionne Follow:                                                    Posts by dionne:                   		data init, loss func, gradient backward	: 		  ” Lecture 08 - Deep Learning From Foundations-part2 “	 			In 				Fast. AI-v3, 								Nov 23, 2019						            		Broadcasting, Einstein sum, Pytorch operator	: 		  ” Lecture 08 - Deep Learning From Foundations-part2 “	 			In 				Fast. AI-v3, 								Nov 21, 2019						            		Julia Evans	: 		  The women who surprised me in many ways. First, she approached me to teaching some concepts drawing cartoons. It was at Hackers news, which was hightest ranks. Personally I have the use . . . 	 			In 				People in the World, 								Nov 20, 2019						            		Why am I not listed as a contributor?!	: 		  From the end of last year, big changes have witnessed in NLP research. Embracing an unprecedented growth, I started to study new exciting results and advances. In doing so, I noticed I’. . . 	 			In 				Resource, 								Nov 10, 2019						            		Elif Shafak	: 		  For creative-minded people, Istanbul is a treasure. ’ Photo © Chris Boland, licensed under CC BY-NC-ND 2. 0	 			In 				People in the World, 								Nov 05, 2019						            		Retrospective on Pycon 2019 Korea (CoC Committee)	: 		  When I was volunteer, it seems like busy and hectic to managing that crowded conference. In my experience, to get things moving, it needs hierarchy. But it didn’t. Organizers emphasized. . . 	 			In 				Society, 								Nov 05, 2019						            		Douglas Rushkoff	: 		  “Humans are no longer valued for our creativity. Now we are just valued for our data”1      Ted talk &#8617;   	 			In 				People in the World, 								Nov 04, 2019						            		5 reasons took much time to setting GPU for fast. ai than I expected	: 		  Motivation	 			In 				Resource, 								Oct 23, 2019						            		Lecture 08 - Deep Learning From Foundations-part1	: 		  I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for freeContents1) What is going on in this co. . . 	 			In 				Fast. AI-v3, 								Oct 18, 2019						            		Lecture 16 - Code-First NLP Note	: 		  Algorithms can encode &amp; magnify human bias	 			In 				Fast. AI-v3, 								Sep 03, 2019						        "
+    "body": "                        {{page. title}} Follow:         {{ site. authors. dionne. site }}         {{ site. authors. dionne. bio }}                                   Posts by {{page. title}}:       {% assign posts = site. posts | where: author , dionne  %}      {% for post in posts %}      {% include main-loop-card. html %}      {% endfor %}  "
     }, {
     "id": 3,
     "url": "http://localhost:4000/authors-list.html",
     "title": "Authors",
-    "body": "Authors:                                                dionne | jiwon kim :       (View Posts)      Welcome, I'm dionne. My old hobby is collecting and systemizing data related with me. (I'm with my kindergarten newsletter) I am an observationist. In the meantime, I enjoy the difference between my expectation and result which I've been facinated(my korean-sarcasm project). And I love a film written and directed by Paul Thomas Anderson. Now, I'm interested in AI ethics, and especially studying bias.                           &nbsp;       &nbsp;                                      "
+    "body": "{{page. title}}:     {% for author in site. authors %}                                           {{ author[1]. name }} | jiwon kim :       (View Posts)      {{ author[1]. bio }}                          &nbsp;       &nbsp;                                    {% endfor %}  "
     }, {
     "id": 4,
     "url": "http://localhost:4000/buy-sal-a-coffee.html",
@@ -121,7 +125,7 @@ var documents = [{
     "id": 5,
     "url": "http://localhost:4000/categories.html",
     "title": "Categories",
-    "body": "          Categories               Fast. AI-v3:                                  		data init, loss func, gradient backward	: 		  ” Lecture 08 - Deep Learning From Foundations-part2 “	 			In 				Fast. AI-v3, 								Nov 23, 2019						                                 		Broadcasting, Einstein sum, Pytorch operator	: 		  ” Lecture 08 - Deep Learning From Foundations-part2 “	 			In 				Fast. AI-v3, 								Nov 21, 2019						                                 		Lecture 08 - Deep Learning From Foundations-part1	: 		  I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for freeContents1) What is going on in this co. . . 	 			In 				Fast. AI-v3, 								Oct 18, 2019						                                 		Lecture 16 - Code-First NLP Note	: 		  Algorithms can encode &amp; magnify human bias	 			In 				Fast. AI-v3, 								Sep 03, 2019						                              Resource:                                  		Why am I not listed as a contributor?!	: 		  From the end of last year, big changes have witnessed in NLP research. Embracing an unprecedented growth, I started to study new exciting results and advances. In doing so, I noticed I’. . . 	 			In 				Resource, 								Nov 10, 2019						                                 		5 reasons took much time to setting GPU for fast. ai than I expected	: 		  Motivation	 			In 				Resource, 								Oct 23, 2019						                              People in the World:                                  		Julia Evans	: 		  The women who surprised me in many ways. First, she approached me to teaching some concepts drawing cartoons. It was at Hackers news, which was hightest ranks. Personally I have the use . . . 	 			In 				People in the World, 								Nov 20, 2019						                                 		Elif Shafak	: 		  For creative-minded people, Istanbul is a treasure. ’ Photo © Chris Boland, licensed under CC BY-NC-ND 2. 0	 			In 				People in the World, 								Nov 05, 2019						                                 		Douglas Rushkoff	: 		  “Humans are no longer valued for our creativity. Now we are just valued for our data”1      Ted talk &#8617;   	 			In 				People in the World, 								Nov 04, 2019						                              Society:                                  		Retrospective on Pycon 2019 Korea (CoC Committee)	: 		  When I was volunteer, it seems like busy and hectic to managing that crowded conference. In my experience, to get things moving, it needs hierarchy. But it didn’t. Organizers emphasized. . . 	 			In 				Society, 								Nov 05, 2019						                                             Featured:    				                                          data init, loss func, gradient backward                          In                     Fast. AI-v3,                                                                                           Broadcasting, Einstein sum, Pytorch operator                          In                     Fast. AI-v3,                                                                                           Julia Evans                          In                     People in the World,                                                                                           Why am I not listed as a contributor?!                          In                     Resource,                                                                                           5 reasons took much time to setting GPU for fast. ai than I expected                          In                     Resource,                                                                                           Lecture 08 - Deep Learning From Foundations-part1                          In                     Fast. AI-v3,                                                                   "
+    "body": "          Categories          {% for category in site. categories %}     {{ category[0] }}:           {% assign pages_list = category[1] %}    {% for post in pages_list %}    {% if post. title != null %}     {% if group == null or group == post. group %}           {% include main-loop-card. html %}     {% endif %}    {% endif %}    {% endfor %}    {% assign pages_list = nil %}    {% assign group = nil %}    {% endfor %}                  {% include sidebar-featured. html %}          "
     }, {
     "id": 6,
     "url": "http://localhost:4000/contact.html",
@@ -264,478 +268,476 @@ function lunr_search(term) {
 
     <!-- Content -->
     <main role="main" class="site-content">
-        <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-        <h1 class="font-weight-bold title h6 text-uppercase mb-4">Categories</h1>
+        
+
+<div class="container">
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+		<div class="h-100 tofront">
+			<div class="row  justify-content-between ">
+				<div class=" col-md-6  pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+					<p class="text-uppercase font-weight-bold">
+                        <span class="catlist">
+						
+                          <a class="sscroll text-danger" href="/categories.html#fast.ai-v3">fast.ai-v3</a><span class="sep">, </span>
+                        
+                        </span>
+					</p>
+					<h1 class="display-4 mb-4 article-headline">Broadcasting, Einstein sum, Pytorch operator</h1>
+					<div class="d-flex align-items-center">
+                        
+						<small class="ml-3">  <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
+                            <span class="text-muted d-block mt-1">Nov 21, 2019 · <span class="reading-time">
+  
+  
+    9 mins read
+  
+</span>
+    </span>
+						</small>
+					</div>
+				</div>
+                
+				<div class="col-md-6 pr-0 align-self-center">
+					<img class="rounded" src="/assets/images/30.png" alt="Broadcasting, Einstein sum, Pytorch operator">
+				</div>
+                
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<div class="container-lg pt-4 pb-4">
+	<div class="row justify-content-center">
+        
+        
+        <!-- Share -->
+		<div class="col-lg-2 pr-4 mb-4 col-md-12">
+			<div class="sticky-top sticky-top-offset text-center">
+				<div class="text-muted">
+					Share this
+				</div>
+				<div class="share d-inline-block">
+					<!-- AddToAny BEGIN -->
+					<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+						<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+						<a class="a2a_button_facebook"></a>
+						<a class="a2a_button_twitter"></a>
+					</div>
+					<script async src="https://static.addtoany.com/menu/page.js"></script>
+					<!-- AddToAny END -->
+				</div>
+			</div>
+		</div>
+        
+        
+		<div class="col-md-12 col-lg-8">
             
+            <!-- Article -->
+			<article class="article-post">                
+			<p>” Lecture 08 - Deep Learning From Foundations-part2 “</p>
+
+<h3 id="time-comparison-with-pure-python">Time comparison with pure Python</h3>
+
+<ul>
+  <li>
+    <p>Matmul with broadcasting<br />
+&gt; 3194.95 times faster</p>
+  </li>
+  <li>
+    <p>Einstein summation<br />
+&gt; 16090.91 times faster</p>
+  </li>
+  <li>
+    <p>Pytorch’s operator<br />
+&gt; 49166.67 times faster</p>
+  </li>
+</ul>
+
+<h3 id="homework">Homework</h3>
+
+<ul>
+  <li>Frobenius Norm Review</li>
+  <li>Broadcasting Review (especially <em><a href="https://docs.scipy.org/doc/numpy-1.13.0/user/basics.broadcasting.html#general-broadcasting-rules">Rule</a></em>)
+    <ul>
+      <li>Refer <a href="https://render.githubusercontent.com/view/ipynb?commit=2bfe4a95aac864b23bd0c0729d2720c92e169f8c&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f5370656c6c4f6e596f752f646c66662d6e6f74652f326266653461393561616338363462323362643063303732396432373230633932653136396638632f6e62732f646c322f30315f6d61746d756c5f70726163746963652e6970796e62&amp;nwo=SpellOnYou%2Fdlff-note&amp;path=nbs%2Fdl2%2F01_matmul_practice.ipynb&amp;repository_id=221963162&amp;repository_type=Repository#Broadcasting">colab!</a> (I totally confused with extension of arrays)</li>
+    </ul>
+  </li>
+  <li>torch.allclose Review</li>
+  <li><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.einsum.html">np.einsum Review</a></li>
+</ul>
+
+<hr />
+
+<h4 id="contents">CONTENTS</h4>
+<ul>
+  <li><a href="#elementwise-op">Elementwise op</a>
+    <ul>
+      <li><a href="#frobenius-norm">Frobenius norm</a></li>
+    </ul>
+  </li>
+  <li><a href="#elementwise-matmul">Elementwise Matmul</a></li>
+  <li><a href="#broadcasting">Broadcasting</a>
+    <ul>
+      <li><a href="#matmul-with-broadcasting">Matmul with broadcasting</a></li>
+      <li><a href="#broadcasting-rules">Broadcasting Rules</a></li>
+    </ul>
+  </li>
+  <li><a href="#einstein-summation">Einstein summation</a></li>
+  <li><a href="#pytorch-op">Pytorch op</a></li>
+</ul>
+
+<h3 id="elementwise-op">Elementwise op</h3>
+<h4 id="frobenius-norm">Frobenius norm</h4>
+
+<p><img src="/assets/images/7.png" alt="" /> <br /></p>
+
+<ul>
+  <li>above converted into <br /></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">m</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sqrt</span><span class="p">()</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Plus, don’t suffer from mathmatical symbols. He also copy and paste that equations from wikipedia.</li>
+  <li>and if you need latex form, download it from archive.</li>
+</ul>
+
+<h3 id="elementwise-matmul">Elementwise Matmul</h3>
+
+<ul>
+  <li>What is the meaning of elementwise?</li>
+  <li>
+    <p>We do not calculate each component. But all of the component at once. Because, length of column of A and row of B are fixed.</p>
+  </li>
+  <li>How much time we saved?</li>
+</ul>
+
+<p><img src="/assets/images/4.png" alt="" /></p>
+
+<ul>
+  <li>So now that takes 1.37ms. We have removed one line of code and it is a 178 times faster…</li>
+</ul>
+
+<p>#TODO
+I don’t know where the <code class="highlighter-rouge">5</code> from. but keep it.
+Maybe this is related with frobenius norm…?
+as a result, <strong>the code before</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ac</span><span class="p">):</span>
+    <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>the code after<br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span> <span class="o">*</span> <span class="n">b</span><span class="p">[:,</span><span class="n">j</span><span class="p">])</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>To compare it (result betweet <em>original</em> and <em>adjusted</em> version) we use not test_eq but other function. The reason for this is that due to rounding errors from math operations, matrices may not be exactly the same. As a result, we want a function that will “is a equal to b <strong>within some tolerance</strong>”</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#export
+</span><span class="k">def</span> <span class="nf">near</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span> 
+    <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_near</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span> 
+    <span class="n">test</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">near</span><span class="p">)</span>
+
+<span class="n">test_near</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">matmul</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h3 id="broadcasting">Broadcasting</h3>
+
+<ul>
+  <li>Now, we will use the broadcasting and remove</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span> <span class="o">*</span> <span class="n">b</span><span class="p">[:,</span><span class="n">j</span><span class="p">])</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span>
+</code></pre></div></div>
+
+<ul>
+  <li>How it works?</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+          <span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">],</span>
+          <span class="p">[</span><span class="mi">30</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">30</span><span class="p">]])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=</span><span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,])</span>
+</code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span>
+    
+<span class="p">(</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">]]),</span>
+<span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
          
-        <h4 class="font-weight-bold spanborder text-capitalize" id="fast.ai-v3"><span>Fast.AI-v3</span></h4>
+</code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+
+<span class="n">tensor</span><span class="p">([[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">31</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">33</span><span class="p">]])</span>
+
+</code></pre></div></div>
+<p><img src="/assets/images/3.png" alt="" /></p>
+<ul>
+  <li>&lt;Figure 2&gt; demonstrated how array <strong>b</strong> is broadcasting(or copied but not occupy memory) to compatible with <strong>a</strong>. <em>Refered from <a href="https://www.tutorialspoint.com/numpy/numpy_broadcasting.htm">numpy_tutorial</a></em></li>
+</ul>
+
+<ul>
+  <li>
+    <p>there is no loop, but it seems there is exactly the loop.</p>
+  </li>
+  <li>
+    <p>This is not from jeremy (actually after a moment he cover it) but i wondered How to broadcast an array by columns?</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span><span class="o">=</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">]])</span>
+<span class="n">a</span><span class="o">+</span><span class="n">c</span>
+</code></pre></div></div>
+
+<p><em>tensor([[11, 11, 11],
+        [22, 22, 22],
+        [33, 33, 33]])</em>s</p>
+
+<hr />
+
+<ul>
+  <li>What is tensor.stride()?</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">help</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">stride</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><em>Help on built-in function stride:<br />
+    stride(…) method of torch.<br />
+Tensor instance<br />
+stride(dim) -&gt; tuple or int<br />
+Returns the stride of :attr:’self’ tensor.<br />
+Stride is the jump necessary to go from one element to the next one in the specified dimension :attr:’dim’.<br />
+A tuple of all strides is returned when no argument is passed in.<br />
+Otherwise, an integer value is returned as the stride in the particular dimension :attr:’dim’.<br /></em></p>
+
+<p>Args:
+    dim (int, optional): the desired dimension in which stride is required
+Example::*</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]])</span><span class="err">`</span>
+<span class="sb">`x.stride()`</span>
+ <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="sb">`x.stride(0)`</span>
+ <span class="mi">5</span>
+<span class="sb">`x.stride(-1)`</span>
+ <span class="mi">1</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>unsqueeze &amp; None index</p>
+  </li>
+  <li>We can manipulate rank of tensor</li>
+  <li>Special value ‘None’, which means please squeeze a new axis here<br />
+<strong>== please broadcast here</strong></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">])</span>
+<span class="n">c</span><span class="p">[</span><span class="bp">None</span><span class="p">,:]</span>
+</code></pre></div></div>
+
+<ul>
+  <li>in c, <em>squeeze a new axis in here please.</em></li>
+</ul>
+
+<h4 id="matmul-with-broadcasting">Matmul with broadcasting</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ar</span><span class="p">):</span>
+<span class="c1">#   c[i,j] = (a[i,:]).          *[:,j].sum() #previous
+</span>    <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>   <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>And Using <code class="highlighter-rouge">None</code> also (As howard teached)</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>   <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span>  <span class="p">]</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#howard
+</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>   <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">][:,</span><span class="bp">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># using None
+</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>   <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,:,</span><span class="bp">None</span><span class="p">]</span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>⭐️Tips🌟  <br />
+1) <em>Anytime there’s a trailinng(final) colon in numpy or pytorch you can delete it</em>
+  <em>ex) c[i, :] = c [i]</em>
+2) any number of colon commas at the start, you can switch it with the single elipsis.
+  <em>ex) c[:,:,:,:,i] = c […,i]</em></p>
+
+<h4 id="broadcasting-rules">Broadcasting Rules</h4>
+
+<ul>
+  <li>What if we <code class="highlighter-rouge">tensor.size([1,3]) * tensor.size([3,1])</code>?
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What is scale????</li>
+  <li>
+    <p>What if they are one array is <code class="highlighter-rouge">times</code> of the other array?
+ <br /> ex) 
+<code class="highlighter-rouge">Image : 256 x 256 x 3</code><br />
+<code class="highlighter-rouge">Scale : 128 x 256 x 3</code><br />
+<code class="highlighter-rouge">Result: ?</code></p>
+  </li>
+  <li>Why I did not inserted axis via None, but happened broadcasting? <br /></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">*</span> <span class="n">c</span><span class="p">[:,</span><span class="bp">None</span><span class="p">]</span>
+<span class="n">tensor</span><span class="p">([[</span><span class="mf">100.</span><span class="p">,</span> <span class="mf">200.</span><span class="p">,</span> <span class="mf">300.</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">200.</span><span class="p">,</span> <span class="mf">400.</span><span class="p">,</span> <span class="mf">600.</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">300.</span><span class="p">,</span> <span class="mf">600.</span><span class="p">,</span> <span class="mf">900.</span><span class="p">]])</span>
+</code></pre></div></div>
+
+<p>maybe it broadcast cz following array has 3 rows<br /></p>
+
+<p>as same principle, no matter what nature shape was, <em>if we do the operation</em> tensor broadcasts to the other.<br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="o">==</span><span class="n">c</span><span class="p">[</span><span class="bp">None</span><span class="p">]</span>
+<span class="n">tensor</span><span class="p">([[</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">]])</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="p">[</span><span class="bp">None</span><span class="p">]</span><span class="o">==</span><span class="n">c</span><span class="p">[</span><span class="bp">None</span><span class="p">,:]</span>
+<span class="n">tensor</span><span class="p">([[</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">]])</span>
+
+<span class="o">&gt;&gt;&gt;</span><span class="n">c</span><span class="p">[</span><span class="bp">None</span><span class="p">,:]</span><span class="o">==</span><span class="n">c</span>
+<span class="n">tensor</span><span class="p">([[</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">]])</span>
+</code></pre></div></div>
+
+<h3 id="einstein-summation">Einstein summation</h3>
+
+<ul>
+  <li>Creates batch-wise remove inner most loop, and replaced it with an elementwise product
+a.k.a</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">b</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>
+</code></pre></div></div>
+<p>inner most loop</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span> <span class="o">*</span> <span class="n">b</span><span class="p">[:,</span><span class="n">j</span><span class="p">])</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>elementwise product</p>
+
+<ul>
+  <li>Because K is repeated so we do a dot product. And it is torch.</li>
+</ul>
+
+<p>Usage of <a href="https://pytorch.org/docs/stable/torch.html#torch.einsum">einsum()</a>
+1) transpose
+2) diagnalisation tracing
+3) batch-wise (matmul)</p>
+
+<p>…</p>
+
+<ul>
+  <li>einstein summation notation</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">matmul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span> <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s">'ik,kj-&gt;ij'</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>so after all, we are now 16000 times faster than Python.</p>
+
+<h3 id="pytorch-op">Pytorch op</h3>
+
+<p>49166.67 times faster than pure python</p>
+
+<p>And we will use this matrix multiplication in Fully Connect forward, with some initialized parameters and ReLU.</p>
+
+<h2 id="but-before-that-we-need-initialized-parameters-and-relu">But before that, we need initialized parameters and ReLU,</h2>
+
+<h4 id="reference">Reference</h4>
+
+<ul>
+  <li><a href="http://mathworld.wolfram.com/TensorRank.html">TensorRank</a></li>
+  <li><a href="https://forums.fast.ai/t/forum-markdown-notes-lesson-8/41896">ti note</a></li>
+</ul>
+                
+			</article>
+			
+			<!-- Tags -->
+			<div class="mb-4">
+				<span class="taglist">
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/tags.html#featured">featured</a>
+				
+				</span>
+			</div>
+ 
+            <!-- Mailchimp Subscribe Form -->
             
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/11/note08-fastai-3/">data init, loss func, gradient backward</a>
-	</h2>
-	<p class="excerpt">
-	   ” Lecture 08 - Deep Learning From Foundations-part2 “
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Nov 23, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/11/note08-fastai-3/">
-	<img class="w-100" src="/assets/images/2-relu.png" alt="data init, loss func, gradient backward">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/11/note08-fastai-2/">Broadcasting, Einstein sum, Pytorch operator</a>
-	</h2>
-	<p class="excerpt">
-	   ” Lecture 08 - Deep Learning From Foundations-part2 “
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Nov 21, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/11/note08-fastai-2/">
-	<img class="w-100" src="/assets/images/30.png" alt="Broadcasting, Einstein sum, Pytorch operator">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/10/note08-fastai-1/">Lecture 08 - Deep Learning From Foundations-part1</a>
-	</h2>
-	<p class="excerpt">
-	   I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for freeContents1) What is going on in this co...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Oct 18, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/10/note08-fastai-1/">
-	<img class="w-100" src="/assets/images/1-matmul.png" alt="Lecture 08 - Deep Learning From Foundations-part1">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/09/code-first-course-note-16/">Lecture 16 - Code-First NLP Note</a>
-	</h2>
-	<p class="excerpt">
-	   Algorithms can encode &amp; magnify human bias
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 03, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/09/code-first-course-note-16/">
-	<img class="w-100" src="/assets/images/13.png" alt="Lecture 16 - Code-First NLP Note">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-        
-
-         
-        <h4 class="font-weight-bold spanborder text-capitalize" id="resource"><span>Resource</span></h4>
             
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/11/Git-Merge/">Why am I not listed as a contributor?!</a>
-	</h2>
-	<p class="excerpt">
-	   From the end of last year, big changes have witnessed in NLP research.Embracing an unprecedented growth, I started to study new exciting results and advances.In doing so, I noticed I’...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#resource">Resource</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Nov 10, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/11/Git-Merge/">
-	<img class="w-100" src="/assets/images/1.png" alt="Why am I not listed as a contributor?!">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/10/GPU-time/">5 reasons took much time to setting GPU for fast.ai than I expected</a>
-	</h2>
-	<p class="excerpt">
-	   Motivation
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#resource">Resource</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Oct 23, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/10/GPU-time/">
-	<img class="w-100" src="/assets/images/10.png" alt="5 reasons took much time to setting GPU for fast.ai than I expected">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-        
-
-         
-        <h4 class="font-weight-bold spanborder text-capitalize" id="people in the world"><span>People in the World</span></h4>
+<!-- TODO: all of author mal funciton -->            
+             <!-- Author Box -->
+                	
+<!-- 				<div class="row mt-5">
+					<div class="col-md-2 align-self-center">
+                          
+					</div>
+					<div class="col-md-10">		
+                        <h5 class="font-weight-bold">Written by  </h5>
+											
+					</div>
+				</div>				 -->
+                
             
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/11/julia-evans/">Julia Evans</a>
-	</h2>
-	<p class="excerpt">
-	   The women who surprised me in many ways.First, she approached me to teaching some concepts drawing cartoons.It was at Hackers news, which was hightest ranks.Personally I have the use ...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#people in the world">People in the World</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Nov 20, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/11/julia-evans/">
-	<img class="w-100" src="/assets/images/evans.jpg" alt="Julia Evans">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/11/elif-shafak/">Elif Shafak</a>
-	</h2>
-	<p class="excerpt">
-	   For creative-minded people, Istanbul is a treasure.’ Photo © Chris Boland, licensed under CC BY-NC-ND 2.0
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#people in the world">People in the World</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Nov 05, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/11/elif-shafak/">
-	<img class="w-100" src="/assets/images/29.jpg" alt="Elif Shafak">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/11/douglas-rushoff/">Douglas Rushkoff</a>
-	</h2>
-	<p class="excerpt">
-	   “Humans are no longer valued for our creativity.Now we are just valued for our data”1            Ted talk &#8617;      
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#people in the world">People in the World</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Nov 04, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/11/douglas-rushoff/">
-	<img class="w-100" src="/assets/images/12.jpg" alt="Douglas Rushkoff">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-        
-
-         
-        <h4 class="font-weight-bold spanborder text-capitalize" id="society"><span>Society</span></h4>
+            <!-- Comments -->
             
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/11/coc-retropective/">Retrospective on Pycon 2019 Korea (CoC Committee)</a>
-	</h2>
-	<p class="excerpt">
-	   When I was volunteer, it seems like busy and hectic to managing that crowded conference.In my experience, to get things moving, it needs hierarchy.But it didn’t. Organizers emphasized...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#society">Society</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Nov 05, 2019
-	</small>
-</div>
+                <!--  Don't edit anything here. Set your disqus id in _config.yml -->
 
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/11/coc-retropective/">
-	<img class="w-100" src="/assets/images/14.jpg" alt="Retrospective on Pycon 2019 Korea (CoC Committee)">
-	</a>
+<div id="comments" class="mt-5">
+    <div id="disqus_thread">
+    </div>
+    <script type="text/javascript">
+        var disqus_shortname = 'dionne'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>
+    Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+</div>
+            
+            
+		</div>
+        
+        
 	</div>
-
 </div>
+
+
+<!-- Aletbar Prev/Next -->
+<div class="alertbar">
+    <div class="container">
+        <div class="row prevnextlinks small font-weight-bold">
           
-        
-        
-        
-        
-
-        
-
+            <div class="col-md-6 rightborder pl-0">
+                <a class="text-dark" href="/2019/11/julia-evans/"> <img height="30px" class="mr-1" src="/assets/images/evans.jpg">  Julia Evans</a>
+            </div>
+          
+          
+            <div class="col-md-6 text-right pr-0">
+                <a class="text-dark" href="/2019/11/note08-fastai-3/"> data init, loss func, gradient backward  <img height="30px" class="ml-1" src="/assets/images/2-relu.png"> </a>
+            </div>
+          
         </div>
-        
-            <div class="col-md-4">
-        <div class="sticky-top sticky-top-offset">
-    <h4 class="font-weight-bold spanborder"><span>Featured</span></h4>  
-    <ol class="list-featured">				
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/2019/11/note08-fastai-3/" class="text-dark">data init, loss func, gradient backward</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/2019/11/note08-fastai-2/" class="text-dark">Broadcasting, Einstein sum, Pytorch operator</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/2019/11/julia-evans/" class="text-dark">Julia Evans</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/categories.html#people in the world">People in the World</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/2019/11/Git-Merge/" class="text-dark">Why am I not listed as a contributor?!</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/categories.html#resource">Resource</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/2019/10/GPU-time/" class="text-dark">5 reasons took much time to setting GPU for fast.ai than I expected</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/categories.html#resource">Resource</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/2019/10/note08-fastai-1/" class="text-dark">Lecture 08 - Deep Learning From Foundations-part1</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-           
-    </ol>
-</div>     
-    </div>
-        
     </div>
 </div>
+
     </main>
 
 

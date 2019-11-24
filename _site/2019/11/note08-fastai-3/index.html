@@ -155,7 +155,7 @@ var documents = [{
     "id": 11,
     "url": "http://localhost:4000/2019/11/note08-fastai-3/",
     "title": "data init, loss func, gradient backward",
-    "body": "2019/11/23 - ” Lecture 08 - Deep Learning From Foundations-part2 “ Homework: read section 2. 2 of kaiming paper CONTENTS:  The forward and backward passes     Normailzation    Foundation version     Basic architecture   Loss function: MSE   Gradients backward pass    Refactor model     Layers as classes   Module. forward()   nn. Linear and nn. Module   The forward and backward passes: Nomalizationtrain_mean,train_std = x_train. mean(),x_train. std()&gt;&gt;&gt; train_mean,train_std(tensor(0. 1304), tensor(0. 3073))Remember!  Dataset, which is x_train, mean and standard deviation is not 0&amp;1. But we need them to be which means we should substract means and divide data by std.  You should not standarlize validation set because training set and validation set should be aparted.  after normalize, mean is close to zero, and standard deviation is close to 1. Variable definition n,m: size of the training set c: the number of activations we need in our modelFoundation Version: Basic architecture:  Our model has one hidden layer, output to have 10 activations, used in cross entropy.    But in process of building architecture, we will use mean square error, output to have 1 activations and lator change it to cross entropy   number of hidden unit; 50see below pic  We want to make w1&amp;w2 mean and std be 0&amp;1.      why initializating and make mean zero and std one is important?1   simplified karming init what about hidden(first) layer?w1 = torch. randn(m,nh)b1 = torch. zeros(nh)t = lin(x_valid, w1, b1) # hidden&gt;&gt;&gt; t. mean(), t. std()((tensor(2. 3191), tensor(27. 0303))In output(second) layer, w2 = torch. randn(nh,1)b2 = torch. zeros(1)t2 = lin(t, w2, b2) # output&gt;&gt;&gt; t2. mean(), t2. std()(tensor(-58. 2665), tensor(170. 9717))   which is terribly far from normalzed value.     But if we apply simplified kaiming init  w1 = torch. randn(m,nh)/math. sqrt(m); b1 = torch. zeros(nh)w2 = torch. randn(nh,1)/math. sqrt(nh); b2 = torch. zeros(1)t = lin(x_valid, w1, b1)t. mean(),t. std()&gt;&gt;&gt; (tensor(-0. 0516), tensor(0. 9354)) But, actually, we use activations not only linear function After applying activations relu at linear layer, mean and deviation became 0. 5. Glorrot initializationPaper2: Understanding the difficulty of training deep feedforward neural networks	- Gaussian(, bell shaped, normal distributions) is not trained very well. 	- How to initialize neural nets? with the size of layer n, the number of filters i.  But there is No acount for import of ReLU If we got 1000 layers, vanishing gradients problem emergesKaiming initializatingPaper3: Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification	- Kaiming He, explained here	- rectifier: rectified linear unit	- rectifier network: neural network with rectifier linear units  This is kaiming init, and why suddenly replace one to two on a top?     to avoid vanishing gradient(weights)   torch package Why fan_out?     according to pytorch documentation,    choosing ‘fan_in’ preserves the magnitude of the variance of the wights in the forward pass. choosing ‘fan_out’ preserves the magnitues in the backward pass.    Backward pass means matmul; with transposed matrix     But it doesn’t give very nice mean tough.  backward pass means matmul; with transposed matrixs Loss function: MSE: Gradients backward pass: Refactor model: Layers as classes: Modue. forward(): nn. Linear and nn. Module: Reference:       Fixup Initialization: Residual Learning Without Normalization &#8617;    "
+    "body": "2019/11/23 - ” Lecture 08 - Deep Learning From Foundations-part2 “ Homework: read section 2. 2 of kaiming paper CONTENTS:  The forward and backward passes     Normailzation    Foundation version     Basic architecture   Loss function: MSE   Gradients backward pass    Refactor model     Layers as classes   Module. forward()   nn. Linear and nn. Module   The forward and backward passes: Nomalizationtrain_mean,train_std = x_train. mean(),x_train. std()&gt;&gt;&gt; train_mean,train_std(tensor(0. 1304), tensor(0. 3073))Remember!  Dataset, which is x_train, mean and standard deviation is not 0&amp;1. But we need them to be which means we should substract means and divide data by std.  You should not standarlize validation set because training set and validation set should be aparted.  after normalize, mean is close to zero, and standard deviation is close to 1. Variable definition n,m: size of the training set c: the number of activations we need in our modelFoundation Version: Basic architecture:  Our model has one hidden layer, output to have 10 activations, used in cross entropy.    But in process of building architecture, we will use mean square error, output to have 1 activations and lator change it to cross entropy   number of hidden unit; 50see below pic  We want to make w1&amp;w2 mean and std be 0&amp;1.      why initializating and make mean zero and std one is important?1   simplified karming init what about hidden(first) layer?w1 = torch. randn(m,nh)b1 = torch. zeros(nh)t = lin(x_valid, w1, b1) # hidden&gt;&gt;&gt; t. mean(), t. std()((tensor(2. 3191), tensor(27. 0303))In output(second) layer, w2 = torch. randn(nh,1)b2 = torch. zeros(1)t2 = lin(t, w2, b2) # output&gt;&gt;&gt; t2. mean(), t2. std()(tensor(-58. 2665), tensor(170. 9717))   which is terribly far from normalzed value.     But if we apply simplified kaiming init  w1 = torch. randn(m,nh)/math. sqrt(m); b1 = torch. zeros(nh)w2 = torch. randn(nh,1)/math. sqrt(nh); b2 = torch. zeros(1)t = lin(x_valid, w1, b1)t. mean(),t. std()&gt;&gt;&gt; (tensor(-0. 0516), tensor(0. 9354)) But, actually, we use activations not only linear function After applying activations relu at linear layer, mean and deviation became 0. 5. Glorrot initializationPaper2: Understanding the difficulty of training deep feedforward neural networks  Gaussian(, bell shaped, normal distributions) is not trained very well.  How to initialize neural nets? with the size of layer n, the number of filters i.  But there is No acount for import of ReLU If we got 1000 layers, vanishing gradients problem emergesKaiming initializatingPaper3: Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification  Kaiming He, explained here rectifier: rectified linear unit rectifier network: neural network with rectifier linear units  This is kaiming init, and why suddenly replace one to two on a top?     to avoid vanishing gradient(weights)   But it doesn’t give very nice mean tough. {: . blue}   Pytorch package2-forward-linear. jpg  Why fan_out?     according to pytorch documentation,   &gt; choosing ‘fan_in’ preserves the magnitude of the variance of the wights in the forward pass. &gt; choosing ‘fan_out’ preserves the magnitues in the backward pass(, which means matmul; with transposed matrix) ➡️ in the other words, torch use fan_out cz pytorch transpose in linear transformaton.  What about CNN in Pytorch?I tried and jeremy said 2  in Pytorch, it doesn’t seem to be implemented kaiming init in right formula. so we should use our own operation.    But actually, this has been discussed in Pytorch community before. 34   Jeremy said it enhanced variance also, so I sampled 100 times and counted better results.  To make sure the shape seems sensible. check with assert. (remember we will replace 1 to 10 in cross entropy)assert model(x_valid). shape==torch. Size([x_valid. shape[0],1])&gt;&gt;&gt; model(x_valid). shape(10000, 1)- We have made Relu, init, linear, it seems we can forward passLoss function: MSE: Gradients backward pass: Refactor model: Layers as classes: Modue. forward(): nn. Linear and nn. Module: Reference:       Fixup Initialization: Residual Learning Without Normalization &#8617;        Pytorch implementaion on Kaiming init of conv and linear layers &#8617;        Pytorch kaiming init issue &#8617;        Pytorch kaiming init explained &#8617;    "
     }, {
     "id": 12,
     "url": "http://localhost:4000/2019/11/note08-fastai-2/",
@@ -289,7 +289,7 @@ function lunr_search(term) {
                             <span class="text-muted d-block mt-1">Nov 23, 2019 · <span class="reading-time">
   
   
-    4 mins read
+    5 mins read
   
 </span>
     </span>
@@ -466,9 +466,11 @@ function lunr_search(term) {
 
 <h5 id="glorrot-initialization">Glorrot initialization</h5>
 
-<p>Paper2: <a href="http://proceedings.mlr.press/v9/glorot10a.html">Understanding the difficulty of training deep feedforward neural networks</a>
-	- Gaussian(, bell shaped, normal distributions) is not trained very well.
-	- How to initialize neural nets?</p>
+<p>Paper2: <a href="http://proceedings.mlr.press/v9/glorot10a.html">Understanding the difficulty of training deep feedforward neural networks</a></p>
+<ul>
+  <li>Gaussian(, bell shaped, normal distributions) is not trained very well.</li>
+  <li>How to initialize neural nets?</li>
+</ul>
 
 <p><img src="/assets/images/xavier.png" alt="" height="80%" width="80%" /></p>
 
@@ -485,10 +487,12 @@ function lunr_search(term) {
 
 <h5 id="kaiming-initializating">Kaiming initializating</h5>
 
-<p>Paper3: <a href="https://arxiv.org/abs/1502.01852">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</a>
-	- Kaiming He, explained <a href="https://pouannes.github.io/blog/initialization/">here</a>
-	- rectifier: rectified linear unit
-	- rectifier network: neural network with rectifier linear units</p>
+<p>Paper3: <a href="https://arxiv.org/abs/1502.01852">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</a></p>
+<ul>
+  <li>Kaiming He, explained <a href="https://pouannes.github.io/blog/initialization/">here</a></li>
+  <li>rectifier: rectified linear unit</li>
+  <li>rectifier network: neural network with rectifier linear units</li>
+</ul>
 
 <p><img src="/assets/images/kaiming.png" alt="" height="80%" width="80%" /></p>
 
@@ -496,12 +500,14 @@ function lunr_search(term) {
   <li>This is kaiming init, and why suddenly replace one to two on a top?
     <ul>
       <li>to avoid vanishing gradient(weights)</li>
+      <li>But it doesn’t give very nice mean tough.{: .blue}</li>
     </ul>
   </li>
 </ul>
 
-<h5 id="torch-package">torch package</h5>
+<h5 id="pytorch-package">Pytorch package</h5>
 
+<p>2-forward-linear.jpg</p>
 <ul>
   <li>Why fan_out?
     <ul>
@@ -510,24 +516,44 @@ function lunr_search(term) {
   </li>
 </ul>
 
-<blockquote>
-  <p>choosing ‘fan_in’ preserves the magnitude of the variance of the wights in the forward pass.
-choosing ‘fan_out’ preserves the magnitues in the backward pass.</p>
-</blockquote>
+<p>&gt; choosing ‘fan_in’ preserves the magnitude of the variance of the wights in the forward pass.
+&gt; choosing ‘fan_out’ preserves the magnitues in the backward pass(, which means matmul; with transposed matrix)</p>
 
-<ul class="blue">
-  <li>
-    <p>Backward pass means matmul; with transposed matrix</p>
-  </li>
-  <li>
-    <p>But it doesn’t give very nice mean tough.</p>
-  </li>
+<p>➡️ in the other words, torch use fan_out cz pytorch transpose in linear transformaton.</p>
+
+<ul>
+  <li>What about CNN in Pytorch?</li>
 </ul>
 
-<p>backward pass means matmul; with transposed matrixs</p>
+<p>I tried and 
+<img src="/assets/images/2-forward-conv2d.jpg" alt="" /></p>
 
-<!-- 1:27:19 -->
+<p>jeremy said</p>
 
+<p><img src="/assets/images/2-torch-nn-conv-jeremy.jpg" alt="" /></p>
+
+<p><img src="/assets/images/2-torch-nn-conv-jeremy-2.jpg" alt="" /><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup></p>
+
+<ul>
+  <li>in Pytorch, it doesn’t seem to be implemented kaiming init in right formula. so we should use our own operation.</li>
+  <li>
+    <p>But actually, this has been discussed in Pytorch community before.<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup><sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup></p>
+  </li>
+  <li>Jeremy said it enhanced variance also, so I sampled 100 times and counted better results.</li>
+</ul>
+
+<p><img src="/assets/images/2-100times-sampling.png" alt="" /></p>
+
+<ul>
+  <li>To make sure the shape seems sensible. check with assert. (remember we will replace 1 to 10 in <em>cross entropy</em>)</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">assert</span> <span class="n">model</span><span class="p">(</span><span class="n">x_valid</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="o">==</span><span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="n">x_valid</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">model</span><span class="p">(</span><span class="n">x_valid</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="o">-</span> <span class="n">We</span> <span class="n">have</span> <span class="n">made</span> <span class="n">Relu</span><span class="p">,</span> <span class="n">init</span><span class="p">,</span> <span class="n">linear</span><span class="p">,</span> <span class="n">it</span> <span class="n">seems</span> <span class="n">we</span> <span class="n">can</span> <span class="n">forward</span> <span class="k">pass</span>
+</code></pre></div></div>
 <h4 id="loss-function-mse">Loss function: MSE</h4>
 
 <h4 id="gradients-backward-pass">Gradients backward pass</h4>
@@ -547,6 +573,15 @@ choosing ‘fan_out’ preserves the magnitues in the backward pass.</p>
   <ol>
     <li id="fn:1">
       <p><a href="https://arxiv.org/abs/1901.09321">Fixup Initialization: Residual Learning Without Normalization</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p><a href="https://github.com/pytorch/pytorch/blob/3df79f403e8b9621d5adb0447266becd10d633b0/torch/nn/modules/linear.py#L58-L63">Pytorch implementaion on Kaiming init of conv and linear layers</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p><a href="https://github.com/pytorch/pytorch/issues/15314">Pytorch kaiming init issue</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p><a href="https://discuss.pytorch.org/t/why-the-default-negative-slope-for-kaiming-uniform-initialization-of-convolution-and-linear-layers-is-5/29290">Pytorch kaiming init explained</a> <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>

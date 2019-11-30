@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>test math | SpellOnYou</title>
+    <title>fully-connected forward, gradient backward | SpellOnYou</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>test math | SpellOnYou</title>
+<title>fully-connected forward, gradient backward | SpellOnYou</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="test math" />
+<meta property="og:title" content="fully-connected forward, gradient backward" />
 <meta name="author" content="dionne" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="test" />
-<meta property="og:description" content="test" />
-<link rel="canonical" href="http://localhost:4000/2019/11/test/" />
-<meta property="og:url" content="http://localhost:4000/2019/11/test/" />
+<meta name="description" content="” Lecture 08 - Deep Learning From Foundations-part2 “" />
+<meta property="og:description" content="” Lecture 08 - Deep Learning From Foundations-part2 “" />
+<link rel="canonical" href="http://localhost:4000/2019/11/note08-fastai-4/" />
+<meta property="og:url" content="http://localhost:4000/2019/11/note08-fastai-4/" />
 <meta property="og:site_name" content="SpellOnYou" />
-<meta property="og:image" content="http://localhost:4000/assets/images/2-relu.png" />
+<meta property="og:image" content="http://localhost:4000/assets/images/4-backward.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-11-24T00:00:00+09:00" />
+<meta property="article:published_time" content="2019-11-26T00:00:00+09:00" />
 <script type="application/ld+json">
-{"description":"test","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/11/test/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/2-relu.png","headline":"test math","dateModified":"2019-11-24T00:00:00+09:00","datePublished":"2019-11-24T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/11/test/"},"@context":"http://schema.org"}</script>
+{"description":"” Lecture 08 - Deep Learning From Foundations-part2 “","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/11/note08-fastai-4/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/4-backward.png","headline":"fully-connected forward, gradient backward","dateModified":"2019-11-26T00:00:00+09:00","datePublished":"2019-11-26T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/11/note08-fastai-4/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -162,14 +162,14 @@ var documents = [{
     "body": "  {% if page. url ==  /  %}            {% assign latest_post = site. posts[0] %}          &lt;div class= topfirstimage  style= background-image: url({% if latest_post. image contains  ://  %}{{ latest_post. image }}{% else %} {{site. baseurl}}/{{ latest_post. image}}{% endif %}); height: 200px;  background-size: cover;  background-repeat: no-repeat; &gt;&lt;/div&gt;           {{ latest_post. title }}  :       {{ latest_post. excerpt | strip_html | strip_newlines | truncate: 136 }}               In         {% for category in latest_post. categories %}        {{ category }},         {% endfor %}                                {{ latest_post. date | date: '%b %d, %Y' }}                            {%- assign second_post = site. posts[1] -%}                        {% if second_post. image %}                         &lt;img class= w-100  src= {% if second_post. image contains  ://  %}{{ second_post. image }}{% else %}{{ second_post. image | absolute_url }}{% endif %}  alt= {{ second_post. title }} &gt;                        {% endif %}                                    {{ second_post. title }}          :                       In             {% for category in second_post. categories %}            {{ category }},             {% endfor %}                                                      {{ second_post. date | date: '%b %d, %Y' }}                                    {%- assign third_post = site. posts[2] -%}                        {% if third_post. image %}                         &lt;img class= w-100  src= {% if third_post. image contains  ://  %}{{ third_post. image }}{% else %}{{site. baseurl}}/{{ third_post. image }}{% endif %}  alt= {{ third_post. title }} &gt;                        {% endif %}                                    {{ third_post. title }}          :                       In             {% for category in third_post. categories %}            {{ category }},             {% endfor %}                                                      {{ third_post. date | date: '%b %d, %Y' }}                                    {%- assign fourth_post = site. posts[3] -%}                        {% if fourth_post. image %}                        &lt;img class= w-100  src= {% if fourth_post. image contains  ://  %}{{ fourth_post. image }}{% else %}{{site. baseurl}}/{{ fourth_post. image }}{% endif %}  alt= {{ fourth_post. title }} &gt;                        {% endif %}                                    {{ fourth_post. title }}          :                       In             {% for category in fourth_post. categories %}            {{ category }},             {% endfor %}                                                      {{ fourth_post. date | date: '%b %d, %Y' }}                                  {% for post in site. posts %} {% if post. tags contains  sticky  %}                    {{post. title}}                  {{ post. excerpt | strip_html | strip_newlines | truncate: 136 }}                 Read More            	             {% endif %}{% endfor %}  {% endif %}                All Stories:         {% for post in paginator. posts %}          {% include main-loop-card. html %}        {% endfor %}                   {% if paginator. total_pages &gt; 1 %}              {% if paginator. previous_page %}        &laquo; Prev       {% else %}        &laquo;       {% endif %}       {% for page in (1. . paginator. total_pages) %}        {% if page == paginator. page %}        {{ page }}        {% elsif page == 1 %}        {{ page }}        {% else %}        {{ page }}        {% endif %}       {% endfor %}       {% if paginator. next_page %}        Next &raquo;       {% else %}        &raquo;       {% endif %}            {% endif %}                     {% include sidebar-featured. html %}      "
     }, {
     "id": 12,
-    "url": "http://localhost:4000/2019/11/test/",
-    "title": "test math",
-    "body": "2019/11/24 - test $$ n_i $$ "
+    "url": "http://localhost:4000/2019/11/note08-fastai-4/",
+    "title": "fully-connected forward, gradient backward",
+    "body": "2019/11/26 - ” Lecture 08 - Deep Learning From Foundations-part2 “ Homework: CONTENTS:  2. Foundation version     2. 2 Loss function: MSE   2. 3 Gradients backward pass    3. Refactor model     3. 1 Layers as classes   3. 2 Modue. forward()   3. 3 nn. Linear and nn. Module   2. Foundation version: 2. 2 Loss function: MSE:  Mean squared error need unit vector, so we remove unit axis.   def mse(output, targ): return (output. squeeze(-1) - targ). pow(2). mean()    In python, in case you remove axis, you use ‘squeeze’, or add axis use ‘unsqueeze’ torch. squeeze where code commonly broken. so, when you use squeeze, clarify dimension axis you want to removetmp = torch. tensor([1,1])tmp. squeeze()&gt;&gt;&gt; tensor([1, 1]) make sure to make as float when you calculate2. 3 Gradients backward pass:  Gradients is output with respect to parameter we’ve done this work in this path(below)  to simplify this calculus, we can just change it into,  So, you should know of the derivative of each bit on its own, and then you multiply them all together. As a result, it would be $$dydx$$ cross over the data. 3. Refactor model: 3. 1 Layers as classes: 3. 2 Modue. forward(): 3. 3 nn. Linear and nn. Module: "
     }, {
     "id": 13,
     "url": "http://localhost:4000/2019/11/note08-fastai-3/",
-    "title": "data init, loss func, gradient backward",
-    "body": "2019/11/23 - ” Lecture 08 - Deep Learning From Foundations-part2 “ Homework: read section 2. 2 of kaiming paper CONTENTS:  1. The forward and backward passes     1. 1 Nomalization   1. 2 Variable definition    2. Foundation Version     2. 1 Basic architecture         2. 1. 1 simplified karming init     2. 1. 2 Glorrot initialization     2. 1. 3 Kaiming initializating     2. 1. 4 Pytorch package          2. 2 Loss function: MSE   2. 3 Gradients backward pass    3. Refactor model     3. 1 Layers as classes   3. 2 Modue. forward()   3. 3 nn. Linear and nn. Module    Reference* Normailzation{:toc} - [Foundation version](#foundation-version)* [Basic architecture](#basic-architectures){:toc}* [Loss function: MSE](#Loss-function:-mse){:toc}* [Gradients backward pass](#Gradients-backward-pass){:toc} - [Refactor model](#Refactor-model)* [Layers as classes](#Layers-as-classes){:toc}* [Module. forward()](#module. forawd()){:toc}* [nn. Linear and nn. Module](#nn. Linear-and-nn. Module){:toc}1. The forward and backward passes: 1. 1 Nomalization: train_mean,train_std = x_train. mean(),x_train. std()&gt;&gt;&gt; train_mean,train_std(tensor(0. 1304), tensor(0. 3073))Remember!  Dataset, which is x_train, mean and standard deviation is not 0&amp;1. But we need them to be which means we should substract means and divide data by std.  You should not standarlize validation set because training set and validation set should be aparted.  after normalize, mean is close to zero, and standard deviation is close to 1. 1. 2 Variable definition:  n,m: size of the training set c: the number of activations we need in our model2. Foundation Version: 2. 1 Basic architecture:  Our model has one hidden layer, output to have 10 activations, used in cross entropy.    But in process of building architecture, we will use mean square error, output to have 1 activations and lator change it to cross entropy   number of hidden unit; 50see below pic  We want to make w1&amp;w2 mean and std be 0&amp;1.      why initializating and make mean zero and std one is important?1   2. 1. 1 simplified karming init what about hidden(first) layer?w1 = torch. randn(m,nh)b1 = torch. zeros(nh)t = lin(x_valid, w1, b1) # hidden&gt;&gt;&gt; t. mean(), t. std()((tensor(2. 3191), tensor(27. 0303))In output(second) layer, w2 = torch. randn(nh,1)b2 = torch. zeros(1)t2 = lin(t, w2, b2) # output&gt;&gt;&gt; t2. mean(), t2. std()(tensor(-58. 2665), tensor(170. 9717))   which is terribly far from normalzed value.     But if we apply simplified kaiming init  w1 = torch. randn(m,nh)/math. sqrt(m); b1 = torch. zeros(nh)w2 = torch. randn(nh,1)/math. sqrt(nh); b2 = torch. zeros(1)t = lin(x_valid, w1, b1)t. mean(),t. std()&gt;&gt;&gt; (tensor(-0. 0516), tensor(0. 9354)) But, actually, we use activations not only linear function After applying activations relu at linear layer, mean and deviation became 0. 5. 2. 1. 2 Glorrot initializationPaper2: Understanding the difficulty of training deep feedforward neural networks  Gaussian(, bell shaped, normal distributions) is not trained very well.  How to initialize neural nets? with $$n_i$$ the size of layer n, the number of filters i.  But there is No acount for import of ReLU If we got 1000 layers, vanishing gradients problem emerges2. 1. 3 Kaiming initializatingPaper3: Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification  Kaiming He, explained here rectifier: rectified linear unit rectifier network: neural network with rectifier linear units  This is kaiming init, and why suddenly replace one to two on a top?     to avoid vanishing gradient(weights)   But it doesn’t give very nice mean tough. {: . blue}   2. 1. 4 Pytorch package2-forward-linear. jpg  Why fan_out?     according to pytorch documentation,   &gt; choosing ‘fan_in’ preserves the magnitude of the variance of the wights in the forward pass. &gt; choosing ‘fan_out’ preserves the magnitues in the backward pass(, which means matmul; with transposed matrix) ➡️ in the other words, torch use fan_out cz pytorch transpose in linear transformaton.  What about CNN in Pytorch?I tried and jeremy said 2  in Pytorch, it doesn’t seem to be implemented kaiming init in right formula. so we should use our own operation.  But actually, this has been discussed in Pytorch community before. 3 4 Jeremy said it enhanced variance also, so I sampled 100 times and counted better results.  To make sure the shape seems sensible. check with assert. (remember we will replace 1 to 10 in cross entropy)assert model(x_valid). shape==torch. Size([x_valid. shape[0],1])&gt;&gt;&gt; model(x_valid). shape(10000, 1) We have made Relu, init, linear, it seems we can forward pass2. 2 Loss function: MSE: 2. 3 Gradients backward pass: 3. Refactor model: 3. 1 Layers as classes: 3. 2 Modue. forward(): 3. 3 nn. Linear and nn. Module: Reference:       Fixup Initialization: Residual Learning Without Normalization &#8617;        Pytorch implementaion on Kaiming init of conv and linear layers &#8617;        Pytorch kaiming init issue &#8617;        Pytorch kaiming init explained &#8617;    "
+    "title": "ReLU and data init with normailized data",
+    "body": "2019/11/23 - ” Lecture 08 - Deep Learning From Foundations-part2 “ Homework: read section 2. 2 of kaiming paper CONTENTS:  1. The forward and backward passes     1. 1 Normalization   1. 2 Variable definition    2. Foundation Version     2. 1 Basic architecture         2. 1. 1 simplified karming init     2. 1. 2 Glorrot initialization     2. 1. 3 Kaiming initializating     2. 1. 4 Pytorch package           Reference* Normailzation{:toc}1. The forward and backward passes: 1. 1 Normalization: train_mean,train_std = x_train. mean(),x_train. std()&gt;&gt;&gt; train_mean,train_std(tensor(0. 1304), tensor(0. 3073))Remember!  Dataset, which is x_train, mean and standard deviation is not 0&amp;1. But we need them to be which means we should substract means and divide data by std.  You should not standarlize validation set because training set and validation set should be aparted.  after normalize, mean is close to zero, and standard deviation is close to 1. 1. 2 Variable definition:  n,m: size of the training set c: the number of activations we need in our model2. Foundation Version: 2. 1 Basic architecture:  Our model has one hidden layer, output to have 10 activations, used in cross entropy.    But in process of building architecture, we will use mean square error, output to have 1 activations and lator change it to cross entropy   number of hidden unit; 50see below pic  We want to make w1&amp;w2 mean and std be 0&amp;1.      why initializating and make mean zero and std one is important?1   2. 1. 1 simplified karming init what about hidden(first) layer?w1 = torch. randn(m,nh)b1 = torch. zeros(nh)t = lin(x_valid, w1, b1) # hidden&gt;&gt;&gt; t. mean(), t. std()((tensor(2. 3191), tensor(27. 0303))In output(second) layer, w2 = torch. randn(nh,1)b2 = torch. zeros(1)t2 = lin(t, w2, b2) # output&gt;&gt;&gt; t2. mean(), t2. std()(tensor(-58. 2665), tensor(170. 9717))   which is terribly far from normalzed value.     But if we apply simplified kaiming init  w1 = torch. randn(m,nh)/math. sqrt(m); b1 = torch. zeros(nh)w2 = torch. randn(nh,1)/math. sqrt(nh); b2 = torch. zeros(1)t = lin(x_valid, w1, b1)t. mean(),t. std()&gt;&gt;&gt; (tensor(-0. 0516), tensor(0. 9354)) But, actually, we use activations not only linear function After applying activations relu at linear layer, mean and deviation became 0. 5. 2. 1. 2 Glorrot initializationPaper2: Understanding the difficulty of training deep feedforward neural networks  Gaussian(, bell shaped, normal distributions) is not trained very well.  How to initialize neural nets? with the size of layer , the number of filters .  But there is No acount for import of ReLU If we got 1000 layers, vanishing gradients problem emerges2. 1. 3 Kaiming initializatingPaper3: Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification  Kaiming He, explained here rectifier: rectified linear unit rectifier network: neural network with rectifier linear units  This is kaiming init, and why suddenly replace one to two on a top?     to avoid vanishing gradient(weights)   But it doesn’t give very nice mean tough. {: . blue}   2. 1. 4 Pytorch package Why fan_out?     according to pytorch documentation,   choosing 'fan_in' preserves the magnitude of the variance of the wights in the forward pass. choosing 'fan_out' preserves the magnitues in the backward pass(, which means matmul; with transposed matrix) ➡️ in the other words, torch use fan_out cz pytorch transpose in linear transformaton.  What about CNN in Pytorch?I tried and jeremy said 2  in Pytorch, it doesn’t seem to be implemented kaiming init in right formula. so we should use our own operation.  But actually, this has been discussed in Pytorch community before. 3 4 Jeremy said it enhanced variance also, so I sampled 100 times and counted better results.  To make sure the shape seems sensible. check with assert. (remember we will replace 1 to 10 in cross entropy)assert model(x_valid). shape==torch. Size([x_valid. shape[0],1])&gt;&gt;&gt; model(x_valid). shape(10000, 1) We have made Relu, init, linear, it seems we can forward pass code we need for basic architecture nh = 50def lin(x, w, b): return x@w + b;w1 = torch. randn(m,nh)*math. sqrt(2. /m ); b1 = torch. zeros(nh)w2 = torch. randn(nh,1); b2 = torch. zeros(1)def relu(x): return x. clamp_min(0. ) - 0. 5t1 = relu(lin(x_valid, w1, b1))def model(xb):  l1 = lin(xb, w1, b1)  l2 = relu(l1)  l3 = lin(l2, w2, b2)  return l3 This is forward passReference:       Fixup Initialization: Residual Learning Without Normalization &#8617;        Pytorch implementaion on Kaiming init of conv and linear layers &#8617;        Pytorch kaiming init issue &#8617;        Pytorch kaiming init explained &#8617;    "
     }, {
     "id": 14,
     "url": "http://localhost:4000/2019/11/note08-fastai-2/",
@@ -209,7 +209,7 @@ var documents = [{
     "id": 21,
     "url": "http://localhost:4000/2019/10/note08-fastai-1/",
     "title": "Lecture 08 - Deep Learning From Foundations-part1",
-    "body": "2019/10/18 - I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for freeContents1) What is going on in this course2) Library development using jupyter notebookResources  notebooks material video broadcasting excelWhat is going on in this course?: What is ‘from foundations’?: 1) Recreate fast. ai and Pytorch 2) using pure python Evade Overfitting: Overfit : validation error getting worsetraining loss &lt; validation loss Know the name of the symbol you use: find in this page if you don’t know the symbol that you are using or just draw it here (run by ML!) Steps to a basic modern CNN model:  1) Matrix multiplication -&gt; 2) Relu/Initialization -&gt; 3) Fully-connected Forward-&gt; 4) Fully-connected Backward -&gt; 5) Train loop -&gt; 6) Convolution-&gt; 7) Optimization -&gt;8) Batchnormalization -&gt; 9) Resnet Today’s implementation goal: 1) matmul -&gt; 4) FC backward: Library development using jupyter notebook: https://dbader. org/blog/python-assert-tutorial jupyter notebook certainly can make module:  There will be #export tag that Howard (and we) want to extract special notebook2script. py will detect sign of #expert and convert following into python module and test ittest\_eq(TEST,'test')test\_eq(TEST,'test1')  what is run_notebook. py?     when you want to test your module in command line interface   		!python run\_notebook. py 01_matmul. ipynb  Is there any difference between 1) and 2)?1) test -&gt; test01 2) test01 -&gt; test #TODO I don’t know yet  look into run_notebook. py, package fire Jeremy used. What is that?read and run the code in a notebook, and in the process, Jeremy made Python Fire library called!shockingly, fire takes any kind of function and converts into CLI command. fire library was released by Google open source, Thursday, March 2, 2017 Get data:  pytorch and numpy are pretty much same.  variable c explains how many pixels there are in in MNIST, 28 pixels PyTorch’s view() method: torch function that manipulating tensor, and squeeze() in torch &amp; mathmatical operation similar function Rao &amp; McMahan said usually this functions result in feature vector.  In part 1, you can use view function several times. Initial python model:    Which is Linear, like $Xw$(weight)$+a$(bias) $= Y$     If you don’t know hou to multiple matrix, refer this site matmul visulization site  How many time spends if we we use pure python:    function matmul, typical matrix multiplication function, takes about 1 second for calculating 1 single train data! (maybe assumed stochastic, 5 data points in validation)     it takes about 11. 36 hours to update parameters even single layer and 1 iteration! (if that was my computer, it would be 14 hours. . )🤪     THIS is why we need to consider ‘time’&amp;’space’   This is kinda slow - what if we could speed it up by 50,000 times? Let’s try! Elementwise ops: How can we make python faster?:  If we want to calculate faster, then do remove pythonic calcuation, by passing its computation down to something that is written something other than python, like pytorch.  According to PyTorch doc it uses C++ (via ATen), so we are going to implement that function with python. What is element wise operation?:  items makes a pair, operate corresponding component"
+    "body": "2019/10/18 - ” Lecture 08 - Deep Learning From Foundations-part2 “ I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free Homework: CONTENTS:  What is going on in this course?     What is ‘from foundations’?   Steps to a basic modern CNN model   Today’s implementation goal: 1) matmul -&gt; 4) FC backward    Library development using jupyter notebook     jupyter notebook certainly can make module    Elementwise ops     How can we make python faster?         What is element wise operation?           ResourcesWhat is going on in this course?: What is ‘from foundations’?: 1) Recreate fast. ai and Pytorch 2) using pure python  Evade OverfittingOverfit : validation error getting worsetraining loss &lt; validation loss  Know the name of the symbol you usefind in this page if you don’t know the symbol that you are using or just draw it here (run by ML!) Steps to a basic modern CNN model:  1) Matrix multiplication -&gt; 2) Relu/Initialization -&gt; 3) Fully-connected Forward-&gt; 4) Fully-connected Backward -&gt; 5) Train loop -&gt; 6) Convolution-&gt; 7) Optimization -&gt;8) Batchnormalization -&gt; 9) Resnet Today’s implementation goal: 1) matmul -&gt; 4) FC backward: Library development using jupyter notebook: what is assers? jupyter notebook certainly can make module:  There will be #export tag that Howard (and we) want to extract special notebook2script. py will detect sign of #expert and convert following into python module and test ittest\_eq(TEST,'test')test\_eq(TEST,'test1')  what is run_notebook. py?     when you want to test your module in command line interface   		!python run\_notebook. py 01_matmul. ipynb  Is there any difference between 1) and 2)?1) test -&gt; test01 2) test01 -&gt; test #TODO I don’t know yet  look into run_notebook. py, package fire Jeremy used. What is that?read and run the code in a notebook, and in the process, Jeremy made Python Fire library called!shockingly, fire takes any kind of function and converts into CLI command. fire library was released by Google open source, Thursday, March 2, 2017    Get data   pytorch and numpy are pretty much same.  variable c explains how many pixels there are in in MNIST, 28 pixels PyTorch’s view() method: torch function that manipulating tensor, and squeeze() in torch &amp; mathmatical operation similar function Rao &amp; McMahan said usually this functions result in feature vector.    In part 1, you can use view function several times.     Initial python model     Which is Linear, like $Xw$(weight)$+a$(bias) $= Y$     If you don’t know hou to multiple matrix, refer this site matmul visulization site   How many time spends if we we use pure python   function matmul, typical matrix multiplication function, takes about 1 second for calculating 1 single train data! (maybe assumed stochastic, 5 data points in validation)     it takes about 11. 36 hours to update parameters even single layer and 1 iteration! (if that was my computer, it would be 14 hours. . )🤪   THIS is why we need to consider ‘time’&amp;’space’ This is kinda slow - what if we could speed it up by 50,000 times? Let’s try! Elementwise ops: How can we make python faster?:  If we want to calculate faster, then do remove pythonic calcuation, by passing its computation down to something that is written something other than python, like pytorch.  According to PyTorch doc it uses C++ (via ATen), so we are going to implement that function with python. What is element wise operation?:  items makes a pair, operate corresponding componentResources:  notebooks material video broadcasting excel"
     }, {
     "id": 22,
     "url": "http://localhost:4000/2019/09/code-first-course-note-16/",
@@ -296,11 +296,11 @@ function lunr_search(term) {
                         
                         </span>
 					</p>
-					<h1 class="display-4 mb-4 article-headline">test math</h1>
+					<h1 class="display-4 mb-4 article-headline">fully-connected forward, gradient backward</h1>
 					<div class="d-flex align-items-center">
                         
 						<small class="ml-3">  <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
-                            <span class="text-muted d-block mt-1">Nov 24, 2019 · <span class="reading-time">
+                            <span class="text-muted d-block mt-1">Nov 26, 2019 · <span class="reading-time">
   
   
     1 min read
@@ -312,7 +312,7 @@ function lunr_search(term) {
 				</div>
                 
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="/assets/images/2-relu.png" alt="test math">
+					<img class="rounded" src="/assets/images/4-backward.png" alt="fully-connected forward, gradient backward">
 				</div>
                 
 			</div>
@@ -352,19 +352,84 @@ function lunr_search(term) {
             
             <!-- Article -->
 			<article class="article-post">                
-			<p>test</p>
+			<p>” Lecture 08 - Deep Learning From Foundations-part2 “</p>
 
-<script type="math/tex; mode=display">n_i</script>
+<h3 class="no_toc" id="homework">Homework</h3>
 
-<p><script type="math/tex">n_i</script></p>
+<hr />
 
-<p>$$ n_i $$</p>
+<h3 class="no_toc" id="contents">CONTENTS</h3>
+
+<ul id="markdown-toc">
+  <li><a href="#2-foundation-version" id="markdown-toc-2-foundation-version">2. Foundation version</a>    <ul>
+      <li><a href="#22-loss-function-mse" id="markdown-toc-22-loss-function-mse">2.2 Loss function: MSE</a></li>
+      <li><a href="#23-gradients-backward-pass" id="markdown-toc-23-gradients-backward-pass">2.3 Gradients backward pass</a></li>
+    </ul>
+  </li>
+  <li><a href="#3-refactor-model" id="markdown-toc-3-refactor-model">3. Refactor model</a>    <ul>
+      <li><a href="#31-layers-as-classes" id="markdown-toc-31-layers-as-classes">3.1 Layers as classes</a></li>
+      <li><a href="#32-modueforward" id="markdown-toc-32-modueforward">3.2 Modue.forward()</a></li>
+      <li><a href="#33-nnlinear-and-nnmodule" id="markdown-toc-33-nnlinear-and-nnmodule">3.3 nn.Linear and nn.Module</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-foundation-version">2. Foundation version</h3>
+
+<h4 id="22-loss-function-mse">2.2 Loss function: MSE</h4>
+
+<ul>
+  <li>Mean squared error need unit vector, so we remove unit axis.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">mse</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span> <span class="k">return</span> <span class="p">(</span><span class="n">output</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">targ</span><span class="p">)</span><span class="o">.</span><span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+  <li>In python, in case you remove axis, you use ‘squeeze’, or add axis use ‘unsqueeze’</li>
+  <li><a href="https://pytorch.org/docs/stable/torch.html#torch.squeeze">torch.squeeze</a> where code commonly broken. so, when you use squeeze, <strong>clarify</strong> dimension axis you want to remove</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tmp</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">tmp</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+</code></pre></div></div>
+
+<ul>
+  <li>make sure to make as float when you calculate</li>
+</ul>
+
+<h4 id="23-gradients-backward-pass">2.3 Gradients backward pass</h4>
+
+<ul>
+  <li>Gradients is output with respect to parameter</li>
+  <li>we’ve done this work in this path(below)</li>
+</ul>
+
+<p><img src="/assets/images/4-calculus.jpeg" alt="" /></p>
+
+<ul>
+  <li>to simplify this calculus, we can just change it into</li>
+</ul>
+
+<p><script type="math/tex">y=f(u)</script>,
+<script type="math/tex">u=g(x)</script></p>
+
+<ul>
+  <li>So, you should know of the derivative of each bit on its own, and then you multiply them all together. As a result, it would be $$dy<script type="math/tex">over \</script>dx$$ cross over the data.</li>
+</ul>
+
+<h3 id="3-refactor-model">3. Refactor model</h3>
+<h4 id="31-layers-as-classes">3.1 Layers as classes</h4>
+<h4 id="32-modueforward">3.2 Modue.forward()</h4>
+<h4 id="33-nnlinear-and-nnmodule">3.3 nn.Linear and nn.Module</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
                 
 			</article>
 			
 			<!-- Tags -->
 			<div class="mb-4">
 				<span class="taglist">
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/tags.html#featured">featured</a>
 				
 				</span>
 			</div>
@@ -421,7 +486,7 @@ function lunr_search(term) {
         <div class="row prevnextlinks small font-weight-bold">
           
             <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="/2019/11/note08-fastai-3/"> <img height="30px" class="mr-1" src="/assets/images/2-relu.png">  data init, loss func, gradient backward</a>
+                <a class="text-dark" href="/2019/11/note08-fastai-3/"> <img height="30px" class="mr-1" src="/assets/images/2-relu.png">  ReLU and data init with normailized data</a>
             </div>
           
           

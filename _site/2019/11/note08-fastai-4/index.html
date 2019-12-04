@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>fully-connected forward, gradient backward | SpellOnYou</title>
+    <title>Gradient backward | SpellOnYou</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>fully-connected forward, gradient backward | SpellOnYou</title>
+<title>Gradient backward | SpellOnYou</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="fully-connected forward, gradient backward" />
+<meta property="og:title" content="Gradient backward" />
 <meta name="author" content="dionne" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="” Lecture 08 - Deep Learning From Foundations-part2 “" />
@@ -21,7 +21,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-11-26T00:00:00+09:00" />
 <script type="application/ld+json">
-{"description":"” Lecture 08 - Deep Learning From Foundations-part2 “","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/11/note08-fastai-4/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/4-backward.png","headline":"fully-connected forward, gradient backward","dateModified":"2019-11-26T00:00:00+09:00","datePublished":"2019-11-26T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/11/note08-fastai-4/"},"@context":"http://schema.org"}</script>
+{"description":"” Lecture 08 - Deep Learning From Foundations-part2 “","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/11/note08-fastai-4/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/4-backward.png","headline":"Gradient backward","dateModified":"2019-11-26T00:00:00+09:00","datePublished":"2019-11-26T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/11/note08-fastai-4/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -163,8 +163,8 @@ var documents = [{
     }, {
     "id": 12,
     "url": "http://localhost:4000/2019/11/note08-fastai-4/",
-    "title": "fully-connected forward, gradient backward",
-    "body": "2019/11/26 - ” Lecture 08 - Deep Learning From Foundations-part2 “ Homework: CONTENTS:  2. Foundation version     2. 2 Loss function: MSE   2. 3 Gradients backward pass    3. Refactor model     3. 1 Layers as classes   3. 2 Modue. forward()   3. 3 nn. Linear and nn. Module   2. Foundation version: 2. 2 Loss function: MSE:  Mean squared error need unit vector, so we remove unit axis.   def mse(output, targ): return (output. squeeze(-1) - targ). pow(2). mean()    In python, in case you remove axis, you use ‘squeeze’, or add axis use ‘unsqueeze’ torch. squeeze where code commonly broken. so, when you use squeeze, clarify dimension axis you want to removetmp = torch. tensor([1,1])tmp. squeeze()&gt;&gt;&gt; tensor([1, 1]) make sure to make as float when you calculate2. 3 Gradients backward pass:  Gradients is output with respect to parameter we’ve done this work in this path(below)  to simplify this calculus, we can just change it into,  So, you should know of the derivative of each bit on its own, and then you multiply them all together. As a result, it would be $$dydx$$ cross over the data. 3. Refactor model: 3. 1 Layers as classes: 3. 2 Modue. forward(): 3. 3 nn. Linear and nn. Module: "
+    "title": "Gradient backward",
+    "body": "2019/11/26 - ” Lecture 08 - Deep Learning From Foundations-part2 “ Homework: CONTENTS:  2. Foundation version     2. 2 Loss function: MSE   2. 3 Gradients backward pass         chain rule 1) start with the very last function, which is loss funciton. MSE     chain rule 2) derivative of ReLU     chain rule 3) Derivative of linear function     chain rule 4) Then it goes backward pass           3. Refactor model     3. 1 Layers as classes   3. 2 Modue. forward()   3. 3 nn. Linear and nn. Module   2. Foundation version: 2. 2 Loss function: MSE:  Mean squared error need unit vector, so we remove unit axis.   def mse(output, targ): return (output. squeeze(-1) - targ). pow(2). mean()    In python, in case you remove axis, you use ‘squeeze’, or add axis use ‘unsqueeze’ torch. squeeze where code commonly broken. so, when you use squeeze, clarify dimension axis you want to removetmp = torch. tensor([1,1])tmp. squeeze()&gt;&gt;&gt; tensor([1, 1]) make sure to make as float when you calculate2. 3 Gradients backward pass:  Gradients is output with respect to parameter we’ve done this work in this path(below)  to simplify this calculus, we can just change it into,  So, you should know of the derivative of each bit on its own, and then you multiply them all together. As a result, it would be $$dydx$$ cross over the data.  So you can get gradient, output with respect to parameter  What order should we calculate? chain rule 1) start with the very last function, which is loss funciton. MSE def mse_grad(inp, targ):   # grad of loss with respect to output of previous layer  inp. g = 2. * (inp. squeeze() - targ). unsqueeze(-1) / inp. shape[0] Store it to . g attributes, so we can multiply all things together. chain rule 2) derivative of ReLU    Because this is chain rule, we do (garident of ReLU) * (gradient of output)     But we did gradient of output just before, which is gradient of MSE. so we can multiply it by out. g(which was inp. g before)  def relu_grad(inp, out):  # grad of relu with respect to input activations  inp. g = (inp&gt;0). float() * out. gchain rule 3) Derivative of linear function the gradient of a matrix product is the matrix product with the transposed , $$ inp. g = out. g \ @ \ w. t() $$def lin_grad(inp, out, w, b):  # grad of matmul with respect to input  inp. g = out. g @ w. t()  w. g = (inp. unsqueeze(-1) * out. g. unsqueeze(1)). sum(0)  b. g = out. g. sum(0)chain rule 4) Then it goes backward passdef forward_and_backward(inp, targ):  # forward pass:  l1 = inp @ w1 + b1  l2 = relu(l1)  out = l2 @ w2 + b2  # we don't actually need the loss in backward!  loss = mse(out, targ)    # backward pass:  mse_grad(out, targ)  lin_grad(l2, out, w2, b2)  relu_grad(l1, l2)  lin_grad(inp, l1, w1, b1)3. Refactor model: 3. 1 Layers as classes: 3. 2 Modue. forward(): 3. 3 nn. Linear and nn. Module: "
     }, {
     "id": 13,
     "url": "http://localhost:4000/2019/11/note08-fastai-3/",
@@ -296,14 +296,14 @@ function lunr_search(term) {
                         
                         </span>
 					</p>
-					<h1 class="display-4 mb-4 article-headline">fully-connected forward, gradient backward</h1>
+					<h1 class="display-4 mb-4 article-headline">Gradient backward</h1>
 					<div class="d-flex align-items-center">
                         
 						<small class="ml-3">  <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
                             <span class="text-muted d-block mt-1">Nov 26, 2019 · <span class="reading-time">
   
   
-    1 min read
+    4 mins read
   
 </span>
     </span>
@@ -312,7 +312,7 @@ function lunr_search(term) {
 				</div>
                 
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="/assets/images/4-backward.png" alt="fully-connected forward, gradient backward">
+					<img class="rounded" src="/assets/images/4-backward.png" alt="Gradient backward">
 				</div>
                 
 			</div>
@@ -363,7 +363,13 @@ function lunr_search(term) {
 <ul id="markdown-toc">
   <li><a href="#2-foundation-version" id="markdown-toc-2-foundation-version">2. Foundation version</a>    <ul>
       <li><a href="#22-loss-function-mse" id="markdown-toc-22-loss-function-mse">2.2 Loss function: MSE</a></li>
-      <li><a href="#23-gradients-backward-pass" id="markdown-toc-23-gradients-backward-pass">2.3 Gradients backward pass</a></li>
+      <li><a href="#23-gradients-backward-pass" id="markdown-toc-23-gradients-backward-pass">2.3 Gradients backward pass</a>        <ul>
+          <li><a href="#chain-rule-1-start-with-the-very-last-function-which-is-loss-funciton-mse" id="markdown-toc-chain-rule-1-start-with-the-very-last-function-which-is-loss-funciton-mse">chain rule 1) start with the very last function, which is loss funciton. MSE</a></li>
+          <li><a href="#chain-rule-2-derivative-of-relu" id="markdown-toc-chain-rule-2-derivative-of-relu">chain rule 2) derivative of ReLU</a></li>
+          <li><a href="#chain-rule-3-derivative-of-linear-function" id="markdown-toc-chain-rule-3-derivative-of-linear-function">chain rule 3) Derivative of linear function</a></li>
+          <li><a href="#chain-rule-4-then-it-goes-backward-pass" id="markdown-toc-chain-rule-4-then-it-goes-backward-pass">chain rule 4) Then it goes backward pass</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li><a href="#3-refactor-model" id="markdown-toc-3-refactor-model">3. Refactor model</a>    <ul>
@@ -415,6 +421,83 @@ function lunr_search(term) {
 <ul>
   <li>So, you should know of the derivative of each bit on its own, and then you multiply them all together. As a result, it would be $$dy<script type="math/tex">over \</script>dx$$ cross over the data.</li>
 </ul>
+
+<p><img src="/assets/images/4-derivative.png" alt="" /></p>
+
+<ul>
+  <li>So you can get gradient, output with respect to parameter</li>
+</ul>
+
+<p><img src="/assets/images/4-chain_rule.png" alt="" /></p>
+
+<ul>
+  <li>What order should we calculate?</li>
+</ul>
+
+<p><img src="/assets/images/4-calculus.jpeg" alt="" /></p>
+
+<h5 id="chain-rule-1-start-with-the-very-last-function-which-is-loss-funciton-mse">chain rule 1) start with the very last function, which is loss funciton. MSE</h5>
+
+<p><img src="/assets/images/4-mse.jpeg" alt="" height="70%" width="70%" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">mse_grad</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span> 
+    <span class="c1"># grad of loss with respect to output of previous layer
+</span>    <span class="n">inp</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="mf">2.</span> <span class="o">*</span> <span class="p">(</span><span class="n">inp</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span> <span class="o">-</span> <span class="n">targ</span><span class="p">)</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">inp</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Store it to <strong>.g</strong> attributes, so we can multiply all things together.</li>
+</ul>
+
+<h5 id="chain-rule-2-derivative-of-relu">chain rule 2) derivative of ReLU</h5>
+
+<p><img src="/assets/images/4-relu.png" alt="" /></p>
+
+<p><img src="/assets/images/4-chain-step2.jpeg" alt="" /></p>
+
+<ul>
+  <li>
+    <p>Because this is chain rule, we do <strong>(garident of ReLU) * (gradient of output)</strong></p>
+  </li>
+  <li>
+    <p>But we did gradient of output just before, which is gradient of MSE. so we can multiply it by out.g(which was inp.g before)</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">relu_grad</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">out</span><span class="p">):</span>
+    <span class="c1"># grad of relu with respect to input activations
+</span>    <span class="n">inp</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">inp</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="nb">float</span><span class="p">()</span> <span class="o">*</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span>
+</code></pre></div></div>
+
+<h5 id="chain-rule-3-derivative-of-linear-function">chain rule 3) Derivative of linear function</h5>
+
+<ul>
+  <li>the gradient of a matrix product is the matrix product with the transposed , $$ inp.g = out.g \  @  \ w.t() $$</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">lin_grad</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="c1"># grad of matmul with respect to input
+</span>    <span class="n">inp</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span> <span class="o">@</span> <span class="n">w</span><span class="o">.</span><span class="n">t</span><span class="p">()</span>
+    <span class="n">w</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">inp</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h5 id="chain-rule-4-then-it-goes-backward-pass">chain rule 4) Then it goes backward pass</h5>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">forward_and_backward</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span>
+    <span class="c1"># forward pass:
+</span>    <span class="n">l1</span> <span class="o">=</span> <span class="n">inp</span> <span class="o">@</span> <span class="n">w1</span> <span class="o">+</span> <span class="n">b1</span>
+    <span class="n">l2</span> <span class="o">=</span> <span class="n">relu</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">l2</span> <span class="o">@</span> <span class="n">w2</span> <span class="o">+</span> <span class="n">b2</span>
+    <span class="c1"># we don't actually need the loss in backward!
+</span>    <span class="n">loss</span> <span class="o">=</span> <span class="n">mse</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">targ</span><span class="p">)</span>
+    
+    <span class="c1"># backward pass:
+</span>    <span class="n">mse_grad</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">targ</span><span class="p">)</span>
+    <span class="n">lin_grad</span><span class="p">(</span><span class="n">l2</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">b2</span><span class="p">)</span>
+    <span class="n">relu_grad</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">)</span>
+    <span class="n">lin_grad</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">l1</span><span class="p">,</span> <span class="n">w1</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span>
+</code></pre></div></div>
 
 <h3 id="3-refactor-model">3. Refactor model</h3>
 <h4 id="31-layers-as-classes">3.1 Layers as classes</h4>

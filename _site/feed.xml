@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-03T00:23:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Gradient backward</title><link href="http://localhost:4000/2019/11/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward" /><published>2019-11-26T00:00:00+09:00</published><updated>2019-11-26T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-4/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-07T23:12:28+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Gradient backward</title><link href="http://localhost:4000/2019/11/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward" /><published>2019-11-26T00:00:00+09:00</published><updated>2019-11-26T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-4/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
 
 &lt;h3 class=&quot;no_toc&quot; id=&quot;homework&quot;&gt;Homework&lt;/h3&gt;
 
@@ -8,12 +8,10 @@
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#2-foundation-version&quot; id=&quot;markdown-toc-2-foundation-version&quot;&gt;2. Foundation version&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#22-loss-function-mse&quot; id=&quot;markdown-toc-22-loss-function-mse&quot;&gt;2.2 Loss function: MSE&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#23-gradients-backward-pass&quot; id=&quot;markdown-toc-23-gradients-backward-pass&quot;&gt;2.3 Gradients backward pass&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#chain-rule-1-start-with-the-very-last-function-which-is-loss-funciton-mse&quot; id=&quot;markdown-toc-chain-rule-1-start-with-the-very-last-function-which-is-loss-funciton-mse&quot;&gt;chain rule 1) start with the very last function, which is loss funciton. MSE&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#chain-rule-2-derivative-of-relu&quot; id=&quot;markdown-toc-chain-rule-2-derivative-of-relu&quot;&gt;chain rule 2) derivative of ReLU&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#chain-rule-3-derivative-of-linear-function&quot; id=&quot;markdown-toc-chain-rule-3-derivative-of-linear-function&quot;&gt;chain rule 3) Derivative of linear function&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#chain-rule-4-then-it-goes-backward-pass&quot; id=&quot;markdown-toc-chain-rule-4-then-it-goes-backward-pass&quot;&gt;chain rule 4) Then it goes backward pass&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#chain-rule-with-code&quot; id=&quot;markdown-toc-chain-rule-with-code&quot;&gt;chain rule with code&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#decompose-function&quot; id=&quot;markdown-toc-decompose-function&quot;&gt;decompose function&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#derivative-chain-rule&quot; id=&quot;markdown-toc-derivative-chain-rule&quot;&gt;derivative chain-rule&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -27,26 +25,6 @@
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;2-foundation-version&quot;&gt;2. Foundation version&lt;/h3&gt;
-
-&lt;h4 id=&quot;22-loss-function-mse&quot;&gt;2.2 Loss function: MSE&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Mean squared error need unit vector, so we remove unit axis.
-    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;squeeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;pow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;In python, in case you remove axis, you use ‘squeeze’, or add axis use ‘unsqueeze’&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://pytorch.org/docs/stable/torch.html#torch.squeeze&quot;&gt;torch.squeeze&lt;/a&gt; where code commonly broken. so, when you use squeeze, &lt;strong&gt;clarify&lt;/strong&gt; dimension axis you want to remove&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;squeeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;make sure to make as float when you calculate&lt;/li&gt;
-&lt;/ul&gt;
 
 &lt;h4 id=&quot;23-gradients-backward-pass&quot;&gt;2.3 Gradients backward pass&lt;/h4&gt;
 
@@ -82,7 +60,11 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/4-calculus.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h5 id=&quot;chain-rule-1-start-with-the-very-last-function-which-is-loss-funciton-mse&quot;&gt;chain rule 1) start with the very last function, which is loss funciton. MSE&lt;/h5&gt;
+&lt;p style=&quot;color:gray; font-size: 80%; text-align: center;&quot;&gt;you need review at this part&lt;/p&gt;
+
+&lt;h5 id=&quot;chain-rule-with-code&quot;&gt;chain rule with code&lt;/h5&gt;
+
+&lt;p&gt;1) start with the very last function, which is loss funciton. MSE&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/4-mse.jpeg&quot; alt=&quot;&quot; height=&quot;70%&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
 
@@ -95,7 +77,7 @@
   &lt;li&gt;Store it to &lt;strong&gt;.g&lt;/strong&gt; attributes, so we can multiply all things together.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&quot;chain-rule-2-derivative-of-relu&quot;&gt;chain rule 2) derivative of ReLU&lt;/h5&gt;
+&lt;p&gt;2) derivative of ReLU&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/4-relu.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -115,7 +97,7 @@
 &lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;inp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h5 id=&quot;chain-rule-3-derivative-of-linear-function&quot;&gt;chain rule 3) Derivative of linear function&lt;/h5&gt;
+&lt;p&gt;3) Derivative of linear function&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;the gradient of a matrix product is the matrix product with the transposed , $$ inp.g = out.g \  @  \ w.t() $$&lt;/li&gt;
@@ -128,7 +110,7 @@
     &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h5 id=&quot;chain-rule-4-then-it-goes-backward-pass&quot;&gt;chain rule 4) Then it goes backward pass&lt;/h5&gt;
+&lt;p&gt;4) Then it goes backward pass&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;forward_and_backward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;# forward pass:
@@ -144,6 +126,25 @@
     &lt;span class=&quot;n&quot;&gt;relu_grad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;lin_grad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;decompose-function&quot;&gt;decompose function&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We want to get derivative of &lt;script type=&quot;math/tex&quot;&gt; w_1 &lt;/script&gt; which forms &lt;script type=&quot;math/tex&quot;&gt;t=x_1 @ w_1 + b_1&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;But, we have a estimation of answer (&lt;em&gt;we call it y hat&lt;/em&gt;) now&lt;/li&gt;
+  &lt;li&gt;So, I will decompose funciton to trace target variable.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\overset{\rightharpoonup}{u}\ \ linear_1\ \ \overset{\rightharpoonup}{w}\ \ ReLU\ \ \overset{\rightharpoonup}{v}\ \ linear_2\ \ \overset{\rightharpoonup}{a}\ \ MSE = \hat y&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Using the above forward pass, we can suppose some function from the end.&lt;/li&gt;
+  &lt;li&gt;start from &lt;script type=&quot;math/tex&quot;&gt;  \hat y &lt;/script&gt;, We know MSE funciton got two parameters, output, &lt;script type=&quot;math/tex&quot;&gt;u&lt;/script&gt; and target &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;from MSE’s input we know &lt;script type=&quot;math/tex&quot;&gt;  linear_2&lt;/script&gt; function’s output and supposing v is input of that function, &lt;script type=&quot;math/tex&quot;&gt;linear_2(v) = u&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;similarly, &lt;em&gt;v&lt;/em&gt; became output of &lt;script type=&quot;math/tex&quot;&gt;ReLU, ReLU(t) = v&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;derivative-chain-rule&quot;&gt;derivative chain-rule&lt;/h5&gt;
 
 &lt;h3 id=&quot;3-refactor-model&quot;&gt;3. Refactor model&lt;/h3&gt;
 &lt;h4 id=&quot;31-layers-as-classes&quot;&gt;3.1 Layers as classes&lt;/h4&gt;
@@ -174,6 +175,7 @@
           &lt;li&gt;&lt;a href=&quot;#214-pytorch-package&quot; id=&quot;markdown-toc-214-pytorch-package&quot;&gt;2.1.4 Pytorch package&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#22-loss-function-mse&quot; id=&quot;markdown-toc-22-loss-function-mse&quot;&gt;2.2 Loss function: MSE&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#reference&quot; id=&quot;markdown-toc-reference&quot;&gt;Reference&lt;/a&gt;&lt;/li&gt;
@@ -383,8 +385,29 @@
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l3&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;h4 id=&quot;22-loss-function-mse&quot;&gt;2.2 Loss function: MSE&lt;/h4&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;This is forward pass&lt;/li&gt;
+  &lt;li&gt;Mean squared error need unit vector, so we remove unit axis.
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;squeeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;pow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In python, in case you remove axis, you use ‘squeeze’, or add axis use ‘unsqueeze’&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pytorch.org/docs/stable/torch.html#torch.squeeze&quot;&gt;torch.squeeze&lt;/a&gt; where code commonly broken. so, when you use squeeze, &lt;strong&gt;clarify&lt;/strong&gt; dimension axis you want to remove&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;squeeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;make sure to make as float when you calculate&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;This is forward pass&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;

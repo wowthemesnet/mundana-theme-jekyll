@@ -1,6 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-07T23:12:28+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Gradient backward</title><link href="http://localhost:4000/2019/11/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward" /><published>2019-11-26T00:00:00+09:00</published><updated>2019-11-26T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-4/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-09T22:56:55+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Gradient backward</title><link href="http://localhost:4000/2019/11/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward" /><published>2019-11-26T00:00:00+09:00</published><updated>2019-11-26T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-4/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
 
 &lt;h3 class=&quot;no_toc&quot; id=&quot;homework&quot;&gt;Homework&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I often confuse that y is scalar, not a vector.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;hr /&gt;
 
@@ -9,9 +13,8 @@
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#2-foundation-version&quot; id=&quot;markdown-toc-2-foundation-version&quot;&gt;2. Foundation version&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#23-gradients-backward-pass&quot; id=&quot;markdown-toc-23-gradients-backward-pass&quot;&gt;2.3 Gradients backward pass&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#chain-rule-with-code&quot; id=&quot;markdown-toc-chain-rule-with-code&quot;&gt;chain rule with code&lt;/a&gt;&lt;/li&gt;
           &lt;li&gt;&lt;a href=&quot;#decompose-function&quot; id=&quot;markdown-toc-decompose-function&quot;&gt;decompose function&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#derivative-chain-rule&quot; id=&quot;markdown-toc-derivative-chain-rule&quot;&gt;derivative chain-rule&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#chain-rule-with-code&quot; id=&quot;markdown-toc-chain-rule-with-code&quot;&gt;chain rule with code&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -23,6 +26,12 @@
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Forward process&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/4-forward.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;2-foundation-version&quot;&gt;2. Foundation version&lt;/h3&gt;
 
@@ -60,35 +69,106 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/4-calculus.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p style=&quot;color:gray; font-size: 80%; text-align: center;&quot;&gt;you need review at this part&lt;/p&gt;
+&lt;p style=&quot;color:gray; font-size: 110%; text-align: center;&quot;&gt;BTW, why Jeremy wrote &lt;script type=&quot;math/tex&quot;&gt;\hat y&lt;/script&gt;, not &lt;em&gt;Loss function&lt;/em&gt;?&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;decompose-function&quot;&gt;decompose function&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We want to get derivative of &lt;script type=&quot;math/tex&quot;&gt; w_1 &lt;/script&gt; which forms &lt;script type=&quot;math/tex&quot;&gt;t=x_1 @ w_1 + b_1&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;But, we have a estimation of answer (&lt;em&gt;we call it y hat&lt;/em&gt;) now&lt;/li&gt;
+  &lt;li&gt;So, I will decompose funciton to trace target variable.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\overset{\rightharpoonup}{u}\ \ linear_1\ \ \overset{\rightharpoonup}{w}\ \ ReLU\ \ \overset{\rightharpoonup}{v}\ \ linear_2\ \ \overset{\rightharpoonup}{a}\ \ MSE = \hat y&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Using the above forward pass, we can suppose some function from the end.&lt;/li&gt;
+  &lt;li&gt;start from &lt;script type=&quot;math/tex&quot;&gt;  \hat y &lt;/script&gt;, We know MSE funciton got two parameters, output, &lt;script type=&quot;math/tex&quot;&gt;u&lt;/script&gt; and target &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;from MSE’s input we know &lt;script type=&quot;math/tex&quot;&gt;  linear_2&lt;/script&gt; function’s output and supposing v is input of that function, &lt;script type=&quot;math/tex&quot;&gt;linear_2(v) = u&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;similarly, &lt;em&gt;v&lt;/em&gt; became output of &lt;script type=&quot;math/tex&quot;&gt;ReLU, ReLU(t) = v&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/4-backward3.jpeg&quot; alt=&quot;&quot; height=&quot;70%&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;chain-rule-with-code&quot;&gt;chain rule with code&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;examplify backward process by random sampling&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{x_train.shape}, {w1.shape}, {b1.shape}&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{lin2.shape}, {w2.shape}, {b2.shape}&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{mse_loss.shape}, {y_train.shape}, {lin3.shape}&quot;&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;784&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;784&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;'torch.Size([]), torch.Size([50000]), torch.Size([50000, 1])'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;1) start with the very last function, which is loss funciton. MSE&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/4-mse.jpeg&quot; alt=&quot;&quot; height=&quot;70%&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mse_grad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; 
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\color{red}{\frac{\partial}{\partial u}MSE(u,y)} \times\frac{\partial}{\partial v}l_2(v)\times\frac{\partial}{\partial t}ReLU(t)\times\frac{\partial}{\partial x}l_1(x)&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;in &lt;em&gt;mse_grad&lt;/em&gt; function, we store the gradient in inp.g{: style=”color:gray; font-size: 110%; text-align: center;”}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mse_grad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;# grad of loss with respect to output of previous layer
 &lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;inp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;squeeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unsqueeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Store it to &lt;strong&gt;.g&lt;/strong&gt; attributes, so we can multiply all things together.&lt;/li&gt;
+  &lt;li&gt;And cz we defined mse_grad function’s parameters before, we can use lin3 as input of mse&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;2) derivative of ReLU&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lin3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;squeeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unsqueeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.2116&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;5.8100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.2477&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.3279&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;11.7130&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We can just calculate using broadcasting, not using squeeze. then why should do and unsqueeze again?&lt;br /&gt;
+🎯 It’s related with random access memory(RAM).. If I don’t &lt;em&gt;squeeze&lt;/em&gt;, (I’m using colab) &lt;strong&gt;it out of RAM&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;3) Derivative of linear3 function&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the gradient of a matrix product is the matrix product with the transposed , $$ inp.g = out.g \  @  \ w.t() $$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;lin_grad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# grad of matmul with respect to input
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;inp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unsqueeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unsqueeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;2) derivative of ReLU (linear2)&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/4-relu.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/4-chain-step2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/4-relugrad.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{\partial}{\partial u}MSE(u,y) \times \color{red}{\frac{\partial}{\partial v}l_2(v)} \times \frac{\partial}{\partial t}ReLU(t)\times\frac{\partial}{\partial x}l_1(x)&lt;/script&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Because this is chain rule, we do &lt;strong&gt;(garident of ReLU) * (gradient of output)&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;Because this is chain rule, after we get &lt;script type=&quot;math/tex&quot;&gt;\color{red}{\frac{\partial}{\partial v}l_2(v)}&lt;/script&gt; we should multiply it with &lt;strong&gt;inp.g&lt;/strong&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;But we did gradient of output just before, which is gradient of MSE. so we can multiply it by out.g(which was inp.g before)&lt;/p&gt;
+    &lt;p&gt;However,&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -97,7 +177,7 @@
 &lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;inp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;3) Derivative of linear function&lt;/p&gt;
+&lt;p&gt;3) Derivative of linear1&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;the gradient of a matrix product is the matrix product with the transposed , $$ inp.g = out.g \  @  \ w.t() $$&lt;/li&gt;
@@ -127,31 +207,22 @@
     &lt;span class=&quot;n&quot;&gt;lin_grad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h5 id=&quot;decompose-function&quot;&gt;decompose function&lt;/h5&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;We want to get derivative of &lt;script type=&quot;math/tex&quot;&gt; w_1 &lt;/script&gt; which forms &lt;script type=&quot;math/tex&quot;&gt;t=x_1 @ w_1 + b_1&lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;But, we have a estimation of answer (&lt;em&gt;we call it y hat&lt;/em&gt;) now&lt;/li&gt;
-  &lt;li&gt;So, I will decompose funciton to trace target variable.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\overset{\rightharpoonup}{u}\ \ linear_1\ \ \overset{\rightharpoonup}{w}\ \ ReLU\ \ \overset{\rightharpoonup}{v}\ \ linear_2\ \ \overset{\rightharpoonup}{a}\ \ MSE = \hat y&lt;/script&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Using the above forward pass, we can suppose some function from the end.&lt;/li&gt;
-  &lt;li&gt;start from &lt;script type=&quot;math/tex&quot;&gt;  \hat y &lt;/script&gt;, We know MSE funciton got two parameters, output, &lt;script type=&quot;math/tex&quot;&gt;u&lt;/script&gt; and target &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;.&lt;/li&gt;
-  &lt;li&gt;from MSE’s input we know &lt;script type=&quot;math/tex&quot;&gt;  linear_2&lt;/script&gt; function’s output and supposing v is input of that function, &lt;script type=&quot;math/tex&quot;&gt;linear_2(v) = u&lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;similarly, &lt;em&gt;v&lt;/em&gt; became output of &lt;script type=&quot;math/tex&quot;&gt;ReLU, ReLU(t) = v&lt;/script&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&quot;derivative-chain-rule&quot;&gt;derivative chain-rule&lt;/h5&gt;
-
 &lt;h3 id=&quot;3-refactor-model&quot;&gt;3. Refactor model&lt;/h3&gt;
 &lt;h4 id=&quot;31-layers-as-classes&quot;&gt;3.1 Layers as classes&lt;/h4&gt;
 &lt;h4 id=&quot;32-modueforward&quot;&gt;3.2 Modue.forward()&lt;/h4&gt;
 &lt;h4 id=&quot;33-nnlinear-and-nnmodule&quot;&gt;3.3 nn.Linear and nn.Module&lt;/h4&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/4-backward.png" /></entry><entry><title type="html">ReLU and data init with normailized data</title><link href="http://localhost:4000/2019/11/note08-fastai-3/" rel="alternate" type="text/html" title="ReLU and data init with normailized data" /><published>2019-11-23T00:00:00+09:00</published><updated>2019-11-23T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-3</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-3/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 class=&quot;no_toc&quot; id=&quot;footnote&quot;&gt;Footnote&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://forums.fast.ai/t/lesson-8-2019-discussion-wiki/41323/433&quot;&gt;fast.ai forums Lesson-8&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/4-backward.png" /></entry><entry><title type="html">ReLU and data init with normailized data</title><link href="http://localhost:4000/2019/11/note08-fastai-3/" rel="alternate" type="text/html" title="ReLU and data init with normailized data" /><published>2019-11-23T00:00:00+09:00</published><updated>2019-11-23T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-3</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-3/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
 
 &lt;h3 class=&quot;no_toc&quot; id=&quot;homework&quot;&gt;Homework&lt;/h3&gt;
 
@@ -178,7 +249,7 @@
       &lt;li&gt;&lt;a href=&quot;#22-loss-function-mse&quot; id=&quot;markdown-toc-22-loss-function-mse&quot;&gt;2.2 Loss function: MSE&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#reference&quot; id=&quot;markdown-toc-reference&quot;&gt;Reference&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#footnote&quot; id=&quot;markdown-toc-footnote&quot;&gt;Footnote&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* Normailzation
 {:toc}
@@ -231,6 +302,8 @@
 &lt;/ul&gt;
 
 &lt;h5 id=&quot;211-simplified-karming-init&quot;&gt;2.1.1 &lt;em&gt;simplified&lt;/em&gt; karming init&lt;/h5&gt;
+
+&lt;p&gt;Q: Why we did init, test with only validation data?{: style=”color:red; font-size: 130%; text-align: center;”}&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;what about hidden(first) layer?&lt;/li&gt;
@@ -402,15 +475,16 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;make sure to make as float when you calculate&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;This is forward pass&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;make sure to make as float when you calculate&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;p&gt;But why??? because it is tensor?{: style=”color:red; font-size: 130%;”}&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This is forward pass&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;footnote&quot;&gt;Footnote&lt;/h3&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
@@ -429,7 +503,7 @@
   &lt;/ol&gt;
 &lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><category term="featured" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/2-relu.png" /></entry><entry><title type="html">Broadcasting, Einstein sum, Pytorch operator</title><link href="http://localhost:4000/2019/11/note08-fastai-2/" rel="alternate" type="text/html" title="Broadcasting, Einstein sum, Pytorch operator" /><published>2019-11-21T00:00:00+09:00</published><updated>2019-11-21T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-2/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
 
-&lt;h3 id=&quot;time-comparison-with-pure-python&quot;&gt;Time comparison with pure Python&lt;/h3&gt;
+&lt;h3 class=&quot;no_toc&quot; id=&quot;time-comparison-with-pure-python&quot;&gt;Time comparison with pure Python&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -446,7 +520,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;homework&quot;&gt;Homework&lt;/h3&gt;
+&lt;h3 class=&quot;no_toc&quot; id=&quot;homework&quot;&gt;Homework&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Frobenius Norm Review&lt;/li&gt;
@@ -461,26 +535,24 @@
 
 &lt;hr /&gt;
 
-&lt;h4 id=&quot;contents&quot;&gt;CONTENTS&lt;/h4&gt;
+&lt;h3 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h3&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#elementwise-op&quot;&gt;Elementwise op&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#frobenius-norm&quot;&gt;Frobenius norm&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#elementwise-matmul&quot;&gt;Elementwise Matmul&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#broadcasting&quot;&gt;Broadcasting&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#matmul-with-broadcasting&quot;&gt;Matmul with broadcasting&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#broadcasting-rules&quot;&gt;Broadcasting Rules&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#einstein-summation&quot;&gt;Einstein summation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#pytorch-op&quot;&gt;Pytorch op&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#elementwise-op&quot;&gt;Elementwise op&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;elementwise-op&quot;&gt;Elementwise op&lt;/h3&gt;
-&lt;h4 id=&quot;frobenius-norm&quot;&gt;Frobenius norm&lt;/h4&gt;
+&lt;!-- {::comment}
+  - [Frobenius norm](#frobenius-norm)
+- [Elementwise Matmul](#elementwise-matmul)
+- [Broadcasting](#broadcasting)
+  - [Matmul with broadcasting](#matmul-with-broadcasting)
+  - [Broadcasting Rules](#broadcasting-rules)
+- [Einstein summation](#einstein-summation)
+- [Pytorch op](#pytorch-op) {:/comment} --&gt;
+
+&lt;h3 id=&quot;1-elementwise-op&quot;&gt;1. Elementwise op&lt;/h3&gt;
+
+&lt;h4 id=&quot;11-frobenius-norm&quot;&gt;1.1 Frobenius norm&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/7.png&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
 
@@ -496,7 +568,7 @@
   &lt;li&gt;and if you need latex form, download it from archive.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;elementwise-matmul&quot;&gt;Elementwise Matmul&lt;/h3&gt;
+&lt;h3 id=&quot;2-elementwise-matmul&quot;&gt;2. Elementwise Matmul&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;What is the meaning of elementwise?&lt;/li&gt;
@@ -538,7 +610,7 @@ as a result, &lt;strong&gt;the code before&lt;/strong&gt;&lt;/p&gt;
 &lt;span class=&quot;n&quot;&gt;test_near&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matmul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;broadcasting&quot;&gt;Broadcasting&lt;/h3&gt;
+&lt;h3 id=&quot;3-broadcasting&quot;&gt;3. Broadcasting&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Now, we will use the broadcasting and remove&lt;/li&gt;
@@ -641,7 +713,7 @@ Example::*&lt;/p&gt;
   &lt;li&gt;in c, &lt;em&gt;squeeze a new axis in here please.&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;matmul-with-broadcasting&quot;&gt;Matmul with broadcasting&lt;/h4&gt;
+&lt;h4 id=&quot;22-matmul-with-broadcasting&quot;&gt;2.2 Matmul with broadcasting&lt;/h4&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#   c[i,j] = (a[i,:]).          *[:,j].sum() #previous
@@ -663,7 +735,7 @@ Example::*&lt;/p&gt;
 2) any number of colon commas at the start, you can switch it with the single elipsis.
   &lt;em&gt;ex) c[:,:,:,:,i] = c […,i]&lt;/em&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;broadcasting-rules&quot;&gt;Broadcasting Rules&lt;/h4&gt;
+&lt;h4 id=&quot;23-broadcasting-rules&quot;&gt;2.3 Broadcasting Rules&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;What if we &lt;code class=&quot;highlighter-rouge&quot;&gt;tensor.size([1,3]) * tensor.size([3,1])&lt;/code&gt;?
@@ -701,7 +773,7 @@ Example::*&lt;/p&gt;
 &lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;einstein-summation&quot;&gt;Einstein summation&lt;/h3&gt;
+&lt;h3 id=&quot;3-einstein-summation&quot;&gt;3. Einstein summation&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Creates batch-wise remove inner most loop, and replaced it with an elementwise product
@@ -737,7 +809,7 @@ a.k.a&lt;/li&gt;
 
 &lt;p&gt;so after all, we are now 16000 times faster than Python.&lt;/p&gt;
 
-&lt;h3 id=&quot;pytorch-op&quot;&gt;Pytorch op&lt;/h3&gt;
+&lt;h3 id=&quot;4-pytorch-op&quot;&gt;4. Pytorch op&lt;/h3&gt;
 
 &lt;p&gt;49166.67 times faster than pure python&lt;/p&gt;
 
@@ -745,7 +817,7 @@ a.k.a&lt;/li&gt;
 
 &lt;h2 id=&quot;but-before-that-we-need-initialized-parameters-and-relu&quot;&gt;But before that, we need initialized parameters and ReLU,&lt;/h2&gt;
 
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;h4 id=&quot;footnote&quot;&gt;Footnote&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://mathworld.wolfram.com/TensorRank.html&quot;&gt;TensorRank&lt;/a&gt;&lt;/li&gt;

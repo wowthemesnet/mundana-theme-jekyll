@@ -31,8 +31,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <!-- Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+<!-- :400,400i,700 -->
     <!-- Bootstrap Modified -->
     <link rel="stylesheet" href="/assets/css/main.css">
 
@@ -164,17 +164,17 @@ var documents = [{
     "id": 12,
     "url": "http://localhost:4000/2019/11/note08-fastai-4/",
     "title": "Gradient backward",
-    "body": "2019/11/26 - ” Lecture 08 - Deep Learning From Foundations-part2 “ Homework: CONTENTS:  2. Foundation version     2. 3 Gradients backward pass         chain rule with code     decompose function     derivative chain-rule           3. Refactor model     3. 1 Layers as classes   3. 2 Modue. forward()   3. 3 nn. Linear and nn. Module   2. Foundation version: 2. 3 Gradients backward pass:  Gradients is output with respect to parameter we’ve done this work in this path(below)  to simplify this calculus, we can just change it into,  So, you should know of the derivative of each bit on its own, and then you multiply them all together. As a result, it would be $$dydx$$ cross over the data.  So you can get gradient, output with respect to parameter  What order should we calculate? you need review at this part chain rule with code1) start with the very last function, which is loss funciton. MSE def mse_grad(inp, targ):   # grad of loss with respect to output of previous layer  inp. g = 2. * (inp. squeeze() - targ). unsqueeze(-1) / inp. shape[0] Store it to . g attributes, so we can multiply all things together. 2) derivative of ReLU     Because this is chain rule, we do (garident of ReLU) * (gradient of output)     But we did gradient of output just before, which is gradient of MSE. so we can multiply it by out. g(which was inp. g before)  def relu_grad(inp, out):  # grad of relu with respect to input activations  inp. g = (inp&gt;0). float() * out. g3) Derivative of linear function  the gradient of a matrix product is the matrix product with the transposed , $$ inp. g = out. g \ @ \ w. t() $$def lin_grad(inp, out, w, b):  # grad of matmul with respect to input  inp. g = out. g @ w. t()  w. g = (inp. unsqueeze(-1) * out. g. unsqueeze(1)). sum(0)  b. g = out. g. sum(0)4) Then it goes backward pass def forward_and_backward(inp, targ):  # forward pass:  l1 = inp @ w1 + b1  l2 = relu(l1)  out = l2 @ w2 + b2  # we don't actually need the loss in backward!  loss = mse(out, targ)    # backward pass:  mse_grad(out, targ)  lin_grad(l2, out, w2, b2)  relu_grad(l1, l2)  lin_grad(inp, l1, w1, b1)decompose function We want to get derivative of which forms  But, we have a estimation of answer (we call it y hat) now So, I will decompose funciton to trace target variable.  Using the above forward pass, we can suppose some function from the end.  start from , We know MSE funciton got two parameters, output, and target .  from MSE’s input we know function’s output and supposing v is input of that function,  similarly, v became output of derivative chain-rule3. Refactor model: 3. 1 Layers as classes: 3. 2 Modue. forward(): 3. 3 nn. Linear and nn. Module: "
+    "body": "2019/11/26 - ” Lecture 08 - Deep Learning From Foundations-part2 “ Homework:  I often confuse that y is scalar, not a vector. CONTENTS:  2. Foundation version     2. 3 Gradients backward pass         decompose function     chain rule with code           3. Refactor model     3. 1 Layers as classes   3. 2 Modue. forward()   3. 3 nn. Linear and nn. Module    Forward process 2. Foundation version: 2. 3 Gradients backward pass:  Gradients is output with respect to parameter we’ve done this work in this path(below)  to simplify this calculus, we can just change it into,  So, you should know of the derivative of each bit on its own, and then you multiply them all together. As a result, it would be $$dydx$$ cross over the data.  So you can get gradient, output with respect to parameter  What order should we calculate? BTW, why Jeremy wrote , not Loss function?1 decompose function We want to get derivative of which forms  But, we have a estimation of answer (we call it y hat) now So, I will decompose funciton to trace target variable.  Using the above forward pass, we can suppose some function from the end.  start from , We know MSE funciton got two parameters, output, and target .  from MSE’s input we know function’s output and supposing v is input of that function,  similarly, v became output of chain rule with code examplify backward process by random samplingprint(f {x_train. shape}, {w1. shape}, {b1. shape}\n )print(f {lin2. shape}, {w2. shape}, {b2. shape}\n )f {mse_loss. shape}, {y_train. shape}, {lin3. shape} &gt;&gt;&gt; torch. Size([50000, 784]), torch. Size([784, 50]), torch. Size([50])torch. Size([50000, 50]), torch. Size([50, 1]), torch. Size([1])'torch. Size([]), torch. Size([50000]), torch. Size([50000, 1])'1) start with the very last function, which is loss funciton. MSE  in mse_grad function, we store the gradient in inp. g{: style=”color:gray; font-size: 110%; text-align: center;”}def mse_grad(inp, targ):  # grad of loss with respect to output of previous layer  inp. g = 2. * (inp. squeeze() - targ). unsqueeze(-1) / inp. shape[0] And cz we defined mse_grad function’s parameters before, we can use lin3 as input of mse(lin3. squeeze(-1)-y_train). unsqueeze(-1)&gt;&gt;&gt; tensor([[ -1. 3000],    [ -0. 2116],    [ -5. 8100],    . . . ,    [ -2. 2477],    [ -0. 3279],    [-11. 7130]]) We can just calculate using broadcasting, not using squeeze. then why should do and unsqueeze again?🎯 It’s related with random access memory(RAM). . If I don’t squeeze, (I’m using colab) it out of RAM. 3) Derivative of linear3 function  the gradient of a matrix product is the matrix product with the transposed , $$ inp. g = out. g \ @ \ w. t() $$def lin_grad(inp, out, w, b):  # grad of matmul with respect to input  inp. g = out. g @ w. t()  w. g = (inp. unsqueeze(-1) * out. g. unsqueeze(1)). sum(0)  b. g = out. g. sum(0)2) derivative of ReLU (linear2)     Because this is chain rule, after we get we should multiply it with inp. g     However,  def relu_grad(inp, out):  # grad of relu with respect to input activations  inp. g = (inp&gt;0). float() * out. g3) Derivative of linear1  the gradient of a matrix product is the matrix product with the transposed , $$ inp. g = out. g \ @ \ w. t() $$def lin_grad(inp, out, w, b):  # grad of matmul with respect to input  inp. g = out. g @ w. t()  w. g = (inp. unsqueeze(-1) * out. g. unsqueeze(1)). sum(0)  b. g = out. g. sum(0)4) Then it goes backward pass def forward_and_backward(inp, targ):  # forward pass:  l1 = inp @ w1 + b1  l2 = relu(l1)  out = l2 @ w2 + b2  # we don't actually need the loss in backward!  loss = mse(out, targ)    # backward pass:  mse_grad(out, targ)  lin_grad(l2, out, w2, b2)  relu_grad(l1, l2)  lin_grad(inp, l1, w1, b1)3. Refactor model: 3. 1 Layers as classes: 3. 2 Modue. forward(): 3. 3 nn. Linear and nn. Module: Footnote:       fast. ai forums Lesson-8 &#8617;    "
     }, {
     "id": 13,
     "url": "http://localhost:4000/2019/11/note08-fastai-3/",
     "title": "ReLU and data init with normailized data",
-    "body": "2019/11/23 - ” Lecture 08 - Deep Learning From Foundations-part2 “ Homework: read section 2. 2 of kaiming paper CONTENTS:  1. The forward and backward passes     1. 1 Normalization   1. 2 Variable definition    2. Foundation Version     2. 1 Basic architecture         2. 1. 1 simplified karming init     2. 1. 2 Glorrot initialization     2. 1. 3 Kaiming initializating     2. 1. 4 Pytorch package          2. 2 Loss function: MSE    Reference* Normailzation{:toc}1. The forward and backward passes: 1. 1 Normalization: train_mean,train_std = x_train. mean(),x_train. std()&gt;&gt;&gt; train_mean,train_std(tensor(0. 1304), tensor(0. 3073))Remember!  Dataset, which is x_train, mean and standard deviation is not 0&amp;1. But we need them to be which means we should substract means and divide data by std.  You should not standarlize validation set because training set and validation set should be aparted.  after normalize, mean is close to zero, and standard deviation is close to 1. 1. 2 Variable definition:  n,m: size of the training set c: the number of activations we need in our model2. Foundation Version: 2. 1 Basic architecture:  Our model has one hidden layer, output to have 10 activations, used in cross entropy.    But in process of building architecture, we will use mean square error, output to have 1 activations and lator change it to cross entropy   number of hidden unit; 50see below pic  We want to make w1&amp;w2 mean and std be 0&amp;1.      why initializating and make mean zero and std one is important?1   2. 1. 1 simplified karming init what about hidden(first) layer?w1 = torch. randn(m,nh)b1 = torch. zeros(nh)t = lin(x_valid, w1, b1) # hidden&gt;&gt;&gt; t. mean(), t. std()((tensor(2. 3191), tensor(27. 0303))In output(second) layer, w2 = torch. randn(nh,1)b2 = torch. zeros(1)t2 = lin(t, w2, b2) # output&gt;&gt;&gt; t2. mean(), t2. std()(tensor(-58. 2665), tensor(170. 9717))   which is terribly far from normalzed value.     But if we apply simplified kaiming init  w1 = torch. randn(m,nh)/math. sqrt(m); b1 = torch. zeros(nh)w2 = torch. randn(nh,1)/math. sqrt(nh); b2 = torch. zeros(1)t = lin(x_valid, w1, b1)t. mean(),t. std()&gt;&gt;&gt; (tensor(-0. 0516), tensor(0. 9354)) But, actually, we use activations not only linear function After applying activations relu at linear layer, mean and deviation became 0. 5. 2. 1. 2 Glorrot initializationPaper2: Understanding the difficulty of training deep feedforward neural networks  Gaussian(, bell shaped, normal distributions) is not trained very well.  How to initialize neural nets? with the size of layer , the number of filters .  But there is No acount for import of ReLU If we got 1000 layers, vanishing gradients problem emerges2. 1. 3 Kaiming initializatingPaper3: Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification  Kaiming He, explained here rectifier: rectified linear unit rectifier network: neural network with rectifier linear units  This is kaiming init, and why suddenly replace one to two on a top?     to avoid vanishing gradient(weights)   But it doesn’t give very nice mean tough. {: . blue}   2. 1. 4 Pytorch package Why fan_out?     according to pytorch documentation,   choosing 'fan_in' preserves the magnitude of the variance of the wights in the forward pass. choosing 'fan_out' preserves the magnitues in the backward pass(, which means matmul; with transposed matrix) ➡️ in the other words, torch use fan_out cz pytorch transpose in linear transformaton.  What about CNN in Pytorch?I tried and jeremy said 2  in Pytorch, it doesn’t seem to be implemented kaiming init in right formula. so we should use our own operation.  But actually, this has been discussed in Pytorch community before. 3 4 Jeremy said it enhanced variance also, so I sampled 100 times and counted better results.  To make sure the shape seems sensible. check with assert. (remember we will replace 1 to 10 in cross entropy)assert model(x_valid). shape==torch. Size([x_valid. shape[0],1])&gt;&gt;&gt; model(x_valid). shape(10000, 1) We have made Relu, init, linear, it seems we can forward pass code we need for basic architecture nh = 50def lin(x, w, b): return x@w + b;w1 = torch. randn(m,nh)*math. sqrt(2. /m ); b1 = torch. zeros(nh)w2 = torch. randn(nh,1); b2 = torch. zeros(1)def relu(x): return x. clamp_min(0. ) - 0. 5t1 = relu(lin(x_valid, w1, b1))def model(xb):  l1 = lin(xb, w1, b1)  l2 = relu(l1)  l3 = lin(l2, w2, b2)  return l32. 2 Loss function: MSE:  Mean squared error need unit vector, so we remove unit axis.   def mse(output, targ): return (output. squeeze(-1) - targ). pow(2). mean()    In python, in case you remove axis, you use ‘squeeze’, or add axis use ‘unsqueeze’ torch. squeeze where code commonly broken. so, when you use squeeze, clarify dimension axis you want to removetmp = torch. tensor([1,1])tmp. squeeze()&gt;&gt;&gt; tensor([1, 1])   make sure to make as float when you calculate     This is forward pass  Reference:       Fixup Initialization: Residual Learning Without Normalization &#8617;        Pytorch implementaion on Kaiming init of conv and linear layers &#8617;        Pytorch kaiming init issue &#8617;        Pytorch kaiming init explained &#8617;    "
+    "body": "2019/11/23 - ” Lecture 08 - Deep Learning From Foundations-part2 “ Homework: read section 2. 2 of kaiming paper CONTENTS:  1. The forward and backward passes     1. 1 Normalization   1. 2 Variable definition    2. Foundation Version     2. 1 Basic architecture         2. 1. 1 simplified karming init     2. 1. 2 Glorrot initialization     2. 1. 3 Kaiming initializating     2. 1. 4 Pytorch package          2. 2 Loss function: MSE    Footnote* Normailzation{:toc}1. The forward and backward passes: 1. 1 Normalization: train_mean,train_std = x_train. mean(),x_train. std()&gt;&gt;&gt; train_mean,train_std(tensor(0. 1304), tensor(0. 3073))Remember!  Dataset, which is x_train, mean and standard deviation is not 0&amp;1. But we need them to be which means we should substract means and divide data by std.  You should not standarlize validation set because training set and validation set should be aparted.  after normalize, mean is close to zero, and standard deviation is close to 1. 1. 2 Variable definition:  n,m: size of the training set c: the number of activations we need in our model2. Foundation Version: 2. 1 Basic architecture:  Our model has one hidden layer, output to have 10 activations, used in cross entropy.    But in process of building architecture, we will use mean square error, output to have 1 activations and lator change it to cross entropy   number of hidden unit; 50see below pic  We want to make w1&amp;w2 mean and std be 0&amp;1.      why initializating and make mean zero and std one is important?1   2. 1. 1 simplified karming initQ: Why we did init, test with only validation data?{: style=”color:red; font-size: 130%; text-align: center;”}  what about hidden(first) layer?w1 = torch. randn(m,nh)b1 = torch. zeros(nh)t = lin(x_valid, w1, b1) # hidden&gt;&gt;&gt; t. mean(), t. std()((tensor(2. 3191), tensor(27. 0303))In output(second) layer, w2 = torch. randn(nh,1)b2 = torch. zeros(1)t2 = lin(t, w2, b2) # output&gt;&gt;&gt; t2. mean(), t2. std()(tensor(-58. 2665), tensor(170. 9717))   which is terribly far from normalzed value.     But if we apply simplified kaiming init  w1 = torch. randn(m,nh)/math. sqrt(m); b1 = torch. zeros(nh)w2 = torch. randn(nh,1)/math. sqrt(nh); b2 = torch. zeros(1)t = lin(x_valid, w1, b1)t. mean(),t. std()&gt;&gt;&gt; (tensor(-0. 0516), tensor(0. 9354)) But, actually, we use activations not only linear function After applying activations relu at linear layer, mean and deviation became 0. 5. 2. 1. 2 Glorrot initializationPaper2: Understanding the difficulty of training deep feedforward neural networks  Gaussian(, bell shaped, normal distributions) is not trained very well.  How to initialize neural nets? with the size of layer , the number of filters .  But there is No acount for import of ReLU If we got 1000 layers, vanishing gradients problem emerges2. 1. 3 Kaiming initializatingPaper3: Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification  Kaiming He, explained here rectifier: rectified linear unit rectifier network: neural network with rectifier linear units  This is kaiming init, and why suddenly replace one to two on a top?     to avoid vanishing gradient(weights)   But it doesn’t give very nice mean tough. {: . blue}   2. 1. 4 Pytorch package Why fan_out?     according to pytorch documentation,   choosing 'fan_in' preserves the magnitude of the variance of the wights in the forward pass. choosing 'fan_out' preserves the magnitues in the backward pass(, which means matmul; with transposed matrix) ➡️ in the other words, torch use fan_out cz pytorch transpose in linear transformaton.  What about CNN in Pytorch?I tried and jeremy said 2  in Pytorch, it doesn’t seem to be implemented kaiming init in right formula. so we should use our own operation.  But actually, this has been discussed in Pytorch community before. 3 4 Jeremy said it enhanced variance also, so I sampled 100 times and counted better results.  To make sure the shape seems sensible. check with assert. (remember we will replace 1 to 10 in cross entropy)assert model(x_valid). shape==torch. Size([x_valid. shape[0],1])&gt;&gt;&gt; model(x_valid). shape(10000, 1) We have made Relu, init, linear, it seems we can forward pass code we need for basic architecture nh = 50def lin(x, w, b): return x@w + b;w1 = torch. randn(m,nh)*math. sqrt(2. /m ); b1 = torch. zeros(nh)w2 = torch. randn(nh,1); b2 = torch. zeros(1)def relu(x): return x. clamp_min(0. ) - 0. 5t1 = relu(lin(x_valid, w1, b1))def model(xb):  l1 = lin(xb, w1, b1)  l2 = relu(l1)  l3 = lin(l2, w2, b2)  return l32. 2 Loss function: MSE:  Mean squared error need unit vector, so we remove unit axis.   def mse(output, targ): return (output. squeeze(-1) - targ). pow(2). mean()    In python, in case you remove axis, you use ‘squeeze’, or add axis use ‘unsqueeze’ torch. squeeze where code commonly broken. so, when you use squeeze, clarify dimension axis you want to removetmp = torch. tensor([1,1])tmp. squeeze()&gt;&gt;&gt; tensor([1, 1]) make sure to make as float when you calculateBut why??? because it is tensor?{: style=”color:red; font-size: 130%;”}  This is forward passFootnote:       Fixup Initialization: Residual Learning Without Normalization &#8617;        Pytorch implementaion on Kaiming init of conv and linear layers &#8617;        Pytorch kaiming init issue &#8617;        Pytorch kaiming init explained &#8617;    "
     }, {
     "id": 14,
     "url": "http://localhost:4000/2019/11/note08-fastai-2/",
     "title": "Broadcasting, Einstein sum, Pytorch operator",
-    "body": "2019/11/21 - ” Lecture 08 - Deep Learning From Foundations-part2 “ Time comparison with pure Python:    Matmul with broadcasting&gt; 3194. 95 times faster     Einstein summation&gt; 16090. 91 times faster     Pytorch’s operator&gt; 49166. 67 times faster  Homework:  Frobenius Norm Review Broadcasting Review (especially Rule)     Refer colab! (I totally confused with extension of arrays)    torch. allclose Review np. einsum ReviewCONTENTS:  Elementwise op     Frobenius norm    Elementwise Matmul Broadcasting     Matmul with broadcasting   Broadcasting Rules    Einstein summation Pytorch opElementwise op: Frobenius norm:   above converted into (m*m). sum(). sqrt() Plus, don’t suffer from mathmatical symbols. He also copy and paste that equations from wikipedia.  and if you need latex form, download it from archive. Elementwise Matmul:  What is the meaning of elementwise?   We do not calculate each component. But all of the component at once. Because, length of column of A and row of B are fixed.   How much time we saved?  So now that takes 1. 37ms. We have removed one line of code and it is a 178 times faster…#TODOI don’t know where the 5 from. but keep it. Maybe this is related with frobenius norm…?as a result, the code before for k in range(ac):  c[i,j] += a[i,k] + b[k,j]the code after c[i,j] = (a[i,:] * b[:,j]). sum()To compare it (result betweet original and adjusted version) we use not test_eq but other function. The reason for this is that due to rounding errors from math operations, matrices may not be exactly the same. As a result, we want a function that will “is a equal to b within some tolerance” #exportdef near(a,b):   return torch. allclose(a, b, rtol=1e-3, atol=1e-5)def test_near(a,b):   test(a,b,near)test_near(t1, matmul(m1, m2))Broadcasting:  Now, we will use the broadcasting and removec[i,j] = (a[i,:] * b[:,j]). sum() How it works?&gt;&gt;&gt; a=tensor([[10,10,10],     [20,20,20],     [30,30,30]])&gt;&gt;&gt; b=tensor([1,2,3,])&gt;&gt;&gt; a,b  (tensor([[10, 10, 10],     [20, 20, 20],     [30, 30, 30]]),tensor([1, 2, 3]))     &gt;&gt;&gt; a+btensor([[11, 12, 13],    [21, 22, 23],    [31, 32, 33]])  &lt;Figure 2&gt; demonstrated how array b is broadcasting(or copied but not occupy memory) to compatible with a. Refered from numpy_tutorial   there is no loop, but it seems there is exactly the loop.     This is not from jeremy (actually after a moment he cover it) but i wondered How to broadcast an array by columns?  c=tensor([[1],[2],[3]])a+ctensor([[11, 11, 11],    [22, 22, 22],    [33, 33, 33]])s  What is tensor. stride()?help(t. stride)Help on built-in function stride:  stride(…) method of torch. Tensor instancestride(dim) -&gt; tuple or intReturns the stride of :attr:’self’ tensor. Stride is the jump necessary to go from one element to the next one in the specified dimension :attr:’dim’. A tuple of all strides is returned when no argument is passed in. Otherwise, an integer value is returned as the stride in the particular dimension :attr:’dim’. Args:  dim (int, optional): the desired dimension in which stride is requiredExample::* x = torch. tensor([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])``x. stride()` (5, 1)`x. stride(0)` 5`x. stride(-1)` 1   unsqueeze &amp; None index   We can manipulate rank of tensor Special value ‘None’, which means please squeeze a new axis here== please broadcast herec = torch. tensor([10,20,30])c[None,:] in c, squeeze a new axis in here please. Matmul with broadcasting: for i in range(ar):#  c[i,j] = (a[i,:]).      *[:,j]. sum() #previous  c[i]  = (a[i]. unsqueeze(-1) * b). sum(dim=0) And Using None also (As howard teached)c[i]  = (a[i ]. unsqueeze(-1) * b). sum(dim=0) #howardc[i]  = (a[i][:,None] * b). sum(dim=0) # using Nonec[i]  = (a[i,:,None]*b). sum(dim=0)⭐️Tips🌟 1) Anytime there’s a trailinng(final) colon in numpy or pytorch you can delete it ex) c[i, :] = c [i]2) any number of colon commas at the start, you can switch it with the single elipsis.  ex) c[:,:,:,:,i] = c […,i] Broadcasting Rules:  What if we tensor. size([1,3]) * tensor. size([3,1])?  torch. Size([3, 3])    What is scale????   What if they are one array is times of the other array? ex) Image : 256 x 256 x 3Scale : 128 x 256 x 3Result: ?   Why I did not inserted axis via None, but happened broadcasting? &gt;&gt;&gt; c * c[:,None]tensor([[100. , 200. , 300. ],    [200. , 400. , 600. ],    [300. , 600. , 900. ]])maybe it broadcast cz following array has 3 rows as same principle, no matter what nature shape was, if we do the operation tensor broadcasts to the other. &gt;&gt;&gt; c==c[None]tensor([[True, True, True]])&gt;&gt;&gt; c[None]==c[None,:]tensor([[True, True, True]])&gt;&gt;&gt;c[None,:]==ctensor([[True, True, True]])Einstein summation:  Creates batch-wise remove inner most loop, and replaced it with an elementwise producta. k. ac[i,j] += a[i,k] * b[k,j]inner most loop c[i,j] = (a[i,:] * b[:,j]). sum()elementwise product  Because K is repeated so we do a dot product. And it is torch. Usage of einsum()1) transpose2) diagnalisation tracing3) batch-wise (matmul) …  einstein summation notationdef matmul(a,b): return torch. einsum('ik,kj-&gt;ij', a, b)so after all, we are now 16000 times faster than Python. Pytorch op: 49166. 67 times faster than pure python And we will use this matrix multiplication in Fully Connect forward, with some initialized parameters and ReLU. But before that, we need initialized parameters and ReLU,: Reference:  TensorRank ti note"
+    "body": "2019/11/21 - ” Lecture 08 - Deep Learning From Foundations-part2 “ Time comparison with pure Python:    Matmul with broadcasting&gt; 3194. 95 times faster     Einstein summation&gt; 16090. 91 times faster     Pytorch’s operator&gt; 49166. 67 times faster  Homework:  Frobenius Norm Review Broadcasting Review (especially Rule)     Refer colab! (I totally confused with extension of arrays)    torch. allclose Review np. einsum ReviewCONTENTS:  Elementwise op1. Elementwise op: 1. 1 Frobenius norm:   above converted into (m*m). sum(). sqrt() Plus, don’t suffer from mathmatical symbols. He also copy and paste that equations from wikipedia.  and if you need latex form, download it from archive. 2. Elementwise Matmul:  What is the meaning of elementwise?   We do not calculate each component. But all of the component at once. Because, length of column of A and row of B are fixed.   How much time we saved?  So now that takes 1. 37ms. We have removed one line of code and it is a 178 times faster…#TODOI don’t know where the 5 from. but keep it. Maybe this is related with frobenius norm…?as a result, the code before for k in range(ac):  c[i,j] += a[i,k] + b[k,j]the code after c[i,j] = (a[i,:] * b[:,j]). sum()To compare it (result betweet original and adjusted version) we use not test_eq but other function. The reason for this is that due to rounding errors from math operations, matrices may not be exactly the same. As a result, we want a function that will “is a equal to b within some tolerance” #exportdef near(a,b):   return torch. allclose(a, b, rtol=1e-3, atol=1e-5)def test_near(a,b):   test(a,b,near)test_near(t1, matmul(m1, m2))3. Broadcasting:  Now, we will use the broadcasting and removec[i,j] = (a[i,:] * b[:,j]). sum() How it works?&gt;&gt;&gt; a=tensor([[10,10,10],     [20,20,20],     [30,30,30]])&gt;&gt;&gt; b=tensor([1,2,3,])&gt;&gt;&gt; a,b  (tensor([[10, 10, 10],     [20, 20, 20],     [30, 30, 30]]),tensor([1, 2, 3]))     &gt;&gt;&gt; a+btensor([[11, 12, 13],    [21, 22, 23],    [31, 32, 33]])  &lt;Figure 2&gt; demonstrated how array b is broadcasting(or copied but not occupy memory) to compatible with a. Refered from numpy_tutorial   there is no loop, but it seems there is exactly the loop.     This is not from jeremy (actually after a moment he cover it) but i wondered How to broadcast an array by columns?  c=tensor([[1],[2],[3]])a+ctensor([[11, 11, 11],    [22, 22, 22],    [33, 33, 33]])s  What is tensor. stride()?help(t. stride)Help on built-in function stride:  stride(…) method of torch. Tensor instancestride(dim) -&gt; tuple or intReturns the stride of :attr:’self’ tensor. Stride is the jump necessary to go from one element to the next one in the specified dimension :attr:’dim’. A tuple of all strides is returned when no argument is passed in. Otherwise, an integer value is returned as the stride in the particular dimension :attr:’dim’. Args:  dim (int, optional): the desired dimension in which stride is requiredExample::* x = torch. tensor([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])``x. stride()` (5, 1)`x. stride(0)` 5`x. stride(-1)` 1   unsqueeze &amp; None index   We can manipulate rank of tensor Special value ‘None’, which means please squeeze a new axis here== please broadcast herec = torch. tensor([10,20,30])c[None,:] in c, squeeze a new axis in here please. 2. 2 Matmul with broadcasting: for i in range(ar):#  c[i,j] = (a[i,:]).      *[:,j]. sum() #previous  c[i]  = (a[i]. unsqueeze(-1) * b). sum(dim=0) And Using None also (As howard teached)c[i]  = (a[i ]. unsqueeze(-1) * b). sum(dim=0) #howardc[i]  = (a[i][:,None] * b). sum(dim=0) # using Nonec[i]  = (a[i,:,None]*b). sum(dim=0)⭐️Tips🌟 1) Anytime there’s a trailinng(final) colon in numpy or pytorch you can delete it ex) c[i, :] = c [i]2) any number of colon commas at the start, you can switch it with the single elipsis.  ex) c[:,:,:,:,i] = c […,i] 2. 3 Broadcasting Rules:  What if we tensor. size([1,3]) * tensor. size([3,1])?  torch. Size([3, 3])    What is scale????   What if they are one array is times of the other array? ex) Image : 256 x 256 x 3Scale : 128 x 256 x 3Result: ?   Why I did not inserted axis via None, but happened broadcasting? &gt;&gt;&gt; c * c[:,None]tensor([[100. , 200. , 300. ],    [200. , 400. , 600. ],    [300. , 600. , 900. ]])maybe it broadcast cz following array has 3 rows as same principle, no matter what nature shape was, if we do the operation tensor broadcasts to the other. &gt;&gt;&gt; c==c[None]tensor([[True, True, True]])&gt;&gt;&gt; c[None]==c[None,:]tensor([[True, True, True]])&gt;&gt;&gt;c[None,:]==ctensor([[True, True, True]])3. Einstein summation:  Creates batch-wise remove inner most loop, and replaced it with an elementwise producta. k. ac[i,j] += a[i,k] * b[k,j]inner most loop c[i,j] = (a[i,:] * b[:,j]). sum()elementwise product  Because K is repeated so we do a dot product. And it is torch. Usage of einsum()1) transpose2) diagnalisation tracing3) batch-wise (matmul) …  einstein summation notationdef matmul(a,b): return torch. einsum('ik,kj-&gt;ij', a, b)so after all, we are now 16000 times faster than Python. 4. Pytorch op: 49166. 67 times faster than pure python And we will use this matrix multiplication in Fully Connect forward, with some initialized parameters and ReLU. But before that, we need initialized parameters and ReLU,: Footnote:  TensorRank ti note"
     }, {
     "id": 15,
     "url": "http://localhost:4000/2019/11/julia-evans/",
@@ -303,7 +303,7 @@ function lunr_search(term) {
                             <span class="text-muted d-block mt-1">Nov 26, 2019 · <span class="reading-time">
   
   
-    4 mins read
+    6 mins read
   
 </span>
     </span>
@@ -348,13 +348,17 @@ function lunr_search(term) {
 		</div>
         
         
-		<div class="col-md-12 col-lg-8">
+		<div class="col-md-12 col-lg-10">
             
             <!-- Article -->
 			<article class="article-post">                
 			<p>” Lecture 08 - Deep Learning From Foundations-part2 “</p>
 
 <h3 class="no_toc" id="homework">Homework</h3>
+
+<ul>
+  <li>I often confuse that y is scalar, not a vector.</li>
+</ul>
 
 <hr />
 
@@ -363,9 +367,8 @@ function lunr_search(term) {
 <ul id="markdown-toc">
   <li><a href="#2-foundation-version" id="markdown-toc-2-foundation-version">2. Foundation version</a>    <ul>
       <li><a href="#23-gradients-backward-pass" id="markdown-toc-23-gradients-backward-pass">2.3 Gradients backward pass</a>        <ul>
-          <li><a href="#chain-rule-with-code" id="markdown-toc-chain-rule-with-code">chain rule with code</a></li>
           <li><a href="#decompose-function" id="markdown-toc-decompose-function">decompose function</a></li>
-          <li><a href="#derivative-chain-rule" id="markdown-toc-derivative-chain-rule">derivative chain-rule</a></li>
+          <li><a href="#chain-rule-with-code" id="markdown-toc-chain-rule-with-code">chain rule with code</a></li>
         </ul>
       </li>
     </ul>
@@ -377,6 +380,12 @@ function lunr_search(term) {
     </ul>
   </li>
 </ul>
+
+<ul>
+  <li>Forward process</li>
+</ul>
+
+<p><img src="/assets/images/4-forward.png" alt="" /></p>
 
 <h3 id="2-foundation-version">2. Foundation version</h3>
 
@@ -414,35 +423,106 @@ function lunr_search(term) {
 
 <p><img src="/assets/images/4-calculus.jpeg" alt="" /></p>
 
-<p style="color:gray; font-size: 80%; text-align: center;">you need review at this part</p>
+<p style="color:gray; font-size: 110%; text-align: center;">BTW, why Jeremy wrote <script type="math/tex">\hat y</script>, not <em>Loss function</em>?<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+
+<h5 id="decompose-function">decompose function</h5>
+
+<ul>
+  <li>We want to get derivative of <script type="math/tex"> w_1 </script> which forms <script type="math/tex">t=x_1 @ w_1 + b_1</script></li>
+  <li>But, we have a estimation of answer (<em>we call it y hat</em>) now</li>
+  <li>So, I will decompose funciton to trace target variable.</li>
+</ul>
+
+<script type="math/tex; mode=display">\overset{\rightharpoonup}{u}\ \ linear_1\ \ \overset{\rightharpoonup}{w}\ \ ReLU\ \ \overset{\rightharpoonup}{v}\ \ linear_2\ \ \overset{\rightharpoonup}{a}\ \ MSE = \hat y</script>
+
+<ul>
+  <li>Using the above forward pass, we can suppose some function from the end.</li>
+  <li>start from <script type="math/tex">  \hat y </script>, We know MSE funciton got two parameters, output, <script type="math/tex">u</script> and target <script type="math/tex">y</script>.</li>
+  <li>from MSE’s input we know <script type="math/tex">  linear_2</script> function’s output and supposing v is input of that function, <script type="math/tex">linear_2(v) = u</script></li>
+  <li>similarly, <em>v</em> became output of <script type="math/tex">ReLU, ReLU(t) = v</script></li>
+</ul>
+
+<p><img src="/assets/images/4-backward3.jpeg" alt="" height="70%" width="70%" /></p>
 
 <h5 id="chain-rule-with-code">chain rule with code</h5>
+
+<ul>
+  <li>examplify backward process by random sampling</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">"{x_train.shape}, {w1.shape}, {b1.shape}</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">"{lin2.shape}, {w2.shape}, {b2.shape}</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+<span class="n">f</span><span class="s">"{mse_loss.shape}, {y_train.shape}, {lin3.shape}"</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">50000</span><span class="p">,</span> <span class="mi">784</span><span class="p">]),</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">784</span><span class="p">,</span> <span class="mi">50</span><span class="p">]),</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">50</span><span class="p">])</span>
+
+<span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">50000</span><span class="p">,</span> <span class="mi">50</span><span class="p">]),</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">50</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="s">'torch.Size([]), torch.Size([50000]), torch.Size([50000, 1])'</span>
+</code></pre></div></div>
 
 <p>1) start with the very last function, which is loss funciton. MSE</p>
 
 <p><img src="/assets/images/4-mse.jpeg" alt="" height="70%" width="70%" /></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">mse_grad</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span> 
+<script type="math/tex; mode=display">\color{red}{\frac{\partial}{\partial u}MSE(u,y)} \times\frac{\partial}{\partial v}l_2(v)\times\frac{\partial}{\partial t}ReLU(t)\times\frac{\partial}{\partial x}l_1(x)</script>
+
+<ul>
+  <li>in <em>mse_grad</em> function, we store the gradient in inp.g{: style=”color:gray; font-size: 110%; text-align: center;”}</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">mse_grad</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span>
     <span class="c1"># grad of loss with respect to output of previous layer
 </span>    <span class="n">inp</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="mf">2.</span> <span class="o">*</span> <span class="p">(</span><span class="n">inp</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span> <span class="o">-</span> <span class="n">targ</span><span class="p">)</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">inp</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div></div>
 
 <ul>
-  <li>Store it to <strong>.g</strong> attributes, so we can multiply all things together.</li>
+  <li>And cz we defined mse_grad function’s parameters before, we can use lin3 as input of mse</li>
 </ul>
 
-<p>2) derivative of ReLU</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="n">lin3</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tensor</span><span class="p">([[</span> <span class="o">-</span><span class="mf">1.3000</span><span class="p">],</span>
+        <span class="p">[</span> <span class="o">-</span><span class="mf">0.2116</span><span class="p">],</span>
+        <span class="p">[</span> <span class="o">-</span><span class="mf">5.8100</span><span class="p">],</span>
+        <span class="o">...</span><span class="p">,</span>
+        <span class="p">[</span> <span class="o">-</span><span class="mf">2.2477</span><span class="p">],</span>
+        <span class="p">[</span> <span class="o">-</span><span class="mf">0.3279</span><span class="p">],</span>
+        <span class="p">[</span><span class="o">-</span><span class="mf">11.7130</span><span class="p">]])</span>
+</code></pre></div></div>
+
+<ul>
+  <li>We can just calculate using broadcasting, not using squeeze. then why should do and unsqueeze again?<br />
+🎯 It’s related with random access memory(RAM).. If I don’t <em>squeeze</em>, (I’m using colab) <strong>it out of RAM</strong>.</li>
+</ul>
+
+<p>3) Derivative of linear3 function</p>
+
+<ul>
+  <li>the gradient of a matrix product is the matrix product with the transposed , $$ inp.g = out.g \  @  \ w.t() $$</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">lin_grad</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="c1"># grad of matmul with respect to input
+</span>    <span class="n">inp</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span> <span class="o">@</span> <span class="n">w</span><span class="o">.</span><span class="n">t</span><span class="p">()</span>
+    <span class="n">w</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">inp</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>2) derivative of ReLU (linear2)</p>
 
 <p><img src="/assets/images/4-relu.png" alt="" /></p>
 
-<p><img src="/assets/images/4-chain-step2.jpeg" alt="" /></p>
+<p><img src="/assets/images/4-relugrad.png" alt="" /></p>
+
+<script type="math/tex; mode=display">\frac{\partial}{\partial u}MSE(u,y) \times \color{red}{\frac{\partial}{\partial v}l_2(v)} \times \frac{\partial}{\partial t}ReLU(t)\times\frac{\partial}{\partial x}l_1(x)</script>
 
 <ul>
   <li>
-    <p>Because this is chain rule, we do <strong>(garident of ReLU) * (gradient of output)</strong></p>
+    <p>Because this is chain rule, after we get <script type="math/tex">\color{red}{\frac{\partial}{\partial v}l_2(v)}</script> we should multiply it with <strong>inp.g</strong></p>
   </li>
   <li>
-    <p>But we did gradient of output just before, which is gradient of MSE. so we can multiply it by out.g(which was inp.g before)</p>
+    <p>However,</p>
   </li>
 </ul>
 
@@ -451,7 +531,7 @@ function lunr_search(term) {
 </span>    <span class="n">inp</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">inp</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="nb">float</span><span class="p">()</span> <span class="o">*</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span>
 </code></pre></div></div>
 
-<p>3) Derivative of linear function</p>
+<p>3) Derivative of linear1</p>
 
 <ul>
   <li>the gradient of a matrix product is the matrix product with the transposed , $$ inp.g = out.g \  @  \ w.t() $$</li>
@@ -481,31 +561,22 @@ function lunr_search(term) {
     <span class="n">lin_grad</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">l1</span><span class="p">,</span> <span class="n">w1</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h5 id="decompose-function">decompose function</h5>
-
-<ul>
-  <li>We want to get derivative of <script type="math/tex"> w_1 </script> which forms <script type="math/tex">t=x_1 @ w_1 + b_1</script></li>
-  <li>But, we have a estimation of answer (<em>we call it y hat</em>) now</li>
-  <li>So, I will decompose funciton to trace target variable.</li>
-</ul>
-
-<script type="math/tex; mode=display">\overset{\rightharpoonup}{u}\ \ linear_1\ \ \overset{\rightharpoonup}{w}\ \ ReLU\ \ \overset{\rightharpoonup}{v}\ \ linear_2\ \ \overset{\rightharpoonup}{a}\ \ MSE = \hat y</script>
-
-<ul>
-  <li>Using the above forward pass, we can suppose some function from the end.</li>
-  <li>start from <script type="math/tex">  \hat y </script>, We know MSE funciton got two parameters, output, <script type="math/tex">u</script> and target <script type="math/tex">y</script>.</li>
-  <li>from MSE’s input we know <script type="math/tex">  linear_2</script> function’s output and supposing v is input of that function, <script type="math/tex">linear_2(v) = u</script></li>
-  <li>similarly, <em>v</em> became output of <script type="math/tex">ReLU, ReLU(t) = v</script></li>
-</ul>
-
-<h5 id="derivative-chain-rule">derivative chain-rule</h5>
-
 <h3 id="3-refactor-model">3. Refactor model</h3>
 <h4 id="31-layers-as-classes">3.1 Layers as classes</h4>
 <h4 id="32-modueforward">3.2 Modue.forward()</h4>
 <h4 id="33-nnlinear-and-nnmodule">3.3 nn.Linear and nn.Module</h4>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+
+<h3 class="no_toc" id="footnote">Footnote</h3>
+<hr />
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><a href="https://forums.fast.ai/t/lesson-8-2019-discussion-wiki/41323/433">fast.ai forums Lesson-8</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
                 
 			</article>
 			

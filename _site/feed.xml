@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-10T03:03:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Gradient backward</title><link href="http://localhost:4000/2019/11/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward" /><published>2019-11-26T00:00:00+09:00</published><updated>2019-11-26T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-4/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-10T16:41:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Gradient backward</title><link href="http://localhost:4000/2019/11/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward" /><published>2019-11-26T00:00:00+09:00</published><updated>2019-11-26T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-4/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
 
 &lt;h3 class=&quot;no_toc&quot; id=&quot;homework&quot;&gt;Homework&lt;/h3&gt;
 
@@ -142,11 +142,24 @@
 🎯 It’s related with random access memory(RAM).. If I don’t &lt;em&gt;squeeze&lt;/em&gt;, (I’m using colab) &lt;strong&gt;it out of RAM&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;3) Derivative of linear3 function&lt;/p&gt;
+&lt;p&gt;2) Derivative of linear2 function&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;the gradient of a matrix product is the matrix product with the transposed , $$ inp.g = out.g \  @  \ w.t() $$&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We have to do partial differentiation&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;input: ReLU(lin1), w2, b2, output: ReLU(lin1) @ w2 + b2&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;script type=&quot;math/tex&quot;&gt;\frac{\partial x_2}{\partial\ lin_2 = \ x_2 @ w_2 + b_2} = w_2&lt;/script&gt;
+
+&lt;script type=&quot;math/tex&quot;&gt;\frac{\partial w_2}{\partial\ lin_2 = \ x_2 @ w_2 + b_2} = x_2&lt;/script&gt;
+
+&lt;script type=&quot;math/tex&quot;&gt;\frac{\partial b_2}{\partial\ lin_2 = \ x_2 @ w_2 + b_2} = 1&lt;/script&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/4-wayofbackward.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;lin_grad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;# grad of matmul with respect to input

@@ -2,8 +2,8 @@
 layout: post
 title: "The list of Pytorch tensor methods"
 author: dionne
-categories: [Fast.AI-v3]
-image: assets/images/4-backward.png
+categories: [library]
+image: assets/images/pytorch.png
 tags: [ featured ]
 ---
 

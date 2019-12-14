@@ -31,6 +31,7 @@ check clamp
 'relu_':
 'sqrt':
 'sqrt_':
+'stride':
 
 ---
 
@@ -454,7 +455,6 @@ check clamp
 'storage':
 'storage_offset':
 'storage_type':
-'stride':
 'sub':
 'sub_':
 'sum':

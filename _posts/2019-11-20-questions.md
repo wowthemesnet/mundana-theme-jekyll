@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Review Lesson 08"
+title: "Questions studying Lesson 08"
 author: dionne
-categories: [Question]
+categories: [QnA]
 image: 
-tags: [ Fast.AI-v3 ]
+tags: [ Fast.AI-v3, python ]
 ---
 
 #### fast.ai v3 course

@@ -1,13 +1,19 @@
 ---
 layout: post
-title: "The list of Pytorch tensor methods"
+title: "Pytorch"
 author: dionne
 categories: [library]
 image: assets/images/pytorch.png
 tags: [ featured ]
 ---
 
-- method I've ever used
+- This is the list when I type 
+
+~~~python
+dir(torch.tensor)
+~~~
+
+which means these are all tensor methods.
 
 'clamp_max':
 'clamp_max_':

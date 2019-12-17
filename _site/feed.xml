@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-17T01:08:53+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">What is a convolution?</title><link href="http://localhost:4000/2019/12/convolution/" rel="alternate" type="text/html" title="What is a convolution?" /><published>2019-12-16T00:00:00+09:00</published><updated>2019-12-16T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/convolution</id><content type="html" xml:base="http://localhost:4000/2019/12/convolution/">&lt;p&gt;This is the part of Journey which Jeremy recommended us to do.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-17T20:53:19+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">What is a convolution?</title><link href="http://localhost:4000/2019/12/convolution/" rel="alternate" type="text/html" title="What is a convolution?" /><published>2019-12-16T00:00:00+09:00</published><updated>2019-12-16T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/convolution</id><content type="html" xml:base="http://localhost:4000/2019/12/convolution/">&lt;p&gt;This is the part of Journey which Jeremy recommended us to do.
 One of the concepts I have to know.&lt;/p&gt;
 
 &lt;p&gt;1) Kaiming Initializtion in Pytorch was in trouble.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
@@ -186,7 +186,7 @@ One of the concepts I have to know.&lt;/p&gt;
   &lt;p&gt;we’re going to try and use that to really understand what’s going on. So to warn you, none of it is rocket science but a lot of its going to look really new. So don’t expect to get it the first time but expect to listen and jump into the notebook try a few things test things out look particularly at like tensor shapes and inputs and outputs to check your understanding then go back and listen again. But and kind of try it, a few times, because you will get there right, it’s just that there’s going to be a lot of new concepts because we haven’t done that much stuff in pure Pytorch.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p style=&quot;color:gray; font-size: 90%; text-align: right;&quot;&gt;Lesson 6: Deep Learning 2019&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">How he impacted me?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/jeremy-howard.jpeg" /></entry><entry><title type="html">Making my own classifier with my own data</title><link href="http://localhost:4000/2019/12/note02-fastai-1/" rel="alternate" type="text/html" title="Making my own classifier with my own data" /><published>2019-12-14T00:00:00+09:00</published><updated>2019-12-14T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/note02-fastai-1</id><content type="html" xml:base="http://localhost:4000/2019/12/note02-fastai-1/">&lt;p&gt;Making a classifier which can seperate &lt;span style=&quot;color: red&quot;&gt;Munich&lt;/span&gt; from &lt;span style=&quot;color: red&quot;&gt;Berlin&lt;/span&gt; and &lt;span style=&quot;color: red&quot;&gt;Hamburg&lt;/span&gt;!
+&lt;p style=&quot;color:gray; font-size: 90%; text-align: right;&quot;&gt;Lesson 6: Deep Learning 2019&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">How he impacted me?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/jeremy-howard.jpeg" /></entry><entry><title type="html">Making my own classifier with my own data (Munich vs Berlin vs Dresden)</title><link href="http://localhost:4000/2019/12/note02-fastai-1/" rel="alternate" type="text/html" title="Making my own classifier with my own data (Munich vs Berlin vs Dresden)" /><published>2019-12-14T00:00:00+09:00</published><updated>2019-12-14T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/note02-fastai-1</id><content type="html" xml:base="http://localhost:4000/2019/12/note02-fastai-1/">&lt;p&gt;Making a classifier which can seperate &lt;span style=&quot;color: red&quot;&gt;Munich&lt;/span&gt; from &lt;span style=&quot;color: red&quot;&gt;Berlin&lt;/span&gt; and &lt;span style=&quot;color: red&quot;&gt;Dresden&lt;/span&gt;!
 (hoping my well in Munich!🤟)&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -196,7 +196,8 @@ One of the concepts I have to know.&lt;/p&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#1-creating-dataset-from-google-images&quot; id=&quot;markdown-toc-1-creating-dataset-from-google-images&quot;&gt;1. Creating dataset from google images&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#11-get-a-list-of-urls--download-imgs&quot; id=&quot;markdown-toc-11-get-a-list-of-urls--download-imgs&quot;&gt;1.1 Get a list of URLs &amp;amp; Download imgs&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#12-create-imagedatabunch&quot; id=&quot;markdown-toc-12-create-imagedatabunch&quot;&gt;1.2 Create ImageDataBunch&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#12-using-google_images_download&quot; id=&quot;markdown-toc-12-using-google_images_download&quot;&gt;1.2 Using &lt;code class=&quot;highlighter-rouge&quot;&gt;google_images_download&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#13-create-imagedatabunch&quot; id=&quot;markdown-toc-13-create-imagedatabunch&quot;&gt;1.3 Create ImageDataBunch&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#2-train-model&quot; id=&quot;markdown-toc-2-train-model&quot;&gt;2. Train model&lt;/a&gt;&lt;/li&gt;
@@ -215,31 +216,32 @@ One of the concepts I have to know.&lt;/p&gt;
 &lt;h3 id=&quot;1-creating-dataset-from-google-images&quot;&gt;1. Creating dataset from google images&lt;/h3&gt;
 &lt;h4 id=&quot;11-get-a-list-of-urls--download-imgs&quot;&gt;1.1 Get a list of URLs &amp;amp; Download imgs&lt;/h4&gt;
 
+&lt;p&gt;Go to the google image, type “image” in advanced search,&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Go to the google image, type “image” in advanced search,
-    &lt;ul&gt;
-      &lt;li&gt;In my case, I searched “Munch” -Berlin -Gutenberg,  “Berlin” -Munch -Gutenberg, “Gutenberg” -Munch -Berlin&lt;/li&gt;
-      &lt;li&gt;Then, go to the &lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced search&lt;/code&gt; and select type of &lt;code class=&quot;highlighter-rouge&quot;&gt;image: photo&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Scroll down when you can see button “show more results”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Download img urls
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;opt + cmd + J&lt;/code&gt; if you are using mac os, or &lt;code class=&quot;highlighter-rouge&quot;&gt;ctl + shift + j&lt;/code&gt; if your os is windows&lt;/li&gt;
-      &lt;li&gt;And type below js code&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;In my case, I searched “Munch” -Berlin -Gutenberg,  “Berlin” -Munch -Gutenberg, “Gutenberg” -Munch -Berlin&lt;/li&gt;
+  &lt;li&gt;Then, go to the &lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced search&lt;/code&gt; and select type of &lt;code class=&quot;highlighter-rouge&quot;&gt;image: photo&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Scroll down when you can see button “show more results”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Download img urls&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;opt + cmd + J&lt;/code&gt; if you are using mac os, or &lt;code class=&quot;highlighter-rouge&quot;&gt;ctl + shift + j&lt;/code&gt; if your os is windows&lt;/li&gt;
+  &lt;li&gt;And type below js code&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;urls&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelectorAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'.rg_i'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hasAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'data-src'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)?&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'data-src'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'data-iurl'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'data:text/csv;charset=utf-8,'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;escape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;urls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;n'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;12-create-imagedatabunch&quot;&gt;1.2 Create ImageDataBunch&lt;/h4&gt;
+&lt;h4 id=&quot;12-using-google_images_download&quot;&gt;1.2 Using &lt;code class=&quot;highlighter-rouge&quot;&gt;google_images_download&lt;/code&gt;&lt;/h4&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;This is not google official package&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://google-images-download.readthedocs.io/en/latest/index.html&quot;&gt;Official Doncument&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;13-create-imagedatabunch&quot;&gt;1.3 Create ImageDataBunch&lt;/h4&gt;
+
+&lt;p&gt;We need to separate validation set because we just grabbed these imagese from Google search. Jeremy recommended assign 20%.&lt;/p&gt;
 
 &lt;h3 id=&quot;2-train-model&quot;&gt;2. Train model&lt;/h3&gt;
 &lt;h3 id=&quot;3-interpretation&quot;&gt;3. Interpretation&lt;/h3&gt;
@@ -253,7 +255,7 @@ One of the concepts I have to know.&lt;/p&gt;
 
 &lt;h3 class=&quot;no_toc&quot; id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.pyimagesearch.com/2017/12/04/how-to-create-a-deep-learning-dataset-using-google-images/&quot;&gt;How to create a deep learning dataset using Google Images&lt;/a&gt;&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">Making a classifier which can seperate Munich from Berlin and Hamburg! (hoping my well in Munich!🤟)</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/munich.jpg" /></entry><entry><title type="html">Pytorch</title><link href="http://localhost:4000/2019/12/pytorch-tensor/" rel="alternate" type="text/html" title="Pytorch" /><published>2019-12-12T00:00:00+09:00</published><updated>2019-12-12T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/pytorch-tensor</id><content type="html" xml:base="http://localhost:4000/2019/12/pytorch-tensor/">&lt;ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.pyimagesearch.com/2017/12/04/how-to-create-a-deep-learning-dataset-using-google-images/&quot;&gt;How to create a deep learning dataset using Google Images&lt;/a&gt;&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">Making a classifier which can seperate Munich from Berlin and Dresden! (hoping my well in Munich!🤟)</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/munich.jpg" /></entry><entry><title type="html">Pytorch</title><link href="http://localhost:4000/2019/12/pytorch-tensor/" rel="alternate" type="text/html" title="Pytorch" /><published>2019-12-12T00:00:00+09:00</published><updated>2019-12-12T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/pytorch-tensor</id><content type="html" xml:base="http://localhost:4000/2019/12/pytorch-tensor/">&lt;ul&gt;
   &lt;li&gt;This is the list when I type&lt;/li&gt;
 &lt;/ul&gt;
 

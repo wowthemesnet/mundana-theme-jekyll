@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Making my own classifier with my own data | SpellOnYou</title>
+    <title>Making my own classifier with my own data (Munich vs Berlin vs Dresden) | SpellOnYou</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Making my own classifier with my own data | SpellOnYou</title>
+<title>Making my own classifier with my own data (Munich vs Berlin vs Dresden) | SpellOnYou</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Making my own classifier with my own data" />
+<meta property="og:title" content="Making my own classifier with my own data (Munich vs Berlin vs Dresden)" />
 <meta name="author" content="dionne" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Making a classifier which can seperate Munich from Berlin and Hamburg! (hoping my well in Munich!🤟)" />
-<meta property="og:description" content="Making a classifier which can seperate Munich from Berlin and Hamburg! (hoping my well in Munich!🤟)" />
+<meta name="description" content="Making a classifier which can seperate Munich from Berlin and Dresden! (hoping my well in Munich!🤟)" />
+<meta property="og:description" content="Making a classifier which can seperate Munich from Berlin and Dresden! (hoping my well in Munich!🤟)" />
 <link rel="canonical" href="http://localhost:4000/2019/12/note02-fastai-1/" />
 <meta property="og:url" content="http://localhost:4000/2019/12/note02-fastai-1/" />
 <meta property="og:site_name" content="SpellOnYou" />
-<meta property="og:image" content="http://localhost:4000/munich.jpg" />
+<meta property="og:image" content="http://localhost:4000/assets/images/munich.jpg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-12-14T00:00:00+09:00" />
 <script type="application/ld+json">
-{"description":"Making a classifier which can seperate Munich from Berlin and Hamburg! (hoping my well in Munich!🤟)","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/12/note02-fastai-1/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/munich.jpg","headline":"Making my own classifier with my own data","dateModified":"2019-12-14T00:00:00+09:00","datePublished":"2019-12-14T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/12/note02-fastai-1/"},"@context":"http://schema.org"}</script>
+{"description":"Making a classifier which can seperate Munich from Berlin and Dresden! (hoping my well in Munich!🤟)","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/12/note02-fastai-1/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/munich.jpg","headline":"Making my own classifier with my own data (Munich vs Berlin vs Dresden)","dateModified":"2019-12-14T00:00:00+09:00","datePublished":"2019-12-14T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/12/note02-fastai-1/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -173,8 +173,8 @@ var documents = [{
     }, {
     "id": 14,
     "url": "http://localhost:4000/2019/12/note02-fastai-1/",
-    "title": "Making my own classifier with my own data",
-    "body": "2019/12/14 - Making a classifier which can seperate Munich from Berlin and Hamburg!(hoping my well in Munich!🤟) CONTENTS:  1. Creating dataset from google images     1. 1 Get a list of URLs &amp; Download imgs   1. 2 Create ImageDataBunch    2. Train model 3. Interpretation 4. Cleaning Up 5. Putting your model in production 6. Things that can go wrong     6. 1 Learning rate (LR) too high   6. 2 Learning rate (LR) too low   6. 3 Too few epochs   6. 4 Too many epochs   1. Creating dataset from google images: 1. 1 Get a list of URLs &amp; Download imgs:  Go to the google image, type “image” in advanced search,     In my case, I searched “Munch” -Berlin -Gutenberg, “Berlin” -Munch -Gutenberg, “Gutenberg” -Munch -Berlin   Then, go to the Advanced search and select type of image: photo   Scroll down when you can see button “show more results”    Download img urls     opt + cmd + J if you are using mac os, or ctl + shift + j if your os is windows   And type below js code   urls=Array. from(document. querySelectorAll('. rg_i')). map(el=&gt; el. hasAttribute('data-src')?el. getAttribute('data-src'):el. getAttribute('data-iurl'));window. open('data:text/csv;charset=utf-8,' + escape(urls. join('\n')));1. 2 Create ImageDataBunch:  2. Train model: 3. Interpretation: 4. Cleaning Up: 5. Putting your model in production: 6. Things that can go wrong: 6. 1 Learning rate (LR) too high: 6. 2 Learning rate (LR) too low: 6. 3 Too few epochs: 6. 4 Too many epochs: Reference: How to create a deep learning dataset using Google Images "
+    "title": "Making my own classifier with my own data (Munich vs Berlin vs Dresden)",
+    "body": "2019/12/14 - Making a classifier which can seperate Munich from Berlin and Dresden!(hoping my well in Munich!🤟) CONTENTS:  1. Creating dataset from google images     1. 1 Get a list of URLs &amp; Download imgs   1. 2 Using google_images_download   1. 3 Create ImageDataBunch    2. Train model 3. Interpretation 4. Cleaning Up 5. Putting your model in production 6. Things that can go wrong     6. 1 Learning rate (LR) too high   6. 2 Learning rate (LR) too low   6. 3 Too few epochs   6. 4 Too many epochs   1. Creating dataset from google images: 1. 1 Get a list of URLs &amp; Download imgs: Go to the google image, type “image” in advanced search,  In my case, I searched “Munch” -Berlin -Gutenberg, “Berlin” -Munch -Gutenberg, “Gutenberg” -Munch -Berlin Then, go to the Advanced search and select type of image: photo Scroll down when you can see button “show more results”Download img urls  opt + cmd + J if you are using mac os, or ctl + shift + j if your os is windows And type below js codeurls=Array. from(document. querySelectorAll('. rg_i')). map(el=&gt; el. hasAttribute('data-src')?el. getAttribute('data-src'):el. getAttribute('data-iurl'));window. open('data:text/csv;charset=utf-8,' + escape(urls. join('\n')));1. 2 Using google_images_download: This is not google official package Official Doncument 1. 3 Create ImageDataBunch: We need to separate validation set because we just grabbed these imagese from Google search. Jeremy recommended assign 20%. 2. Train model: 3. Interpretation: 4. Cleaning Up: 5. Putting your model in production: 6. Things that can go wrong: 6. 1 Learning rate (LR) too high: 6. 2 Learning rate (LR) too low: 6. 3 Too few epochs: 6. 4 Too many epochs: Reference: How to create a deep learning dataset using Google Images "
     }, {
     "id": 15,
     "url": "http://localhost:4000/2019/12/pytorch-tensor/",
@@ -316,14 +316,14 @@ function lunr_search(term) {
                         
                         </span>
 					</p>
-					<h1 class="display-4 mb-4 article-headline">Making my own classifier with my own data</h1>
+					<h1 class="display-4 mb-4 article-headline">Making my own classifier with my own data (Munich vs Berlin vs Dresden)</h1>
 					<div class="d-flex align-items-center">
                         
 						<small class="ml-3">  <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
                             <span class="text-muted d-block mt-1">Dec 14, 2019 · <span class="reading-time">
   
   
-    1 min read
+    2 mins read
   
 </span>
     </span>
@@ -332,7 +332,7 @@ function lunr_search(term) {
 				</div>
                 
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="/munich.jpg" alt="Making my own classifier with my own data">
+					<img class="rounded" src="/assets/images/munich.jpg" alt="Making my own classifier with my own data (Munich vs Berlin vs Dresden)">
 				</div>
                 
 			</div>
@@ -372,7 +372,7 @@ function lunr_search(term) {
             
             <!-- Article -->
 			<article class="article-post">                
-			<p>Making a classifier which can seperate <span style="color: red">Munich</span> from <span style="color: red">Berlin</span> and <span style="color: red">Hamburg</span>!
+			<p>Making a classifier which can seperate <span style="color: red">Munich</span> from <span style="color: red">Berlin</span> and <span style="color: red">Dresden</span>!
 (hoping my well in Munich!🤟)</p>
 
 <hr />
@@ -382,7 +382,8 @@ function lunr_search(term) {
 <ul id="markdown-toc">
   <li><a href="#1-creating-dataset-from-google-images" id="markdown-toc-1-creating-dataset-from-google-images">1. Creating dataset from google images</a>    <ul>
       <li><a href="#11-get-a-list-of-urls--download-imgs" id="markdown-toc-11-get-a-list-of-urls--download-imgs">1.1 Get a list of URLs &amp; Download imgs</a></li>
-      <li><a href="#12-create-imagedatabunch" id="markdown-toc-12-create-imagedatabunch">1.2 Create ImageDataBunch</a></li>
+      <li><a href="#12-using-google_images_download" id="markdown-toc-12-using-google_images_download">1.2 Using <code class="highlighter-rouge">google_images_download</code></a></li>
+      <li><a href="#13-create-imagedatabunch" id="markdown-toc-13-create-imagedatabunch">1.3 Create ImageDataBunch</a></li>
     </ul>
   </li>
   <li><a href="#2-train-model" id="markdown-toc-2-train-model">2. Train model</a></li>
@@ -401,31 +402,32 @@ function lunr_search(term) {
 <h3 id="1-creating-dataset-from-google-images">1. Creating dataset from google images</h3>
 <h4 id="11-get-a-list-of-urls--download-imgs">1.1 Get a list of URLs &amp; Download imgs</h4>
 
+<p>Go to the google image, type “image” in advanced search,</p>
 <ul>
-  <li>Go to the google image, type “image” in advanced search,
-    <ul>
-      <li>In my case, I searched “Munch” -Berlin -Gutenberg,  “Berlin” -Munch -Gutenberg, “Gutenberg” -Munch -Berlin</li>
-      <li>Then, go to the <code class="highlighter-rouge">Advanced search</code> and select type of <code class="highlighter-rouge">image: photo</code></li>
-      <li>Scroll down when you can see button “show more results”</li>
-    </ul>
-  </li>
-  <li>Download img urls
-    <ul>
-      <li><code class="highlighter-rouge">opt + cmd + J</code> if you are using mac os, or <code class="highlighter-rouge">ctl + shift + j</code> if your os is windows</li>
-      <li>And type below js code</li>
-    </ul>
-  </li>
+  <li>In my case, I searched “Munch” -Berlin -Gutenberg,  “Berlin” -Munch -Gutenberg, “Gutenberg” -Munch -Berlin</li>
+  <li>Then, go to the <code class="highlighter-rouge">Advanced search</code> and select type of <code class="highlighter-rouge">image: photo</code></li>
+  <li>Scroll down when you can see button “show more results”</li>
+</ul>
+
+<p>Download img urls</p>
+<ul>
+  <li><code class="highlighter-rouge">opt + cmd + J</code> if you are using mac os, or <code class="highlighter-rouge">ctl + shift + j</code> if your os is windows</li>
+  <li>And type below js code</li>
 </ul>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">urls</span><span class="o">=</span><span class="nb">Array</span><span class="p">.</span><span class="k">from</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.rg_i'</span><span class="p">)).</span><span class="nx">map</span><span class="p">(</span><span class="nx">el</span><span class="o">=&gt;</span> <span class="nx">el</span><span class="p">.</span><span class="nx">hasAttribute</span><span class="p">(</span><span class="s1">'data-src'</span><span class="p">)?</span><span class="nx">el</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'data-src'</span><span class="p">):</span><span class="nx">el</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'data-iurl'</span><span class="p">));</span>
 <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">'data:text/csv;charset=utf-8,'</span> <span class="o">+</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">urls</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">'</span><span class="err">\</span><span class="s1">n'</span><span class="p">)));</span>
 </code></pre></div></div>
 
-<h4 id="12-create-imagedatabunch">1.2 Create ImageDataBunch</h4>
+<h4 id="12-using-google_images_download">1.2 Using <code class="highlighter-rouge">google_images_download</code></h4>
 
-<ul>
-  <li></li>
-</ul>
+<p><em>This is not google official package</em></p>
+
+<p><a href="https://google-images-download.readthedocs.io/en/latest/index.html">Official Doncument</a></p>
+
+<h4 id="13-create-imagedatabunch">1.3 Create ImageDataBunch</h4>
+
+<p>We need to separate validation set because we just grabbed these imagese from Google search. Jeremy recommended assign 20%.</p>
 
 <h3 id="2-train-model">2. Train model</h3>
 <h3 id="3-interpretation">3. Interpretation</h3>

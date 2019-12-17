@@ -1,4 +1,161 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-16T03:32:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">What is convolution?</title><link href="http://localhost:4000/2019/12/convolution/" rel="alternate" type="text/html" title="What is convolution?" /><published>2019-12-16T00:00:00+09:00</published><updated>2019-12-16T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/convolution</id><content type="html" xml:base="http://localhost:4000/2019/12/convolution/">&lt;p&gt;This is the part of Journey which Jeremy recommended us to do.&lt;/p&gt;</content><author><name>dionne</name></author><category term="sticky" /><category term="featured" /><summary type="html">This is the part of Journey which Jeremy recommended us to do.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/2-relu.png" /></entry><entry><title type="html">Jeremy Howard</title><link href="http://localhost:4000/2019/12/jeremy-howard/" rel="alternate" type="text/html" title="Jeremy Howard" /><published>2019-12-15T00:00:00+09:00</published><updated>2019-12-15T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/jeremy-howard</id><content type="html" xml:base="http://localhost:4000/2019/12/jeremy-howard/">&lt;p&gt;How he impacted me?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-18T04:17:14+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">So, Why Convolution?</title><link href="http://localhost:4000/2019/12/convolution/" rel="alternate" type="text/html" title="So, Why Convolution?" /><published>2019-12-16T00:00:00+09:00</published><updated>2019-12-16T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/convolution</id><content type="html" xml:base="http://localhost:4000/2019/12/convolution/">&lt;p&gt;This is the part of Journey which Jeremy recommended us to do.
+One of the concepts I have to know.&lt;/p&gt;
+
+&lt;p&gt;1) Kaiming Initializtion in Pytorch was in trouble.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
+2) Jeremy started to dig in, in lesson09, but I didn’t know why the size of tensor is &lt;sup id=&quot;fnref:5x5x5&quot;&gt;&lt;a href=&quot;#fn:5x5x5&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and even understand this spreadsheet data.&lt;sup id=&quot;fnref:conv&quot;&gt;&lt;a href=&quot;#fn:conv&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 class=&quot;no_toc&quot; id=&quot;homework&quot;&gt;Homework&lt;/h4&gt;
+
+&lt;p&gt;Read &lt;a href=&quot;https://arxiv.org/pdf/1311.2901.pdf&quot;&gt;Visualizing and Understanding Convolutional Networks
+&lt;/a&gt; paper&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-is-a-convolution&quot; id=&quot;markdown-toc-what-is-a-convolution&quot;&gt;What is a convolution?&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#visualization&quot; id=&quot;markdown-toc-visualization&quot;&gt;Visualization&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#one-kernel&quot; id=&quot;markdown-toc-one-kernel&quot;&gt;one kernel&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#matthew-d-zeiler--rob-fergus-paper&quot; id=&quot;markdown-toc-matthew-d-zeiler--rob-fergus-paper&quot;&gt;Matthew D Zeiler &amp;amp; Rob Fergus Paper&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#convolution-can-be-represented-as-matmul&quot; id=&quot;markdown-toc-convolution-can-be-represented-as-matmul&quot;&gt;Convolution can be represented as matmul&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#padding&quot; id=&quot;markdown-toc-padding&quot;&gt;Padding&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#kernel-has-rank-3&quot; id=&quot;markdown-toc-kernel-has-rank-3&quot;&gt;Kernel has rank 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight&quot; id=&quot;markdown-toc-how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight&quot;&gt;How can we find a side-edge, a gradient and area of constant weight?&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;what-is-a-convolution&quot;&gt;What is a convolution?&lt;/h3&gt;
+
+&lt;p&gt;A convolutional neural network is that your red, green, and blue pixels go into the simple computation, and something comes out of that, and then the result of that goes into a second layer, and the result of that goes into the third layer and so forth.&lt;/p&gt;
+
+&lt;h4 id=&quot;visualization&quot;&gt;Visualization&lt;/h4&gt;
+
+&lt;h5 id=&quot;one-kernel&quot;&gt;one kernel&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Refer this &lt;a href=&quot;http://setosa.io/ev/image-kernels/&quot;&gt;site&lt;/a&gt; for visualizing CNN filtering&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;matthew-d-zeiler--rob-fergus-paper&quot;&gt;Matthew D Zeiler &amp;amp; Rob Fergus Paper&lt;/h5&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://youtu.be/BWWm4AzsdLk?t=4588&quot;&gt;Lecture01&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/cnn-nine.png&quot; alt=&quot;&quot; /&gt;{align-items: center;}&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;nine examples of the actual coefficients from the &lt;strong&gt;first layer&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;convolution-can-be-represented-as-matmul&quot;&gt;Convolution can be represented as matmul&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/impactai/cnns-from-different-viewpoints-fab7f52d159c&quot;&gt;CNNs from different viewpoints&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/cnn-result.png&quot; alt=&quot;&quot; /&gt;{align-items: center;}&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/cnn-result2.jpg&quot; alt=&quot;&quot; height=&quot;50%&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;[A B C D E F G H I J] is 3 by 3 image data flatten to vector.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;As a result, convolution is a just matrix just two things happens
+    &lt;ul&gt;
+      &lt;li&gt;Some of entries are set to zeros at all the times&lt;/li&gt;
+      &lt;li&gt;same color always have the same weight. That called &lt;strong&gt;weight time / wegith sharing&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;So, we can implement a convolution with matrix multiplication. But, we don’t do that because it’s slow!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;padding&quot;&gt;Padding&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What most of libraries do is just put zeros asdie of matrix&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/padding2.png&quot; alt=&quot;&quot; height=&quot;50%&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/padding.png&quot; alt=&quot;&quot; height=&quot;60%&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;fast.ai uses reflection paddings (what is this? Jeremy said he uttered it)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;kernel-has-rank-3&quot;&gt;Kernel has rank 3&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;As standard picture input would be &lt;sup id=&quot;fnref:RGB&quot;&gt;&lt;a href=&quot;#fn:RGB&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;, it would be actually 3d, not 2d.&lt;/li&gt;
+  &lt;li&gt;If we make kernel as a 3x3 size, we pass over same kernel all the different Red, Green, Blue Pixels.
+    &lt;ul&gt;
+      &lt;li&gt;This could make problem, because, if we want to detect frog, which is green, we would want more activations on the green(I made a test cell in my colab &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight&quot;&gt;How can we find a side-edge, a gradient and area of constant weight?&lt;/h4&gt;
+
+&lt;p&gt;Not top-edge!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;One kernel can find only the top-edge, so we should stack the kernels &lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;So, we pass it through bunch of kernels to the input images, and that process gives us height x width x corresponding number of kernels.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/aassets/images/tensors.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Usually that number of chanel is 16&lt;/li&gt;
+  &lt;li&gt;And if we want to get the more channels and features, we should repeat that process
+    &lt;ul&gt;
+      &lt;li&gt;This process gives rise to memory out of control, we do the &lt;strong&gt;stride&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=V2h3IOBDvrA&quot;&gt;conv-example.xlsx&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;2 convolutional filters&lt;/li&gt;
+  &lt;li&gt;At a second layer, filter is 3x3x2 tensor, because to add up together the first layer’s channel.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Actually, what I wanted to know part :  --&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 class=&quot;no_toc&quot; id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Problem was &lt;em&gt;math.sqrt(5)&lt;/em&gt; was not kaiming initialization formula, &lt;a href=&quot;https://github.com/pytorch/pytorch/blob/3df79f403e8b9621d5adb0447266becd10d633b0/torch/nn/modules/linear.py#L58-L63&quot;&gt;Implementation in Pytorch&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5x5x5&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://youtu.be/AcA8HAYh7IE?list=PLBRuZVGXwM3l2HesxBCrvwYacG1AWrVmM&amp;amp;t=251&quot;&gt;size of tensor, lecture09&lt;/a&gt; &lt;a href=&quot;#fnref:5x5x5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:conv&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://github.com/fastai/course-v3/blob/bc034b471d839bdf5bc72bd7fec1061fac648ccd/files/xl/conv-example.xlsx&quot;&gt;conv-example.xlsx&lt;/a&gt; &lt;a href=&quot;#fnref:conv&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:RGB&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.quora.com/Why-do-computers-use-red-green-and-blue-instead-of-the-primary-colors&quot;&gt;Why do computer use red, green and blue instead of primary colors&lt;/a&gt; &lt;a href=&quot;#fnref:RGB&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Grayscale is a group of shades without any visible color. … Each of these dots has its own brightness level as well and, therefore, can be converted to grayscale. A grayscale image is one with all color information removed. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://brohrer.github.io/convert_rgb_to_grayscale.html&quot;&gt;Testing RGB and grayscale&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://youtu.be/hkBa9pU-H48?t=4937&quot;&gt;stack kernel and make new rank of tensor at output, Lesson06-2019&lt;/a&gt; &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><summary type="html">This is the part of Journey which Jeremy recommended us to do. One of the concepts I have to know.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn-jiwon.png" /></entry><entry><title type="html">Jeremy Howard</title><link href="http://localhost:4000/2019/12/jeremy-howard/" rel="alternate" type="text/html" title="Jeremy Howard" /><published>2019-12-15T00:00:00+09:00</published><updated>2019-12-15T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/jeremy-howard</id><content type="html" xml:base="http://localhost:4000/2019/12/jeremy-howard/">&lt;p&gt;How he impacted me?&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -29,57 +186,7 @@
   &lt;p&gt;we’re going to try and use that to really understand what’s going on. So to warn you, none of it is rocket science but a lot of its going to look really new. So don’t expect to get it the first time but expect to listen and jump into the notebook try a few things test things out look particularly at like tensor shapes and inputs and outputs to check your understanding then go back and listen again. But and kind of try it, a few times, because you will get there right, it’s just that there’s going to be a lot of new concepts because we haven’t done that much stuff in pure Pytorch.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p style=&quot;color:gray; font-size: 90%; text-align: right;&quot;&gt;Lesson 6: Deep Learning 2019&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">How he impacted me?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/jeremy-howard.jpeg" /></entry><entry><title type="html">Making my own classifier with my own data</title><link href="http://localhost:4000/2019/12/note02-fastai-1/" rel="alternate" type="text/html" title="Making my own classifier with my own data" /><published>2019-12-14T00:00:00+09:00</published><updated>2019-12-14T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/note02-fastai-1</id><content type="html" xml:base="http://localhost:4000/2019/12/note02-fastai-1/">&lt;p&gt;Making a classifier which can seperate &lt;span style=&quot;color: red&quot;&gt;Munich&lt;/span&gt; from &lt;span style=&quot;color: red&quot;&gt;Berlin&lt;/span&gt; and &lt;span style=&quot;color: red&quot;&gt;Hamburg&lt;/span&gt;!
-(hoping my well in Munich!🤟)&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h3&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#1-creating-dataset-from-google-images&quot; id=&quot;markdown-toc-1-creating-dataset-from-google-images&quot;&gt;1. Creating dataset from google images&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#11-get-a-list-of-urls&quot; id=&quot;markdown-toc-11-get-a-list-of-urls&quot;&gt;1.1 Get a list of URLs&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#12-download-images&quot; id=&quot;markdown-toc-12-download-images&quot;&gt;1.2 Download images&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#13-view-data&quot; id=&quot;markdown-toc-13-view-data&quot;&gt;1.3 View data&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#2-train-model&quot; id=&quot;markdown-toc-2-train-model&quot;&gt;2. Train model&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#3-interpretation&quot; id=&quot;markdown-toc-3-interpretation&quot;&gt;3. Interpretation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#4-cleaning-up&quot; id=&quot;markdown-toc-4-cleaning-up&quot;&gt;4. Cleaning Up&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#5-putting-your-model-in-production&quot; id=&quot;markdown-toc-5-putting-your-model-in-production&quot;&gt;5. Putting your model in production&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#6-things-that-can-go-wrong&quot; id=&quot;markdown-toc-6-things-that-can-go-wrong&quot;&gt;6. Things that can go wrong&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#61-learning-rate-lr-too-high&quot; id=&quot;markdown-toc-61-learning-rate-lr-too-high&quot;&gt;6.1 Learning rate (LR) too high&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#62-learning-rate-lr-too-low&quot; id=&quot;markdown-toc-62-learning-rate-lr-too-low&quot;&gt;6.2 Learning rate (LR) too low&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#63-too-few-epochs&quot; id=&quot;markdown-toc-63-too-few-epochs&quot;&gt;6.3 Too few epochs&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#64-too-many-epochs&quot; id=&quot;markdown-toc-64-too-many-epochs&quot;&gt;6.4 Too many epochs&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;1-creating-dataset-from-google-images&quot;&gt;1. Creating dataset from google images&lt;/h3&gt;
-&lt;h4 id=&quot;11-get-a-list-of-urls&quot;&gt;1.1 Get a list of URLs&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Go to the google image, type “image” in advanced search,&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;12-download-images&quot;&gt;1.2 Download images&lt;/h4&gt;
-
-&lt;h4 id=&quot;13-view-data&quot;&gt;1.3 View data&lt;/h4&gt;
-
-&lt;h3 id=&quot;2-train-model&quot;&gt;2. Train model&lt;/h3&gt;
-&lt;h3 id=&quot;3-interpretation&quot;&gt;3. Interpretation&lt;/h3&gt;
-&lt;h3 id=&quot;4-cleaning-up&quot;&gt;4. Cleaning Up&lt;/h3&gt;
-&lt;h3 id=&quot;5-putting-your-model-in-production&quot;&gt;5. Putting your model in production&lt;/h3&gt;
-&lt;h3 id=&quot;6-things-that-can-go-wrong&quot;&gt;6. Things that can go wrong&lt;/h3&gt;
-&lt;h4 id=&quot;61-learning-rate-lr-too-high&quot;&gt;6.1 Learning rate (LR) too high&lt;/h4&gt;
-&lt;h4 id=&quot;62-learning-rate-lr-too-low&quot;&gt;6.2 Learning rate (LR) too low&lt;/h4&gt;
-&lt;h4 id=&quot;63-too-few-epochs&quot;&gt;6.3 Too few epochs&lt;/h4&gt;
-&lt;h4 id=&quot;64-too-many-epochs&quot;&gt;6.4 Too many epochs&lt;/h4&gt;
-
-&lt;h3 class=&quot;no_toc&quot; id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.pyimagesearch.com/2017/12/04/how-to-create-a-deep-learning-dataset-using-google-images/&quot;&gt;How to create a deep learning dataset using Google Images&lt;/a&gt;&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">Making a classifier which can seperate Munich from Berlin and Hamburg! (hoping my well in Munich!🤟)</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/munich.jpg" /></entry><entry><title type="html">Pytorch</title><link href="http://localhost:4000/2019/12/pytorch-tensor/" rel="alternate" type="text/html" title="Pytorch" /><published>2019-12-12T00:00:00+09:00</published><updated>2019-12-12T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/pytorch-tensor</id><content type="html" xml:base="http://localhost:4000/2019/12/pytorch-tensor/">&lt;ul&gt;
+&lt;p style=&quot;color:gray; font-size: 90%; text-align: right;&quot;&gt;Lesson 6: Deep Learning 2019&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">How he impacted me?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/jeremy-howard.jpeg" /></entry><entry><title type="html">Pytorch</title><link href="http://localhost:4000/2019/12/pytorch-tensor/" rel="alternate" type="text/html" title="Pytorch" /><published>2019-12-12T00:00:00+09:00</published><updated>2019-12-12T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/pytorch-tensor</id><content type="html" xml:base="http://localhost:4000/2019/12/pytorch-tensor/">&lt;ul&gt;
   &lt;li&gt;This is the list when I type&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -573,7 +680,7 @@ check clamp&lt;/p&gt;
 ‘view’:
 ‘view_as’:
 ‘where’:
-‘zero_’&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This is the list when I type</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/pytorch.png" /></entry><entry><title type="html">Gradient backward</title><link href="http://localhost:4000/2019/11/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward" /><published>2019-11-26T00:00:00+09:00</published><updated>2019-11-26T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-4/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
+‘zero_’&lt;/p&gt;</content><author><name>dionne</name></author><summary type="html">This is the list when I type</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/pytorch.png" /></entry><entry><title type="html">Gradient backward, Chain Rule, Refactoring</title><link href="http://localhost:4000/2019/11/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward, Chain Rule, Refactoring" /><published>2019-11-26T00:00:00+09:00</published><updated>2019-11-26T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-4/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
 
 &lt;h3 class=&quot;no_toc&quot; id=&quot;homework&quot;&gt;Homework&lt;/h3&gt;
 
@@ -1067,7 +1174,7 @@ def backward(self):
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#2-foundation-version&quot; id=&quot;markdown-toc-2-foundation-version&quot;&gt;2. Foundation Version&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#21-basic-architecture&quot; id=&quot;markdown-toc-21-basic-architecture&quot;&gt;2.1 Basic architecture&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#211-simplified-karming-init&quot; id=&quot;markdown-toc-211-simplified-karming-init&quot;&gt;2.1.1 &lt;em&gt;simplified&lt;/em&gt; karming init&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#211-simplified-kaiming-init&quot; id=&quot;markdown-toc-211-simplified-kaiming-init&quot;&gt;2.1.1 &lt;em&gt;simplified&lt;/em&gt; kaiming init&lt;/a&gt;&lt;/li&gt;
           &lt;li&gt;&lt;a href=&quot;#212-glorrot-initialization&quot; id=&quot;markdown-toc-212-glorrot-initialization&quot;&gt;2.1.2 Glorrot initialization&lt;/a&gt;&lt;/li&gt;
           &lt;li&gt;&lt;a href=&quot;#213-kaiming-initializating&quot; id=&quot;markdown-toc-213-kaiming-initializating&quot;&gt;2.1.3 Kaiming initializating&lt;/a&gt;&lt;/li&gt;
           &lt;li&gt;&lt;a href=&quot;#214-pytorch-package&quot; id=&quot;markdown-toc-214-pytorch-package&quot;&gt;2.1.4 Pytorch package&lt;/a&gt;&lt;/li&gt;
@@ -1129,7 +1236,7 @@ def backward(self):
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&quot;211-simplified-karming-init&quot;&gt;2.1.1 &lt;em&gt;simplified&lt;/em&gt; karming init&lt;/h5&gt;
+&lt;h5 id=&quot;211-simplified-kaiming-init&quot;&gt;2.1.1 &lt;em&gt;simplified&lt;/em&gt; kaiming init&lt;/h5&gt;
 
 &lt;p&gt;Q: Why we did init, normalize with only validation data? Because we can not handle and get statistics from each value of x_valid?{: style=”color:red; font-size: 130%; text-align: center;”}&lt;/p&gt;
 
@@ -1237,10 +1344,15 @@ def backward(self):
   &lt;li&gt;What about CNN in Pytorch?&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I tried and 
-&lt;img src=&quot;/assets/images/2-forward-conv2d.jpg&quot; alt=&quot;&quot; height=&quot;90%&quot; width=&quot;90%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;I tried&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Conv2d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conv2d_forward&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;??&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2-forward-conv2d.jpg&quot; alt=&quot;&quot; height=&quot;90%&quot; width=&quot;90%&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;jeremy said&lt;/p&gt;
+&lt;p&gt;Jeremy digged into using&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modules&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_ConvNd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reset_parameters&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;??&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2-torch-nn-conv-jeremy.jpg&quot; alt=&quot;&quot; height=&quot;90%&quot; width=&quot;90%&quot; /&gt;&lt;/p&gt;
 
@@ -1339,7 +1451,7 @@ def backward(self):
       &lt;p&gt;&lt;a href=&quot;https://discuss.pytorch.org/t/why-the-default-negative-slope-for-kaiming-uniform-initialization-of-convolution-and-linear-layers-is-5/29290&quot;&gt;Pytorch kaiming init explained&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><category term="featured" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/2-relu.png" /></entry><entry><title type="html">Broadcasting, Einstein sum, Pytorch operator</title><link href="http://localhost:4000/2019/11/note08-fastai-2/" rel="alternate" type="text/html" title="Broadcasting, Einstein sum, Pytorch operator" /><published>2019-11-21T00:00:00+09:00</published><updated>2019-11-21T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-2/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/2-relu.png" /></entry><entry><title type="html">Broadcasting, Einstein sum, Pytorch operator</title><link href="http://localhost:4000/2019/11/note08-fastai-2/" rel="alternate" type="text/html" title="Broadcasting, Einstein sum, Pytorch operator" /><published>2019-11-21T00:00:00+09:00</published><updated>2019-11-21T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-2/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
 
 &lt;h3 class=&quot;no_toc&quot; id=&quot;time-comparison-with-pure-python&quot;&gt;Time comparison with pure Python&lt;/h3&gt;
 
@@ -1668,15 +1780,7 @@ a.k.a&lt;/li&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://mathworld.wolfram.com/TensorRank.html&quot;&gt;TensorRank&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://forums.fast.ai/t/forum-markdown-notes-lesson-8/41896&quot;&gt;ti note&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/30.png" /></entry><entry><title type="html">Julia Evans</title><link href="http://localhost:4000/2019/11/julia-evans/" rel="alternate" type="text/html" title="Julia Evans" /><published>2019-11-20T00:00:00+09:00</published><updated>2019-11-20T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/julia-evans</id><content type="html" xml:base="http://localhost:4000/2019/11/julia-evans/">&lt;p&gt;The women who surprised me in many ways.&lt;br /&gt;
-First, she approached me to teaching some concepts drawing cartoons.&lt;br /&gt;
-It was at Hackers news, which was hightest ranks.&lt;br /&gt;
-Personally I have the use of not to reading title, so and cartoon was so cute and clear.&lt;br /&gt;
-I naturally gonna understood mechanism and astonished by her explaination ability.&lt;br /&gt;
-Her value, which she was taught by many people so want to do same things, moved me.&lt;br /&gt;
-Volume of her knowledge, that just reading post title is a deal of work, amazed me.&lt;br /&gt;&lt;/p&gt;
-
-&lt;!-- neural network부터, 엄청 많은 도메인.  --&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">The women who surprised me in many ways. First, she approached me to teaching some concepts drawing cartoons. It was at Hackers news, which was hightest ranks. Personally I have the use of not to reading title, so and cartoon was so cute and clear. I naturally gonna understood mechanism and astonished by her explaination ability. Her value, which she was taught by many people so want to do same things, moved me. Volume of her knowledge, that just reading post title is a deal of work, amazed me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/evans.jpg" /></entry><entry><title type="html">Questions studying Lesson 08</title><link href="http://localhost:4000/2019/11/questions/" rel="alternate" type="text/html" title="Questions studying Lesson 08" /><published>2019-11-20T00:00:00+09:00</published><updated>2019-11-20T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/questions</id><content type="html" xml:base="http://localhost:4000/2019/11/questions/">&lt;h4 id=&quot;fastai-v3-course&quot;&gt;fast.ai v3 course&lt;/h4&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/30.png" /></entry><entry><title type="html">Questions studying Lesson 08</title><link href="http://localhost:4000/2019/11/questions/" rel="alternate" type="text/html" title="Questions studying Lesson 08" /><published>2019-11-20T00:00:00+09:00</published><updated>2019-11-20T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/questions</id><content type="html" xml:base="http://localhost:4000/2019/11/questions/">&lt;h4 id=&quot;fastai-v3-course&quot;&gt;fast.ai v3 course&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://spellonyou.github.io/2019/11/note08-fastai-3/#211-simplified-karming-init&quot;&gt;Normalization related to train and valid&lt;/a&gt;&lt;/p&gt;
 
@@ -1735,7 +1839,15 @@ Volume of her knowledge, that just reading post title is a deal of work, amazed 
       &lt;p&gt;Refer &lt;a href=&quot;https://render.githubusercontent.com/view/ipynb?commit=2bfe4a95aac864b23bd0c0729d2720c92e169f8c&amp;amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f5370656c6c4f6e596f752f646c66662d6e6f74652f326266653461393561616338363462323362643063303732396432373230633932653136396638632f6e62732f646c322f30315f6d61746d756c5f70726163746963652e6970796e62&amp;amp;nwo=SpellOnYou%2Fdlff-note&amp;amp;path=nbs%2Fdl2%2F01_matmul_practice.ipynb&amp;amp;repository_id=221963162&amp;amp;repository_type=Repository#Broadcasting&quot;&gt;colab!&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="Fast.AI-v3" /><category term="python" /><summary type="html">fast.ai v3 course</summary></entry><entry><title type="html">Why am I not listed as a contributor?!</title><link href="http://localhost:4000/2019/11/Git-Merge/" rel="alternate" type="text/html" title="Why am I not listed as a contributor?!" /><published>2019-11-10T00:00:00+09:00</published><updated>2019-11-10T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/Git-Merge</id><content type="html" xml:base="http://localhost:4000/2019/11/Git-Merge/">&lt;p&gt;From the end of last year, big changes have witnessed in NLP research.&lt;br /&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="Fast.AI-v3" /><category term="python" /><summary type="html">fast.ai v3 course</summary></entry><entry><title type="html">Julia Evans</title><link href="http://localhost:4000/2019/11/julia-evans/" rel="alternate" type="text/html" title="Julia Evans" /><published>2019-11-20T00:00:00+09:00</published><updated>2019-11-20T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/julia-evans</id><content type="html" xml:base="http://localhost:4000/2019/11/julia-evans/">&lt;p&gt;The women who surprised me in many ways.&lt;br /&gt;
+First, she approached me to teaching some concepts drawing cartoons.&lt;br /&gt;
+It was at Hackers news, which was hightest ranks.&lt;br /&gt;
+Personally I have the use of not to reading title, so and cartoon was so cute and clear.&lt;br /&gt;
+I naturally gonna understood mechanism and astonished by her explaination ability.&lt;br /&gt;
+Her value, which she was taught by many people so want to do same things, moved me.&lt;br /&gt;
+Volume of her knowledge, that just reading post title is a deal of work, amazed me.&lt;br /&gt;&lt;/p&gt;
+
+&lt;!-- neural network부터, 엄청 많은 도메인.  --&gt;</content><author><name>dionne</name></author><summary type="html">The women who surprised me in many ways. First, she approached me to teaching some concepts drawing cartoons. It was at Hackers news, which was hightest ranks. Personally I have the use of not to reading title, so and cartoon was so cute and clear. I naturally gonna understood mechanism and astonished by her explaination ability. Her value, which she was taught by many people so want to do same things, moved me. Volume of her knowledge, that just reading post title is a deal of work, amazed me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/evans.jpg" /></entry><entry><title type="html">Why am I not listed as a contributor?!</title><link href="http://localhost:4000/2019/11/Git-Merge/" rel="alternate" type="text/html" title="Why am I not listed as a contributor?!" /><published>2019-11-10T00:00:00+09:00</published><updated>2019-11-10T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/Git-Merge</id><content type="html" xml:base="http://localhost:4000/2019/11/Git-Merge/">&lt;p&gt;From the end of last year, big changes have witnessed in NLP research.&lt;br /&gt;
 Embracing an unprecedented growth, I started to study new exciting results and advances.&lt;br /&gt;
 In doing so, I noticed I’m not listed as contributor of repo which my PR accessed.&lt;/p&gt;
 
@@ -1782,4 +1894,64 @@ It was &lt;a href=&quot;https://arxiv.org/pdf/1810.04805.pdf&quot;&gt;BERT relea
   &lt;li&gt;&lt;a href=&quot;https://mchromiak.github.io/articles/2017/Sep/12/Transformer-Attention-is-all-you-need/&quot;&gt;Michał Chromiak’s blog&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://help.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile&quot;&gt;Github: why are my contributions are not showing on my profile&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.atlassian.com/git/tutorials/syncing/git-fetch&quot;&gt;atlassian-gitfetch&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">From the end of last year, big changes have witnessed in NLP research. Embracing an unprecedented growth, I started to study new exciting results and advances. In doing so, I noticed I’m not listed as contributor of repo which my PR accessed.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1.png" /></entry></feed>
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">From the end of last year, big changes have witnessed in NLP research. Embracing an unprecedented growth, I started to study new exciting results and advances. In doing so, I noticed I’m not listed as contributor of repo which my PR accessed.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1.png" /></entry><entry><title type="html">Elif Shafak</title><link href="http://localhost:4000/2019/11/elif-shafak/" rel="alternate" type="text/html" title="Elif Shafak" /><published>2019-11-05T00:00:00+09:00</published><updated>2019-11-05T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/elif-shafak</id><content type="html" xml:base="http://localhost:4000/2019/11/elif-shafak/">&lt;p&gt;For creative-minded people, Istanbul is a treasure.’ Photo © Chris Boland, licensed under &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-nd/2.0/&quot;&gt;CC BY-NC-ND 2.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;it suddenly felt like what I was trying to convey was more complicated and detailed than what the circumstances allowed me to say.&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;And I did what I usually do in similar situations: I stammered, I shut down, and I stopped talking. I stopped talking because the truth was complicated, even though I knew, deep within, that one should never, ever remain silent for fear of complexity.&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/images/31.jpg&quot; alt=&quot;&quot; /&gt; &amp;lt;Figure 1&amp;gt; Elif Shafak&lt;/td&gt;
+      &lt;td&gt;Photo credit: www.elifsafak.com.tr&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;I want to talk about emotions and the need to boost our emotional intelligence. I think it’s a pity that mainstream political theory pays very little attention to emotions.&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;Oftentimes, analysts and experts are so busy with data and metrics that they seem to forget those things in life that are difficult to measure and perhaps impossible to cluster under statistical models. But I think this is a mistake, for two main reasons. We are emotional beings.&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;I think it’s going to be one of our biggest intellectual challenges, because our political systems are replete with emotions. In country after country, we have seen illiberal politicians exploiting these emotions. And yet within the academia and among the intelligentsia, we are yet to take emotions seriously. I think we should.&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.britishcouncil.org/voices-magazine/elif-shafak-writing-english-brings-me-closer-turkey&quot;&gt;British Council Worldwide&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.ted.com/talks/elif_shafak_the_revolutionary_power_of_diverse_thought#t-37432&quot;&gt;Ted Talk&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">For creative-minded people, Istanbul is a treasure.’ Photo © Chris Boland, licensed under CC BY-NC-ND 2.0</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/29.jpg" /></entry></feed>

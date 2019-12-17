@@ -4,21 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jiwon Kim | Dionne Blog | SpellOnYou</title>
+    <title>Pytorch | SpellOnYou</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Jiwon Kim Dionne Blog | SpellOnYou</title>
+<title>Pytorch | SpellOnYou</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Jiwon Kim Dionne Blog" />
+<meta property="og:title" content="Pytorch" />
+<meta name="author" content="dionne" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="I’m afraid only of standing still. I want to remain fresh, that’s why I blog." />
-<meta property="og:description" content="I’m afraid only of standing still. I want to remain fresh, that’s why I blog." />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
+<meta name="description" content="This is the list when I type" />
+<meta property="og:description" content="This is the list when I type" />
+<link rel="canonical" href="http://localhost:4000/2019/12/pytorch-tensor/" />
+<meta property="og:url" content="http://localhost:4000/2019/12/pytorch-tensor/" />
 <meta property="og:site_name" content="SpellOnYou" />
-<link rel="next" href="http://localhost:4000/page2" />
+<meta property="og:image" content="http://localhost:4000/assets/images/pytorch.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-12-12T00:00:00+09:00" />
 <script type="application/ld+json">
-{"name":"SpellOnYou","description":"I’m afraid only of standing still. I want to remain fresh, that’s why I blog.","@type":"WebSite","url":"http://localhost:4000/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"}},"headline":"Jiwon Kim Dionne Blog","@context":"http://schema.org"}</script>
+{"description":"This is the list when I type","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/12/pytorch-tensor/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/pytorch.png","headline":"Pytorch","dateModified":"2019-12-12T00:00:00+09:00","datePublished":"2019-12-12T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/12/pytorch-tensor/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -51,7 +54,7 @@
 
 </head>
 
-<body class=" homefirstpage ">
+<body class="">
 
     <!-- Navbar -->
     <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
@@ -111,12 +114,12 @@ var documents = [{
     "id": 2,
     "url": "http://localhost:4000/author-dionne.html",
     "title": "dionne",
-    "body": "                        dionne Follow:                                                    Posts by dionne:                   		What is convolution?	: 		  This is the part of Journey which Jeremy recommended us to do. 	 			In 				Fast. AI-v3, 								Dec 16, 2019						            		Jeremy Howard	: 		  How he impacted me?	 			In 				People in the World, 								Dec 15, 2019						            		Making my own classifier with my own data	: 		  Making a classifier which can seperate Munich from Berlin and Hamburg!(hoping my well in Munich!🤟)	 			In 				Fast. AI-v3, 								Dec 14, 2019						            		Pytorch	: 		   This is the list when I type	 			In 				library, 								Dec 12, 2019						            		Gradient backward	: 		  ” Lecture 08 - Deep Learning From Foundations-part2 “	 			In 				Fast. AI-v3, 								Nov 26, 2019						            		ReLU and data init with normailized data	: 		  ” Lecture 08 - Deep Learning From Foundations-part2 “	 			In 				Fast. AI-v3, 								Nov 23, 2019						            		Broadcasting, Einstein sum, Pytorch operator	: 		  ” Lecture 08 - Deep Learning From Foundations-part2 “	 			In 				Fast. AI-v3, 								Nov 21, 2019						            		Questions studying Lesson 08	: 		  fast. ai v3 course	 			In 				QnA, 								Nov 20, 2019	            		Julia Evans	: 		  The women who surprised me in many ways. First, she approached me to teaching some concepts drawing cartoons. It was at Hackers news, which was hightest ranks. Personally I have the use . . . 	 			In 				People in the World, 								Nov 20, 2019						            		Why am I not listed as a contributor?!	: 		  From the end of last year, big changes have witnessed in NLP research. Embracing an unprecedented growth, I started to study new exciting results and advances. In doing so, I noticed I’. . . 	 			In 				Resource, 								Nov 10, 2019						            		Elif Shafak	: 		  For creative-minded people, Istanbul is a treasure. ’ Photo © Chris Boland, licensed under CC BY-NC-ND 2. 0	 			In 				People in the World, 								Nov 05, 2019						            		Retrospective on Pycon 2019 Korea (CoC Committee)	: 		  When I was volunteer, it seems like busy and hectic to managing that crowded conference. In my experience, to get things moving, it needs hierarchy. But it didn’t. Organizers emphasized. . . 	 			In 				Society, 								Nov 05, 2019						            		5 reasons took much time to setting GPU for fast. ai than I expected	: 		  Motivation	 			In 				Resource, 								Oct 23, 2019						            		Lecture 08 - Deep Learning From Foundations-part1	: 		  ” Lecture 08 - Deep Learning From Foundations-part2 “	 			In 				Fast. AI-v3, 								Oct 18, 2019						            		Lecture 16 - Code-First NLP Note	: 		  Algorithms can encode &amp; magnify human bias	 			In 				Fast. AI-v3, 								Sep 03, 2019						        "
+    "body": "                        {{page. title}} Follow:         {{ site. authors. dionne. site }}         {{ site. authors. dionne. bio }}                                   Posts by {{page. title}}:       {% assign posts = site. posts | where: author , dionne  %}      {% for post in posts %}      {% include main-loop-card. html %}      {% endfor %}  "
     }, {
     "id": 3,
     "url": "http://localhost:4000/authors-list.html",
     "title": "Authors",
-    "body": "Authors:                                                dionne | jiwon kim :       (View Posts)      Welcome, I'm dionne. My old hobby is collecting and systemizing data related with me. (I'm with my kindergarten newsletter) I am an observationist. In the meantime, I enjoy the difference between my expectation and result which I've been facinated(my korean-sarcasm project). And I love a film written and directed by Paul Thomas Anderson. Now, I'm interested in AI ethics, and especially studying bias.                           &nbsp;       &nbsp;                                      "
+    "body": "{{page. title}}:     {% for author in site. authors %}                                           {{ author[1]. name }} | jiwon kim :       (View Posts)      {{ author[1]. bio }}                          &nbsp;       &nbsp;                                    {% endfor %}  "
     }, {
     "id": 4,
     "url": "http://localhost:4000/buy-sal-a-coffee.html",
@@ -126,17 +129,17 @@ var documents = [{
     "id": 5,
     "url": "http://localhost:4000/categories.html",
     "title": "Categories",
-    "body": "          Categories               Fast. AI-v3:                                  		What is convolution?	: 		  This is the part of Journey which Jeremy recommended us to do. 	 			In 				Fast. AI-v3, 								Dec 16, 2019						                                 		Making my own classifier with my own data	: 		  Making a classifier which can seperate Munich from Berlin and Hamburg!(hoping my well in Munich!🤟)	 			In 				Fast. AI-v3, 								Dec 14, 2019						                                 		Gradient backward	: 		  ” Lecture 08 - Deep Learning From Foundations-part2 “	 			In 				Fast. AI-v3, 								Nov 26, 2019						                                 		ReLU and data init with normailized data	: 		  ” Lecture 08 - Deep Learning From Foundations-part2 “	 			In 				Fast. AI-v3, 								Nov 23, 2019						                                 		Broadcasting, Einstein sum, Pytorch operator	: 		  ” Lecture 08 - Deep Learning From Foundations-part2 “	 			In 				Fast. AI-v3, 								Nov 21, 2019						                                 		Lecture 08 - Deep Learning From Foundations-part1	: 		  ” Lecture 08 - Deep Learning From Foundations-part2 “	 			In 				Fast. AI-v3, 								Oct 18, 2019						                                 		Lecture 16 - Code-First NLP Note	: 		  Algorithms can encode &amp; magnify human bias	 			In 				Fast. AI-v3, 								Sep 03, 2019						                              Resource:                                  		Why am I not listed as a contributor?!	: 		  From the end of last year, big changes have witnessed in NLP research. Embracing an unprecedented growth, I started to study new exciting results and advances. In doing so, I noticed I’. . . 	 			In 				Resource, 								Nov 10, 2019						                                 		5 reasons took much time to setting GPU for fast. ai than I expected	: 		  Motivation	 			In 				Resource, 								Oct 23, 2019						                              Society:                                  		Retrospective on Pycon 2019 Korea (CoC Committee)	: 		  When I was volunteer, it seems like busy and hectic to managing that crowded conference. In my experience, to get things moving, it needs hierarchy. But it didn’t. Organizers emphasized. . . 	 			In 				Society, 								Nov 05, 2019						                              People in the World:                                  		Jeremy Howard	: 		  How he impacted me?	 			In 				People in the World, 								Dec 15, 2019						                                 		Julia Evans	: 		  The women who surprised me in many ways. First, she approached me to teaching some concepts drawing cartoons. It was at Hackers news, which was hightest ranks. Personally I have the use . . . 	 			In 				People in the World, 								Nov 20, 2019						                                 		Elif Shafak	: 		  For creative-minded people, Istanbul is a treasure. ’ Photo © Chris Boland, licensed under CC BY-NC-ND 2. 0	 			In 				People in the World, 								Nov 05, 2019						                              QnA:                                  		Questions studying Lesson 08	: 		  fast. ai v3 course	 			In 				QnA, 								Nov 20, 2019	                              library:                                  		Pytorch	: 		   This is the list when I type	 			In 				library, 								Dec 12, 2019						                                             Featured:    				                                          What is convolution?                          In                     Fast. AI-v3,                                                                                           Jeremy Howard                          In                     People in the World,                                                                                           Making my own classifier with my own data                          In                     Fast. AI-v3,                                                                                           Pytorch                          In                     library,                                                                                           Gradient backward                          In                     Fast. AI-v3,                                                                                           ReLU and data init with normailized data                          In                     Fast. AI-v3,                                                                                           Broadcasting, Einstein sum, Pytorch operator                          In                     Fast. AI-v3,                                                                                           Julia Evans                          In                     People in the World,                                                                                           Why am I not listed as a contributor?!                          In                     Resource,                                                                                           5 reasons took much time to setting GPU for fast. ai than I expected                          In                     Resource,                                                                                           Lecture 08 - Deep Learning From Foundations-part1                          In                     Fast. AI-v3,                                                                   "
+    "body": "          Categories          {% for category in site. categories %}     {{ category[0] }}:           {% assign pages_list = category[1] %}    {% for post in pages_list %}    {% if post. title != null %}     {% if group == null or group == post. group %}           {% include main-loop-card. html %}     {% endif %}    {% endif %}    {% endfor %}    {% assign pages_list = nil %}    {% assign group = nil %}    {% endfor %}                  {% include sidebar-featured. html %}          "
     }, {
     "id": 6,
     "url": "http://localhost:4000/contact.html",
     "title": "Contact",
-    "body": "  Please send your message to SpellOnYou. I will reply as soon as possible!   "
+    "body": "  Please send your message to {{site. name}}. I will reply as soon as possible!   "
     }, {
     "id": 7,
     "url": "http://localhost:4000/",
     "title": "Jiwon Kim | Dionne Blog",
-    "body": "                                  What is convolution?  :       This is the part of Journey which Jeremy recommended us to do.               In                 Fast. AI-v3,                                        Dec 16, 2019                                                                                                                             Jeremy Howard          :                       In                         People in the World,                                                                  Dec 15, 2019                                                                                                                                     Making my own classifier with my own data          :                       In                         Fast. AI-v3,                                                                  Dec 14, 2019                                                                                                                                    Pytorch          :                       In                         library,                                                                  Dec 12, 2019                                                       What is convolution?                  This is the part of Journey which Jeremy recommended us to do.                 Read More            	                                   ReLU and data init with normailized data                  ” Lecture 08 - Deep Learning From Foundations-part2 “                 Read More            	                                   All Stories:                   		What is convolution?	: 		  This is the part of Journey which Jeremy recommended us to do. 	 			In 				Fast. AI-v3, 								Dec 16, 2019						                  		Jeremy Howard	: 		  How he impacted me?	 			In 				People in the World, 								Dec 15, 2019						                  		Making my own classifier with my own data	: 		  Making a classifier which can seperate Munich from Berlin and Hamburg!(hoping my well in Munich!🤟)	 			In 				Fast. AI-v3, 								Dec 14, 2019						                  		Pytorch	: 		   This is the list when I type	 			In 				library, 								Dec 12, 2019						                  		Gradient backward	: 		  ” Lecture 08 - Deep Learning From Foundations-part2 “	 			In 				Fast. AI-v3, 								Nov 26, 2019						                  		ReLU and data init with normailized data	: 		  ” Lecture 08 - Deep Learning From Foundations-part2 “	 			In 				Fast. AI-v3, 								Nov 23, 2019						                  		Broadcasting, Einstein sum, Pytorch operator	: 		  ” Lecture 08 - Deep Learning From Foundations-part2 “	 			In 				Fast. AI-v3, 								Nov 21, 2019						                  		Questions studying Lesson 08	: 		  fast. ai v3 course	 			In 				QnA, 								Nov 20, 2019	                  		Julia Evans	: 		  The women who surprised me in many ways. First, she approached me to teaching some concepts drawing cartoons. It was at Hackers news, which was hightest ranks. Personally I have the use . . . 	 			In 				People in the World, 								Nov 20, 2019						                  		Why am I not listed as a contributor?!	: 		  From the end of last year, big changes have witnessed in NLP research. Embracing an unprecedented growth, I started to study new exciting results and advances. In doing so, I noticed I’. . . 	 			In 				Resource, 								Nov 10, 2019						                                                &laquo;                              1                               2                              Next &raquo;                                          Featured:    				                                          What is convolution?                          In                     Fast. AI-v3,                                                                                           Jeremy Howard                          In                     People in the World,                                                                                           Making my own classifier with my own data                          In                     Fast. AI-v3,                                                                                           Pytorch                          In                     library,                                                                                           Gradient backward                          In                     Fast. AI-v3,                                                                                           ReLU and data init with normailized data                          In                     Fast. AI-v3,                                                                                           Broadcasting, Einstein sum, Pytorch operator                          In                     Fast. AI-v3,                                                                                           Julia Evans                          In                     People in the World,                                                                                           Why am I not listed as a contributor?!                          In                     Resource,                                                                                           5 reasons took much time to setting GPU for fast. ai than I expected                          In                     Resource,                                                                                           Lecture 08 - Deep Learning From Foundations-part1                          In                     Fast. AI-v3,                                                               "
+    "body": "  {% if page. url ==  /  %}            {% assign latest_post = site. posts[0] %}          &lt;div class= topfirstimage  style= background-image: url({% if latest_post. image contains  ://  %}{{ latest_post. image }}{% else %} {{site. baseurl}}/{{ latest_post. image}}{% endif %}); height: 200px;  background-size: cover;  background-repeat: no-repeat; &gt;&lt;/div&gt;           {{ latest_post. title }}  :       {{ latest_post. excerpt | strip_html | strip_newlines | truncate: 136 }}               In         {% for category in latest_post. categories %}        {{ category }},         {% endfor %}                                {{ latest_post. date | date: '%b %d, %Y' }}                            {%- assign second_post = site. posts[1] -%}                        {% if second_post. image %}                         &lt;img class= w-100  src= {% if second_post. image contains  ://  %}{{ second_post. image }}{% else %}{{ second_post. image | absolute_url }}{% endif %}  alt= {{ second_post. title }} &gt;                        {% endif %}                                    {{ second_post. title }}          :                       In             {% for category in second_post. categories %}            {{ category }},             {% endfor %}                                                      {{ second_post. date | date: '%b %d, %Y' }}                                    {%- assign third_post = site. posts[2] -%}                        {% if third_post. image %}                         &lt;img class= w-100  src= {% if third_post. image contains  ://  %}{{ third_post. image }}{% else %}{{site. baseurl}}/{{ third_post. image }}{% endif %}  alt= {{ third_post. title }} &gt;                        {% endif %}                                    {{ third_post. title }}          :                       In             {% for category in third_post. categories %}            {{ category }},             {% endfor %}                                                      {{ third_post. date | date: '%b %d, %Y' }}                                    {%- assign fourth_post = site. posts[3] -%}                        {% if fourth_post. image %}                        &lt;img class= w-100  src= {% if fourth_post. image contains  ://  %}{{ fourth_post. image }}{% else %}{{site. baseurl}}/{{ fourth_post. image }}{% endif %}  alt= {{ fourth_post. title }} &gt;                        {% endif %}                                    {{ fourth_post. title }}          :                       In             {% for category in fourth_post. categories %}            {{ category }},             {% endfor %}                                                      {{ fourth_post. date | date: '%b %d, %Y' }}                                  {% for post in site. posts %} {% if post. tags contains  sticky  %}                    {{post. title}}                  {{ post. excerpt | strip_html | strip_newlines | truncate: 136 }}                 Read More            	             {% endif %}{% endfor %}  {% endif %}                All Stories:         {% for post in paginator. posts %}          {% include main-loop-card. html %}        {% endfor %}                   {% if paginator. total_pages &gt; 1 %}              {% if paginator. previous_page %}        &laquo; Prev       {% else %}        &laquo;       {% endif %}       {% for page in (1. . paginator. total_pages) %}        {% if page == paginator. page %}        {{ page }}        {% elsif page == 1 %}        {{ page }}        {% else %}        {{ page }}        {% endif %}       {% endfor %}       {% if paginator. next_page %}        Next &raquo;       {% else %}        &raquo;       {% endif %}            {% endif %}                     {% include sidebar-featured. html %}      "
     }, {
     "id": 8,
     "url": "http://localhost:4000/privacy-policy.html",
@@ -299,710 +302,647 @@ function lunr_search(term) {
 
     <!-- Content -->
     <main role="main" class="site-content">
-        <div class="container">
-    
+        
 
-    
-    
-    
-<!-- Begin post excerpts, let's highlight the first 4 posts on top -->
-<div class="row remove-site-content-margin">
-    
-    <!-- latest post -->
-    
-    <div class="col-md-6">
-    <div class="card border-0 mb-4 box-shadow">   
-    <a href="/2019/12/convolution/">
-    <div class="topfirstimage" style="background-image: url( /assets/images/2-relu.png); height: 200px;    background-size: cover;    background-repeat: no-repeat;"></div>     
-    </a>
-    <div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
-    <h2 class="h4 font-weight-bold">
-    <a class="text-dark" href="/2019/12/convolution/">What is convolution?</a>
-    </h2>
-    <p class="excerpt">
-        This is the part of Journey which Jeremy recommended us to do.
-    </p>
-    <div>
-        <small class="d-block text-muted">
-            In <span class="catlist">
+<div class="container">
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+		<div class="h-100 tofront">
+			<div class="row  justify-content-between ">
+				<div class=" col-md-6  pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+					<p class="text-uppercase font-weight-bold">
+                        <span class="catlist">
+						
+                          <a class="sscroll text-danger" href="/categories.html#library">library</a><span class="sep">, </span>
+                        
+                        </span>
+					</p>
+					<h1 class="display-4 mb-4 article-headline">Pytorch</h1>
+					<div class="d-flex align-items-center">
+                        
+						<small class="ml-3">  <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
+                            <span class="text-muted d-block mt-1">Dec 12, 2019 · <span class="reading-time">
+  
+  
+    2 mins read
+  
+</span>
+    </span>
+						</small>
+					</div>
+				</div>
                 
-                <a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
+				<div class="col-md-6 pr-0 align-self-center">
+					<img class="rounded" src="/assets/images/pytorch.png" alt="Pytorch">
+				</div>
                 
-                </span>                   
-        </small>
-        <small class="text-muted">
-            Dec 16, 2019
-        </small>
-    </div>
-    </div>
-    </div>
-    </div>
-    
-    <div class="col-md-6">
-        
-        <!-- second latest post --><div class="mb-3 d-flex align-items-center">                
-                
-                <div class="col-md-4">
-                <a href="/2019/12/jeremy-howard/">
-                 <img class="w-100" src="http://localhost:4000/assets/images/jeremy-howard.jpeg" alt="Jeremy Howard">
-                </a>
-                </div>
-                                
-                <div>
-                    <h2 class="mb-2 h6 font-weight-bold">
-                    <a class="text-dark" href="/2019/12/jeremy-howard/">Jeremy Howard</a>
-                    </h2>
-                    <small class="d-block text-muted">
-                        In <span class="catlist">
-                        
-                        <a class="text-capitalize text-muted smoothscroll" href="/categories.html#people in the world">People in the World</a><span class="sep">, </span>
-                        
-                        </span>                   
-                    </small>
-                    <small class="text-muted">
-                        Dec 15, 2019
-                    </small>
-                </div>
-            </div>
-        
-        <!-- third latest post --><div class="mb-3 d-flex align-items-center">                
-                
-                <div class="col-md-4">
-                <a href="/2019/12/note02-fastai-1/">
-                 <img class="w-100" src="/munich.jpg" alt="Making my own classifier with my own data">
-                </a>
-                </div>
-                                
-                <div>
-                    <h2 class="mb-2 h6 font-weight-bold">
-                    <a class="text-dark" href="/2019/12/note02-fastai-1/">Making my own classifier with my own data</a>
-                    </h2>
-                    <small class="d-block text-muted">
-                        In <span class="catlist">
-                        
-                        <a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-                        
-                        </span>                   
-                    </small>
-                    <small class="text-muted">
-                        Dec 14, 2019
-                    </small>
-                </div>
-            </div>
-        
-        <!-- fourth latest post --><div class="mb-3 d-flex align-items-center">                
-                
-                <div class="col-md-4">
-                <a href="/2019/12/pytorch-tensor/">
-                <img class="w-100" src="/assets/images/pytorch.png" alt="Pytorch">
-                </a>
-                </div>
-                                
-                <div>
-                    <h2 class="mb-2 h6 font-weight-bold">
-                    <a class="text-dark" href="/2019/12/pytorch-tensor/">Pytorch</a>
-                    </h2>
-                    <small class="d-block text-muted">
-                        In <span class="catlist">
-                        
-                        <a class="text-capitalize text-muted smoothscroll" href="/categories.html#library">library</a><span class="sep">, </span>
-                        
-                        </span>                   
-                    </small>
-                    <small class="text-muted">
-                        Dec 12, 2019
-                    </small>
-                </div>
-            </div>
-        
-    </div>
-    
-</div>
-    
-<!-- Sticky - add sticky tag to the post you want to highlight here - tags: [sticky] -->
- 
-
-<div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem bg-lightblue position-relative">
-    <div class="pl-4 pr-0 h-100 tofront">
-        <div class="row justify-content-between">
-            <div class="col-md-6 pt-6 pb-6 pr-lg-4 align-self-center">
-                <h1 class="mb-3">What is convolution?</h1>
-                <p class="mb-3 lead">
-                    This is the part of Journey which Jeremy recommended us to do.
-                </p>
-                <a href="/2019/12/convolution/" class="btn btn-dark">Read More</a>
-            </div>
-            <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url(/assets/images/2-relu.png);">	
-            </div>
-        </div>
-    </div>
-</div> 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-<div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem bg-lightblue position-relative">
-    <div class="pl-4 pr-0 h-100 tofront">
-        <div class="row justify-content-between">
-            <div class="col-md-6 pt-6 pb-6 pr-lg-4 align-self-center">
-                <h1 class="mb-3">ReLU and data init with normailized data</h1>
-                <p class="mb-3 lead">
-                    ” Lecture 08 - Deep Learning From Foundations-part2 “
-                </p>
-                <a href="/2019/11/note08-fastai-3/" class="btn btn-dark">Read More</a>
-            </div>
-            <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url(/assets/images/2-relu.png);">	
-            </div>
-        </div>
-    </div>
-</div> 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-
-
-
-    
-
-
- <!--endif page url is / -->
-    
-
-
-<!-- Now the rest of the posts with the usual loop but with an offset:4 on the first page so we can skeep the first 4 posts displayed above -->
-    
-<div class="row mt-3">
-   
-    <div class="col-md-8 main-loop">
-        
-        <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
-        
-
-        
-        
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/12/convolution/">What is convolution?</a>
-	</h2>
-	<p class="excerpt">
-	   This is the part of Journey which Jeremy recommended us to do.
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Dec 16, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/12/convolution/">
-	<img class="w-100" src="/assets/images/2-relu.png" alt="What is convolution?">
-	</a>
+			</div>
+		</div>
 	</div>
-
-</div>
-        
-        
-        
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/12/jeremy-howard/">Jeremy Howard</a>
-	</h2>
-	<p class="excerpt">
-	   How he impacted me?
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#people in the world">People in the World</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Dec 15, 2019
-	</small>
 </div>
 
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/12/jeremy-howard/">
-	<img class="w-100" src="/assets/images/jeremy-howard.jpeg" alt="Jeremy Howard">
-	</a>
-	</div>
 
-</div>
-        
-        
-        
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/12/note02-fastai-1/">Making my own classifier with my own data</a>
-	</h2>
-	<p class="excerpt">
-	   Making a classifier which can seperate Munich from Berlin and Hamburg!(hoping my well in Munich!🤟)
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Dec 14, 2019
-	</small>
-</div>
 
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/12/note02-fastai-1/">
-	<img class="w-100" src="/munich.jpg" alt="Making my own classifier with my own data">
-	</a>
-	</div>
 
-</div>
-        
-        
-        
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/12/pytorch-tensor/">Pytorch</a>
-	</h2>
-	<p class="excerpt">
-	     This is the list when I type
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#library">library</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Dec 12, 2019
-	</small>
-</div>
 
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/12/pytorch-tensor/">
-	<img class="w-100" src="/assets/images/pytorch.png" alt="Pytorch">
-	</a>
-	</div>
-
-</div>
+<div class="container-lg pt-4 pb-4">
+	<div class="row justify-content-center">
         
         
-        
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/11/note08-fastai-4/">Gradient backward</a>
-	</h2>
-	<p class="excerpt">
-	   ” Lecture 08 - Deep Learning From Foundations-part2 “
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Nov 26, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/11/note08-fastai-4/">
-	<img class="w-100" src="/assets/images/4-backward.png" alt="Gradient backward">
-	</a>
-	</div>
-
-</div>
+        <!-- Share -->
+		<div class="col-lg-2 pr-4 mb-4 col-md-12">
+			<div class="sticky-top sticky-top-offset text-center">
+				<div class="text-muted">
+					Share this
+				</div>
+				<div class="share d-inline-block">
+					<!-- AddToAny BEGIN -->
+					<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+						<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+						<a class="a2a_button_facebook"></a>
+						<a class="a2a_button_twitter"></a>
+					</div>
+					<script async src="https://static.addtoany.com/menu/page.js"></script>
+					<!-- AddToAny END -->
+				</div>
+			</div>
+		</div>
         
         
-        
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/11/note08-fastai-3/">ReLU and data init with normailized data</a>
-	</h2>
-	<p class="excerpt">
-	   ” Lecture 08 - Deep Learning From Foundations-part2 “
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Nov 23, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/11/note08-fastai-3/">
-	<img class="w-100" src="/assets/images/2-relu.png" alt="ReLU and data init with normailized data">
-	</a>
-	</div>
-
-</div>
-        
-        
-        
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/11/note08-fastai-2/">Broadcasting, Einstein sum, Pytorch operator</a>
-	</h2>
-	<p class="excerpt">
-	   ” Lecture 08 - Deep Learning From Foundations-part2 “
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Nov 21, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/11/note08-fastai-2/">
-	<img class="w-100" src="/assets/images/30.png" alt="Broadcasting, Einstein sum, Pytorch operator">
-	</a>
-	</div>
-
-</div>
-        
-        
-        
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/11/questions/">Questions studying Lesson 08</a>
-	</h2>
-	<p class="excerpt">
-	   fast.ai v3 course
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#qna">QnA</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Nov 20, 2019
-	</small>
-</div>
-
-</div>
-        
-        
-        
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/11/julia-evans/">Julia Evans</a>
-	</h2>
-	<p class="excerpt">
-	   The women who surprised me in many ways.First, she approached me to teaching some concepts drawing cartoons.It was at Hackers news, which was hightest ranks.Personally I have the use ...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#people in the world">People in the World</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Nov 20, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/11/julia-evans/">
-	<img class="w-100" src="/assets/images/evans.jpg" alt="Julia Evans">
-	</a>
-	</div>
-
-</div>
-        
-        
-        
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/2019/11/Git-Merge/">Why am I not listed as a contributor?!</a>
-	</h2>
-	<p class="excerpt">
-	   From the end of last year, big changes have witnessed in NLP research.Embracing an unprecedented growth, I started to study new exciting results and advances.In doing so, I noticed I’...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#resource">Resource</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Nov 10, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/2019/11/Git-Merge/">
-	<img class="w-100" src="/assets/images/1.png" alt="Why am I not listed as a contributor?!">
-	</a>
-	</div>
-
-</div>
-        
-        
-        
-        <div class="mt-5">
-         <!-- Pagination links -->
+		<div class="col-md-12 col-lg-10">
             
-            <ul class="pagination"> 
-              
-                <li class="page-item disabled"><span class="prev page-link">&laquo;</span></li>
-              
+            <!-- Article -->
+			<article class="article-post">                
+			<ul>
+  <li>This is the list when I type</li>
+</ul>
 
-              
-                
-                <li class="page-item disabled"><span class="webjeda page-link">1</span></li>
-                
-              
-                
-                <li class="page-item"><a class="page-link" href="/page2">2</a></li>
-                
-              
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">dir</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">)</span>
+</code></pre></div></div>
 
-              
-                <li class="page-item"><a class="page-link" href="/page2">Next &raquo;</a></li>
-              
-            </ul>
-                  
-        </div>
+<p>which means these are all tensor methods.</p>
+
+<p style="color:gray; font-size: 90%; text-align: left;">‘clamp_max’:
+‘clamp_max_’:
+‘clamp_min’:
+‘clamp_min_’:
+check clamp</p>
+<p>‘clone’:
+‘backward’:
+‘squeeze’:
+‘squeeze_’:
+‘unsqueeze’:
+‘unsqueeze_’:
+‘t’:
+‘t_’:
+‘grad’:
+‘pow’:
+‘pow_’:
+‘shape’:
+‘relu’:
+‘relu_’:
+‘sqrt’:
+‘sqrt_’:
+‘stride’:</p>
+
+<hr />
+
+<p>‘T’:
+‘<strong>abs</strong>’:
+‘<strong>add</strong>’:
+‘<strong>and</strong>’:
+‘<strong>array</strong>’:
+‘<strong>array_priority</strong>’:
+‘<strong>array_wrap</strong>’:
+‘<strong>bool</strong>’:
+‘<strong>class</strong>’:
+‘<strong>contains</strong>’:
+‘<strong>deepcopy</strong>’:
+‘<strong>delattr</strong>’:
+‘<strong>delitem</strong>’:
+‘<strong>dict</strong>’:
+‘<strong>dir</strong>’:
+‘<strong>div</strong>’:
+‘<strong>doc</strong>’:
+‘<strong>eq</strong>’:
+‘<strong>float</strong>’:
+‘<strong>floordiv</strong>’:
+‘<strong>format</strong>’:
+‘<strong>ge</strong>’:
+‘<strong>getattribute</strong>’:
+‘<strong>getitem</strong>’:
+‘<strong>gt</strong>’:
+‘<strong>hash</strong>’:
+‘<strong>iadd</strong>’:
+‘<strong>iand</strong>’:
+‘<strong>idiv</strong>’:
+‘<strong>ilshift</strong>’:
+‘<strong>imul</strong>’:
+‘<strong>index</strong>’:
+‘<strong>init</strong>’:
+‘<strong>init_subclass</strong>’:
+‘<strong>int</strong>’:
+‘<strong>invert</strong>’:
+‘<strong>ior</strong>’:
+‘<strong>ipow</strong>’:
+‘<strong>irshift</strong>’:
+‘<strong>isub</strong>’:
+‘<strong>iter</strong>’:
+‘<strong>itruediv</strong>’:
+‘<strong>ixor</strong>’:
+‘<strong>le</strong>’:
+‘<strong>len</strong>’:
+‘<strong>long</strong>’:
+‘<strong>lshift</strong>’:
+‘<strong>lt</strong>’:
+‘<strong>matmul</strong>’:
+‘<strong>mod</strong>’:
+‘<strong>module</strong>’:
+‘<strong>mul</strong>’:
+‘<strong>ne</strong>’:
+‘<strong>neg</strong>’:
+‘<strong>new</strong>’:
+‘<strong>nonzero</strong>’:
+‘<strong>or</strong>’:
+‘<strong>pow</strong>’:
+‘<strong>radd</strong>’:
+‘<strong>rdiv</strong>’:
+‘<strong>reduce</strong>’:
+‘<strong>reduce_ex</strong>’:
+‘<strong>repr</strong>’:
+‘<strong>reversed</strong>’:
+‘<strong>rfloordiv</strong>’:
+‘<strong>rmul</strong>’:
+‘<strong>rpow</strong>’:
+‘<strong>rshift</strong>’:
+‘<strong>rsub</strong>’:
+‘<strong>rtruediv</strong>’:
+‘<strong>setattr</strong>’:
+‘<strong>setitem</strong>’:
+‘<strong>setstate</strong>’:
+‘<strong>sizeof</strong>’:
+‘<strong>str</strong>’:
+‘<strong>sub</strong>’:
+‘<strong>subclasshook</strong>’:
+‘<strong>truediv</strong>’:
+‘<strong>weakref</strong>’:
+‘<strong>xor</strong>’:
+‘<em>backward_hooks’:
+‘_base’:
+‘_cdata’:
+‘_coalesced</em>’:
+‘<em>dimI’:
+‘_dimV’:
+‘_grad’:
+‘_grad_fn’:
+‘_indices’:
+‘_is_view’:
+‘_make_subclass’:
+‘_nnz’:
+‘_update_names’:
+‘_values’:
+‘_version’:
+‘abs’:
+‘abs</em>’:
+‘acos’:
+‘acos_’:
+‘add’:
+‘add_’:
+‘addbmm’:
+‘addbmm_’:
+‘addcdiv’:
+‘addcdiv_’:
+‘addcmul’:
+‘addcmul_’:
+‘addmm’:
+‘addmm_’:
+‘addmv’:
+‘addmv_’:
+‘addr’:
+‘addr_’:
+‘align_as’:
+‘align_to’:
+‘all’:
+‘allclose’:
+‘any’:
+‘apply_’:
+‘argmax’:
+‘argmin’:
+‘argsort’:
+‘as_strided’:
+‘as_strided_’:
+‘asin’:
+‘asin_’:
+‘atan’:
+‘atan2’:
+‘atan2<em>’:
+‘atan</em>’:
+‘backward’:
+‘baddbmm’:
+‘baddbmm_’:
+‘bernoulli’:
+‘bernoulli_’:
+‘bfloat16’:
+‘bincount’:
+‘bitwise_not’:
+‘bitwise_not_’:
+‘bmm’:
+‘bool’:
+‘byte’:
+‘cauchy_’:
+‘ceil’:
+‘ceil_’:
+‘char’:
+‘cholesky’:
+‘cholesky_inverse’:
+‘cholesky_solve’:
+‘chunk’:
+‘clamp’:
+‘clamp_’:
+‘coalesce’:
+‘contiguous’:
+‘copy_’:
+‘cos’:
+‘cos_’:
+‘cosh’:
+‘cosh_’:
+‘cpu’:
+‘cross’:
+‘cuda’:
+‘cumprod’:
+‘cumsum’:
+‘data’:
+‘data_ptr’:
+‘dense_dim’:
+‘dequantize’:
+‘det’:
+‘detach’:
+‘detach_’:
+‘device’:
+‘diag’:
+‘diag_embed’:
+‘diagflat’:
+‘diagonal’:
+‘digamma’:
+‘digamma_’:
+‘dim’:
+‘dist’:
+‘div’:
+‘div_’:
+‘dot’:
+‘double’:
+‘dtype’:
+‘eig’:
+‘element_size’:
+‘eq’:
+‘eq_’:
+‘equal’:
+‘erf’:
+‘erf_’:
+‘erfc’:
+‘erfc_’:
+‘erfinv’:
+‘erfinv_’:
+‘exp’:
+‘exp_’:
+‘expand’:
+‘expand_as’:
+‘expm1’:
+‘expm1<em>’:
+‘exponential</em>’:
+‘fft’:
+‘fill_’:
+‘fill_diagonal_’:
+‘flatten’:
+‘flip’:
+‘float’:
+‘floor’:
+‘floor_’:
+‘fmod’:
+‘fmod_’:
+‘frac’:
+‘frac_’:
+‘gather’:
+‘ge’:
+‘ge_’:
+‘geometric_’:
+‘geqrf’:
+‘ger’:
+‘get_device’:
+‘grad_fn’:
+‘gt’:
+‘gt_’:
+‘half’:
+‘hardshrink’:
+‘has_names’:
+‘histc’:
+‘ifft’:
+‘index_add’:
+‘index_add_’:
+‘index_copy’:
+‘index_copy_’:
+‘index_fill’:
+‘index_fill_’:
+‘index_put’:
+‘index_put_’:
+‘index_select’:
+‘indices’:
+‘int’:
+‘int_repr’:
+‘inverse’:
+‘irfft’:
+‘is_coalesced’:
+‘is_complex’:
+‘is_contiguous’:
+‘is_cuda’:
+‘is_distributed’:
+‘is_floating_point’:
+‘is_leaf’:
+‘is_mkldnn’:
+‘is_nonzero’:
+‘is_pinned’:
+‘is_quantized’:
+‘is_same_size’:
+‘is_set_to’:
+‘is_shared’:
+‘is_signed’:
+‘is_sparse’:
+‘isclose’:
+‘item’:
+‘kthvalue’:
+‘layout’:
+‘le’:
+‘le_’:
+‘lerp’:
+‘lerp_’:
+‘lgamma’:
+‘lgamma_’:
+‘log’:
+‘log10’:
+‘log10<em>’:
+‘log1p’:
+‘log1p</em>’:
+‘log2’:
+‘log2<em>’:
+‘log</em>’:
+‘log_normal_’:
+‘log_softmax’:
+‘logdet’:
+‘logical_not’:
+‘logical_not_’:
+‘logical_xor’:
+‘logical_xor_’:
+‘logsumexp’:
+‘long’:
+‘lstsq’:
+‘lt’:
+‘lt_’:
+‘lu’:
+‘lu_solve’:
+‘map2<em>’:
+‘map</em>’:
+‘masked_fill’:
+‘masked_fill_’:
+‘masked_scatter’:
+‘masked_scatter_’:
+‘masked_select’:
+‘matmul’:
+‘matrix_power’:
+‘max’:
+‘mean’:
+‘median’:
+‘min’:
+‘mm’:
+‘mode’:
+‘mul’:
+‘mul_’:
+‘multinomial’:
+‘mv’:
+‘mvlgamma’:
+‘mvlgamma_’:
+‘name’:
+‘names’:
+‘narrow’:
+‘narrow_copy’:
+‘ndim’:
+‘ndimension’:
+‘ne’:
+‘ne_’:
+‘neg’:
+‘neg_’:
+‘nelement’:
+‘new’:
+‘new_empty’:
+‘new_full’:
+‘new_ones’:
+‘new_tensor’:
+‘new_zeros’:
+‘nonzero’:
+‘norm’:
+‘normal_’:
+‘numel’:
+‘numpy’:
+‘orgqr’:
+‘ormqr’:
+‘output_nr’:
+‘permute’:
+‘pin_memory’:
+‘pinverse’:
+‘polygamma’:
+‘polygamma_’:
+‘prelu’:
+‘prod’:
+‘put_’:
+‘q_per_channel_axis’:
+‘q_per_channel_scales’:
+‘q_per_channel_zero_points’:
+‘q_scale’:
+‘q_zero_point’:
+‘qr’:
+‘qscheme’:
+‘random_’:
+‘reciprocal’:
+‘reciprocal_’:
+‘record_stream’:
+‘refine_names’:
+‘register_hook’:
+‘reinforce’:
+‘remainder’:
+‘remainder_’:
+‘rename’:
+‘rename_’:
+‘renorm’:
+‘renorm_’:
+‘repeat’:
+‘repeat_interleave’:
+‘requires_grad’:
+‘requires_grad_’:
+‘reshape’:
+‘reshape_as’:
+‘resize’:
+‘resize_’:
+‘resize_as’:
+‘resize_as_’:
+‘retain_grad’:
+‘rfft’:
+‘roll’:
+‘rot90’:
+‘round’:
+‘round_’:
+‘rsqrt’:
+‘rsqrt_’:
+‘scatter’:
+‘scatter_’:
+‘scatter_add’:
+‘scatter_add_’:
+‘select’:
+‘set_’:
+‘share_memory_’:
+‘short’:
+‘sigmoid’:
+‘sigmoid_’:
+‘sign’:
+‘sign_’:
+‘sin’:
+‘sin_’:
+‘sinh’:
+‘sinh_’:
+‘size’:
+‘slogdet’:
+‘smm’:
+‘softmax’:
+‘solve’:
+‘sort’:
+‘sparse_dim’:
+‘sparse_mask’:
+‘sparse_resize_’:
+‘sparse_resize_and_clear_’:
+‘split’:
+‘split_with_sizes’:
+‘squeeze’:
+‘squeeze_’:
+‘sspaddmm’:
+‘std’:
+‘stft’:
+‘storage’:
+‘storage_offset’:
+‘storage_type’:
+‘sub’:
+‘sub_’:
+‘sum’:
+‘sum_to_size’:
+‘svd’:
+‘symeig’:
+‘take’:
+‘tan’:
+‘tan_’:
+‘tanh’:
+‘tanh_’:
+‘to’:
+‘to_dense’:
+‘to_mkldnn’:
+‘to_sparse’:
+‘tolist’:
+‘topk’:
+‘trace’:
+‘transpose’:
+‘transpose_’:
+‘triangular_solve’:
+‘tril’:
+‘tril_’:
+‘triu’:
+‘triu_’:
+‘trunc’:
+‘trunc_’:
+‘type’:
+‘type_as’:
+‘unbind’:
+‘unflatten’:
+‘unfold’:
+‘uniform_’:
+‘unique’:
+‘unique_consecutive’:
+‘values’:
+‘var’:
+‘view’:
+‘view_as’:
+‘where’:
+‘zero_’</p>
+                
+			</article>
+			
+			<!-- Tags -->
+			<div class="mb-4">
+				<span class="taglist">
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/tags.html#featured">featured</a>
+				
+				</span>
+			</div>
+ 
+            <!-- Mailchimp Subscribe Form -->
+            
+            
+<!-- TODO: all of author mal funciton -->            
+             <!-- Author Box -->
+                	
+<!-- 				<div class="row mt-5">
+					<div class="col-md-2 align-self-center">
+                          
+					</div>
+					<div class="col-md-10">		
+                        <h5 class="font-weight-bold">Written by  </h5>
+											
+					</div>
+				</div>				 -->
+                
+            
+            <!-- Comments -->
+            
+                <!--  Don't edit anything here. Set your disqus id in _config.yml -->
+
+<div id="comments" class="mt-5">
+    <div id="disqus_thread">
+    </div>
+    <script type="text/javascript">
+        var disqus_shortname = 'dionne'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>
+    Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+</div>
+            
+            
+		</div>
         
-    </div>
-    
-    <div class="col-md-4">
-        <div class="sticky-top sticky-top-offset">
-    <h4 class="font-weight-bold spanborder"><span>Featured</span></h4>  
-    <ol class="list-featured">				
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/2019/12/convolution/" class="text-dark">What is convolution?</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/2019/12/jeremy-howard/" class="text-dark">Jeremy Howard</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/categories.html#people in the world">People in the World</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/2019/12/note02-fastai-1/" class="text-dark">Making my own classifier with my own data</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/2019/12/pytorch-tensor/" class="text-dark">Pytorch</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/categories.html#library">library</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/2019/11/note08-fastai-4/" class="text-dark">Gradient backward</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/2019/11/note08-fastai-3/" class="text-dark">ReLU and data init with normailized data</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/2019/11/note08-fastai-2/" class="text-dark">Broadcasting, Einstein sum, Pytorch operator</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/2019/11/julia-evans/" class="text-dark">Julia Evans</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/categories.html#people in the world">People in the World</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/2019/11/Git-Merge/" class="text-dark">Why am I not listed as a contributor?!</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/categories.html#resource">Resource</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/2019/10/GPU-time/" class="text-dark">5 reasons took much time to setting GPU for fast.ai than I expected</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/categories.html#resource">Resource</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/2019/10/note08-fastai-1/" class="text-dark">Lecture 08 - Deep Learning From Foundations-part1</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/categories.html#fast.ai-v3">Fast.AI-v3</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-           
-    </ol>
-</div>     
-    </div>
-    
+        
+	</div>
 </div>
 
 
-
+<!-- Aletbar Prev/Next -->
+<div class="alertbar">
+    <div class="container">
+        <div class="row prevnextlinks small font-weight-bold">
+          
+            <div class="col-md-6 rightborder pl-0">
+                <a class="text-dark" href="/2019/11/note08-fastai-4/"> <img height="30px" class="mr-1" src="/assets/images/4-backward.png">  Gradient backward</a>
+            </div>
+          
+          
+            <div class="col-md-6 text-right pr-0">
+                <a class="text-dark" href="/2019/12/note02-fastai-1/"> Making my own classifier with my own data  <img height="30px" class="ml-1" src="/munich.jpg"> </a>
+            </div>
+          
+        </div>
+    </div>
 </div>
+
     </main>
 
 

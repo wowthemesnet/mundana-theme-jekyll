@@ -1,4 +1,161 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-16T03:32:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">What is convolution?</title><link href="http://localhost:4000/2019/12/convolution/" rel="alternate" type="text/html" title="What is convolution?" /><published>2019-12-16T00:00:00+09:00</published><updated>2019-12-16T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/convolution</id><content type="html" xml:base="http://localhost:4000/2019/12/convolution/">&lt;p&gt;This is the part of Journey which Jeremy recommended us to do.&lt;/p&gt;</content><author><name>dionne</name></author><category term="sticky" /><category term="featured" /><summary type="html">This is the part of Journey which Jeremy recommended us to do.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/2-relu.png" /></entry><entry><title type="html">Jeremy Howard</title><link href="http://localhost:4000/2019/12/jeremy-howard/" rel="alternate" type="text/html" title="Jeremy Howard" /><published>2019-12-15T00:00:00+09:00</published><updated>2019-12-15T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/jeremy-howard</id><content type="html" xml:base="http://localhost:4000/2019/12/jeremy-howard/">&lt;p&gt;How he impacted me?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-17T01:08:53+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">What is a convolution?</title><link href="http://localhost:4000/2019/12/convolution/" rel="alternate" type="text/html" title="What is a convolution?" /><published>2019-12-16T00:00:00+09:00</published><updated>2019-12-16T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/convolution</id><content type="html" xml:base="http://localhost:4000/2019/12/convolution/">&lt;p&gt;This is the part of Journey which Jeremy recommended us to do.
+One of the concepts I have to know.&lt;/p&gt;
+
+&lt;p&gt;1) Kaiming Initializtion in Pytorch was in trouble.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
+2) Jeremy started to dig in, in lesson09, but I didn’t know why the size of tensor is &lt;sup id=&quot;fnref:5x5x5&quot;&gt;&lt;a href=&quot;#fn:5x5x5&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and even understand this spreadsheet data.&lt;sup id=&quot;fnref:conv&quot;&gt;&lt;a href=&quot;#fn:conv&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 class=&quot;no_toc&quot; id=&quot;homework&quot;&gt;Homework&lt;/h4&gt;
+
+&lt;p&gt;Read &lt;a href=&quot;https://arxiv.org/pdf/1311.2901.pdf&quot;&gt;Visualizing and Understanding Convolutional Networks
+&lt;/a&gt; paper&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-is-convolution&quot; id=&quot;markdown-toc-what-is-convolution&quot;&gt;What is convolution?&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#visualization&quot; id=&quot;markdown-toc-visualization&quot;&gt;Visualization&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#one-kernel&quot; id=&quot;markdown-toc-one-kernel&quot;&gt;one kernel&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#matthew-d-zeiler--rob-fergus-paper&quot; id=&quot;markdown-toc-matthew-d-zeiler--rob-fergus-paper&quot;&gt;Matthew D Zeiler &amp;amp; Rob Fergus Paper&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#convolution-can-be-represented-as-matmul&quot; id=&quot;markdown-toc-convolution-can-be-represented-as-matmul&quot;&gt;Convolution can be represented as matmul&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#padding&quot; id=&quot;markdown-toc-padding&quot;&gt;Padding&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#kernel-has-rank-3&quot; id=&quot;markdown-toc-kernel-has-rank-3&quot;&gt;Kernel has rank 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight&quot; id=&quot;markdown-toc-how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight&quot;&gt;How can we find a side-edge, a gradient and area of constant weight?&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;what-is-convolution&quot;&gt;What is convolution?&lt;/h3&gt;
+
+&lt;p&gt;A convolutional neural network is that your red, green, and blue pixels go into the simple computation, and something comes out of that, and then the result of that goes into a second layer, and the result of that goes into the third layer and so forth.&lt;/p&gt;
+
+&lt;h4 id=&quot;visualization&quot;&gt;Visualization&lt;/h4&gt;
+
+&lt;h5 id=&quot;one-kernel&quot;&gt;one kernel&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Refer this &lt;a href=&quot;http://setosa.io/ev/image-kernels/&quot;&gt;site&lt;/a&gt; for visualizing CNN filtering&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;matthew-d-zeiler--rob-fergus-paper&quot;&gt;Matthew D Zeiler &amp;amp; Rob Fergus Paper&lt;/h5&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://youtu.be/BWWm4AzsdLk?t=4588&quot;&gt;Lecture01&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/cnn-nine.png&quot; alt=&quot;&quot; /&gt;{align-items: center;}&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;nine examples of the actual coefficients from the &lt;strong&gt;first layer&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;convolution-can-be-represented-as-matmul&quot;&gt;Convolution can be represented as matmul&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/impactai/cnns-from-different-viewpoints-fab7f52d159c&quot;&gt;CNNs from different viewpoints&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/cnn-result.png&quot; alt=&quot;&quot; /&gt;{align-items: center;}&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/cnn-result2.jpg&quot; alt=&quot;&quot; height=&quot;50%&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;[A B C D E F G H I J] is 3 by 3 image data flatten to vector.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;As a result, convolution is a just matrix just two things happens
+    &lt;ul&gt;
+      &lt;li&gt;Some of entries are set to zeros at all the times&lt;/li&gt;
+      &lt;li&gt;same color always have the same weight. That called &lt;strong&gt;weight time / wegith sharing&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;So, we can implement a convolution with matrix multiplication. But, we don’t do that because it’s slow!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;padding&quot;&gt;Padding&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What most of libraries do is just put zeros asdie of matrix&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/padding2.png&quot; alt=&quot;&quot; height=&quot;50%&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/padding.png&quot; alt=&quot;&quot; height=&quot;60%&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;fast.ai uses reflection paddings (what is this? Jeremy said he uttered it)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;kernel-has-rank-3&quot;&gt;Kernel has rank 3&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;As standard picture input would be &lt;sup id=&quot;fnref:RGB&quot;&gt;&lt;a href=&quot;#fn:RGB&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;, it would be actually 3d, not 2d.&lt;/li&gt;
+  &lt;li&gt;If we make kernel as a 3x3 size, we pass over same kernel all the different Red, Green, Blue Pixels.
+    &lt;ul&gt;
+      &lt;li&gt;This could make problem, because, if we want to detect frog, which is green, we would want more activations on the green(I made a test cell in my colab &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight&quot;&gt;How can we find a side-edge, a gradient and area of constant weight?&lt;/h4&gt;
+
+&lt;p&gt;Not top-edge!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;One kernel can find only the top-edge, so we should stack the kernels &lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;So, we pass it through bunch of kernels to the input images, and that process gives us height x width x corresponding number of kernels.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/aassets/images/tensors.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Usually that number of chanel is 16&lt;/li&gt;
+  &lt;li&gt;And if we want to get the more channels and features, we should repeat that process
+    &lt;ul&gt;
+      &lt;li&gt;This process gives rise to memory out of control, we do the &lt;strong&gt;stride&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=V2h3IOBDvrA&quot;&gt;conv-example.xlsx&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;2 convolutional filters&lt;/li&gt;
+  &lt;li&gt;At a second layer, filter is 3x3x2 tensor, because to add up together the first layer’s channel.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Actually, what I wanted to know part :  --&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 class=&quot;no_toc&quot; id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Problem was &lt;em&gt;math.sqrt(5)&lt;/em&gt; was not kaiming initialization formula, &lt;a href=&quot;https://github.com/pytorch/pytorch/blob/3df79f403e8b9621d5adb0447266becd10d633b0/torch/nn/modules/linear.py#L58-L63&quot;&gt;Implementation in Pytorch&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5x5x5&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://youtu.be/AcA8HAYh7IE?list=PLBRuZVGXwM3l2HesxBCrvwYacG1AWrVmM&amp;amp;t=251&quot;&gt;size of tensor, lecture09&lt;/a&gt; &lt;a href=&quot;#fnref:5x5x5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:conv&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://github.com/fastai/course-v3/blob/bc034b471d839bdf5bc72bd7fec1061fac648ccd/files/xl/conv-example.xlsx&quot;&gt;conv-example.xlsx&lt;/a&gt; &lt;a href=&quot;#fnref:conv&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:RGB&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.quora.com/Why-do-computers-use-red-green-and-blue-instead-of-the-primary-colors&quot;&gt;Why do computer use red, green and blue instead of primary colors&lt;/a&gt; &lt;a href=&quot;#fnref:RGB&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Grayscale is a group of shades without any visible color. … Each of these dots has its own brightness level as well and, therefore, can be converted to grayscale. A grayscale image is one with all color information removed. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://brohrer.github.io/convert_rgb_to_grayscale.html&quot;&gt;Testing RGB and grayscale&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://youtu.be/hkBa9pU-H48?t=4937&quot;&gt;stack kernel and make new rank of tensor at output, Lesson06-2019&lt;/a&gt; &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><summary type="html">This is the part of Journey which Jeremy recommended us to do. One of the concepts I have to know.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn-jiwon.png" /></entry><entry><title type="html">Jeremy Howard</title><link href="http://localhost:4000/2019/12/jeremy-howard/" rel="alternate" type="text/html" title="Jeremy Howard" /><published>2019-12-15T00:00:00+09:00</published><updated>2019-12-15T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/jeremy-howard</id><content type="html" xml:base="http://localhost:4000/2019/12/jeremy-howard/">&lt;p&gt;How he impacted me?&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -38,9 +195,8 @@
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#1-creating-dataset-from-google-images&quot; id=&quot;markdown-toc-1-creating-dataset-from-google-images&quot;&gt;1. Creating dataset from google images&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#11-get-a-list-of-urls&quot; id=&quot;markdown-toc-11-get-a-list-of-urls&quot;&gt;1.1 Get a list of URLs&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#12-download-images&quot; id=&quot;markdown-toc-12-download-images&quot;&gt;1.2 Download images&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#13-view-data&quot; id=&quot;markdown-toc-13-view-data&quot;&gt;1.3 View data&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#11-get-a-list-of-urls--download-imgs&quot; id=&quot;markdown-toc-11-get-a-list-of-urls--download-imgs&quot;&gt;1.1 Get a list of URLs &amp;amp; Download imgs&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#12-create-imagedatabunch&quot; id=&quot;markdown-toc-12-create-imagedatabunch&quot;&gt;1.2 Create ImageDataBunch&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#2-train-model&quot; id=&quot;markdown-toc-2-train-model&quot;&gt;2. Train model&lt;/a&gt;&lt;/li&gt;
@@ -57,15 +213,33 @@
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;1-creating-dataset-from-google-images&quot;&gt;1. Creating dataset from google images&lt;/h3&gt;
-&lt;h4 id=&quot;11-get-a-list-of-urls&quot;&gt;1.1 Get a list of URLs&lt;/h4&gt;
+&lt;h4 id=&quot;11-get-a-list-of-urls--download-imgs&quot;&gt;1.1 Get a list of URLs &amp;amp; Download imgs&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Go to the google image, type “image” in advanced search,&lt;/li&gt;
+  &lt;li&gt;Go to the google image, type “image” in advanced search,
+    &lt;ul&gt;
+      &lt;li&gt;In my case, I searched “Munch” -Berlin -Gutenberg,  “Berlin” -Munch -Gutenberg, “Gutenberg” -Munch -Berlin&lt;/li&gt;
+      &lt;li&gt;Then, go to the &lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced search&lt;/code&gt; and select type of &lt;code class=&quot;highlighter-rouge&quot;&gt;image: photo&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Scroll down when you can see button “show more results”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Download img urls
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;opt + cmd + J&lt;/code&gt; if you are using mac os, or &lt;code class=&quot;highlighter-rouge&quot;&gt;ctl + shift + j&lt;/code&gt; if your os is windows&lt;/li&gt;
+      &lt;li&gt;And type below js code&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;12-download-images&quot;&gt;1.2 Download images&lt;/h4&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;urls&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelectorAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'.rg_i'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hasAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'data-src'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)?&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'data-src'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'data-iurl'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'data:text/csv;charset=utf-8,'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;escape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;urls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;n'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;13-view-data&quot;&gt;1.3 View data&lt;/h4&gt;
+&lt;h4 id=&quot;12-create-imagedatabunch&quot;&gt;1.2 Create ImageDataBunch&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;2-train-model&quot;&gt;2. Train model&lt;/h3&gt;
 &lt;h3 id=&quot;3-interpretation&quot;&gt;3. Interpretation&lt;/h3&gt;
@@ -1067,7 +1241,7 @@ def backward(self):
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#2-foundation-version&quot; id=&quot;markdown-toc-2-foundation-version&quot;&gt;2. Foundation Version&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#21-basic-architecture&quot; id=&quot;markdown-toc-21-basic-architecture&quot;&gt;2.1 Basic architecture&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#211-simplified-karming-init&quot; id=&quot;markdown-toc-211-simplified-karming-init&quot;&gt;2.1.1 &lt;em&gt;simplified&lt;/em&gt; karming init&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#211-simplified-kaiming-init&quot; id=&quot;markdown-toc-211-simplified-kaiming-init&quot;&gt;2.1.1 &lt;em&gt;simplified&lt;/em&gt; kaiming init&lt;/a&gt;&lt;/li&gt;
           &lt;li&gt;&lt;a href=&quot;#212-glorrot-initialization&quot; id=&quot;markdown-toc-212-glorrot-initialization&quot;&gt;2.1.2 Glorrot initialization&lt;/a&gt;&lt;/li&gt;
           &lt;li&gt;&lt;a href=&quot;#213-kaiming-initializating&quot; id=&quot;markdown-toc-213-kaiming-initializating&quot;&gt;2.1.3 Kaiming initializating&lt;/a&gt;&lt;/li&gt;
           &lt;li&gt;&lt;a href=&quot;#214-pytorch-package&quot; id=&quot;markdown-toc-214-pytorch-package&quot;&gt;2.1.4 Pytorch package&lt;/a&gt;&lt;/li&gt;
@@ -1129,7 +1303,7 @@ def backward(self):
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&quot;211-simplified-karming-init&quot;&gt;2.1.1 &lt;em&gt;simplified&lt;/em&gt; karming init&lt;/h5&gt;
+&lt;h5 id=&quot;211-simplified-kaiming-init&quot;&gt;2.1.1 &lt;em&gt;simplified&lt;/em&gt; kaiming init&lt;/h5&gt;
 
 &lt;p&gt;Q: Why we did init, normalize with only validation data? Because we can not handle and get statistics from each value of x_valid?{: style=”color:red; font-size: 130%; text-align: center;”}&lt;/p&gt;
 
@@ -1237,10 +1411,15 @@ def backward(self):
   &lt;li&gt;What about CNN in Pytorch?&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I tried and 
-&lt;img src=&quot;/assets/images/2-forward-conv2d.jpg&quot; alt=&quot;&quot; height=&quot;90%&quot; width=&quot;90%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;I tried&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Conv2d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conv2d_forward&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;??&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2-forward-conv2d.jpg&quot; alt=&quot;&quot; height=&quot;90%&quot; width=&quot;90%&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;jeremy said&lt;/p&gt;
+&lt;p&gt;Jeremy digged into using&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modules&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_ConvNd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reset_parameters&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;??&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2-torch-nn-conv-jeremy.jpg&quot; alt=&quot;&quot; height=&quot;90%&quot; width=&quot;90%&quot; /&gt;&lt;/p&gt;
 
@@ -1339,7 +1518,7 @@ def backward(self):
       &lt;p&gt;&lt;a href=&quot;https://discuss.pytorch.org/t/why-the-default-negative-slope-for-kaiming-uniform-initialization-of-convolution-and-linear-layers-is-5/29290&quot;&gt;Pytorch kaiming init explained&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><category term="featured" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/2-relu.png" /></entry><entry><title type="html">Broadcasting, Einstein sum, Pytorch operator</title><link href="http://localhost:4000/2019/11/note08-fastai-2/" rel="alternate" type="text/html" title="Broadcasting, Einstein sum, Pytorch operator" /><published>2019-11-21T00:00:00+09:00</published><updated>2019-11-21T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-2/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/2-relu.png" /></entry><entry><title type="html">Broadcasting, Einstein sum, Pytorch operator</title><link href="http://localhost:4000/2019/11/note08-fastai-2/" rel="alternate" type="text/html" title="Broadcasting, Einstein sum, Pytorch operator" /><published>2019-11-21T00:00:00+09:00</published><updated>2019-11-21T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-2/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
 
 &lt;h3 class=&quot;no_toc&quot; id=&quot;time-comparison-with-pure-python&quot;&gt;Time comparison with pure Python&lt;/h3&gt;
 

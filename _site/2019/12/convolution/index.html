@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>What is convolution? | SpellOnYou</title>
+    <title>What is a convolution? | SpellOnYou</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>What is convolution? | SpellOnYou</title>
+<title>What is a convolution? | SpellOnYou</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="What is convolution?" />
+<meta property="og:title" content="What is a convolution?" />
 <meta name="author" content="dionne" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This is the part of Journey which Jeremy recommended us to do." />
-<meta property="og:description" content="This is the part of Journey which Jeremy recommended us to do." />
+<meta name="description" content="This is the part of Journey which Jeremy recommended us to do. One of the concepts I have to know." />
+<meta property="og:description" content="This is the part of Journey which Jeremy recommended us to do. One of the concepts I have to know." />
 <link rel="canonical" href="http://localhost:4000/2019/12/convolution/" />
 <meta property="og:url" content="http://localhost:4000/2019/12/convolution/" />
 <meta property="og:site_name" content="SpellOnYou" />
-<meta property="og:image" content="http://localhost:4000/assets/images/2-relu.png" />
+<meta property="og:image" content="http://localhost:4000/assets/images/cnn-jiwon.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-12-16T00:00:00+09:00" />
 <script type="application/ld+json">
-{"description":"This is the part of Journey which Jeremy recommended us to do.","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/12/convolution/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/2-relu.png","headline":"What is convolution?","dateModified":"2019-12-16T00:00:00+09:00","datePublished":"2019-12-16T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/12/convolution/"},"@context":"http://schema.org"}</script>
+{"description":"This is the part of Journey which Jeremy recommended us to do. One of the concepts I have to know.","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/12/convolution/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/cnn-jiwon.png","headline":"What is a convolution?","dateModified":"2019-12-16T00:00:00+09:00","datePublished":"2019-12-16T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/12/convolution/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -163,8 +163,8 @@ var documents = [{
     }, {
     "id": 12,
     "url": "http://localhost:4000/2019/12/convolution/",
-    "title": "What is convolution?",
-    "body": "2019/12/16 - This is the part of Journey which Jeremy recommended us to do. "
+    "title": "What is a convolution?",
+    "body": "2019/12/16 - This is the part of Journey which Jeremy recommended us to do. One of the concepts I have to know. 1) Kaiming Initializtion in Pytorch was in trouble. 12) Jeremy started to dig in, in lesson09, but I didn’t know why the size of tensor is 2 and even understand this spreadsheet data. 3 Homework: Read Visualizing and Understanding Convolutional Networks paper  What is convolution?     Visualization         one kernel     Matthew D Zeiler &amp; Rob Fergus Paper          Convolution can be represented as matmul   Padding   Kernel has rank 3   How can we find a side-edge, a gradient and area of constant weight?   What is convolution?: A convolutional neural network is that your red, green, and blue pixels go into the simple computation, and something comes out of that, and then the result of that goes into a second layer, and the result of that goes into the third layer and so forth. Visualization: one kernel Refer this site for visualizing CNN filteringMatthew D Zeiler &amp; Rob Fergus PaperLecture01 {align-items: center;}  nine examples of the actual coefficients from the first layer. Convolution can be represented as matmul: CNNs from different viewpoints {align-items: center;}    [A B C D E F G H I J] is 3 by 3 image data flatten to vector.   As a result, convolution is a just matrix just two things happens     Some of entries are set to zeros at all the times   same color always have the same weight. That called weight time / wegith sharing    So, we can implement a convolution with matrix multiplication. But, we don’t do that because it’s slow!Padding:  What most of libraries do is just put zeros asdie of matrix  fast. ai uses reflection paddings (what is this? Jeremy said he uttered it)Kernel has rank 3:  As standard picture input would be 4 5, it would be actually 3d, not 2d.  If we make kernel as a 3x3 size, we pass over same kernel all the different Red, Green, Blue Pixels.      This could make problem, because, if we want to detect frog, which is green, we would want more activations on the green(I made a test cell in my colab 6)   How can we find a side-edge, a gradient and area of constant weight?: Not top-edge!  One kernel can find only the top-edge, so we should stack the kernels 7 So, we pass it through bunch of kernels to the input images, and that process gives us height x width x corresponding number of kernels.  Usually that number of chanel is 16 And if we want to get the more channels and features, we should repeat that process     This process gives rise to memory out of control, we do the stride   #### conv-example. xlsx  2 convolutional filters At a second layer, filter is 3x3x2 tensor, because to add up together the first layer’s channel. Reference:       Problem was math. sqrt(5) was not kaiming initialization formula, Implementation in Pytorch &#8617;        size of tensor, lecture09 &#8617;        conv-example. xlsx &#8617;        Why do computer use red, green and blue instead of primary colors &#8617;        Grayscale is a group of shades without any visible color. … Each of these dots has its own brightness level as well and, therefore, can be converted to grayscale. A grayscale image is one with all color information removed.  &#8617;        Testing RGB and grayscale &#8617;        stack kernel and make new rank of tensor at output, Lesson06-2019 &#8617;    "
     }, {
     "id": 13,
     "url": "http://localhost:4000/2019/12/jeremy-howard/",
@@ -174,7 +174,7 @@ var documents = [{
     "id": 14,
     "url": "http://localhost:4000/2019/12/note02-fastai-1/",
     "title": "Making my own classifier with my own data",
-    "body": "2019/12/14 - Making a classifier which can seperate Munich from Berlin and Hamburg!(hoping my well in Munich!🤟) CONTENTS:  1. Creating dataset from google images     1. 1 Get a list of URLs   1. 2 Download images   1. 3 View data    2. Train model 3. Interpretation 4. Cleaning Up 5. Putting your model in production 6. Things that can go wrong     6. 1 Learning rate (LR) too high   6. 2 Learning rate (LR) too low   6. 3 Too few epochs   6. 4 Too many epochs   1. Creating dataset from google images: 1. 1 Get a list of URLs:  Go to the google image, type “image” in advanced search,1. 2 Download images: 1. 3 View data: 2. Train model: 3. Interpretation: 4. Cleaning Up: 5. Putting your model in production: 6. Things that can go wrong: 6. 1 Learning rate (LR) too high: 6. 2 Learning rate (LR) too low: 6. 3 Too few epochs: 6. 4 Too many epochs: Reference: How to create a deep learning dataset using Google Images "
+    "body": "2019/12/14 - Making a classifier which can seperate Munich from Berlin and Hamburg!(hoping my well in Munich!🤟) CONTENTS:  1. Creating dataset from google images     1. 1 Get a list of URLs &amp; Download imgs   1. 2 Create ImageDataBunch    2. Train model 3. Interpretation 4. Cleaning Up 5. Putting your model in production 6. Things that can go wrong     6. 1 Learning rate (LR) too high   6. 2 Learning rate (LR) too low   6. 3 Too few epochs   6. 4 Too many epochs   1. Creating dataset from google images: 1. 1 Get a list of URLs &amp; Download imgs:  Go to the google image, type “image” in advanced search,     In my case, I searched “Munch” -Berlin -Gutenberg, “Berlin” -Munch -Gutenberg, “Gutenberg” -Munch -Berlin   Then, go to the Advanced search and select type of image: photo   Scroll down when you can see button “show more results”    Download img urls     opt + cmd + J if you are using mac os, or ctl + shift + j if your os is windows   And type below js code   urls=Array. from(document. querySelectorAll('. rg_i')). map(el=&gt; el. hasAttribute('data-src')?el. getAttribute('data-src'):el. getAttribute('data-iurl'));window. open('data:text/csv;charset=utf-8,' + escape(urls. join('\n')));1. 2 Create ImageDataBunch:  2. Train model: 3. Interpretation: 4. Cleaning Up: 5. Putting your model in production: 6. Things that can go wrong: 6. 1 Learning rate (LR) too high: 6. 2 Learning rate (LR) too low: 6. 3 Too few epochs: 6. 4 Too many epochs: Reference: How to create a deep learning dataset using Google Images "
     }, {
     "id": 15,
     "url": "http://localhost:4000/2019/12/pytorch-tensor/",
@@ -189,7 +189,7 @@ var documents = [{
     "id": 17,
     "url": "http://localhost:4000/2019/11/note08-fastai-3/",
     "title": "ReLU and data init with normailized data",
-    "body": "2019/11/23 - ” Lecture 08 - Deep Learning From Foundations-part2 “ Homework:  Review concepts 16 concepts from Course 1 (lessons 1 - 7)(1) Affine Functions &amp; non-linearities; 2) Parameters &amp; activations; 3) Random initialization &amp; transfer learning; 4) SGD, Momentum, Adam; 5) Convolutions; Batch-norm; 6) Dropout; 7) Data augmentation; 8) Weight decay; 9) Res/dense blocks; 10) Image classification and regression; 11)Embeddings; 12) Continuous &amp; Categorical variables; 13) Collaborative filtering; 14) Language models; 15) NLP classification; 16) Segmentation; U-net; GANS)  Make sure you understand broadcasting Read section 2. 2 in Delving Deep into Rectifiers Try to replicate as much of the notebooks as you can without peeking; when you get stuck, peek at the lesson notebook, but then close it and try to do it yourselfOther materials:  Understanding the difficulty of training deep feedforward neural networks, paper that introduced Xavier initializationCONTENTS:  Other materials 1. The forward and backward passes     1. 1 Normalization   1. 2 Variable definition    2. Foundation Version     2. 1 Basic architecture         2. 1. 1 simplified karming init     2. 1. 2 Glorrot initialization     2. 1. 3 Kaiming initializating     2. 1. 4 Pytorch package          2. 2 Loss function: MSE    Footnote* Normailzation{:toc}1. The forward and backward passes: 1. 1 Normalization: train_mean,train_std = x_train. mean(),x_train. std()&gt;&gt;&gt; train_mean,train_std(tensor(0. 1304), tensor(0. 3073))Remember!  Dataset, which is x_train, mean and standard deviation is not 0&amp;1. But we need them to be which means we should substract means and divide data by std.  You should not standarlize validation set because training set and validation set should be aparted.  after normalize, mean is close to zero, and standard deviation is close to 1. 1. 2 Variable definition:  n,m: size of the training set c: the number of activations we need in our model2. Foundation Version: 2. 1 Basic architecture:  Our model has one hidden layer, output to have 10 activations, used in cross entropy.    But in process of building architecture, we will use mean square error, output to have 1 activations and lator change it to cross entropy   number of hidden unit; 50see below pic  We want to make w1&amp;w2 mean and std be 0&amp;1.      why initializating and make mean zero and std one is important?   paper highlighting importance of normalisation - training 10,000 layer network without regularisation1   2. 1. 1 simplified karming initQ: Why we did init, normalize with only validation data? Because we can not handle and get statistics from each value of x_valid?{: style=”color:red; font-size: 130%; text-align: center;”}  what about hidden(first) layer?w1 = torch. randn(m,nh)b1 = torch. zeros(nh)t = lin(x_valid, w1, b1) # hidden&gt;&gt;&gt; t. mean(), t. std()((tensor(2. 3191), tensor(27. 0303))In output(second) layer, w2 = torch. randn(nh,1)b2 = torch. zeros(1)t2 = lin(t, w2, b2) # output&gt;&gt;&gt; t2. mean(), t2. std()(tensor(-58. 2665), tensor(170. 9717))   which is terribly far from normalzed value.     But if we apply simplified kaiming init  w1 = torch. randn(m,nh)/math. sqrt(m); b1 = torch. zeros(nh)w2 = torch. randn(nh,1)/math. sqrt(nh); b2 = torch. zeros(1)t = lin(x_valid, w1, b1)t. mean(),t. std()&gt;&gt;&gt; (tensor(-0. 0516), tensor(0. 9354)) But, actually, we use activations not only linear function After applying activations relu at linear layer, mean and deviation became 0. 5. 2. 1. 2 Glorrot initializationPaper2: Understanding the difficulty of training deep feedforward neural networks  Gaussian(, bell shaped, normal distributions) is not trained very well.  How to initialize neural nets? with the size of layer , the number of filters .  But there is No acount for import of ReLU If we got 1000 layers, vanishing gradients problem emerges2. 1. 3 Kaiming initializatingPaper3: Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification  Kaiming He, explained here rectifier: rectified linear unit rectifier network: neural network with rectifier linear units  This is kaiming init, and why suddenly replace one to two on a top?     to avoid vanishing gradient(weights)   But it doesn’t give very nice mean tough.    2. 1. 4 Pytorch package Why fan_out?     according to pytorch documentation,   choosing 'fan_in' preserves the magnitude of the variance of the wights in the forward pass. choosing 'fan_out' preserves the magnitues in the backward pass(, which means matmul; with transposed matrix) ➡️ in the other words, torch use fan_out cz pytorch transpose in linear transformaton.  What about CNN in Pytorch?I tried and jeremy said 2  in Pytorch, it doesn’t seem to be implemented kaiming init in right formula. so we should use our own operation.  But actually, this has been discussed in Pytorch community before. 3 4 Jeremy said it enhanced variance also, so I sampled 100 times and counted better results.  To make sure the shape seems sensible. check with assert. (remember we will replace 1 to 10 in cross entropy)assert model(x_valid). shape==torch. Size([x_valid. shape[0],1])&gt;&gt;&gt; model(x_valid). shape(10000, 1) We have made Relu, init, linear, it seems we can forward pass code we need for basic architecture nh = 50def lin(x, w, b): return x@w + b;w1 = torch. randn(m,nh)*math. sqrt(2. /m ); b1 = torch. zeros(nh)w2 = torch. randn(nh,1); b2 = torch. zeros(1)def relu(x): return x. clamp_min(0. ) - 0. 5t1 = relu(lin(x_valid, w1, b1))def model(xb):  l1 = lin(xb, w1, b1)  l2 = relu(l1)  l3 = lin(l2, w2, b2)  return l32. 2 Loss function: MSE:  Mean squared error need unit vector, so we remove unit axis.   def mse(output, targ): return (output. squeeze(-1) - targ). pow(2). mean()    In python, in case you remove axis, you use ‘squeeze’, or add axis use ‘unsqueeze’ torch. squeeze where code commonly broken. so, when you use squeeze, clarify dimension axis you want to removetmp = torch. tensor([1,1])tmp. squeeze()&gt;&gt;&gt; tensor([1, 1]) make sure to make as float when you calculateBut why??? because it is tensor?{: style=”color:red; font-size: 130%;”} Here’s the error when I don’t transform the data type ---------------------------------------------------------------------------TypeError                 Traceback (most recent call last)&lt;ipython-input-22-ae6009bef8b4&gt; in &lt;module&gt;()----&gt; 1 y_train = get_data()[1] # call data again   2 mse(preds, y_train)TypeError: 'map' object is not subscriptable This is forward passFootnote:       Fixup Initialization: Residual Learning Without Normalization &#8617;        Pytorch implementaion on Kaiming init of conv and linear layers &#8617;        Pytorch kaiming init issue &#8617;        Pytorch kaiming init explained &#8617;    "
+    "body": "2019/11/23 - ” Lecture 08 - Deep Learning From Foundations-part2 “ Homework:  Review concepts 16 concepts from Course 1 (lessons 1 - 7)(1) Affine Functions &amp; non-linearities; 2) Parameters &amp; activations; 3) Random initialization &amp; transfer learning; 4) SGD, Momentum, Adam; 5) Convolutions; Batch-norm; 6) Dropout; 7) Data augmentation; 8) Weight decay; 9) Res/dense blocks; 10) Image classification and regression; 11)Embeddings; 12) Continuous &amp; Categorical variables; 13) Collaborative filtering; 14) Language models; 15) NLP classification; 16) Segmentation; U-net; GANS)  Make sure you understand broadcasting Read section 2. 2 in Delving Deep into Rectifiers Try to replicate as much of the notebooks as you can without peeking; when you get stuck, peek at the lesson notebook, but then close it and try to do it yourselfOther materials:  Understanding the difficulty of training deep feedforward neural networks, paper that introduced Xavier initializationCONTENTS:  Other materials 1. The forward and backward passes     1. 1 Normalization   1. 2 Variable definition    2. Foundation Version     2. 1 Basic architecture         2. 1. 1 simplified kaiming init     2. 1. 2 Glorrot initialization     2. 1. 3 Kaiming initializating     2. 1. 4 Pytorch package          2. 2 Loss function: MSE    Footnote* Normailzation{:toc}1. The forward and backward passes: 1. 1 Normalization: train_mean,train_std = x_train. mean(),x_train. std()&gt;&gt;&gt; train_mean,train_std(tensor(0. 1304), tensor(0. 3073))Remember!  Dataset, which is x_train, mean and standard deviation is not 0&amp;1. But we need them to be which means we should substract means and divide data by std.  You should not standarlize validation set because training set and validation set should be aparted.  after normalize, mean is close to zero, and standard deviation is close to 1. 1. 2 Variable definition:  n,m: size of the training set c: the number of activations we need in our model2. Foundation Version: 2. 1 Basic architecture:  Our model has one hidden layer, output to have 10 activations, used in cross entropy.    But in process of building architecture, we will use mean square error, output to have 1 activations and lator change it to cross entropy   number of hidden unit; 50see below pic  We want to make w1&amp;w2 mean and std be 0&amp;1.      why initializating and make mean zero and std one is important?   paper highlighting importance of normalisation - training 10,000 layer network without regularisation1   2. 1. 1 simplified kaiming initQ: Why we did init, normalize with only validation data? Because we can not handle and get statistics from each value of x_valid?{: style=”color:red; font-size: 130%; text-align: center;”}  what about hidden(first) layer?w1 = torch. randn(m,nh)b1 = torch. zeros(nh)t = lin(x_valid, w1, b1) # hidden&gt;&gt;&gt; t. mean(), t. std()((tensor(2. 3191), tensor(27. 0303))In output(second) layer, w2 = torch. randn(nh,1)b2 = torch. zeros(1)t2 = lin(t, w2, b2) # output&gt;&gt;&gt; t2. mean(), t2. std()(tensor(-58. 2665), tensor(170. 9717))   which is terribly far from normalzed value.     But if we apply simplified kaiming init  w1 = torch. randn(m,nh)/math. sqrt(m); b1 = torch. zeros(nh)w2 = torch. randn(nh,1)/math. sqrt(nh); b2 = torch. zeros(1)t = lin(x_valid, w1, b1)t. mean(),t. std()&gt;&gt;&gt; (tensor(-0. 0516), tensor(0. 9354)) But, actually, we use activations not only linear function After applying activations relu at linear layer, mean and deviation became 0. 5. 2. 1. 2 Glorrot initializationPaper2: Understanding the difficulty of training deep feedforward neural networks  Gaussian(, bell shaped, normal distributions) is not trained very well.  How to initialize neural nets? with the size of layer , the number of filters .  But there is No acount for import of ReLU If we got 1000 layers, vanishing gradients problem emerges2. 1. 3 Kaiming initializatingPaper3: Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification  Kaiming He, explained here rectifier: rectified linear unit rectifier network: neural network with rectifier linear units  This is kaiming init, and why suddenly replace one to two on a top?     to avoid vanishing gradient(weights)   But it doesn’t give very nice mean tough.    2. 1. 4 Pytorch package Why fan_out?     according to pytorch documentation,   choosing 'fan_in' preserves the magnitude of the variance of the wights in the forward pass. choosing 'fan_out' preserves the magnitues in the backward pass(, which means matmul; with transposed matrix) ➡️ in the other words, torch use fan_out cz pytorch transpose in linear transformaton.  What about CNN in Pytorch?I tried torch. nn. Conv2d. conv2d_forward?? Jeremy digged into using torch. nn. modules. conv. _ConvNd. reset_parameters?? 2  in Pytorch, it doesn’t seem to be implemented kaiming init in right formula. so we should use our own operation.  But actually, this has been discussed in Pytorch community before. 3 4 Jeremy said it enhanced variance also, so I sampled 100 times and counted better results.  To make sure the shape seems sensible. check with assert. (remember we will replace 1 to 10 in cross entropy)assert model(x_valid). shape==torch. Size([x_valid. shape[0],1])&gt;&gt;&gt; model(x_valid). shape(10000, 1) We have made Relu, init, linear, it seems we can forward pass code we need for basic architecture nh = 50def lin(x, w, b): return x@w + b;w1 = torch. randn(m,nh)*math. sqrt(2. /m ); b1 = torch. zeros(nh)w2 = torch. randn(nh,1); b2 = torch. zeros(1)def relu(x): return x. clamp_min(0. ) - 0. 5t1 = relu(lin(x_valid, w1, b1))def model(xb):  l1 = lin(xb, w1, b1)  l2 = relu(l1)  l3 = lin(l2, w2, b2)  return l32. 2 Loss function: MSE:  Mean squared error need unit vector, so we remove unit axis.   def mse(output, targ): return (output. squeeze(-1) - targ). pow(2). mean()    In python, in case you remove axis, you use ‘squeeze’, or add axis use ‘unsqueeze’ torch. squeeze where code commonly broken. so, when you use squeeze, clarify dimension axis you want to removetmp = torch. tensor([1,1])tmp. squeeze()&gt;&gt;&gt; tensor([1, 1]) make sure to make as float when you calculateBut why??? because it is tensor?{: style=”color:red; font-size: 130%;”} Here’s the error when I don’t transform the data type ---------------------------------------------------------------------------TypeError                 Traceback (most recent call last)&lt;ipython-input-22-ae6009bef8b4&gt; in &lt;module&gt;()----&gt; 1 y_train = get_data()[1] # call data again   2 mse(preds, y_train)TypeError: 'map' object is not subscriptable This is forward passFootnote:       Fixup Initialization: Residual Learning Without Normalization &#8617;        Pytorch implementaion on Kaiming init of conv and linear layers &#8617;        Pytorch kaiming init issue &#8617;        Pytorch kaiming init explained &#8617;    "
     }, {
     "id": 18,
     "url": "http://localhost:4000/2019/11/note08-fastai-2/",
@@ -316,14 +316,14 @@ function lunr_search(term) {
                         
                         </span>
 					</p>
-					<h1 class="display-4 mb-4 article-headline">What is convolution?</h1>
+					<h1 class="display-4 mb-4 article-headline">What is a convolution?</h1>
 					<div class="d-flex align-items-center">
                         
 						<small class="ml-3">  <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
                             <span class="text-muted d-block mt-1">Dec 16, 2019 · <span class="reading-time">
   
   
-    1 min read
+    4 mins read
   
 </span>
     </span>
@@ -332,7 +332,7 @@ function lunr_search(term) {
 				</div>
                 
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="/assets/images/2-relu.png" alt="What is convolution?">
+					<img class="rounded" src="/assets/images/cnn-jiwon.png" alt="What is a convolution?">
 				</div>
                 
 			</div>
@@ -372,7 +372,164 @@ function lunr_search(term) {
             
             <!-- Article -->
 			<article class="article-post">                
-			<p>This is the part of Journey which Jeremy recommended us to do.</p>
+			<p>This is the part of Journey which Jeremy recommended us to do.
+One of the concepts I have to know.</p>
+
+<p>1) Kaiming Initializtion in Pytorch was in trouble.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>
+2) Jeremy started to dig in, in lesson09, but I didn’t know why the size of tensor is <sup id="fnref:5x5x5"><a href="#fn:5x5x5" class="footnote">2</a></sup> and even understand this spreadsheet data.<sup id="fnref:conv"><a href="#fn:conv" class="footnote">3</a></sup></p>
+
+<hr />
+
+<h4 class="no_toc" id="homework">Homework</h4>
+
+<p>Read <a href="https://arxiv.org/pdf/1311.2901.pdf">Visualizing and Understanding Convolutional Networks
+</a> paper</p>
+
+<hr />
+
+<ul id="markdown-toc">
+  <li><a href="#what-is-convolution" id="markdown-toc-what-is-convolution">What is convolution?</a>    <ul>
+      <li><a href="#visualization" id="markdown-toc-visualization">Visualization</a>        <ul>
+          <li><a href="#one-kernel" id="markdown-toc-one-kernel">one kernel</a></li>
+          <li><a href="#matthew-d-zeiler--rob-fergus-paper" id="markdown-toc-matthew-d-zeiler--rob-fergus-paper">Matthew D Zeiler &amp; Rob Fergus Paper</a></li>
+        </ul>
+      </li>
+      <li><a href="#convolution-can-be-represented-as-matmul" id="markdown-toc-convolution-can-be-represented-as-matmul">Convolution can be represented as matmul</a></li>
+      <li><a href="#padding" id="markdown-toc-padding">Padding</a></li>
+      <li><a href="#kernel-has-rank-3" id="markdown-toc-kernel-has-rank-3">Kernel has rank 3</a></li>
+      <li><a href="#how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight" id="markdown-toc-how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight">How can we find a side-edge, a gradient and area of constant weight?</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="what-is-convolution">What is convolution?</h3>
+
+<p>A convolutional neural network is that your red, green, and blue pixels go into the simple computation, and something comes out of that, and then the result of that goes into a second layer, and the result of that goes into the third layer and so forth.</p>
+
+<h4 id="visualization">Visualization</h4>
+
+<h5 id="one-kernel">one kernel</h5>
+
+<ul>
+  <li>Refer this <a href="http://setosa.io/ev/image-kernels/">site</a> for visualizing CNN filtering</li>
+</ul>
+
+<h5 id="matthew-d-zeiler--rob-fergus-paper">Matthew D Zeiler &amp; Rob Fergus Paper</h5>
+
+<p><a href="https://youtu.be/BWWm4AzsdLk?t=4588">Lecture01</a></p>
+
+<p><img src="/assets/images/cnn-nine.png" alt="" />{align-items: center;}</p>
+
+<ul>
+  <li>nine examples of the actual coefficients from the <strong>first layer</strong>.</li>
+</ul>
+
+<h4 id="convolution-can-be-represented-as-matmul">Convolution can be represented as matmul</h4>
+
+<p><a href="https://medium.com/impactai/cnns-from-different-viewpoints-fab7f52d159c">CNNs from different viewpoints</a></p>
+
+<p><img src="/assets/images/cnn-result.png" alt="" />{align-items: center;}</p>
+
+<p><img src="/assets/images/cnn-result2.jpg" alt="" height="50%" width="50%" /></p>
+
+<ul>
+  <li>
+    <p>[A B C D E F G H I J] is 3 by 3 image data flatten to vector.</p>
+  </li>
+  <li>As a result, convolution is a just matrix just two things happens
+    <ul>
+      <li>Some of entries are set to zeros at all the times</li>
+      <li>same color always have the same weight. That called <strong>weight time / wegith sharing</strong></li>
+    </ul>
+  </li>
+  <li>So, we can implement a convolution with matrix multiplication. But, we don’t do that because it’s slow!</li>
+</ul>
+
+<h4 id="padding">Padding</h4>
+
+<ul>
+  <li>What most of libraries do is just put zeros asdie of matrix</li>
+</ul>
+
+<p><img src="/assets/images/padding2.png" alt="" height="50%" width="50%" /></p>
+
+<p><img src="/assets/images/padding.png" alt="" height="60%" width="60%" /></p>
+
+<ul>
+  <li>fast.ai uses reflection paddings (what is this? Jeremy said he uttered it)</li>
+</ul>
+
+<h4 id="kernel-has-rank-3">Kernel has rank 3</h4>
+
+<ul>
+  <li>As standard picture input would be <sup id="fnref:RGB"><a href="#fn:RGB" class="footnote">4</a></sup> <sup id="fnref:2"><a href="#fn:2" class="footnote">5</a></sup>, it would be actually 3d, not 2d.</li>
+  <li>If we make kernel as a 3x3 size, we pass over same kernel all the different Red, Green, Blue Pixels.
+    <ul>
+      <li>This could make problem, because, if we want to detect frog, which is green, we would want more activations on the green(I made a test cell in my colab <sup id="fnref:3"><a href="#fn:3" class="footnote">6</a></sup>)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight">How can we find a side-edge, a gradient and area of constant weight?</h4>
+
+<p>Not top-edge!</p>
+
+<ul>
+  <li>One kernel can find only the top-edge, so we should stack the kernels <sup id="fnref:5"><a href="#fn:5" class="footnote">7</a></sup></li>
+  <li>So, we pass it through bunch of kernels to the input images, and that process gives us height x width x corresponding number of kernels.</li>
+</ul>
+
+<p><img src="/aassets/images/tensors.png" alt="" /></p>
+
+<ul>
+  <li>Usually that number of chanel is 16</li>
+  <li>And if we want to get the more channels and features, we should repeat that process
+    <ul>
+      <li>This process gives rise to memory out of control, we do the <strong>stride</strong></li>
+    </ul>
+  </li>
+</ul>
+
+<p>####</p>
+
+<p><a href="https://www.youtube.com/watch?v=V2h3IOBDvrA">conv-example.xlsx</a></p>
+
+<ul>
+  <li>2 convolutional filters</li>
+  <li>At a second layer, filter is 3x3x2 tensor, because to add up together the first layer’s channel.</li>
+</ul>
+
+<!-- Actually, what I wanted to know part :  -->
+
+<hr />
+
+<h3 class="no_toc" id="reference">Reference</h3>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Problem was <em>math.sqrt(5)</em> was not kaiming initialization formula, <a href="https://github.com/pytorch/pytorch/blob/3df79f403e8b9621d5adb0447266becd10d633b0/torch/nn/modules/linear.py#L58-L63">Implementation in Pytorch</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5x5x5">
+      <p><a href="https://youtu.be/AcA8HAYh7IE?list=PLBRuZVGXwM3l2HesxBCrvwYacG1AWrVmM&amp;t=251">size of tensor, lecture09</a> <a href="#fnref:5x5x5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:conv">
+      <p><a href="https://github.com/fastai/course-v3/blob/bc034b471d839bdf5bc72bd7fec1061fac648ccd/files/xl/conv-example.xlsx">conv-example.xlsx</a> <a href="#fnref:conv" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:RGB">
+      <p><a href="https://www.quora.com/Why-do-computers-use-red-green-and-blue-instead-of-the-primary-colors">Why do computer use red, green and blue instead of primary colors</a> <a href="#fnref:RGB" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Grayscale is a group of shades without any visible color. … Each of these dots has its own brightness level as well and, therefore, can be converted to grayscale. A grayscale image is one with all color information removed. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p><a href="https://brohrer.github.io/convert_rgb_to_grayscale.html">Testing RGB and grayscale</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p><a href="https://youtu.be/hkBa9pU-H48?t=4937">stack kernel and make new rank of tensor at output, Lesson06-2019</a> <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
                 
 			</article>
 			
@@ -381,8 +538,6 @@ function lunr_search(term) {
 				<span class="taglist">
 				
 				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/tags.html#sticky">sticky</a>
-				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/tags.html#featured">featured</a>
 				
 				</span>
 			</div>

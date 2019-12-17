@@ -1,0 +1,97 @@
+<h2 id="motivation">Motivation</h2>
+
+<p>Before now, me as a undergraduate student, I was parsimony who usually depend on colab, kaggle, friend’s server(occasional) whenever i need GPU.. 
+ 
+And this time it’s been for a while to install GPU than I expected and I share the several component that stood in my way. 
+ 
+<strong><span style="color:red">Written at Oct 24 2019, if you think this is deprecated, please do not have a leap of faith.</span></strong>
+ 
+      </p>
+
+<h3 id="1-did-not-know-there-is-jupyterlab-in-google-cloud-platform">1. Did not know there is <em>JupyterLab</em> in <strong>Google Cloud Platform</strong>.</h3>
+
+<p>At the first time when GCP came out, there was no <strong>AI  Platform</strong> service. So from starting vm instance to launching jupyter and installing packages, I did all of the things myself. (but I learned 🤗)</p>
+
+<p><img src="assets/images/installing-conda-cli.png" alt="installing-conda-cli" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$	curl -O https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
+</code></pre></div></div>
+
+<p align="center">[Downloading conda in ssh]</p>
+
+<p> 
+I created VM instance,selected zone, machine type and disk type. Then, define firewall rules and in ssh terminal, install jupyter and other packages.</p>
+
+<p>But you can do all of these things AI Platform.</p>
+
+<p><img src="assets/images/AI.png" alt="installing-conda-cli" /></p>
+<p align="center">[AI Platform]</p>
+
+<p>I think if you are at Asia-Pacific, it can save your time.</p>
+
+<p>     </p>
+<h3 id="2-consider-if-the-platform-has-limited-resources-in-a-region-you-live-in">2. Consider if the platform has limited resources in a region you live in.</h3>
+<p> 
+I live in <em>South Korea, East Asia</em>, and it seems like this region has lots of limitation in GPU (except quite expensive AWS).</p>
+
+<p> 
+And the Taiwan which was the only one region where I can launch my own VM with GPU (I tried all the other regions in the list) sometimes do normaly, but not always. 😥</p>
+
+<p> 
+After launching, I did several works and next day I could not start VM. (I didn’t count it, but tried it a few hours because I didn’t want cost any more time…)</p>
+
+<p> 
+Endlessly failed to start instance, then I choose to move AWS as an alternative way.</p>
+
+<p>     </p>
+<h3 id="3-fastai-gives-deliberate-guide-and-i-didnt-know-it">3. <span style="color:blue">Fast.ai gives deliberate <a href="https://course.fast.ai/start_gcp.html">guide</a> and I didn’t know it.</span></h3>
+<p> 
+Fast.ai offer the guide for all available platform. (Colab, salamander, Gradient, Kaggle, Colab, and so on)</p>
+
+<p> 
+It is so important, and really needs, because cloud computing options are vary as occasion and purpose arise.</p>
+
+<p> 
+I didn’t know fast.ai has manual to running GCP, and I think it’s as good a reason as any for me to be have taken time.</p>
+
+<p> 
+It helped me so much when I had aws and shortened time.</p>
+
+<p>I don’t want to read all of the manual in amazno.. (It is recommended.. but I’d rather read <a href="https://git-scm.com/book/en/v2">GIT PRO</a> for now…)
+<code>ssh -i ~/.ssh/<your_private_key_pair> -L localhost:8888:localhost:8888 ubuntu@<your instance="" IP="">&lt;/code&gt;</your></your_private_key_pair></code></p>
+
+<p>     </p>
+<h3 id="4-you-should-wait-to-add-more-volume-just-after-add-volume-by-building-aws-ec2">4. You should wait to add more volume just after add volume, by building AWS EC2.</h3>
+<p> 
+Since Elastic Block Store(EBS) storage supports optimized storage, users can’t extend storage volume two times in a row.</p>
+
+<p> 
+Unfortunately, at the first time, I didn’t know it (again 👻) and when VM lacked volume, I doubled dist capacity (76*2) at a rough but It needs more.</p>
+
+<p> </p>
+
+<!--# TODO
+
+그냥 더 추가하면 되겠지라고생각했으나 optimizing 중입니다.. 안됩니다 라고 했따 ㅠ
+맨 위에 내가 뭘 뭘 해봤던 사람인지  적기. 저기 적힌 것중엔 Kaggle, Golab, google colud, Azure, amazon ec2가 있군.-->
+
+<p>&lt;!–</p>
+
+<p>this time I installed GPU in two years, and it became little complicated compared to 2 years ago.
+And this time for the first time(maybe not the first time.. but i handled it in my class or with my friend. but it’s my first time on my own.) I 
+very I’m started to using used google colab, kaggle
+and, GCP-JupyterLab, ec2 - friend made, 
+aws vm machine but I had a environment variable but i did not know of it.
+On these days, I could not get a resources from taiwan…</p>
+
+<ol>
+  <li>
+    <p>I couldn’t notice a deliberate</p>
+  </li>
+  <li>
+    <p>Anyway, as a result I tried myself gcp myself and aws ec2 with fast.ai But I think doing on my self surely takes much time (in this point I wonder why I’m doing this, and should remind me, especially I was studying disk volume optimization)</p>
+  </li>
+  <li>
+    <h2 id="disk-volume-exceed---httpsaskubuntucomquestions919748no-space-left-on-device-even-though-there-is">disk volume exceed - https://askubuntu.com/questions/919748/no-space-left-on-device-even-though-there-is</h2>
+  </li>
+</ol>

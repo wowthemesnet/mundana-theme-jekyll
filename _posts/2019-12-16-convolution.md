@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What is a convolution?"
+title: "So, Why Convolution?"
 author: dionne
 categories: [Fast.AI-v3]
 image: assets/images/cnn-jiwon.png
@@ -23,10 +23,10 @@ Read [Visualizing and Understanding Convolutional Networks
 
 ---
 
-- [What is convolution?](#what-is-convolution?)
+- [What is a convolution?](#what-is-a-convolution?)
 {:toc}
 
-### What is convolution?
+### What is a convolution?
 
 A convolutional neural network is that your red, green, and blue pixels go into the simple computation, and something comes out of that, and then the result of that goes into a second layer, and the result of that goes into the third layer and so forth. 
 

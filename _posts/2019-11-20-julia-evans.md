@@ -4,7 +4,7 @@ title: "Julia Evans"
 author: dionne
 categories: [ People in the World ]
 image: assets/images/evans.jpg
-tags: [ featured ]
+tags: [  ]
 ---
 
 The women who surprised me in many ways.<br />

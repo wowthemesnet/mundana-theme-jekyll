@@ -4,7 +4,7 @@ title: "Pytorch"
 author: dionne
 categories: [library]
 image: assets/images/pytorch.png
-tags: [ featured ]
+tags: [  ]
 ---
 
 - This is the list when I type 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Questions studying Lesson 08"
+title: "Questions studying fast.ai-v3"
 author: dionne
 categories: [QnA]
 image: 

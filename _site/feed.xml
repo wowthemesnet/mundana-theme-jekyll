@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-20T07:05:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">So, Why Convolution?</title><link href="http://localhost:4000/2019/12/convolution/" rel="alternate" type="text/html" title="So, Why Convolution?" /><published>2019-12-16T00:00:00+09:00</published><updated>2019-12-16T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/convolution</id><content type="html" xml:base="http://localhost:4000/2019/12/convolution/">&lt;p&gt;This is the part of Journey which Jeremy recommended us to do.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-21T07:05:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">So, Why Convolution?</title><link href="http://localhost:4000/2019/12/convolution/" rel="alternate" type="text/html" title="So, Why Convolution?" /><published>2019-12-16T00:00:00+09:00</published><updated>2019-12-16T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/convolution</id><content type="html" xml:base="http://localhost:4000/2019/12/convolution/">&lt;p&gt;This is the part of Journey which Jeremy recommended us to do.
 One of the concepts I have to know.&lt;/p&gt;
 
 &lt;p&gt;1) Kaiming Initializtion in Pytorch was in trouble.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
@@ -208,13 +208,6 @@ One of the concepts I have to know.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;#3-interpretation&quot; id=&quot;markdown-toc-3-interpretation&quot;&gt;3. Interpretation&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#4-cleaning-up&quot; id=&quot;markdown-toc-4-cleaning-up&quot;&gt;4. Cleaning Up&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#5-putting-your-model-in-production&quot; id=&quot;markdown-toc-5-putting-your-model-in-production&quot;&gt;5. Putting your model in production&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#6-things-that-can-go-wrong&quot; id=&quot;markdown-toc-6-things-that-can-go-wrong&quot;&gt;6. Things that can go wrong&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#61-learning-rate-lr-too-high&quot; id=&quot;markdown-toc-61-learning-rate-lr-too-high&quot;&gt;6.1 Learning rate (LR) too high&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#62-learning-rate-lr-too-low&quot; id=&quot;markdown-toc-62-learning-rate-lr-too-low&quot;&gt;6.2 Learning rate (LR) too low&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#63-too-few-epochs&quot; id=&quot;markdown-toc-63-too-few-epochs&quot;&gt;6.3 Too few epochs&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#64-too-many-epochs&quot; id=&quot;markdown-toc-64-too-many-epochs&quot;&gt;6.4 Too many epochs&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;1-creating-dataset-from-google-images&quot;&gt;1. Creating dataset from google images&lt;/h3&gt;
@@ -272,7 +265,7 @@ to qualify data from `google_images_download`(using pkg, just used selenium....m
 &lt;h4 id=&quot;13-create-imagedatabunch&quot;&gt;1.3 Create ImageDataBunch&lt;/h4&gt;
 
 &lt;p&gt;We need to separate validation set because we just &lt;em&gt;grabbed&lt;/em&gt; these imagese from Google.&lt;br /&gt; Most of the dataset we use (kaggle/research) splited into validation / test / train.&lt;br /&gt; Jeremy recommended assign 20% to validation.&lt;br /&gt;
-Before we split the data, we can remove downloaded image which can’t be opened. and that uses fast.ai function.&lt;/p&gt;
+Before we split the data, we can remove downloaded image which can’t be opened. and that uses fast.ai function.&lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Help&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verify_images&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fastai&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vision&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 
@@ -414,14 +407,15 @@ Uisng model: &lt;strong&gt;restnet34&lt;/strong&gt; &lt;sup id=&quot;fnref:2&quo
 
 &lt;h4 id=&quot;24-find_rl&quot;&gt;2.4 find_rl()&lt;/h4&gt;
 
+&lt;p&gt;This section you should find the strongest downward slope that kind of sticking around for quite a while.&lt;/p&gt;
+
+&lt;p&gt;(to be continued to the other lectures)&lt;/p&gt;
+
 &lt;h3 id=&quot;3-interpretation&quot;&gt;3. Interpretation&lt;/h3&gt;
 &lt;h3 id=&quot;4-cleaning-up&quot;&gt;4. Cleaning Up&lt;/h3&gt;
 &lt;h3 id=&quot;5-putting-your-model-in-production&quot;&gt;5. Putting your model in production&lt;/h3&gt;
-&lt;h3 id=&quot;6-things-that-can-go-wrong&quot;&gt;6. Things that can go wrong&lt;/h3&gt;
-&lt;h4 id=&quot;61-learning-rate-lr-too-high&quot;&gt;6.1 Learning rate (LR) too high&lt;/h4&gt;
-&lt;h4 id=&quot;62-learning-rate-lr-too-low&quot;&gt;6.2 Learning rate (LR) too low&lt;/h4&gt;
-&lt;h4 id=&quot;63-too-few-epochs&quot;&gt;6.3 Too few epochs&lt;/h4&gt;
-&lt;h4 id=&quot;64-too-many-epochs&quot;&gt;6.4 Too many epochs&lt;/h4&gt;
+
+&lt;hr /&gt;
 
 &lt;h3 class=&quot;no_toc&quot; id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
 
@@ -930,7 +924,631 @@ check clamp&lt;/p&gt;
 ‘view’:
 ‘view_as’:
 ‘where’:
-‘zero_’&lt;/p&gt;</content><author><name>dionne</name></author><summary type="html">This is the list when I type</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/pytorch.png" /></entry><entry><title type="html">Gradient backward, Chain Rule, Refactoring</title><link href="http://localhost:4000/2019/11/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward, Chain Rule, Refactoring" /><published>2019-11-26T00:00:00+09:00</published><updated>2019-11-26T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-4/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
+‘zero_’&lt;/p&gt;</content><author><name>dionne</name></author><summary type="html">This is the list when I type</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/pytorch.png" /></entry><entry><title type="html">Note01, Note02</title><link href="http://localhost:4000/2019/12/part1-note/" rel="alternate" type="text/html" title="Note01, Note02" /><published>2019-12-01T00:00:00+09:00</published><updated>2019-12-01T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/part1-note</id><content type="html" xml:base="http://localhost:4000/2019/12/part1-note/">&lt;p&gt;Part1 Note 부분 훑어보기~&lt;/p&gt;
+
+&lt;h2 id=&quot;note-01&quot;&gt;Note 01&lt;/h2&gt;
+
+&lt;p&gt;We are focused on solving interesting real-world problems.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reload_ext&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;autoreload&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;autoreload&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matplotlib&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inline&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;this is special directives to jupyter notebook, not python code.
+And it is called ‘magics’&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If somebody changes underlying library code while I’m running this, please reload it automatically&lt;/li&gt;
+  &lt;li&gt;If somebody asks to plot something, then please plot it here in this Jupyter Notebook&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;sup id=&quot;fnref:import-star&quot;&gt;&lt;a href=&quot;#fn:import-star&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;the plot top losses from last time where we saw the images which it was either the most wrong about or the least confident about.&lt;/p&gt;
+
+&lt;h2 id=&quot;note-02&quot;&gt;Note 02&lt;/h2&gt;
+
+&lt;h3 id=&quot;model-training&quot;&gt;model training&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;np.randon.seed(0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Randomness part is so important, cz you have to always have same validation set.&lt;br /&gt;
+Otherwise, when you somewhat way improved your model and test it through validation, if not the same validation, you don’t know performance improvement was just coincidence. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.fast.ai/2017/11/13/validation-sets/&quot;&gt;How and why to create a good validation set&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Training a Model&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After making some progress with my model and things are looking good, you’d better save model, and just go back to do that again.&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'model-name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unfreeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lr_find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This learning rate finder, what you are looking for is &lt;strong&gt;the strongest downward slope&lt;/strong&gt; that kind of &lt;strong&gt;sticking around for quite a while&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt; epoch &lt;/td&gt;
+      &lt;td&gt; train_loss &lt;/td&gt;
+      &lt;td&gt; valid_loss &lt;/td&gt;
+      &lt;td&gt; error_rate &lt;/td&gt;
+      &lt;td&gt; time &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;2.334755&lt;/td&gt;
+      &lt;td&gt;1.945266&lt;/td&gt;
+      &lt;td&gt;0.566038&lt;/td&gt;
+      &lt;td&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1.751931&lt;/td&gt;
+      &lt;td&gt;1.366638&lt;/td&gt;
+      &lt;td&gt;0.415094&lt;/td&gt;
+      &lt;td&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;1.527215&lt;/td&gt;
+      &lt;td&gt;1.165065&lt;/td&gt;
+      &lt;td&gt;0.396226&lt;/td&gt;
+      &lt;td&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;1.317051&lt;/td&gt;
+      &lt;td&gt;1.108083&lt;/td&gt;
+      &lt;td&gt;0.339623&lt;/td&gt;
+      &lt;td&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;1) Learning rate too high&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;validation loss is too high&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;epoch&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;train_loss&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;valid_loss&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;error_rate&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;time&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;24.904537&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1184996224.000000&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.638889&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;2) Learning rate too low&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;going sooo slowly&lt;/li&gt;
+  &lt;li&gt;training loss is bigger than valid loss..&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Total time: 00:57&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;epoch&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;train_loss&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;valid_loss&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;error_rate&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;time&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.066052&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.419399&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.657407&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.000881&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.309587&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.583333&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.975891&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.307033&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.611111&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;3&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.971937&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.321390&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.620370&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.989848&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.324367&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.648148&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;3) Too few epochs&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;It looks very similar with too low learning rate. cz train_loss &amp;gt; valid_loss&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;epoch&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;train_loss&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;valid_loss&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;error_rate&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;time&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.971861&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.014095&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.666667&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;4) Too many epochs(Overfitting)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Error starts to getting worse (&lt;del&gt;train_loss is below valid_loss!&lt;/del&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;epoch&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;train_loss&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;valid_loss&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;error_rate&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;time&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.210596&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.382731&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.662551&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:03&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.249473&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.378071&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.664609&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.353912&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.379399&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.681070&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;3&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.380415&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.374326&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.664609&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.434192&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.364526&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.668724&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;5&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.373436&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.344376&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.652263&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;6&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.361475&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.332394&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.658436&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;7&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.320753&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.319983&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.658436&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;8&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.251119&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.319813&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.644033&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;9&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.168801&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.317544&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.639918&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;10&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.093846&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.320713&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.631687&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;11&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.022894&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.326572&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.621399&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;12&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.965844&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.331126&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.613169&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;13&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.912769&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.343037&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.596708&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;14&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.861060&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.345426&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.590535&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;15&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.813022&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.361557&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.588477&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;16&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.767651&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.383104&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.586420&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;17&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.724640&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.393675&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.580247&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;18&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.690126&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.409444&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.572016&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;19&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.653082&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.435116&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.567901&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;20&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.621761&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.462591&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.567901&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;21&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.592183&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.482403&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.561728&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;22&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.565874&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.513805&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.561728&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;23&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.543868&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.524467&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.561728&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;24&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.517352&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.531876&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.551440&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;25&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.494798&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.557277&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.551440&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;26&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.474295&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.572760&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.549383&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;27&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.455998&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.580956&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.553498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;28&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.436313&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.592865&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.553498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;29&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.419034&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.604895&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.549383&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;30&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.402253&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.612062&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.553498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;31&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.389492&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.626179&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.553498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;32&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.374585&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.629149&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.553498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;33&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.361202&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.643487&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.557613&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;34&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.348479&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.648011&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.553498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;35&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.338784&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.657931&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.551440&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;36&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.328609&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.667504&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.551440&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;37&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.317876&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.679011&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.553498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;38&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.307848&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.681451&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.553498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;39&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.297073&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.676460&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.549383&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;digging-into-the-math&quot;&gt;Digging into the math&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://miro.medium.com/max/1162/1*zY1qFB9aFfZz66YxxoI2aw.gif&quot; alt=&quot;&quot; /&gt; &lt;sup id=&quot;fnref:Adam-Geitgey&quot;&gt;&lt;a href=&quot;#fn:Adam-Geitgey&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Predictors are functions of pixel values&lt;/li&gt;
+  &lt;li&gt;To feed an image into our neural network, we simply treat the 18x18 pixel image as an array of 324 numbers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y = ax + b \\y = a_1x + a_2*1 \\ y = a_1x_1 + a_2*x_2,\ x_2=1&lt;/script&gt;
+
+&lt;p&gt;This is one equation, but in ML, we have lots of equations. For example, if we want to represent the correlation of &lt;em style=&quot;color: red&quot;&gt;the temperature&lt;/em&gt; versus &lt;em style=&quot;color: red&quot;&gt;the number of ice creams sold&lt;/em&gt;, we have lots of dots.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/1-part-dots.png&quot; alt=&quot;&quot; height=&quot;60%&quot; width=&quot;60%&quot; style=&quot;vertical-align:middle&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Each one of dots, hypothesis can be based on this formula : &lt;script type=&quot;math/tex&quot;&gt;y_i = a_1x_{i,1} + a_2x_{i,2}.&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/1-part-lines.png&quot; alt=&quot;&quot; height=&quot;60%&quot; width=&quot;60%&quot; style=&quot;vertical-align:middle&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s view in matrix. &lt;br /&gt;
+If this is multi-classification problem(ex: MNIST), a matrix &lt;strong style=&quot;color: blue&quot;&gt;(2, 28)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/1-part-matrix.png&quot; alt=&quot;&quot; height=&quot;60%&quot; width=&quot;60%&quot; style=&quot;vertical-align:middle&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But why we represent &lt;script type=&quot;math/tex&quot;&gt;y = ax + b&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;y_i = a_1x_{i,1} + a_2x_{i,2}&lt;/script&gt;??&lt;br /&gt;
+dot product{: style=”color blue”} : But what you might remember from school is that when you’ve got two things being multiplied together, two things being multiplied together, then they get added up. &lt;sup id=&quot;fnref:today-word&quot;&gt;&lt;a href=&quot;#fn:today-word&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;If you do that for lots and lots of different numbers i, then that’s called a matrix product. So in fact, this whole thing can be written like this:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec y = X \vec a&lt;/script&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/1-part-vector.png&quot; alt=&quot;&quot; height=&quot;80%&quot; width=&quot;80%&quot; style=&quot;vertical-align:middle&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;※ We can easily understand through this why people tarnspose coefficient.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/1-part-i_k.png&quot; alt=&quot;&quot; height=&quot;80%&quot; width=&quot;80%&quot; style=&quot;vertical-align:middle&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;stochastic-gradient-distance&quot;&gt;Stochastic Gradient Distance&lt;/h3&gt;
+
+&lt;p&gt;Why we should use the this (&lt;script type=&quot;math/tex&quot;&gt;\vec y = X \vec a&lt;/script&gt;) an architecture : it does whole equations all at once!!!&lt;br /&gt;
+Our architecture have two parameters, a1 and a2. and we will fit our architecture to some data.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is bottom-up lesson.&lt;/p&gt;
+
+&lt;p&gt;We first, generate some data, which is&lt;/p&gt;
+
+&lt;h3 id=&quot;question-time&quot;&gt;Question time&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Question01&lt;/strong&gt;: Can we have a definition of the error rate being discussed and how it is calculated? I assume it’s cross validation error &lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;error_rate&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;??&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;and look at the source code, and it’s 1 - accuracy.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;accuracy??
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It is argmax.&lt;br /&gt; So we now know that means find out which particular thing it is,&lt;br /&gt;and then look at how often that equals the target (i.e. the actual value) and take the mean.&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;what does that being applied to and always in fastai, metrics (i.e. the things that we pass in)?
+    &lt;ul&gt;
+      &lt;li&gt;validation set.&lt;/li&gt;
+      &lt;li&gt;Any time you put a metric here, it’ll be applied to the validation set because that’s your best practice:&lt;/li&gt;
+      &lt;li&gt;make sure that you’re checking your performance on data that your model hasn’t see&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;viewing source code in Ipynotebook source code(in github)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;doc(accuracy)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Question02&lt;/strong&gt;: Why were you using 3e for your learning rates earlier? With 3e-5 and 3e-4 [59:11]?&lt;br /&gt;
+(1) We found that 3e-3 is just a really &lt;em&gt;good default learning rate&lt;/em&gt;. It works most of the time for &lt;em&gt;your initial fine-tuning&lt;/em&gt; before you &lt;strong&gt;unfreeze&lt;/strong&gt;. &lt;br /&gt; (And then, I tend to kind of just multiply from there.) &lt;br /&gt; (2) So then the next stage, I will pick 10 times lower than that for the &lt;em&gt;second part&lt;/em&gt; of the slice, and &lt;em&gt;whatever the LR finder found&lt;/em&gt; for the first part of the slice. (The second part of the slice doesn’t come from the LR finder. It’s just a rule of thumb which is 10 times less than your first part which defaults to 3e-3, and then the first part of the slice is what comes out of the LR finder.)&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ll be learning a lot more about these learning rate details both today and in the coming lessons.&lt;br /&gt; ★ But for now, all you need to remember is that your basic approach looks like this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;learn.fit_one_cycle
+    &lt;ul&gt;
+      &lt;li&gt;Some number of epochs, I often pick 4&lt;/li&gt;
+      &lt;li&gt;Some learning rate which defaults to 3e-3.( )I’ll just type it up fully so you can see.)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Then we unfreeze it.&lt;/li&gt;
+  &lt;li&gt;Then we learn some more.&lt;/li&gt;
+  &lt;li&gt;And so this is a bit where I just take whatever I did last time and divide it by 10.[stop_rl]&lt;/li&gt;
+  &lt;li&gt;Then I also write &lt;code class=&quot;highlighter-rouge&quot;&gt;slice&lt;/code&gt; then I have to put one more number in here and that’s the number I get from the learning rate finder a bit where it’s got the strongest slope.[start_rl]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit_one_cycle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3e-4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+    &lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unfreeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;learn.fit_one_cycle(4, slice(xxx, 3e-3))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;slice(xxx[start_rl]:from find_rl , 3e-4  [stop_rl]: 0.003 % 10)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question03&lt;/strong&gt;: When generating new image dataset, how do you know how many images are enough? What are ways to measure “enough”?&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Great question. Another possible problem you have is you don’t have enough data. How do you know if you don’t have enough data? Because you found a good learning rate (i.e. if you make it higher than it goes off into massive losses; if you make it lower, it goes really slowly) and then you train for such a long time that your error starts getting worse. So you know that you trained for long enough. And you’re still not happy with the accuracy it’s not good enough for the teddy bear cuddling level of safety you want. So if that happens, there’s a number of things you can do and we’ll learn pretty much all of them during this course but one of the easiest one is get more data. If you get more data, then you can train for longer, get a higher accuracy, lower error rate, without overfitting.
+Unfortunately there is no shortcut. I wish there was. I wish there’s some way to know ahead of time how much data you need. But I will say this most of the time, you need less data than you think. So organizations very commonly spend too much time gathering data, getting more data than it turned out they actually needed. So get a small amount first and see how you go.&lt;/p&gt;
+
+&lt;h4 id=&quot;questions&quot;&gt;Questions&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;what is unfreeze?&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:import-star&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/why-import-star-in-python-is-a-bad-idea&quot;&gt;why-import-star-in-python-is-a-bad-idea&lt;/a&gt; &lt;a href=&quot;#fnref:import-star&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:Adam-Geitgey&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721&quot;&gt;Deep learning and CNN&lt;/a&gt; &lt;a href=&quot;#fnref:Adam-Geitgey&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:today-word&quot;&gt;
+      &lt;p&gt;But more to the point right now, it’s going to make life much easier. Because I hate writing loops, I hate writing code, I just want the computer to do everything for me. And anytime you see this little i subscripts, that sounds like you’re going to have to do loops and all kind of stuff. &lt;a href=&quot;#fnref:today-word&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">Part1 Note 부분 훑어보기~</summary></entry><entry><title type="html">Gradient backward, Chain Rule, Refactoring</title><link href="http://localhost:4000/2019/11/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward, Chain Rule, Refactoring" /><published>2019-11-26T00:00:00+09:00</published><updated>2019-11-26T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2019/11/note08-fastai-4/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
 
 &lt;h3 class=&quot;no_toc&quot; id=&quot;homework&quot;&gt;Homework&lt;/h3&gt;
 
@@ -1051,7 +1669,7 @@ check clamp&lt;/p&gt;
 
 &lt;p&gt;1) start with the very last function, which is loss funciton. MSE&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/4-mse.jpeg&quot; alt=&quot;&quot; height=&quot;40%&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/4-mse.jpeg&quot; alt=&quot;&quot; height=&quot;40%&quot; width=&quot;40%&quot; class=&quot;center-image;&quot; /&gt;&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\color{red}{\frac{\partial}{\partial u}MSE(u,y)} \times\frac{\partial}{\partial v}l_2(v)\times\frac{\partial}{\partial t}ReLU(t)\times\frac{\partial}{\partial x}l_1(x)&lt;/script&gt;
 
@@ -2097,51 +2715,4 @@ Volume of her knowledge, that just reading post title is a deal of work, amazed 
       &lt;p&gt;Refer &lt;a href=&quot;https://render.githubusercontent.com/view/ipynb?commit=2bfe4a95aac864b23bd0c0729d2720c92e169f8c&amp;amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f5370656c6c4f6e596f752f646c66662d6e6f74652f326266653461393561616338363462323362643063303732396432373230633932653136396638632f6e62732f646c322f30315f6d61746d756c5f70726163746963652e6970796e62&amp;amp;nwo=SpellOnYou%2Fdlff-note&amp;amp;path=nbs%2Fdl2%2F01_matmul_practice.ipynb&amp;amp;repository_id=221963162&amp;amp;repository_type=Repository#Broadcasting&quot;&gt;colab!&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="Fast.AI-v3" /><category term="python" /><summary type="html">fast.ai v3 course</summary></entry><entry><title type="html">Why am I not listed as a contributor?!</title><link href="http://localhost:4000/2019/11/Git-Merge/" rel="alternate" type="text/html" title="Why am I not listed as a contributor?!" /><published>2019-11-10T00:00:00+09:00</published><updated>2019-11-10T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/Git-Merge</id><content type="html" xml:base="http://localhost:4000/2019/11/Git-Merge/">&lt;p&gt;From the end of last year, big changes have witnessed in NLP research.&lt;br /&gt;
-Embracing an unprecedented growth, I started to study new exciting results and advances.&lt;br /&gt;
-In doing so, I noticed I’m not listed as contributor of repo which my PR accessed.&lt;/p&gt;
-
-&lt;h3 id=&quot;how-did-i-come-to-a-repository&quot;&gt;How did I come to a repository?&lt;/h3&gt;
-
-&lt;p&gt;When I’m stuck, I would prefer to code, than to go deep in theory. (It must be so.. too much to understand 🤒)&lt;br /&gt;
-It was &lt;a href=&quot;https://arxiv.org/pdf/1810.04805.pdf&quot;&gt;BERT released by Google AI&lt;/a&gt; I felt keenly the necessity of implementing, because not only couldn’t understand the way they figured out positional encoding formula, but how it actually works.&lt;br /&gt;What does it mean to “scale” dot product in Attention? (Now I know it’s far from my section 😂)&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h6 id=&quot;figure-1-scaled-dot-product-adopted-from-tensorflow-blog&quot;&gt;Figure 1. Scaled Dot Product. &lt;em&gt;Adopted from&lt;/em&gt; &lt;a href=&quot;www.tensorflow.org&quot;&gt;&lt;em&gt;tensorflow blog&lt;/em&gt;&lt;/a&gt;&lt;/h6&gt;
-
-&lt;h3 id=&quot;what-was-the-code-error&quot;&gt;What was the code error?&lt;/h3&gt;
-
-&lt;p&gt;For implement code in paper, I read the papers &lt;a href=&quot;https://arxiv.org/pdf/1706.03762.pdf&quot;&gt;Transformer&lt;/a&gt; and &lt;a href=&quot;https://arxiv.org/pdf/1810.04805.pdf&quot;&gt;BERT&lt;/a&gt;, structured the model, and refered the others’ code.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Meanwhile, I found out a small error in tokenization process, which was changing a token into [MASK], enabled bidirectional representation.&lt;/p&gt;
-
-&lt;h3 id=&quot;ive-made-pr-and-got-merged-but-i-was-not-in-contributors-why&quot;&gt;I’ve made PR, and got merged. But I was not in contributors. Why?&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h6 id=&quot;figure-2-merged-pull-request-adopted-from-graykode-project&quot;&gt;Figure 2. Merged Pull request &lt;em&gt;Adopted from&lt;/em&gt; &lt;a href=&quot;https://github.com/graykode/nlp-tutorial/pull/9&quot;&gt;&lt;em&gt;graykode project&lt;/em&gt;&lt;/a&gt;&lt;/h6&gt;
-
-&lt;p&gt;Actually I happened to know there can be couple of reasons github doesn’t include my name as contributor.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Well, if contributors tab has more than 100 people, in which case it shows you up only if you are in the top 100 contributors because displaying too many contributors can make webpages down.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Somethimes, however, it doesn’t that problem. Why not?&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Two possibilities are there.&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;First, According to &lt;a href=&quot;https://www.quora.com/Why-doesnt-GitHub-include-my-name-as-a-contributor-even-after-I-contributed&quot;&gt;Joel-Glovier&lt;/a&gt;, if repository maintainer &lt;a href=&quot;https://shinglyu.com/web/2018/03/25/merge-pull-requests-without-merge-commits.html&quot;&gt;merged-as-a-rebase&lt;/a&gt; PR will end up showing as maintainer’s commit. But maintainer shouldn’t normally do this.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Second, if you happend to commit using a different git email that what is in your GitHub profile, it will not be attached to your Github user, and “doesn’t show up” as you.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://mchromiak.github.io/articles/2017/Sep/12/Transformer-Attention-is-all-you-need/&quot;&gt;Michał Chromiak’s blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://help.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile&quot;&gt;Github: why are my contributions are not showing on my profile&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.atlassian.com/git/tutorials/syncing/git-fetch&quot;&gt;atlassian-gitfetch&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">From the end of last year, big changes have witnessed in NLP research. Embracing an unprecedented growth, I started to study new exciting results and advances. In doing so, I noticed I’m not listed as contributor of repo which my PR accessed.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1.png" /></entry></feed>
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="Fast.AI-v3" /><category term="python" /><summary type="html">fast.ai v3 course</summary></entry></feed>

@@ -7,6 +7,13 @@ image:
 tags: [ Fast.AI-v3, python ]
 ---
 
+#### github
+
+Branch Dionne set up to track remote branch Dionne from origin.
+Switched to a new branch 'Dionne'
+
+처음 클론할 때부터, 모든 브런치도 다 가져 올 순 없을까?
+
 #### fast.ai v3 course
 
 [Normalization related to train and valid](https://spellonyou.github.io/2019/11/note08-fastai-3/#211-simplified-karming-init)

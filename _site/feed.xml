@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-21T07:05:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">So, Why Convolution?</title><link href="http://localhost:4000/2019/12/convolution/" rel="alternate" type="text/html" title="So, Why Convolution?" /><published>2019-12-16T00:00:00+09:00</published><updated>2019-12-16T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/convolution</id><content type="html" xml:base="http://localhost:4000/2019/12/convolution/">&lt;p&gt;This is the part of Journey which Jeremy recommended us to do.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-22T07:44:56+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">So, Why Convolution?</title><link href="http://localhost:4000/2019/12/convolution/" rel="alternate" type="text/html" title="So, Why Convolution?" /><published>2019-12-16T00:00:00+09:00</published><updated>2019-12-16T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/convolution</id><content type="html" xml:base="http://localhost:4000/2019/12/convolution/">&lt;p&gt;This is the part of Journey which Jeremy recommended us to do.
 One of the concepts I have to know.&lt;/p&gt;
 
 &lt;p&gt;1) Kaiming Initializtion in Pytorch was in trouble.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
@@ -186,17 +186,16 @@ One of the concepts I have to know.&lt;/p&gt;
   &lt;p&gt;we’re going to try and use that to really understand what’s going on. So to warn you, none of it is rocket science but a lot of its going to look really new. So don’t expect to get it the first time but expect to listen and jump into the notebook try a few things test things out look particularly at like tensor shapes and inputs and outputs to check your understanding then go back and listen again. But and kind of try it, a few times, because you will get there right, it’s just that there’s going to be a lot of new concepts because we haven’t done that much stuff in pure Pytorch.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p style=&quot;color:gray; font-size: 90%; text-align: right;&quot;&gt;Lesson 6: Deep Learning 2019&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">How he impacted me?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/jeremy-howard.jpeg" /></entry><entry><title type="html">Making my own classifier with my own data (Munich vs Berlin vs Dresden)</title><link href="http://localhost:4000/2019/12/note02-fastai-1/" rel="alternate" type="text/html" title="Making my own classifier with my own data (Munich vs Berlin vs Dresden)" /><published>2019-12-14T00:00:00+09:00</published><updated>2019-12-14T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/note02-fastai-1</id><content type="html" xml:base="http://localhost:4000/2019/12/note02-fastai-1/">&lt;p&gt;This toy project code can be found &lt;a href=&quot;https://github.com/SpellOnYou/dlff-note/blob/master/nbs/dl1/lesson2_download_practice.ipynb&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;color:gray; font-size: 90%; text-align: right;&quot;&gt;Lesson 6: Deep Learning 2019&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">How he impacted me?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/jeremy-howard.jpeg" /></entry><entry><title type="html">Making a classifier with gooogle img (Cebu / Munich / Seoul)</title><link href="http://localhost:4000/2019/12/classifier-Munich/" rel="alternate" type="text/html" title="Making a classifier with gooogle img (Cebu / Munich / Seoul)" /><published>2019-12-14T00:00:00+09:00</published><updated>2019-12-14T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/classifier-Munich</id><content type="html" xml:base="http://localhost:4000/2019/12/classifier-Munich/">&lt;p&gt;This toy project code can be found &lt;a href=&quot;https://github.com/SpellOnYou/dlff-note/blob/master/nbs/dl1/lesson2_download_practice.ipynb&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Making a classifier which can seperate &lt;span style=&quot;color: red&quot;&gt;Munich&lt;/span&gt; from &lt;span style=&quot;color: red&quot;&gt;Berlin&lt;/span&gt; and &lt;span style=&quot;color: red&quot;&gt;Dresden&lt;/span&gt;!
-(hoping my well in Munich!🤟)&lt;/p&gt;
+&lt;p&gt;Making a classifier which can distinguish &lt;span style=&quot;color: red&quot;&gt;Seoul&lt;/span&gt; from &lt;span style=&quot;color: red&quot;&gt;Munich&lt;/span&gt; and &lt;span style=&quot;color: red&quot;&gt;Cebu&lt;/span&gt;!
+(hoping my well in Munich!🤟, and I love Cebu)&lt;/p&gt;
 
 &lt;h3 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h3&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#1-creating-dataset-from-google-images&quot; id=&quot;markdown-toc-1-creating-dataset-from-google-images&quot;&gt;1. Creating dataset from google images&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#11-get-a-list-of-urls--download-imgs&quot; id=&quot;markdown-toc-11-get-a-list-of-urls--download-imgs&quot;&gt;1.1 Get a list of URLs &amp;amp; Download imgs&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#12-using-google_images_download&quot; id=&quot;markdown-toc-12-using-google_images_download&quot;&gt;1.2 Using &lt;code class=&quot;highlighter-rouge&quot;&gt;google_images_download&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#11-using-google_images_download&quot; id=&quot;markdown-toc-11-using-google_images_download&quot;&gt;1.1 Using &lt;code class=&quot;highlighter-rouge&quot;&gt;google_images_download&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#13-create-imagedatabunch&quot; id=&quot;markdown-toc-13-create-imagedatabunch&quot;&gt;1.3 Create ImageDataBunch&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -211,48 +210,24 @@ One of the concepts I have to know.&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;1-creating-dataset-from-google-images&quot;&gt;1. Creating dataset from google images&lt;/h3&gt;
-&lt;h4 id=&quot;11-get-a-list-of-urls--download-imgs&quot;&gt;1.1 Get a list of URLs &amp;amp; Download imgs&lt;/h4&gt;
 
-&lt;p&gt;Go to the google image, type “image” in advanced search,&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;In my case, I searched “Munch” -Berlin -Gutenberg,  “Berlin” -Munch -Gutenberg, “Gutenberg” -Munch -Berlin&lt;/li&gt;
-  &lt;li&gt;Then, go to the &lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced search&lt;/code&gt; and select type of &lt;code class=&quot;highlighter-rouge&quot;&gt;image: photo&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Scroll down when you can see button “show more results”&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;You can use either URLs or &lt;code class=&quot;highlighter-rouge&quot;&gt;google_images_download&lt;/code&gt; package. Since &lt;a href=&quot;&quot;&gt;Jeremy explained specifically&lt;/a&gt;, I will try the other.&lt;/p&gt;
 
-&lt;p&gt;Download img urls&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;opt + cmd + J&lt;/code&gt; if you are using mac os, or &lt;code class=&quot;highlighter-rouge&quot;&gt;ctl + shift + j&lt;/code&gt; if your os is windows&lt;/li&gt;
-  &lt;li&gt;And type below js code&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h4 id=&quot;11-using-google_images_download&quot;&gt;1.1 Using &lt;code class=&quot;highlighter-rouge&quot;&gt;google_images_download&lt;/code&gt;&lt;/h4&gt;
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;urls&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelectorAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'.rg_i'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hasAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'data-src'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)?&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'data-src'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'data-iurl'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'data:text/csv;charset=utf-8,'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;escape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;urls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;n'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;note: &lt;em&gt;This is not google official package&lt;/em&gt; &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Do for all of those 3 cases, and after that, you can get 3 file which have urls.
-Upload it and implement&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;download_image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_pics&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;And do the same things for the other two.&lt;/p&gt;
-
-&lt;h4 id=&quot;12-using-google_images_download&quot;&gt;1.2 Using &lt;code class=&quot;highlighter-rouge&quot;&gt;google_images_download&lt;/code&gt;&lt;/h4&gt;
-
-&lt;p&gt;&lt;em&gt;This is not google official package&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;This is simple, just refering the &lt;a href=&quot;https://google-images-download.readthedocs.io/en/latest/index.html&quot;&gt;Official Doncument&lt;/a&gt;, put the required args.&lt;/p&gt;
+&lt;p&gt;Refer to &lt;a href=&quot;https://google-images-download.readthedocs.io/en/latest/index.html&quot;&gt;Official Doncument&lt;/a&gt;, put the required args.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;google_images_download&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;google_images_download&lt;/span&gt;
 
 &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;google_images_download&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;googleimagesdownload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;#class instantiation
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;abspath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'../../materials/dataset/pkg/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;keywords&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Munich,Berlin,Dresden&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;keywords&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Cebu,Munich,Seoul&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
              &lt;span class=&quot;s&quot;&gt;&quot;print_urls&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#              &quot;suffix_keywords&quot;:&quot;Germany&quot;,
-&lt;/span&gt;             &lt;span class=&quot;s&quot;&gt;&quot;output_directory&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             &lt;span class=&quot;s&quot;&gt;&quot;suffix_keywords&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;city&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             &lt;span class=&quot;s&quot;&gt;&quot;output_directory&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
              &lt;span class=&quot;s&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;photo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
             &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;paths&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;download&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;#passing the arguments to the function
@@ -430,7 +405,7 @@ Uisng model: &lt;strong&gt;restnet34&lt;/strong&gt; &lt;sup id=&quot;fnref:2&quo
       &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Accuracy_and_precision&quot;&gt;Accuracy_and_precision&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This toy project code can be found here Making a classifier which can seperate Munich from Berlin and Dresden! (hoping my well in Munich!🤟)</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/munich2.jpg" /></entry><entry><title type="html">Pytorch</title><link href="http://localhost:4000/2019/12/pytorch-tensor/" rel="alternate" type="text/html" title="Pytorch" /><published>2019-12-12T00:00:00+09:00</published><updated>2019-12-12T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/pytorch-tensor</id><content type="html" xml:base="http://localhost:4000/2019/12/pytorch-tensor/">&lt;ul&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This toy project code can be found here</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/munich2.jpg" /></entry><entry><title type="html">Pytorch</title><link href="http://localhost:4000/2019/12/pytorch-tensor/" rel="alternate" type="text/html" title="Pytorch" /><published>2019-12-12T00:00:00+09:00</published><updated>2019-12-12T00:00:00+09:00</updated><id>http://localhost:4000/2019/12/pytorch-tensor</id><content type="html" xml:base="http://localhost:4000/2019/12/pytorch-tensor/">&lt;ul&gt;
   &lt;li&gt;This is the list when I type&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1469,7 +1444,7 @@ Our architecture have two parameters, a1 and a2. and we will fit our architectur
 
 &lt;p&gt;This is bottom-up lesson.&lt;/p&gt;
 
-&lt;p&gt;We first, generate some data, which is&lt;/p&gt;
+&lt;p&gt;We first, generate some data, which is synthetic data.&lt;/p&gt;
 
 &lt;h3 id=&quot;question-time&quot;&gt;Question time&lt;/h3&gt;
 
@@ -2512,12 +2487,12 @@ Otherwise, an integer value is returned as the stride in the particular dimensio
 Example::*&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;
-&lt;span class=&quot;sb&quot;&gt;`x.stride()`&lt;/span&gt;
- &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;sb&quot;&gt;`x.stride(0)`&lt;/span&gt;
- &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;sb&quot;&gt;`x.stride(-1)`&lt;/span&gt;
- &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stride&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stride&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stride&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
@@ -2656,63 +2631,51 @@ I naturally gonna understood mechanism and astonished by her explaination abilit
 Her value, which she was taught by many people so want to do same things, moved me.&lt;br /&gt;
 Volume of her knowledge, that just reading post title is a deal of work, amazed me.&lt;br /&gt;&lt;/p&gt;
 
-&lt;!-- neural network부터, 엄청 많은 도메인.  --&gt;</content><author><name>dionne</name></author><summary type="html">The women who surprised me in many ways. First, she approached me to teaching some concepts drawing cartoons. It was at Hackers news, which was hightest ranks. Personally I have the use of not to reading title, so and cartoon was so cute and clear. I naturally gonna understood mechanism and astonished by her explaination ability. Her value, which she was taught by many people so want to do same things, moved me. Volume of her knowledge, that just reading post title is a deal of work, amazed me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/evans.jpg" /></entry><entry><title type="html">Questions studying fast.ai-v3</title><link href="http://localhost:4000/2019/11/questions/" rel="alternate" type="text/html" title="Questions studying fast.ai-v3" /><published>2019-11-20T00:00:00+09:00</published><updated>2019-11-20T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/questions</id><content type="html" xml:base="http://localhost:4000/2019/11/questions/">&lt;h4 id=&quot;fastai-v3-course&quot;&gt;fast.ai v3 course&lt;/h4&gt;
+&lt;!-- neural network부터, 엄청 많은 도메인.  --&gt;</content><author><name>dionne</name></author><summary type="html">The women who surprised me in many ways. First, she approached me to teaching some concepts drawing cartoons. It was at Hackers news, which was hightest ranks. Personally I have the use of not to reading title, so and cartoon was so cute and clear. I naturally gonna understood mechanism and astonished by her explaination ability. Her value, which she was taught by many people so want to do same things, moved me. Volume of her knowledge, that just reading post title is a deal of work, amazed me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/evans.jpg" /></entry><entry><title type="html">Why am I not listed as a contributor?!</title><link href="http://localhost:4000/2019/11/Git-Merge/" rel="alternate" type="text/html" title="Why am I not listed as a contributor?!" /><published>2019-11-10T00:00:00+09:00</published><updated>2019-11-10T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/Git-Merge</id><content type="html" xml:base="http://localhost:4000/2019/11/Git-Merge/">&lt;p&gt;From the end of last year, big changes have witnessed in NLP research.&lt;br /&gt;
+Embracing an unprecedented growth, I started to study new exciting results and advances.&lt;br /&gt;
+In doing so, I noticed I’m not listed as contributor of repo which my PR accessed.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://spellonyou.github.io/2019/11/note08-fastai-3/#211-simplified-karming-init&quot;&gt;Normalization related to train and valid&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;how-did-i-come-to-a-repository&quot;&gt;How did I come to a repository?&lt;/h3&gt;
 
-&lt;h4 id=&quot;math&quot;&gt;math&lt;/h4&gt;
+&lt;p&gt;When I’m stuck, I would prefer to code, than to go deep in theory. (It must be so.. too much to understand 🤒)&lt;br /&gt;
+It was &lt;a href=&quot;https://arxiv.org/pdf/1810.04805.pdf&quot;&gt;BERT released by Google AI&lt;/a&gt; I felt keenly the necessity of implementing, because not only couldn’t understand the way they figured out positional encoding formula, but how it actually works.&lt;br /&gt;What does it mean to “scale” dot product in Attention? (Now I know it’s far from my section 😂)&lt;br /&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://explained.ai/matrix-calculus/index.html&quot;&gt;The Matrix Calculus You Need For Deep Learning&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;data-privacy&quot;&gt;data privacy&lt;/h4&gt;
+&lt;h6 id=&quot;figure-1-scaled-dot-product-adopted-from-tensorflow-blog&quot;&gt;Figure 1. Scaled Dot Product. &lt;em&gt;Adopted from&lt;/em&gt; &lt;a href=&quot;www.tensorflow.org&quot;&gt;&lt;em&gt;tensorflow blog&lt;/em&gt;&lt;/a&gt;&lt;/h6&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;SHA 256&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;what-was-the-code-error&quot;&gt;What was the code error?&lt;/h3&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://jfine-python-classes.readthedocs.io/en/latest/metaclass.html&quot;&gt;metaclass&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Can I segment document without punctuation?&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;For implement code in paper, I read the papers &lt;a href=&quot;https://arxiv.org/pdf/1706.03762.pdf&quot;&gt;Transformer&lt;/a&gt; and &lt;a href=&quot;https://arxiv.org/pdf/1810.04805.pdf&quot;&gt;BERT&lt;/a&gt;, structured the model, and refered the others’ code.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;python&quot;&gt;python&lt;/h4&gt;
+&lt;p&gt;Meanwhile, I found out a small error in tokenization process, which was changing a token into [MASK], enabled bidirectional representation.&lt;/p&gt;
+
+&lt;h3 id=&quot;ive-made-pr-and-got-merged-but-i-was-not-in-contributors-why&quot;&gt;I’ve made PR, and got merged. But I was not in contributors. Why?&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h6 id=&quot;figure-2-merged-pull-request-adopted-from-graykode-project&quot;&gt;Figure 2. Merged Pull request &lt;em&gt;Adopted from&lt;/em&gt; &lt;a href=&quot;https://github.com/graykode/nlp-tutorial/pull/9&quot;&gt;&lt;em&gt;graykode project&lt;/em&gt;&lt;/a&gt;&lt;/h6&gt;
+
+&lt;p&gt;Actually I happened to know there can be couple of reasons github doesn’t include my name as contributor.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Well, if contributors tab has more than 100 people, in which case it shows you up only if you are in the top 100 contributors because displaying too many contributors can make webpages down.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Somethimes, however, it doesn’t that problem. Why not?&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Two possibilities are there.&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Broadcasting Review (especially &lt;em&gt;&lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.13.0/user/basics.broadcasting.html#general-broadcasting-rules&quot;&gt;Rule&lt;/a&gt;&lt;/em&gt;), (I totally confused with extension of arrays)&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;method, attribute, thing,… for example pytorch tensor dir(var)
-    &lt;ul&gt;
-      &lt;li&gt;callable(getattr(loss, dir(loss))) -&amp;gt; some gets false and other gets true&lt;/li&gt;
-    &lt;/ul&gt;
+    &lt;p&gt;First, According to &lt;a href=&quot;https://www.quora.com/Why-doesnt-GitHub-include-my-name-as-a-contributor-even-after-I-contributed&quot;&gt;Joel-Glovier&lt;/a&gt;, if repository maintainer &lt;a href=&quot;https://shinglyu.com/web/2018/03/25/merge-pull-requests-without-merge-commits.html&quot;&gt;merged-as-a-rebase&lt;/a&gt; PR will end up showing as maintainer’s commit. But maintainer shouldn’t normally do this.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;SyntaxError: positional argument follows keyword argument&lt;/p&gt;
+    &lt;p&gt;Second, if you happend to commit using a different git email that what is in your GitHub profile, it will not be attached to your Github user, and “doesn’t show up” as you.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;I remember that&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;string&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;alphabet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ascii_lowercase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;alphabet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;outputs splited by each character,,, but it doesn’t… why?&lt;/p&gt;
-
-&lt;h4 id=&quot;machine-resource-things&quot;&gt;machine resource, things&lt;/h4&gt;
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Why RAM is expensive?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Refer &lt;a href=&quot;https://render.githubusercontent.com/view/ipynb?commit=2bfe4a95aac864b23bd0c0729d2720c92e169f8c&amp;amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f5370656c6c4f6e596f752f646c66662d6e6f74652f326266653461393561616338363462323362643063303732396432373230633932653136396638632f6e62732f646c322f30315f6d61746d756c5f70726163746963652e6970796e62&amp;amp;nwo=SpellOnYou%2Fdlff-note&amp;amp;path=nbs%2Fdl2%2F01_matmul_practice.ipynb&amp;amp;repository_id=221963162&amp;amp;repository_type=Repository#Broadcasting&quot;&gt;colab!&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="Fast.AI-v3" /><category term="python" /><summary type="html">fast.ai v3 course</summary></entry></feed>
+  &lt;li&gt;&lt;a href=&quot;https://mchromiak.github.io/articles/2017/Sep/12/Transformer-Attention-is-all-you-need/&quot;&gt;Michał Chromiak’s blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile&quot;&gt;Github: why are my contributions are not showing on my profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.atlassian.com/git/tutorials/syncing/git-fetch&quot;&gt;atlassian-gitfetch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">From the end of last year, big changes have witnessed in NLP research. Embracing an unprecedented growth, I started to study new exciting results and advances. In doing so, I noticed I’m not listed as contributor of repo which my PR accessed.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1.png" /></entry></feed>

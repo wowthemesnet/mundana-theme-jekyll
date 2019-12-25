@@ -426,8 +426,9 @@ mark,
   color: #6c757d; }
 
 code {
-  font-size: 87.5%;
-  color: #ff0266;
+  font-size: 90.5%;
+  color: #665f62;
+  background: #eee; 
   word-break: break-word; }
   a > code {
     color: inherit; }

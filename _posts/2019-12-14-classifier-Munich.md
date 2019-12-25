@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Making my own classifier with my own data (Munich vs Berlin vs Dresden)"
+title: "Making a classifier with gooogle img (Cebu / Munich / Seoul)"
 author: dionne
 categories: [Fast.AI-v3]
 image: assets/images/munich2.jpg
@@ -8,9 +8,9 @@ tags: [ featured ]
 ---
 
 This toy project code can be found [here](https://github.com/SpellOnYou/dlff-note/blob/master/nbs/dl1/lesson2_download_practice.ipynb)
- 
-Making a classifier which can seperate <span style="color: red">Munich</span> from <span style="color: red">Berlin</span> and <span style="color: red">Dresden</span>!
-(hoping my well in Munich!🤟)
+
+Making a classifier which can distinguish <span style="color: red">Seoul</span> from <span style="color: red">Munich</span> and <span style="color: red">Cebu</span>!
+(hoping my well in Munich!🤟, and I love Cebu)
 
 
 ### CONTENTS
@@ -20,37 +20,14 @@ Making a classifier which can seperate <span style="color: red">Munich</span> fr
 {:toc}
 
 ### 1. Creating dataset from google images
-#### 1.1 Get a list of URLs & Download imgs
 
-Go to the google image, type "image" in advanced search,
-+ In my case, I searched "Munch" -Berlin -Gutenberg,  "Berlin" -Munch -Gutenberg, "Gutenberg" -Munch -Berlin
-+ Then, go to the `Advanced search` and select type of `image: photo`
-+ Scroll down when you can see button "show more results"
+You can use either URLs or `google_images_download` package. Since [Jeremy explained specifically](), I will try the other.
 
-Download img urls
-+ `opt + cmd + J` if you are using mac os, or `ctl + shift + j` if your os is windows
-+ And type below js code
+#### 1.1 Using `google_images_download`
 
-~~~javascript
-urls=Array.from(document.querySelectorAll('.rg_i')).map(el=> el.hasAttribute('data-src')?el.getAttribute('data-src'):el.getAttribute('data-iurl'));
-window.open('data:text/csv;charset=utf-8,' + escape(urls.join('\n')));
-~~~
+note: *This is not google official package* <br />
 
-Do for all of those 3 cases, and after that, you can get 3 file which have urls.
-Upload it and implement
-
-~~~python
-download_image(path/file, dest, max_pics = 200)
-~~~
-
-And do the same things for the other two.
-
-
-#### 1.2 Using `google_images_download`
-
-*This is not google official package* 
-
-This is simple, just refering the [Official Doncument](https://google-images-download.readthedocs.io/en/latest/index.html), put the required args.
+Refer to [Official Doncument](https://google-images-download.readthedocs.io/en/latest/index.html), put the required args.
 
 ~~~python
 from google_images_download import google_images_download
@@ -58,9 +35,9 @@ from google_images_download import google_images_download
 response = google_images_download.googleimagesdownload()   #class instantiation
 out_dir = os.path.abspath('../../materials/dataset/pkg/')
 os.mkdir(out_dir)
-arguments = {"keywords":"Munich,Berlin,Dresden",
+arguments = {"keywords":"Cebu,Munich,Seoul",
              "print_urls":True,
-#              "suffix_keywords":"Germany",
+             "suffix_keywords":"city",
              "output_directory":out_dir,
              "type":"photo",
             }

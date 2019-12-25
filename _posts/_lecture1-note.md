@@ -184,17 +184,6 @@ $$\vec y = X \vec a$$
 
 ![](/assets/images/1-part-i_k.png){:height="80%" width="80%" style="vertical-align:middle"}
 
-### Stochastic Gradient Distance
-
-Why we should use the this (<script type="math/tex">\vec y = X \vec a</script>) an architecture : it does whole equations all at once!!!<br />
-Our architecture have two parameters, a1 and a2. and we will fit our architecture to some data.<br />
-
-This is bottom-up lesson.
-
-We first, generate some data, which is 
-
-
-### Question time
 
 **Question01**: Can we have a definition of the error rate being discussed and how it is calculated? I assume it's cross validation error <br />
 ~~~python

@@ -7,6 +7,15 @@ image:
 tags: [ Fast.AI-v3, python ]
 ---
 
+#### Jekyll hosting
+
+[nbdev tutorial](http://nbdev.fast.ai),
+
+jekyll hostings are various.
+
+
+
+
 #### github
 
 Branch Dionne set up to track remote branch Dionne from origin.

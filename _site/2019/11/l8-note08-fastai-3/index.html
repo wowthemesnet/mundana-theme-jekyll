@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Retrospective on Pycon 2019 Korea (CoC Committee) | It's okay to be naive</title>
+    <title>ReLU and data init with normailized data | It's okay to be naive</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Retrospective on Pycon 2019 Korea (CoC Committee) | It’s okay to be naive</title>
+<title>ReLU and data init with normailized data | It’s okay to be naive</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Retrospective on Pycon 2019 Korea (CoC Committee)" />
+<meta property="og:title" content="ReLU and data init with normailized data" />
 <meta name="author" content="dionne" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="When I was volunteer, it seems like busy and hectic to managing that crowded conference. In my experience, to get things moving, it needs hierarchy. But it didn’t. Organizers emphasized our responsibility, and if I passed each other’s burden, It could be my burden next time. In solidarity of the obligation, we finished conference well. And after participating PyCon Korea 2018 as volunteer, I’ve joined PyCon Korea Organizer last year." />
-<meta property="og:description" content="When I was volunteer, it seems like busy and hectic to managing that crowded conference. In my experience, to get things moving, it needs hierarchy. But it didn’t. Organizers emphasized our responsibility, and if I passed each other’s burden, It could be my burden next time. In solidarity of the obligation, we finished conference well. And after participating PyCon Korea 2018 as volunteer, I’ve joined PyCon Korea Organizer last year." />
-<link rel="canonical" href="http://localhost:4000/2019/11/coc-retropective/" />
-<meta property="og:url" content="http://localhost:4000/2019/11/coc-retropective/" />
+<meta name="description" content="” Lecture 08 - Deep Learning From Foundations-part2 “" />
+<meta property="og:description" content="” Lecture 08 - Deep Learning From Foundations-part2 “" />
+<link rel="canonical" href="http://localhost:4000/2019/11/l8-note08-fastai-3/" />
+<meta property="og:url" content="http://localhost:4000/2019/11/l8-note08-fastai-3/" />
 <meta property="og:site_name" content="It’s okay to be naive" />
-<meta property="og:image" content="http://localhost:4000/assets/images/14.jpg" />
+<meta property="og:image" content="http://localhost:4000/assets/images/2-relu.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-11-05T00:00:00+01:00" />
+<meta property="article:published_time" content="2019-11-23T00:00:00+01:00" />
 <script type="application/ld+json">
-{"description":"When I was volunteer, it seems like busy and hectic to managing that crowded conference. In my experience, to get things moving, it needs hierarchy. But it didn’t. Organizers emphasized our responsibility, and if I passed each other’s burden, It could be my burden next time. In solidarity of the obligation, we finished conference well. And after participating PyCon Korea 2018 as volunteer, I’ve joined PyCon Korea Organizer last year.","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/11/coc-retropective/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/14.jpg","headline":"Retrospective on Pycon 2019 Korea (CoC Committee)","dateModified":"2019-11-05T00:00:00+01:00","datePublished":"2019-11-05T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/11/coc-retropective/"},"@context":"http://schema.org"}</script>
+{"description":"” Lecture 08 - Deep Learning From Foundations-part2 “","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/11/l8-note08-fastai-3/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/2-relu.png","headline":"ReLU and data init with normailized data","dateModified":"2019-11-23T00:00:00+01:00","datePublished":"2019-11-23T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/11/l8-note08-fastai-3/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -362,18 +362,18 @@ function lunr_search(term) {
 					<p class="text-uppercase font-weight-bold">
                         <span class="catlist">
 						
-                          <a class="sscroll text-danger" href="/categories.html#society">society</a><span class="sep">, </span>
+                          <a class="sscroll text-danger" href="/categories.html#fast.ai-v3">fast.ai-v3</a><span class="sep">, </span>
                         
                         </span>
 					</p>
-					<h1 class="display-4 mb-4 article-headline">Retrospective on Pycon 2019 Korea (CoC Committee)</h1>
+					<h1 class="display-4 mb-4 article-headline">ReLU and data init with normailized data</h1>
 					<div class="d-flex align-items-center">
                         
 						<small class="ml-3">  <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
-                            <span class="text-muted d-block mt-1">Nov 05, 2019 · <span class="reading-time">
+                            <span class="text-muted d-block mt-1">Nov 23, 2019 · <span class="reading-time">
   
   
-    1 min read
+    9 mins read
   
 </span>
     </span>
@@ -382,7 +382,7 @@ function lunr_search(term) {
 				</div>
                 
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="/assets/images/14.jpg" alt="Retrospective on Pycon 2019 Korea (CoC Committee)">
+					<img class="rounded" src="/assets/images/2-relu.png" alt="ReLU and data init with normailized data">
 				</div>
                 
 			</div>
@@ -422,60 +422,326 @@ function lunr_search(term) {
             
             <!-- Article -->
 			<article class="article-post">                
-			<p>When I was volunteer, it seems like busy and hectic to managing that crowded conference.<br />
-In my experience, to get things moving, it needs <strong>hierarchy</strong>.<br />
-But it didn’t. Organizers emphasized our responsibility, and if I passed each other’s burden, It could be my burden next time.<br />
-In solidarity of the obligation, we finished conference well.<br />
-And after participating PyCon Korea 2018 as volunteer, I’ve joined PyCon Korea Organizer last year.<br /></p>
+			<p>” Lecture 08 - Deep Learning From Foundations-part2 “</p>
 
-<p>&lt;Figure 1&gt; First meeting of PyCon 2019 Korea Organizers <img src="/assets/images/28.jpg" alt="" /></p>
-
-<p>It’s been a while since PyCon 2019 finished. It’s held on Aug 15 - 18, at Coex Grand Balloom<br /></p>
-
-<p>&lt;Figure 2&gt; Ongoing session, speaking on news comment processing  <img src="/assets/images/22.jpg" alt="" />
-&lt;Figure 3&gt; Sponsor Booth iin Coex Hall <img src="/assets/images/27.jpg" alt="" />
-&lt;Figure 4&gt; After PyCon 2019, with all of volunteer, organizer, speakers 😍 🥰 <img src="/assets/images/17.jpg" alt="" /></p>
+<h3 class="no_toc" id="homework">Homework</h3>
 
 <ul>
-  <li>Serving as part of the coc TF, I spent large fraction of last year doing CoC job.
-here’s the path what we’ve been grappled with to grasp a solution.</li>
+  <li>Review concepts 16 concepts from Course 1 (lessons 1 - 7)</li>
 </ul>
 
-<p><strong>First half: Before the conference</strong></p>
+<p style="color:grey; font-size: 90%;">(1) Affine Functions &amp; non-linearities; 2) Parameters &amp; activations; 3) Random initialization &amp; transfer learning; 4) SGD, Momentum, Adam; 5) Convolutions; Batch-norm; 6) Dropout; 7) Data augmentation; 8) Weight decay; 9) Res/dense blocks; 10) Image classification and regression; 11)Embeddings; 12) Continuous &amp; Categorical variables; 13) Collaborative filtering; 14) Language models; 15) NLP classification; 16) Segmentation; U-net; GANS)</p>
+<ul>
+  <li>Make sure you understand broadcasting</li>
+  <li>Read section 2.2 in <a href="https://arxiv.org/abs/1502.01852">Delving Deep into Rectifiers</a></li>
+  <li>Try to replicate as much of the notebooks as you can without peeking; when you get stuck, peek at the lesson notebook, but then close it and try to do it yourself</li>
+</ul>
 
-<h4 id="toward-diverse-community">Toward Diverse Community</h4>
+<h3 id="other-materials">Other materials</h3>
 
 <ul>
-  <li>Formally we’ve been reusing and modifying PyCon US CoC, but we needed fit in Korean and I was part of that to revise code of conduct.</li>
+  <li><a href="http://proceedings.mlr.press/v9/glorot10a.html">Understanding the difficulty of training deep feedforward neural networks</a>, paper that introduced Xavier initialization</li>
 </ul>
-
-<h4 id="except-that-diversity-because-it-is-harassment">Except ‘That’ Diversity, Because it is ‘Harassment’</h4>
-
-<ul>
-  <li>Specific point was harassment, and the others were not. process of finding the points. How can we settle this point?</li>
-</ul>
-
-<p><strong>Second half: During the conference</strong></p>
-
-<h4 id="handling-the-potential-harassment">Handling the potential Harassment</h4>
-
-<h4 id="disjunction-of-policy-and-real-time-situation">Disjunction of policy and real-time situation</h4>
 
 <hr />
 
-<p>This ‘PyCon 2019 Korea retrospective series’ would be devided into 3 Episodes.<br /></p>
+<h3 class="no_toc" id="contents">CONTENTS</h3>
+
+<ul id="markdown-toc">
+  <li><a href="#other-materials" id="markdown-toc-other-materials">Other materials</a></li>
+  <li><a href="#1-the-forward-and-backward-passes" id="markdown-toc-1-the-forward-and-backward-passes">1. The forward and backward passes</a>    <ul>
+      <li><a href="#11-normalization" id="markdown-toc-11-normalization">1.1 Normalization</a></li>
+      <li><a href="#12-variable-definition" id="markdown-toc-12-variable-definition">1.2 Variable definition</a></li>
+    </ul>
+  </li>
+  <li><a href="#2-foundation-version" id="markdown-toc-2-foundation-version">2. Foundation Version</a>    <ul>
+      <li><a href="#21-basic-architecture" id="markdown-toc-21-basic-architecture">2.1 Basic architecture</a>        <ul>
+          <li><a href="#211-simplified-kaiming-init" id="markdown-toc-211-simplified-kaiming-init">2.1.1 <em>simplified</em> kaiming init</a></li>
+          <li><a href="#212-glorrot-initialization" id="markdown-toc-212-glorrot-initialization">2.1.2 Glorrot initialization</a></li>
+          <li><a href="#213-kaiming-initializating" id="markdown-toc-213-kaiming-initializating">2.1.3 Kaiming initializating</a></li>
+          <li><a href="#214-pytorch-package" id="markdown-toc-214-pytorch-package">2.1.4 Pytorch package</a></li>
+        </ul>
+      </li>
+      <li><a href="#22-loss-function-mse" id="markdown-toc-22-loss-function-mse">2.2 Loss function: MSE</a></li>
+    </ul>
+  </li>
+  <li><a href="#footnote" id="markdown-toc-footnote">Footnote</a></li>
+</ul>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Normailzation
+{:toc}
+</code></pre></div></div>
+
+<h3 id="1-the-forward-and-backward-passes">1. The forward and backward passes</h3>
+
+<h4 id="11-normalization">1.1 Normalization</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_mean</span><span class="p">,</span><span class="n">train_std</span> <span class="o">=</span> <span class="n">x_train</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="n">x_train</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">train_mean</span><span class="p">,</span><span class="n">train_std</span>
+<span class="p">(</span><span class="n">tensor</span><span class="p">(</span><span class="mf">0.1304</span><span class="p">),</span> <span class="n">tensor</span><span class="p">(</span><span class="mf">0.3073</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Remember!</p>
+<ul>
+  <li>Dataset, which is x_train, mean and standard deviation is not 0&amp;1. <strong>But we need them to be</strong> which means we should substract means and divide data by std.</li>
+  <li>You should not standarlize <em>validation set</em> because training set and validation set should be aparted.</li>
+  <li>after normalize, mean is close to zero, and standard deviation is close to 1.</li>
+</ul>
+
+<h4 id="12-variable-definition">1.2 Variable definition</h4>
 
 <ul>
-  <li>“Retrospective on Pycon 2019 Korea (CoC Committee)”</li>
-  <li>“Retrospective on Pycon 2019 Korea (Program Chair)” (20 Nov, To Be Update)</li>
-  <li>“Maintaining participation while still making timely decisions” (29 Nov, To Be Update)</li>
+  <li><strong>n,m</strong>: size of the training set</li>
+  <li><strong>c</strong>: the number of activations we need in our model</li>
 </ul>
+
+<h3 id="2-foundation-version">2. Foundation Version</h3>
+<h4 id="21-basic-architecture">2.1 Basic architecture</h4>
+
+<ul>
+  <li>Our model has one hidden layer, output to have 10 activations, used in cross entropy.</li>
+  <li>
+    <p>But in process of building architecture, we will use mean square error, output to have 1 activations and lator change it to cross entropy</p>
+  </li>
+  <li>number of hidden unit; 50</li>
+</ul>
+
+<p>see below pic</p>
+
+<p><img src="/assets/images/model.jpg" alt="" height="80%" width="80%" /></p>
+
+<ul>
+  <li>We want to make w1&amp;w2 mean and std be 0&amp;1.
+    <ul>
+      <li>why initializating and make mean zero and std one is important?</li>
+      <li>paper highlighting importance of normalisation - training 10,000 layer network without regularisation<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="211-simplified-kaiming-init">2.1.1 <em>simplified</em> kaiming init</h5>
+
+<p>Q: Why we did init, normalize with only validation data? Because we can not handle and get statistics from each value of x_valid?{: style=”color:red; font-size: 130%; text-align: center;”}</p>
+
+<ul>
+  <li>what about hidden(first) layer?</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">w1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">nh</span><span class="p">)</span>
+<span class="n">b1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nh</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">x_valid</span><span class="p">,</span> <span class="n">w1</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span> <span class="c1"># hidden
+</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">t</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="p">((</span><span class="n">tensor</span><span class="p">(</span><span class="mf">2.3191</span><span class="p">),</span> <span class="n">tensor</span><span class="p">(</span><span class="mf">27.0303</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>In output(second) layer,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">w2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">nh</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">b2</span><span class="p">)</span> <span class="c1"># output
+</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t2</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">t2</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="p">(</span><span class="n">tensor</span><span class="p">(</span><span class="o">-</span><span class="mf">58.2665</span><span class="p">),</span> <span class="n">tensor</span><span class="p">(</span><span class="mf">170.9717</span><span class="p">))</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>which is terribly far from normalzed value.</p>
+  </li>
+  <li>
+    <p>But if we apply simplified kaiming init</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">w1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">nh</span><span class="p">)</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">m</span><span class="p">);</span> <span class="n">b1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nh</span><span class="p">)</span>
+<span class="n">w2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">nh</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">nh</span><span class="p">);</span> <span class="n">b2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">x_valid</span><span class="p">,</span> <span class="n">w1</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="n">t</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">tensor</span><span class="p">(</span><span class="o">-</span><span class="mf">0.0516</span><span class="p">),</span> <span class="n">tensor</span><span class="p">(</span><span class="mf">0.9354</span><span class="p">))</span>
+</code></pre></div></div>
+
+<ul>
+  <li>But, actually, we use activations not only linear function</li>
+  <li>After applying activations relu at linear layer, mean and deviation became 0.5.</li>
+</ul>
+
+<p><img src="/assets/images/relu.jpg" alt="" height="70%" width="70%" /></p>
+
+<h5 id="212-glorrot-initialization">2.1.2 Glorrot initialization</h5>
+
+<p>Paper2: <a href="http://proceedings.mlr.press/v9/glorot10a.html">Understanding the difficulty of training deep feedforward neural networks</a></p>
+<ul>
+  <li>Gaussian(, bell shaped, normal distributions) is not trained very well.</li>
+  <li>How to initialize neural nets?</li>
+</ul>
+
+<p><img src="/assets/images/xavier.png" alt="" height="80%" width="80%" /></p>
+
+<p>with <script type="math/tex">n_i</script> the size of layer <script type="math/tex">n</script>, the number of filters <script type="math/tex">i</script>.</p>
+
+<ul>
+  <li>But there is <strong>No acount</strong> for import of ReLU</li>
+  <li>If we got 1000 layers, vanishing gradients problem emerges</li>
+</ul>
+
+<h5 id="213-kaiming-initializating">2.1.3 Kaiming initializating</h5>
+
+<p>Paper3: <a href="https://arxiv.org/abs/1502.01852">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</a></p>
+<ul>
+  <li>Kaiming He, explained <a href="https://pouannes.github.io/blog/initialization/">here</a></li>
+  <li>rectifier: rectified linear unit</li>
+  <li>rectifier network: neural network with rectifier linear units</li>
+</ul>
+
+<p><img src="/assets/images/kaiming.png" alt="" height="80%" width="80%" /></p>
+
+<ul>
+  <li>This is kaiming init, and why suddenly replace one to two on a top?
+    <ul>
+      <li>to avoid vanishing gradient(weights)</li>
+      <li><span style="color: red">But it doesn’t give very nice mean tough.</span></li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="214-pytorch-package">2.1.4 Pytorch package</h5>
+
+<ul>
+  <li>Why fan_out?
+    <ul>
+      <li>according to pytorch documentation,</li>
+    </ul>
+  </li>
+</ul>
+
+<p><code class="highlighter-rouge">choosing 'fan_in' preserves the magnitude of the variance of the wights in the forward pass.</code></p>
+
+<p><code class="highlighter-rouge">choosing 'fan_out' preserves the magnitues in the backward pass(, which means matmul; with transposed matrix)</code></p>
+
+<p>➡️ in the other words, torch use fan_out cz pytorch transpose in linear transformaton.</p>
+
+<ul>
+  <li>What about CNN in Pytorch?</li>
+</ul>
+
+<p>I tried</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="o">.</span><span class="n">conv2d_forward</span><span class="err">??</span>
+</code></pre></div></div>
+<p><img src="/assets/images/2-forward-conv2d.jpg" alt="" height="90%" width="90%" /></p>
+
+<p>Jeremy digged into using</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">modules</span><span class="o">.</span><span class="n">conv</span><span class="o">.</span><span class="n">_ConvNd</span><span class="o">.</span><span class="n">reset_parameters</span><span class="err">??</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/2-torch-nn-conv-jeremy.jpg" alt="" height="90%" width="90%" /></p>
+
+<p><img src="/assets/images/2-torch-nn-conv-jeremy-2.jpg" alt="" height="90%" width="90%" /><br />
+<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup></p>
+
+<ul>
+  <li>in Pytorch, it doesn’t seem to be implemented kaiming init in right formula. so we should use our own operation.</li>
+  <li>But actually, this has been discussed in Pytorch community before.<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>  <sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup></li>
+  <li>Jeremy said it enhanced variance also, so I sampled 100 times and counted better results.</li>
+</ul>
+
+<p><img src="/assets/images/2-100times-sampling.png" alt="" /></p>
+
+<ul>
+  <li>To make sure the shape seems sensible. check with assert. (remember we will replace 1 to 10 in <em>cross entropy</em>)</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">assert</span> <span class="n">model</span><span class="p">(</span><span class="n">x_valid</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="o">==</span><span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="n">x_valid</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">model</span><span class="p">(</span><span class="n">x_valid</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>We have made Relu, init, linear, it seems we can forward pass</li>
+  <li>code we need for basic architecture</li>
+</ul>
+
+<p><img src="/assets/images/3-fc.png" alt="" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">nh</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="k">def</span> <span class="nf">lin</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="o">@</span><span class="n">w</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">w1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">nh</span><span class="p">)</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">2.</span><span class="o">/</span><span class="n">m</span> <span class="p">);</span> <span class="n">b1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nh</span><span class="p">)</span>
+<span class="n">w2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">nh</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span> <span class="n">b2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">relu</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="n">clamp_min</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="n">relu</span><span class="p">(</span><span class="n">lin</span><span class="p">(</span><span class="n">x_valid</span><span class="p">,</span> <span class="n">w1</span><span class="p">,</span> <span class="n">b1</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="n">xb</span><span class="p">):</span>
+    <span class="n">l1</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">xb</span><span class="p">,</span> <span class="n">w1</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span>
+    <span class="n">l2</span> <span class="o">=</span> <span class="n">relu</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span>
+    <span class="n">l3</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">l2</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">b2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">l3</span>
+</code></pre></div></div>
+
+<h4 id="22-loss-function-mse">2.2 Loss function: MSE</h4>
+
+<ul>
+  <li>Mean squared error need unit vector, so we remove unit axis.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">mse</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span> <span class="k">return</span> <span class="p">(</span><span class="n">output</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">targ</span><span class="p">)</span><span class="o">.</span><span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+  <li>In python, in case you remove axis, you use ‘squeeze’, or add axis use ‘unsqueeze’</li>
+  <li><a href="https://pytorch.org/docs/stable/torch.html#torch.squeeze">torch.squeeze</a> where code commonly broken. so, when you use squeeze, <strong>clarify</strong> dimension axis you want to remove</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tmp</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">tmp</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+</code></pre></div></div>
+
+<ul>
+  <li>make sure to make as float when you calculate</li>
+</ul>
+
+<p>But why??? because it is tensor?{: style=”color:red; font-size: 130%;”}</p>
+
+<p>Here’s the error when I don’t transform the data type</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">---------------------------------------------------------------------------</span>
+<span class="nb">TypeError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">22</span><span class="o">-</span><span class="n">ae6009bef8b4</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># call data again
+</span>      <span class="mi">2</span> <span class="n">mse</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="nb">TypeError</span><span class="p">:</span> <span class="s">'map'</span> <span class="nb">object</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">subscriptable</span>
+</code></pre></div></div>
+
+<ul>
+  <li>This is forward pass</li>
+</ul>
+
+<h3 id="footnote">Footnote</h3>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><a href="https://arxiv.org/abs/1901.09321">Fixup Initialization: Residual Learning Without Normalization</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p><a href="https://github.com/pytorch/pytorch/blob/3df79f403e8b9621d5adb0447266becd10d633b0/torch/nn/modules/linear.py#L58-L63">Pytorch implementaion on Kaiming init of conv and linear layers</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p><a href="https://github.com/pytorch/pytorch/issues/15314">Pytorch kaiming init issue</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p><a href="https://discuss.pytorch.org/t/why-the-default-negative-slope-for-kaiming-uniform-initialization-of-convolution-and-linear-layers-is-5/29290">Pytorch kaiming init explained</a> <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
                 
 			</article>
 			
 			<!-- Tags -->
 			<div class="mb-4">
 				<span class="taglist">
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/tags.html#featured">featured</a>
 				
 				</span>
 			</div>
@@ -532,12 +798,12 @@ here’s the path what we’ve been grappled with to grasp a solution.</li>
         <div class="row prevnextlinks small font-weight-bold">
           
             <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="/2019/10/GPU-time/"> <img height="30px" class="mr-1" src="/assets/images/10.png">  5 reasons took much time to setting GPU for fast.ai than I expected</a>
+                <a class="text-dark" href="/2019/11/note08-fastai-3/"> <img height="30px" class="mr-1" src="/assets/images/2-relu.png">  ReLU and data init with normailized data</a>
             </div>
           
           
             <div class="col-md-6 text-right pr-0">
-                <a class="text-dark" href="/2019/11/elif-shafak/"> Elif Shafak  <img height="30px" class="ml-1" src="/assets/images/29.jpg"> </a>
+                <a class="text-dark" href="/2019/11/note08-fastai-4/"> Gradient backward, Chain Rule, Refactoring  <img height="30px" class="ml-1" src="/assets/images/4-backward.png"> </a>
             </div>
           
         </div>

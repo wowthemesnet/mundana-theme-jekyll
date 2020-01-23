@@ -3,7 +3,7 @@ name: 'SpellOnYou'
 description: "Be afraid only of standing still. Remain fresh, body and soul."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
-baseurl: ''
+baseurl: '/articles'
 disqus: 'dionne'
 email: 'kimjiwon08@snu.ac.kr'
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'

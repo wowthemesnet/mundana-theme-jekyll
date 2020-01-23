@@ -4,7 +4,7 @@ title: "Note01, Note02"
 author: dionne
 categories: [Fast.AI-v3]
 image: 
-tags: []
+tags: [part1]
 ---
 
 Part1 Note 부분 훑어보기~

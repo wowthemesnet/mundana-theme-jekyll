@@ -1,8 +1,34 @@
+---
+layout: post
+title: "Note01, Note02"
+author: dionne
+categories: [Fast.AI-v3]
+image: 
+tags: []
+---
+
+Part1 Note 부분 훑어보기~
+
+## Note 01
+
+We are focused on solving interesting real-world problems.
+
+~~~python
+%reload_ext autoreload
+%autoreload 2
+%matplotlib inline
+~~~
+
+this is special directives to jupyter notebook, not python code.
+And it is called ‘magics’
+
+* If somebody changes underlying library code while I'm running this, please reload it automatically
+* If somebody asks to plot something, then please plot it here in this Jupyter Notebook
+
+[^import-star]
 
 
-the plot top losses from last time where we saw the images which it was either the *most wrong* about or *the least confident* about.
-
-> Q. how can i metric this?
+the plot top losses from last time where we saw the images which it was either the most wrong about or the least confident about.
 
 ## Note 02
 
@@ -209,6 +235,9 @@ Unfortunately there is no shortcut. I wish there was. I wish there's some way to
 #### Questions
 - what is unfreeze?
 - 
+
+
+
 
 
 [^import-star]: [why-import-star-in-python-is-a-bad-idea](https://www.geeksforgeeks.org/why-import-star-in-python-is-a-bad-idea)

@@ -7,7 +7,7 @@ image: assets/images/munich2.jpg
 tags: [ sticky ]
 ---
 
-Code can be found [here](https://github.com/SpellOnYou/dlff-note/blob/master/nbs/dl1/lesson2_download_practice.ipynb)
+Code can be found [here](https://github.com/SpellOnYou/dlff-note/blob/master/toy-project/What_is_your_city_lesson02.ipynb)
 
 Making a classifier which can distinguish <span style="color: red">Seoul</span> from <span style="color: red">Munich</span> and <span style="color: red">Cebu</span>!
 (hoping my well in Munich!🤟, and I love Cebu)

@@ -19,7 +19,7 @@ plugins:
   - jekyll-seo-tag
   
 authors:
-    sal:
+    jeff:
       name:           Jeff
       site:           http://www.getbuya.club/
       avatar:         assets/images/avatar1.jpg
@@ -27,7 +27,7 @@ authors:
       email:          mrgabonijeff@gmail.com
       twitter:        https://twitter.com/iamthenewking
 
-    jane:
+    eper:
       name:           Eper
       site:           https://www.epergaboni.com
       avatar:         assets/images/me-2.jpg
@@ -44,7 +44,7 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: sal
+      author: jeff
       avatar: assets/images/avatar1.jpg
       
   # all pages

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to VSML!"
 categories: [ Jekyll ]
 image: assets/images/demo1.jpg
 ---

@@ -5,7 +5,7 @@ logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: '/'
 disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
+email: 'mrgabonijeff@gmail.com'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 include: ["_pages"]
@@ -21,19 +21,20 @@ plugins:
 authors:
     sal:
       name:           Jeff
-      site:           https://www.wowthemes.net
+      site:           http://www.getbuya.club/
       avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Jeff, the author of Mundana, the theme you're currently previewing. I hope you like it!"
-      email:          wowthemesnet@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
+      bio:            "Hi, I am Jeff, Fullstack Web Developer + Coffe Lover!"
+      email:          mrgabonijeff@gmail.com
+      twitter:        https://twitter.com/iamthenewking
 
     jane:
       name:           Jane
-      site:           https://www.wowthemes.net
+      site:           https://www.epergaboni.com
       avatar:         /assets/images/avatar2.jpg
-      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
-      email:          fakemail@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
+      bio:            "Philippine based web designer & web developer focused on crafting beautiful & user-friendly experiences.
+                        I’ve built roughly 768 user interfaces around the globe. Say hi@epergaboni.com if you need my help. "
+      email:          epergaboni@gmail.com
+      twitter:        https://twitter.com/epergaboni
  
 # Defaults
 defaults:

@@ -1,6 +1,6 @@
 # Site
 name: 'VSML'
-description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+description: 'VSML.'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: '/vsml'
@@ -20,10 +20,10 @@ plugins:
   
 authors:
     sal:
-      name:           Sal
+      name:           Jeff
       site:           https://www.wowthemes.net
       avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
+      bio:            "Hi, I am Jeff, the author of Mundana, the theme you're currently previewing. I hope you like it!"
       email:          wowthemesnet@gmail.com
       twitter:        https://twitter.com/wowthemesnet
 

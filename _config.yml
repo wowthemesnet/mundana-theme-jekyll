@@ -1,9 +1,9 @@
 # Site
 name: 'VSML'
 description: 'VSML.'
-logo: '/assets/images/logo.png'
-favicon: '/assets/images/favicon.ico'
-baseurl: ''
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/favicon.ico'
+baseurl: '/'
 disqus: 'demowebsite'
 email: 'mrgabonijeff@gmail.com'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
@@ -22,7 +22,7 @@ authors:
     sal:
       name:           Jeff
       site:           http://www.getbuya.club/
-      avatar:         /assets/images/avatar1.jpg
+      avatar:         assets/images/avatar1.jpg
       bio:            "Hi, I am Jeff, Fullstack Web Developer + Coffe Lover!"
       email:          mrgabonijeff@gmail.com
       twitter:        https://twitter.com/iamthenewking
@@ -30,7 +30,7 @@ authors:
     jane:
       name:           Eper
       site:           https://www.epergaboni.com
-      avatar:         /assets/images/me-2.jpg
+      avatar:         assets/images/me-2.jpg
       bio:            "Philippine based web designer & web developer focused on crafting beautiful & user-friendly experiences.
                         I’ve built roughly 768 user interfaces around the globe. Say hi@epergaboni.com if you need my help. "
       email:          epergaboni@gmail.com
@@ -45,7 +45,7 @@ defaults:
     values:
       layout: post
       author: sal
-      avatar: /assets/images/avatar1.jpg
+      avatar: assets/images/avatar1.jpg
       
   # all pages
   - scope:

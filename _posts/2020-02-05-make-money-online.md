@@ -3,7 +3,7 @@ layout: post
 title:  "Make Money Online"
 author: eper
 categories: [ Jekyll, tutorial ]
-image: assets/images/home.jpg
+image: https://smartblogger.com/wp-content/uploads/2018/08/blogger-statistics-2014-2020.png
 tags: [sticky]
 ---
 

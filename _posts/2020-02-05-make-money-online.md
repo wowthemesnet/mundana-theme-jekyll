@@ -49,25 +49,15 @@ Loads of competition. Whether it be my previous employers Brian Clark or Neil Pa
 
 So, how did I compete? The honest answer:
 
-### 2\. Level up Your Content Skills
+### 2. Level up Your Content Skills
 
-<div class="embedded-image">
+![How to Make Money Blogging: The $5.3 Million Case Study](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)
 
-<div class="screenshot">[![How to Make Money Blogging: The $5.3 Million Case Study](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)
+![How to Make Money Blogging: The $5.3 Million Case Study](https://smartblogger.com/wp-content/uploads/2018/08/the-best-content-is-king-v2.png)</noscript>
 
-<noscript>![How to Make Money Blogging: The $5.3 Million Case Study](https://smartblogger.com/wp-content/uploads/2018/08/the-best-content-is-king-v2.png)</noscript>
+](https://smartblogger.com/make-money-blogging/?display=wide "The Best Content is King")
 
-](https://smartblogger.com/make-money-blogging/?display=wide "The Best Content is King")</div>
 
-</div>
-
-**Embed This Infographic On Your Site**
-
-<form>
-
-<textarea style="max-width: 580px; height: 100px;"><!—– Copy and Paste This Code Into Your Post —-><a href=”https://smartblogger.com/make-money-blogging/”><img src=”https://smartblogger.com/wp-content/uploads/2018/08/the-best-content-is-king-v2.png” alt=”How to Make Money Blogging: The $5.3 Million Case Study” width=”700 px” class=”noa3lazy”/></a><br><a href=”https://smartblogger.com/make-money-blogging”>How to Make Money Blogging: The $5.3 Million Case Study from SmartBlogger.com</a></textarea>
-
-</form>
 
 You’ve probably heard that “Content is king,” and it’s true… to an extent. A more accurate statement would be…
 
@@ -97,15 +87,9 @@ You’re probably thinking, “Geez. That sounds hard.” And you’re right, it
 
 I personally spent about three years honing my skills by writing for other sites before I started my own blog. It doesn’t _have_ to take that long — I’m just a perfectionist, so I wanted to learn from the best people in my space.
 
-<div class="embedded-image">
 
-<div class="screenshot">![How to Quit Your Job - Problogger](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)
 
-<noscript>![How to Quit Your Job - Problogger](https://smartblogger.com/wp-content/uploads/2018/08/how-to-quit-your-job-problogger.png)</noscript>
-
-</div>
-
-</div>
+![How to Quit Your Job - Problogger](https://smartblogger.com/wp-content/uploads/2018/08/how-to-quit-your-job-problogger.png)
 
 It worked, though. Nowadays, my posts get millions and millions of visitors, not because I know some special “secret,” but because I’m really good at what I do.
 

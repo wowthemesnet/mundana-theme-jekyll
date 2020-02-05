@@ -38,22 +38,10 @@ Here’s why:
 In other words, **you need a large audience who buys things**. Without that, nothing else matters. It’s a prerequisite for everything else.
 
 In the case of Smart Blogger, I noticed early on that bloggers buy lots of different things:
-
-![what bloggers buy](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)
-
-<noscript>![what bloggers buy](https://smartblogger.com/wp-content/uploads/2018/08/what-bloggers-buy.png)</noscript>
-
 In fact, there are companies with $10 million+ per year of revenue in most of those categories. It’s also a growing space with millions of people:
 
-<div class="embedded-image">
+![Blogger Statistics - 2014-2020](https://smartblogger.com/wp-content/uploads/2018/08/blogger-statistics-2014-2020.png)
 
-<div class="screenshot">![Blogger Statistics - 2014-2020](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)
-
-<noscript>![Blogger Statistics - 2014-2020](https://smartblogger.com/wp-content/uploads/2018/08/blogger-statistics-2014-2020.png)</noscript>
-
-</div>
-
-</div>
 
 The only problem?
 

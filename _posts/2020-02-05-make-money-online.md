@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Could we reinvent the charm of old cities"
+title:  "Make Money Online"
 author: eper
 categories: [ Jekyll, tutorial ]
 image: assets/images/home.jpg

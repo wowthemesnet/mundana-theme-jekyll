@@ -2,7 +2,7 @@
 layout: post
 title: "Retrospective on Pycon 2019 Korea (CoC Committee)"
 author: dionne
-categories: [ Society ]
+categories: [ Retrospect ]
 image: assets/images/14.jpg
 ---
 

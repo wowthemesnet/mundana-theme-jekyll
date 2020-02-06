@@ -4,23 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Retrosprect Of Acl Paper 2020 | SpellOnYou</title>
+    <title>Digital Product School week 4 | SpellOnYou</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Retrosprect Of Acl Paper 2020 | SpellOnYou</title>
+<title>Digital Product School week 4 | SpellOnYou</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Retrosprect Of Acl Paper 2020" />
-<meta name="author" content="Dionne" />
+<meta property="og:title" content="Digital Product School week 4" />
+<meta name="author" content="dionne" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="retrosprect of acl2020" />
-<meta property="og:description" content="retrosprect of acl2020" />
-<link rel="canonical" href="http://localhost:4000/2020/02/retrosprect-of-acl-paper-2020/" />
-<meta property="og:url" content="http://localhost:4000/2020/02/retrosprect-of-acl-paper-2020/" />
+<meta name="description" content="{.center-image;}" />
+<meta property="og:description" content="{.center-image;}" />
+<link rel="canonical" href="http://localhost:4000/2020/02/dps-week4/" />
+<meta property="og:url" content="http://localhost:4000/2020/02/dps-week4/" />
 <meta property="og:site_name" content="SpellOnYou" />
+<meta property="og:image" content="http://localhost:4000/assets/images/week4/week4-ourteam.JPG" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-02-01T00:00:00+01:00" />
 <script type="application/ld+json">
-{"description":"retrosprect of acl2020","author":{"@type":"Person","name":"Dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2020/02/retrosprect-of-acl-paper-2020/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"Dionne"},"headline":"Retrosprect Of Acl Paper 2020","dateModified":"2020-02-01T00:00:00+01:00","datePublished":"2020-02-01T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/02/retrosprect-of-acl-paper-2020/"},"@context":"http://schema.org"}</script>
+{"description":"{.center-image;}","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2020/02/dps-week4/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/week4/week4-ourteam.JPG","headline":"Digital Product School week 4","dateModified":"2020-02-01T00:00:00+01:00","datePublished":"2020-02-01T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/02/dps-week4/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -161,14 +162,14 @@ var documents = [{
     "body": "  {% if page. url ==  /  %}            {% assign latest_post = site. posts[0] %}          &lt;div class= topfirstimage  style= background-image: url({% if latest_post. image contains  ://  %}{{ latest_post. image }}{% else %} {{site. baseurl}}/{{ latest_post. image}}{% endif %}); height: 200px;  background-size: cover;  background-repeat: no-repeat; &gt;&lt;/div&gt;           {{ latest_post. title }}  :       {{ latest_post. excerpt | strip_html | strip_newlines | truncate: 136 }}               In         {% for category in latest_post. categories %}        {{ category }},         {% endfor %}                                {{ latest_post. date | date: '%b %d, %Y' }}                            {%- assign second_post = site. posts[1] -%}                        {% if second_post. image %}                         &lt;img class= w-100  src= {% if second_post. image contains  ://  %}{{ second_post. image }}{% else %}{{ second_post. image | absolute_url }}{% endif %}  alt= {{ second_post. title }} &gt;                        {% endif %}                                    {{ second_post. title }}          :                       In             {% for category in second_post. categories %}            {{ category }},             {% endfor %}                                                      {{ second_post. date | date: '%b %d, %Y' }}                                    {%- assign third_post = site. posts[2] -%}                        {% if third_post. image %}                         &lt;img class= w-100  src= {% if third_post. image contains  ://  %}{{ third_post. image }}{% else %}{{site. baseurl}}/{{ third_post. image }}{% endif %}  alt= {{ third_post. title }} &gt;                        {% endif %}                                    {{ third_post. title }}          :                       In             {% for category in third_post. categories %}            {{ category }},             {% endfor %}                                                      {{ third_post. date | date: '%b %d, %Y' }}                                    {%- assign fourth_post = site. posts[3] -%}                        {% if fourth_post. image %}                        &lt;img class= w-100  src= {% if fourth_post. image contains  ://  %}{{ fourth_post. image }}{% else %}{{site. baseurl}}/{{ fourth_post. image }}{% endif %}  alt= {{ fourth_post. title }} &gt;                        {% endif %}                                    {{ fourth_post. title }}          :                       In             {% for category in fourth_post. categories %}            {{ category }},             {% endfor %}                                                      {{ fourth_post. date | date: '%b %d, %Y' }}                                  {% for post in site. posts %} {% if post. tags contains  sticky  %}                    {{post. title}}                  {{ post. excerpt | strip_html | strip_newlines | truncate: 136 }}                 Read More            	             {% endif %}{% endfor %}  {% endif %}                All Stories:         {% for post in paginator. posts %}          {% include main-loop-card. html %}        {% endfor %}                   {% if paginator. total_pages &gt; 1 %}              {% if paginator. previous_page %}        &laquo; Prev       {% else %}        &laquo;       {% endif %}       {% for page in (1. . paginator. total_pages) %}        {% if page == paginator. page %}        {{ page }}        {% elsif page == 1 %}        {{ page }}        {% else %}        {{ page }}        {% endif %}       {% endfor %}       {% if paginator. next_page %}        Next &raquo;       {% else %}        &raquo;       {% endif %}            {% endif %}                     {% include sidebar-featured. html %}      "
     }, {
     "id": 12,
-    "url": "http://localhost:4000/2020/02/retrosprect-of-acl-paper-2020/",
-    "title": "Retrosprect Of Acl Paper 2020",
-    "body": "2020/02/01 -  retrosprect of acl2020 why i didn’t choose cebuano?there was no language choice except google translation. to my fault, i already consult my research, so after i knew the fact i should change the native speaker. in the time i heard there was a political pressure in between LO so i felt i could do nothing in front of unbeatable, untouchable thing that even would never researched. how can i say, meta-discrimination?  music streaming service but, it was not available in korea, and i thought it is discrimination for the first time, but it was not. i realized i was in mood, and got afraid this kind of circumstance make me more blind Retrospect of university lifenow I’m on my flight, about 10 hours, to the munich (technically, it’s on Helsinky)3 months ago, i got rejected to this academy for not that fluent, a year ago I was writing my dissertation paper, on Pycon Korea Committe(contacting someone to plasirism), Semantic Role Label detection competition by Naver &amp; Changwon Univ. There, first time i used npm. did the part time job (python tutoring, 수능 tutor) 2 years ago, I was with bomin, and doing 하청/외주 from W-surgery and got to know il-hyun. He and i still remind that day, that peaceful day, with no worries, just each other. So, why am I here? how could i come to go munich, alone? And, I, still wonder, is this what I want? in my life? am i self-decisive women? "
+    "url": "http://localhost:4000/2020/02/dps-week4/",
+    "title": "Digital Product School week 4",
+    "body": "2020/02/01 - {. center-image;} CONTENT:  AIdeationMondayAIdeation: We first started our week "
     }, {
     "id": 13,
-    "url": "http://localhost:4000/2020/01/dps-week3/",
-    "title": "Retrospective on Digital Product School week 4",
-    "body": "2020/01/23 - assets/images/week4/ "
+    "url": "http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020/",
+    "title": "Retrospectof ACL 2020 paper writing",
+    "body": "2020/01/29 -  retrosprect of acl2020 why i didn’t choose cebuano?there was no language choice except google translation. to my fault, i already consult my research, so after i knew the fact i should change the native speaker. in the time i heard there was a political pressure in between LO so i felt i could do nothing in front of unbeatable, untouchable thing that even would never researched. how can i say, meta-discrimination?  music streaming service but, it was not available in korea, and i thought it is discrimination for the first time, but it was not. i realized i was in mood, and got afraid this kind of circumstance make me more blind Retrospect of university lifenow I’m on my flight, about 10 hours, to the munich (technically, it’s on Helsinky)3 months ago, i got rejected to this academy for not that fluent, a year ago I was writing my dissertation paper, on Pycon Korea Committe(contacting someone to plasirism), Semantic Role Label detection competition by Naver &amp; Changwon Univ. There, first time i used npm. did the part time job (python tutoring, 수능 tutor) 2 years ago, I was with bomin, and doing 하청/외주 from W-surgery and got to know il-hyun. He and i still remind that day, that peaceful day, with no worries, just each other. So, why am I here? how could i come to go munich, alone? And, I, still wonder, is this what I want? in my life? am i self-decisive women? "
     }, {
     "id": 14,
     "url": "http://localhost:4000/2019/12/lesson1-fastai/",
@@ -321,14 +322,16 @@ function lunr_search(term) {
 <div class="container">
 <div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
 		<div class="h-100 tofront">
-			<div class="row  justify-content-center ">
-				<div class=" col-md-8  pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+			<div class="row  justify-content-between ">
+				<div class=" col-md-6  pr-0 pr-md-4 pt-4 pb-4 align-self-center">
 					<p class="text-uppercase font-weight-bold">
                         <span class="catlist">
 						
+                          <a class="sscroll text-danger" href="/categories.html#retrospective">retrospective</a><span class="sep">, </span>
+                        
                         </span>
 					</p>
-					<h1 class="display-4 mb-4 article-headline">Retrosprect Of Acl Paper 2020</h1>
+					<h1 class="display-4 mb-4 article-headline">Digital Product School week 4</h1>
 					<div class="d-flex align-items-center">
                         
 						<small class="ml-3">  <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
@@ -341,6 +344,10 @@ function lunr_search(term) {
     </span>
 						</small>
 					</div>
+				</div>
+                
+				<div class="col-md-6 pr-0 align-self-center">
+					<img class="rounded" src="/assets/images/week4/week4-ourteam.JPG" alt="Digital Product School week 4">
 				</div>
                 
 			</div>
@@ -380,38 +387,23 @@ function lunr_search(term) {
             
             <!-- Article -->
 			<article class="article-post">                
-			<ol>
-  <li>retrosprect of acl2020</li>
-</ol>
+			<p><img src="/assets/images/week4/schedule.png" alt="" />{.center-image;}</p>
 
-<ul>
-  <li>why i didn’t choose cebuano?
-there was no language choice except google translation. to my fault, i already consult my research, so after i knew the fact i should change the native speaker.
-in the time i heard there was a political pressure in between LO so i felt i could do nothing in front of unbeatable, untouchable thing that even would never researched.</li>
-</ul>
+<h2 class="no_toc" id="content">CONTENT</h2>
 
-<p>how can i say, meta-discrimination?</p>
-
-<ul>
-  <li>music streaming service but, it was not available in korea, and i thought it is discrimination for the first time, but it was not. i realized i was in mood, and got afraid this kind of circumstance make me more blind</li>
+<ul id="markdown-toc">
+  <li><a href="#aideation" id="markdown-toc-aideation">AIdeation</a></li>
 </ul>
 
 <hr />
 
-<ol>
-  <li>Retrospect of  university life</li>
-</ol>
+<h1 class="no_toc" id="monday">Monday</h1>
 
-<p>now I’m on my flight, about 10 hours, to the munich (technically, it’s on Helsinky)
-3 months ago, i got rejected to this academy for not that fluent,</p>
+<h2 id="aideation">AIdeation</h2>
 
-<p>a year ago I was writing my dissertation paper, on Pycon Korea Committe(contacting someone to plasirism), Semantic Role Label detection competition by Naver &amp; Changwon Univ. There, first time i used npm. did the part time job (python tutoring, 수능 tutor)</p>
+<p><img src="/assets/images/week4/aideation.JPG" alt="" height="40%" width="40%" class="center-image;" /></p>
 
-<p>2 years ago, I was with bomin, and doing 하청/외주 from W-surgery and got to know il-hyun. He and i still remind that day, that peaceful day, with no worries, just each other.</p>
-
-<p>So, why am I here? how could i come to go munich, alone?</p>
-
-<p>And, I, still wonder, is this what I want? in my life? am i self-decisive women?</p>
+<p>We first started our week</p>
                 
 			</article>
 			
@@ -474,7 +466,7 @@ in the time i heard there was a political pressure in between LO so i felt i cou
         <div class="row prevnextlinks small font-weight-bold">
           
             <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="/2020/01/dps-week3/"> <img height="30px" class="mr-1" src="/assets/images/week4/week4.JPG">  Retrospective on Digital Product School week 4</a>
+                <a class="text-dark" href="/2020/01/retrosprect-of-acl-paper-2020/"> <img height="30px" class="mr-1" src="/assets/images/acl2020.png">  Retrospectof ACL 2020 paper writing</a>
             </div>
           
           

@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Retrospectof ACL 2020 paper writing"
+author: dionne
+categories: [ Retrospective ]
+image: assets/images/acl2020.png
+--- 
+
 1. retrosprect of acl2020
 
 - why i didn't choose cebuano?

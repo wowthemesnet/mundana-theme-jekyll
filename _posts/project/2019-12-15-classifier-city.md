@@ -4,7 +4,7 @@ title: "Making a classifier with gooogle img (Cebu / Munich / Seoul)"
 author: dionne
 categories: [toy-project]
 image: assets/images/munich2.jpg
-tags: [ sticky ]
+tags: [ ]
 ---
 
 Code can be found [here](https://github.com/SpellOnYou/dlff-note/blob/master/toy-project/What_is_your_city_lesson02.ipynb)

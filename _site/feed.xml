@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/articles/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/articles/" rel="alternate" type="text/html" /><updated>2020-01-26T20:52:57+01:00</updated><id>http://localhost:4000/articles/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Fine Grained Classification</title><link href="http://localhost:4000/articles/2019/12/lesson1-fastai/" rel="alternate" type="text/html" title="Fine Grained Classification" /><published>2019-12-31T00:00:00+01:00</published><updated>2019-12-31T00:00:00+01:00</updated><id>http://localhost:4000/articles/2019/12/lesson1-fastai</id><content type="html" xml:base="http://localhost:4000/articles/2019/12/lesson1-fastai/">&lt;p&gt;Finally you can solve the mystery behind this weird drawing.. through this course.&lt;br /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-06T01:53:46+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Retrosprect Of Acl Paper 2020</title><link href="http://localhost:4000/2020/02/retrosprect-of-acl-paper-2020/" rel="alternate" type="text/html" title="Retrosprect Of Acl Paper 2020" /><published>2020-02-01T00:00:00+01:00</published><updated>2020-02-01T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/retrosprect-of-acl-paper-2020</id><content type="html" xml:base="http://localhost:4000/2020/02/retrosprect-of-acl-paper-2020/">&lt;ol&gt;
+  &lt;li&gt;retrosprect of acl2020&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;why i didn’t choose cebuano?
+there was no language choice except google translation. to my fault, i already consult my research, so after i knew the fact i should change the native speaker.
+in the time i heard there was a political pressure in between LO so i felt i could do nothing in front of unbeatable, untouchable thing that even would never researched.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;how can i say, meta-discrimination?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;music streaming service but, it was not available in korea, and i thought it is discrimination for the first time, but it was not. i realized i was in mood, and got afraid this kind of circumstance make me more blind&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Retrospect of  university life&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;now I’m on my flight, about 10 hours, to the munich (technically, it’s on Helsinky)
+3 months ago, i got rejected to this academy for not that fluent,&lt;/p&gt;
+
+&lt;p&gt;a year ago I was writing my dissertation paper, on Pycon Korea Committe(contacting someone to plasirism), Semantic Role Label detection competition by Naver &amp;amp; Changwon Univ. There, first time i used npm. did the part time job (python tutoring, 수능 tutor)&lt;/p&gt;
+
+&lt;p&gt;2 years ago, I was with bomin, and doing 하청/외주 from W-surgery and got to know il-hyun. He and i still remind that day, that peaceful day, with no worries, just each other.&lt;/p&gt;
+
+&lt;p&gt;So, why am I here? how could i come to go munich, alone?&lt;/p&gt;
+
+&lt;p&gt;And, I, still wonder, is this what I want? in my life? am i self-decisive women?&lt;/p&gt;</content><author><name>Dionne</name></author><summary type="html">retrosprect of acl2020</summary></entry><entry><title type="html">Retrospective on Digital Product School week 4</title><link href="http://localhost:4000/2020/01/dps-week3/" rel="alternate" type="text/html" title="Retrospective on Digital Product School week 4" /><published>2020-01-23T00:00:00+01:00</published><updated>2020-01-23T00:00:00+01:00</updated><id>http://localhost:4000/2020/01/dps-week3</id><content type="html" xml:base="http://localhost:4000/2020/01/dps-week3/">&lt;p&gt;assets/images/week4/&lt;/p&gt;</content><author><name>dionne</name></author><summary type="html">assets/images/week4/</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week4/week4.JPG" /></entry><entry><title type="html">Fine Grained Classification</title><link href="http://localhost:4000/2019/12/lesson1-fastai/" rel="alternate" type="text/html" title="Fine Grained Classification" /><published>2019-12-31T00:00:00+01:00</published><updated>2019-12-31T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/lesson1-fastai</id><content type="html" xml:base="http://localhost:4000/2019/12/lesson1-fastai/">&lt;p&gt;Finally you can solve the mystery behind this weird drawing.. through this course.&lt;br /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;juptyer-notebook-magic&quot;&gt;juptyer notebook magic&lt;/h4&gt;
 
@@ -31,164 +62,620 @@ And it is called ‘magics’ (but i think jeremy is magicion)&lt;/p&gt;
 
 &lt;h4 id=&quot;python3-pathlib-library&quot;&gt;Python3 pathlib library!&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/library/pathlib.html&quot;&gt;pathlib&lt;/a&gt;&lt;/p&gt;</content><author><name>dionne</name></author><category term="lesson01" /><summary type="html">Finally you can solve the mystery behind this weird drawing.. through this course.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/articles/assets/images/1-visual-cnn.png" /></entry><entry><title type="html">So, Why Convolution?</title><link href="http://localhost:4000/articles/2019/12/convolution/" rel="alternate" type="text/html" title="So, Why Convolution?" /><published>2019-12-16T00:00:00+01:00</published><updated>2019-12-16T00:00:00+01:00</updated><id>http://localhost:4000/articles/2019/12/convolution</id><content type="html" xml:base="http://localhost:4000/articles/2019/12/convolution/">&lt;p&gt;This is the part of Journey which Jeremy recommended us to do.
-the concepts I have to know.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/library/pathlib.html&quot;&gt;pathlib&lt;/a&gt;&lt;/p&gt;</content><author><name>dionne</name></author><category term="lesson01" /><summary type="html">Finally you can solve the mystery behind this weird drawing.. through this course.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1-visual-cnn.png" /></entry><entry><title type="html">Note01, Note02</title><link href="http://localhost:4000/2019/12/lecture1-note/" rel="alternate" type="text/html" title="Note01, Note02" /><published>2019-12-20T00:00:00+01:00</published><updated>2019-12-20T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/lecture1-note</id><content type="html" xml:base="http://localhost:4000/2019/12/lecture1-note/">&lt;p&gt;Part1 Note 부분 훑어보기~&lt;/p&gt;
 
-&lt;p&gt;1) Kaiming Initializtion in Pytorch was in trouble.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
-2) Jeremy started to dig in, in lesson09, but I didn’t know why the size of tensor is &lt;sup id=&quot;fnref:5x5x5&quot;&gt;&lt;a href=&quot;#fn:5x5x5&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and even understand this spreadsheet data.&lt;sup id=&quot;fnref:conv&quot;&gt;&lt;a href=&quot;#fn:conv&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&quot;note-01&quot;&gt;Note 01&lt;/h2&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;We are focused on solving interesting real-world problems.&lt;/p&gt;
 
-&lt;h4 class=&quot;no_toc&quot; id=&quot;homework&quot;&gt;Homework&lt;/h4&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reload_ext&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;autoreload&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;autoreload&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matplotlib&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inline&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Read &lt;a href=&quot;https://arxiv.org/pdf/1311.2901.pdf&quot;&gt;Visualizing and Understanding Convolutional Networks
-&lt;/a&gt; paper&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#what-is-a-convolution&quot; id=&quot;markdown-toc-what-is-a-convolution&quot;&gt;What is a convolution?&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#visualization&quot; id=&quot;markdown-toc-visualization&quot;&gt;Visualization&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#one-kernel&quot; id=&quot;markdown-toc-one-kernel&quot;&gt;one kernel&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#matthew-d-zeiler--rob-fergus-paper&quot; id=&quot;markdown-toc-matthew-d-zeiler--rob-fergus-paper&quot;&gt;Matthew D Zeiler &amp;amp; Rob Fergus Paper&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#convolution-can-be-represented-as-matmul&quot; id=&quot;markdown-toc-convolution-can-be-represented-as-matmul&quot;&gt;Convolution can be represented as matmul&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#padding&quot; id=&quot;markdown-toc-padding&quot;&gt;Padding&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#kernel-has-rank-3&quot; id=&quot;markdown-toc-kernel-has-rank-3&quot;&gt;Kernel has rank 3&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight&quot; id=&quot;markdown-toc-how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight&quot;&gt;How can we find a side-edge, a gradient and area of constant weight?&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;what-is-a-convolution&quot;&gt;What is a convolution?&lt;/h3&gt;
-
-&lt;p&gt;A convolutional neural network is that your red, green, and blue pixels go into the simple computation, and something comes out of that, and then the result of that goes into a second layer, and the result of that goes into the third layer and so forth.&lt;/p&gt;
-
-&lt;h4 id=&quot;visualization&quot;&gt;Visualization&lt;/h4&gt;
-
-&lt;h5 id=&quot;one-kernel&quot;&gt;one kernel&lt;/h5&gt;
+&lt;p&gt;this is special directives to jupyter notebook, not python code.
+And it is called ‘magics’&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Refer this &lt;a href=&quot;http://setosa.io/ev/image-kernels/&quot;&gt;site&lt;/a&gt; for visualizing CNN filtering&lt;/li&gt;
+  &lt;li&gt;If somebody changes underlying library code while I’m running this, please reload it automatically&lt;/li&gt;
+  &lt;li&gt;If somebody asks to plot something, then please plot it here in this Jupyter Notebook&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&quot;matthew-d-zeiler--rob-fergus-paper&quot;&gt;Matthew D Zeiler &amp;amp; Rob Fergus Paper&lt;/h5&gt;
+&lt;p&gt;&lt;sup id=&quot;fnref:import-star&quot;&gt;&lt;a href=&quot;#fn:import-star&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://youtu.be/BWWm4AzsdLk?t=4588&quot;&gt;Lecture01&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;the plot top losses from last time where we saw the images which it was either the most wrong about or the least confident about.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/cnn-nine.png&quot; alt=&quot;&quot; /&gt;{align-items: center;}&lt;/p&gt;
+&lt;h2 id=&quot;note-02&quot;&gt;Note 02&lt;/h2&gt;
+
+&lt;h3 id=&quot;model-training&quot;&gt;model training&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;np.randon.seed(0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Randomness part is so important, cz you have to always have same validation set.&lt;br /&gt;
+Otherwise, when you somewhat way improved your model and test it through validation, if not the same validation, you don’t know performance improvement was just coincidence. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.fast.ai/2017/11/13/validation-sets/&quot;&gt;How and why to create a good validation set&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;nine examples of the actual coefficients from the &lt;strong&gt;first layer&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Training a Model&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;convolution-can-be-represented-as-matmul&quot;&gt;Convolution can be represented as matmul&lt;/h4&gt;
+&lt;p&gt;After making some progress with my model and things are looking good, you’d better save model, and just go back to do that again.&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://medium.com/impactai/cnns-from-different-viewpoints-fab7f52d159c&quot;&gt;CNNs from different viewpoints&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'model-name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unfreeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lr_find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/cnn-result.png&quot; alt=&quot;&quot; /&gt;{align-items: center;}&lt;/p&gt;
+&lt;p&gt;This learning rate finder, what you are looking for is &lt;strong&gt;the strongest downward slope&lt;/strong&gt; that kind of &lt;strong&gt;sticking around for quite a while&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/cnn-result2.jpg&quot; alt=&quot;&quot; height=&quot;50%&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt; epoch &lt;/td&gt;
+      &lt;td&gt; train_loss &lt;/td&gt;
+      &lt;td&gt; valid_loss &lt;/td&gt;
+      &lt;td&gt; error_rate &lt;/td&gt;
+      &lt;td&gt; time &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;2.334755&lt;/td&gt;
+      &lt;td&gt;1.945266&lt;/td&gt;
+      &lt;td&gt;0.566038&lt;/td&gt;
+      &lt;td&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1.751931&lt;/td&gt;
+      &lt;td&gt;1.366638&lt;/td&gt;
+      &lt;td&gt;0.415094&lt;/td&gt;
+      &lt;td&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;1.527215&lt;/td&gt;
+      &lt;td&gt;1.165065&lt;/td&gt;
+      &lt;td&gt;0.396226&lt;/td&gt;
+      &lt;td&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;1.317051&lt;/td&gt;
+      &lt;td&gt;1.108083&lt;/td&gt;
+      &lt;td&gt;0.339623&lt;/td&gt;
+      &lt;td&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;1) Learning rate too high&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;validation loss is too high&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;epoch&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;train_loss&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;valid_loss&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;error_rate&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;time&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;24.904537&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1184996224.000000&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.638889&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;2) Learning rate too low&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;going sooo slowly&lt;/li&gt;
+  &lt;li&gt;training loss is bigger than valid loss..&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Total time: 00:57&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;epoch&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;train_loss&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;valid_loss&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;error_rate&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;time&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.066052&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.419399&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.657407&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.000881&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.309587&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.583333&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.975891&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.307033&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.611111&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;3&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.971937&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.321390&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.620370&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.989848&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.324367&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.648148&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;3) Too few epochs&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;It looks very similar with too low learning rate. cz train_loss &amp;gt; valid_loss&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;epoch&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;train_loss&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;valid_loss&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;error_rate&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;time&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.971861&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.014095&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.666667&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;4) Too many epochs(Overfitting)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Error starts to getting worse (&lt;del&gt;train_loss is below valid_loss!&lt;/del&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;epoch&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;train_loss&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;valid_loss&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;error_rate&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;time&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.210596&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.382731&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.662551&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:03&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.249473&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.378071&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.664609&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.353912&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.379399&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.681070&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;3&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.380415&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.374326&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.664609&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.434192&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.364526&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.668724&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;5&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.373436&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.344376&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.652263&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;6&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.361475&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.332394&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.658436&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;7&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.320753&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.319983&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.658436&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;8&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.251119&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.319813&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.644033&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;9&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.168801&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.317544&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.639918&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;10&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.093846&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.320713&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.631687&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;11&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.022894&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.326572&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.621399&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;12&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.965844&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.331126&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.613169&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;13&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.912769&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.343037&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.596708&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;14&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.861060&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.345426&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.590535&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;15&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.813022&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.361557&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.588477&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;16&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.767651&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.383104&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.586420&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;17&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.724640&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.393675&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.580247&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;18&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.690126&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.409444&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.572016&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;19&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.653082&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.435116&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.567901&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;20&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.621761&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.462591&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.567901&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;21&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.592183&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.482403&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.561728&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;22&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.565874&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.513805&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.561728&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;23&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.543868&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.524467&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.561728&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;24&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.517352&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.531876&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.551440&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;25&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.494798&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.557277&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.551440&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;26&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.474295&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.572760&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.549383&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;27&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.455998&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.580956&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.553498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;28&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.436313&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.592865&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.553498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;29&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.419034&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.604895&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.549383&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;30&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.402253&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.612062&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.553498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;31&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.389492&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.626179&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.553498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;32&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.374585&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.629149&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.553498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;33&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.361202&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.643487&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.557613&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;34&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.348479&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.648011&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.553498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;35&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.338784&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.657931&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.551440&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;36&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.328609&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.667504&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.551440&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;37&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.317876&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.679011&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.553498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;38&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.307848&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.681451&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.553498&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;39&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.297073&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.676460&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.549383&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;digging-into-the-math&quot;&gt;Digging into the math&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://miro.medium.com/max/1162/1*zY1qFB9aFfZz66YxxoI2aw.gif&quot; alt=&quot;&quot; /&gt; &lt;sup id=&quot;fnref:Adam-Geitgey&quot;&gt;&lt;a href=&quot;#fn:Adam-Geitgey&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;[A B C D E F G H I J] is 3 by 3 image data flatten to vector.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;As a result, convolution is a just matrix just two things happens
+  &lt;li&gt;Predictors are functions of pixel values&lt;/li&gt;
+  &lt;li&gt;To feed an image into our neural network, we simply treat the 18x18 pixel image as an array of 324 numbers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;y = ax + b \\y = a_1x + a_2*1 \\ y = a_1x_1 + a_2*x_2,\ x_2=1&lt;/script&gt;
+
+&lt;p&gt;This is one equation, but in ML, we have lots of equations. For example, if we want to represent the correlation of &lt;em style=&quot;color: red&quot;&gt;the temperature&lt;/em&gt; versus &lt;em style=&quot;color: red&quot;&gt;the number of ice creams sold&lt;/em&gt;, we have lots of dots.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/1-part-dots.png&quot; alt=&quot;&quot; height=&quot;60%&quot; width=&quot;60%&quot; style=&quot;vertical-align:middle&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Each one of dots, hypothesis can be based on this formula : &lt;script type=&quot;math/tex&quot;&gt;y_i = a_1x_{i,1} + a_2x_{i,2}.&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/1-part-lines.png&quot; alt=&quot;&quot; height=&quot;60%&quot; width=&quot;60%&quot; style=&quot;vertical-align:middle&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s view in matrix. &lt;br /&gt;
+If this is multi-classification problem(ex: MNIST), a matrix &lt;strong style=&quot;color: blue&quot;&gt;(2, 28)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/1-part-matrix.png&quot; alt=&quot;&quot; height=&quot;60%&quot; width=&quot;60%&quot; style=&quot;vertical-align:middle&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But why we represent &lt;script type=&quot;math/tex&quot;&gt;y = ax + b&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;y_i = a_1x_{i,1} + a_2x_{i,2}&lt;/script&gt;??&lt;br /&gt;
+dot product{: style=”color blue”} : But what you might remember from school is that when you’ve got two things being multiplied together, two things being multiplied together, then they get added up. &lt;sup id=&quot;fnref:today-word&quot;&gt;&lt;a href=&quot;#fn:today-word&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;If you do that for lots and lots of different numbers i, then that’s called a matrix product. So in fact, this whole thing can be written like this:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec y = X \vec a&lt;/script&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/1-part-vector.png&quot; alt=&quot;&quot; height=&quot;80%&quot; width=&quot;80%&quot; style=&quot;vertical-align:middle&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;※ We can easily understand through this why people tarnspose coefficient.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/1-part-i_k.png&quot; alt=&quot;&quot; height=&quot;80%&quot; width=&quot;80%&quot; style=&quot;vertical-align:middle&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question01&lt;/strong&gt;: Can we have a definition of the error rate being discussed and how it is calculated? I assume it’s cross validation error &lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;error_rate&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;??&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;and look at the source code, and it’s 1 - accuracy.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;accuracy??
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It is argmax.&lt;br /&gt; So we now know that means find out which particular thing it is,&lt;br /&gt;and then look at how often that equals the target (i.e. the actual value) and take the mean.&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;what does that being applied to and always in fastai, metrics (i.e. the things that we pass in)?
     &lt;ul&gt;
-      &lt;li&gt;Some of entries are set to zeros at all the times&lt;/li&gt;
-      &lt;li&gt;same color always have the same weight. That called &lt;strong&gt;weight time / wegith sharing&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;validation set.&lt;/li&gt;
+      &lt;li&gt;Any time you put a metric here, it’ll be applied to the validation set because that’s your best practice:&lt;/li&gt;
+      &lt;li&gt;make sure that you’re checking your performance on data that your model hasn’t see&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;So, we can implement a convolution with matrix multiplication. But, we don’t do that because it’s slow!&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;padding&quot;&gt;Padding&lt;/h4&gt;
+&lt;p&gt;viewing source code in Ipynotebook source code(in github)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;doc(accuracy)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Question02&lt;/strong&gt;: Why were you using 3e for your learning rates earlier? With 3e-5 and 3e-4 [59:11]?&lt;br /&gt;
+(1) We found that 3e-3 is just a really &lt;em&gt;good default learning rate&lt;/em&gt;. It works most of the time for &lt;em&gt;your initial fine-tuning&lt;/em&gt; before you &lt;strong&gt;unfreeze&lt;/strong&gt;. &lt;br /&gt; (And then, I tend to kind of just multiply from there.) &lt;br /&gt; (2) So then the next stage, I will pick 10 times lower than that for the &lt;em&gt;second part&lt;/em&gt; of the slice, and &lt;em&gt;whatever the LR finder found&lt;/em&gt; for the first part of the slice. (The second part of the slice doesn’t come from the LR finder. It’s just a rule of thumb which is 10 times less than your first part which defaults to 3e-3, and then the first part of the slice is what comes out of the LR finder.)&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ll be learning a lot more about these learning rate details both today and in the coming lessons.&lt;br /&gt; ★ But for now, all you need to remember is that your basic approach looks like this:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;What most of libraries do is just put zeros asdie of matrix&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/padding2.png&quot; alt=&quot;&quot; height=&quot;50%&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/padding.png&quot; alt=&quot;&quot; height=&quot;60%&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;fast.ai uses reflection paddings (what is this? Jeremy said he uttered it)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;kernel-has-rank-3&quot;&gt;Kernel has rank 3&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;As standard picture input would be &lt;sup id=&quot;fnref:RGB&quot;&gt;&lt;a href=&quot;#fn:RGB&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;, it would be actually 3d, not 2d.&lt;/li&gt;
-  &lt;li&gt;If we make kernel as a 3x3 size, we pass over same kernel all the different Red, Green, Blue Pixels.
+  &lt;li&gt;learn.fit_one_cycle
     &lt;ul&gt;
-      &lt;li&gt;This could make problem, because, if we want to detect frog, which is green, we would want more activations on the green(I made a test cell in my colab &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;)&lt;/li&gt;
+      &lt;li&gt;Some number of epochs, I often pick 4&lt;/li&gt;
+      &lt;li&gt;Some learning rate which defaults to 3e-3.( )I’ll just type it up fully so you can see.)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;Then we unfreeze it.&lt;/li&gt;
+  &lt;li&gt;Then we learn some more.&lt;/li&gt;
+  &lt;li&gt;And so this is a bit where I just take whatever I did last time and divide it by 10.[stop_rl]&lt;/li&gt;
+  &lt;li&gt;Then I also write &lt;code class=&quot;highlighter-rouge&quot;&gt;slice&lt;/code&gt; then I have to put one more number in here and that’s the number I get from the learning rate finder a bit where it’s got the strongest slope.[start_rl]&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight&quot;&gt;How can we find a side-edge, a gradient and area of constant weight?&lt;/h4&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit_one_cycle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3e-4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+    &lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unfreeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Not top-edge!&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;learn.fit_one_cycle(4, slice(xxx, 3e-3))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;p&gt;slice(xxx[start_rl]:from find_rl , 3e-4  [stop_rl]: 0.003 % 10)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question03&lt;/strong&gt;: When generating new image dataset, how do you know how many images are enough? What are ways to measure “enough”?&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Great question. Another possible problem you have is you don’t have enough data. How do you know if you don’t have enough data? Because you found a good learning rate (i.e. if you make it higher than it goes off into massive losses; if you make it lower, it goes really slowly) and then you train for such a long time that your error starts getting worse. So you know that you trained for long enough. And you’re still not happy with the accuracy it’s not good enough for the teddy bear cuddling level of safety you want. So if that happens, there’s a number of things you can do and we’ll learn pretty much all of them during this course but one of the easiest one is get more data. If you get more data, then you can train for longer, get a higher accuracy, lower error rate, without overfitting.
+Unfortunately there is no shortcut. I wish there was. I wish there’s some way to know ahead of time how much data you need. But I will say this most of the time, you need less data than you think. So organizations very commonly spend too much time gathering data, getting more data than it turned out they actually needed. So get a small amount first and see how you go.&lt;/p&gt;
+
+&lt;h4 id=&quot;questions&quot;&gt;Questions&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;One kernel can find only the top-edge, so we should stack the kernels &lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-  &lt;li&gt;So, we pass it through bunch of kernels to the input images, and that process gives us height x width x corresponding number of kernels.&lt;/li&gt;
+  &lt;li&gt;what is unfreeze?&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/aassets/images/tensors.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Usually that number of chanel is 16&lt;/li&gt;
-  &lt;li&gt;And if we want to get the more channels and features, we should repeat that process
-    &lt;ul&gt;
-      &lt;li&gt;This process gives rise to memory out of control, we do the &lt;strong&gt;stride&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=V2h3IOBDvrA&quot;&gt;conv-example.xlsx&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;2 convolutional filters&lt;/li&gt;
-  &lt;li&gt;At a second layer, filter is 3x3x2 tensor, because to add up together the first layer’s channel.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!-- Actually, what I wanted to know part :  --&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 class=&quot;no_toc&quot; id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Problem was &lt;em&gt;math.sqrt(5)&lt;/em&gt; was not kaiming initialization formula, &lt;a href=&quot;https://github.com/pytorch/pytorch/blob/3df79f403e8b9621d5adb0447266becd10d633b0/torch/nn/modules/linear.py#L58-L63&quot;&gt;Implementation in Pytorch&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:import-star&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/why-import-star-in-python-is-a-bad-idea&quot;&gt;why-import-star-in-python-is-a-bad-idea&lt;/a&gt; &lt;a href=&quot;#fnref:import-star&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
-    &lt;li id=&quot;fn:5x5x5&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://youtu.be/AcA8HAYh7IE?list=PLBRuZVGXwM3l2HesxBCrvwYacG1AWrVmM&amp;amp;t=251&quot;&gt;size of tensor, lecture09&lt;/a&gt; &lt;a href=&quot;#fnref:5x5x5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:Adam-Geitgey&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721&quot;&gt;Deep learning and CNN&lt;/a&gt; &lt;a href=&quot;#fnref:Adam-Geitgey&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
-    &lt;li id=&quot;fn:conv&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://github.com/fastai/course-v3/blob/bc034b471d839bdf5bc72bd7fec1061fac648ccd/files/xl/conv-example.xlsx&quot;&gt;conv-example.xlsx&lt;/a&gt; &lt;a href=&quot;#fnref:conv&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:RGB&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://www.quora.com/Why-do-computers-use-red-green-and-blue-instead-of-the-primary-colors&quot;&gt;Why do computer use red, green and blue instead of primary colors&lt;/a&gt; &lt;a href=&quot;#fnref:RGB&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;Grayscale is a group of shades without any visible color. … Each of these dots has its own brightness level as well and, therefore, can be converted to grayscale. A grayscale image is one with all color information removed. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://brohrer.github.io/convert_rgb_to_grayscale.html&quot;&gt;Testing RGB and grayscale&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:5&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://youtu.be/hkBa9pU-H48?t=4937&quot;&gt;stack kernel and make new rank of tensor at output, Lesson06-2019&lt;/a&gt; &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:today-word&quot;&gt;
+      &lt;p&gt;But more to the point right now, it’s going to make life much easier. Because I hate writing loops, I hate writing code, I just want the computer to do everything for me. And anytime you see this little i subscripts, that sounds like you’re going to have to do loops and all kind of stuff. &lt;a href=&quot;#fnref:today-word&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="self-studys" /><summary type="html">This is the part of Journey which Jeremy recommended us to do. the concepts I have to know.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/articles/assets/images/cnn-jiwon.png" /></entry><entry><title type="html">So, Why Convolution?</title><link href="http://localhost:4000/articles/2019/12/convolution/" rel="alternate" type="text/html" title="So, Why Convolution?" /><published>2019-12-16T00:00:00+01:00</published><updated>2019-12-16T00:00:00+01:00</updated><id>http://localhost:4000/articles/2019/12/convolution</id><content type="html" xml:base="http://localhost:4000/articles/2019/12/convolution/">&lt;p&gt;This is the part of Journey which Jeremy recommended us to do.
+&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">Part1 Note 부분 훑어보기~</summary></entry><entry><title type="html">So, Why Convolution?</title><link href="http://localhost:4000/2019/12/convolution/" rel="alternate" type="text/html" title="So, Why Convolution?" /><published>2019-12-16T00:00:00+01:00</published><updated>2019-12-16T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/convolution</id><content type="html" xml:base="http://localhost:4000/2019/12/convolution/">&lt;p&gt;This is the part of Journey which Jeremy recommended us to do.
 One of the concepts I have to know.&lt;/p&gt;
 
 &lt;p&gt;1) Kaiming Initializtion in Pytorch was in trouble.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
@@ -345,38 +832,7 @@ One of the concepts I have to know.&lt;/p&gt;
       &lt;p&gt;&lt;a href=&quot;https://youtu.be/hkBa9pU-H48?t=4937&quot;&gt;stack kernel and make new rank of tensor at output, Lesson06-2019&lt;/a&gt; &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><summary type="html">This is the part of Journey which Jeremy recommended us to do. One of the concepts I have to know.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/articles/assets/images/cnn-jiwon.png" /></entry><entry><title type="html">Jeremy Howard</title><link href="http://localhost:4000/articles/2019/12/jeremy-howard/" rel="alternate" type="text/html" title="Jeremy Howard" /><published>2019-12-15T00:00:00+01:00</published><updated>2019-12-15T00:00:00+01:00</updated><id>http://localhost:4000/articles/2019/12/jeremy-howard</id><content type="html" xml:base="http://localhost:4000/articles/2019/12/jeremy-howard/">&lt;p&gt;How he impacted me?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;The person who made me start Computer Vision again. He said, “It’s not just something I can throw away. NLP and computer vision a few weeks apart and that’s going to force your brain to realize like ‘oh I have to remember this’”&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;“Keep going.  You’re not expected to remember everything. Yet.  You’re not expected to understand everything. Yet. You’re not expected to know why everything works.  Yet.”&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;His articles are numerous, below.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://pytorch.org/tutorials/beginner/nn_tutorial.html&quot;&gt;What is torch.nn Really?&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.fast.ai/2019/01/10/swift-numerics/&quot;&gt;High Performance Numeric Programming with Swift: Explorations and Reflections&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.fast.ai/2019/01/13/swift-random/&quot;&gt;C++11, random distributions, and Swift&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;And especially, I like this book. &lt;a href=&quot;https://www.oreilly.com/radar/drivetrain-approach-data-products/&quot;&gt;Designing great data products&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Great predictive modeling is an important part of the solution, but it no longer stands on its own; as products become more sophisticated, it disappears into the plumbing.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p style=&quot;color:gray; font-size: 90%; text-align: right;&quot;&gt;Designing great data products&lt;/p&gt;
-
-&lt;p&gt;And he is also famous for words. Here are some.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;we’re going to try and use that to really understand what’s going on. So to warn you, none of it is rocket science but a lot of its going to look really new. So don’t expect to get it the first time but expect to listen and jump into the notebook try a few things test things out look particularly at like tensor shapes and inputs and outputs to check your understanding then go back and listen again. But and kind of try it, a few times, because you will get there right, it’s just that there’s going to be a lot of new concepts because we haven’t done that much stuff in pure Pytorch.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p style=&quot;color:gray; font-size: 90%; text-align: right;&quot;&gt;Lesson 6: Deep Learning 2019&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">How he impacted me?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/articles/assets/images/jeremy-howard.jpeg" /></entry><entry><title type="html">Making a classifier with gooogle img (Cebu / Munich / Seoul)</title><link href="http://localhost:4000/articles/2019/12/project-classifier-Munich/" rel="alternate" type="text/html" title="Making a classifier with gooogle img (Cebu / Munich / Seoul)" /><published>2019-12-14T00:00:00+01:00</published><updated>2019-12-14T00:00:00+01:00</updated><id>http://localhost:4000/articles/2019/12/%5Bproject%5D-classifier-Munich</id><content type="html" xml:base="http://localhost:4000/articles/2019/12/project-classifier-Munich/">&lt;p&gt;Code can be found &lt;a href=&quot;https://github.com/SpellOnYou/dlff-note/blob/master/nbs/dl1/lesson2_download_practice.ipynb&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><summary type="html">This is the part of Journey which Jeremy recommended us to do. One of the concepts I have to know.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn-jiwon.png" /></entry><entry><title type="html">Making a classifier with gooogle img (Cebu / Munich / Seoul)</title><link href="http://localhost:4000/2019/12/classifier-city/" rel="alternate" type="text/html" title="Making a classifier with gooogle img (Cebu / Munich / Seoul)" /><published>2019-12-15T00:00:00+01:00</published><updated>2019-12-15T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/classifier-city</id><content type="html" xml:base="http://localhost:4000/2019/12/classifier-city/">&lt;p&gt;Code can be found &lt;a href=&quot;https://github.com/SpellOnYou/dlff-note/blob/master/toy-project/What_is_your_city_lesson02.ipynb&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Making a classifier which can distinguish &lt;span style=&quot;color: red&quot;&gt;Seoul&lt;/span&gt; from &lt;span style=&quot;color: red&quot;&gt;Munich&lt;/span&gt; and &lt;span style=&quot;color: red&quot;&gt;Cebu&lt;/span&gt;!
 (hoping my well in Munich!🤟, and I love Cebu)&lt;/p&gt;
@@ -593,7 +1049,38 @@ Uisng model: &lt;strong&gt;restnet34&lt;/strong&gt; &lt;sup id=&quot;fnref:2&quo
       &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Accuracy_and_precision&quot;&gt;Accuracy_and_precision&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><summary type="html">Code can be found here</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/articles/assets/images/munich2.jpg" /></entry><entry><title type="html">Pytorch</title><link href="http://localhost:4000/articles/2019/12/pytorch-tensor/" rel="alternate" type="text/html" title="Pytorch" /><published>2019-12-12T00:00:00+01:00</published><updated>2019-12-12T00:00:00+01:00</updated><id>http://localhost:4000/articles/2019/12/pytorch-tensor</id><content type="html" xml:base="http://localhost:4000/articles/2019/12/pytorch-tensor/">&lt;ul&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><summary type="html">Code can be found here</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/munich2.jpg" /></entry><entry><title type="html">Jeremy Howard</title><link href="http://localhost:4000/2019/12/jeremy-howard/" rel="alternate" type="text/html" title="Jeremy Howard" /><published>2019-12-15T00:00:00+01:00</published><updated>2019-12-15T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/jeremy-howard</id><content type="html" xml:base="http://localhost:4000/2019/12/jeremy-howard/">&lt;p&gt;How he impacted me?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;The person who made me start Computer Vision again. He said, “It’s not just something I can throw away. NLP and computer vision a few weeks apart and that’s going to force your brain to realize like ‘oh I have to remember this’”&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;“Keep going.  You’re not expected to remember everything. Yet.  You’re not expected to understand everything. Yet. You’re not expected to know why everything works.  Yet.”&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;His articles are numerous, below.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://pytorch.org/tutorials/beginner/nn_tutorial.html&quot;&gt;What is torch.nn Really?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.fast.ai/2019/01/10/swift-numerics/&quot;&gt;High Performance Numeric Programming with Swift: Explorations and Reflections&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.fast.ai/2019/01/13/swift-random/&quot;&gt;C++11, random distributions, and Swift&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;And especially, I like this book. &lt;a href=&quot;https://www.oreilly.com/radar/drivetrain-approach-data-products/&quot;&gt;Designing great data products&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Great predictive modeling is an important part of the solution, but it no longer stands on its own; as products become more sophisticated, it disappears into the plumbing.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p style=&quot;color:gray; font-size: 90%; text-align: right;&quot;&gt;Designing great data products&lt;/p&gt;
+
+&lt;p&gt;And he is also famous for words. Here are some.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;we’re going to try and use that to really understand what’s going on. So to warn you, none of it is rocket science but a lot of its going to look really new. So don’t expect to get it the first time but expect to listen and jump into the notebook try a few things test things out look particularly at like tensor shapes and inputs and outputs to check your understanding then go back and listen again. But and kind of try it, a few times, because you will get there right, it’s just that there’s going to be a lot of new concepts because we haven’t done that much stuff in pure Pytorch.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p style=&quot;color:gray; font-size: 90%; text-align: right;&quot;&gt;Lesson 6: Deep Learning 2019&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">How he impacted me?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/jeremy-howard.jpeg" /></entry><entry><title type="html">Pytorch</title><link href="http://localhost:4000/2019/12/pytorch-tensor/" rel="alternate" type="text/html" title="Pytorch" /><published>2019-12-12T00:00:00+01:00</published><updated>2019-12-12T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/pytorch-tensor</id><content type="html" xml:base="http://localhost:4000/2019/12/pytorch-tensor/">&lt;ul&gt;
   &lt;li&gt;This is the list when I type&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1087,7 +1574,7 @@ check clamp&lt;/p&gt;
 ‘view’:
 ‘view_as’:
 ‘where’:
-‘zero_’&lt;/p&gt;</content><author><name>dionne</name></author><summary type="html">This is the list when I type</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/articles/assets/images/pytorch.png" /></entry><entry><title type="html">Gradient backward, Chain Rule, Refactoring</title><link href="http://localhost:4000/articles/2019/11/l8-note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward, Chain Rule, Refactoring" /><published>2019-11-26T00:00:00+01:00</published><updated>2019-11-26T00:00:00+01:00</updated><id>http://localhost:4000/articles/2019/11/l8-note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/articles/2019/11/l8-note08-fastai-4/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
+‘zero_’&lt;/p&gt;</content><author><name>dionne</name></author><summary type="html">This is the list when I type</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/pytorch.png" /></entry><entry><title type="html">Gradient backward, Chain Rule, Refactoring</title><link href="http://localhost:4000/2019/11/l8-note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward, Chain Rule, Refactoring" /><published>2019-11-26T00:00:00+01:00</published><updated>2019-11-26T00:00:00+01:00</updated><id>http://localhost:4000/2019/11/l8-note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2019/11/l8-note08-fastai-4/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
 
 &lt;h3 class=&quot;no_toc&quot; id=&quot;homework&quot;&gt;Homework&lt;/h3&gt;
 
@@ -1547,7 +2034,7 @@ def backward(self):
       &lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/34439/finding-what-methods-a-python-object-has/34452#34452&quot;&gt;stackoverflow - finding methods a object has&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/articles/assets/images/4-backward.png" /></entry><entry><title type="html">ReLU and data init with normailized data</title><link href="http://localhost:4000/articles/2019/11/l8-note08-fastai-3/" rel="alternate" type="text/html" title="ReLU and data init with normailized data" /><published>2019-11-23T00:00:00+01:00</published><updated>2019-11-23T00:00:00+01:00</updated><id>http://localhost:4000/articles/2019/11/l8-note08-fastai-3</id><content type="html" xml:base="http://localhost:4000/articles/2019/11/l8-note08-fastai-3/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/4-backward.png" /></entry><entry><title type="html">ReLU and data init with normailized data</title><link href="http://localhost:4000/2019/11/l8-note08-fastai-3/" rel="alternate" type="text/html" title="ReLU and data init with normailized data" /><published>2019-11-23T00:00:00+01:00</published><updated>2019-11-23T00:00:00+01:00</updated><id>http://localhost:4000/2019/11/l8-note08-fastai-3</id><content type="html" xml:base="http://localhost:4000/2019/11/l8-note08-fastai-3/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
 
 &lt;h3 class=&quot;no_toc&quot; id=&quot;homework&quot;&gt;Homework&lt;/h3&gt;
 
@@ -1858,341 +2345,4 @@ def backward(self):
       &lt;p&gt;&lt;a href=&quot;https://discuss.pytorch.org/t/why-the-default-negative-slope-for-kaiming-uniform-initialization-of-convolution-and-linear-layers-is-5/29290&quot;&gt;Pytorch kaiming init explained&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/articles/assets/images/2-relu.png" /></entry><entry><title type="html">Broadcasting, Einstein sum, Pytorch operator</title><link href="http://localhost:4000/articles/2019/11/l8-note08-fastai-2/" rel="alternate" type="text/html" title="Broadcasting, Einstein sum, Pytorch operator" /><published>2019-11-21T00:00:00+01:00</published><updated>2019-11-21T00:00:00+01:00</updated><id>http://localhost:4000/articles/2019/11/l8-note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/articles/2019/11/l8-note08-fastai-2/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
-
-&lt;h3 class=&quot;no_toc&quot; id=&quot;time-comparison-with-pure-python&quot;&gt;Time comparison with pure Python&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Matmul with broadcasting&lt;br /&gt;
-&amp;gt; 3194.95 times faster&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Einstein summation&lt;br /&gt;
-&amp;gt; 16090.91 times faster&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Pytorch’s operator&lt;br /&gt;
-&amp;gt; 49166.67 times faster&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 class=&quot;no_toc&quot; id=&quot;homework&quot;&gt;Homework&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Frobenius Norm Review&lt;/li&gt;
-  &lt;li&gt;Broadcasting Review (especially &lt;em&gt;&lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.13.0/user/basics.broadcasting.html#general-broadcasting-rules&quot;&gt;Rule&lt;/a&gt;&lt;/em&gt;)
-    &lt;ul&gt;
-      &lt;li&gt;Refer &lt;a href=&quot;https://render.githubusercontent.com/view/ipynb?commit=2bfe4a95aac864b23bd0c0729d2720c92e169f8c&amp;amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f5370656c6c4f6e596f752f646c66662d6e6f74652f326266653461393561616338363462323362643063303732396432373230633932653136396638632f6e62732f646c322f30315f6d61746d756c5f70726163746963652e6970796e62&amp;amp;nwo=SpellOnYou%2Fdlff-note&amp;amp;path=nbs%2Fdl2%2F01_matmul_practice.ipynb&amp;amp;repository_id=221963162&amp;amp;repository_type=Repository#Broadcasting&quot;&gt;colab!&lt;/a&gt; (I totally confused with extension of arrays)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;torch.allclose Review&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.scipy.org/doc/numpy/reference/generated/numpy.einsum.html&quot;&gt;np.einsum Review&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h3&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#1-elementwise-op&quot; id=&quot;markdown-toc-1-elementwise-op&quot;&gt;1. Elementwise op&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#11-frobenius-norm&quot; id=&quot;markdown-toc-11-frobenius-norm&quot;&gt;1.1 Frobenius norm&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#2-elementwise-matmul&quot; id=&quot;markdown-toc-2-elementwise-matmul&quot;&gt;2. Elementwise Matmul&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#3-broadcasting&quot; id=&quot;markdown-toc-3-broadcasting&quot;&gt;3. Broadcasting&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#22-matmul-with-broadcasting&quot; id=&quot;markdown-toc-22-matmul-with-broadcasting&quot;&gt;2.2 Matmul with broadcasting&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#23-broadcasting-rules&quot; id=&quot;markdown-toc-23-broadcasting-rules&quot;&gt;2.3 Broadcasting Rules&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#3-einstein-summation&quot; id=&quot;markdown-toc-3-einstein-summation&quot;&gt;3. Einstein summation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#4-pytorch-op&quot; id=&quot;markdown-toc-4-pytorch-op&quot;&gt;4. Pytorch op&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#but-before-that-we-need-initialized-parameters-and-relu&quot; id=&quot;markdown-toc-but-before-that-we-need-initialized-parameters-and-relu&quot;&gt;But before that, we need initialized parameters and ReLU,&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#footnote&quot; id=&quot;markdown-toc-footnote&quot;&gt;Footnote&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;1-elementwise-op&quot;&gt;1. Elementwise op&lt;/h3&gt;
-
-&lt;h4 id=&quot;11-frobenius-norm&quot;&gt;1.1 Frobenius norm&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/7.png&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;above converted into &lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Plus, don’t suffer from mathmatical symbols. He also copy and paste that equations from wikipedia.&lt;/li&gt;
-  &lt;li&gt;and if you need latex form, download it from archive.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;2-elementwise-matmul&quot;&gt;2. Elementwise Matmul&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What is the meaning of elementwise?&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We do not calculate each component. But all of the component at once. Because, length of column of A and row of B are fixed.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;How much time we saved?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;So now that takes 1.37ms. We have removed one line of code and it is a 178 times faster…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;#TODO
-I don’t know where the &lt;code class=&quot;highlighter-rouge&quot;&gt;5&lt;/code&gt; from. but keep it.
-Maybe this is related with frobenius norm…?
-as a result, &lt;strong&gt;the code before&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;the code after&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;To compare it (result betweet &lt;em&gt;original&lt;/em&gt; and &lt;em&gt;adjusted&lt;/em&gt; version) we use not test_eq but other function. The reason for this is that due to rounding errors from math operations, matrices may not be exactly the same. As a result, we want a function that will “is a equal to b &lt;strong&gt;within some tolerance&lt;/strong&gt;”&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;#export
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;near&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; 
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;allclose&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rtol&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1e-3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;atol&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1e-5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_near&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; 
-    &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;near&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;test_near&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matmul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;3-broadcasting&quot;&gt;3. Broadcasting&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Now, we will use the broadcasting and remove&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;How it works?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-          &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-          &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,])&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
-    
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]),&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
-         
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&amp;lt;Figure 2&amp;gt; demonstrated how array &lt;strong&gt;b&lt;/strong&gt; is broadcasting(or copied but not occupy memory) to compatible with &lt;strong&gt;a&lt;/strong&gt;. &lt;em&gt;Refered from &lt;a href=&quot;https://www.tutorialspoint.com/numpy/numpy_broadcasting.htm&quot;&gt;numpy_tutorial&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;there is no loop, but it seems there is exactly the loop.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;This is not from jeremy (actually after a moment he cover it) but i wondered How to broadcast an array by columns?&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;tensor([[11, 11, 11],
-        [22, 22, 22],
-        [33, 33, 33]])&lt;/em&gt;s&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What is tensor.stride()?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;help&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stride&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;Help on built-in function stride:&lt;br /&gt;
-    stride(…) method of torch.&lt;br /&gt;
-Tensor instance&lt;br /&gt;
-stride(dim) -&amp;gt; tuple or int&lt;br /&gt;
-Returns the stride of :attr:’self’ tensor.&lt;br /&gt;
-Stride is the jump necessary to go from one element to the next one in the specified dimension :attr:’dim’.&lt;br /&gt;
-A tuple of all strides is returned when no argument is passed in.&lt;br /&gt;
-Otherwise, an integer value is returned as the stride in the particular dimension :attr:’dim’.&lt;br /&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Args:
-    dim (int, optional): the desired dimension in which stride is required
-Example::*&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stride&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stride&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stride&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;unsqueeze &amp;amp; None index&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;We can manipulate rank of tensor&lt;/li&gt;
-  &lt;li&gt;Special value ‘None’, which means please squeeze a new axis here&lt;br /&gt;
-&lt;strong&gt;== please broadcast here&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;in c, &lt;em&gt;squeeze a new axis in here please.&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;22-matmul-with-broadcasting&quot;&gt;2.2 Matmul with broadcasting&lt;/h4&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#   c[i,j] = (a[i,:]).          *[:,j].sum() #previous
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unsqueeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;And Using &lt;code class=&quot;highlighter-rouge&quot;&gt;None&lt;/code&gt; also (As howard teached)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unsqueeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#howard
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][:,&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# using None
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:,&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;⭐️Tips🌟  &lt;br /&gt;
-1) &lt;em&gt;Anytime there’s a trailinng(final) colon in numpy or pytorch you can delete it&lt;/em&gt;
-  &lt;em&gt;ex) c[i, :] = c [i]&lt;/em&gt;
-2) any number of colon commas at the start, you can switch it with the single elipsis.
-  &lt;em&gt;ex) c[:,:,:,:,i] = c […,i]&lt;/em&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;23-broadcasting-rules&quot;&gt;2.3 Broadcasting Rules&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What if we &lt;code class=&quot;highlighter-rouge&quot;&gt;tensor.size([1,3]) * tensor.size([3,1])&lt;/code&gt;?
-    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;What is scale????&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;What if they are one array is &lt;code class=&quot;highlighter-rouge&quot;&gt;times&lt;/code&gt; of the other array?
- &lt;br /&gt; ex) 
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Image : 256 x 256 x 3&lt;/code&gt;&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Scale : 128 x 256 x 3&lt;/code&gt;&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Result: ?&lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Why I did not inserted axis via None, but happened broadcasting? &lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;100.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;200.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;300.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;200.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;400.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;600.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;300.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;600.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;900.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;maybe it broadcast cz following array has 3 rows&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;as same principle, no matter what nature shape was, &lt;em&gt;if we do the operation&lt;/em&gt; tensor broadcasts to the other.&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
-
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
-
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;3-einstein-summation&quot;&gt;3. Einstein summation&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/this-is-einsum.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Creates batch-wise, remove inner most loop, and replaced it with an elementwise product
-a.k.a&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;inner most loop&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;elementwise product&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Because K is repeated so we do a dot product. And it is torch.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Usage of &lt;a href=&quot;https://pytorch.org/docs/stable/torch.html#torch.einsum&quot;&gt;einsum()&lt;/a&gt;
-1) transpose
-2) diagnalisation tracing
-3) batch-wise (matmul)&lt;/p&gt;
-
-&lt;p&gt;…&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;einstein summation notation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;matmul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;einsum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'ik,kj-&amp;gt;ij'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;so after all, we are now 16000 times faster than Python.&lt;/p&gt;
-
-&lt;h3 id=&quot;4-pytorch-op&quot;&gt;4. Pytorch op&lt;/h3&gt;
-
-&lt;p&gt;49166.67 times faster than pure python&lt;/p&gt;
-
-&lt;p&gt;And we will use this matrix multiplication in Fully Connect forward, with some initialized parameters and ReLU.&lt;/p&gt;
-
-&lt;h2 id=&quot;but-before-that-we-need-initialized-parameters-and-relu&quot;&gt;But before that, we need initialized parameters and ReLU,&lt;/h2&gt;
-
-&lt;h4 id=&quot;footnote&quot;&gt;Footnote&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://mathworld.wolfram.com/TensorRank.html&quot;&gt;TensorRank&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://forums.fast.ai/t/forum-markdown-notes-lesson-8/41896&quot;&gt;ti note&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/articles/assets/images/30.png" /></entry><entry><title type="html">Julia Evans</title><link href="http://localhost:4000/articles/2019/11/julia-evans/" rel="alternate" type="text/html" title="Julia Evans" /><published>2019-11-20T00:00:00+01:00</published><updated>2019-11-20T00:00:00+01:00</updated><id>http://localhost:4000/articles/2019/11/julia-evans</id><content type="html" xml:base="http://localhost:4000/articles/2019/11/julia-evans/">&lt;p&gt;The women who surprised me in many ways.&lt;br /&gt;
-First, she approached me to teaching some concepts drawing cartoons.&lt;br /&gt;
-It was at Hackers news, which was hightest ranks.&lt;br /&gt;
-Personally I have the use of not to reading title, so and cartoon was so cute and clear.&lt;br /&gt;
-I naturally gonna understood mechanism and astonished by her explaination ability.&lt;br /&gt;
-Her value, which she was taught by many people so want to do same things, moved me.&lt;br /&gt;
-Volume of her knowledge, that just reading post title is a deal of work, amazed me.&lt;br /&gt;&lt;/p&gt;
-
-&lt;!-- neural network부터, 엄청 많은 도메인.  --&gt;</content><author><name>dionne</name></author><summary type="html">The women who surprised me in many ways. First, she approached me to teaching some concepts drawing cartoons. It was at Hackers news, which was hightest ranks. Personally I have the use of not to reading title, so and cartoon was so cute and clear. I naturally gonna understood mechanism and astonished by her explaination ability. Her value, which she was taught by many people so want to do same things, moved me. Volume of her knowledge, that just reading post title is a deal of work, amazed me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/articles/assets/images/evans.jpg" /></entry></feed>
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/2-relu.png" /></entry></feed>

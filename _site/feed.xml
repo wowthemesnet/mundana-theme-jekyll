@@ -1,20 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-06T06:27:04+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Digital Product School week 4</title><link href="http://localhost:4000/2020/02/dps-week4/" rel="alternate" type="text/html" title="Digital Product School week 4" /><published>2020-02-01T00:00:00+01:00</published><updated>2020-02-01T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week4</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week4/">&lt;p&gt;&lt;img src=&quot;/assets/images/week4/schedule.png&quot; alt=&quot;&quot; /&gt;{.center-image;}&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-06T07:47:32+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Digital Product School week 4</title><link href="http://localhost:4000/2020/02/dps-week4/" rel="alternate" type="text/html" title="Digital Product School week 4" /><published>2020-02-01T00:00:00+01:00</published><updated>2020-02-01T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week4</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week4/">&lt;p&gt;The 4th week retropect&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/images/week4/jan-27-monday.JPG&quot; width=&quot;30%&quot; height=&quot;30%&quot; /&gt;
+&lt;/div&gt;
 
 &lt;h2 class=&quot;no_toc&quot; id=&quot;content&quot;&gt;CONTENT&lt;/h2&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#ideation-techniques&quot; id=&quot;markdown-toc-ideation-techniques&quot;&gt;Ideation Techniques&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#aideation&quot; id=&quot;markdown-toc-aideation&quot;&gt;AIdeation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
+&lt;div style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/images/week4/schedule.png&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
+&lt;/div&gt;
+
 &lt;h1 class=&quot;no_toc&quot; id=&quot;monday&quot;&gt;Monday&lt;/h1&gt;
+
+&lt;h2 id=&quot;ideation-techniques&quot;&gt;Ideation Techniques&lt;/h2&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/images/week4/aideation.JPG&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;aideation&quot;&gt;AIdeation&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/week4/aideation.JPG&quot; alt=&quot;&quot; height=&quot;40%&quot; width=&quot;40%&quot; class=&quot;center-image;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We first started our week&lt;/p&gt;</content><author><name>dionne</name></author><summary type="html">{.center-image;}</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week4/week4-ourteam.JPG" /></entry><entry><title type="html">Retrospectof ACL 2020 paper writing</title><link href="http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020/" rel="alternate" type="text/html" title="Retrospectof ACL 2020 paper writing" /><published>2020-01-29T00:00:00+01:00</published><updated>2020-01-29T00:00:00+01:00</updated><id>http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020</id><content type="html" xml:base="http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020/">&lt;ol&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/images/week4/jan-27-monday-2.JPG&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">The 4th week retropect</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week4/week4-ourteam.JPG" /></entry><entry><title type="html">Retrospect of ACL 2020 paper writing</title><link href="http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020/" rel="alternate" type="text/html" title="Retrospect of ACL 2020 paper writing" /><published>2020-01-29T00:00:00+01:00</published><updated>2020-01-29T00:00:00+01:00</updated><id>http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020</id><content type="html" xml:base="http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020/">&lt;ol&gt;
   &lt;li&gt;retrosprect of acl2020&lt;/li&gt;
 &lt;/ol&gt;
 

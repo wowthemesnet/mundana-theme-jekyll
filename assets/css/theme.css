@@ -790,8 +790,8 @@ div.a2a_full_footer {display:none;}
 @media (min-width: 1920px) {
 	html {font-size:17px;}
 	.container, .container-lg {    
-	 width: 1522px;
-	 max-width: 1522px;
+	 width: 1280px;
+	 max-width: 1280px;
 	 }
 	 h6,.h6 { 
 		 font-size: 1.1rem; 

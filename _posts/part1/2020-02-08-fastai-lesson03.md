@@ -11,20 +11,50 @@ tags: [ featured ]
 {: .no_toc}
 
 - [Unet](unet)
-- [What is fit_one_cycle](what-is-fit_one_cyle)
 {:toc}
+
 
 ### Unet
 
 [Unet model](https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/)
+- similar with convolutional auto-encoder
+- but Unet has connection between symmetry element when max-pooling.
+
+Q. what kind of connection does it have? weight sharing?
+
+### freeze/unfreeze, what should I choose as learning rate?
+
+[youtube](https://youtu.be/PW2HKkzdkKY?t=2964)
 
 ### What is fit_one_cycle
 
-First increase the lr, then decrease it
+~~~python
+recorder.plot_losses() #show you loss depends on time
+recorder.plot_lr() #show you lr chnange depends on time (on epoch)
+~~~
+
+When you visualize these it seems like this. (errors go up and down)
+
+![](/assets/images/one_cycle_structure.jpeg)
+
+Then why error does not go down at the first time?
 
 - Why fit_one_cycle is good for learning?
 
+![](/assets/images/one_cycle_fit_process.jpeg)
+
 ⭐️ When you increase the learning rate, it's easy to explore whole area and find the place which is not bumpy, so it train faster and can generalize well
+
+* refer [this site](https://nbviewer.jupyter.org/gist/joshfp/85d96f07aaa5f4d2c9eb47956ccdcc88/lesson2-sgd-in-action.ipynb#)
+
+### what should we do when `underfitting`
+
+1) train longer
+2) train last bit at a lower learning rate
+3) decrease learning rate
+    - weight decay
+    - drop out
+    - data-augmentation
 
 ###  `Min numerical gradient` vs `Min loss divided by 10`
 

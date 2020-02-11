@@ -81,6 +81,10 @@
 <lastmod>2020-02-09T00:00:00+01:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/2020/02/dps-week5/</loc>
+<lastmod>2020-02-09T00:00:00+01:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/404/</loc>
 </url>
 <url>
@@ -112,5 +116,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/page2/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page3/</loc>
 </url>
 </urlset>

@@ -1,11 +1,12 @@
 ---
-title: "Buy Sal a coffee"
-permalink: "/buy-sal-a-coffee.html"
+title: "Resume"
+permalink: "/resume.html"
 ---
 
+- To be edited
 Hi! This is Dionne.
 
-This page is for Sal, who made the template I'm using now.
+This page is for , who made the template I'm using now.
 
 He said,
 
@@ -21,7 +22,7 @@ He said,
 
 And I also belive in open source and it's a great template, I gave him a token of my gratitude.
 
-If you are interested in, you can find **further release sal made in [here](https://www.wowthemes.net/category/free-themes-templates/)**. 
+If you are interested in, you can find **further release  made in [here](https://www.wowthemes.net/category/free-themes-templates/)**.
 
 
-<a class="btn btn-danger" href="https://www.wowthemes.net/donate/">Buy sal a coffee</a>
+<a class="btn btn-danger" href="https://www.wowthemes.net/donate/">Buy  a coffee</a>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/2019/09/code-first-course-note-16/</loc>
+<loc>http://localhost:4000/2019/09/fast.ai-nlp-note-16/</loc>
 <lastmod>2019-09-03T00:00:00+02:00</lastmod>
 </url>
 <url>
@@ -73,6 +73,14 @@
 <lastmod>2020-02-01T00:00:00+01:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/2020/02/fastai-lesson03/</loc>
+<lastmod>2020-02-08T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2020/02/fast.ai-nlp-note-10/</loc>
+<lastmod>2020-02-09T00:00:00+01:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/404/</loc>
 </url>
 <url>
@@ -85,9 +93,6 @@
 <loc>http://localhost:4000/authors-list.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/buy-sal-a-coffee.html</loc>
-</url>
-<url>
 <loc>http://localhost:4000/categories.html</loc>
 </url>
 <url>
@@ -98,6 +103,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/privacy-policy.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/resume.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/tags.html</loc>

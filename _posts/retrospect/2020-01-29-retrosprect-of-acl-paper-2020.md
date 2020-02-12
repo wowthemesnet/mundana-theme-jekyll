@@ -2,7 +2,7 @@
 layout: post
 title: "Retrospect of ACL 2020 paper writing"
 author: dionne
-categories: [ Retrospective ]
+categories: [ Retrospect ]
 image: assets/images/acl2020.png
 --- 
 

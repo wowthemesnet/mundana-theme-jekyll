@@ -1,4 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-11T18:10:05+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Digital Product School week 4</title><link href="http://localhost:4000/2020/02/dps-week5/" rel="alternate" type="text/html" title="Digital Product School week 4" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week5</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week5/"></content><author><name>dionne</name></author><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/data-landscape.png" /></entry><entry><title type="html">fast.ai lesson10</title><link href="http://localhost:4000/2020/02/fast.ai-nlp-note-10/" rel="alternate" type="text/html" title="fast.ai lesson10" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/fast.ai-nlp-note-10</id><content type="html" xml:base="http://localhost:4000/2020/02/fast.ai-nlp-note-10/">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-12T20:06:44+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Digital Product School week 5</title><link href="http://localhost:4000/2020/02/dps-week5/" rel="alternate" type="text/html" title="Digital Product School week 5" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week5</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week5/">&lt;p&gt;The 5th week retropect at Digital Product School&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Week 5 - Create a Storymap and sync it with Lean Canvas&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/images/week5/feb-3-1.png&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt;[This week’s schedule]&lt;/p&gt;
+
+&lt;h2 class=&quot;no_toc&quot; id=&quot;content&quot;&gt;CONTENT&lt;/h2&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#how-to-create-our-story-map&quot; id=&quot;markdown-toc-how-to-create-our-story-map&quot;&gt;How to create our story map&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 class=&quot;no_toc&quot; id=&quot;monday&quot;&gt;Monday&lt;/h1&gt;
+
+&lt;h2 id=&quot;how-to-create-our-story-map&quot;&gt;How to create our story map&lt;/h2&gt;
+
+&lt;h1 class=&quot;no_toc&quot; id=&quot;tuesday&quot;&gt;Tuesday&lt;/h1&gt;
+
+&lt;h1 class=&quot;no_toc&quot; id=&quot;wendesday&quot;&gt;Wendesday&lt;/h1&gt;
+
+&lt;h1 class=&quot;no_toc&quot; id=&quot;thursday&quot;&gt;Thursday&lt;/h1&gt;
+
+&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 5th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week5/user-storymap.png" /></entry><entry><title type="html">fast.ai lesson10</title><link href="http://localhost:4000/2020/02/fast.ai-nlp-note-10/" rel="alternate" type="text/html" title="fast.ai lesson10" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/fast.ai-nlp-note-10</id><content type="html" xml:base="http://localhost:4000/2020/02/fast.ai-nlp-note-10/">&lt;ul&gt;
   &lt;li&gt;French language model, &lt;a href=&quot;https://github.com/piegu&quot;&gt;piegu&lt;/a&gt;
     &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;https://medium.com/@pierre_guillou/nlp-fastai-french-language-model-d0e2a9e12cab&quot;&gt;Midium article&lt;/a&gt;&amp;lt;/br&amp;gt;&lt;/li&gt;
@@ -86,57 +113,58 @@ It can also be automatically invoked through Learner.export via its destroy=True
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Mixed precision training&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">CONTENTS</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/lesson03-1.png" /></entry><entry><title type="html">Digital Product School week 4</title><link href="http://localhost:4000/2020/02/dps-week4/" rel="alternate" type="text/html" title="Digital Product School week 4" /><published>2020-02-01T00:00:00+01:00</published><updated>2020-02-01T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week4</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week4/">&lt;p&gt;The 4th week retropect&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">CONTENTS</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/lesson03-1.png" /></entry><entry><title type="html">Digital Product School week 4</title><link href="http://localhost:4000/2020/02/dps-week4/" rel="alternate" type="text/html" title="Digital Product School week 4" /><published>2020-02-01T00:00:00+01:00</published><updated>2020-02-01T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week4</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week4/">&lt;p&gt;The 4th week retropect at Digital Product School&lt;/p&gt;
 
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week4/jan-27-monday.JPG&quot; width=&quot;30%&quot; height=&quot;30%&quot; /&gt;
-&lt;/div&gt;
-
-&lt;h2 class=&quot;no_toc&quot; id=&quot;content&quot;&gt;CONTENT&lt;/h2&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#1-ideation-techniques&quot; id=&quot;markdown-toc-1-ideation-techniques&quot;&gt;1. Ideation Techniques&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#2-generating-idea-in-my-team&quot; id=&quot;markdown-toc-2-generating-idea-in-my-team&quot;&gt;2. Generating idea in my team&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#3-aideation&quot; id=&quot;markdown-toc-3-aideation&quot;&gt;3. AIdeation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#tuesday&quot; id=&quot;markdown-toc-tuesday&quot;&gt;Tuesday&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#1-team-brain-storming-of-idea&quot; id=&quot;markdown-toc-1-team-brain-storming-of-idea&quot;&gt;1. Team brain storming of idea&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#2-die-produkt-macher&quot; id=&quot;markdown-toc-2-die-produkt-macher&quot;&gt;2. Die Produkt Macher&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#wendesday&quot; id=&quot;markdown-toc-wendesday&quot;&gt;Wendesday&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#thursday&quot; id=&quot;markdown-toc-thursday&quot;&gt;Thursday&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#friday&quot; id=&quot;markdown-toc-friday&quot;&gt;Friday&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Week 4 - Find solution ideas and run experiments&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center&quot;&gt;
     &lt;img src=&quot;/assets/images/week4/schedule.png&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
 &lt;/div&gt;
+&lt;p&gt;[This week’s schedule]&lt;/p&gt;
+
+&lt;h2 class=&quot;no_toc&quot; id=&quot;content&quot;&gt;CONTENT&lt;/h2&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#ideation-techniques&quot; id=&quot;markdown-toc-ideation-techniques&quot;&gt;Ideation Techniques&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#what-is-ideation-techniques&quot; id=&quot;markdown-toc-what-is-ideation-techniques&quot;&gt;What is ideation techniques?&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#generating-idea-in-my-team&quot; id=&quot;markdown-toc-generating-idea-in-my-team&quot;&gt;Generating idea in my team&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#aideation&quot; id=&quot;markdown-toc-aideation&quot;&gt;AIdeation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#team-brain-storming-of-idea&quot; id=&quot;markdown-toc-team-brain-storming-of-idea&quot;&gt;Team brain storming of idea&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#die-produkt-macher&quot; id=&quot;markdown-toc-die-produkt-macher&quot;&gt;Die Produkt Macher&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
 
 &lt;h1 class=&quot;no_toc&quot; id=&quot;monday&quot;&gt;Monday&lt;/h1&gt;
 
-&lt;h2 id=&quot;1-ideation-techniques&quot;&gt;1. Ideation Techniques&lt;/h2&gt;
+&lt;h2 id=&quot;ideation-techniques&quot;&gt;Ideation Techniques&lt;/h2&gt;
 
 &lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week4/aideation.JPG&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
+    &lt;img src=&quot;/assets/images/week4/aideation.png&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
 &lt;/div&gt;
+&lt;p&gt;[slides from @steffen]&lt;/p&gt;
 
-&lt;h2 id=&quot;2-generating-idea-in-my-team&quot;&gt;2. Generating idea in my team&lt;/h2&gt;
+&lt;h3 id=&quot;what-is-ideation-techniques&quot;&gt;What is ideation techniques?&lt;/h3&gt;
+
+&lt;p&gt;We tried to find out user’s painpoint last week. Tried to users talk about their, pain point. No question directly, but extract from them their pain with transportation.&lt;/p&gt;
+
+&lt;h2 id=&quot;generating-idea-in-my-team&quot;&gt;Generating idea in my team&lt;/h2&gt;
 
 &lt;div style=&quot;text-align:center&quot;&gt;
     &lt;img src=&quot;/assets/images/week4/jan-27-monday-2.JPG&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;3-aideation&quot;&gt;3. AIdeation&lt;/h2&gt;
+&lt;h2 id=&quot;aideation&quot;&gt;AIdeation&lt;/h2&gt;
 
 &lt;div style=&quot;text-align:center&quot;&gt;
     &lt;img src=&quot;/assets/images/week4/jan-27-monday-3.JPG&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
 &lt;/div&gt;
 
-&lt;h1 id=&quot;tuesday&quot;&gt;Tuesday&lt;/h1&gt;
+&lt;h1 class=&quot;no_toc&quot; id=&quot;tuesday&quot;&gt;Tuesday&lt;/h1&gt;
 
-&lt;h2 id=&quot;1-team-brain-storming-of-idea&quot;&gt;1. Team brain storming of idea&lt;/h2&gt;
+&lt;h2 id=&quot;team-brain-storming-of-idea&quot;&gt;Team brain storming of idea&lt;/h2&gt;
 
 &lt;div style=&quot;text-align:center&quot;&gt;
     &lt;img src=&quot;/assets/images/week4/jan-28-tuesday-0.JPG&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
@@ -152,17 +180,18 @@ It can also be automatically invoked through Learner.export via its destroy=True
     &lt;img src=&quot;/assets/images/week4/jan-28-tuesday-1.JPG&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;2-die-produkt-macher&quot;&gt;2. Die Produkt Macher&lt;/h2&gt;
+&lt;h2 id=&quot;die-produkt-macher&quot;&gt;Die Produkt Macher&lt;/h2&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;What is lean start-up?&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;Lean startup is a methodology for developing businesses and products that aims to shorten product development cycles and rapidly discover if a proposed business model is viable; this is achieved by adopting a combination of business-hypothesis-driven experimentation, iterative product releases, and validated learning. - wikipedia&lt;/p&gt;
-  &lt;h1 id=&quot;wendesday&quot;&gt;Wendesday&lt;/h1&gt;
 &lt;/blockquote&gt;
 
-&lt;h1 id=&quot;thursday&quot;&gt;Thursday&lt;/h1&gt;
+&lt;h1 class=&quot;no_toc&quot; id=&quot;wendesday&quot;&gt;Wendesday&lt;/h1&gt;
 
-&lt;h1 id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 4th week retropect</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week4/week4-ourteam.JPG" /></entry><entry><title type="html">Retrospect of ACL 2020 paper writing</title><link href="http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020/" rel="alternate" type="text/html" title="Retrospect of ACL 2020 paper writing" /><published>2020-01-29T00:00:00+01:00</published><updated>2020-01-29T00:00:00+01:00</updated><id>http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020</id><content type="html" xml:base="http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020/">&lt;ol&gt;
+&lt;h1 class=&quot;no_toc&quot; id=&quot;thursday&quot;&gt;Thursday&lt;/h1&gt;
+
+&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 4th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week4/week4-ourteam.JPG" /></entry><entry><title type="html">Retrospect of ACL 2020 paper writing</title><link href="http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020/" rel="alternate" type="text/html" title="Retrospect of ACL 2020 paper writing" /><published>2020-01-29T00:00:00+01:00</published><updated>2020-01-29T00:00:00+01:00</updated><id>http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020</id><content type="html" xml:base="http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020/">&lt;ol&gt;
   &lt;li&gt;retrosprect of acl2020&lt;/li&gt;
 &lt;/ol&gt;
 

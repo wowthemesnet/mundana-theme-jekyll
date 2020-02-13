@@ -171,7 +171,7 @@ Machine Translation 문제까지 확대할 것이니, 원어가 영어인 가벼
 ## Tokenization
 ---
 
-## Masking이란 무엇인가?
+## What is Masking
 - LM에서 pre-training or transfer-learning
 - pre-train of what?
 - (1) ELMO: recurrent module

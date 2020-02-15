@@ -21,11 +21,12 @@ plugins:
 authors:
     Noor:
       name:           Noor
-      site:           https://medium.com/@noorhashem
+      site:           https://github.com/noorhashem
       avatar:         assets/images/avatar1.jpg
       bio:            "An iOS developer with a knack for AI & Computer Vision. I like to build edgy “handy” solutions to a problem and brew some cool techy stuff in my secret lab."
       email:          nour.hashem95@gmail.com
       twitter:        https://twitter.com/noorhashem
+     
 
  
 # Defaults

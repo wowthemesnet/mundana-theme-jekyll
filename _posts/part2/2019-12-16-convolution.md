@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "So, Why Convolution?"
+title: "fast.ai lesson08"
 author: dionne
 categories: [Fast.AI-v3]
 image: assets/images/cnn-jiwon.png

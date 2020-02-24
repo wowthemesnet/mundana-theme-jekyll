@@ -7,8 +7,6 @@ image:
 tags: []
 ---
 
-Part1 Note 부분 훑어보기~
-
 ## Note 01
 
 We are focused on solving interesting real-world problems.

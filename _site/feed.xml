@@ -1,16 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-13T01:41:47+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Digital Product School week 5</title><link href="http://localhost:4000/2020/02/dps-week5/" rel="alternate" type="text/html" title="Digital Product School week 5" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week5</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week5/">&lt;p&gt;The 5th week retropect at Digital Product School&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-25T11:29:27+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Digital Product School week 8</title><link href="http://localhost:4000/2020/02/dps-week8/" rel="alternate" type="text/html" title="Digital Product School week 8" /><published>2020-02-24T00:00:00+01:00</published><updated>2020-02-24T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week8</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week8/">&lt;p&gt;The 8th week retropect at Digital Product School&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Week 8 - Ship your MVP&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/images/week8/schedule.png&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
+    &lt;figcaption&gt;This week's schedule&lt;/figcaption&gt;    
+&lt;/div&gt;
+
+&lt;h2 class=&quot;no_toc&quot; id=&quot;content&quot;&gt;CONTENT&lt;/h2&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#preparing-engineering-weekly&quot; id=&quot;markdown-toc-preparing-engineering-weekly&quot;&gt;Preparing engineering weekly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#agile-process-daily-stand-up&quot; id=&quot;markdown-toc-agile-process-daily-stand-up&quot;&gt;Agile Process, daily stand-up&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#making-application-flowchart-feat-drawio&quot; id=&quot;markdown-toc-making-application-flowchart-feat-drawio&quot;&gt;Making application flowchart (feat draw.io)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 class=&quot;no_toc&quot; id=&quot;monday&quot;&gt;Monday&lt;/h1&gt;
+
+&lt;h2 id=&quot;preparing-engineering-weekly&quot;&gt;Preparing engineering weekly&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This week at Wednesday, I will explain the &lt;em&gt;Language Modelings&lt;/em&gt;, mainly focusing ELMo, ULMFiT, BERT and GPT-2.
+Slides is available &lt;a href=&quot;https://docs.google.com/presentation/d/1-oTUqgFq0x3N8QpcN7gHay5KhIN2KdFGOTxzujr75ck/edit?usp=sharing&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;agile-process-daily-stand-up&quot;&gt;Agile Process, daily stand-up&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;As always, we did daily stand-up to follow-up our agile process.
+This daily stand-up helps us to synchronize each part’s process so that we can save our time when we have to explain our project in charge.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;text-align:left&quot;&gt;
+    &lt;img src=&quot;/assets/images/week8/daily-standup.JPG&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
+    &lt;figcaption&gt;Each color means every different section. Red: Our team goal, Blue: Interaction designer, Green: Product manager, Yellow: Software/AI engineer&lt;/figcaption&gt;    
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align:right&quot;&gt;
+    &lt;img src=&quot;/assets/images/week8/daily-standup.png&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
+    &lt;figcaption&gt;This week engineer's main plan&lt;/figcaption&gt;    
+&lt;/div&gt;
+
+&lt;h2 id=&quot;making-application-flowchart-feat-drawio&quot;&gt;Making application flowchart (feat draw.io)&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/week8/draw-io.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Before we start the party, we should clarify the flowchart and ER diagram of our application.&lt;/li&gt;
+  &lt;li&gt;Thankfully, we could use draw.io for our flowchart framework. (It can be connected to GCP!)
+    &lt;ul&gt;
+      &lt;li&gt;Following basic of UML diagram was little bit difficult.&lt;/li&gt;
+      &lt;li&gt;Flowchart has rule with the symbols, color, size, space, scaling and direction of arrow&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://creately.com/blog/diagrams/flowchart-guide-flowchart-tutorial&quot;&gt;This tutorial&lt;/a&gt; helps us a lot to make conventional flowchart&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;text-align:right&quot;&gt;
+    &lt;img src=&quot;/assets/images/week8/flowchart.jpg&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
+    &lt;figcaption&gt;This week engineer's main plan&lt;/figcaption&gt;    
+&lt;/div&gt;
+
+&lt;h1 class=&quot;no_toc&quot; id=&quot;tuesday&quot;&gt;Tuesday&lt;/h1&gt;
+
+&lt;h1 class=&quot;no_toc&quot; id=&quot;wednesday&quot;&gt;Wednesday&lt;/h1&gt;
+
+&lt;h1 class=&quot;no_toc&quot; id=&quot;thursday&quot;&gt;Thursday&lt;/h1&gt;
+
+&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 8th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week8/draw-io.png" /></entry><entry><title type="html">fast.ai nlp lesson10</title><link href="http://localhost:4000/2020/02/fast.ai-nlp-note-10/" rel="alternate" type="text/html" title="fast.ai nlp lesson10" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/fast.ai-nlp-note-10</id><content type="html" xml:base="http://localhost:4000/2020/02/fast.ai-nlp-note-10/">&lt;ul&gt;
+  &lt;li&gt;French language model, &lt;a href=&quot;https://github.com/piegu&quot;&gt;piegu&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@pierre_guillou/nlp-fastai-french-language-model-d0e2a9e12cab&quot;&gt;Midium article&lt;/a&gt;&amp;lt;/br&amp;gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/piegu/language-models/tree/master/models&quot;&gt;Repository of pre-trained Language Models&lt;/a&gt;&amp;lt;/br&amp;gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://twitter.com/pierre_guillou/status/1175054315804864517?s=20&quot;&gt;twitter post&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">French language model, piegu Midium article&amp;lt;/br&amp;gt; Repository of pre-trained Language Models&amp;lt;/br&amp;gt; twitter post</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/ulmfit.png" /></entry><entry><title type="html">Digital Product School week 5</title><link href="http://localhost:4000/2020/02/dps-week5/" rel="alternate" type="text/html" title="Digital Product School week 5" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week5</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week5/">&lt;p&gt;The 5th week retropect at Digital Product School&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Week 5 - Create a Storymap and sync it with Lean Canvas&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center&quot;&gt;
     &lt;img src=&quot;/assets/images/week5/feb-3-1.png&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
+    &lt;figcaption&gt;This week's schedule&lt;/figcaption&gt;    
 &lt;/div&gt;
-&lt;p&gt;[This week’s schedule]&lt;/p&gt;
 
 &lt;h2 class=&quot;no_toc&quot; id=&quot;content&quot;&gt;CONTENT&lt;/h2&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#how-to-create-our-story-map&quot; id=&quot;markdown-toc-how-to-create-our-story-map&quot;&gt;How to create our story map&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#prepare-your-story&quot; id=&quot;markdown-toc-prepare-your-story&quot;&gt;Prepare your story&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#discover-your-products-ai-potential&quot; id=&quot;markdown-toc-discover-your-products-ai-potential&quot;&gt;Discover your product’s AI potential&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -19,21 +99,104 @@
 
 &lt;h2 id=&quot;how-to-create-our-story-map&quot;&gt;How to create our story map&lt;/h2&gt;
 
+&lt;div style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/images/week5/aha-moment.png&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
+    &lt;figcaption&gt;We need this 'aha' moment&lt;/figcaption&gt;    
+&lt;/div&gt;
+
+&lt;p&gt;There was a Milestone workshop, about our weekly goal. As we are agile working, we go fast and change every week’s goal. This week we will finalize our &lt;a href=&quot;http://shop.oreilly.com/product/0636920033851.do&quot;&gt;story map&lt;/a&gt; based on user’s pain-point and HMW questions.&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/images/week5/storymap.png&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
+    &lt;figcaption&gt;How should we make our story-map&lt;/figcaption&gt;    
+&lt;/div&gt;
+
+&lt;p&gt;Basically we should make story map based on this rule&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Tell stories, don’t just write them!&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;We always need context, that means all the story component should be connected&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Visualize your product to establish a shared understanding and speed up discussions!&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Post-it filled of text is not enough, we should fill it with visualizations then team mates can understand it fast&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Only discuss in front our your story map! (Speed)&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;So we can update our story-map as soon as we change our opinion&lt;/li&gt;
+      &lt;li&gt;And also&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Use a story map to find the parts that matter most and to identify holes in your idea!&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Since the story map consists of techinical part, we should consider each story’s technical feasibility&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Minimise output, maximise outcome and impact!&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Build tests to figure out what’s minimum and what’s viable!&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;This story map functions to find out our minimum value of ideas&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Work iteratively: Change your story map according to your learnings!&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;We should repeat this process again and again&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;PMs: Make sure Storymap is up to date!&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;prepare-your-story&quot;&gt;Prepare your story&lt;/h2&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/images/week5/storymap-1.png&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
+    &lt;figcaption&gt;team cero, our whole story map&lt;/figcaption&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/images/week5/storymap-5.png&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
+    &lt;figcaption&gt;Our goal&lt;/figcaption&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/images/week5/storymap-3.png&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
+    &lt;figcaption&gt;Technical feasibility of our story&lt;/figcaption&gt;
+&lt;/div&gt;
+
+&lt;p&gt;What is your strategy to make user achieve something? This would be our expand point&lt;/p&gt;
+
+&lt;h2 id=&quot;discover-your-products-ai-potential&quot;&gt;Discover your product’s AI potential&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;How can we apply AI to our product? Let’s write down our ‘HMW’ questions, and find out all p ossibilities.&lt;/em&gt; &lt;br /&gt;
+These are suggestion of possibilities, so don’t attached to feasibility (we will do in at lean start-up)&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/images/week5/se.jpg&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
+    &lt;figcaption&gt;Software section's expectation&lt;/figcaption&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/images/week5/ai.JPG&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
+    &lt;figcaption&gt;AI section's expectation&lt;/figcaption&gt;
+&lt;/div&gt;
+
 &lt;h1 class=&quot;no_toc&quot; id=&quot;tuesday&quot;&gt;Tuesday&lt;/h1&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/images/week5/simulator.png&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
+    &lt;figcaption&gt;Engineer's task, week5&lt;/figcaption&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This 5th week, engineers settled&lt;/p&gt;
 
 &lt;h1 class=&quot;no_toc&quot; id=&quot;wendesday&quot;&gt;Wendesday&lt;/h1&gt;
 
 &lt;h1 class=&quot;no_toc&quot; id=&quot;thursday&quot;&gt;Thursday&lt;/h1&gt;
 
-&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 5th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week5/user-storymap.png" /></entry><entry><title type="html">fast.ai lesson10</title><link href="http://localhost:4000/2020/02/fast.ai-nlp-note-10/" rel="alternate" type="text/html" title="fast.ai lesson10" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/fast.ai-nlp-note-10</id><content type="html" xml:base="http://localhost:4000/2020/02/fast.ai-nlp-note-10/">&lt;ul&gt;
-  &lt;li&gt;French language model, &lt;a href=&quot;https://github.com/piegu&quot;&gt;piegu&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://medium.com/@pierre_guillou/nlp-fastai-french-language-model-d0e2a9e12cab&quot;&gt;Midium article&lt;/a&gt;&amp;lt;/br&amp;gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://github.com/piegu/language-models/tree/master/models&quot;&gt;Repository of pre-trained Language Models&lt;/a&gt;&amp;lt;/br&amp;gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://twitter.com/pierre_guillou/status/1175054315804864517?s=20&quot;&gt;twitter post&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">French language model, piegu Midium article&amp;lt;/br&amp;gt; Repository of pre-trained Language Models&amp;lt;/br&amp;gt; twitter post</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/ulmfit.png" /></entry><entry><title type="html">fast.ai lesson03</title><link href="http://localhost:4000/2020/02/fastai-lesson03/" rel="alternate" type="text/html" title="fast.ai lesson03" /><published>2020-02-08T00:00:00+01:00</published><updated>2020-02-08T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/fastai-lesson03</id><content type="html" xml:base="http://localhost:4000/2020/02/fastai-lesson03/">&lt;h3 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h3&gt;
+&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 5th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week5/user-storymap.png" /></entry><entry><title type="html">fast.ai lesson03</title><link href="http://localhost:4000/2020/02/fastai-lesson03/" rel="alternate" type="text/html" title="fast.ai lesson03" /><published>2020-02-08T00:00:00+01:00</published><updated>2020-02-08T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/fastai-lesson03</id><content type="html" xml:base="http://localhost:4000/2020/02/fastai-lesson03/">&lt;h3 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h3&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#unet&quot; id=&quot;markdown-toc-unet&quot;&gt;Unet&lt;/a&gt;&lt;/li&gt;
@@ -255,9 +418,7 @@ And it is called ‘magics’ (but i think jeremy is magicion)&lt;/p&gt;
 
 &lt;h4 id=&quot;python3-pathlib-library&quot;&gt;Python3 pathlib library!&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/library/pathlib.html&quot;&gt;pathlib&lt;/a&gt;&lt;/p&gt;</content><author><name>dionne</name></author><category term="lesson01" /><summary type="html">Finally you can solve the mystery behind this weird drawing.. through this course.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1-visual-cnn.png" /></entry><entry><title type="html">Note01, Note02</title><link href="http://localhost:4000/2019/12/lecture1-note/" rel="alternate" type="text/html" title="Note01, Note02" /><published>2019-12-20T00:00:00+01:00</published><updated>2019-12-20T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/lecture1-note</id><content type="html" xml:base="http://localhost:4000/2019/12/lecture1-note/">&lt;p&gt;Part1 Note 부분 훑어보기~&lt;/p&gt;
-
-&lt;h2 id=&quot;note-01&quot;&gt;Note 01&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/library/pathlib.html&quot;&gt;pathlib&lt;/a&gt;&lt;/p&gt;</content><author><name>dionne</name></author><category term="lesson01" /><summary type="html">Finally you can solve the mystery behind this weird drawing.. through this course.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1-visual-cnn.png" /></entry><entry><title type="html">Note01, Note02</title><link href="http://localhost:4000/2019/12/lecture1-note/" rel="alternate" type="text/html" title="Note01, Note02" /><published>2019-12-20T00:00:00+01:00</published><updated>2019-12-20T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/lecture1-note</id><content type="html" xml:base="http://localhost:4000/2019/12/lecture1-note/">&lt;h2 id=&quot;note-01&quot;&gt;Note 01&lt;/h2&gt;
 
 &lt;p&gt;We are focused on solving interesting real-world problems.&lt;/p&gt;
 
@@ -868,7 +1029,7 @@ Unfortunately there is no shortcut. I wish there was. I wish there’s some way 
       &lt;p&gt;But more to the point right now, it’s going to make life much easier. Because I hate writing loops, I hate writing code, I just want the computer to do everything for me. And anytime you see this little i subscripts, that sounds like you’re going to have to do loops and all kind of stuff. &lt;a href=&quot;#fnref:today-word&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">Part1 Note 부분 훑어보기~</summary></entry><entry><title type="html">So, Why Convolution?</title><link href="http://localhost:4000/2019/12/convolution/" rel="alternate" type="text/html" title="So, Why Convolution?" /><published>2019-12-16T00:00:00+01:00</published><updated>2019-12-16T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/convolution</id><content type="html" xml:base="http://localhost:4000/2019/12/convolution/">&lt;p&gt;This is the part of Journey which Jeremy recommended us to do.
+&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">Note 01</summary></entry><entry><title type="html">fast.ai lesson08</title><link href="http://localhost:4000/2019/12/convolution/" rel="alternate" type="text/html" title="fast.ai lesson08" /><published>2019-12-16T00:00:00+01:00</published><updated>2019-12-16T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/convolution</id><content type="html" xml:base="http://localhost:4000/2019/12/convolution/">&lt;p&gt;This is the part of Journey which Jeremy recommended us to do.
 One of the concepts I have to know.&lt;/p&gt;
 
 &lt;p&gt;1) Kaiming Initializtion in Pytorch was in trouble.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
@@ -1242,35 +1403,4 @@ Uisng model: &lt;strong&gt;restnet34&lt;/strong&gt; &lt;sup id=&quot;fnref:2&quo
       &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Accuracy_and_precision&quot;&gt;Accuracy_and_precision&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">Code can be found here</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/munich2.jpg" /></entry><entry><title type="html">Jeremy Howard</title><link href="http://localhost:4000/2019/12/jeremy-howard/" rel="alternate" type="text/html" title="Jeremy Howard" /><published>2019-12-15T00:00:00+01:00</published><updated>2019-12-15T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/jeremy-howard</id><content type="html" xml:base="http://localhost:4000/2019/12/jeremy-howard/">&lt;p&gt;How he impacted me?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;The person who made me start Computer Vision again. He said, “It’s not just something I can throw away. NLP and computer vision a few weeks apart and that’s going to force your brain to realize like ‘oh I have to remember this’”&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;“Keep going.  You’re not expected to remember everything. Yet.  You’re not expected to understand everything. Yet. You’re not expected to know why everything works.  Yet.”&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;His articles are numerous, below.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://pytorch.org/tutorials/beginner/nn_tutorial.html&quot;&gt;What is torch.nn Really?&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.fast.ai/2019/01/10/swift-numerics/&quot;&gt;High Performance Numeric Programming with Swift: Explorations and Reflections&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.fast.ai/2019/01/13/swift-random/&quot;&gt;C++11, random distributions, and Swift&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;And especially, I like this book. &lt;a href=&quot;https://www.oreilly.com/radar/drivetrain-approach-data-products/&quot;&gt;Designing great data products&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Great predictive modeling is an important part of the solution, but it no longer stands on its own; as products become more sophisticated, it disappears into the plumbing.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p style=&quot;color:gray; font-size: 90%; text-align: right;&quot;&gt;Designing great data products&lt;/p&gt;
-
-&lt;p&gt;And he is also famous for words. Here are some.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;we’re going to try and use that to really understand what’s going on. So to warn you, none of it is rocket science but a lot of its going to look really new. So don’t expect to get it the first time but expect to listen and jump into the notebook try a few things test things out look particularly at like tensor shapes and inputs and outputs to check your understanding then go back and listen again. But and kind of try it, a few times, because you will get there right, it’s just that there’s going to be a lot of new concepts because we haven’t done that much stuff in pure Pytorch.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p style=&quot;color:gray; font-size: 90%; text-align: right;&quot;&gt;Lesson 6: Deep Learning 2019&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">How he impacted me?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/jeremy-howard.jpeg" /></entry></feed>
+&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">Code can be found here</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/munich2.jpg" /></entry></feed>

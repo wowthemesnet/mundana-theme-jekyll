@@ -24,12 +24,11 @@ comments: true
 4. [**BERT**](bert)
 
 
-### when they came out?
+### when there are released?
 
-> 1. ELMo : 2018. 2. 15, AllenNLP에서 발표한 논문이다.
-> 2. Transformer : 2017. 6. 2, google에서 발표한 논문이다.
-> 2. OpenAI GPT : 앞서 발표한 transformer 아키텍쳐를 기본으로 구현한 알고리즘이다.
-> 3. BERT : 2018. 10. 11, Google에서 공개한 논문이다. 기존의 SOTA였던 OpenAI-GPT를 뛰어넘은 새로운 모델로, 구글은 논문을 발표하고 3주 뒤 알고리즘과 소스코드 또한 공개했다.
+`Transformer : June 2, 2017. Google released paper called **Attention is all you need**`
+`ELMo : Feburuary 15, 2018. AllenNLP published paper which explains pre-trained language model`
+`BERT : October 11th 2018. Published by Google. It changed leaderboard of The General Language Understanding Evaluation benchmark (GLUE) and also showed language model can be task-general.`
 
 - 이들은 모두 현재 주목받고 있는 모델이며, Bidirectional이란 특징이 있다. 다들 아시겠지만, bidirectional이라고 해서 다 같은 것이 아니다.
 

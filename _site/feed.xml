@@ -1,4 +1,204 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-25T11:29:50+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Digital Product School week 8</title><link href="http://localhost:4000/2020/02/dps-week8/" rel="alternate" type="text/html" title="Digital Product School week 8" /><published>2020-02-24T00:00:00+01:00</published><updated>2020-02-24T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week8</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week8/">&lt;p&gt;The 8th week retropect at Digital Product School&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-29T14:26:09+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html"></title><link href="http://localhost:4000/2020/02/2020-02-29-ELMO-ulmfit/" rel="alternate" type="text/html" title="" /><published>2020-02-29T14:26:09+01:00</published><updated>2020-02-29T14:26:09+01:00</updated><id>http://localhost:4000/2020/02/2020-02-29-ELMO-ulmfit</id><content type="html" xml:base="http://localhost:4000/2020/02/2020-02-29-ELMO-ulmfit/">&lt;h3 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h3&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#when-there-are-released&quot; id=&quot;markdown-toc-when-there-are-released&quot;&gt;when there are released?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#elmo&quot; id=&quot;markdown-toc-elmo&quot;&gt;ELMo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#transformer&quot; id=&quot;markdown-toc-transformer&quot;&gt;Transformer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#openai-gpt&quot; id=&quot;markdown-toc-openai-gpt&quot;&gt;OpenAI-GPT&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bert&quot; id=&quot;markdown-toc-bert&quot;&gt;BERT&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#--다음-글--dataset편-이동하기&quot; id=&quot;markdown-toc---다음-글--dataset편-이동하기&quot;&gt;-&amp;gt; 다음 글 : Dataset편 이동하기&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#관련-링크들&quot; id=&quot;markdown-toc-관련-링크들&quot;&gt;관련 링크들&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#dataset&quot; id=&quot;markdown-toc-dataset&quot;&gt;Dataset&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#google-tensorflow-bert-code-git-hub-정리&quot; id=&quot;markdown-toc-google-tensorflow-bert-code-git-hub-정리&quot;&gt;Google tensorflow bert code, git hub 정리&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#pre-training-with-bert&quot; id=&quot;markdown-toc-pre-training-with-bert&quot;&gt;Pre-training with BERT&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#using-bert-to-extract-fixed-feature-vectors-like-elmo&quot; id=&quot;markdown-toc-using-bert-to-extract-fixed-feature-vectors-like-elmo&quot;&gt;Using BERT to extract fixed feature vectors (like ELMo)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tokenization&quot; id=&quot;markdown-toc-tokenization&quot;&gt;Tokenization&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-is-masking&quot; id=&quot;markdown-toc-what-is-masking&quot;&gt;What is Masking&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;when-there-are-released&quot;&gt;when there are released?&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;BERT : October 11th 2018. Published by Google. It changed leaderboard of The General Language Understanding Evaluation benchmark (GLUE)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;These models are all bi-directional, which means a model is trained to predict a next words, and also do it in opposite direction.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;예컨대 한 문장에서 다음에 올 단어를 예측하는 과제가 있다고 하면, Input에 left-to-right과 right-to-left를 모두 넣어주는 것은 답을 제시한다는 것과 같다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;이러한 문제를 피하면서, bidirectionality를 구현한 것이 (모델 transformer를 제외한) 세 모델이다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;bidirectionality가 왜 필요한가?&lt;/em&gt; 에 대해서는 추후 글을 작성할 예정이다. &lt;a href=&quot;&quot;&gt;이동하기&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bidirectional Model &lt;img src=&quot;https://cdn-images-1.medium.com/max/1440/1*ARMfhOTPxDWDiiAb-jFrvw.png&quot; alt=&quot;BERT, OpenAi GPT, ELMo&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;elmo&quot;&gt;ELMo&lt;/h3&gt;
+
+&lt;p&gt;Paper - &lt;a href=&quot;https://arxiv.org/abs/1802.05365&quot;&gt;Deep contextualized word representations&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Source code - Allen NLP &lt;a href=&quot;https://github.com/allenai/allennlp&quot;&gt;Github&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;ELMo : 15 Feb 2018, Allenlp published paper which explains pre-trained language model&lt;/em&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;ELMo, which was released by allenNLP, changed the rule of NLP, because they used pre-trained language model when they embeded words. This mechanism solved the problem of word embedding models, 
+Why ‘pre-trained language model’?&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Achieved great performance on a variety of language tasks.&lt;/li&gt;
+  &lt;li&gt;similar to how ImageNet classification pre-training helps many vision tasks (*)&lt;/li&gt;
+  &lt;li&gt;Even better than CV tasks, it does not require labeled data for pre-training.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;transformer&quot;&gt;Transformer&lt;/h3&gt;
+
+&lt;p&gt;Paper - &lt;a href=&quot;&quot;&gt;Attention is all you need&lt;/a&gt;
+Code - Tensorflow: tensor2tensor, &lt;a href=&quot;https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/models/transformer.py&quot;&gt;Github&lt;/a&gt;, &lt;a href=&quot;https://github.com/jadore801120/attention-is-all-you-need-pytorch&quot;&gt;Pytorch:&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Transformer : 2 Jun, 2017. Google released paper called &lt;strong&gt;Attention is all you need&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Transformer, which becomes basis of BERT, is provided fundamental architecture of language model. To be sure, model BERT and Transformer is not that different except masking and datasets. Then, what is Transformer? First, you should understand &lt;strong&gt;self-attention&lt;/strong&gt;, and for that, you can refer to &lt;a href=&quot;https://arxiv.org/abs/1703.03130&quot;&gt;A Structured Self-attentive Sentence Embedding&lt;/a&gt; paper.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Transformer 모델을 이해하기 위해서는 Self-attention Mechanism 이해 또한 수반되어야 한다.이는  논문을 참고하면 좋다.&lt;/li&gt;
+  &lt;li&gt;기타 소스코드 : , &lt;a href=&quot;https://github.com/Kyubyong/transformer&quot;&gt;Kyubyong&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;openai-gpt&quot;&gt;OpenAI-GPT&lt;/h3&gt;
+&lt;p&gt;논문 : &lt;a href=&quot;https://blog.openai.com/language-unsupervised/&quot;&gt;Improving Language Understanding with Unsupervised Learning&lt;/a&gt;
+소스코드 : &lt;a href=&quot;https://github.com/openai/finetune-transformer-lm&quot;&gt;Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;앞서 소개한 Transformer를&lt;/li&gt;
+  &lt;li&gt;기타 소스코드 : &lt;a href=&quot;https://github.com/huggingface/pytorch-openai-transformer-lm&quot;&gt;Pytorch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bert&quot;&gt;BERT&lt;/h3&gt;
+&lt;p&gt;논문 : &lt;a href=&quot;https://arxiv.org/abs/1810.04805&quot;&gt;BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;소스코드 : Google-research &lt;a href=&quot;https://github.com/google-research/bert&quot;&gt;Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;2019년 1월 26일 현재 (big-bird를 제외하고) State-of-the-art performance를 보여주고 있다.&lt;/li&gt;
+  &lt;li&gt;BERT란? &lt;a href=&quot;https://arxiv.org/abs/1810.04805&quot;&gt;논문&lt;/a&gt;과 &lt;a href=&quot;https://www.reddit.com/r/MachineLearning/comments/9nfqxz/r_bert_pretraining_of_deep_bidirectional/&quot;&gt;reddit 포스팅&lt;/a&gt;에서 볼 수 있겠지만,
+    &lt;ul&gt;
+      &lt;li&gt;(1) 특정 Task에 국한되지 않는 광범위한 NLP solution을 제공합니다. (11개의 Task에 범용된다.)&lt;/li&gt;
+      &lt;li&gt;(2) 많은 컴퓨팅 자원을 활용해 성능을 높인다.&lt;/li&gt;
+      &lt;li&gt;(3) masking을 통해 bi-directionality를 가능하게한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;로 요약할 수 있다.&lt;/p&gt;
+
+&lt;h5 id=&quot;--다음-글--dataset편-이동하기&quot;&gt;-&amp;gt; 다음 글 : Dataset편 &lt;a href=&quot;&quot;&gt;이동하기&lt;/a&gt;&lt;/h5&gt;
+
+&lt;h3 id=&quot;관련-링크들&quot;&gt;관련 링크들&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Attention is all you need&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1810.04805&quot;&gt;BERT: Pre-training of Deep  Bidirectional Transformers for Language Understanding&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/ai-networkkr/%EC%B5%9C%EC%B2%A8%EB%8B%A8-%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5-%EC%86%94%EB%A3%A8%EC%85%98%EB%93%A4-1-%EA%B5%AC%EA%B8%80-bert-%EC%9D%B8%EA%B0%84%EB%B3%B4%EB%8B%A4-%EC%96%B8%EC%96%B4%EB%A5%BC-%EB%8D%94-%EC%9E%98-%EC%9D%B4%ED%95%B4%ED%95%98%EB%8A%94-ai-%EB%AA%A8%EB%8D%B8-9704ebc016c4&quot;&gt;Medium-최첨단 인공지능 솔루션들&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;came off…&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Elmo 2. bert 3. big bird&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;dataset&quot;&gt;Dataset&lt;/h2&gt;
+&lt;p&gt;The Cross-lingual Natural Language Inference (XNLI) corpus is a crowd-sourced collection of 5,000 test and 2,500 dev pairs for the MultiNLI corpus.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;google-tensorflow-bert-code-git-hub-정리&quot;&gt;Google tensorflow bert code, &lt;a href=&quot;https://github.com/google-research/bert&quot;&gt;git hub 정리&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;(1) Data&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;SQuAD()&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;(2) context-free models &lt;em&gt;vs&lt;/em&gt; &lt;strong&gt;contextual&lt;/strong&gt; models
+‘contextual’이 뭔데? ex) 너 지금 장난쳐? (deixis) - 여기서 가리키는 ‘너’는 고정된 대상인가?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;“word embedding” Word2Vec(mikolov, 2013), Glove : context-free&lt;/li&gt;
+  &lt;li&gt;ELMO, ULMFit : contextual, &lt;em&gt;but unidirectional&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;-&amp;gt; BERT: deeply bidirectional!&lt;/p&gt;
+
+&lt;p&gt;BERT는 두 과정을 통해 학습한다. (1) pre-training (2) fine-tuning
+BERT는 두 과제를 수행한다. (1) masked word filling (2) next sentence prediction(boolean)&lt;/p&gt;
+
+&lt;p&gt;pre-training 을 통해 목표로 하는 언어에 대한 학습을 미리 하고, fine-tuning을 통해 세부 task를 진행하는 구조를 갖는다.
+pre-training이 중요한 task. 매우 expensive하다. (이 글을 작성하는 현재 19년 1월 14일 구글에 의하면 four days on 4 to 16 Cloud TPUs)
+이에 비해 fine-tuning은 pre-training이 완료되면 쉽게 끝난다. (SQuAD, for example, can be trained in around 30 minutes on a single Cloud TPU to achieve a Dev F1 score of 91.0%, which is the single system state-of-the-art.)&lt;/p&gt;
+
+&lt;p&gt;that’s all&lt;/p&gt;
+
+&lt;p&gt;자 이제 한국어에 커스터마이징 해볼까요!!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;pre-training-with-bert&quot;&gt;Pre-training with BERT&lt;/h2&gt;
+
+&lt;p&gt;model이 원하는 포맷으로 데이터셋 맞추기.
+BERT가 하는 과제는 두가지. (1) masked word filling (2) next sentence prediction(boolean)&lt;/p&gt;
+
+&lt;p&gt;Machine Translation 문제까지 확대할 것이니, 원어가 영어인 가벼운 텍스를 대상으로 했다.
+&lt;em&gt;The input is a plain text file, with one sentence per line. (It is important that these be actual sentences for the “next sentence prediction” task).&lt;/em&gt; 라고 구글이 명시했으므로 국립국어원에서 단편 소설을 번역한 파일을 하나 가져온다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/google-research/bert#pre-training-tips-and-caveats&quot;&gt;Pretrainig tips&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;pre-training은 outof memory 문제를 완화시켜주기도 합니다. 또 pre-trained contextual embeddings은 fixed contextual representations of each input token generated from the hidden layers of the pre-trained model에서 산출된 것입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;using-bert-to-extract-fixed-feature-vectors-like-elmo&quot;&gt;Using BERT to extract fixed feature vectors (like ELMo)&lt;/h2&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;tokenization&quot;&gt;Tokenization&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;what-is-masking&quot;&gt;What is Masking&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;LM에서 pre-training or transfer-learning&lt;/li&gt;
+  &lt;li&gt;pre-train of what?&lt;/li&gt;
+  &lt;li&gt;(1) ELMO: recurrent module&lt;/li&gt;
+  &lt;li&gt;(2) OpenAI GPT self-attention&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;attention module을 train해서 fine tuning해서 재사용한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;OpenAi GPT의 문제는 무엇이었나?&lt;/li&gt;
+  &lt;li&gt;단 방향에 대한 self-attention만 사용했다.&lt;/li&gt;
+  &lt;li&gt;한 쪽 방향의 context만 보기 때문에 bias가 생긴다.&lt;/li&gt;
+  &lt;li&gt;왜 양방향 다 보지 못하는가?&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;prediction을 token 단계에서 할 경우 t+1 or t-1에 대한 정보를 직/간접적으로 참고할 수 있다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;BERT는 어떻게 해결하였는가?&lt;/li&gt;
+  &lt;li&gt;[MASK]를 통해 문장 전체를 온전히 인풋 값으로 넣지 않는다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;전체 단어의 15%가 마스킹된다.(Bag of words기준, 즉 uniqueness 기준)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Input: the man [MASK1] to [MASK2] store&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Label: [MASK1] = went; [MASK2] = a&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Dionne</name></author></entry><entry><title type="html">Digital Product School week 8</title><link href="http://localhost:4000/2020/02/dps-week8/" rel="alternate" type="text/html" title="Digital Product School week 8" /><published>2020-02-24T00:00:00+01:00</published><updated>2020-02-24T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week8</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week8/">&lt;p&gt;The 8th week retropect at Digital Product School&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Week 8 - Ship your MVP&lt;/strong&gt;&lt;/p&gt;
 
@@ -68,15 +268,7 @@ This daily stand-up helps us to synchronize each part’s process so that we can
 
 &lt;h1 class=&quot;no_toc&quot; id=&quot;thursday&quot;&gt;Thursday&lt;/h1&gt;
 
-&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 8th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week8/gate.png" /></entry><entry><title type="html">fast.ai nlp lesson10</title><link href="http://localhost:4000/2020/02/fast.ai-nlp-note-10/" rel="alternate" type="text/html" title="fast.ai nlp lesson10" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/fast.ai-nlp-note-10</id><content type="html" xml:base="http://localhost:4000/2020/02/fast.ai-nlp-note-10/">&lt;ul&gt;
-  &lt;li&gt;French language model, &lt;a href=&quot;https://github.com/piegu&quot;&gt;piegu&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://medium.com/@pierre_guillou/nlp-fastai-french-language-model-d0e2a9e12cab&quot;&gt;Midium article&lt;/a&gt;&amp;lt;/br&amp;gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://github.com/piegu/language-models/tree/master/models&quot;&gt;Repository of pre-trained Language Models&lt;/a&gt;&amp;lt;/br&amp;gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://twitter.com/pierre_guillou/status/1175054315804864517?s=20&quot;&gt;twitter post&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">French language model, piegu Midium article&amp;lt;/br&amp;gt; Repository of pre-trained Language Models&amp;lt;/br&amp;gt; twitter post</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/ulmfit.png" /></entry><entry><title type="html">Digital Product School week 5</title><link href="http://localhost:4000/2020/02/dps-week5/" rel="alternate" type="text/html" title="Digital Product School week 5" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week5</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week5/">&lt;p&gt;The 5th week retropect at Digital Product School&lt;/p&gt;
+&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 8th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week8/gate.png" /></entry><entry><title type="html">Digital Product School week 5</title><link href="http://localhost:4000/2020/02/dps-week5/" rel="alternate" type="text/html" title="Digital Product School week 5" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week5</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week5/">&lt;p&gt;The 5th week retropect at Digital Product School&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Week 5 - Create a Storymap and sync it with Lean Canvas&lt;/strong&gt;&lt;/p&gt;
 
@@ -196,7 +388,15 @@ These are suggestion of possibilities, so don’t attached to feasibility (we wi
 
 &lt;h1 class=&quot;no_toc&quot; id=&quot;thursday&quot;&gt;Thursday&lt;/h1&gt;
 
-&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 5th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week5/user-storymap.png" /></entry><entry><title type="html">fast.ai lesson03</title><link href="http://localhost:4000/2020/02/fastai-lesson03/" rel="alternate" type="text/html" title="fast.ai lesson03" /><published>2020-02-08T00:00:00+01:00</published><updated>2020-02-08T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/fastai-lesson03</id><content type="html" xml:base="http://localhost:4000/2020/02/fastai-lesson03/">&lt;h3 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h3&gt;
+&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 5th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week5/user-storymap.png" /></entry><entry><title type="html">fast.ai nlp lesson10</title><link href="http://localhost:4000/2020/02/fast.ai-nlp-note-10/" rel="alternate" type="text/html" title="fast.ai nlp lesson10" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/fast.ai-nlp-note-10</id><content type="html" xml:base="http://localhost:4000/2020/02/fast.ai-nlp-note-10/">&lt;ul&gt;
+  &lt;li&gt;French language model, &lt;a href=&quot;https://github.com/piegu&quot;&gt;piegu&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/@pierre_guillou/nlp-fastai-french-language-model-d0e2a9e12cab&quot;&gt;Midium article&lt;/a&gt;&amp;lt;/br&amp;gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/piegu/language-models/tree/master/models&quot;&gt;Repository of pre-trained Language Models&lt;/a&gt;&amp;lt;/br&amp;gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://twitter.com/pierre_guillou/status/1175054315804864517?s=20&quot;&gt;twitter post&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">French language model, piegu Midium article&amp;lt;/br&amp;gt; Repository of pre-trained Language Models&amp;lt;/br&amp;gt; twitter post</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/ulmfit.png" /></entry><entry><title type="html">fast.ai lesson03</title><link href="http://localhost:4000/2020/02/fastai-lesson03/" rel="alternate" type="text/html" title="fast.ai lesson03" /><published>2020-02-08T00:00:00+01:00</published><updated>2020-02-08T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/fastai-lesson03</id><content type="html" xml:base="http://localhost:4000/2020/02/fastai-lesson03/">&lt;h3 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h3&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#unet&quot; id=&quot;markdown-toc-unet&quot;&gt;Unet&lt;/a&gt;&lt;/li&gt;
@@ -354,38 +554,15 @@ It can also be automatically invoked through Learner.export via its destroy=True
 
 &lt;h1 class=&quot;no_toc&quot; id=&quot;thursday&quot;&gt;Thursday&lt;/h1&gt;
 
-&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 4th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week4/week4-ourteam.JPG" /></entry><entry><title type="html">Retrospect of ACL 2020 paper writing</title><link href="http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020/" rel="alternate" type="text/html" title="Retrospect of ACL 2020 paper writing" /><published>2020-01-29T00:00:00+01:00</published><updated>2020-01-29T00:00:00+01:00</updated><id>http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020</id><content type="html" xml:base="http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020/">&lt;ol&gt;
-  &lt;li&gt;retrosprect of acl2020&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 4th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week4/week4-ourteam.JPG" /></entry><entry><title type="html">Retrospect of ACL 2020 paper writing</title><link href="http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020/" rel="alternate" type="text/html" title="Retrospect of ACL 2020 paper writing" /><published>2020-01-29T00:00:00+01:00</published><updated>2020-01-29T00:00:00+01:00</updated><id>http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020</id><content type="html" xml:base="http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020/">&lt;p&gt;2020 Annual Conference of the Association for Computational Linguistics&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;why i didn’t choose cebuano?
-there was no language choice except google translation. to my fault, i already consult my research, so after i knew the fact i should change the native speaker.
-in the time i heard there was a political pressure in between LO so i felt i could do nothing in front of unbeatable, untouchable thing that even would never researched.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;why-i-cant-use-cebuano-for-the-research&quot;&gt;Why I can’t use ‘Cebuano’ for the research?&lt;/h3&gt;
 
-&lt;p&gt;how can i say, meta-discrimination?&lt;/p&gt;
+&lt;p&gt;Why I had to change target language from ‘Cebuano’ to ‘Tagalog’?
+-&amp;gt; No language translator options except google translation. But before knowing that I already consult my friend, whose mother tongue is English. So I had to aplogize her, but couldn’t tell her why suddenly I changed my plan.
+-&amp;gt; I realized there are many languages even can’t be researched at all..&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;music streaming service but, it was not available in korea, and i thought it is discrimination for the first time, but it was not. i realized i was in mood, and got afraid this kind of circumstance make me more blind&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Retrospect of  university life&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;now I’m on my flight, about 10 hours, to the munich (technically, it’s on Helsinky)
-3 months ago, i got rejected to this academy for not that fluent,&lt;/p&gt;
-
-&lt;p&gt;a year ago I was writing my dissertation paper, on Pycon Korea Committe(contacting someone to plasirism), Semantic Role Label detection competition by Naver &amp;amp; Changwon Univ. There, first time i used npm. did the part time job (python tutoring, 수능 tutor)&lt;/p&gt;
-
-&lt;p&gt;2 years ago, I was with bomin, and doing 하청/외주 from W-surgery and got to know il-hyun. He and i still remind that day, that peaceful day, with no worries, just each other.&lt;/p&gt;
-
-&lt;p&gt;So, why am I here? how could i come to go munich, alone?&lt;/p&gt;
-
-&lt;p&gt;And, I, still wonder, is this what I want? in my life? am i self-decisive women?&lt;/p&gt;</content><author><name>dionne</name></author><summary type="html">retrosprect of acl2020</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/acl2020.png" /></entry><entry><title type="html">Fine Grained Classification</title><link href="http://localhost:4000/2019/12/lesson1-fastai/" rel="alternate" type="text/html" title="Fine Grained Classification" /><published>2019-12-31T00:00:00+01:00</published><updated>2019-12-31T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/lesson1-fastai</id><content type="html" xml:base="http://localhost:4000/2019/12/lesson1-fastai/">&lt;p&gt;Finally you can solve the mystery behind this weird drawing.. through this course.&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;-&amp;gt; Getting accustomed to discrimination makes misunderstanding, sometimes. At my country, we couldn’t use music streaming service, because of legal problem. But at that moment, I thought it was discrimination, which is done by music company.&lt;/p&gt;</content><author><name>dionne</name></author><summary type="html">2020 Annual Conference of the Association for Computational Linguistics</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/acl2020.png" /></entry><entry><title type="html">Fine Grained Classification</title><link href="http://localhost:4000/2019/12/lesson1-fastai/" rel="alternate" type="text/html" title="Fine Grained Classification" /><published>2019-12-31T00:00:00+01:00</published><updated>2019-12-31T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/lesson1-fastai</id><content type="html" xml:base="http://localhost:4000/2019/12/lesson1-fastai/">&lt;p&gt;Finally you can solve the mystery behind this weird drawing.. through this course.&lt;br /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;juptyer-notebook-magic&quot;&gt;juptyer notebook magic&lt;/h4&gt;
 
@@ -1186,221 +1363,4 @@ One of the concepts I have to know.&lt;/p&gt;
       &lt;p&gt;&lt;a href=&quot;https://youtu.be/hkBa9pU-H48?t=4937&quot;&gt;stack kernel and make new rank of tensor at output, Lesson06-2019&lt;/a&gt; &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><summary type="html">This is the part of Journey which Jeremy recommended us to do. One of the concepts I have to know.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn-jiwon.png" /></entry><entry><title type="html">Making a classifier with gooogle img (Cebu / Munich / Seoul)</title><link href="http://localhost:4000/2019/12/classifier-city/" rel="alternate" type="text/html" title="Making a classifier with gooogle img (Cebu / Munich / Seoul)" /><published>2019-12-15T00:00:00+01:00</published><updated>2019-12-15T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/classifier-city</id><content type="html" xml:base="http://localhost:4000/2019/12/classifier-city/">&lt;p&gt;Code can be found &lt;a href=&quot;https://github.com/SpellOnYou/dlff-note/blob/master/toy-project/What_is_your_city_lesson02.ipynb&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Making a classifier which can distinguish &lt;span style=&quot;color: red&quot;&gt;Seoul&lt;/span&gt; from &lt;span style=&quot;color: red&quot;&gt;Munich&lt;/span&gt; and &lt;span style=&quot;color: red&quot;&gt;Cebu&lt;/span&gt;!
-(hoping my well in Munich!🤟, and I love Cebu)&lt;/p&gt;
-
-&lt;h3 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h3&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#1-creating-dataset-from-google-images&quot; id=&quot;markdown-toc-1-creating-dataset-from-google-images&quot;&gt;1. Creating dataset from google images&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#11-using-google_images_download&quot; id=&quot;markdown-toc-11-using-google_images_download&quot;&gt;1.1 Using &lt;code class=&quot;highlighter-rouge&quot;&gt;google_images_download&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#12-create-imagedatabunch&quot; id=&quot;markdown-toc-12-create-imagedatabunch&quot;&gt;1.2 Create ImageDataBunch&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#2-train-model&quot; id=&quot;markdown-toc-2-train-model&quot;&gt;2. Train model&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#23-fit_one_cycle&quot; id=&quot;markdown-toc-23-fit_one_cycle&quot;&gt;2.3 fit_one_cycle()&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#24-find_rl&quot; id=&quot;markdown-toc-24-find_rl&quot;&gt;2.4 find_rl()&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#3-interpretation&quot; id=&quot;markdown-toc-3-interpretation&quot;&gt;3. Interpretation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#4-cleaning-up&quot; id=&quot;markdown-toc-4-cleaning-up&quot;&gt;4. Cleaning Up&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#5-putting-your-model-in-production&quot; id=&quot;markdown-toc-5-putting-your-model-in-production&quot;&gt;5. Putting your model in production&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;1-creating-dataset-from-google-images&quot;&gt;1. Creating dataset from google images&lt;/h3&gt;
-
-&lt;p&gt;You can use either URLs or &lt;code class=&quot;highlighter-rouge&quot;&gt;google_images_download&lt;/code&gt; package. Since &lt;a href=&quot;&quot;&gt;Jeremy explained specifically&lt;/a&gt;, I will try the other.&lt;/p&gt;
-
-&lt;h4 id=&quot;11-using-google_images_download&quot;&gt;1.1 Using &lt;code class=&quot;highlighter-rouge&quot;&gt;google_images_download&lt;/code&gt;&lt;/h4&gt;
-
-&lt;p&gt;note: &lt;em&gt;This is not google official package&lt;/em&gt; &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Refer to &lt;a href=&quot;https://google-images-download.readthedocs.io/en/latest/index.html&quot;&gt;Official Doncument&lt;/a&gt;, put that arguments.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;google_images_download&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;google_images_download&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;google_images_download&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;googleimagesdownload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;#class instantiation
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;abspath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'../../materials/dataset/pkg/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;keywords&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Cebu,Munich,Seoul&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-             &lt;span class=&quot;s&quot;&gt;&quot;print_urls&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-             &lt;span class=&quot;s&quot;&gt;&quot;suffix_keywords&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;city&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-             &lt;span class=&quot;s&quot;&gt;&quot;output_directory&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-             &lt;span class=&quot;s&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;photo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;paths&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;download&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;#passing the arguments to the function
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paths&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;and if you need, here is &lt;a href=&quot;https://github.com/hardikvasa/google-images-download/blob/master/google_images_download/google_images_download.py&quot;&gt;main&lt;/a&gt; code.&lt;/p&gt;
-
-&lt;h4 id=&quot;12-create-imagedatabunch&quot;&gt;1.2 Create ImageDataBunch&lt;/h4&gt;
-
-&lt;p&gt;We need to separate validation set because we just &lt;em&gt;grabbed&lt;/em&gt; these imagese from Google.&lt;br /&gt; Most of the dataset we use (kaggle/research) splited into &lt;code class=&quot;highlighter-rouge&quot;&gt;train / validation / test&lt;/code&gt;&lt;br /&gt; so if they are not devided beforehand we should make databunch, and Jeremy recommended assign 20% to validation.&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Help&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verify_images&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fastai&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vision&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;verify_images&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pathlib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_workers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recurse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pathlib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_channels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;interp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img_format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resume&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kwargs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Check&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;images&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`path`&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aren&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'t broken, maybe resize them and copy it in `dest`.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Data from &lt;strong&gt;google image url&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/02-url.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Data from &lt;strong&gt;package&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/02-pkg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;2-train-model&quot;&gt;2. Train model&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;len(class)&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;len(train)&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;len(valid)&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Data_url&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;432&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;108&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Data_pkg&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;216&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;53&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;
-Uisng model: &lt;strong&gt;restnet34&lt;/strong&gt; &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; , Measurement: &lt;strong&gt;accuracy&lt;/strong&gt; &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;23-fit_one_cycle&quot;&gt;2.3 fit_one_cycle()&lt;/h4&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Help&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;method&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fit_one_cycle&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fastai&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;fit_one_cycle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cyc_len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_lr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;slice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;slice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.003&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;moms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Tuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.95&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.85&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;div_factor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;25.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pct_start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;final_div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;callbacks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fastai&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NoneType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tot_epochs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start_epoch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;method&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fastai&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basic_train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Learner&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Fit&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;following&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cycle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;policy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; epoch &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; train_loss &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; valid_loss &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; error_rate &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; time &lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1.964414&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1.207057&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0.583333&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;00:04&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1.722742&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1.476875&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0.481481&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1.541905&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1.656574&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0.537037&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1.442706&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1.680708&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0.546296&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; epoch &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; train_loss &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; valid_loss &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; error_rate &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; time &lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2.334755&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1.945266&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0.566038&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1.751931&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1.366638&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0.415094&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1.527215&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1.165065&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0.396226&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1.317051&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1.108083&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0.339623&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h4 id=&quot;24-find_rl&quot;&gt;2.4 find_rl()&lt;/h4&gt;
-
-&lt;p&gt;This section you should find the strongest downward slope that kind of sticking around for quite a while.&lt;/p&gt;
-
-&lt;p&gt;(to be continued to the other lectures)&lt;/p&gt;
-
-&lt;h3 id=&quot;3-interpretation&quot;&gt;3. Interpretation&lt;/h3&gt;
-&lt;h3 id=&quot;4-cleaning-up&quot;&gt;4. Cleaning Up&lt;/h3&gt;
-&lt;h3 id=&quot;5-putting-your-model-in-production&quot;&gt;5. Putting your model in production&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 class=&quot;no_toc&quot; id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.pyimagesearch.com/2017/12/04/how-to-create-a-deep-learning-dataset-using-google-images/&quot;&gt;How to create a deep learning dataset using Google Images&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1512.03385&quot;&gt;Deep Residual Learning for Image Recognition&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Accuracy_and_precision&quot;&gt;Accuracy_and_precision&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">Code can be found here</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/munich2.jpg" /></entry></feed>
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><summary type="html">This is the part of Journey which Jeremy recommended us to do. One of the concepts I have to know.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn-jiwon.png" /></entry></feed>

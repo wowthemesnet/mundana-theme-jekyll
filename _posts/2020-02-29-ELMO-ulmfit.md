@@ -1,36 +1,25 @@
 ---
 layout: post
-title: ELMO, OpenAI GPT, BERT (How these models outperformed their counterparts) - Model Part
-modified: 2019-01-17
-categories: 
-comments: true
+title: "ELMO, OpenAI GPT, BERT (How these models outperformed their counterparts)
+author: dionne
+categories: [ General ]
+image: assets/images/language-models.png
 ---
 
 ### CONTENTS
 {: .no_toc}
 
-* [MODEL](model)
+* [ELMo](elmo)
 {:toc}
 
-**In the model part, I will talk about model more specific**
-
 ---
-
-## MODEL
-
-1. [**ELMO**](#elmo)
-2. [**Transformer**](#transformer)
-3. [**OpenAI GPT**](#openai-gpt)
-4. [**BERT**](bert)
 
 
 ### when there are released?
 
-`Transformer : June 2, 2017. Google released paper called **Attention is all you need**`
-`ELMo : Feburuary 15, 2018. AllenNLP published paper which explains pre-trained language model`
-`BERT : October 11th 2018. Published by Google. It changed leaderboard of The General Language Understanding Evaluation benchmark (GLUE) and also showed language model can be task-general.`
+*BERT : October 11th 2018. Published by Google. It changed leaderboard of The General Language Understanding Evaluation benchmark (GLUE)*
 
-- 이들은 모두 현재 주목받고 있는 모델이며, Bidirectional이란 특징이 있다. 다들 아시겠지만, bidirectional이라고 해서 다 같은 것이 아니다.
+These models are all bi-directional, which means a model is trained to predict a next words, and also do it in opposite direction.
 
 - 예컨대 한 문장에서 다음에 올 단어를 예측하는 과제가 있다고 하면, Input에 left-to-right과 right-to-left를 모두 넣어주는 것은 답을 제시한다는 것과 같다.
 
@@ -43,30 +32,37 @@ _bidirectionality가 왜 필요한가?_ 에 대해서는 추후 글을 작성할
 
 
 
-### 1. ELMo
+### ELMo
 
-논문 : 2018. 2. 15, [Deep contextualized word representations
-](https://arxiv.org/abs/1802.05365)
+Paper - [Deep contextualized word representations](https://arxiv.org/abs/1802.05365)<br />
 
-소스코드 : Allen NLP [Github](https://github.com/allenai/allennlp)
+Source code - Allen NLP [Github](https://github.com/allenai/allennlp)<br />
 
+*ELMo : 15 Feb 2018, Allenlp published paper which explains pre-trained language model* <br />
 
-
-
-
-### 2. Transformer
-논문 : 2017. 6. 2, [Attention-is-all-you-need]()에서 소개한 모델이다.
-소스코드 : tensorflow tensor2tensor [Github](https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/models/transformer.py)
-
-- Transformer는 후에 BERT architecture의 기반이 된다. 이 논문의 경우 2017에 공개됐다.
-- Transformer 모델을 이해하기 위해서는 Self-attention Mechanism 이해 또한 수반되어야 한다.이는 [A Structured Self-attentive Sentence Embedding](https://arxiv.org/abs/1703.03130) 논문을 참고하면 좋다.
-- 기타 소스코드 : [Pytorch](https://github.com/jadore801120/attention-is-all-you-need-pytorch), [Kyubyong](https://github.com/Kyubyong/transformer)
+ELMo, which was released by allenNLP, changed the rule of NLP, because they used pre-trained language model when they embeded words. This mechanism solved the problem of word embedding models, 
+Why ‘pre-trained language model’?<br />
+- Achieved great performance on a variety of language tasks.
+- similar to how ImageNet classification pre-training helps many vision tasks (*)
+- Even better than CV tasks, it does not require labeled data for pre-training.
 
 
 
+### Transformer
+
+Paper - [Attention is all you need]()
+Code - Tensorflow: tensor2tensor, [Github](https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/models/transformer.py), [Pytorch:](https://github.com/jadore801120/attention-is-all-you-need-pytorch)
+
+*Transformer : 2 Jun, 2017. Google released paper called **Attention is all you need***
 
 
-### 3. OpenAI-GPT
+Transformer, which becomes basis of BERT, is provided fundamental architecture of language model. To be sure, model BERT and Transformer is not that different except masking and datasets. Then, what is Transformer? First, you should understand **self-attention**, and for that, you can refer to [A Structured Self-attentive Sentence Embedding](https://arxiv.org/abs/1703.03130) paper.
+
+- Transformer 모델을 이해하기 위해서는 Self-attention Mechanism 이해 또한 수반되어야 한다.이는  논문을 참고하면 좋다.
+- 기타 소스코드 : , [Kyubyong](https://github.com/Kyubyong/transformer)
+
+
+### OpenAI-GPT
 논문 : [Improving Language Understanding with Unsupervised Learning](https://blog.openai.com/language-unsupervised/)
 소스코드 : [Github](https://github.com/openai/finetune-transformer-lm)
 
@@ -75,10 +71,7 @@ _bidirectionality가 왜 필요한가?_ 에 대해서는 추후 글을 작성할
 - 기타 소스코드 : [Pytorch](https://github.com/huggingface/pytorch-openai-transformer-lm)
 
 
-
-
-
-### 4. BERT
+### BERT
 논문 : [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
 ](https://arxiv.org/abs/1810.04805)
 
@@ -184,10 +177,3 @@ Machine Translation 문제까지 확대할 것이니, 원어가 영어인 가벼
 > Input: the man [MASK1] to [MASK2] store
 
 > Label: [MASK1] = went; [MASK2] = a
-
-
----
-
-- Pytorch
-- 
-

@@ -7,6 +7,8 @@ image: assets/images/evans.jpg
 tags: [  ]
 ---
 
+## This is journey to find out 'who am I trying to be?'
+
 The women who surprised me in many ways.<br />
 First, she approached me to teaching some concepts drawing cartoons.<br />
 It was at Hackers news, which was hightest ranks.<br />

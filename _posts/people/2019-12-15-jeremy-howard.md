@@ -7,11 +7,18 @@ image: assets/images/jeremy-howard.jpeg
 tags: [ featured ]
 ---
 
+## This is journey to find out 'who am I trying to be?'
+
+
 How he impacted me?
 
-- The person who made me start Computer Vision again. He said, "It's not just something I can throw away. NLP and computer vision a few weeks apart and that's going to force your brain to realize like 'oh I have to remember this'"
+- The person who made me start Computer Vision again. He emphasized the importance of studying NLP and Computer together to understand the deep-learning. He didn't order it to study, but always he pursuade me with reasonable way.
 
-- "Keep going.  You're not expected to remember everything. Yet.  You're not expected to understand everything. Yet. You're not expected to know why everything works.  Yet."
+> "It's not just something I can throw away. NLP and computer vision a few weeks apart and that's going to force your brain to realize like 'oh I have to remember this'"
+
+- He made me admit my failure in deep-learning. I started to objectify where am I. What should I do when I'm frustrated. 
+
+> "Keep going. You're not expected to remember everything. Yet.  You're not expected to understand everything. Yet. You're not expected to know why everything works.  Yet."
 
 - His articles are numerous, below.
     - [What is torch.nn Really?](https://pytorch.org/tutorials/beginner/nn_tutorial.html)

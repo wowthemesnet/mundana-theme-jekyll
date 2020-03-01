@@ -6,6 +6,8 @@ categories: [ People in the World ]
 image: assets/images/29.jpg
 ---
 
+## This is journey to find out 'who am I trying to be?'
+
 For creative-minded people, Istanbul is a treasure.' Photo © Chris Boland, licensed under [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)
 
 >> it suddenly felt like what I was trying to convey was more complicated and detailed than what the circumstances allowed me to say.

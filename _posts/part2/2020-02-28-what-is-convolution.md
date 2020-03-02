@@ -7,8 +7,7 @@ image: assets/images/cnn-jiwon.png
 tags: [ feature ]
 ---
 
-This is the part of Journey which Jeremy recommended us to do.
-One of the concepts I have to know.
+Issues
 
 1) Kaiming Initializtion in Pytorch was in trouble.[^1]
 2) Jeremy started to dig in, in lesson09, but I didn't know why the size of tensor is [^5x5x5] and even understand this spreadsheet data.[^conv]

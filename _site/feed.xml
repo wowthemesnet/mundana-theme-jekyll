@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-02T18:04:46+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Gradient backward, Chain Rule, Refactoring</title><link href="http://localhost:4000/2020/03/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward, Chain Rule, Refactoring" /><published>2020-03-02T00:00:00+01:00</published><updated>2020-03-02T00:00:00+01:00</updated><id>http://localhost:4000/2020/03/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-4/">&lt;ul&gt;
-  &lt;li&gt;this node is divided into 4 section&lt;/li&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-02T18:09:49+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Gradient backward, Chain Rule, Refactoring</title><link href="http://localhost:4000/2020/03/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward, Chain Rule, Refactoring" /><published>2020-03-02T00:00:00+01:00</published><updated>2020-03-02T00:00:00+01:00</updated><id>http://localhost:4000/2020/03/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-4/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
+&lt;ul&gt;
   &lt;li&gt;Section1: What is the meaning of ‘deep-learning from foundations?’&lt;/li&gt;
   &lt;li&gt;Section2: What’s inside Pytorch Operator?&lt;/li&gt;
   &lt;li&gt;Section3: Implement forward&amp;amp;backward pass from scratch&lt;/li&gt;
@@ -10,11 +10,7 @@
 &lt;h3 class=&quot;no_toc&quot; id=&quot;homework&quot;&gt;Homework&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://explained.ai/matrix-calculus/index.html&quot;&gt;calculus for machine learning&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;based on weight…&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://explained.ai/matrix-calculus/index.html&quot;&gt;calculus for machine learning&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://rockt.github.io/2018/04/30/einsum&quot;&gt;einsum convention&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -466,7 +462,7 @@ def backward(self):
       &lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/34439/finding-what-methods-a-python-object-has/34452#34452&quot;&gt;stackoverflow - finding methods a object has&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><summary type="html">this node is divided into 4 section Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/4-backward.png" /></entry><entry><title type="html">Implement forward&amp;amp;backward pass from scratch</title><link href="http://localhost:4000/2020/03/note08-fastai-3/" rel="alternate" type="text/html" title="Implement forward&amp;backward pass from scratch" /><published>2020-03-01T00:00:00+01:00</published><updated>2020-03-01T00:00:00+01:00</updated><id>http://localhost:4000/2020/03/note08-fastai-3</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-3/">&lt;h3 id=&quot;1-the-forward-and-backward-passes&quot;&gt;1. The forward and backward passes&lt;/h3&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/4-classlin.png" /></entry><entry><title type="html">Implement forward&amp;amp;backward pass from scratch</title><link href="http://localhost:4000/2020/03/note08-fastai-3/" rel="alternate" type="text/html" title="Implement forward&amp;backward pass from scratch" /><published>2020-03-01T00:00:00+01:00</published><updated>2020-03-01T00:00:00+01:00</updated><id>http://localhost:4000/2020/03/note08-fastai-3</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-3/">&lt;h3 id=&quot;1-the-forward-and-backward-passes&quot;&gt;1. The forward and backward passes&lt;/h3&gt;
 
 &lt;h4 id=&quot;11-normalization&quot;&gt;1.1 Normalization&lt;/h4&gt;
 

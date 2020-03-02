@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dig into convolution"
+title: "Digging into convolution"
 author: dionne
 categories: [Fast.AI-v3]
 image: assets/images/cnn-jiwon.png

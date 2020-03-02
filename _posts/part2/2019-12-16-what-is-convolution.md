@@ -4,7 +4,7 @@ title: "fast.ai lesson08"
 author: dionne
 categories: [Fast.AI-v3]
 image: assets/images/cnn-jiwon.png
-tags: [ sticky ]
+tags: [ feature ]
 ---
 
 This is the part of Journey which Jeremy recommended us to do.

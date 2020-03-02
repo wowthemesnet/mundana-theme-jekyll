@@ -1,4 +1,504 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-02T17:18:07+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Digital Product School week 8</title><link href="http://localhost:4000/2020/02/dps-week8/" rel="alternate" type="text/html" title="Digital Product School week 8" /><published>2020-02-24T00:00:00+01:00</published><updated>2020-02-24T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week8</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week8/">&lt;p&gt;The 8th week retropect at Digital Product School&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-02T17:54:56+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">What’s inside Pytorch Operator?</title><link href="http://localhost:4000/2020/03/note08-fastai-2/" rel="alternate" type="text/html" title="What's inside Pytorch Operator?" /><published>2020-03-02T00:00:00+01:00</published><updated>2020-03-02T00:00:00+01:00</updated><id>http://localhost:4000/2020/03/note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-2/">&lt;h2 id=&quot;whats-inside-pytorch-operator&quot;&gt;What’s inside Pytorch Operator?&lt;/h2&gt;
+
+&lt;p&gt;Section02&lt;/p&gt;
+
+&lt;h3 class=&quot;no_toc&quot; id=&quot;time-comparison-with-pure-python&quot;&gt;Time comparison with pure Python&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Matmul with broadcasting&lt;br /&gt;
+&amp;gt; 3194.95 times faster&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Einstein summation&lt;br /&gt;
+&amp;gt; 16090.91 times faster&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pytorch’s operator&lt;br /&gt;
+&amp;gt; 49166.67 times faster&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;1-elementwise-op&quot;&gt;1. Elementwise op&lt;/h3&gt;
+
+&lt;h4 id=&quot;11-frobenius-norm&quot;&gt;1.1 Frobenius norm&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/7.png&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;above converted into &lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plus, don’t suffer from mathmatical symbols. He also copy and paste that equations from wikipedia.&lt;/li&gt;
+  &lt;li&gt;and if you need latex form, download it from archive.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-elementwise-matmul&quot;&gt;2. Elementwise Matmul&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What is the meaning of elementwise?&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We do not calculate each component. But all of the component at once. Because, length of column of A and row of B are fixed.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How much time we saved?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;So now that takes 1.37ms. We have removed one line of code and it is a 178 times faster…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;#TODO
+I don’t know where the &lt;code class=&quot;highlighter-rouge&quot;&gt;5&lt;/code&gt; from. but keep it.
+Maybe this is related with frobenius norm…?
+as a result, &lt;strong&gt;the code before&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;the code after&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To compare it (result betweet &lt;em&gt;original&lt;/em&gt; and &lt;em&gt;adjusted&lt;/em&gt; version) we use not test_eq but other function. The reason for this is that due to rounding errors from math operations, matrices may not be exactly the same. As a result, we want a function that will “is a equal to b &lt;strong&gt;within some tolerance&lt;/strong&gt;”&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;#export
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;near&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;allclose&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rtol&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1e-3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;atol&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1e-5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_near&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; 
+    &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;near&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;test_near&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matmul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-broadcasting&quot;&gt;3. Broadcasting&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Now, we will use the broadcasting and remove&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How it works?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
+    
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]),&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+         
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&amp;lt;Figure 2&amp;gt; demonstrated how array &lt;strong&gt;b&lt;/strong&gt; is broadcasting(or copied but not occupy memory) to compatible with &lt;strong&gt;a&lt;/strong&gt;. &lt;em&gt;Refered from &lt;a href=&quot;https://www.tutorialspoint.com/numpy/numpy_broadcasting.htm&quot;&gt;numpy_tutorial&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;there is no loop, but it seems there is exactly the loop.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;This is not from jeremy (actually after a moment he cover it) but i wondered How to broadcast an array by columns?&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;tensor([[11, 11, 11],
+        [22, 22, 22],
+        [33, 33, 33]])&lt;/em&gt;s&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What is tensor.stride()?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;help&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stride&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Help on built-in function stride:&lt;br /&gt;
+    stride(…) method of torch.&lt;br /&gt;
+Tensor instance&lt;br /&gt;
+stride(dim) -&amp;gt; tuple or int&lt;br /&gt;
+Returns the stride of :attr:’self’ tensor.&lt;br /&gt;
+Stride is the jump necessary to go from one element to the next one in the specified dimension :attr:’dim’.&lt;br /&gt;
+A tuple of all strides is returned when no argument is passed in.&lt;br /&gt;
+Otherwise, an integer value is returned as the stride in the particular dimension :attr:’dim’.&lt;br /&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Args:
+    dim (int, optional): the desired dimension in which stride is required
+Example::*&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stride&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stride&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stride&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;unsqueeze &amp;amp; None index&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;We can manipulate rank of tensor&lt;/li&gt;
+  &lt;li&gt;Special value ‘None’, which means please squeeze a new axis here&lt;br /&gt;
+&lt;strong&gt;== please broadcast here&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;in c, &lt;em&gt;squeeze a new axis in here please.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;22-matmul-with-broadcasting&quot;&gt;2.2 Matmul with broadcasting&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#   c[i,j] = (a[i,:]).          *[:,j].sum() #previous
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unsqueeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;And Using &lt;code class=&quot;highlighter-rouge&quot;&gt;None&lt;/code&gt; also (As howard teached)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unsqueeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#howard
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][:,&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# using None
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:,&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;⭐️Tips🌟  &lt;br /&gt;
+1) &lt;em&gt;Anytime there’s a trailinng(final) colon in numpy or pytorch you can delete it&lt;/em&gt;
+  &lt;em&gt;ex) c[i, :] = c [i]&lt;/em&gt;
+2) any number of colon commas at the start, you can switch it with the single elipsis.
+  &lt;em&gt;ex) c[:,:,:,:,i] = c […,i]&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;23-broadcasting-rules&quot;&gt;2.3 Broadcasting Rules&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What if we &lt;code class=&quot;highlighter-rouge&quot;&gt;tensor.size([1,3]) * tensor.size([3,1])&lt;/code&gt;?
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is scale????&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What if they are one array is &lt;code class=&quot;highlighter-rouge&quot;&gt;times&lt;/code&gt; of the other array?
+ &lt;br /&gt; ex) 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Image : 256 x 256 x 3&lt;/code&gt;&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Scale : 128 x 256 x 3&lt;/code&gt;&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Result: ?&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why I did not inserted axis via None, but happened broadcasting? &lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;100.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;200.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;300.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;200.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;400.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;600.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;300.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;600.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;900.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;maybe it broadcast cz following array has 3 rows&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;as same principle, no matter what nature shape was, &lt;em&gt;if we do the operation&lt;/em&gt; tensor broadcasts to the other.&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-einstein-summation&quot;&gt;3. Einstein summation&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/this-is-einsum.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Creates batch-wise, remove inner most loop, and replaced it with an elementwise product
+a.k.a&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;inner most loop&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;elementwise product&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Because K is repeated so we do a dot product. And it is torch.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Usage of &lt;a href=&quot;https://pytorch.org/docs/stable/torch.html#torch.einsum&quot;&gt;einsum()&lt;/a&gt;
+1) transpose
+2) diagnalisation tracing
+3) batch-wise (matmul)&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;einstein summation notation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;matmul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;einsum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'ik,kj-&amp;gt;ij'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;so after all, we are now 16000 times faster than Python.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-pytorch-op&quot;&gt;4. Pytorch op&lt;/h3&gt;
+
+&lt;p&gt;49166.67 times faster than pure python&lt;/p&gt;
+
+&lt;p&gt;And we will use this matrix multiplication in Fully Connect forward, with some initialized parameters and ReLU.&lt;/p&gt;
+
+&lt;p&gt;But before that, we need initialized parameters and ReLU,&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;footnote&quot;&gt;Footnote&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mathworld.wolfram.com/TensorRank.html&quot;&gt;TensorRank&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forums.fast.ai/t/forum-markdown-notes-lesson-8/41896&quot;&gt;ti note&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Frobenius Norm Review&lt;/li&gt;
+  &lt;li&gt;Broadcasting Review (especially &lt;em&gt;&lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.13.0/user/basics.broadcasting.html#general-broadcasting-rules&quot;&gt;Rule&lt;/a&gt;&lt;/em&gt;)
+    &lt;ul&gt;
+      &lt;li&gt;Refer &lt;a href=&quot;https://render.githubusercontent.com/view/ipynb?commit=2bfe4a95aac864b23bd0c0729d2720c92e169f8c&amp;amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f5370656c6c4f6e596f752f646c66662d6e6f74652f326266653461393561616338363462323362643063303732396432373230633932653136396638632f6e62732f646c322f30315f6d61746d756c5f70726163746963652e6970796e62&amp;amp;nwo=SpellOnYou%2Fdlff-note&amp;amp;path=nbs%2Fdl2%2F01_matmul_practice.ipynb&amp;amp;repository_id=221963162&amp;amp;repository_type=Repository#Broadcasting&quot;&gt;colab!&lt;/a&gt; (I totally confused with extension of arrays)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;torch.allclose Review&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.scipy.org/doc/numpy/reference/generated/numpy.einsum.html&quot;&gt;np.einsum Review&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;h&lt;/p&gt;</content><author><name>dionne</name></author><category term="feature" /><summary type="html">What’s inside Pytorch Operator?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/30.png" /></entry><entry><title type="html">What is the meaning of ‘deep-learning from foundations?’</title><link href="http://localhost:4000/2020/03/note08-fastai-1/" rel="alternate" type="text/html" title="What is the meaning of 'deep-learning from foundations?'" /><published>2020-03-01T00:00:00+01:00</published><updated>2020-03-01T00:00:00+01:00</updated><id>http://localhost:4000/2020/03/note08-fastai-1</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-1/">&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;em&gt;I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 class=&quot;no_toc&quot; id=&quot;homework&quot;&gt;Homework&lt;/h3&gt;
+
+&lt;ul style=&quot;color:grey; font-size: 90%;&quot;&gt;
+  &lt;li&gt;Review concepts 16 concepts from Course 1 (lessons 1 - 7)
+(1) Affine Functions &amp;amp; non-linearities; 2) Parameters &amp;amp; activations; 3) Random initialization &amp;amp; transfer learning; 4) SGD, Momentum, Adam; 5) Convolutions; Batch-norm; 6) Dropout; 7) Data augmentation; 8) Weight decay; 9) Res/dense blocks; 10) Image classification and regression; 11)Embeddings; 12) Continuous &amp;amp; Categorical variables; 13) Collaborative filtering; 14) Language models; 15) NLP classification; 16) Segmentation; U-net; GANS)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Make sure you understand broadcasting&lt;/li&gt;
+  &lt;li&gt;Read section 2.2 in &lt;a href=&quot;https://arxiv.org/abs/1502.01852&quot;&gt;Delving Deep into Rectifiers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Try to replicate as much of the notebooks as you can without peeking; when you get stuck, peek at the lesson notebook, but then close it and try to do it yourself&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://explained.ai/matrix-calculus/index.html&quot;&gt;calculus for machine learning&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;based on weight…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rockt.github.io/2018/04/30/einsum&quot;&gt;einsum convention&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h3&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-is-going-on-in-this-course&quot; id=&quot;markdown-toc-what-is-going-on-in-this-course&quot;&gt;What is going on in this course?&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#what-is-from-foundations&quot; id=&quot;markdown-toc-what-is-from-foundations&quot;&gt;What is &lt;em&gt;‘from foundations’&lt;/em&gt;?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#steps-to-a-basic-modern-cnn-model&quot; id=&quot;markdown-toc-steps-to-a-basic-modern-cnn-model&quot;&gt;Steps to a basic modern CNN model&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#todays-implementation-goal-1-matmul---4-fc-backward&quot; id=&quot;markdown-toc-todays-implementation-goal-1-matmul---4-fc-backward&quot;&gt;Today’s implementation goal: 1) matmul -&amp;gt; 4) FC backward&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#library-development-using-jupyter-notebook&quot; id=&quot;markdown-toc-library-development-using-jupyter-notebook&quot;&gt;Library development using jupyter notebook&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#jupyter-notebook-certainly-can-make-module&quot; id=&quot;markdown-toc-jupyter-notebook-certainly-can-make-module&quot;&gt;jupyter notebook certainly can make module&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#elementwise-ops&quot; id=&quot;markdown-toc-elementwise-ops&quot;&gt;Elementwise ops&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#how-can-we-make-python-faster&quot; id=&quot;markdown-toc-how-can-we-make-python-faster&quot;&gt;How can we make python faster?&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#what-is-element-wise-operation&quot; id=&quot;markdown-toc-what-is-element-wise-operation&quot;&gt;What is element wise operation?&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#footnote&quot; id=&quot;markdown-toc-footnote&quot;&gt;Footnote&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;what-is-going-on-in-this-course&quot;&gt;What is going on in this course?&lt;/h2&gt;
+
+&lt;h3 id=&quot;what-is-from-foundations&quot;&gt;What is &lt;em&gt;‘from foundations’&lt;/em&gt;?&lt;/h3&gt;
+
+&lt;p&gt;1) Recreate fast.ai and Pytorch&lt;/p&gt;
+
+&lt;p&gt;2) using pure python
+&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Evade Overfitting&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Overfit : validation error getting worse
+&lt;del&gt;training loss &amp;lt; validation loss&lt;/del&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Know the name of the symbol you use&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;find in this page if you don’t know the symbol that you are using&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_mathematical_symbols&quot;&gt;&lt;/a&gt; or just draw it &lt;a href=&quot;http://detexify.kirelabs.org/classify.html&quot;&gt;here&lt;/a&gt; (run by ML!)&lt;/p&gt;
+
+&lt;h3 id=&quot;steps-to-a-basic-modern-cnn-model&quot;&gt;Steps to a basic modern CNN model&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1) Matrix multiplication -&amp;gt; 2) Relu/Initialization -&amp;gt; 3) Fully-connected Forward
+-&amp;gt; 4) Fully-connected Backward -&amp;gt; 5) Train loop -&amp;gt; 6) Convolution-&amp;gt; 7) Optimization -&amp;gt;
+8) Batchnormalization -&amp;gt; 9) Resnet&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;todays-implementation-goal-1-matmul---4-fc-backward&quot;&gt;Today’s implementation goal: 1) matmul -&amp;gt; 4) FC backward&lt;/h3&gt;
+
+&lt;h2 id=&quot;library-development-using-jupyter-notebook&quot;&gt;Library development using jupyter notebook&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dbader.org/blog/python-assert-tutorial&quot;&gt;what is assers?&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;jupyter-notebook-certainly-can-make-module&quot;&gt;jupyter notebook certainly can make module&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;There will be &lt;em&gt;#export&lt;/em&gt; tag that Howard (and we) want to extract&lt;/li&gt;
+  &lt;li&gt;special &lt;em&gt;notebook2script.py&lt;/em&gt; will detect sign of &lt;em&gt;#expert&lt;/em&gt; and convert following into python module
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;and test it&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;test\_eq(TEST,'test')&lt;br /&gt;test\_eq(TEST,'test1')&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;what is &lt;strong&gt;run_notebook.py&lt;/strong&gt;?
+    &lt;ul&gt;
+      &lt;li&gt;when you want to test your module in command line interface&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;		!python run\_notebook.py 01_matmul.ipynb&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Is there any difference between 1) and 2)?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;1) test -&amp;gt; test01 
+2) test01 -&amp;gt; test&lt;/p&gt;
+
+&lt;p&gt;#TODO I don’t know yet&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;look into &lt;em&gt;run_notebook.py&lt;/em&gt;, package &lt;strong&gt;fire&lt;/strong&gt; Jeremy used. What is that?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;read and run the code in a notebook, and in the process, Jeremy made &lt;a href=&quot;https://opensource.googleblog.com/2017/03/python-fire-command-line.html&quot;&gt;Python Fire&lt;/a&gt; library called!shockingly, fire takes any kind of function and converts into CLI command.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;fire library was released by Google open source, Thursday, March 2, 2017&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Get data&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;pytorch and numpy are pretty much same.&lt;/li&gt;
+  &lt;li&gt;variable c explains how many pixels there are in in MNIST, 28 pixels&lt;/li&gt;
+  &lt;li&gt;PyTorch’s &lt;em&gt;view()&lt;/em&gt; method: torch function that manipulating tensor, and squeeze() in torch &amp;amp; mathmatical operation similar function&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.oreilly.com/library/view/natural-language-processing/9781491978221/&quot;&gt;Rao &amp;amp; McMahan&lt;/a&gt; said usually this functions result in feature vector.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In part 1, you can use view function several times.
+&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Initial python model&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Which is Linear, like $Xw$(weight)$+a$(bias) $= Y$&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you don’t know hou to multiple matrix, refer this site &lt;a href=&quot;http://matrixmultiplication.xyz&quot;&gt;matmul visulization site&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How many time spends if we we use pure python&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;function &lt;span style=&quot;color:blue&quot;&gt;matmul&lt;/span&gt;, typical matrix multiplication function, takes about 1 second for calculating 1 single train data! (maybe assumed stochastic, 5 data points in validation)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;it takes about 11.36 hours to update parameters even single layer and 1 iteration! (if that was my computer, it would be 14 hours..)🤪&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;THIS is why we need to consider ‘time’&amp;amp;’space’&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is kinda slow - what if we could speed it up by 50,000 times? Let’s try!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;elementwise-ops&quot;&gt;Elementwise ops&lt;/h2&gt;
+
+&lt;h3 id=&quot;how-can-we-make-python-faster&quot;&gt;How can we make python faster?&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If we want to calculate faster, then do remove pythonic calcuation, by passing its computation down to something that is written something other than python, like pytorch.&lt;/li&gt;
+  &lt;li&gt;According to PyTorch &lt;a href=&quot;https://pytorch.org/cppdocs/#aten&quot;&gt;doc&lt;/a&gt; it  uses C++ (via ATen), so we are going to implement that function with python.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;what-is-element-wise-operation&quot;&gt;What is element wise operation?&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;items makes a pair, operate corresponding component
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;footnote&quot;&gt;Footnote&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/fastai/course-v3/blob/master/nbs/dl2/01_matmul.ipynb&quot;&gt;notebooks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/18QwDI25Lf0ld0-cEugu7LxjwTc2NRkha/view&quot;&gt;material&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://course.fast.ai/videos/?lesson=8&quot;&gt;video&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1bIPBcf-p9iqNG8BGmIVlJCFa4jEsbOZvcPXGTYe5pjI/edit#gid=0&quot;&gt;broadcasting excel&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="feature" /><summary type="html">” Lecture 08 - Deep Learning From Foundations-part2 “</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1-matmul.png" /></entry><entry><title type="html">Digital Product School week 8</title><link href="http://localhost:4000/2020/02/dps-week8/" rel="alternate" type="text/html" title="Digital Product School week 8" /><published>2020-02-24T00:00:00+01:00</published><updated>2020-02-24T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week8</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week8/">&lt;p&gt;The 8th week retropect at Digital Product School&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Week 8 - Ship your MVP&lt;/strong&gt;&lt;/p&gt;
 
@@ -68,15 +568,7 @@ This daily stand-up helps us to synchronize each part’s process so that we can
 
 &lt;h1 class=&quot;no_toc&quot; id=&quot;thursday&quot;&gt;Thursday&lt;/h1&gt;
 
-&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 8th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week8/gate.png" /></entry><entry><title type="html">fast.ai nlp lesson10</title><link href="http://localhost:4000/2020/02/fast.ai-nlp-note-10/" rel="alternate" type="text/html" title="fast.ai nlp lesson10" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/fast.ai-nlp-note-10</id><content type="html" xml:base="http://localhost:4000/2020/02/fast.ai-nlp-note-10/">&lt;ul&gt;
-  &lt;li&gt;French language model, &lt;a href=&quot;https://github.com/piegu&quot;&gt;piegu&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://medium.com/@pierre_guillou/nlp-fastai-french-language-model-d0e2a9e12cab&quot;&gt;Midium article&lt;/a&gt;&amp;lt;/br&amp;gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://github.com/piegu/language-models/tree/master/models&quot;&gt;Repository of pre-trained Language Models&lt;/a&gt;&amp;lt;/br&amp;gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://twitter.com/pierre_guillou/status/1175054315804864517?s=20&quot;&gt;twitter post&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">French language model, piegu Midium article&amp;lt;/br&amp;gt; Repository of pre-trained Language Models&amp;lt;/br&amp;gt; twitter post</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/ulmfit.png" /></entry><entry><title type="html">Digital Product School week 5</title><link href="http://localhost:4000/2020/02/dps-week5/" rel="alternate" type="text/html" title="Digital Product School week 5" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week5</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week5/">&lt;p&gt;The 5th week retropect at Digital Product School&lt;/p&gt;
+&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 8th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week8/gate.png" /></entry><entry><title type="html">Digital Product School week 5</title><link href="http://localhost:4000/2020/02/dps-week5/" rel="alternate" type="text/html" title="Digital Product School week 5" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week5</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week5/">&lt;p&gt;The 5th week retropect at Digital Product School&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Week 5 - Create a Storymap and sync it with Lean Canvas&lt;/strong&gt;&lt;/p&gt;
 
@@ -276,7 +768,7 @@ It can also be automatically invoked through Learner.export via its destroy=True
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Mixed precision training&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">CONTENTS</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/lesson03-1.png" /></entry><entry><title type="html">Digital Product School week 4</title><link href="http://localhost:4000/2020/02/dps-week4/" rel="alternate" type="text/html" title="Digital Product School week 4" /><published>2020-02-01T00:00:00+01:00</published><updated>2020-02-01T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week4</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week4/">&lt;p&gt;The 4th week retropect at Digital Product School&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><summary type="html">CONTENTS</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/lesson03-1.png" /></entry><entry><title type="html">Digital Product School week 4</title><link href="http://localhost:4000/2020/02/dps-week4/" rel="alternate" type="text/html" title="Digital Product School week 4" /><published>2020-02-01T00:00:00+01:00</published><updated>2020-02-01T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week4</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week4/">&lt;p&gt;The 4th week retropect at Digital Product School&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Week 4 - Find solution ideas and run experiments&lt;/strong&gt;&lt;/p&gt;
 
@@ -395,7 +887,7 @@ And it is called ‘magics’ (but i think jeremy is magicion)&lt;/p&gt;
 
 &lt;h4 id=&quot;python3-pathlib-library&quot;&gt;Python3 pathlib library!&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/library/pathlib.html&quot;&gt;pathlib&lt;/a&gt;&lt;/p&gt;</content><author><name>dionne</name></author><category term="lesson01" /><summary type="html">Finally you can solve the mystery behind this weird drawing.. through this course.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1-visual-cnn.png" /></entry><entry><title type="html">fast.ai lesson08</title><link href="http://localhost:4000/2019/12/convolution/" rel="alternate" type="text/html" title="fast.ai lesson08" /><published>2019-12-16T00:00:00+01:00</published><updated>2019-12-16T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/convolution</id><content type="html" xml:base="http://localhost:4000/2019/12/convolution/">&lt;p&gt;This is the part of Journey which Jeremy recommended us to do.
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/library/pathlib.html&quot;&gt;pathlib&lt;/a&gt;&lt;/p&gt;</content><author><name>dionne</name></author><category term="lesson01" /><summary type="html">Finally you can solve the mystery behind this weird drawing.. through this course.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1-visual-cnn.png" /></entry><entry><title type="html">fast.ai lesson08</title><link href="http://localhost:4000/2019/12/what-is-convolution/" rel="alternate" type="text/html" title="fast.ai lesson08" /><published>2019-12-16T00:00:00+01:00</published><updated>2019-12-16T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/what-is-convolution</id><content type="html" xml:base="http://localhost:4000/2019/12/what-is-convolution/">&lt;p&gt;This is the part of Journey which Jeremy recommended us to do.
 One of the concepts I have to know.&lt;/p&gt;
 
 &lt;p&gt;1) Kaiming Initializtion in Pytorch was in trouble.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
@@ -552,7 +1044,7 @@ One of the concepts I have to know.&lt;/p&gt;
       &lt;p&gt;&lt;a href=&quot;https://youtu.be/hkBa9pU-H48?t=4937&quot;&gt;stack kernel and make new rank of tensor at output, Lesson06-2019&lt;/a&gt; &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><summary type="html">This is the part of Journey which Jeremy recommended us to do. One of the concepts I have to know.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn-jiwon.png" /></entry><entry><title type="html">Making a classifier with gooogle img (Cebu / Munich / Seoul)</title><link href="http://localhost:4000/2019/12/classifier-city/" rel="alternate" type="text/html" title="Making a classifier with gooogle img (Cebu / Munich / Seoul)" /><published>2019-12-15T00:00:00+01:00</published><updated>2019-12-15T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/classifier-city</id><content type="html" xml:base="http://localhost:4000/2019/12/classifier-city/">&lt;p&gt;Code can be found &lt;a href=&quot;https://github.com/SpellOnYou/dlff-note/blob/master/toy-project/What_is_your_city_lesson02.ipynb&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="feature" /><summary type="html">This is the part of Journey which Jeremy recommended us to do. One of the concepts I have to know.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn-jiwon.png" /></entry><entry><title type="html">Making a classifier with gooogle img (Cebu / Munich / Seoul)</title><link href="http://localhost:4000/2019/12/classifier-city/" rel="alternate" type="text/html" title="Making a classifier with gooogle img (Cebu / Munich / Seoul)" /><published>2019-12-15T00:00:00+01:00</published><updated>2019-12-15T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/classifier-city</id><content type="html" xml:base="http://localhost:4000/2019/12/classifier-city/">&lt;p&gt;Code can be found &lt;a href=&quot;https://github.com/SpellOnYou/dlff-note/blob/master/toy-project/What_is_your_city_lesson02.ipynb&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Making a classifier which can distinguish &lt;span style=&quot;color: red&quot;&gt;Seoul&lt;/span&gt; from &lt;span style=&quot;color: red&quot;&gt;Munich&lt;/span&gt; and &lt;span style=&quot;color: red&quot;&gt;Cebu&lt;/span&gt;!
 (hoping my well in Munich!🤟, and I love Cebu)&lt;/p&gt;
@@ -769,47 +1261,4 @@ Uisng model: &lt;strong&gt;restnet34&lt;/strong&gt; &lt;sup id=&quot;fnref:2&quo
       &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Accuracy_and_precision&quot;&gt;Accuracy_and_precision&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">Code can be found here</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/munich2.jpg" /></entry><entry><title type="html">Jeremy Howard</title><link href="http://localhost:4000/2019/12/jeremy-howard/" rel="alternate" type="text/html" title="Jeremy Howard" /><published>2019-12-15T00:00:00+01:00</published><updated>2019-12-15T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/jeremy-howard</id><content type="html" xml:base="http://localhost:4000/2019/12/jeremy-howard/">&lt;h2 id=&quot;this-is-journey-to-find-out-who-am-i-trying-to-be&quot;&gt;This is journey to find out ‘who am I trying to be?’&lt;/h2&gt;
-
-&lt;p&gt;How he impacted me?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The person who made me start Computer Vision again. He emphasized the importance of studying NLP and Computer together to understand the deep-learning. He didn’t order it to study, but always he pursuade me with reasonable way.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“It’s not just something I can throw away. NLP and computer vision a few weeks apart and that’s going to force your brain to realize like ‘oh I have to remember this’”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;He made me admit my failure in deep-learning. I started to objectify where am I. What should I do when I’m frustrated.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Keep going. You’re not expected to remember everything. Yet.  You’re not expected to understand everything. Yet. You’re not expected to know why everything works.  Yet.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;His articles are numerous, below.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://pytorch.org/tutorials/beginner/nn_tutorial.html&quot;&gt;What is torch.nn Really?&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.fast.ai/2019/01/10/swift-numerics/&quot;&gt;High Performance Numeric Programming with Swift: Explorations and Reflections&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.fast.ai/2019/01/13/swift-random/&quot;&gt;C++11, random distributions, and Swift&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;And especially, I like this book. &lt;a href=&quot;https://www.oreilly.com/radar/drivetrain-approach-data-products/&quot;&gt;Designing great data products&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Great predictive modeling is an important part of the solution, but it no longer stands on its own; as products become more sophisticated, it disappears into the plumbing.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p style=&quot;color:gray; font-size: 90%; text-align: right;&quot;&gt;Designing great data products&lt;/p&gt;
-
-&lt;p&gt;And he is also famous for words. Here are some.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;we’re going to try and use that to really understand what’s going on. So to warn you, none of it is rocket science but a lot of its going to look really new. So don’t expect to get it the first time but expect to listen and jump into the notebook try a few things test things out look particularly at like tensor shapes and inputs and outputs to check your understanding then go back and listen again. But and kind of try it, a few times, because you will get there right, it’s just that there’s going to be a lot of new concepts because we haven’t done that much stuff in pure Pytorch.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p style=&quot;color:gray; font-size: 90%; text-align: right;&quot;&gt;Lesson 6: Deep Learning 2019&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This is journey to find out ‘who am I trying to be?’</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/jeremy-howard.jpeg" /></entry></feed>
+&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">Code can be found here</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/munich2.jpg" /></entry></feed>

@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pytorch | SpellOnYou</title>
+    <title>fast.ai lesson08 | SpellOnYou</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Pytorch | SpellOnYou</title>
+<title>fast.ai lesson08 | SpellOnYou</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Pytorch" />
+<meta property="og:title" content="fast.ai lesson08" />
 <meta name="author" content="dionne" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This is the list when I type" />
-<meta property="og:description" content="This is the list when I type" />
-<link rel="canonical" href="http://localhost:4000/2019/12/pytorch-tensor/" />
-<meta property="og:url" content="http://localhost:4000/2019/12/pytorch-tensor/" />
+<meta name="description" content="This is the part of Journey which Jeremy recommended us to do. One of the concepts I have to know." />
+<meta property="og:description" content="This is the part of Journey which Jeremy recommended us to do. One of the concepts I have to know." />
+<link rel="canonical" href="http://localhost:4000/2019/12/what-is-convolution/" />
+<meta property="og:url" content="http://localhost:4000/2019/12/what-is-convolution/" />
 <meta property="og:site_name" content="SpellOnYou" />
-<meta property="og:image" content="http://localhost:4000/assets/images/pytorch.png" />
+<meta property="og:image" content="http://localhost:4000/assets/images/cnn-jiwon.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-12-12T00:00:00+01:00" />
+<meta property="article:published_time" content="2019-12-16T00:00:00+01:00" />
 <script type="application/ld+json">
-{"description":"This is the list when I type","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/12/pytorch-tensor/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/pytorch.png","headline":"Pytorch","dateModified":"2019-12-12T00:00:00+01:00","datePublished":"2019-12-12T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/12/pytorch-tensor/"},"@context":"http://schema.org"}</script>
+{"description":"This is the part of Journey which Jeremy recommended us to do. One of the concepts I have to know.","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/12/what-is-convolution/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/cnn-jiwon.png","headline":"fast.ai lesson08","dateModified":"2019-12-16T00:00:00+01:00","datePublished":"2019-12-16T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/12/what-is-convolution/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -336,18 +336,18 @@ function lunr_search(term) {
 					<p class="text-uppercase font-weight-bold">
                         <span class="catlist">
 						
-                          <a class="sscroll text-danger" href="/categories.html#library">library</a><span class="sep">, </span>
+                          <a class="sscroll text-danger" href="/categories.html#fast.ai-v3">fast.ai-v3</a><span class="sep">, </span>
                         
                         </span>
 					</p>
-					<h1 class="display-4 mb-4 article-headline">Pytorch</h1>
+					<h1 class="display-4 mb-4 article-headline">fast.ai lesson08</h1>
 					<div class="d-flex align-items-center">
                         
 						<small class="ml-3">  <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
-                            <span class="text-muted d-block mt-1">Dec 12, 2019 · <span class="reading-time">
+                            <span class="text-muted d-block mt-1">Dec 16, 2019 · <span class="reading-time">
   
   
-    2 mins read
+    4 mins read
   
 </span>
     </span>
@@ -356,7 +356,7 @@ function lunr_search(term) {
 				</div>
                 
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="/assets/images/pytorch.png" alt="Pytorch">
+					<img class="rounded" src="/assets/images/cnn-jiwon.png" alt="fast.ai lesson08">
 				</div>
                 
 			</div>
@@ -396,507 +396,172 @@ function lunr_search(term) {
             
             <!-- Article -->
 			<article class="article-post">                
-			<ul>
-  <li>This is the list when I type</li>
-</ul>
+			<p>This is the part of Journey which Jeremy recommended us to do.
+One of the concepts I have to know.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">dir</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>which means these are all tensor methods.</p>
-
-<p style="color:gray; font-size: 90%; text-align: left;">‘clamp_max’:
-‘clamp_max_’:
-‘clamp_min’:
-‘clamp_min_’:
-check clamp</p>
-<p>‘clone’:
-‘backward’:
-‘squeeze’:
-‘squeeze_’:
-‘unsqueeze’:
-‘unsqueeze_’:
-‘t’:
-‘t_’:
-‘grad’:
-‘pow’:
-‘pow_’:
-‘shape’:
-‘relu’:
-‘relu_’:
-‘sqrt’:
-‘sqrt_’:
-‘stride’:</p>
+<p>1) Kaiming Initializtion in Pytorch was in trouble.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>
+2) Jeremy started to dig in, in lesson09, but I didn’t know why the size of tensor is <sup id="fnref:5x5x5"><a href="#fn:5x5x5" class="footnote">2</a></sup> and even understand this spreadsheet data.<sup id="fnref:conv"><a href="#fn:conv" class="footnote">3</a></sup></p>
 
 <hr />
 
-<p>‘T’:
-‘<strong>abs</strong>’:
-‘<strong>add</strong>’:
-‘<strong>and</strong>’:
-‘<strong>array</strong>’:
-‘<strong>array_priority</strong>’:
-‘<strong>array_wrap</strong>’:
-‘<strong>bool</strong>’:
-‘<strong>class</strong>’:
-‘<strong>contains</strong>’:
-‘<strong>deepcopy</strong>’:
-‘<strong>delattr</strong>’:
-‘<strong>delitem</strong>’:
-‘<strong>dict</strong>’:
-‘<strong>dir</strong>’:
-‘<strong>div</strong>’:
-‘<strong>doc</strong>’:
-‘<strong>eq</strong>’:
-‘<strong>float</strong>’:
-‘<strong>floordiv</strong>’:
-‘<strong>format</strong>’:
-‘<strong>ge</strong>’:
-‘<strong>getattribute</strong>’:
-‘<strong>getitem</strong>’:
-‘<strong>gt</strong>’:
-‘<strong>hash</strong>’:
-‘<strong>iadd</strong>’:
-‘<strong>iand</strong>’:
-‘<strong>idiv</strong>’:
-‘<strong>ilshift</strong>’:
-‘<strong>imul</strong>’:
-‘<strong>index</strong>’:
-‘<strong>init</strong>’:
-‘<strong>init_subclass</strong>’:
-‘<strong>int</strong>’:
-‘<strong>invert</strong>’:
-‘<strong>ior</strong>’:
-‘<strong>ipow</strong>’:
-‘<strong>irshift</strong>’:
-‘<strong>isub</strong>’:
-‘<strong>iter</strong>’:
-‘<strong>itruediv</strong>’:
-‘<strong>ixor</strong>’:
-‘<strong>le</strong>’:
-‘<strong>len</strong>’:
-‘<strong>long</strong>’:
-‘<strong>lshift</strong>’:
-‘<strong>lt</strong>’:
-‘<strong>matmul</strong>’:
-‘<strong>mod</strong>’:
-‘<strong>module</strong>’:
-‘<strong>mul</strong>’:
-‘<strong>ne</strong>’:
-‘<strong>neg</strong>’:
-‘<strong>new</strong>’:
-‘<strong>nonzero</strong>’:
-‘<strong>or</strong>’:
-‘<strong>pow</strong>’:
-‘<strong>radd</strong>’:
-‘<strong>rdiv</strong>’:
-‘<strong>reduce</strong>’:
-‘<strong>reduce_ex</strong>’:
-‘<strong>repr</strong>’:
-‘<strong>reversed</strong>’:
-‘<strong>rfloordiv</strong>’:
-‘<strong>rmul</strong>’:
-‘<strong>rpow</strong>’:
-‘<strong>rshift</strong>’:
-‘<strong>rsub</strong>’:
-‘<strong>rtruediv</strong>’:
-‘<strong>setattr</strong>’:
-‘<strong>setitem</strong>’:
-‘<strong>setstate</strong>’:
-‘<strong>sizeof</strong>’:
-‘<strong>str</strong>’:
-‘<strong>sub</strong>’:
-‘<strong>subclasshook</strong>’:
-‘<strong>truediv</strong>’:
-‘<strong>weakref</strong>’:
-‘<strong>xor</strong>’:
-‘<em>backward_hooks’:
-‘_base’:
-‘_cdata’:
-‘_coalesced</em>’:
-‘<em>dimI’:
-‘_dimV’:
-‘_grad’:
-‘_grad_fn’:
-‘_indices’:
-‘_is_view’:
-‘_make_subclass’:
-‘_nnz’:
-‘_update_names’:
-‘_values’:
-‘_version’:
-‘abs’:
-‘abs</em>’:
-‘acos’:
-‘acos_’:
-‘add’:
-‘add_’:
-‘addbmm’:
-‘addbmm_’:
-‘addcdiv’:
-‘addcdiv_’:
-‘addcmul’:
-‘addcmul_’:
-‘addmm’:
-‘addmm_’:
-‘addmv’:
-‘addmv_’:
-‘addr’:
-‘addr_’:
-‘align_as’:
-‘align_to’:
-‘all’:
-‘allclose’:
-‘any’:
-‘apply_’:
-‘argmax’:
-‘argmin’:
-‘argsort’:
-‘as_strided’:
-‘as_strided_’:
-‘asin’:
-‘asin_’:
-‘atan’:
-‘atan2’:
-‘atan2<em>’:
-‘atan</em>’:
-‘backward’:
-‘baddbmm’:
-‘baddbmm_’:
-‘bernoulli’:
-‘bernoulli_’:
-‘bfloat16’:
-‘bincount’:
-‘bitwise_not’:
-‘bitwise_not_’:
-‘bmm’:
-‘bool’:
-‘byte’:
-‘cauchy_’:
-‘ceil’:
-‘ceil_’:
-‘char’:
-‘cholesky’:
-‘cholesky_inverse’:
-‘cholesky_solve’:
-‘chunk’:
-‘clamp’:
-‘clamp_’:
-‘coalesce’:
-‘contiguous’:
-‘copy_’:
-‘cos’:
-‘cos_’:
-‘cosh’:
-‘cosh_’:
-‘cpu’:
-‘cross’:
-‘cuda’:
-‘cumprod’:
-‘cumsum’:
-‘data’:
-‘data_ptr’:
-‘dense_dim’:
-‘dequantize’:
-‘det’:
-‘detach’:
-‘detach_’:
-‘device’:
-‘diag’:
-‘diag_embed’:
-‘diagflat’:
-‘diagonal’:
-‘digamma’:
-‘digamma_’:
-‘dim’:
-‘dist’:
-‘div’:
-‘div_’:
-‘dot’:
-‘double’:
-‘dtype’:
-‘eig’:
-‘element_size’:
-‘eq’:
-‘eq_’:
-‘equal’:
-‘erf’:
-‘erf_’:
-‘erfc’:
-‘erfc_’:
-‘erfinv’:
-‘erfinv_’:
-‘exp’:
-‘exp_’:
-‘expand’:
-‘expand_as’:
-‘expm1’:
-‘expm1<em>’:
-‘exponential</em>’:
-‘fft’:
-‘fill_’:
-‘fill_diagonal_’:
-‘flatten’:
-‘flip’:
-‘float’:
-‘floor’:
-‘floor_’:
-‘fmod’:
-‘fmod_’:
-‘frac’:
-‘frac_’:
-‘gather’:
-‘ge’:
-‘ge_’:
-‘geometric_’:
-‘geqrf’:
-‘ger’:
-‘get_device’:
-‘grad_fn’:
-‘gt’:
-‘gt_’:
-‘half’:
-‘hardshrink’:
-‘has_names’:
-‘histc’:
-‘ifft’:
-‘index_add’:
-‘index_add_’:
-‘index_copy’:
-‘index_copy_’:
-‘index_fill’:
-‘index_fill_’:
-‘index_put’:
-‘index_put_’:
-‘index_select’:
-‘indices’:
-‘int’:
-‘int_repr’:
-‘inverse’:
-‘irfft’:
-‘is_coalesced’:
-‘is_complex’:
-‘is_contiguous’:
-‘is_cuda’:
-‘is_distributed’:
-‘is_floating_point’:
-‘is_leaf’:
-‘is_mkldnn’:
-‘is_nonzero’:
-‘is_pinned’:
-‘is_quantized’:
-‘is_same_size’:
-‘is_set_to’:
-‘is_shared’:
-‘is_signed’:
-‘is_sparse’:
-‘isclose’:
-‘item’:
-‘kthvalue’:
-‘layout’:
-‘le’:
-‘le_’:
-‘lerp’:
-‘lerp_’:
-‘lgamma’:
-‘lgamma_’:
-‘log’:
-‘log10’:
-‘log10<em>’:
-‘log1p’:
-‘log1p</em>’:
-‘log2’:
-‘log2<em>’:
-‘log</em>’:
-‘log_normal_’:
-‘log_softmax’:
-‘logdet’:
-‘logical_not’:
-‘logical_not_’:
-‘logical_xor’:
-‘logical_xor_’:
-‘logsumexp’:
-‘long’:
-‘lstsq’:
-‘lt’:
-‘lt_’:
-‘lu’:
-‘lu_solve’:
-‘map2<em>’:
-‘map</em>’:
-‘masked_fill’:
-‘masked_fill_’:
-‘masked_scatter’:
-‘masked_scatter_’:
-‘masked_select’:
-‘matmul’:
-‘matrix_power’:
-‘max’:
-‘mean’:
-‘median’:
-‘min’:
-‘mm’:
-‘mode’:
-‘mul’:
-‘mul_’:
-‘multinomial’:
-‘mv’:
-‘mvlgamma’:
-‘mvlgamma_’:
-‘name’:
-‘names’:
-‘narrow’:
-‘narrow_copy’:
-‘ndim’:
-‘ndimension’:
-‘ne’:
-‘ne_’:
-‘neg’:
-‘neg_’:
-‘nelement’:
-‘new’:
-‘new_empty’:
-‘new_full’:
-‘new_ones’:
-‘new_tensor’:
-‘new_zeros’:
-‘nonzero’:
-‘norm’:
-‘normal_’:
-‘numel’:
-‘numpy’:
-‘orgqr’:
-‘ormqr’:
-‘output_nr’:
-‘permute’:
-‘pin_memory’:
-‘pinverse’:
-‘polygamma’:
-‘polygamma_’:
-‘prelu’:
-‘prod’:
-‘put_’:
-‘q_per_channel_axis’:
-‘q_per_channel_scales’:
-‘q_per_channel_zero_points’:
-‘q_scale’:
-‘q_zero_point’:
-‘qr’:
-‘qscheme’:
-‘random_’:
-‘reciprocal’:
-‘reciprocal_’:
-‘record_stream’:
-‘refine_names’:
-‘register_hook’:
-‘reinforce’:
-‘remainder’:
-‘remainder_’:
-‘rename’:
-‘rename_’:
-‘renorm’:
-‘renorm_’:
-‘repeat’:
-‘repeat_interleave’:
-‘requires_grad’:
-‘requires_grad_’:
-‘reshape’:
-‘reshape_as’:
-‘resize’:
-‘resize_’:
-‘resize_as’:
-‘resize_as_’:
-‘retain_grad’:
-‘rfft’:
-‘roll’:
-‘rot90’:
-‘round’:
-‘round_’:
-‘rsqrt’:
-‘rsqrt_’:
-‘scatter’:
-‘scatter_’:
-‘scatter_add’:
-‘scatter_add_’:
-‘select’:
-‘set_’:
-‘share_memory_’:
-‘short’:
-‘sigmoid’:
-‘sigmoid_’:
-‘sign’:
-‘sign_’:
-‘sin’:
-‘sin_’:
-‘sinh’:
-‘sinh_’:
-‘size’:
-‘slogdet’:
-‘smm’:
-‘softmax’:
-‘solve’:
-‘sort’:
-‘sparse_dim’:
-‘sparse_mask’:
-‘sparse_resize_’:
-‘sparse_resize_and_clear_’:
-‘split’:
-‘split_with_sizes’:
-‘squeeze’:
-‘squeeze_’:
-‘sspaddmm’:
-‘std’:
-‘stft’:
-‘storage’:
-‘storage_offset’:
-‘storage_type’:
-‘sub’:
-‘sub_’:
-‘sum’:
-‘sum_to_size’:
-‘svd’:
-‘symeig’:
-‘take’:
-‘tan’:
-‘tan_’:
-‘tanh’:
-‘tanh_’:
-‘to’:
-‘to_dense’:
-‘to_mkldnn’:
-‘to_sparse’:
-‘tolist’:
-‘topk’:
-‘trace’:
-‘transpose’:
-‘transpose_’:
-‘triangular_solve’:
-‘tril’:
-‘tril_’:
-‘triu’:
-‘triu_’:
-‘trunc’:
-‘trunc_’:
-‘type’:
-‘type_as’:
-‘unbind’:
-‘unflatten’:
-‘unfold’:
-‘uniform_’:
-‘unique’:
-‘unique_consecutive’:
-‘values’:
-‘var’:
-‘view’:
-‘view_as’:
-‘where’:
-‘zero_’</p>
+<h4 class="no_toc" id="homework">Homework</h4>
+
+<p>Read <a href="https://arxiv.org/pdf/1311.2901.pdf">Visualizing and Understanding Convolutional Networks
+</a> paper</p>
+
+<hr />
+
+<ul id="markdown-toc">
+  <li><a href="#what-is-a-convolution" id="markdown-toc-what-is-a-convolution">What is a convolution?</a>    <ul>
+      <li><a href="#visualization" id="markdown-toc-visualization">Visualization</a>        <ul>
+          <li><a href="#one-kernel" id="markdown-toc-one-kernel">one kernel</a></li>
+          <li><a href="#matthew-d-zeiler--rob-fergus-paper" id="markdown-toc-matthew-d-zeiler--rob-fergus-paper">Matthew D Zeiler &amp; Rob Fergus Paper</a></li>
+        </ul>
+      </li>
+      <li><a href="#convolution-can-be-represented-as-matmul" id="markdown-toc-convolution-can-be-represented-as-matmul">Convolution can be represented as matmul</a></li>
+      <li><a href="#padding" id="markdown-toc-padding">Padding</a></li>
+      <li><a href="#kernel-has-rank-3" id="markdown-toc-kernel-has-rank-3">Kernel has rank 3</a></li>
+      <li><a href="#how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight" id="markdown-toc-how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight">How can we find a side-edge, a gradient and area of constant weight?</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="what-is-a-convolution">What is a convolution?</h3>
+
+<p>A convolutional neural network is that your red, green, and blue pixels go into the simple computation, and something comes out of that, and then the result of that goes into a second layer, and the result of that goes into the third layer and so forth.</p>
+
+<h4 id="visualization">Visualization</h4>
+
+<h5 id="one-kernel">one kernel</h5>
+
+<ul>
+  <li>Refer this <a href="http://setosa.io/ev/image-kernels/">site</a> for visualizing CNN filtering</li>
+</ul>
+
+<h5 id="matthew-d-zeiler--rob-fergus-paper">Matthew D Zeiler &amp; Rob Fergus Paper</h5>
+
+<p><a href="https://youtu.be/BWWm4AzsdLk?t=4588">Lecture01</a></p>
+
+<p><img src="/assets/images/cnn-nine.png" alt="" />{align-items: center;}</p>
+
+<ul>
+  <li>nine examples of the actual coefficients from the <strong>first layer</strong>.</li>
+</ul>
+
+<h4 id="convolution-can-be-represented-as-matmul">Convolution can be represented as matmul</h4>
+
+<p><a href="https://medium.com/impactai/cnns-from-different-viewpoints-fab7f52d159c">CNNs from different viewpoints</a></p>
+
+<p><img src="/assets/images/cnn-result.png" alt="" />{align-items: center;}</p>
+
+<p><img src="/assets/images/cnn-result2.jpg" alt="" height="50%" width="50%" /></p>
+
+<ul>
+  <li>
+    <p>[A B C D E F G H I J] is 3 by 3 image data flatten to vector.</p>
+  </li>
+  <li>As a result, convolution is a just matrix just two things happens
+    <ul>
+      <li>Some of entries are set to zeros at all the times</li>
+      <li>same color always have the same weight. That called <strong>weight time / wegith sharing</strong></li>
+    </ul>
+  </li>
+  <li>So, we can implement a convolution with matrix multiplication. But, we don’t do that because it’s slow!</li>
+</ul>
+
+<h4 id="padding">Padding</h4>
+
+<ul>
+  <li>What most of libraries do is just put zeros asdie of matrix</li>
+</ul>
+
+<p><img src="/assets/images/padding2.png" alt="" height="50%" width="50%" /></p>
+
+<p><img src="/assets/images/padding.png" alt="" height="60%" width="60%" /></p>
+
+<ul>
+  <li>fast.ai uses reflection paddings (what is this? Jeremy said he uttered it)</li>
+</ul>
+
+<h4 id="kernel-has-rank-3">Kernel has rank 3</h4>
+
+<ul>
+  <li>As standard picture input would be <sup id="fnref:RGB"><a href="#fn:RGB" class="footnote">4</a></sup> <sup id="fnref:2"><a href="#fn:2" class="footnote">5</a></sup>, it would be actually 3d, not 2d.</li>
+  <li>If we make kernel as a 3x3 size, we pass over same kernel all the different Red, Green, Blue Pixels.
+    <ul>
+      <li>This could make problem, because, if we want to detect frog, which is green, we would want more activations on the green(I made a test cell in my colab <sup id="fnref:3"><a href="#fn:3" class="footnote">6</a></sup>)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight">How can we find a side-edge, a gradient and area of constant weight?</h4>
+
+<p>Not top-edge!</p>
+
+<ul>
+  <li>One kernel can find only the top-edge, so we should stack the kernels <sup id="fnref:5"><a href="#fn:5" class="footnote">7</a></sup></li>
+  <li>So, we pass it through bunch of kernels to the input images, and that process gives us height x width x corresponding number of kernels.</li>
+</ul>
+
+<p><img src="/aassets/images/tensors.png" alt="" /></p>
+
+<ul>
+  <li>Usually that number of chanel is 16</li>
+  <li>And if we want to get the more channels and features, we should repeat that process
+    <ul>
+      <li>This process gives rise to memory out of control, we do the <strong>stride</strong></li>
+    </ul>
+  </li>
+</ul>
+
+<p>####</p>
+
+<p><a href="https://www.youtube.com/watch?v=V2h3IOBDvrA">conv-example.xlsx</a></p>
+
+<ul>
+  <li>2 convolutional filters</li>
+  <li>At a second layer, filter is 3x3x2 tensor, because to add up together the first layer’s channel.</li>
+</ul>
+
+<!-- Actually, what I wanted to know part :  -->
+
+<hr />
+
+<h3 class="no_toc" id="reference">Reference</h3>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Problem was <em>math.sqrt(5)</em> was not kaiming initialization formula, <a href="https://github.com/pytorch/pytorch/blob/3df79f403e8b9621d5adb0447266becd10d633b0/torch/nn/modules/linear.py#L58-L63">Implementation in Pytorch</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5x5x5">
+      <p><a href="https://youtu.be/AcA8HAYh7IE?list=PLBRuZVGXwM3l2HesxBCrvwYacG1AWrVmM&amp;t=251">size of tensor, lecture09</a> <a href="#fnref:5x5x5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:conv">
+      <p><a href="https://github.com/fastai/course-v3/blob/bc034b471d839bdf5bc72bd7fec1061fac648ccd/files/xl/conv-example.xlsx">conv-example.xlsx</a> <a href="#fnref:conv" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:RGB">
+      <p><a href="https://www.quora.com/Why-do-computers-use-red-green-and-blue-instead-of-the-primary-colors">Why do computer use red, green and blue instead of primary colors</a> <a href="#fnref:RGB" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Grayscale is a group of shades without any visible color. … Each of these dots has its own brightness level as well and, therefore, can be converted to grayscale. A grayscale image is one with all color information removed. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p><a href="https://brohrer.github.io/convert_rgb_to_grayscale.html">Testing RGB and grayscale</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p><a href="https://youtu.be/hkBa9pU-H48?t=4937">stack kernel and make new rank of tensor at output, Lesson06-2019</a> <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
                 
 			</article>
 			
 			<!-- Tags -->
 			<div class="mb-4">
 				<span class="taglist">
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/tags.html#feature">feature</a>
 				
 				</span>
 			</div>
@@ -953,12 +618,12 @@ check clamp</p>
         <div class="row prevnextlinks small font-weight-bold">
           
             <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="/2019/11/julia-evans/"> <img height="30px" class="mr-1" src="/assets/images/evans.jpg">  Julia Evans</a>
+                <a class="text-dark" href="/2019/12/classifier-city/"> <img height="30px" class="mr-1" src="/assets/images/munich2.jpg">  Making a classifier with gooogle img (Cebu / Munich / Seoul)</a>
             </div>
           
           
             <div class="col-md-6 text-right pr-0">
-                <a class="text-dark" href="/2019/12/jeremy-howard/"> Jeremy Howard  <img height="30px" class="ml-1" src="/assets/images/jeremy-howard.jpeg"> </a>
+                <a class="text-dark" href="/2019/12/lesson1-fastai/"> Fine Grained Classification  <img height="30px" class="ml-1" src="/assets/images/1-visual-cnn.png"> </a>
             </div>
           
         </div>

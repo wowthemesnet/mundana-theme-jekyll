@@ -4,7 +4,7 @@ title: "fast.ai lesson03"
 author: dionne
 categories: [Fast.AI-v3]
 image: assets/images/lesson03-1.png
-tags: [ featured ]
+tags: [  ]
 ---
 
 ### CONTENTS

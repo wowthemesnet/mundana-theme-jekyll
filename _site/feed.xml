@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-02T18:33:03+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Gradient backward, Chain Rule, Refactoring</title><link href="http://localhost:4000/2020/03/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward, Chain Rule, Refactoring" /><published>2020-03-02T00:00:00+01:00</published><updated>2020-03-02T00:00:00+01:00</updated><id>http://localhost:4000/2020/03/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-4/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-02T18:47:32+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Gradient backward, Chain Rule, Refactoring</title><link href="http://localhost:4000/2020/03/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward, Chain Rule, Refactoring" /><published>2020-03-02T00:00:00+01:00</published><updated>2020-03-02T00:00:00+01:00</updated><id>http://localhost:4000/2020/03/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-4/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Section1: &lt;a href=&quot;https://spellonyou.github.io/2020/02/note08-fastai-1/&quot;&gt;What is the meaning of ‘deep-learning from foundations?’&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Section2: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-2/&quot;&gt;What’s inside Pytorch Operator?&lt;/a&gt;&lt;/li&gt;
@@ -463,282 +463,7 @@ def backward(self):
       &lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/34439/finding-what-methods-a-python-object-has/34452#34452&quot;&gt;stackoverflow - finding methods a object has&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/4-classlin.png" /></entry><entry><title type="html">Implement forward&amp;amp;backward pass from scratch</title><link href="http://localhost:4000/2020/03/note08-fastai-3/" rel="alternate" type="text/html" title="Implement forward&amp;backward pass from scratch" /><published>2020-03-01T00:00:00+01:00</published><updated>2020-03-01T00:00:00+01:00</updated><id>http://localhost:4000/2020/03/note08-fastai-3</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-3/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Section1: &lt;a href=&quot;https://spellonyou.github.io/2020/02/note08-fastai-1/&quot;&gt;What is the meaning of ‘deep-learning from foundations?’&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Section2: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-2/&quot;&gt;What’s inside Pytorch Operator?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Section3: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-3/&quot;&gt;Implement forward&amp;amp;backward pass from scratch&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Section4: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-4/&quot;&gt;Gradient backward, Chain Rule, Refactoring&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;1-the-forward-and-backward-passes&quot;&gt;1. The forward and backward passes&lt;/h3&gt;
-
-&lt;h4 id=&quot;11-normalization&quot;&gt;1.1 Normalization&lt;/h4&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;train_mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_std&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_std&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1304&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.3073&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Remember!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Dataset, which is x_train, mean and standard deviation is not 0&amp;amp;1. &lt;strong&gt;But we need them to be&lt;/strong&gt; which means we should substract means and divide data by std.&lt;/li&gt;
-  &lt;li&gt;You should not standarlize &lt;em&gt;validation set&lt;/em&gt; because training set and validation set should be aparted.&lt;/li&gt;
-  &lt;li&gt;after normalize, mean is close to zero, and standard deviation is close to 1.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;12-variable-definition&quot;&gt;1.2 Variable definition&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;n,m&lt;/strong&gt;: size of the training set&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;c&lt;/strong&gt;: the number of activations we need in our model&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;2-foundation-version&quot;&gt;2. Foundation Version&lt;/h3&gt;
-&lt;h4 id=&quot;21-basic-architecture&quot;&gt;2.1 Basic architecture&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Our model has one hidden layer, output to have 10 activations, used in cross entropy.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;But in process of building architecture, we will use mean square error, output to have 1 activations and lator change it to cross entropy&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;number of hidden unit; 50&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;see below pic&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/model.jpg&quot; alt=&quot;&quot; height=&quot;80%&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;We want to make w1&amp;amp;w2 mean and std be 0&amp;amp;1.
-    &lt;ul&gt;
-      &lt;li&gt;why initializating and make mean zero and std one is important?&lt;/li&gt;
-      &lt;li&gt;paper highlighting importance of normalisation - training 10,000 layer network without regularisation&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&quot;211-simplified-kaiming-init&quot;&gt;2.1.1 &lt;em&gt;simplified&lt;/em&gt; kaiming init&lt;/h5&gt;
-
-&lt;p&gt;Q: Why we did init, normalize with only validation data? Because we can not handle and get statistics from each value of x_valid?{: style=”color:red; font-size: 130%; text-align: center;”}&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;what about hidden(first) layer?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_valid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# hidden
-&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.3191&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;27.0303&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In output(second) layer,&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;w2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;t2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# output
-&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;58.2665&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;170.9717&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;which is terribly far from normalzed value.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;But if we apply simplified kaiming init&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;w2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_valid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.0516&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.9354&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;But, actually, we use activations not only linear function&lt;/li&gt;
-  &lt;li&gt;After applying activations relu at linear layer, mean and deviation became 0.5.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/relu.jpg&quot; alt=&quot;&quot; height=&quot;70%&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;212-glorrot-initialization&quot;&gt;2.1.2 Glorrot initialization&lt;/h5&gt;
-
-&lt;p&gt;Paper2: &lt;a href=&quot;http://proceedings.mlr.press/v9/glorot10a.html&quot;&gt;Understanding the difficulty of training deep feedforward neural networks&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Gaussian(, bell shaped, normal distributions) is not trained very well.&lt;/li&gt;
-  &lt;li&gt;How to initialize neural nets?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/xavier.png&quot; alt=&quot;&quot; height=&quot;80%&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;with &lt;script type=&quot;math/tex&quot;&gt;n_i&lt;/script&gt; the size of layer &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;, the number of filters &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;But there is &lt;strong&gt;No acount&lt;/strong&gt; for import of ReLU&lt;/li&gt;
-  &lt;li&gt;If we got 1000 layers, vanishing gradients problem emerges&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&quot;213-kaiming-initializating&quot;&gt;2.1.3 Kaiming initializating&lt;/h5&gt;
-
-&lt;p&gt;Paper3: &lt;a href=&quot;https://arxiv.org/abs/1502.01852&quot;&gt;Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Kaiming He, explained &lt;a href=&quot;https://pouannes.github.io/blog/initialization/&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;rectifier: rectified linear unit&lt;/li&gt;
-  &lt;li&gt;rectifier network: neural network with rectifier linear units&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/kaiming.png&quot; alt=&quot;&quot; height=&quot;80%&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;This is kaiming init, and why suddenly replace one to two on a top?
-    &lt;ul&gt;
-      &lt;li&gt;to avoid vanishing gradient(weights)&lt;/li&gt;
-      &lt;li&gt;&lt;span style=&quot;color: red&quot;&gt;But it doesn’t give very nice mean tough.&lt;/span&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&quot;214-pytorch-package&quot;&gt;2.1.4 Pytorch package&lt;/h5&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Why fan_out?
-    &lt;ul&gt;
-      &lt;li&gt;according to pytorch documentation,&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;choosing 'fan_in' preserves the magnitude of the variance of the wights in the forward pass.&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;choosing 'fan_out' preserves the magnitues in the backward pass(, which means matmul; with transposed matrix)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;➡️ in the other words, torch use fan_out cz pytorch transpose in linear transformaton.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What about CNN in Pytorch?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I tried&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Conv2d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conv2d_forward&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;??&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/2-forward-conv2d.jpg&quot; alt=&quot;&quot; height=&quot;90%&quot; width=&quot;90%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jeremy digged into using&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modules&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_ConvNd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reset_parameters&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;??&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2-torch-nn-conv-jeremy.jpg&quot; alt=&quot;&quot; height=&quot;90%&quot; width=&quot;90%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2-torch-nn-conv-jeremy-2.jpg&quot; alt=&quot;&quot; height=&quot;90%&quot; width=&quot;90%&quot; /&gt;&lt;br /&gt;
-&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;in Pytorch, it doesn’t seem to be implemented kaiming init in right formula. so we should use our own operation.&lt;/li&gt;
-  &lt;li&gt;But actually, this has been discussed in Pytorch community before.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;  &lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-  &lt;li&gt;Jeremy said it enhanced variance also, so I sampled 100 times and counted better results.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2-100times-sampling.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;To make sure the shape seems sensible. check with assert. (remember we will replace 1 to 10 in &lt;em&gt;cross entropy&lt;/em&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_valid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_valid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_valid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;We have made Relu, init, linear, it seems we can forward pass&lt;/li&gt;
-  &lt;li&gt;code we need for basic architecture&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/3-fc.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;w2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;relu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clamp_min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;t1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;relu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_valid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;l1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;l2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;relu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;l3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l3&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;22-loss-function-mse&quot;&gt;2.2 Loss function: MSE&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Mean squared error need unit vector, so we remove unit axis.
-    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;squeeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;pow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;In python, in case you remove axis, you use ‘squeeze’, or add axis use ‘unsqueeze’&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://pytorch.org/docs/stable/torch.html#torch.squeeze&quot;&gt;torch.squeeze&lt;/a&gt; where code commonly broken. so, when you use squeeze, &lt;strong&gt;clarify&lt;/strong&gt; dimension axis you want to remove&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;squeeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;make sure to make as float when you calculate&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;But why??? because it is tensor?{: style=”color:red; font-size: 130%;”}&lt;/p&gt;
-
-&lt;p&gt;Here’s the error when I don’t transform the data type&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;---------------------------------------------------------------------------&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;TypeError&lt;/span&gt;                                 &lt;span class=&quot;n&quot;&gt;Traceback&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;most&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;call&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ipython&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ae6009bef8b4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;----&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# call data again
-&lt;/span&gt;      &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;preds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;nb&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'map'&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subscriptable&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;This is forward pass&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;footnote&quot;&gt;Footnote&lt;/h3&gt;
-
-&lt;h3 id=&quot;other-materials&quot;&gt;Other materials&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://proceedings.mlr.press/v9/glorot10a.html&quot;&gt;Understanding the difficulty of training deep feedforward neural networks&lt;/a&gt;, paper that introduced Xavier initialization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1901.09321&quot;&gt;Fixup Initialization: Residual Learning Without Normalization&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://github.com/pytorch/pytorch/blob/3df79f403e8b9621d5adb0447266becd10d633b0/torch/nn/modules/linear.py#L58-L63&quot;&gt;Pytorch implementaion on Kaiming init of conv and linear layers&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://github.com/pytorch/pytorch/issues/15314&quot;&gt;Pytorch kaiming init issue&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://discuss.pytorch.org/t/why-the-default-negative-slope-for-kaiming-uniform-initialization-of-convolution-and-linear-layers-is-5/29290&quot;&gt;Pytorch kaiming init explained&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/4-backward3.png" /></entry><entry><title type="html">What’s inside Pytorch Operator?</title><link href="http://localhost:4000/2020/03/note08-fastai-2/" rel="alternate" type="text/html" title="What's inside Pytorch Operator?" /><published>2020-03-01T00:00:00+01:00</published><updated>2020-03-01T00:00:00+01:00</updated><id>http://localhost:4000/2020/03/note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-2/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/4-classlin.png" /></entry><entry><title type="html">What’s inside Pytorch Operator?</title><link href="http://localhost:4000/2020/03/note08-fastai-2/" rel="alternate" type="text/html" title="What's inside Pytorch Operator?" /><published>2020-03-01T00:00:00+01:00</published><updated>2020-03-01T00:00:00+01:00</updated><id>http://localhost:4000/2020/03/note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-2/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Section1: &lt;a href=&quot;https://spellonyou.github.io/2020/02/note08-fastai-1/&quot;&gt;What is the meaning of ‘deep-learning from foundations?’&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Section2: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-2/&quot;&gt;What’s inside Pytorch Operator?&lt;/a&gt;&lt;/li&gt;
@@ -1058,7 +783,282 @@ a.k.a&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docs.scipy.org/doc/numpy/reference/generated/numpy.einsum.html&quot;&gt;np.einsum Review&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;h&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/30.png" /></entry><entry><title type="html">What is the meaning of ‘deep-learning from foundations?’</title><link href="http://localhost:4000/2020/02/note08-fastai-1/" rel="alternate" type="text/html" title="What is the meaning of 'deep-learning from foundations?'" /><published>2020-02-29T00:00:00+01:00</published><updated>2020-02-29T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/note08-fastai-1</id><content type="html" xml:base="http://localhost:4000/2020/02/note08-fastai-1/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
+&lt;p&gt;h&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/30.png" /></entry><entry><title type="html">Implement forward&amp;amp;backward pass from scratch</title><link href="http://localhost:4000/2020/03/note08-fastai-3/" rel="alternate" type="text/html" title="Implement forward&amp;backward pass from scratch" /><published>2020-03-01T00:00:00+01:00</published><updated>2020-03-01T00:00:00+01:00</updated><id>http://localhost:4000/2020/03/note08-fastai-3</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-3/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Section1: &lt;a href=&quot;https://spellonyou.github.io/2020/02/note08-fastai-1/&quot;&gt;What is the meaning of ‘deep-learning from foundations?’&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Section2: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-2/&quot;&gt;What’s inside Pytorch Operator?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Section3: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-3/&quot;&gt;Implement forward&amp;amp;backward pass from scratch&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Section4: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-4/&quot;&gt;Gradient backward, Chain Rule, Refactoring&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;1-the-forward-and-backward-passes&quot;&gt;1. The forward and backward passes&lt;/h3&gt;
+
+&lt;h4 id=&quot;11-normalization&quot;&gt;1.1 Normalization&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;train_mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_std&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_std&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1304&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.3073&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Remember!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Dataset, which is x_train, mean and standard deviation is not 0&amp;amp;1. &lt;strong&gt;But we need them to be&lt;/strong&gt; which means we should substract means and divide data by std.&lt;/li&gt;
+  &lt;li&gt;You should not standarlize &lt;em&gt;validation set&lt;/em&gt; because training set and validation set should be aparted.&lt;/li&gt;
+  &lt;li&gt;after normalize, mean is close to zero, and standard deviation is close to 1.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;12-variable-definition&quot;&gt;1.2 Variable definition&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;n,m&lt;/strong&gt;: size of the training set&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;c&lt;/strong&gt;: the number of activations we need in our model&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-foundation-version&quot;&gt;2. Foundation Version&lt;/h3&gt;
+&lt;h4 id=&quot;21-basic-architecture&quot;&gt;2.1 Basic architecture&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Our model has one hidden layer, output to have 10 activations, used in cross entropy.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;But in process of building architecture, we will use mean square error, output to have 1 activations and lator change it to cross entropy&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;number of hidden unit; 50&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;see below pic&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/model.jpg&quot; alt=&quot;&quot; height=&quot;80%&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We want to make w1&amp;amp;w2 mean and std be 0&amp;amp;1.
+    &lt;ul&gt;
+      &lt;li&gt;why initializating and make mean zero and std one is important?&lt;/li&gt;
+      &lt;li&gt;paper highlighting importance of normalisation - training 10,000 layer network without regularisation&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;211-simplified-kaiming-init&quot;&gt;2.1.1 &lt;em&gt;simplified&lt;/em&gt; kaiming init&lt;/h5&gt;
+
+&lt;p&gt;Q: Why we did init, normalize with only validation data? Because we can not handle and get statistics from each value of x_valid?{: style=”color:red; font-size: 130%; text-align: center;”}&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;what about hidden(first) layer?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_valid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# hidden
+&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.3191&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;27.0303&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In output(second) layer,&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;w2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;t2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# output
+&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;58.2665&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;170.9717&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;which is terribly far from normalzed value.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;But if we apply simplified kaiming init&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;w2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_valid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.0516&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.9354&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;But, actually, we use activations not only linear function&lt;/li&gt;
+  &lt;li&gt;After applying activations relu at linear layer, mean and deviation became 0.5.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/relu.jpg&quot; alt=&quot;&quot; height=&quot;70%&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;212-glorrot-initialization&quot;&gt;2.1.2 Glorrot initialization&lt;/h5&gt;
+
+&lt;p&gt;Paper2: &lt;a href=&quot;http://proceedings.mlr.press/v9/glorot10a.html&quot;&gt;Understanding the difficulty of training deep feedforward neural networks&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Gaussian(, bell shaped, normal distributions) is not trained very well.&lt;/li&gt;
+  &lt;li&gt;How to initialize neural nets?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/xavier.png&quot; alt=&quot;&quot; height=&quot;80%&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;with &lt;script type=&quot;math/tex&quot;&gt;n_i&lt;/script&gt; the size of layer &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;, the number of filters &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;But there is &lt;strong&gt;No acount&lt;/strong&gt; for import of ReLU&lt;/li&gt;
+  &lt;li&gt;If we got 1000 layers, vanishing gradients problem emerges&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;213-kaiming-initializating&quot;&gt;2.1.3 Kaiming initializating&lt;/h5&gt;
+
+&lt;p&gt;Paper3: &lt;a href=&quot;https://arxiv.org/abs/1502.01852&quot;&gt;Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Kaiming He, explained &lt;a href=&quot;https://pouannes.github.io/blog/initialization/&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;rectifier: rectified linear unit&lt;/li&gt;
+  &lt;li&gt;rectifier network: neural network with rectifier linear units&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/kaiming.png&quot; alt=&quot;&quot; height=&quot;80%&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This is kaiming init, and why suddenly replace one to two on a top?
+    &lt;ul&gt;
+      &lt;li&gt;to avoid vanishing gradient(weights)&lt;/li&gt;
+      &lt;li&gt;&lt;span style=&quot;color: red&quot;&gt;But it doesn’t give very nice mean tough.&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;214-pytorch-package&quot;&gt;2.1.4 Pytorch package&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Why fan_out?
+    &lt;ul&gt;
+      &lt;li&gt;according to pytorch documentation,&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;choosing 'fan_in' preserves the magnitude of the variance of the wights in the forward pass.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;choosing 'fan_out' preserves the magnitues in the backward pass(, which means matmul; with transposed matrix)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;➡️ in the other words, torch use fan_out cz pytorch transpose in linear transformaton.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What about CNN in Pytorch?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I tried&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Conv2d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conv2d_forward&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;??&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2-forward-conv2d.jpg&quot; alt=&quot;&quot; height=&quot;90%&quot; width=&quot;90%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jeremy digged into using&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modules&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_ConvNd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reset_parameters&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;??&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2-torch-nn-conv-jeremy.jpg&quot; alt=&quot;&quot; height=&quot;90%&quot; width=&quot;90%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2-torch-nn-conv-jeremy-2.jpg&quot; alt=&quot;&quot; height=&quot;90%&quot; width=&quot;90%&quot; /&gt;&lt;br /&gt;
+&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;in Pytorch, it doesn’t seem to be implemented kaiming init in right formula. so we should use our own operation.&lt;/li&gt;
+  &lt;li&gt;But actually, this has been discussed in Pytorch community before.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;  &lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;Jeremy said it enhanced variance also, so I sampled 100 times and counted better results.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2-100times-sampling.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;To make sure the shape seems sensible. check with assert. (remember we will replace 1 to 10 in &lt;em&gt;cross entropy&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_valid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_valid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_valid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We have made Relu, init, linear, it seems we can forward pass&lt;/li&gt;
+  &lt;li&gt;code we need for basic architecture&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/3-fc.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;w2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;relu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clamp_min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;t1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;relu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_valid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;l1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;l2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;relu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;l3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;22-loss-function-mse&quot;&gt;2.2 Loss function: MSE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mean squared error need unit vector, so we remove unit axis.
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;squeeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;pow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In python, in case you remove axis, you use ‘squeeze’, or add axis use ‘unsqueeze’&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pytorch.org/docs/stable/torch.html#torch.squeeze&quot;&gt;torch.squeeze&lt;/a&gt; where code commonly broken. so, when you use squeeze, &lt;strong&gt;clarify&lt;/strong&gt; dimension axis you want to remove&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;squeeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;make sure to make as float when you calculate&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But why??? because it is tensor?{: style=”color:red; font-size: 130%;”}&lt;/p&gt;
+
+&lt;p&gt;Here’s the error when I don’t transform the data type&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;---------------------------------------------------------------------------&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;TypeError&lt;/span&gt;                                 &lt;span class=&quot;n&quot;&gt;Traceback&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;most&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;call&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ipython&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ae6009bef8b4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;----&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# call data again
+&lt;/span&gt;      &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;preds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'map'&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subscriptable&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This is forward pass&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;footnote&quot;&gt;Footnote&lt;/h3&gt;
+
+&lt;h3 id=&quot;other-materials&quot;&gt;Other materials&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://proceedings.mlr.press/v9/glorot10a.html&quot;&gt;Understanding the difficulty of training deep feedforward neural networks&lt;/a&gt;, paper that introduced Xavier initialization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1901.09321&quot;&gt;Fixup Initialization: Residual Learning Without Normalization&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://github.com/pytorch/pytorch/blob/3df79f403e8b9621d5adb0447266becd10d633b0/torch/nn/modules/linear.py#L58-L63&quot;&gt;Pytorch implementaion on Kaiming init of conv and linear layers&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://github.com/pytorch/pytorch/issues/15314&quot;&gt;Pytorch kaiming init issue&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://discuss.pytorch.org/t/why-the-default-negative-slope-for-kaiming-uniform-initialization-of-convolution-and-linear-layers-is-5/29290&quot;&gt;Pytorch kaiming init explained&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="feature" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/4-backward3.png" /></entry><entry><title type="html">What is the meaning of ‘deep-learning from foundations?’</title><link href="http://localhost:4000/2020/02/note08-fastai-1/" rel="alternate" type="text/html" title="What is the meaning of 'deep-learning from foundations?'" /><published>2020-02-29T00:00:00+01:00</published><updated>2020-02-29T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/note08-fastai-1</id><content type="html" xml:base="http://localhost:4000/2020/02/note08-fastai-1/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Section1: &lt;a href=&quot;https://spellonyou.github.io/2020/02/note08-fastai-1/&quot;&gt;What is the meaning of ‘deep-learning from foundations?’&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Section2: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-2/&quot;&gt;What’s inside Pytorch Operator?&lt;/a&gt;&lt;/li&gt;
@@ -1480,7 +1480,364 @@ This daily stand-up helps us to synchronize each part’s process so that we can
 
 &lt;h1 class=&quot;no_toc&quot; id=&quot;thursday&quot;&gt;Thursday&lt;/h1&gt;
 
-&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 8th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week8/gate.png" /></entry><entry><title type="html">Digital Product School week 5</title><link href="http://localhost:4000/2020/02/dps-week5/" rel="alternate" type="text/html" title="Digital Product School week 5" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week5</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week5/">&lt;p&gt;The 5th week retropect at Digital Product School&lt;/p&gt;
+&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 8th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week8/gate.png" /></entry><entry><title type="html">fast.ai nlp lesson16</title><link href="http://localhost:4000/2020/02/fast.ai-nlp-note-16/" rel="alternate" type="text/html" title="fast.ai nlp lesson16" /><published>2020-02-20T00:00:00+01:00</published><updated>2020-02-20T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/fast.ai-nlp-note-16</id><content type="html" xml:base="http://localhost:4000/2020/02/fast.ai-nlp-note-16/">&lt;p&gt;&lt;strong&gt;Algorithms can encode &amp;amp; magnify human bias&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;case-study-1-facial-recognition--predictive-policing&quot;&gt;Case Study 1: Facial Recognition &amp;amp; Predictive Policing&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://proceedings.mlr.press/v81/buolamwini18a.html&quot;&gt;Joy Buolamwini &amp;amp; Timnit Gebru&lt;/a&gt;, gendershades.org
+    &lt;ul&gt;
+      &lt;li&gt;Microsoft, FACE+, IBM - All of these things are sell now.&lt;/li&gt;
+      &lt;li&gt;Largest gap between $\therefore\  Lighter Male\ &amp;gt;\  Darker\ Female $&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://qz.com/co/2405308/this-us-mayor-joked-cops-should-mount-50-caliber-guns-where-ai-predicts-crime/&quot;&gt;This US mayor joked cops should “mount .50-caliber” guns where AI predicts crime&lt;/a&gt;&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;With machine learning, with automation, there’s a 99% success, so that robot is ㅡwill beㅡ99% accurate in telling us what is going to happen next, which is really interesting.&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;- city official in Lancater, CA, approving on using IBM for public security&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;bias&quot;&gt;Bias&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bias is type of error&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Statistical Bias&lt;/strong&gt;: difference between a statistic’s expected value and the true value&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Unjust Bias&lt;/strong&gt;: disproportionate preference for or prejudice against a group&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Unconscious bias&lt;/strong&gt;: bias that we don’t realize we have&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;But, term bias is too generic to be productive.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Different sources of bias have different causes&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Representation Bias&lt;/strong&gt;: Dataset was not representative of the algorithm that might be used on later.&lt;/p&gt;
+
+&lt;p&gt;Above : Data is okay, but algorithm has some problem.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Below : Data has error. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;For example, object detection production that performs very well in common product of US.&lt;br /&gt;
+But in contrast, change of target product region, like Zimbabwe, Solomon Island, and so on, reduced the performence remarkably.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;It is not the algorithmic problem, so we should care about data volume of region.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Evaluation Bias&lt;/strong&gt;: Benchmark datasets spur on research, 4.4% of IJB-A images are dark-skinned women. 2/3 of ImageNet images from the West (Sharkar et al, 2017) &lt;img src=&quot;https://spellonyou.github.io/images/shankar.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;case-study-2-recidivism-algorithm-used-prison-sentencing&quot;&gt;Case Study 2: Recidivism Algorithm Used Prison Sentencing&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;case-study-3-online-ad-delivery&quot;&gt;Case Study 3: Online Ad Delivery&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;bias-in-nlp&quot;&gt;Bias in NLP&lt;/h3&gt;
+
+&lt;p&gt;( Nothing to do with the course, but I’m researching this field these days.)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;But all about Englsih&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Impact
+The person is doctor. The person is nurse -&amp;gt; 그는 의사다. 그녀는 간호사다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;concept-of-biased-data-often-too-generic-to-be-useful&quot;&gt;Concept of “biased data” often too generic to be useful&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Different sources of bias have different sources&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Data, models and systems are not unchanging numbers on a screen.
+They’re the result of a complex process that starts with years of historical context and involves a series of choices and norms, from data measurement to model evaluation to human interpretation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;- &lt;em&gt;Harini Suresh&lt;/em&gt;, &lt;a href=&quot;https://medium.com/@harinisuresh/the-problem-with-biased-data-5700005e514c&quot;&gt;“The problem with Biased Data”&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;five-sources-of-bias-in-ml&quot;&gt;Five Sources of Bias in ML&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Representation Bias&lt;/li&gt;
+  &lt;li&gt;Evaluation Bias&lt;/li&gt;
+  &lt;li&gt;Measurement Bias&lt;/li&gt;
+  &lt;li&gt;Aggregation Bias(46:02)&lt;/li&gt;
+  &lt;li&gt;Historical Bias(46:26)
+    &lt;ul&gt;
+      &lt;li&gt;A few studies(47:13)&lt;/li&gt;
+      &lt;li&gt;Racial Bias, Even when we have good intentions(new york times)(47:10)&lt;/li&gt;
+      &lt;li&gt;gender(48:59)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;humans-are-biased-so-why-does-algorithmic-bias-matter&quot;&gt;Humans are biased, so why does algorithmic bias matter?&lt;/h3&gt;
+
+&lt;h4 id=&quot;algorithms--humans-are-used-differently-humans-are-usually-decision-maker&quot;&gt;Algorithms &amp;amp; humans are used differently (&lt;em&gt;humans are usually decision maker&lt;/em&gt;)&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Algorithms are accurate and objective&lt;/li&gt;
+  &lt;li&gt;No way to apeal if there if error&lt;/li&gt;
+  &lt;li&gt;processed large scale&lt;/li&gt;
+  &lt;li&gt;cheap&lt;br /&gt; &lt;img src=&quot;https://cphoto.asiae.co.kr/listimglink/1/2018121911092829374_1545185366.jpg&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;machine-learning-can-amplify-bias&quot;&gt;Machine learning can amplify bias&lt;/h4&gt;
+
+&lt;h4 id=&quot;machine-learning-can-create-feedback-loops&quot;&gt;Machine learning can create feedback loops.&lt;/h4&gt;
+
+&lt;h4 id=&quot;technology-is-power-and-with-that-comes-responsibility&quot;&gt;Technology is power. And with that comes responsibility.&lt;/h4&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;solutions&quot;&gt;Solutions&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Analyze a project at work/school:
+    &lt;ul&gt;
+      &lt;li&gt;Questions about AI&lt;/li&gt;
+      &lt;li&gt;5 types of bias &lt;a href=&quot;https://arxiv.org/abs/1901.10002&quot;&gt;(Suresh &amp;amp; Guttag)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Datasheets for datasets, Modelcards for model reporting&lt;/li&gt;
+      &lt;li&gt;Accuracy rate on different sub-groups&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Work with domain experts &amp;amp; those impacted&lt;/li&gt;
+  &lt;li&gt;Increase diversity in our workspace&lt;/li&gt;
+  &lt;li&gt;Advocate for good policy&lt;/li&gt;
+  &lt;li&gt;Be on the ongoing lookout for bias&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>dionne</name></author><summary type="html">Algorithms can encode &amp;amp; magnify human bias</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/13.png" /></entry><entry><title type="html">Making a classifier with gooogle img (Cebu / Munich / Seoul)</title><link href="http://localhost:4000/2020/02/classifier-city/" rel="alternate" type="text/html" title="Making a classifier with gooogle img (Cebu / Munich / Seoul)" /><published>2020-02-15T00:00:00+01:00</published><updated>2020-02-15T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/classifier-city</id><content type="html" xml:base="http://localhost:4000/2020/02/classifier-city/">&lt;p&gt;Code can be found &lt;a href=&quot;https://github.com/SpellOnYou/dlff-note/blob/master/toy-project/What_is_your_city_lesson02.ipynb&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Making a classifier which can distinguish &lt;span style=&quot;color: red&quot;&gt;Seoul&lt;/span&gt; from &lt;span style=&quot;color: red&quot;&gt;Munich&lt;/span&gt; and &lt;span style=&quot;color: red&quot;&gt;Cebu&lt;/span&gt;!
+(hoping my well in Munich!🤟, and I love Cebu)&lt;/p&gt;
+
+&lt;h3 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h3&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#1-creating-dataset-from-google-images&quot; id=&quot;markdown-toc-1-creating-dataset-from-google-images&quot;&gt;1. Creating dataset from google images&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#11-using-google_images_download&quot; id=&quot;markdown-toc-11-using-google_images_download&quot;&gt;1.1 Using &lt;code class=&quot;highlighter-rouge&quot;&gt;google_images_download&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#12-create-imagedatabunch&quot; id=&quot;markdown-toc-12-create-imagedatabunch&quot;&gt;1.2 Create ImageDataBunch&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2-train-model&quot; id=&quot;markdown-toc-2-train-model&quot;&gt;2. Train model&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#23-fit_one_cycle&quot; id=&quot;markdown-toc-23-fit_one_cycle&quot;&gt;2.3 fit_one_cycle()&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#24-find_rl&quot; id=&quot;markdown-toc-24-find_rl&quot;&gt;2.4 find_rl()&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#3-interpretation&quot; id=&quot;markdown-toc-3-interpretation&quot;&gt;3. Interpretation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#4-cleaning-up&quot; id=&quot;markdown-toc-4-cleaning-up&quot;&gt;4. Cleaning Up&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#5-putting-your-model-in-production&quot; id=&quot;markdown-toc-5-putting-your-model-in-production&quot;&gt;5. Putting your model in production&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;1-creating-dataset-from-google-images&quot;&gt;1. Creating dataset from google images&lt;/h3&gt;
+
+&lt;p&gt;You can use either URLs or &lt;code class=&quot;highlighter-rouge&quot;&gt;google_images_download&lt;/code&gt; package. Since &lt;a href=&quot;&quot;&gt;Jeremy explained specifically&lt;/a&gt;, I will try the other.&lt;/p&gt;
+
+&lt;h4 id=&quot;11-using-google_images_download&quot;&gt;1.1 Using &lt;code class=&quot;highlighter-rouge&quot;&gt;google_images_download&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;note: &lt;em&gt;This is not google official package&lt;/em&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Refer to &lt;a href=&quot;https://google-images-download.readthedocs.io/en/latest/index.html&quot;&gt;Official Doncument&lt;/a&gt;, put that arguments.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;google_images_download&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;google_images_download&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;google_images_download&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;googleimagesdownload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;#class instantiation
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;abspath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'../../materials/dataset/pkg/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;keywords&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Cebu,Munich,Seoul&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             &lt;span class=&quot;s&quot;&gt;&quot;print_urls&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             &lt;span class=&quot;s&quot;&gt;&quot;suffix_keywords&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;city&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             &lt;span class=&quot;s&quot;&gt;&quot;output_directory&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             &lt;span class=&quot;s&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;photo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;paths&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;download&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;#passing the arguments to the function
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paths&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;and if you need, here is &lt;a href=&quot;https://github.com/hardikvasa/google-images-download/blob/master/google_images_download/google_images_download.py&quot;&gt;main&lt;/a&gt; code.&lt;/p&gt;
+
+&lt;h4 id=&quot;12-create-imagedatabunch&quot;&gt;1.2 Create ImageDataBunch&lt;/h4&gt;
+
+&lt;p&gt;We need to separate validation set because we just &lt;em&gt;grabbed&lt;/em&gt; these imagese from Google.&lt;br /&gt; Most of the dataset we use (kaggle/research) splited into &lt;code class=&quot;highlighter-rouge&quot;&gt;train / validation / test&lt;/code&gt;&lt;br /&gt; so if they are not devided beforehand we should make databunch, and Jeremy recommended assign 20% to validation.&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Help&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verify_images&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fastai&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vision&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;verify_images&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pathlib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_workers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recurse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pathlib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_channels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;interp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img_format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resume&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kwargs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Check&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;images&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`path`&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aren&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'t broken, maybe resize them and copy it in `dest`.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Data from &lt;strong&gt;google image url&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/02-url.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Data from &lt;strong&gt;package&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/02-pkg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2-train-model&quot;&gt;2. Train model&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;len(class)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;len(train)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;len(valid)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Data_url&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;432&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;108&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Data_pkg&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;216&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;53&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Uisng model: &lt;strong&gt;restnet34&lt;/strong&gt; &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; , Measurement: &lt;strong&gt;accuracy&lt;/strong&gt; &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;23-fit_one_cycle&quot;&gt;2.3 fit_one_cycle()&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Help&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;method&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fit_one_cycle&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fastai&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;fit_one_cycle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cyc_len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_lr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;slice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;slice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.003&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;moms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Tuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.95&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.85&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;div_factor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;25.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pct_start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;final_div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;callbacks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fastai&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NoneType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tot_epochs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start_epoch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;method&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fastai&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basic_train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Learner&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Fit&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;following&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cycle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;policy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt; epoch &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; train_loss &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; valid_loss &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; error_rate &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; time &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.964414&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.207057&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.583333&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:04&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.722742&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.476875&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.481481&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.541905&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.656574&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.537037&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;3&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.442706&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.680708&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.546296&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt; epoch &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; train_loss &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; valid_loss &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; error_rate &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; time &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.334755&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.945266&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.566038&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.751931&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.366638&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.415094&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.527215&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.165065&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.396226&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;3&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.317051&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.108083&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.339623&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;00:01&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;24-find_rl&quot;&gt;2.4 find_rl()&lt;/h4&gt;
+
+&lt;p&gt;This section you should find the strongest downward slope that kind of sticking around for quite a while.&lt;/p&gt;
+
+&lt;p&gt;(to be continued to the other lectures)&lt;/p&gt;
+
+&lt;h3 id=&quot;3-interpretation&quot;&gt;3. Interpretation&lt;/h3&gt;
+&lt;h3 id=&quot;4-cleaning-up&quot;&gt;4. Cleaning Up&lt;/h3&gt;
+&lt;h3 id=&quot;5-putting-your-model-in-production&quot;&gt;5. Putting your model in production&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 class=&quot;no_toc&quot; id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.pyimagesearch.com/2017/12/04/how-to-create-a-deep-learning-dataset-using-google-images/&quot;&gt;How to create a deep learning dataset using Google Images&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1512.03385&quot;&gt;Deep Residual Learning for Image Recognition&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Accuracy_and_precision&quot;&gt;Accuracy_and_precision&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">Code can be found here</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/munich2.jpg" /></entry><entry><title type="html">Digital Product School week 5</title><link href="http://localhost:4000/2020/02/dps-week5/" rel="alternate" type="text/html" title="Digital Product School week 5" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week5</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week5/">&lt;p&gt;The 5th week retropect at Digital Product School&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Week 5 - Create a Storymap and sync it with Lean Canvas&lt;/strong&gt;&lt;/p&gt;
 
@@ -1600,170 +1957,85 @@ These are suggestion of possibilities, so don’t attached to feasibility (we wi
 
 &lt;h1 class=&quot;no_toc&quot; id=&quot;thursday&quot;&gt;Thursday&lt;/h1&gt;
 
-&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 5th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week5/user-storymap.png" /></entry><entry><title type="html">fast.ai lesson03</title><link href="http://localhost:4000/2020/02/fastai-lesson03/" rel="alternate" type="text/html" title="fast.ai lesson03" /><published>2020-02-08T00:00:00+01:00</published><updated>2020-02-08T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/fastai-lesson03</id><content type="html" xml:base="http://localhost:4000/2020/02/fastai-lesson03/">&lt;h3 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h3&gt;
+&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 5th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week5/user-storymap.png" /></entry><entry><title type="html">4 reasons took much time to setting GPU for fast.ai than I expected</title><link href="http://localhost:4000/2020/02/GPU-time/" rel="alternate" type="text/html" title="4 reasons took much time to setting GPU for fast.ai than I expected" /><published>2020-02-05T00:00:00+01:00</published><updated>2020-02-05T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/GPU-time</id><content type="html" xml:base="http://localhost:4000/2020/02/GPU-time/">&lt;h2 id=&quot;motivation&quot;&gt;Motivation&lt;/h2&gt;
 
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#unet&quot; id=&quot;markdown-toc-unet&quot;&gt;Unet&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#freezeunfreeze-what-should-i-choose-as-learning-rate&quot; id=&quot;markdown-toc-freezeunfreeze-what-should-i-choose-as-learning-rate&quot;&gt;freeze/unfreeze, what should I choose as learning rate?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#what-is-fit_one_cycle&quot; id=&quot;markdown-toc-what-is-fit_one_cycle&quot;&gt;What is fit_one_cycle&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#what-should-we-do-when-underfitting&quot; id=&quot;markdown-toc-what-should-we-do-when-underfitting&quot;&gt;what should we do when &lt;code class=&quot;highlighter-rouge&quot;&gt;underfitting&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#min-numerical-gradient-vs-min-loss-divided-by-10&quot; id=&quot;markdown-toc-min-numerical-gradient-vs-min-loss-divided-by-10&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Min numerical gradient&lt;/code&gt; vs &lt;code class=&quot;highlighter-rouge&quot;&gt;Min loss divided by 10&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#what-should-i-do-if-run-out-of-memory&quot; id=&quot;markdown-toc-what-should-i-do-if-run-out-of-memory&quot;&gt;what should I do if run out of memory?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Before now, me as a undergraduate student, I was parsimony who usually depend on colab, kaggle, friend’s server(occasional) whenever i need GPU..&lt;br /&gt;
+&lt;br /&gt;
+And this time it’s been for a while to install GPU than I expected and I share the several component that stood in my way.&lt;br /&gt;
+&lt;br /&gt;
+&lt;strong&gt;&lt;span style=&quot;color:red&quot;&gt;Written at Oct 24 2019, if you think this is deprecated, please do not have a leap of faith.&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;unet&quot;&gt;Unet&lt;/h3&gt;
+&lt;p&gt;Just for the record, I’ve used Kaggle, Colab, GCP, Azure, EC2 as GPU cloud.
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/&quot;&gt;Unet model&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;similar with convolutional auto-encoder&lt;/li&gt;
-  &lt;li&gt;but Unet has connection between symmetry element when max-pooling.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;1-did-not-know-there-is-jupyterlab-option-in-google-cloud-platform&quot;&gt;1. Did not know there is &lt;em&gt;JupyterLab&lt;/em&gt; option in &lt;strong&gt;Google Cloud Platform&lt;/strong&gt;.&lt;/h3&gt;
 
-&lt;p&gt;Q. what kind of connection does it have? weight sharing?&lt;/p&gt;
+&lt;p&gt;At the first time when GCP came out, there was no &lt;strong&gt;AI  Platform&lt;/strong&gt; service. So from starting vm instance to launching jupyter and installing packages, I did all of the things myself. (and I learned 🤗)&lt;/p&gt;
 
-&lt;h3 id=&quot;freezeunfreeze-what-should-i-choose-as-learning-rate&quot;&gt;freeze/unfreeze, what should I choose as learning rate?&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/8.png&quot; alt=&quot;installing-conda-cli&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://youtu.be/PW2HKkzdkKY?t=2964&quot;&gt;youtube&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$	curl -O https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;what-is-fit_one_cycle&quot;&gt;What is fit_one_cycle&lt;/h3&gt;
+&lt;p align=&quot;center&quot;&gt;[Downloading conda in ssh]&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;recorder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot_losses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#show you loss depends on time
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recorder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot_lr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#show you lr chnange depends on time (on epoch)
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;I created VM instance,selected zone, machine type and disk type. Then, define firewall rules and in ssh terminal, install jupyter and other packages.&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;When you visualize these it seems like this. (errors go up and down)&lt;/p&gt;
+&lt;p&gt;But you can do all of these things just using AI Platform.&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/one_cycle_structure.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/9.png&quot; alt=&quot;installing-conda-cli&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;[AI Platform]&lt;/p&gt;
 
-&lt;p&gt;Then why error does not go down at the first time?&lt;/p&gt;
+&lt;p&gt;I think it especially save your time if you are living in Asia-Pacific, which google doesn’t support not that much GPU resources.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Why fit_one_cycle is good for learning?&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-consider-if-the-platform-has-limited-resources-in-a-region-you-live-in&quot;&gt;2. Consider if the platform has limited resources in a region you live in.&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+I live in &lt;em&gt;South Korea, East Asia&lt;/em&gt;, and it seems like this region has lots of limitation in GPU (except quite expensive AWS)&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/one_cycle_fit_process.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;And the Taiwan which was the only one region where I can launch my own VM with GPU (I tried all the other regions in the list) sometimes do normaly, but not always. 😥&lt;br /&gt;
+After launching, I did several works and next day I could not start VM. (I didn’t count it, but tried it a few hours because I didn’t want cost any more time…)&lt;/p&gt;
 
-&lt;p&gt;⭐️ When you increase the learning rate, it’s easy to explore whole area and find the place which is not bumpy, so it train faster and can generalize well&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+Endlessly failed to start instance, then I choose to move AWS as an alternative way.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;refer &lt;a href=&quot;https://nbviewer.jupyter.org/gist/joshfp/85d96f07aaa5f4d2c9eb47956ccdcc88/lesson2-sgd-in-action.ipynb#&quot;&gt;this site&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;3-fastai-gives-deliberate-guide-and-i-didnt-know-it&quot;&gt;3. &lt;span style=&quot;color:blue&quot;&gt;Fast.ai gives deliberate &lt;a href=&quot;https://course.fast.ai/start_gcp.html&quot;&gt;guide&lt;/a&gt; and I didn’t know it.&lt;/span&gt;&lt;/h3&gt;
 
-&lt;h3 id=&quot;what-should-we-do-when-underfitting&quot;&gt;what should we do when &lt;code class=&quot;highlighter-rouge&quot;&gt;underfitting&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Fast.ai offer the guide for all available platform. (Colab, salamander, Gradient, Kaggle, Colab, and so on)&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;1) train longer
-2) train last bit at a lower learning rate
-3) decrease learning rate
-    - weight decay
-    - drop out
-    - data-augmentation&lt;/p&gt;
+&lt;p&gt;It is so important, and really needs, because cloud computing options are vary as occasion and purpose arise.&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;min-numerical-gradient-vs-min-loss-divided-by-10&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Min numerical gradient&lt;/code&gt; vs &lt;code class=&quot;highlighter-rouge&quot;&gt;Min loss divided by 10&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;I didn’t know fast.ai has manual to running GCP, and I think it’s as good a reason as any for me to be have taken time.&lt;br /&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;which learning rate is better?&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;It helped me so much when I had aws and shortened my time.&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;what-should-i-do-if-run-out-of-memory&quot;&gt;what should I do if run out of memory?&lt;/h3&gt;
+&lt;p&gt;I don’t want to read all of the manual in amazno.. (It is recommended.. but I’d rather read &lt;a href=&quot;https://git-scm.com/book/en/v2&quot;&gt;GIT PRO&lt;/a&gt; now…)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -i ~/.ssh/&amp;lt;your_private_key_pair&amp;gt; -L localhost:8888:localhost:8888 ubuntu@&amp;lt;your instance IP&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Restart the kernel&lt;/li&gt;
-  &lt;li&gt;If you want to be able to do more without needing to restart your notebook
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://docs.fast.ai/basic_train.html#Learner.destroy&quot;&gt;Learner.destroy&lt;/a&gt;
-        &lt;blockquote&gt;
-          &lt;p&gt;Free the Learner internals, leaving just an empty shell that consumes no memory
-If you need to free the memory consumed by the Learner object, call this method.
-It can also be automatically invoked through Learner.export via its destroy=True argument.&lt;/p&gt;
-        &lt;/blockquote&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
+&lt;h3 id=&quot;4-you-should-wait-to-add-more-volume-just-after-add-volume-by-building-aws-ec2&quot;&gt;4. You should wait to add more volume just after add volume, by building AWS EC2.&lt;/h3&gt;
+
+&lt;p&gt;Since Elastic Block Store(EBS) storage supports optimized storage, users can’t extend storage volume two times in a row. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, at the first time, I didn’t know it (again 👻) and when VM lacked volume, I doubled dist capacity (76*2) at a rough but It needs more. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;!–&lt;/p&gt;
+
+&lt;p&gt;this time I installed GPU in two years, and it became little complicated compared to 2 years ago.
+And this time for the first time(maybe not the first time.. but i handled it in my class or with my friend. but it’s my first time on my own.) I 
+very I’m started to using used google colab, kaggle
+and, GCP-JupyterLab, ec2 - friend made, 
+aws vm machine but I had a environment variable but i did not know of it.
+On these days, I could not get a resources from taiwan…&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;I couldn’t notice a deliberate&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;Mixed precision training&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><summary type="html">CONTENTS</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/lesson03-1.png" /></entry><entry><title type="html">Digital Product School week 4</title><link href="http://localhost:4000/2020/02/dps-week4/" rel="alternate" type="text/html" title="Digital Product School week 4" /><published>2020-02-01T00:00:00+01:00</published><updated>2020-02-01T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week4</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week4/">&lt;p&gt;The 4th week retropect at Digital Product School&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Week 4 - Find solution ideas and run experiments&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week4/schedule.png&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
-&lt;/div&gt;
-&lt;p&gt;[This week’s schedule]&lt;/p&gt;
-
-&lt;h2 class=&quot;no_toc&quot; id=&quot;content&quot;&gt;CONTENT&lt;/h2&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#ideation-techniques&quot; id=&quot;markdown-toc-ideation-techniques&quot;&gt;Ideation Techniques&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#what-is-ideation-techniques&quot; id=&quot;markdown-toc-what-is-ideation-techniques&quot;&gt;What is ideation techniques?&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Anyway, as a result I tried myself gcp myself and aws ec2 with fast.ai But I think doing on my self surely takes much time (in this point I wonder why I’m doing this, and should remind me, especially I was studying disk volume optimization)&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#generating-idea-in-my-team&quot; id=&quot;markdown-toc-generating-idea-in-my-team&quot;&gt;Generating idea in my team&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#aideation&quot; id=&quot;markdown-toc-aideation&quot;&gt;AIdeation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#team-brain-storming-of-idea&quot; id=&quot;markdown-toc-team-brain-storming-of-idea&quot;&gt;Team brain storming of idea&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#die-produkt-macher&quot; id=&quot;markdown-toc-die-produkt-macher&quot;&gt;Die Produkt Macher&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 class=&quot;no_toc&quot; id=&quot;monday&quot;&gt;Monday&lt;/h1&gt;
-
-&lt;h2 id=&quot;ideation-techniques&quot;&gt;Ideation Techniques&lt;/h2&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week4/aideation.png&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
-&lt;/div&gt;
-&lt;p&gt;[slides from @steffen]&lt;/p&gt;
-
-&lt;h3 id=&quot;what-is-ideation-techniques&quot;&gt;What is ideation techniques?&lt;/h3&gt;
-
-&lt;p&gt;We tried to find out user’s painpoint last week. Tried to users talk about their, pain point. No question directly, but extract from them their pain with transportation.&lt;/p&gt;
-
-&lt;h2 id=&quot;generating-idea-in-my-team&quot;&gt;Generating idea in my team&lt;/h2&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week4/jan-27-monday-2.JPG&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;aideation&quot;&gt;AIdeation&lt;/h2&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week4/jan-27-monday-3.JPG&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
-&lt;/div&gt;
-
-&lt;h1 class=&quot;no_toc&quot; id=&quot;tuesday&quot;&gt;Tuesday&lt;/h1&gt;
-
-&lt;h2 id=&quot;team-brain-storming-of-idea&quot;&gt;Team brain storming of idea&lt;/h2&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week4/jan-28-tuesday-0.JPG&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Based on generated idea on Monday, we extended our idea doing rolling-paper!&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week4/jan-28-tuesday-2.JPG&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week4/jan-28-tuesday-1.JPG&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;die-produkt-macher&quot;&gt;Die Produkt Macher&lt;/h2&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;What is lean start-up?&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Lean startup is a methodology for developing businesses and products that aims to shorten product development cycles and rapidly discover if a proposed business model is viable; this is achieved by adopting a combination of business-hypothesis-driven experimentation, iterative product releases, and validated learning. - wikipedia&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 class=&quot;no_toc&quot; id=&quot;wendesday&quot;&gt;Wendesday&lt;/h1&gt;
-
-&lt;h1 class=&quot;no_toc&quot; id=&quot;thursday&quot;&gt;Thursday&lt;/h1&gt;
-
-&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 4th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week4/week4-ourteam.JPG" /></entry><entry><title type="html">Retrospect of ACL 2020 paper writing</title><link href="http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020/" rel="alternate" type="text/html" title="Retrospect of ACL 2020 paper writing" /><published>2020-01-29T00:00:00+01:00</published><updated>2020-01-29T00:00:00+01:00</updated><id>http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020</id><content type="html" xml:base="http://localhost:4000/2020/01/retrosprect-of-acl-paper-2020/">&lt;p&gt;2020 Annual Conference of the Association for Computational Linguistics&lt;/p&gt;
-
-&lt;h3 id=&quot;why-i-cant-use-cebuano-for-the-research&quot;&gt;Why I can’t use ‘Cebuano’ for the research?&lt;/h3&gt;
-
-&lt;p&gt;Why I had to change target language from ‘Cebuano’ to ‘Tagalog’?
--&amp;gt; No language translator options except google translation. But before knowing that I already consult my friend, whose mother tongue is English. So I had to aplogize her, but couldn’t tell her why suddenly I changed my plan.
--&amp;gt; I realized there are many languages even can’t be researched at all..&lt;/p&gt;
-
-&lt;p&gt;-&amp;gt; Getting accustomed to discrimination makes misunderstanding, sometimes. At my country, we couldn’t use music streaming service, because of legal problem. But at that moment, I thought it was discrimination, which is done by music company.&lt;/p&gt;</content><author><name>dionne</name></author><summary type="html">2020 Annual Conference of the Association for Computational Linguistics</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/acl2020.png" /></entry></feed>
+  &lt;li&gt;
+    &lt;h2 id=&quot;disk-volume-exceed---httpsaskubuntucomquestions919748no-space-left-on-device-even-though-there-is&quot;&gt;disk volume exceed - https://askubuntu.com/questions/919748/no-space-left-on-device-even-though-there-is&lt;/h2&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>dionne</name></author><summary type="html">Motivation</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/10.png" /></entry></feed>

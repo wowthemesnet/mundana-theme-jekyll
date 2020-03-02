@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What is convolution?: beyond CNN"
+title: "Dig into convolution"
 author: dionne
 categories: [Fast.AI-v3]
 image: assets/images/cnn-jiwon.png

@@ -5,10 +5,6 @@
 <lastmod>2019-01-11T00:00:00+01:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2019/01/dps-week2/</loc>
-<lastmod>2019-01-18T00:00:00+01:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/2019/01/dps-week3/</loc>
 <lastmod>2019-01-25T00:00:00+01:00</lastmod>
 </url>
@@ -57,10 +53,6 @@
 <lastmod>2019-12-16T00:00:00+01:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2019/12/lecture1-note/</loc>
-<lastmod>2019-12-20T00:00:00+01:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/2019/12/lesson1-fastai/</loc>
 <lastmod>2019-12-31T00:00:00+01:00</lastmod>
 </url>
@@ -87,10 +79,6 @@
 <url>
 <loc>http://localhost:4000/2020/02/dps-week8/</loc>
 <lastmod>2020-02-24T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/2020/02/2020-02-29-ELMO-ulmfit/</loc>
-<lastmod>2020-02-29T14:26:09+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/404/</loc>
@@ -124,8 +112,5 @@
 </url>
 <url>
 <loc>http://localhost:4000/page2/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/page3/</loc>
 </url>
 </urlset>

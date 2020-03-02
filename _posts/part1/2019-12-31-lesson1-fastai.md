@@ -4,7 +4,7 @@ title: "Fine Grained Classification"
 author: dionne
 categories: [Fast.AI-v3]
 image: assets/images/1-visual-cnn.png
-tags: [lesson01]
+tags: []
 ---
 
 Finally you can solve the mystery behind this weird drawing.. through this course.<br />

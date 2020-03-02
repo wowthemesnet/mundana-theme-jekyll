@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fine Grained Classification | SpellOnYou</title>
+    <title>What is the meaning of 'deep-learning from foundations?' | SpellOnYou</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Fine Grained Classification | SpellOnYou</title>
+<title>What is the meaning of ‘deep-learning from foundations?’ | SpellOnYou</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Fine Grained Classification" />
+<meta property="og:title" content="What is the meaning of ‘deep-learning from foundations?’" />
 <meta name="author" content="dionne" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Finally you can solve the mystery behind this weird drawing.. through this course." />
-<meta property="og:description" content="Finally you can solve the mystery behind this weird drawing.. through this course." />
-<link rel="canonical" href="http://localhost:4000/2019/12/lesson1-fastai/" />
-<meta property="og:url" content="http://localhost:4000/2019/12/lesson1-fastai/" />
+<meta name="description" content="” Lecture 08 - Deep Learning From Foundations-part2 “" />
+<meta property="og:description" content="” Lecture 08 - Deep Learning From Foundations-part2 “" />
+<link rel="canonical" href="http://localhost:4000/2020/02/note08-fastai-1/" />
+<meta property="og:url" content="http://localhost:4000/2020/02/note08-fastai-1/" />
 <meta property="og:site_name" content="SpellOnYou" />
-<meta property="og:image" content="http://localhost:4000/assets/images/1-visual-cnn.png" />
+<meta property="og:image" content="http://localhost:4000/assets/images/1-matmul.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-12-31T00:00:00+01:00" />
+<meta property="article:published_time" content="2020-02-29T00:00:00+01:00" />
 <script type="application/ld+json">
-{"description":"Finally you can solve the mystery behind this weird drawing.. through this course.","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2019/12/lesson1-fastai/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/1-visual-cnn.png","headline":"Fine Grained Classification","dateModified":"2019-12-31T00:00:00+01:00","datePublished":"2019-12-31T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/12/lesson1-fastai/"},"@context":"http://schema.org"}</script>
+{"description":"” Lecture 08 - Deep Learning From Foundations-part2 “","author":{"@type":"Person","name":"dionne"},"@type":"BlogPosting","url":"http://localhost:4000/2020/02/note08-fastai-1/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"dionne"},"image":"http://localhost:4000/assets/images/1-matmul.png","headline":"What is the meaning of ‘deep-learning from foundations?’","dateModified":"2020-02-29T00:00:00+01:00","datePublished":"2020-02-29T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/02/note08-fastai-1/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -355,14 +355,14 @@ function lunr_search(term) {
                         
                         </span>
 					</p>
-					<h1 class="display-4 mb-4 article-headline">Fine Grained Classification</h1>
+					<h1 class="display-4 mb-4 article-headline">What is the meaning of 'deep-learning from foundations?'</h1>
 					<div class="d-flex align-items-center">
                         
 						<small class="ml-3">  <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
-                            <span class="text-muted d-block mt-1">Dec 31, 2019 · <span class="reading-time">
+                            <span class="text-muted d-block mt-1">Feb 29, 2020 · <span class="reading-time">
   
   
-    1 min read
+    4 mins read
   
 </span>
     </span>
@@ -371,7 +371,7 @@ function lunr_search(term) {
 				</div>
                 
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="/assets/images/1-visual-cnn.png" alt="Fine Grained Classification">
+					<img class="rounded" src="/assets/images/1-matmul.png" alt="What is the meaning of 'deep-learning from foundations?'">
 				</div>
                 
 			</div>
@@ -411,46 +411,204 @@ function lunr_search(term) {
             
             <!-- Article -->
 			<article class="article-post">                
-			<p>Finally you can solve the mystery behind this weird drawing.. through this course.<br /></p>
+			<p>” Lecture 08 - Deep Learning From Foundations-part2 “</p>
 
-<h4 id="juptyer-notebook-magic">juptyer notebook magic</h4>
+<p><br />
+<em>I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free</em></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%</span><span class="n">reload_ext</span> <span class="n">autoreload</span>
-<span class="o">%</span><span class="n">autoreload</span> <span class="mi">2</span>
-<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
-</code></pre></div></div>
+<h3 class="no_toc" id="homework">Homework</h3>
 
-<p>this is special directives to jupyter notebook, not python code.
-And it is called ‘magics’ (but i think jeremy is magicion)</p>
-
-<ul>
-  <li>If somebody changes underlying library code while I’m running this, please reload it automatically</li>
-  <li>If somebody asks to plot something, then please plot it here in this Jupyter Notebook</li>
+<ul style="color:grey; font-size: 90%;">
+  <li>Review concepts 16 concepts from Course 1 (lessons 1 - 7)
+(1) Affine Functions &amp; non-linearities; 2) Parameters &amp; activations; 3) Random initialization &amp; transfer learning; 4) SGD, Momentum, Adam; 5) Convolutions; Batch-norm; 6) Dropout; 7) Data augmentation; 8) Weight decay; 9) Res/dense blocks; 10) Image classification and regression; 11)Embeddings; 12) Continuous &amp; Categorical variables; 13) Collaborative filtering; 14) Language models; 15) NLP classification; 16) Segmentation; U-net; GANS)</li>
 </ul>
 
-<p><strong>Don’t hesitate to import start~</strong></p>
+<ul>
+  <li>Make sure you understand broadcasting</li>
+  <li>Read section 2.2 in <a href="https://arxiv.org/abs/1502.01852">Delving Deep into Rectifiers</a></li>
+  <li>Try to replicate as much of the notebooks as you can without peeking; when you get stuck, peek at the lesson notebook, but then close it and try to do it yourself</li>
+  <li><a href="https://explained.ai/matrix-calculus/index.html">calculus for machine learning</a>
+    <ul>
+      <li>based on weight…</li>
+    </ul>
+  </li>
+  <li><a href="https://rockt.github.io/2018/04/30/einsum">einsum convention</a></li>
+</ul>
 
-<h4 id="digging-into-untar_data-pathls">Digging into <code class="highlighter-rouge">untar_data</code>, <code class="highlighter-rouge">path.ls</code></h4>
+<hr />
 
-<p>Union[pathlib.Path, str]: typed programming language? -&gt; maybe i think disclaim the type beforehand for sure.</p>
+<h3 class="no_toc" id="contents">CONTENTS</h3>
+
+<ul id="markdown-toc">
+  <li><a href="#what-is-going-on-in-this-course" id="markdown-toc-what-is-going-on-in-this-course">What is going on in this course?</a>    <ul>
+      <li><a href="#what-is-from-foundations" id="markdown-toc-what-is-from-foundations">What is <em>‘from foundations’</em>?</a></li>
+      <li><a href="#steps-to-a-basic-modern-cnn-model" id="markdown-toc-steps-to-a-basic-modern-cnn-model">Steps to a basic modern CNN model</a></li>
+      <li><a href="#todays-implementation-goal-1-matmul---4-fc-backward" id="markdown-toc-todays-implementation-goal-1-matmul---4-fc-backward">Today’s implementation goal: 1) matmul -&gt; 4) FC backward</a></li>
+    </ul>
+  </li>
+  <li><a href="#library-development-using-jupyter-notebook" id="markdown-toc-library-development-using-jupyter-notebook">Library development using jupyter notebook</a>    <ul>
+      <li><a href="#jupyter-notebook-certainly-can-make-module" id="markdown-toc-jupyter-notebook-certainly-can-make-module">jupyter notebook certainly can make module</a></li>
+    </ul>
+  </li>
+  <li><a href="#elementwise-ops" id="markdown-toc-elementwise-ops">Elementwise ops</a>    <ul>
+      <li><a href="#how-can-we-make-python-faster" id="markdown-toc-how-can-we-make-python-faster">How can we make python faster?</a>        <ul>
+          <li><a href="#what-is-element-wise-operation" id="markdown-toc-what-is-element-wise-operation">What is element wise operation?</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#footnote" id="markdown-toc-footnote">Footnote</a></li>
+</ul>
+
+<hr />
+
+<h2 id="what-is-going-on-in-this-course">What is going on in this course?</h2>
+
+<h3 id="what-is-from-foundations">What is <em>‘from foundations’</em>?</h3>
+
+<p>1) Recreate fast.ai and Pytorch</p>
+
+<p>2) using pure python
+<br /></p>
+<ul>
+  <li>Evade Overfitting</li>
+</ul>
+
+<p>Overfit : validation error getting worse
+<del>training loss &lt; validation loss</del>
+<br /></p>
+<ul>
+  <li>Know the name of the symbol you use</li>
+</ul>
+
+<p>find in this page if you don’t know the symbol that you are using<a href="https://en.wikipedia.org/wiki/List_of_mathematical_symbols"></a> or just draw it <a href="http://detexify.kirelabs.org/classify.html">here</a> (run by ML!)</p>
+
+<h3 id="steps-to-a-basic-modern-cnn-model">Steps to a basic modern CNN model</h3>
 
 <blockquote>
-  <p>Q. like assert?</p>
+  <p>1) Matrix multiplication -&gt; 2) Relu/Initialization -&gt; 3) Fully-connected Forward
+-&gt; 4) Fully-connected Backward -&gt; 5) Train loop -&gt; 6) Convolution-&gt; 7) Optimization -&gt;
+8) Batchnormalization -&gt; 9) Resnet</p>
 </blockquote>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">path</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
-</code></pre></div></div>
-<p>this is some module that fast.ai made because os.listdir(‘path’) is unconvinient.</p>
+<h3 id="todays-implementation-goal-1-matmul---4-fc-backward">Today’s implementation goal: 1) matmul -&gt; 4) FC backward</h3>
 
-<h4 id="python3-pathlib-library">Python3 pathlib library!</h4>
+<h2 id="library-development-using-jupyter-notebook">Library development using jupyter notebook</h2>
 
-<p><a href="https://docs.python.org/3/library/pathlib.html">pathlib</a></p>
+<p><a href="https://dbader.org/blog/python-assert-tutorial">what is assers?</a></p>
+
+<h3 id="jupyter-notebook-certainly-can-make-module">jupyter notebook certainly can make module</h3>
+
+<ul>
+  <li>There will be <em>#export</em> tag that Howard (and we) want to extract</li>
+  <li>special <em>notebook2script.py</em> will detect sign of <em>#expert</em> and convert following into python module
+<br /></li>
+  <li>and test it</li>
+</ul>
+
+<p><code>test\_eq(TEST,'test')<br />test\_eq(TEST,'test1')</code></p>
+
+<ul>
+  <li>what is <strong>run_notebook.py</strong>?
+    <ul>
+      <li>when you want to test your module in command line interface</li>
+    </ul>
+  </li>
+</ul>
+
+<p><code>		!python run\_notebook.py 01_matmul.ipynb</code></p>
+
+<ul>
+  <li>Is there any difference between 1) and 2)?</li>
+</ul>
+
+<p>1) test -&gt; test01 
+2) test01 -&gt; test</p>
+
+<p>#TODO I don’t know yet</p>
+
+<ul>
+  <li>look into <em>run_notebook.py</em>, package <strong>fire</strong> Jeremy used. What is that?</li>
+</ul>
+
+<p>read and run the code in a notebook, and in the process, Jeremy made <a href="https://opensource.googleblog.com/2017/03/python-fire-command-line.html">Python Fire</a> library called!shockingly, fire takes any kind of function and converts into CLI command.</p>
+
+<p><em>fire library was released by Google open source, Thursday, March 2, 2017</em></p>
+
+<p><br /></p>
+
+<ul>
+  <li>
+    <p>Get data</p>
+  </li>
+  <li>pytorch and numpy are pretty much same.</li>
+  <li>variable c explains how many pixels there are in in MNIST, 28 pixels</li>
+  <li>PyTorch’s <em>view()</em> method: torch function that manipulating tensor, and squeeze() in torch &amp; mathmatical operation similar function</li>
+  <li><a href="https://www.oreilly.com/library/view/natural-language-processing/9781491978221/">Rao &amp; McMahan</a> said usually this functions result in feature vector.</li>
+  <li>
+    <p>In part 1, you can use view function several times.
+<br /></p>
+  </li>
+  <li>
+    <p>Initial python model</p>
+  </li>
+  <li>
+    <p>Which is Linear, like $Xw$(weight)$+a$(bias) $= Y$</p>
+  </li>
+  <li>
+    <p>If you don’t know hou to multiple matrix, refer this site <a href="http://matrixmultiplication.xyz">matmul visulization site</a></p>
+  </li>
+  <li>How many time spends if we we use pure python</li>
+  <li>
+    <p>function <span style="color:blue">matmul</span>, typical matrix multiplication function, takes about 1 second for calculating 1 single train data! (maybe assumed stochastic, 5 data points in validation)</p>
+  </li>
+  <li>
+    <p>it takes about 11.36 hours to update parameters even single layer and 1 iteration! (if that was my computer, it would be 14 hours..)🤪</p>
+  </li>
+  <li>THIS is why we need to consider ‘time’&amp;’space’</li>
+</ul>
+
+<blockquote>
+  <p>This is kinda slow - what if we could speed it up by 50,000 times? Let’s try!</p>
+</blockquote>
+
+<p><br /></p>
+
+<h2 id="elementwise-ops">Elementwise ops</h2>
+
+<h3 id="how-can-we-make-python-faster">How can we make python faster?</h3>
+
+<ul>
+  <li>If we want to calculate faster, then do remove pythonic calcuation, by passing its computation down to something that is written something other than python, like pytorch.</li>
+  <li>According to PyTorch <a href="https://pytorch.org/cppdocs/#aten">doc</a> it  uses C++ (via ATen), so we are going to implement that function with python.
+<br /></li>
+</ul>
+
+<p><img src="/assets/images/6.png" alt="" /></p>
+
+<h4 id="what-is-element-wise-operation">What is element wise operation?</h4>
+<ul>
+  <li>items makes a pair, operate corresponding component
+<br /></li>
+</ul>
+
+<h2 id="footnote">Footnote</h2>
+
+<ul>
+  <li><a href="https://github.com/fastai/course-v3/blob/master/nbs/dl2/01_matmul.ipynb">notebooks</a></li>
+  <li><a href="https://drive.google.com/file/d/18QwDI25Lf0ld0-cEugu7LxjwTc2NRkha/view">material</a></li>
+  <li><a href="https://course.fast.ai/videos/?lesson=8">video</a></li>
+  <li><a href="https://docs.google.com/spreadsheets/d/1bIPBcf-p9iqNG8BGmIVlJCFa4jEsbOZvcPXGTYe5pjI/edit#gid=0">broadcasting excel</a></li>
+</ul>
+
                 
 			</article>
 			
 			<!-- Tags -->
 			<div class="mb-4">
 				<span class="taglist">
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/tags.html#featured">featured</a>
 				
 				</span>
 			</div>
@@ -507,12 +665,12 @@ And it is called ‘magics’ (but i think jeremy is magicion)</p>
         <div class="row prevnextlinks small font-weight-bold">
           
             <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="/2019/12/classifier-city/"> <img height="30px" class="mr-1" src="/assets/images/munich2.jpg">  Making a classifier with gooogle img (Cebu / Munich / Seoul)</a>
+                <a class="text-dark" href="/2020/02/what-is-convolution/"> <img height="30px" class="mr-1" src="/assets/images/cnn-jiwon.png">  What is convolution?: beyond CNN</a>
             </div>
           
           
             <div class="col-md-6 text-right pr-0">
-                <a class="text-dark" href="/2020/01/retrosprect-of-acl-paper-2020/"> Retrospect of ACL 2020 paper writing  <img height="30px" class="ml-1" src="/assets/images/acl2020.png"> </a>
+                <a class="text-dark" href="/2020/03/note08-fastai-2/"> What's inside Pytorch Operator?  <img height="30px" class="ml-1" src="/assets/images/30.png"> </a>
             </div>
           
         </div>

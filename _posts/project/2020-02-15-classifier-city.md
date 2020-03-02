@@ -10,8 +10,8 @@ tags: [ feature ]
 Code can be found [here](https://github.com/SpellOnYou/dlff-note/blob/master/toy-project/What_is_your_city_lesson02.ipynb)
 Deployed model [here](https://my-city-classifier.onrender.com/)
 
-Making a classifier which can distinguish <span style="color: red">Seoul</span> from <span style="color: red">Munich</span> and <span style="color: red">Cebu</span>!
-(hoping my well in Munich!🤟, and I love Cebu)
+Making a classifier which can distinguish <span style="color: red">Seoul</span> from <span style="color: red">Munich</span> and <span style="color: red">Sanfrancisco</span>!
+(hoping my well in Munich!)
 
 
 ### CONTENTS

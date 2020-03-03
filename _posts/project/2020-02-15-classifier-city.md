@@ -1,18 +1,11 @@
 ---
 layout: post
-title: "Making a classifier with gooogle img (Cebu / Munich / Seoul)"
+title: "Making a classifier with image dataset made from gooogle"
 author: dionne
 categories: [toy-project]
 image: assets/images/munich2.jpg
 tags: [ feature ]
 ---
-
-Code can be found [here](https://github.com/SpellOnYou/dlff-note/blob/master/toy-project/What_is_your_city_lesson02.ipynb)
-Deployed model [here](https://my-city-classifier.onrender.com/)
-
-Making a classifier which can distinguish <span style="color: red">Seoul</span> from <span style="color: red">Munich</span> and <span style="color: red">Sanfrancisco</span>!
-(hoping my well in Munich!)
-
 
 ### CONTENTS
 {: .no_toc}
@@ -20,8 +13,16 @@ Making a classifier which can distinguish <span style="color: red">Seoul</span> 
 - Creating dataset from google images(#creating-dataset-from-google-images)
 {:toc}
 
+Code can be found [here](https://github.com/SpellOnYou/dlff-note/blob/master/toy-project/What_is_your_city_lesson02.ipynb)<br />
+Deployed model [here](https://my-city-classifier.onrender.com/)
+
+Making a classifier which can distinguish <span style="color: red">Seoul</span> from <span style="color: red">Munich</span> and <span style="color: red">Sanfrancisco</span>!
+(hoping my well in Munich!)
+
 ### Creating dataset from google images
 
+In machine learning, you always need data before you build your model.
+ 
 You can use either URLs or `google_images_download` package. Since [Jeremy explained specifically](), I will try the other.
 
 #### Using `google_images_download`

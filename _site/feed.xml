@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-05T10:57:32+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Gradient backward, Chain Rule, Refactoring</title><link href="http://localhost:4000/2020/03/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward, Chain Rule, Refactoring" /><published>2020-03-02T00:00:00+01:00</published><updated>2020-03-02T00:00:00+01:00</updated><id>http://localhost:4000/2020/03/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-4/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-05T11:48:45+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Gradient backward, Chain Rule, Refactoring</title><link href="http://localhost:4000/2020/03/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward, Chain Rule, Refactoring" /><published>2020-03-02T00:00:00+01:00</published><updated>2020-03-02T00:00:00+01:00</updated><id>http://localhost:4000/2020/03/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-4/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Section1: &lt;a href=&quot;https://spellonyou.github.io/2020/02/note08-fastai-1/&quot;&gt;What is the meaning of ‘deep-learning from foundations?’&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Section2: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-2/&quot;&gt;What’s inside Pytorch Operator?&lt;/a&gt;&lt;/li&gt;
@@ -1254,10 +1254,11 @@ a.k.a&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/18QwDI25Lf0ld0-cEugu7LxjwTc2NRkha/view&quot;&gt;material&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://course.fast.ai/videos/?lesson=8&quot;&gt;video&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1bIPBcf-p9iqNG8BGmIVlJCFa4jEsbOZvcPXGTYe5pjI/edit#gid=0&quot;&gt;broadcasting excel&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1-matmul.png" /></entry><entry><title type="html">Digging into convolution</title><link href="http://localhost:4000/2020/02/what-is-convolution/" rel="alternate" type="text/html" title="Digging into convolution" /><published>2020-02-28T00:00:00+01:00</published><updated>2020-02-28T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/what-is-convolution</id><content type="html" xml:base="http://localhost:4000/2020/02/what-is-convolution/">&lt;p&gt;Issues&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1-matmul.png" /></entry><entry><title type="html">Digging into convolution</title><link href="http://localhost:4000/2020/02/what-is-convolution/" rel="alternate" type="text/html" title="Digging into convolution" /><published>2020-02-28T00:00:00+01:00</published><updated>2020-02-28T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/what-is-convolution</id><content type="html" xml:base="http://localhost:4000/2020/02/what-is-convolution/">&lt;p&gt;Issues &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;1) Kaiming Initializtion in Pytorch was in trouble.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
-2) Jeremy started to dig in, in lesson09, but I didn’t know why the size of tensor is &lt;sup id=&quot;fnref:5x5x5&quot;&gt;&lt;a href=&quot;#fn:5x5x5&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and even understand this spreadsheet data.&lt;sup id=&quot;fnref:conv&quot;&gt;&lt;a href=&quot;#fn:conv&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;1) Kaiming Initializtion in Pytorch was in trouble.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;2) Jeremy started to dig in, in lesson09, but I didn’t know why the size of tensor is &lt;sup id=&quot;fnref:5x5x5&quot;&gt;&lt;a href=&quot;#fn:5x5x5&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and even understand this spreadsheet data.&lt;sup id=&quot;fnref:conv&quot;&gt;&lt;a href=&quot;#fn:conv&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; &lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1299,11 +1300,10 @@ a.k.a&lt;/li&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://youtu.be/BWWm4AzsdLk?t=4588&quot;&gt;Lecture01&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/cnn-nine.png&quot; alt=&quot;&quot; /&gt;{align-items: center;}&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;nine examples of the actual coefficients from the &lt;strong&gt;first layer&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/images/cnn-nine.png&quot; /&gt;
+    &lt;figcaption&gt;Nine examples of the actual coefficients from the **first layer**&lt;/figcaption&gt;    
+&lt;/div&gt;
 
 &lt;h4 id=&quot;convolution-can-be-represented-as-matmul&quot;&gt;Convolution can be represented as matmul&lt;/h4&gt;
 
@@ -1311,7 +1311,7 @@ a.k.a&lt;/li&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/cnn-result.png&quot; alt=&quot;&quot; /&gt;{align-items: center;}&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/cnn-result2.jpg&quot; alt=&quot;&quot; height=&quot;50%&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/cnn-result2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -1332,9 +1332,9 @@ a.k.a&lt;/li&gt;
   &lt;li&gt;What most of libraries do is just put zeros asdie of matrix&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/padding2.png&quot; alt=&quot;&quot; height=&quot;50%&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/padding2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/padding.png&quot; alt=&quot;&quot; height=&quot;60%&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/padding.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;fast.ai uses reflection paddings (what is this? Jeremy said he uttered it)&lt;/li&gt;
@@ -1412,7 +1412,7 @@ a.k.a&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;</content><author><name>dionne</name></author><category term="feature" /><summary type="html">Issues</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn-jiwon.png" /></entry><entry><title type="html">Digital Product School week 8</title><link href="http://localhost:4000/2020/02/dps-week8/" rel="alternate" type="text/html" title="Digital Product School week 8" /><published>2020-02-24T00:00:00+01:00</published><updated>2020-02-24T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week8</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week8/">&lt;p&gt;The 8th week retropect at Digital Product School&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Week 8 - Ship your MVP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Week 8/9 - Ship your MVP/Release next iteration each day&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center&quot;&gt;
     &lt;img src=&quot;/assets/images/week8/schedule.png&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
@@ -1425,17 +1425,18 @@ a.k.a&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#preparing-engineering-weekly&quot; id=&quot;markdown-toc-preparing-engineering-weekly&quot;&gt;Preparing engineering weekly&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#agile-process-daily-stand-up&quot; id=&quot;markdown-toc-agile-process-daily-stand-up&quot;&gt;Agile Process, daily stand-up&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#making-application-flowchart-feat-drawio&quot; id=&quot;markdown-toc-making-application-flowchart-feat-drawio&quot;&gt;Making application flowchart (feat draw.io)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#engineering-weekly&quot; id=&quot;markdown-toc-engineering-weekly&quot;&gt;Engineering weekly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ai-lunch&quot; id=&quot;markdown-toc-ai-lunch&quot;&gt;AI lunch&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
-
-&lt;h1 class=&quot;no_toc&quot; id=&quot;monday&quot;&gt;Monday&lt;/h1&gt;
 
 &lt;h2 id=&quot;preparing-engineering-weekly&quot;&gt;Preparing engineering weekly&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;This week at Wednesday, I will explain the &lt;em&gt;Language Modelings&lt;/em&gt;, mainly focusing ELMo, ULMFiT, BERT and GPT-2.
 Slides is available &lt;a href=&quot;https://docs.google.com/presentation/d/1-oTUqgFq0x3N8QpcN7gHay5KhIN2KdFGOTxzujr75ck/edit?usp=sharing&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Changed the presentation, because there were people who are not in ML domain. &lt;a href=&quot;https://www.slideshare.net/JiWenKim/applicable-bert&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;agile-process-daily-stand-up&quot;&gt;Agile Process, daily stand-up&lt;/h2&gt;
@@ -1474,13 +1475,11 @@ This daily stand-up helps us to synchronize each part’s process so that we can
     &lt;figcaption&gt;This week engineer's main plan&lt;/figcaption&gt;    
 &lt;/div&gt;
 
-&lt;h1 class=&quot;no_toc&quot; id=&quot;tuesday&quot;&gt;Tuesday&lt;/h1&gt;
+&lt;h2 id=&quot;engineering-weekly&quot;&gt;Engineering weekly&lt;/h2&gt;
 
-&lt;h1 class=&quot;no_toc&quot; id=&quot;wednesday&quot;&gt;Wednesday&lt;/h1&gt;
+&lt;h2 id=&quot;ai-lunch&quot;&gt;AI lunch&lt;/h2&gt;
 
-&lt;h1 class=&quot;no_toc&quot; id=&quot;thursday&quot;&gt;Thursday&lt;/h1&gt;
-
-&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 8th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week8/gate.png" /></entry><entry><title type="html">Algorithmic bias</title><link href="http://localhost:4000/2020/02/fast.ai-nlp-note-16/" rel="alternate" type="text/html" title="Algorithmic bias" /><published>2020-02-20T00:00:00+01:00</published><updated>2020-02-20T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/fast.ai-nlp-note-16</id><content type="html" xml:base="http://localhost:4000/2020/02/fast.ai-nlp-note-16/">&lt;p&gt;&lt;strong&gt;Algorithms can encode &amp;amp; magnify human bias&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;##&lt;/p&gt;</content><author><name>dionne</name></author><summary type="html">The 8th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week8/gate.png" /></entry><entry><title type="html">Algorithmic bias</title><link href="http://localhost:4000/2020/02/fast.ai-nlp-note-16/" rel="alternate" type="text/html" title="Algorithmic bias" /><published>2020-02-20T00:00:00+01:00</published><updated>2020-02-20T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/fast.ai-nlp-note-16</id><content type="html" xml:base="http://localhost:4000/2020/02/fast.ai-nlp-note-16/">&lt;p&gt;&lt;strong&gt;Algorithms can encode &amp;amp; magnify human bias&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;case-study-1-facial-recognition--predictive-policing&quot;&gt;Case Study 1: Facial Recognition &amp;amp; Predictive Policing&lt;/h3&gt;
 

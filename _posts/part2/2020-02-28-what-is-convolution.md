@@ -7,10 +7,11 @@ image: assets/images/cnn-jiwon.png
 tags: [ feature ]
 ---
 
-Issues
+Issues <br />
 
-1) Kaiming Initializtion in Pytorch was in trouble.[^1]
-2) Jeremy started to dig in, in lesson09, but I didn't know why the size of tensor is [^5x5x5] and even understand this spreadsheet data.[^conv]
+1) Kaiming Initializtion in Pytorch was in trouble.[^1] <br />
+
+2) Jeremy started to dig in, in lesson09, but I didn't know why the size of tensor is [^5x5x5] and even understand this spreadsheet data.[^conv] <br />
 
 ---
 
@@ -40,9 +41,10 @@ A convolutional neural network is that your red, green, and blue pixels go into 
 
 [Lecture01](https://youtu.be/BWWm4AzsdLk?t=4588)
 
-![](/assets/images/cnn-nine.png){align-items: center;}
-
-- nine examples of the actual coefficients from the **first layer**.
+<div style="text-align:center">
+    <img src="/assets/images/cnn-nine.png"/>
+    <figcaption>Nine examples of the actual coefficients from the **first layer**</figcaption>    
+</div>
 
 #### Convolution can be represented as matmul
 
@@ -50,7 +52,7 @@ A convolutional neural network is that your red, green, and blue pixels go into 
 
 ![](/assets/images/cnn-result.png){align-items: center;}
 
-![](/assets/images/cnn-result2.jpg){:height="50%" width="50%"}
+![](/assets/images/cnn-result2.jpg)
 
 - [A B C D E F G H I J] is 3 by 3 image data flatten to vector.
 
@@ -64,9 +66,9 @@ A convolutional neural network is that your red, green, and blue pixels go into 
 
 - What most of libraries do is just put zeros asdie of matrix 
 
-![](/assets/images/padding2.png){:height="50%" width="50%"}
+![](/assets/images/padding2.png)
 
-![](/assets/images/padding.png){:height="60%" width="60%"}
+![](/assets/images/padding.png)
 
 - fast.ai uses reflection paddings (what is this? Jeremy said he uttered it)
 

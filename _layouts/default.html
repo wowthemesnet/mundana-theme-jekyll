@@ -23,13 +23,11 @@
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.css">
 
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
 
     {% include tracking-header.html %}
-
 
 </head>
 
@@ -44,7 +42,7 @@
         </button>
         <div class="navbar-collapse collapse" id="navbarColor02" style="">
             <ul class="navbar-nav mr-auto d-flex align-items-center">
-               {% include menu-header.html %}
+                {% include menu-header.html %}
             </ul>
             <ul class="navbar-nav ml-auto d-flex align-items-center">
                 {% include search-lunr.html %}
@@ -63,14 +61,12 @@
         {{ content }}
     </main>
 
-
-    <!-- Scripts: popper, bootstrap, theme, lunr -->
+    <!-- Scripts: popper, bootstrap, theme -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script src="{{site.baseurl}}/assets/js/theme.js"></script>
-
 
     <!-- Footer -->
     <footer class="bg-white border-top p-3 text-muted small">
@@ -78,14 +74,14 @@
         <div class="row align-items-center justify-content-between">
             <div>
                 <span class="navbar-brand mr-2 mb-0"><strong>Mundana</strong></span>
-                <span>Copyright © <script>document.write(new Date().getFullYear())</script>.</span>
+                <span>Copyright © {{ "now" | date: "%Y" }}.</span>
 
                 <!--  Github Repo Star Btn-->
-                <a class="text-dark ml-1" target="_blank" href="https://github.com/wowthemesnet/mundana-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
+                <a class="text-dark ml-1" target="_blank" rel="noopener" href="https://github.com/wowthemesnet/mundana-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
 
             </div>
             <div>
-                Made with <a target="_blank" class="text-dark font-weight-bold" href="https://www.wowthemes.net/mundana-jekyll-theme/"> Mundana Jekyll Theme </a> by <a class="text-dark" target="_blank" href="https://www.wowthemes.net">WowThemes</a>.
+                Made with <a target="_blank" class="text-dark font-weight-bold" rel="noopener" href="https://www.wowthemes.net/mundana-jekyll-theme/"> Mundana Jekyll Theme </a> by <a class="text-dark" target="_blank" rel="noopener" href="https://www.wowthemes.net">WowThemes</a>.
             </div>
         </div>
         </div>

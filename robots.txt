@@ -1,0 +1,4 @@
+---
+permalink: /robots.txt
+---
+Sitemap: {{site.host}}{{site.baseurl}}/sitemap.xml

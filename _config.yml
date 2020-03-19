@@ -1,12 +1,12 @@
 # Site
-name: 'Mundana'
+name: 'Rho Cosmetics Blog'
 description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: '/mundana-theme-jekyll'
-disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+disqus: 'rhocosmetics'
+email: 'noreply@rhocosmetics.com'
+mailchimp-list: 'https://rhocosmetics.us20.list-manage.com/subscribe?u=8f91c1ac316d14a2cef964d63&id=752dd73b7d'
 
 include: ["_pages"]
 permalink: /:title/
@@ -19,12 +19,12 @@ plugins:
   - jekyll-seo-tag
   
 authors:
-    sal:
-      name:           Sal
-      site:           https://www.wowthemes.net
+    rachel:
+      name:           Rachel
+      site:           https://rhocosmetics.com
       avatar:         /assets/images/avatar1.jpg
       bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
-      email:          wowthemesnet@gmail.com
+      email:          rachel@rhocosmetics.com
       twitter:        https://twitter.com/wowthemesnet
 
     jane:
@@ -43,7 +43,7 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: sal
+      author: rachel
       avatar: /assets/images/avatar1.jpg
       
   # all pages

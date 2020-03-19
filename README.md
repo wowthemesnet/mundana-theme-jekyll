@@ -11,6 +11,11 @@
 
 [How to install & use](https://bootstrapstarter.com/bootstrap-templates/mundana-theme-jekyll/)
 
+### Edit
+
+1. bundle install
+2. bundle exec jekyll serve
+
 ### Contribute to Mundana repository
 
 1. In the top-right corner of this page, click **Fork**.

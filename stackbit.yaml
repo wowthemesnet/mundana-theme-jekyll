@@ -1,8 +1,0 @@
-stackbitVersion: ~0.2.0
-ssgName: custom
-buildCommand: jekyll
-publishDir: _site
-staticDir: ''
-uploadDir: images
-pagesDir: ''
-dataDir: ''

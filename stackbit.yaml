@@ -1,9 +1,0 @@
-stackbitVersion: ~0.2.0
-ssgName: custom
-buildCommand: string
-publishDir: string
-staticDir: string
-uploadDir: images
-pagesDir: string
-dataDir:
-pageLayoutKey:

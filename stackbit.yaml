@@ -4,5 +4,5 @@ buildCommand: jekyll
 publishDir: _site
 staticDir: ''
 uploadDir: images
-pagesDir: _pages
+pagesDir: ''
 dataDir: ''

@@ -1,9 +1,9 @@
 stackbitVersion: ~0.2.0
 ssgName: custom
-buildCommand: string
-publishDir: string
-staticDir: string
+buildCommand: jekyll
+publishDir: _site
+staticDir: ''
 uploadDir: images
-pagesDir: string
-dataDir:
+pagesDir: _pages
+dataDir: ''
 pageLayoutKey:

@@ -169,10 +169,12 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
     <div class="col-md-8 main-loop">
         
         <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
-		
-                 {% include main-loop-card.html %}
+
+        {% for post in site.posts %}
         
-		
+            {% include main-loop-card.html %}
+        
+        {% endfor %}
         <div class="mt-5">
          <!-- Pagination links -->
             {% if paginator.total_pages > 1 %}

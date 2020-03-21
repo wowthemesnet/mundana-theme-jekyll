@@ -5922,7 +5922,8 @@ button.bg-lightblue:focus {
   width: 75% !important; }
 
 .w-100 {
-  width: 100% !important; }
+  width: 100% !important;
+  border-radius:5px 5px 5px 5px; }
 
 .w-auto {
   width: auto !important; }
@@ -6020,7 +6021,7 @@ button.bg-lightblue:focus {
 .my-3 {
   margin-bottom: 1rem !important;
   border: 1px solid #eee;
-  boder-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
   padding: 10px 0px 10px 0px;
   margin-top: 1rem !important; }
 

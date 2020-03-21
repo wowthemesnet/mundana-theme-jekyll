@@ -6018,7 +6018,11 @@ button.bg-lightblue:focus {
 
 .mb-3,
 .my-3 {
-  margin-bottom: 1rem !important; }
+  margin-bottom: 1rem !important;
+  border: 1px solid #eee;
+  boder-radius: 5px 5px 5px 5px;
+  padding: 10px 0px 10px 0px;
+  margin-top: 1rem !important; }
 
 .ml-3,
 .mx-3 {
@@ -7678,7 +7682,8 @@ html {
     max-width: 41.66667%; }
   .col-md-6 {
     flex: 0 0 50%;
-    max-width: 50%; }
+    max-width: 50%;
+	border-radius: 0px 5px 5px 0px; }
   .col-md-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%; }

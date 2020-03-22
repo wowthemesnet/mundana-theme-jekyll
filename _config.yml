@@ -59,6 +59,13 @@ highlighter: rouge
 # Paginate
 paginate: 10
 
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
 
 
 # Exclude metadata and development time dependencies (like Grunt plugins)

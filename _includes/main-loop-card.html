@@ -6,16 +6,10 @@
 	<p class="excerpt">
 	   {{ post.excerpt  | strip_html | strip_newlines | truncate: 186}}
 	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		{% for category in post.categories %}
-		<a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
-		{% endfor %}
-		</span>
-	</small>
 	<small class="text-muted">
 		{{ post.date | date: '%b %d, %Y' }}
 	</small>
+	<a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark hvr-wobble-horizontal">Read More</a>
 </div>
 {% if post.image %}
 	<div class="col-md-6 pr-0 text-right all-post-image" style="background-size:cover;background-image:url({{site.baseurl}}/{{ post.image }});">

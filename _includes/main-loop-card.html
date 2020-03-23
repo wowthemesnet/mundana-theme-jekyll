@@ -1,8 +1,8 @@
+<a href ="{{site.baseurl}}{{post.url}}" class="text-dark hvr-grow">
 <div class="mb-5 d-flex justify-content-between main-loop-card post-all-post">
-<a href ="{{site.baseurl}}{{post.url}}" class="hvr-grow">
 <div class="pr-3 all-post-text">
 	<h2 class="mb-1 h4 font-weight-bold">
-    {{ post.title }}
+	{{ post.title }}
 	</h2>
 	<p class="excerpt">
 	   {{ post.excerpt  | strip_html | strip_newlines | truncate: 186}}
@@ -22,5 +22,5 @@
 	<div class="col-md-6 pr-0 text-right all-post-image" style="background-size:cover;background-image:url({{site.baseurl}}/{{ post.image }});">
 	</div>
 {% endif %}
-</a>
 </div>
+</a>

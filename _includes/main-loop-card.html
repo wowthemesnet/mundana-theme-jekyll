@@ -7,9 +7,13 @@
 	   {{ post.excerpt  | strip_html | strip_newlines | truncate: 186}}
 	</p>
 	<small class="d-block text-muted">
-		<span class="badge badge-danger">
+		
 		{% for category in post.categories %}
-		<a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a></span><span class="sep"></span>
+		<span class="badge badge-danger">
+		<a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a></span>
+		<span class="sep"></span>
+		<span class="badge badge-danger">
+		<a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a></span>
 		{% endfor %}
 		
 	</small>

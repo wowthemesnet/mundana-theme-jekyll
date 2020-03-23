@@ -20,7 +20,7 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
     {% assign latest_post = site.posts[0] %}
     <div class="col-md-6">
     <div class="card border-0 mb-4 box-shadow">   
-    <a href="{{site.baseurl}}{{latest_post.url}}">
+    <a href="{{site.baseurl}}{{latest_post.url}}" class="hvr-grow">
     <div class="topfirstimage" style="background-image: url({% if latest_post.image contains "://" %}{{ latest_post.image }}{% else %} {{site.baseurl}}/{{ latest_post.image}}{% endif %}); height: 200px;    background-size: cover;    background-repeat: no-repeat;"></div>     
     </a>
     <div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
@@ -136,7 +136,7 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
 <!-- Sticky - add sticky tag to the post you want to highlight here - tags: [sticky] -->
 {% for post in site.posts %} 
 {% if post.tags contains "sticky" %}
-<div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem bg-lightblue position-relative animated wobble hvr-grow">
+<div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem bg-lightblue position-relative animated tada">
     <div class="pl-4 pr-0 h-100 tofront">
         <div class="row justify-content-between">
             <div class="col-md-6 pt-6 pb-6 pr-lg-4 align-self-center">
@@ -144,7 +144,7 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
                 <p class="mb-3 lead">
                     {{ post.excerpt | strip_html | strip_newlines | truncate: 136 }}
                 </p>
-                <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark">Read More</a>
+                <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark hvr-wobble-horizontal">Read More</a>
             </div>
             <div class="col-md-6 col-md-6-sticky d-none d-md-block pr-0" style="background-size:cover;background-image:url({{site.baseurl}}/{{ post.image }});">	
             </div>

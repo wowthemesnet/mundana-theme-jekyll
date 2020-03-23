@@ -18,10 +18,7 @@
 	</small>
 </div>
 {% if post.image %}
-	<div class="col-md-3 pr-0 text-right">
-	<a href="{{site.baseurl}}{{post.url}}">
-	<img class="w-100" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
-	</a>
+	<div class="col-md-6 pr-0 text-right" style="background-size:cover;background-image:url({{site.baseurl}}/{{ post.image }});">
 	</div>
 {% endif %}
 </div>

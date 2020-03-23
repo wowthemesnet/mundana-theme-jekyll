@@ -8485,7 +8485,12 @@ html {
 	border-radius: 5px;
   }
   .post-all-post {
-  	padding: 10px;
 	box-shadow: 0 0 15px -2px #ccc;
 	border-radius: 5px;
+  }
+  .all-post-image {
+  	border-radius: 0px 5px 5px 0px;
+  }
+  .all-post-text {
+  	padding: 10px 0px 10px 10px;
   }

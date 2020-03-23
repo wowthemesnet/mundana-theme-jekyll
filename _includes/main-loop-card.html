@@ -2,7 +2,7 @@
 <a href ="{{site.baseurl}}{{post.url}}" class="hvr-grow">
 <div class="pr-3 all-post-text">
 	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
+    {{ post.title }}
 	</h2>
 	<p class="excerpt">
 	   {{ post.excerpt  | strip_html | strip_newlines | truncate: 186}}

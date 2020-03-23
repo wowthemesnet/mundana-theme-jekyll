@@ -6,11 +6,15 @@
 	<p class="excerpt">
 	   {{ post.excerpt  | strip_html | strip_newlines | truncate: 186}}
 	</p>
+	<small class="d-block text-muted">
+		<span class="badge badge-success">
+		{% for category in post.categories %}
+		<a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
+		{% endfor %}
+		</span>
+	</small>
 	<small class="text-muted">
 		{{ post.date | date: '%b %d, %Y' }}
-	</small><br/>
-	<small>
-	<a href="{{site.baseurl}}{{post.url}}" class="btn btn-sm btn-outline-success btn-dark hvr-wobble-horizontal">Read More</a>
 	</small>
 </div>
 {% if post.image %}

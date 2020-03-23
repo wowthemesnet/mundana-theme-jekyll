@@ -5251,7 +5251,7 @@ button.bg-lightblue:focus {
   border-bottom-left-radius: 0.25rem !important; }
 
 .rounded-circle {
-  border-radius: 50% !important; }
+  border-radius: 25% !important; }
 
 .rounded-0 {
   border-radius: 0 !important; }

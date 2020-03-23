@@ -1,4 +1,5 @@
 <div class="mb-5 d-flex justify-content-between main-loop-card post-all-post">
+        <!-- post excerpt -->    
 <div class="pr-3 all-post-text">
 	<h2 class="mb-1 h4 font-weight-bold">
 	<a href ="{{site.baseurl}}{{post.url}}" class="text-dark hvr-grow">{{ post.title }}</a>
@@ -6,19 +7,20 @@
 	<p class="excerpt">
 	   {{ post.excerpt  | strip_html | strip_newlines | truncate: 186}}
 	</p>
-
-		
+        <!-- categories -->
+	<small class="d-block text-muted">
 		{% for category in post.categories %}
 		<span class="badge badge-success">
 		<a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a></span>
 		<span class="sep"></span>
 		{% endfor %}
-		
-
+		</small>
+		<!-- post date -->
 	<small class="text-muted">
 		{{ post.date | date: '%b %d, %Y' }}
 	</small>
 </div>
+        <!-- post image -->  
 {% if post.image %}
 	<div class="col-md-6 pr-0 text-right all-post-image" style="background-size:cover;background-image:url({{site.baseurl}}/{{ post.image }});">
 	</div>

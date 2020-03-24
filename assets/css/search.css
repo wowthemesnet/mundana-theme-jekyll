@@ -1,0 +1,66 @@
+.input-group, .form-group {
+	margin-bottom: 10px;
+	position: relative;
+}
+.input-group {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	width: 100%;
+}
+* {
+	box-sizing: border-box;
+}
+.input-group-prepend {
+	margin-right: 0;
+}
+.input-group-prepend {
+	margin-right: -1px;
+}
+.input-group-prepend, .input-group-append {
+	display: flex;
+}
+.input-group .input-group-prepend .input-group-text {
+	padding: 10px 0px 10px 10px;
+}
+.input-group>.input-group-prepend>.input-group-text {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.input-group-prepend .input-group-text {
+    border-right: none;
+}
+.input-group-prepend .input-group-text, .input-group-prepend .input-group-text {
+    background-color: transparent;
+    border: 1px solid #2b3553;
+    border-radius: 0.4285rem;
+    color: #ffffff;
+    margin: 0;
+}
+.input-group-append .input-group-text, .input-group-prepend .input-group-text {
+    background-color: transparent;
+    border: 1px solid #2b3553;
+    border-radius: 0.4285rem;
+    color: #ffffff;
+    -webkit-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -ms-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.7rem;
+    margin-bottom: 0;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.428571;
+    color: #adb5bd;
+    text-align: center;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 1px solid #cad1d7;
+    border-radius: 0.25rem;
+}

@@ -3290,7 +3290,8 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.3rem 1rem; }
+  padding: 0.3rem 1rem;
+  box-Sshadow: 0 0 15px -2px #b6b6b6; }
   .navbar > .container,
   .navbar > .container-fluid {
     display: flex;

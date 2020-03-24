@@ -206,15 +206,11 @@ label {
   display: inline-block;
   margin-bottom: 0.5rem; }
 
-button {
-  border-radius: 0; }
-
 button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color; }
 
 input,
-button,
 select,
 optgroup,
 textarea {
@@ -223,19 +219,11 @@ textarea {
   font-size: inherit;
   line-height: inherit; }
 
-button,
 input {
   overflow: visible; }
 
-button,
 select {
   text-transform: none; }
-
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button; }
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -3332,18 +3320,6 @@ input[type="button"].btn-block {
   flex-grow: 1;
   align-items: center; }
 
-.navbar-toggler {
-  padding: 0.25rem 0.75rem;
-  font-size: 1.15rem;
-  line-height: 1;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 0.25rem; }
-  .navbar-toggler:hover, .navbar-toggler:focus {
-    text-decoration: none; }
-  .navbar-toggler:not(:disabled):not(.disabled) {
-    cursor: pointer; }
-
 .navbar-toggler-icon {
   display: inline-block;
   width: 1.5em;
@@ -3497,10 +3473,6 @@ input[type="button"].btn-block {
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
   color: rgba(0, 0, 0, 0.9); }
-
-.navbar-light .navbar-toggler {
-  color: rgba(0, 0, 0, 0.5);
-  border-color: rgba(0, 0, 0, 0.1); }
 
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }

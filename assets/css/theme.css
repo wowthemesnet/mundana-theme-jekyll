@@ -289,6 +289,11 @@ a.text-dark:hover {
 	padding:7rem 1rem;
 	border-radius: 5px 5px 5px 5px;
 }
+.shadow {
+	box-shadow: 0 0 15px -2px #ccc;
+    border-radius: 10px;
+    padding: 10px;
+}
 @media (min-width:992px) {
 	.jumbotron-lg-withnav {
 		padding-bottom:calc(10rem - 69.75px);

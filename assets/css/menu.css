@@ -1,0 +1,67 @@
+.navbar-collapse.collapsing, .navbar .navbar-collapse.collapse {
+    animation: show_navbar_collapse .2s ease forwards;
+}
+.navbar-collapse {
+    position: absolute;
+    width: calc(100% - 1.4rem);
+    height: auto !important;
+    left: 0;
+    top: 0;
+    margin: 0.7rem;
+    background: #1f2251;
+    border-radius: 0.2857rem;
+    padding: 1.4rem;
+}
+.justify-content-end {
+    justify-content: flex-end !important;
+}
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+}
+.navbar .navbar-collapse .navbar-collapse-header {
+    display: block;
+    padding-bottom: 1rem;
+}
+.navbar-collapse-header {
+    display: none;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.navbar .navbar-collapse .navbar-nav li {
+    padding: 0px;
+}
+.navbar-nav li {
+    padding: 0 10px;
+}
+.p-0 {
+    padding: 0 !important;
+}
+ul li {
+    color: #000;
+}
+.navbar .navbar-nav .dropdown {
+    margin: 5px 0;
+}
+.navbar-nav li {
+    padding: 0 10px;
+}
+.dropup, .dropright, .dropdown, .dropleft {
+    position: relative;
+}

@@ -246,12 +246,23 @@ a.text-dark:hover {
 .navbar-light .navbar-nav .show>.nav-link,.navbar-light .navbar-nav .active>.nav-link,.navbar-light .navbar-nav .nav-link.show,.navbar-light .navbar-nav .nav-link.active {
 	color:rgba(0,0,0,0.9);
 }
-.navbar-light .navbar-toggler {
-	color:rgba(0,0,0,0.5);
-	border-color:rgba(0,0,0,0.1);
-}
 .navbar-light .navbar-toggler-icon {
 	background-image:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-toggler-bar {
+    display: block;
+    position: relative;
+    width: 22px;
+    height: 1px;
+    border-radius: 1px;
+    background: #000;
+}
+.navbar-toggler-bar.bar2 {
+    width: 17px;
+    transition: width .2s linear;
+}
+.navbar-toggler-bar + .navbar-toggler-bar {
+    margin-top: 7px;
 }
 .navbar-light .navbar-text {
 	color:rgba(0,0,0,0.5);

@@ -190,6 +190,9 @@ a.text-dark:hover {
 .navbar {
 	transition:top 0.2s ease-in-out;
 	font-weight:400;
+	box-shadow: 0 0 15px -2px #ccc;
+    border-radius: 10px;
+    padding: 10px; 
 }
 .navbar .highlight .nav-link {
 	color:#03a87c !important;

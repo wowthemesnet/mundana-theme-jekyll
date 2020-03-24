@@ -3330,10 +3330,7 @@ input[type="button"].btn-block {
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
-  align-items: center;
-  box-shadow: 0 0 15px -2px #ccc;
-  border-radius: 10px;
-  padding: 10px; }
+  align-items: center; }
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;

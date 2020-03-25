@@ -3434,7 +3434,7 @@ input[type="button"].btn-block {
     .navbar-expand-lg .navbar-toggler {
       display: none; }
 	.collapse-brand {
-	  visibility:none;} }
+	  visibility: hidden;} }
 
 @media (max-width: 1199.98px) {
   .navbar-expand-xl > .container,

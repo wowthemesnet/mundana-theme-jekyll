@@ -1,0 +1,618 @@
+// style for the landing page
+.index-page {
+    .page-header {
+        height: 100vh;
+
+        .container{
+            > .content-center {
+                &.brand {
+                  .h1-seo,
+                  h3{
+                    color: $white;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    span{
+                      font-weight: $font-weight-bold;
+                    }
+                }
+              }
+            }
+        }
+
+        .category-absolute {
+          position: absolute;
+          top: 100vh;
+          margin-top: -60px;
+          padding: 0 15px;
+          width: 100%;
+          color: rgba(255,255,255,.5);
+        }
+    }
+
+    .squares{
+      animation: move-left-right 1s infinite;
+      @include linear-gradient($primary-states, $primary);
+      position: absolute;
+      transition: 0.5s ease-out;
+      overflow: hidden;
+      border-radius: 20%;
+      &.square1{
+        animation: move-left-right 4s infinite;
+        height: 300px;
+        width: 300px;
+        opacity: 0.5;
+        left: 3%;
+        top: -21%;
+      }
+
+      &.square2{
+        animation: move-left-right 6s infinite;
+        height: 400px;
+        width: 400px;
+        opacity: 0.4;
+        right: -5%;
+        top: -12%;
+      }
+
+      &.square3{
+        animation: move-left-right 5s infinite;
+        height: 200px;
+        width: 200px;
+        opacity: 0.1;
+        left: -5%;
+        bottom: 0%;
+      }
+
+      &.square4{
+        animation: move-left-right 10s infinite;
+        height: 100px;
+        width: 100px;
+        opacity: 0.9;
+        right: 27%;
+        top: 70%;
+      }
+
+      &.square5{
+        animation: move-left-right 6s infinite;
+        height: 250px;
+        width: 250px;
+        opacity: 0.1;
+        left: 32%;
+        bottom: 29%;
+      }
+
+      &.square6{
+        animation: move-left-right 9s infinite;
+        left: 10%;
+        top: 35%;
+        height: 80px;
+        width: 80px;
+        opacity: 0.8;
+      }
+
+      &.square7{
+        animation: move-left-right 3s infinite;
+        width: 300px;
+        height: 300px;
+        right: -5%;
+        bottom: 0%;
+        opacity: 0.1;
+      }
+    }
+}
+.landing-page {
+  overflow-x: hidden;
+
+  .page-header {
+
+    &::after {
+      background: radial-gradient(ellipse at top right, #292D61 23%, #171941 65%);
+      // content: "";
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      opacity: .5;
+    }
+    .path {
+      max-width: 65%;
+      right: 0;
+      top: 30px;
+    }
+
+    .path2 {
+      position: absolute;
+      opacity: 0.02;
+      max-width: 41%;
+      right: -60px;
+      top: -50px;
+    }
+
+    .squares {
+      top: 50%;
+      right: 18%;
+      max-height: 200px;
+    }
+
+    .wave {
+      top: 45%;
+      right: 30%;
+      max-height: 90px;
+    }
+
+    .circle {
+      top: 20%;
+      right: 36%;
+      max-height: 75px;
+    }
+
+    .triangle {
+      top: 35%;
+      left: 5%;
+      max-height: 200px;
+    }
+  }
+
+  .section:first-of-type {
+    .path {
+      left: -110px;
+      max-width: 60%;
+      top: -50px;
+    }
+  }
+  .section:nth-of-type(2) {
+
+    .path {
+      left: auto;
+      right: -250px;
+      max-width: 70%;
+      top: 0;
+    }
+    .path2 {
+      position: absolute;
+      opacity: 0.02;
+      right: auto;
+      left: 420px;
+      max-width: 10%;
+      top: 420px;
+    }
+
+    .path3 {
+      position: absolute;
+      opacity: 0.02;
+      left: auto;
+      right: 500px;
+      max-width: 10%;
+      top: -90px;
+    }
+  }
+  .section:nth-of-type(3) {
+    padding-top: 200px;
+
+    .path {
+      right: auto;
+      left: 50px;
+      max-width: 45%;
+      top: 60px;
+    }
+  }
+  .section:nth-of-type(4) {
+    .path {
+      max-width: 60%;
+      right: 3%;
+      top: 15%;
+    }
+    .path2 {
+      position: absolute;
+      opacity: 0.02;
+      left: 25%;
+      right: auto;
+      max-width: 10%;
+      top: 100px;
+    }
+  }
+  .section:nth-of-type(5) {
+    .path {
+      max-width: 50%;
+      left: 5%;
+      top: 3%;
+    }
+  }
+
+  .header{
+      height: 100vh;
+      position: relative;
+
+      .container{
+          padding-top: 26vh;
+          color: $white;
+          z-index: 2;
+          position: relative;
+      }
+
+      .share{
+          margin-top: 150px;
+      }
+      h1{
+          font-weight: 600;
+      }
+      .title{
+          color: $white;
+      }
+  }
+
+    .section-team{
+        .team .team-player img{
+            max-width: 100px;
+        }
+
+        .team-player{
+            margin-bottom: 15px;
+        }
+    }
+
+    .section-contact-us{
+        .title{
+            margin-bottom: 15px;
+        }
+
+        .description{
+            margin-bottom: 30px;
+        }
+
+        .input-group,
+        .send-button,
+        .textarea-container{
+            padding: 0 40px;
+        }
+
+        .textarea-container{
+            margin: 40px 0;
+        }
+
+        a.btn{
+            margin-top: 35px;
+        }
+    }
+
+    .section-safe {
+      .icon {
+        i {
+          font-size: 21px;
+        }
+      }
+    }
+}
+
+// style for the profile page
+.profile-page{
+
+  overflow-x: hidden;
+
+    .page-header{
+      min-height: 550px;
+
+      .container {
+        padding-top: 30vh;
+      }
+
+      .path {
+        max-width: 65%;
+        right: 0;
+        top: 100px;
+      }
+    }
+
+    .info {
+      padding: 40px 0 0;
+
+      .description {
+        text-align: left;
+        padding-left: 20px;
+      }
+    }
+
+    .profile-title {
+      position: absolute;
+      top: 110px;
+      left: 60px;
+    }
+
+    .profile-description {
+      margin-top: -30px;
+      max-width: 450px;
+      font-size: $font-size-base;
+      line-height: 26px;
+    }
+
+    .profile-container {
+        color: $white;
+    }
+    .photo-container {
+      max-width: 400px;
+      overflow: hidden;
+      -webkit-box-shadow: -15px 20px 60px 0px rgba(0,0,0,0.30);
+      -moz-box-shadow: -15px 20px 60px 0px rgba(0,0,0,0.30);
+      box-shadow: -15px 20px 60px 0px rgba(0,0,0,0.30);
+    }
+
+    .title{
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .description,
+    .category{
+        text-align: center;
+    }
+
+    h5.description {
+        max-width: 700px;
+        margin: 20px auto 75px;
+    }
+
+    .nav-align-center {
+        margin-top: 30px;
+    }
+
+    .content {
+      .social-description {
+        display: inline-block;
+        max-width: 150px;
+        width: 145px;
+        text-align: center;
+        margin: 15px 0 0px;
+
+        h2 {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    .collections {
+        img {
+            margin-bottom: 30px;
+        }
+    }
+
+    .gallery {
+        margin-top: 45px;
+        padding-bottom: 50px;
+    }
+
+    .card-coin {
+      .list-group{
+        margin: 0 !important;
+        text-align: left !important;
+        color: $opacity-5;
+      }
+    }
+    .card {
+      .card-header {
+        .profile-title {
+          top: 125px;
+        }
+      }
+    }
+}
+
+.section-full-page{
+
+    &:after,
+    &:before{
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    &:before{
+        background-color: rgba(0,0,0,.5);
+    }
+
+    &[data-image]:after{
+        opacity: .5;
+    }
+
+    > .content,
+    > .footer{
+        position: relative;
+        z-index: 4;
+    }
+
+    > .content{
+        min-height: calc(100vh - 80px);
+    }
+
+    .full-page-background{
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        display: block;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-position: center center;
+
+    }
+
+    .footer nav > ul a:not(.btn),
+    .footer,
+    .footer .copyright a{
+        color: $white;
+    }
+
+}
+
+.register-page{
+
+    background-color: $background-black;
+
+    .link{
+        font-size: 10px;
+        color: $white;
+        text-decoration: none;
+    }
+
+
+
+    .register-bg{
+      height: 700px;
+      background: linear-gradient(to bottom, $transparent-bg 0%, $card-black-background 100%);
+      width: 700px;
+      position: relative;
+      right: -600px;
+      top: -750px;
+      border-radius: 20%;
+      transform: rotate(-15deg);
+    }
+
+    .square{
+      position: absolute;
+      transition: 0.5s ease-out;
+      border-radius: 2px;
+      background-size: 100%;
+      border-radius: 20%;
+    }
+
+    .square-1{
+      height: 300px;
+      width: 300px;
+      background-image: url("../../assets/img/square1.png");
+      top: 175px;
+      right: 150px;
+      opacity: 0.8;
+    }
+
+    .square-2{
+      height: 120px;
+      width: 120px;
+      background-image: url("../../assets/img/square2.png");
+      opacity: 0.9;
+      top: 310px;
+      right: 390px;
+    }
+
+    .square-3{
+      width: 200px;
+      height: 200px;
+      background-image: url("../../assets/img/square3.png");
+      opacity: 0.3;
+      top: -50px;
+      right: 400px;
+    }
+
+    .square-4{
+      height: 200px;
+      width: 200px;
+      background-image: url("../../assets/img/square4.png");
+      right: -50px;
+      top: 525px;
+    }
+
+    .square-5{
+      height: 150px;
+      width: 150px;
+      background-image: url("../../assets/img/square5.png");
+      opacity: 0.5;
+      top: 500px;
+      right: 470px;
+    }
+
+    .square-6{
+      height: 70px;
+      width: 70px;
+      background-image: url("../../assets/img/square5.png");
+      opacity: 0.9;
+      top: 105px;
+      right: 20px;
+    }
+
+    .square-7{
+      height: 200px;
+      width: 200px;
+      background-image: url("../../assets/img/square5.png");
+      left: -100px;
+      top: 100px;
+      opacity: .4;
+    }
+
+    .square-8{
+      height: 100px;
+      width: 100px;
+      background-image: url("../../assets/img/square1.png");
+      left: 300px;
+      top: 400px;
+      opacity: .4;
+    }
+}
+
+.index-page,
+.landing-page,
+.profile-page,
+.register-page{
+  background-image: url("../../assets/img/dots.png");
+  background-size: contain;
+}
+
+@include media-breakpoint-down(md){
+  .section:nth-of-type(2) {
+    .path {
+      left: 10% !important;
+    }
+    .path2 {
+      left: 20% !important;
+    }
+  }
+
+  .info:first-of-type {
+      padding-top: 10% !important;
+  }
+}
+
+@include media-breakpoint-down(sm){
+  .card-login img{
+    width: 70%;
+  }
+
+  .section:nth-of-type(2) {
+    .path,
+    .path2 {
+      left: 0 !important;
+    }
+  }
+  .section-coins {
+    margin-top: 0 !important;
+  }
+}
+
+@include media-breakpoint-down(xs){
+  .card-login {
+    margin-top: 100px;
+      img{
+      width: 350px;
+    }
+  }
+
+  .profile-page .page-header{
+    max-height: unset;
+  }
+
+  .landing-page{
+    .page-header{
+      h1{
+        margin-top: 100px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .info:first-of-type {
+    padding-top: 60%;
+  }
+}

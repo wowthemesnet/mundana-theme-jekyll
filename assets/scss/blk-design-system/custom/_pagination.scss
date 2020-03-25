@@ -1,0 +1,141 @@
+.pagination {
+    .page-item .page-link {
+      border: 0;
+      border-radius: 30px !important;
+      transition: all .3s;
+      margin: 0 3px;
+      min-width: 30px;
+      text-align: center;
+      height: 30px;
+      line-height: 30px;
+      cursor: pointer;
+      text-transform: uppercase;
+      outline: none;
+
+      &:hover,
+      &:focus {
+          background-color: rgba($white, 0.1);
+          color: $white;
+          border: none;
+          box-shadow: none;
+      }
+    }
+
+    .arrow-margin-left,
+    .arrow-margin-right {
+        position: absolute;
+    }
+
+    .arrow-margin-right {
+        right: 0;
+    }
+
+    .arrow-margin-left {
+        left: 0;
+    }
+
+    .page-item.active > .page-link {
+        color: $white;
+        box-shadow: $box-shadow;
+
+        &,
+        &:focus,
+        &:hover{
+          @include diagonal-gradient($primary, $primary-states);
+
+            color: $white;
+        }
+    }
+
+    .page-item.disabled > .page-link{
+        opacity: .5;
+    }
+
+    // Colors
+    &.pagination-info{
+        .page-item.active > .page-link{
+            &,
+            &:focus,
+            &:hover{
+                @include diagonal-gradient($info, $info-states);
+            }
+        }
+    }
+
+    &.pagination-success{
+        .page-item.active > .page-link{
+            &,
+            &:focus,
+            &:hover{
+                @include diagonal-gradient($success, $success-states);
+            }
+        }
+    }
+
+    &.pagination-primary{
+        .page-item.active > .page-link{
+            &,
+            &:focus,
+            &:hover{
+              @include diagonal-gradient($primary, $primary-states);
+
+            }
+        }
+    }
+
+    &.pagination-warning{
+        .page-item.active > .page-link{
+            &,
+            &:focus,
+            &:hover{
+              @include diagonal-gradient($warning, $warning-states);
+
+            }
+        }
+    }
+
+    &.pagination-danger{
+        .page-item.active > .page-link{
+            &,
+            &:focus,
+            &:hover{
+              @include diagonal-gradient($danger, $danger-states);
+
+            }
+        }
+    }
+
+    &.pagination-neutral{
+        .page-item > .page-link{
+            color: $white;
+
+            &:focus,
+            &:hover{
+                background-color: $opacity-2;
+                color: $white;
+            }
+        }
+
+        .page-item.active > .page-link{
+            &,
+            &:focus,
+            &:hover{
+                background-color: $white;
+                border-color: $white;
+                color: $brand-primary;
+            }
+        }
+    }
+
+}
+
+@include media-breakpoint-down(sm){
+  div.dataTables_paginate ul.pagination {
+    .page-item:first-of-type,
+    .page-item:nth-of-type(2),
+    .page-item:nth-of-type(8),
+    .page-item:last-of-type {
+       display: none !important;
+     }
+  }
+}

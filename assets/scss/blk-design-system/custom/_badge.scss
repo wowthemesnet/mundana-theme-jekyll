@@ -1,0 +1,25 @@
+/*           badges             */
+.badge{
+    text-transform: uppercase;
+    line-height: 12px;
+    border: none;
+    text-decoration: none;
+    margin-bottom: 5px;
+
+    &:hover,
+    &:focus{
+      text-decoration: none;
+    }
+}
+
+.badge-icon{
+  padding: 0.4em 0.55em;
+
+  i {
+     font-size: 0.8em;
+  }
+}
+
+.badge-success{
+    @include badge-variant(darken($success,10%));
+}

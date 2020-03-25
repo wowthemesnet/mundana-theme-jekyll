@@ -1,0 +1,169 @@
+.nav-pills {
+
+  &.flex-column li > a {
+    margin-bottom: 15px;
+  }
+
+  &.nav-pills:not(.flex-column) .nav-item:not(:last-child) .nav-link {
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+
+  &:not(.nav-pills-icons):not(.nav-pills-just-icons) .nav-item .nav-link {
+    border-radius: $btn-round-radius;
+  }
+
+  &.nav-pills-just-icons .nav-item .nav-link {
+    border-radius: 50%;
+    height: 80px;
+    max-width: 80px;
+    min-width: auto;
+    padding: 0;
+    width: 80px;
+
+    .tim-icons {
+      font-size: 24px;
+      line-height: 80px;
+    }
+  }
+
+    .nav-item {
+        .nav-link{
+            padding: 0 15.5px;
+            text-align: center;
+            padding: $padding-btn-vertical $padding-round-horizontal;
+            min-width: 100px;
+            font-weight: $font-weight-normal;
+            color: rgba($white,0.5);
+            background-color: $card-black-background;
+
+
+            &:hover{
+                background-color: darken($card-black-background,5%);
+            }
+
+            &.active{
+                &,
+                &:focus,
+                &:hover{
+                    background-color: $dark-gray;
+                    color: $white;
+                    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+                }
+            }
+
+            &.disabled,
+            &:disabled,
+            &[disabled]{
+                opacity: .5;
+            }
+        }
+
+        i{
+            display: block;
+            font-size: 24px;
+            line-height: 60px;
+        }
+    }
+
+    &.nav-pills-neutral{
+        .nav-item {
+            .nav-link{
+                background-color: $opacity-2;
+                color: $white;
+
+                &.active{
+                    &,
+                    &:focus,
+                    &:hover{
+                        background-color: $white;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+
+    &.nav-pills-primary{
+        .nav-item {
+            .nav-link.active{
+                &,
+                &:focus,
+                &:hover{
+                  @include diagonal-gradient($primary, $primary-states);
+                }
+            }
+        }
+    }
+
+    &.nav-pills-info{
+        .nav-item {
+            .nav-link.active{
+                &,
+                &:focus,
+                &:hover{
+                    @include diagonal-gradient($info, $info-states);
+                }
+            }
+        }
+    }
+
+    &.nav-pills-success{
+        .nav-item {
+            .nav-link.active{
+                &,
+                &:focus,
+                &:hover{
+                    @include diagonal-gradient($success, $success-states);
+                }
+            }
+        }
+    }
+
+    &.nav-pills-warning{
+        .nav-item {
+            .nav-link.active{
+                &,
+                &:focus,
+                &:hover{
+                    @include diagonal-gradient($warning, $warning-states);
+                }
+            }
+        }
+    }
+
+    &.nav-pills-danger{
+        .nav-item {
+            .nav-link.active{
+                &,
+                &:focus,
+                &:hover{
+                    @include diagonal-gradient($danger, $danger-states);
+                }
+            }
+        }
+    }
+}
+.tab-space{
+    padding: 20px 0 50px 0px;
+}
+
+.tab-content{
+    &.tab-subcategories{
+        margin-top: 20px;
+        background-color: $transparent-bg;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .tab-pane{
+      color: rgba($white,0.5);
+    }
+}
+
+.nav-align-center{
+    text-align: center;
+
+    .nav-pills{
+        display: inline-flex;
+    }
+}

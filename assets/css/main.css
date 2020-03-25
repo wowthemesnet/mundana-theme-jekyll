@@ -3432,7 +3432,9 @@ input[type="button"].btn-block {
       display: flex !important;
       flex-basis: auto; }
     .navbar-expand-lg .navbar-toggler {
-      display: none; } }
+      display: none; }
+	.collapse-brand {
+	  visibility:none;} }
 
 @media (max-width: 1199.98px) {
   .navbar-expand-xl > .container,

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Demo testing Post"
-author: Muhammed Ashfar
+author: ashfar
 categories: [ tutorial ]
 image: assets/images/home.jpg
 tags: [featured]

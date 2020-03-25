@@ -3461,8 +3461,7 @@ input[type="button"].btn-block {
     padding-bottom: 1rem; }
   .navbar .navbar-collapse .navbar-collapse-header .collapse-brand {
     font-size: 1.2495rem;
-    color: #000;
-	margin-top: 9px; }
+    color: #000; }
   .col-6 {
     flex: 0 0 50%;
     max-width: 50%;
@@ -3478,7 +3477,8 @@ input[type="button"].btn-block {
     font-size: larger; }
   .navbar .navbar-collapse .navbar-collapse-header .collapse-close .navbar-toggler {
     color: #000;
-    font-size: 1.2495rem; }
+    font-size: 1.2495rem;
+	margin-top:9px; }
   .navbar button.navbar-toggler[data-target="#navigation"] {
     padding-top: 0; } }
   

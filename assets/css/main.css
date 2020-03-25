@@ -3461,7 +3461,8 @@ input[type="button"].btn-block {
     padding-bottom: 1rem; }
   .navbar .navbar-collapse .navbar-collapse-header .collapse-brand {
     font-size: 1.2495rem;
-    color: #ffffff; }
+    color: #000;
+	margin-top: 9px; }
   .col-6 {
     flex: 0 0 50%;
     max-width: 50%;
@@ -3471,7 +3472,10 @@ input[type="button"].btn-block {
     padding-right: 15px;
     padding-left: 15px; }
   .navbar .navbar-collapse .navbar-collapse-header .collapse-brand a {
-    font-weight: 600; }
+    font-weight: 700;
+    color: #000;
+    font-family: 'times new roman';
+    font-size: larger; }
   .navbar .navbar-collapse .navbar-collapse-header .collapse-close .navbar-toggler {
     color: #000;
     font-size: 1.2495rem; }

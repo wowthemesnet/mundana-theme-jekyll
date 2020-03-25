@@ -3437,6 +3437,11 @@ input[type="button"].btn-block {
   .navbar-expand-xl > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
+	
+@media (max-width: 991px) {
+  .navbar-collapse {
+  	border-radius: 5px;
+box-shadow: 0 0 15px -2px #ccc; } }	
 
 @media (min-width: 1200px) {
   .navbar-expand-xl {

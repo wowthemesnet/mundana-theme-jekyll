@@ -134,3 +134,16 @@ $(function() {
     }
   }
 });
+
+
+// Navigation close
+function() {
+  $toggle = $(this), 1 == blackKit.misc.navbar_menu_visible ? ($("html").removeClass("nav-open"), blackKit.misc.navbar_menu_visible = 0, $("#bodyClick").remove(), setTimeout(function() {
+    $toggle.removeClass("toggled")
+  }, 550)) : (setTimeout(function() {
+    $toggle.addClass("toggled")
+  }, 580), div = '<div id="bodyClick"></div>', $(div).appendTo("body").click(function() {
+    $("html").removeClass("nav-open"), blackKit.misc.navbar_menu_visible = 0, setTimeout(function() {
+      $toggle.removeClass("toggled"), $("#bodyClick").remove()
+    }, 550)
+  }), $("html").addClass("nav-open"), blackKit.misc.navbar_menu_visible = 1)

@@ -3440,8 +3440,15 @@ input[type="button"].btn-block {
 	
 @media (max-width: 991px) {
   .navbar-collapse {
-  	border-radius: 5px;
-box-shadow: 0 0 15px -2px #ccc; } }	
+  	position: absolute;
+    width: calc(100% - 1.4rem);
+    height: auto !important;
+    left: 0;
+    top: 0;
+    margin: 0.7rem;
+    background: #1f2251;
+    border-radius: 0.2857rem;
+    padding: 1.4rem; } }	
 
 @media (min-width: 1200px) {
   .navbar-expand-xl {

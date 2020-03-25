@@ -254,7 +254,7 @@ a.text-dark:hover {
     display: block;
     position: relative;
     width: 22px;
-    height: 1.5px;
+    height: 1px;
     border-radius: 1px;
     background: #000;
 }

@@ -447,8 +447,10 @@ pre {
     background: #eee;
     padding: 5px;
     font-size:14px;
-  display: block;
-  color: #212529; }
+    display: block;
+    color: #212529;
+    border-radius: 5px;
+    box-shadow: 0 0 15px -2px #efefef; }
   pre code {
     font-size: inherit;
     color: inherit;

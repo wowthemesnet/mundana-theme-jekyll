@@ -3449,7 +3449,8 @@ input[type="button"].btn-block {
     background: #1f2251;
     border-radius: 0.2857rem;
     padding: 1.4rem; } }	
-
+  .justify-content-end {
+    justify-content: flex-end !important; }
 @media (min-width: 1200px) {
   .navbar-expand-xl {
     flex-flow: row nowrap;

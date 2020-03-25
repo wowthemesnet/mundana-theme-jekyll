@@ -36,6 +36,9 @@
 	
 	<!-- fontawesome icons -->
 	<link rel="stylesheet" href="{{site.baseurl}}/assets/css/all.css">
+	
+	<!-- Nucleo Icons -->
+	<link rel="stylesheet" href="{{site.baseurl}}/assets/css/nucleo-icons.css">
 
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
@@ -60,6 +63,20 @@
 		<span class="navbar-toggler-bar bar3"></span>
         </button>
         <div class="navbar-collapse collapse" id="navbarColor02" style="">
+		<div class="navbar-collapse-header">
+         <div class="row">
+          <div class="col-6 collapse-brand">
+            <a>
+             BLK•
+            </a>
+          </div>
+          <div class="col-6 collapse-close text-right">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="true" aria-label="Toggle navigation">
+              <i class="tim-icons icon-simple-remove"></i>
+            </button>
+          </div>
+         </div>
+        </div>
             <ul class="navbar-nav mr-auto d-flex align-items-center">
                {% include menu-header.html %}
             </ul>

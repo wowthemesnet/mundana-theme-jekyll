@@ -3293,7 +3293,7 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.3rem 1rem; }
+  padding: 1px 20px 1px 20px; }
   .navbar > .container,
   .navbar > .container-fluid {
     display: flex;

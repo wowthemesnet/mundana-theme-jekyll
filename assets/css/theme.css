@@ -234,7 +234,7 @@ a.text-dark:hover {
 	color:rgba(0,0,0,0.9);
 }
 .navbar-light .navbar-nav .nav-link {
-	color:rgba(0,0,0,0.5);
+	color:rgba(0,0,0,0);
 	font-size: .93rem;
 	font-weight: lighter;
 }

@@ -677,11 +677,11 @@ article {
     font-family: Baloo Da 2;
 }
 .article-headline {
-    font-family: Baloo Da 2;
+    font-family: 'Playfair Display';
     font-size: 3.2rem;
     font-weight: 400;
     line-height: 1.15;
-    color: #09ebaf;
+    color: #2e2e2e;
 }
 article p,article pre,article figure,article img,article blockquote,article iframed,article embed {
 	margin-bottom:2rem;

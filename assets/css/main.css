@@ -3434,7 +3434,9 @@ input[type="button"].btn-block {
     .navbar-expand-lg .navbar-toggler {
       display: none; }
 	.collapse-brand {
-	  visibility: hidden;} }
+	  visibility: hidden;}
+	.all-post-text {
+      padding: 25px 10px 20px 25px; }
 
 @media (max-width: 1199.98px) {
   .navbar-expand-xl > .container,
@@ -3486,7 +3488,9 @@ input[type="button"].btn-block {
   .navbar button.navbar-toggler[data-target="#navigation"] {
     padding-top: 0; }
   .col-md-6 {
-    visibility: collapse;} }
+    visibility: collapse;}
+  .all-post-text {
+    padding: 20px 20px 0px 20px; } }
   
   
 @media (min-width: 1200px) {

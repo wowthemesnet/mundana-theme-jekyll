@@ -170,7 +170,7 @@ description: "A place where one can read, share and write."
         
         <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
 
-        {% for post in paginator.posts %}
+        {% for category in site.categories %}
         
             {% include main-loop-card.html %}
         

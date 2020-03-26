@@ -3486,7 +3486,7 @@ input[type="button"].btn-block {
   .navbar button.navbar-toggler[data-target="#navigation"] {
     padding-top: 0; }
   .col-md-6 {
-    visibility: hidden;} }
+    visibility: collapse;} }
   
   
 @media (min-width: 1200px) {

@@ -3484,7 +3484,9 @@ input[type="button"].btn-block {
     font-size: 1.2495rem;
 	margin-top:10px; }
   .navbar button.navbar-toggler[data-target="#navigation"] {
-    padding-top: 0; } }
+    padding-top: 0; }
+  .all-post-image {
+    visibility:none;} }
   
   
 @media (min-width: 1200px) {

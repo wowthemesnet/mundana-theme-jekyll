@@ -5,7 +5,7 @@
 	<a href ="{{site.baseurl}}{{post.url}}" class="text-dark hvr-grow">{{ post.title }}</a>
 	</h2>
 	<p class="excerpt">
-	   {{ post.excerpt  | strip_html | strip_newlines | truncate: 120}}
+	   {{ post.excerpt  | strip_html | strip_newlines | truncate: 111}}
 	</p>
         <!-- categories -->
 	<small class="d-block text-muted">
@@ -22,7 +22,7 @@
 </div>
         <!-- post image -->  
 {% if post.image %}
-	<div class="col-md-6 pr-6 text-right all-post-image" style="background-size:cover;background-image:url({{site.baseurl}}/{{ post.image }});">
+	<div class="col-md-6 pr-5 text-right all-post-image" style="background-size:cover;background-image:url({{site.baseurl}}/{{ post.image }});">
 	</div>
 {% endif %}
 </div>

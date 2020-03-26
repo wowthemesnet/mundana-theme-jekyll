@@ -3485,8 +3485,8 @@ input[type="button"].btn-block {
 	margin-top:10px; }
   .navbar button.navbar-toggler[data-target="#navigation"] {
     padding-top: 0; }
-  .all-post-image {
-    visibility:none;} }
+  .col-md-6 {
+    visibility: hidden;} }
   
   
 @media (min-width: 1200px) {

@@ -10,7 +10,17 @@ permalink: "/blog"
         <h1 class="font-weight-bold title h6 text-uppercase mb-4">Blog Space</h1>
             
         {% for category in site.categories %} 
+            {% assign pages_list = category[1] %}
+        {% for post in pages_list %}
+        {% if post.title != null %}
+          {% if group == null or group == post.group %}
+         
             {% include main-loop-card.html %}
+          {% endif %}
+        {% endif %}
+        {% endfor %}
+        {% assign pages_list = nil %}
+        {% assign group = nil %}
         {% endfor %}
 
         </div>

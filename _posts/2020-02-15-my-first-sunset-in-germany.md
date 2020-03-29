@@ -8,7 +8,7 @@ author : Noor
 
 ## New year, new adventures, new challenges
 
-So, this year started with a lot of firsts for me : Relocating to a different city and living abroad,Living on my own and visitng Germany. I wanted a change of places and faces and it happened that I got accepted in a program in Munich for building digital products -> Digital Product School. and since I was on a break after the last startup that I worked for discontinued the product we were working on for business decisions, I wanted to explore more before going for another career decision. After gaining much experience in the work place from my former team and also realizing  what I might enjoy working on, because I was torn apart between different disciplines of Software Engineering after graduation that overlapped with some of my interests and experiences but couldn't decide easily back then. and as I didn't want to apply for new full-time jobs yet, I decided to go for the Digital Product School in Munich and explore a little bit their startup ecosystem and tech scene there. and here I am in Munich with new plans and goals for this upcoming 3 months.
+So, this year started with a lot of firsts for me : Relocating to a different city and living abroad, Living on my own and visitng Germany. I wanted a change of places and faces and it happened that I got accepted in a program in Munich for building digital products -> Digital Product School. and since I was on a break after the last startup that I worked for discontinued the product we were working on for business decisions, I wanted to explore more before going for another career decision. After gaining much experience in the work place from my former team and also realizing a little bit what I might enjoy for a career path for the current period and since I didn't want to apply for new full-time jobs yet, I decided to go for the Digital Product School in Munich and explore Germany's startup ecosystem and tech scene. and here I am in Munich with new plans and goals for this upcoming 3 months.
 
 
 Moving to Germany, I had some stuff in plan on a personal level and also career wise. the most prominant were : 
@@ -30,7 +30,7 @@ Moving to Germany, I had some stuff in plan on a personal level and also career 
 
     * Stay away as much as I could from social media and immerse myself in the moment.
 
-    * I wanted to travel and visit different cities. Germany was on the list.
+    * I wanted to travel and visit different countries. Germany was on the list.
 
     * Most importantly, stop worrying about next steps, just go with the flow and make the most of it.
     

@@ -14,23 +14,25 @@ So, this year started with a lot of firsts for me : Relocating to a different ci
 Moving to Germany, I had some stuff in plan on a personal level and also career wise. the most prominant were : 
 
 * Personal Level : 
+
+
     Since I didn't have a gap after graduating from college and starting my first job, I was drained and didn't take care of myself physically and psychologically, also entertaining-ly (I almost didn't practice any hobbies except some sketching and trials with woodworking with a friend for the whole of 2019). And as we put resolutions for the new year and as I felt I would go to a new environment I should take some oaths regarding myself which were 
 
-        * Fixing my Sleeping Pattern, not entirely because I know it's hard for a person like me who's a night owl, but at least get enough hours of sleep that won't turn me into a zombie and also force myself to spend most of my active hours in the morning because everything closes in Munich by 8 P.M. -.-
+    * Fixing my Sleeping Pattern, not entirely because I know it's hard for a person like me who's a night owl, but at least get enough hours of sleep that won't turn me into a zombie and also force myself to spend most of my active hours in the morning because everything closes in Munich by 8 P.M. -.-
 
-        * Living alone will give me more control over the flow of my day and more quiteness and space to focus on any goals.
+    * Living alone will give me more control over the flow of my day and more quiteness and space to focus on any goals.
 
-        * Maintain a balance between work and also enjoy my time in Germany as much as possible and explore the city and all the neighbouring cities.
+    * Maintain a balance between work and also enjoy my time in Germany as much as possible and explore the city and all the neighbouring cities.
 
-        * Escape plan, I wanted to forget a little bit about everything I was related to for the past years, meet new people, create new memories and a new me. specially that they are from different countries and cultures which I loved and it introduced me a refreshing perspective to the different culutres. I even met some of them who held alot of stuff in common with me than all the people I used to know before.
+    * Escape plan, I wanted to forget a little bit about everything I was related to for the past years, meet new people, create new memories and a new me. specially that they are from different countries and cultures which I loved and it introduced me a refreshing perspective to the different culutres. I even met some of them who held alot of stuff in common with me than all the people I used to know before.
 
-        * Make memories and document more, since I always skipped some stuff while travelling or having new experiences. I was too lazy to take enough photos or videos to document an event or experience and sometimes I regret it.
+    * Make memories and document more, since I always skipped some stuff while travelling or having new experiences. I was too lazy to take enough photos or videos to document an event or experience and sometimes I regret it.
 
-        * Stay away as much as I could from social media and immerse myself in the moment.
+    * Stay away as much as I could from social media and immerse myself in the moment.
 
-        * I wanted to travel and visit different cities. Germany was on the list.
+    * I wanted to travel and visit different cities. Germany was on the list.
 
-        * Most importantly, stop worrying about next steps, just go with the flow and make the most of it.
+    * Most importantly, stop worrying about next steps, just go with the flow and make the most of it.
     
 
     since these were goals, it means I didn't practice them well enough before and I set it as a challenge for myself and to be honest, staying alone and also in a city which is not too loud and active as Munich it served my purpose.

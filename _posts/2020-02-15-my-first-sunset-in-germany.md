@@ -11,7 +11,7 @@ author : Noor
 So, this year started with a lot of firsts for me : Relocating to a different city and living abroad, Living on my own and visitng Germany. I wanted a change of places and faces and it happened that I got accepted in a program in Munich for building digital products -> Digital Product School. and since I was on a break after the last startup that I worked for discontinued the product we were working on for business decisions, I wanted to explore more before going for another career decision. After gaining much experience in the work place from my former team and also realizing a little bit what I might enjoy for a career path for the current period and since I didn't want to apply for new full-time jobs yet, I decided to go for the Digital Product School in Munich and explore Germany's startup ecosystem and tech scene. and here I am in Munich with new plans and goals for this upcoming 3 months.
 
 
-Moving to Germany, I had some stuff in plan on a personal level and also career wise. the most prominant were : 
+Moving to Germany, I had some stuff in plan on a personal level and also career wise. the most prominent were : 
 
 * Personal Level : 
 

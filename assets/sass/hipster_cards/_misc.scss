@@ -1,0 +1,56 @@
+/*     General overwrite     */
+body{
+    font-family: "Helvetica Neue","Open Sans",Arial,sans-serif;
+    background-color: #cccccc;
+}
+a{
+  color: $info-color;
+    
+  &:hover, &:focus{
+     color: $info-states-color; 
+     text-decoration: none; 
+  }
+}
+
+a:focus, a:active, 
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+select::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    outline : 0;
+}
+.ui-slider-handle:focus,
+.navbar-toggle {
+    outline : 0 !important;
+}
+
+/*           Animations              */
+.form-control, 
+.input-group-addon, 
+.tagsinput,
+.navbar,
+.navbar .alert{
+    @include transition($general-transition-time, linear);
+}
+.tagsinput .tag,
+.tagsinput-remove-link,
+.filter,
+.btn-hover,
+[data-toggle="collapse"] i{
+    @include transition($fast-transition-time, linear);
+}
+ 
+.btn-morphing .fa,
+.btn-morphing .circle,
+.gsdk-collapse{
+    @include transition($slow-transition-time, linear);
+}
+
+.margin-top{
+    margin-top: 50px;
+}
+.btn-center{
+    text-align: center;
+}

@@ -1,0 +1,24 @@
+/*           Labels & Progress-bar              */
+.label{
+    padding: 10px 13px;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.label-primary{
+    background-color: #3472F7;
+}
+.label-info{
+    background-color: #2CA8FF;
+}
+.label-success{
+    background-color: #05AE0E;
+}
+.label-warning{
+    background-color: #FF9500;
+}
+.label-danger{
+    background-color: #FF3B30;
+}

@@ -1,0 +1,21 @@
+<div class="card-box col-md-4 col-sm-6">
+  <div class="card" data-background="image" data-src="{{site.baseurl}}{{ post.image }}">
+   <div class="header">
+   {% for category in post.categories %}
+    <div class="category">
+     <h6 class="label label-danger">{{ category }}</h6>
+    </div>
+   {% endfor %}
+   </div>
+
+   <div class="content">
+    <h4 class="title title-uppercase">
+     <a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
+    </h4>
+     <p class="description">{{ post.excerpt  | strip_html | strip_newlines | truncate: 111}}</p>
+   </div>
+     <div class="filter">
+
+      </div>
+ </div>
+</div>

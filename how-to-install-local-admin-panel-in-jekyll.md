@@ -9,5 +9,5 @@ image: assets/images/13.jpg
 layout: post
 ---
 
-This tutorial is about installing admin panel in jekyll
-![assets/images/2jpg](http://)
+This tutorial is about installing admin panel in jekyll.
+![image](http://b-lanc.tk/assets/images/2.jpg)

@@ -7,6 +7,7 @@ tags:
 - sticky
 categories:
 - tutorial
+image: assets/images/13.jpg
 ---
 
 This is example page.

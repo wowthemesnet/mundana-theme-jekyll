@@ -7,6 +7,7 @@ categories:
 author: ashfar
 image: assets/images/13.jpg
 layout: post
+date: '2020-04-01 06:10:28'
 ---
 
 This tutorial is about installing admin panel in jekyll.

@@ -10,4 +10,4 @@ layout: post
 ---
 
 This tutorial is about installing admin panel in jekyll.
-![image](http://b-lanc.tk/assets/images/2.jpg)
+![image](.../assets/images/2.jpg)

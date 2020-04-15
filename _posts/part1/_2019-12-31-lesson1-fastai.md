@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Fine Grained Classification"
+title: "Gradient backward, Chain Rule, Refactoring"
 author: dionne
-categories: [Fast.AI-v3]
-image: assets/images/1-visual-cnn.png
-tags: []
+categories: [fastai-v3]
+image: assets/images/4-classlin.png
+tags: [ sticky ]
 ---
 
 Finally you can solve the mystery behind this weird drawing.. through this course.<br />

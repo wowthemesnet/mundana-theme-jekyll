@@ -60,7 +60,8 @@ On my way I passed by the Isar river and reached to Marienplatz through Tal str.
 
 <!-- ![walking]({{ site.baseurl }}assets/images/PostsImages/MyFirstSunsetInGermany/hofgarten.jpg) -->
 
- <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/isar_river.jpg" alt="view on isar river" 
+ <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/isar_river.jpg" alt="view on isar river" width="300">
+ 
 <div class="row">
   <div class="column">
     <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/tal.jpg" alt="tal street" style="width:100%">

@@ -67,6 +67,8 @@ On my way I passed by the Isar river and reached to Marienplatz through Tal str.
     <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/tal.jpg" alt="tal street" width="300">
   </div>
     <div class="column">
+
+
   </div>
   <div class="column">
     <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/streetview.jpg" alt="tal street with buildings and shops" width="300">
@@ -76,17 +78,13 @@ On my way I passed by the Isar river and reached to Marienplatz through Tal str.
 <div class="row">
   <div class="column">
     <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/artwork_gallery.jpg" alt="artwork gallery" width="200">
-       <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/dancing_figurenes.jpg" alt="dancing figurenes" width="200">
-  </div>
-    <div class="column">
-
-
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/dancing_figurenes.jpg" alt="dancing figurenes" width="200">
   </div>
   <div class="column">
   </div>
 </div>
 
-<img src="/assets/images/PostsImages/MyFirstSunsetInGermany/free_falling.jpg" alt="free falling painting" width="250">
+<img src="/assets/images/PostsImages/MyFirstSunsetInGermany/free_falling.jpg" alt="free falling painting" width="250" text-align="center">
 
 <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/new_town_hall.jpg" alt="munich new town hall" width="500">
 
@@ -110,7 +108,7 @@ On my way I passed by the Isar river and reached to Marienplatz through Tal str.
   <div class="column">
     <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/theantinestr1.jpg" alt="theantine street" width="300">
   </div>
-    <div class="column">
+<div class="column">
   </div>
   <div class="column">
     <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/hofgarten_entrance.jpg" alt="hofgarten entrance" width="300">

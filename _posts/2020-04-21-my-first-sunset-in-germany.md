@@ -64,22 +64,22 @@ On my way I passed by the Isar river and reached to Marienplatz through Tal str.
  
 <div class="row">
   <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/tal.jpg" alt="tal street" style="width:100%">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/tal.jpg" alt="tal street" style="width:60%">
   </div>
   <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/streetview.jpg" alt="tal street with buildings and shops" style="width:100%">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/streetview.jpg" alt="tal street with buildings and shops" style="width:60%">
   </div>
 </div>
 
 <div class="row">
   <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/artwork_gallery.jpg" alt="artwork gallery" style="width:100%">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/artwork_gallery.jpg" alt="artwork gallery" style="width:60%">
   </div>
   <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/dancing_figurenes.jpg" alt="dancing figurenes" style="width:100%">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/dancing_figurenes.jpg" alt="dancing figurenes" style="width:60%">
   </div>
   <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/free_falling.jpg" alt="free falling painting" style="width:100%">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/free_falling.jpg" alt="free falling painting" style="width:60%">
   </div>
 </div>
 

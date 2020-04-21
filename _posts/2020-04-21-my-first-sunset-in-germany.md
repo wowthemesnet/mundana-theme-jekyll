@@ -108,7 +108,7 @@ On my way I passed by the Isar river and reached to Marienplatz through Tal str.
 
 <div class="row">
   <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/theantinestr1.jpg" alt="theantine street" width="300">x
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/theantinestr1.jpg" alt="theantine street" width="300">
   </div>
     <div class="column">
   </div>

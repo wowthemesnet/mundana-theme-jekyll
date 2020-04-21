@@ -59,7 +59,31 @@ After settling in the next day, I wanted to take a walk across Munich. I went ou
 On my way I passed by the Isar river and reached to Marienplatz through Tal str. I passed by a nice artwork gallery on my way and of course, being the active street that it is, it was alive and crowded with people streaming in and out of the popular shops of every brand. This was my first walk in Munich and the streets of this area will always have a special place in my memory, specially with their old architecture and street style. The trip ended by me reaching the Theantine Church and having a break in Hofgarten.
 
 <!-- ![walking]({{ site.baseurl }}assets/images/PostsImages/MyFirstSunsetInGermany/hofgarten.jpg) -->
-<img src="/assets/images/PostsImages/MyFirstSunsetInGermany/isar_river.jpg" alt="view on isar river" width="200">
+
+
+<div class="row">
+  <div class="column">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/isar_river.jpg" alt="view on isar river" width="300">
+  </div>
+  <div class="column">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/tal.jpg" alt="tal street" width="300">
+  </div>
+  <div class="column">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/streetview.jpg" alt="tal street with buildings and shops" width="300">
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/artwork_gallery.jpg" alt="artwork gallery" width="300">
+  </div>
+  <div class="column">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/dancing_figurenes.jpg" alt="dancing figurenes" width="300">
+  </div>
+  <div class="column">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/free_falling.jpg" alt="free falling painting" width="300">
+  </div>
+</div>
 
 
 

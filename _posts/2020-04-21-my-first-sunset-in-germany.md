@@ -18,7 +18,7 @@ Moving to Germany, I had some stuff in plan on a personal level and also career 
 
     Since I didn't have a gap after graduating from college and starting my first job, I was drained and didn't take care of myself physically and psychologically, also entertaining-ly (I almost didn't practice any hobbies except some sketching and trials with woodworking with a friend for the whole of 2019). And as we put resolutions for the new year and as I felt I would go to a new environment I should take some oaths regarding myself which were 
 
-    * Fixing my Sleeping Pattern, not entirely because I know it's hard for a person like me who's a night owl, but at least get enough hours of sleep that won't turn me into a zombie and also force myself to spend most of my active hours in the morning because everything closes in Munich by 8 P.M. -.-
+    * Fixing my Sleeping Pattern, not entirely because I know it's hard for a person like me who's a night owl, but at least get enough hours of sleep that won't turn me into a zombie and also force myself to spend most of my active hours in the morning because everything closes in Munich by 8 P.M.
 
     * Living alone will give me more control over the flow of my day and more quiteness and space to focus on any goals.
 
@@ -64,29 +64,26 @@ On my way I passed by the Isar river and reached to Marienplatz through Tal str.
 
 <div class="row">
   <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/tal.jpg" alt="tal street" width="400">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/tal.jpg" alt="tal street" width="200">
   </div>
   <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/streetview.jpg" alt="tal street with buildings and shops" width="400">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/streetview.jpg" alt="tal street with buildings and shops" width="200">
   </div>
 </div>
 
 <div class="row">
   <div class="column">
     <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/artwork_gallery.jpg" alt="artwork gallery" width="200">
-  </div>
-  <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/dancing_figurenes.jpg" alt="dancing figurenes" width="200">
+       <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/dancing_figurenes.jpg" alt="dancing figurenes" width="200">
   </div>
   <div class="column">
     <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/free_falling.jpg" alt="free falling painting" width="250">
   </div>
 </div>
 
+<img src="/assets/images/PostsImages/MyFirstSunsetInGermany/new_town_hall.jpg" alt="munich new town hall" width="500">
+
 <div class="row">
-  <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/new_town_hall.jpg" alt="munich new town hall" width="200">
-  </div>
   <div class="column">
     <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/new_town_hall2.jpg" alt="munich new town hall" width="200">
   </div>
@@ -95,15 +92,16 @@ On my way I passed by the Isar river and reached to Marienplatz through Tal str.
   </div>
 </div>
 
+ <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/theantine_church.jpg" alt="theantine church" width="500">
 <div class="row">
   <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/new_town_hall.jpg" alt="artwork gallery" width="200">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/theantinestr1.jpg" alt="theantine street" width="500">
   </div>
   <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/new_town_hall2.jpg" alt="dancing figurenes" width="200">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/hofgarten_entrance.jpg" alt="hofgarten entrance" width="200">
   </div>
   <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/theantinestrentr.jpg" alt="free falling painting" width="250">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/selfie_with_dome.jpg" alt="selfie with hofgarten dome" width="250">
   </div>
 </div>
 

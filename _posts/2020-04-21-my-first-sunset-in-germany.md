@@ -60,29 +60,52 @@ On my way I passed by the Isar river and reached to Marienplatz through Tal str.
 
 <!-- ![walking]({{ site.baseurl }}assets/images/PostsImages/MyFirstSunsetInGermany/hofgarten.jpg) -->
 
- <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/isar_river.jpg" alt="view on isar river" width="300">
+ <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/isar_river.jpg" alt="view on isar river" width="400">
 
 <div class="row">
   <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/tal.jpg" alt="tal street" width="200">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/tal.jpg" alt="tal street" width="400">
   </div>
   <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/streetview.jpg" alt="tal street with buildings and shops" width="200">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/streetview.jpg" alt="tal street with buildings and shops" width="400">
   </div>
 </div>
 
 <div class="row">
   <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/artwork_gallery.jpg" alt="artwork gallery" width="100">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/artwork_gallery.jpg" alt="artwork gallery" width="200">
   </div>
   <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/dancing_figurenes.jpg" alt="dancing figurenes" width="100">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/dancing_figurenes.jpg" alt="dancing figurenes" width="200">
   </div>
   <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/free_falling.jpg" alt="free falling painting" width="100">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/free_falling.jpg" alt="free falling painting" width="250">
   </div>
 </div>
 
+<div class="row">
+  <div class="column">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/new_town_hall.jpg" alt="munich new town hall" width="200">
+  </div>
+  <div class="column">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/new_town_hall2.jpg" alt="munich new town hall" width="200">
+  </div>
+  <div class="column">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/theantinestrentr.jpg" alt="theantine street" width="250">
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/new_town_hall.jpg" alt="artwork gallery" width="200">
+  </div>
+  <div class="column">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/new_town_hall2.jpg" alt="dancing figurenes" width="200">
+  </div>
+  <div class="column">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/theantinestrentr.jpg" alt="free falling painting" width="250">
+  </div>
+</div>
 
 
 While eating my snack and prioritizing the goals for the new year, I made peace with last year and said goodbye to all my past unrealistic goals or any disappointments and fatigue, most importantly stopped blaming myself for the stuff that I didn't quite finish and acknowledged that I needed this break and a new room for exploration and meeting new people. It was time for a fresh start as the sunset at hofgarten with the bluish mauve sky started to sink in. It was enchanting and peaceful, just what I needed at this moment.

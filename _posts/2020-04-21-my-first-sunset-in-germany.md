@@ -38,7 +38,7 @@ Moving to Germany, I had some stuff in plan on a personal level and also career 
         since these were goals, it means I didn't practice them well enough before and I set it as a challenge for myself and to be honest, staying alone and also in a city which is not too loud and active as Munich it served my purpose.
 
 
-    Career-related goals :
+    * Career-related goals :
 
         * Learn how the process of building a product from scratch works like, not just handling the engineering part and getting requirments to fullfill in shape of engineering tasks, and I appreciated that digital product school (I will use DPS for short later on) engaged all the team members from the different disciplines to learn about the whole process of product from identifying problem spaces, generating ideas and solutions, validating them and go for user interviews and from prototyping with paper untill high fidelity click dummies and actual technically working versions. I learned about Design Thinking, Interaction Design, User Testing, Agile Methodolgies.
 

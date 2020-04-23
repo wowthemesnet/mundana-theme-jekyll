@@ -1,9 +1,507 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-14T23:28:14+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Gradient backward, Chain Rule, Refactoring</title><link href="http://localhost:4000/2020/03/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward, Chain Rule, Refactoring" /><published>2020-03-02T00:00:00+01:00</published><updated>2020-03-02T00:00:00+01:00</updated><id>http://localhost:4000/2020/03/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-4/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-23T22:15:03+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">fastai 2019 course-v3 Part1, lesson06</title><link href="http://localhost:4000/2020/04/v3-2019-lesson06-note/" rel="alternate" type="text/html" title="fastai 2019 course-v3 Part1, lesson06" /><published>2020-04-15T00:00:00+09:00</published><updated>2020-04-15T00:00:00+09:00</updated><id>http://localhost:4000/2020/04/v3-2019-lesson06-note</id><content type="html" xml:base="http://localhost:4000/2020/04/v3-2019-lesson06-note/">&lt;h1 id=&quot;lesson-06&quot;&gt;Lesson 06&lt;/h1&gt;
+
+&lt;h2 id=&quot;rossmanntabular&quot;&gt;Rossmann(Tabular)&lt;/h2&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;Section1: &lt;a href=&quot;https://spellonyou.github.io/2020/02/note08-fastai-1/&quot;&gt;What is the meaning of ‘deep-learning from foundations?’&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Section2: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-2/&quot;&gt;What’s inside Pytorch Operator?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Section3: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-3/&quot;&gt;Implement forward&amp;amp;backward pass from scratch&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Section4: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-4/&quot;&gt;Gradient backward, Chain Rule, Refactoring&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Tabular data: be careful on Categorical variable vs Continuous variable.&lt;/li&gt;
+  &lt;li&gt;if datatype is int, fastai think it is classification, not a regression.&lt;/li&gt;
+  &lt;li&gt;Root mean square percentage error. as loss function.&lt;/li&gt;
+  &lt;li&gt;When you assign the y_range, it’s better to assign little bit more than actual maximum. &amp;gt; because it’s sigmoid.&lt;/li&gt;
+  &lt;li&gt;intermediate layers, which is weight matrix is 1) 1000, and 2) 500 -&amp;gt; which means our parameter would be 500*1000.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;what-is-dropout-and-embedding-dropout&quot;&gt;What is dropout and embedding dropout?&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jmlr.org/papers/v15/srivastava14a.html&quot;&gt;Nitish Srivastava, Dropout: A Simple way to prevent Neural Networks from Overfitting&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;you can dropout with &lt;code class=&quot;highlighter-rouge&quot;&gt;p&lt;/code&gt; value, make it specified to specific layer, or make it applied to all the layers.&lt;/li&gt;
+  &lt;li&gt;Pytorch code 1) bernoulli, which decides whether you will hold it? 2) and divide the noise value depends on noise value. so noise became 2 or remain 0.
+    &lt;ul&gt;
+      &lt;li&gt;According to pytorch code, We do change at training time, but we do nothing at test time. and this means you don’t have to do anything special with inference time.’&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;TODO&lt;/b&gt;: find at forums &lt;code class=&quot;highlighter-rouge&quot;&gt;what is inference time&lt;/code&gt; - Related to NVIDIA, GPU.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Embedding dropout is just a dropout.
+    &lt;ul&gt;
+      &lt;li&gt;It’s different between continuous variable and embedding layer.  &lt;b&gt;TODO&lt;/b&gt; Still can’t understand. why embedding dropout is effective. or,… in need.&lt;/li&gt;
+      &lt;li&gt;Let’s delete at random, some of the results of the embedding.&lt;/li&gt;
+      &lt;li&gt;and It worked well especially at Kaggle&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;batch-normalization&quot;&gt;Batch Normalization&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1502.03167.pdf&quot;&gt;Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift&lt;/a&gt; -&amp;gt; came out false! According to &lt;a href=&quot;https://arxiv.org/pdf/1805.11604.pdf&quot;&gt;How Does Batch Normalization Help Optimization?&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The key was  &lt;code class=&quot;highlighter-rouge&quot;&gt;multiplicative&lt;/code&gt; bias {\gamma} and &lt;code class=&quot;highlighter-rouge&quot;&gt;additive&lt;/code&gt; bias {\beta}`&lt;/li&gt;
+  &lt;li&gt;Explain
+    &lt;ul&gt;
+      &lt;li&gt;Let $$ \hat{y}  = f(w_1, w_2, w_3, … , x)} $$ ,  loss = MSE , Then &lt;code class=&quot;highlighter-rouge&quot;&gt;y_range&lt;/code&gt; should be between 1 and 5`&lt;/li&gt;
+      &lt;li&gt;And Activation function ends with &lt;code class=&quot;highlighter-rouge&quot;&gt;-1 -&amp;gt; +1&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;To mitigate this problem, we can add the other parameter, like $$w_n$$&lt;/li&gt;
+      &lt;li&gt;But there’re so much interactions in the process so just re-scale the output.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;momentum-parameter-at-batchnorm1d&quot;&gt;Momentum parameter at BatchNorm1d&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Different from momentum like in optimization.&lt;/li&gt;
+  &lt;li&gt;This momentum is Exponentially weighted moving average of the mean, instead of deviation.
+    &lt;ul&gt;
+      &lt;li&gt;If this is small number: &lt;code class=&quot;highlighter-rouge&quot;&gt;mean standard deviation&lt;/code&gt; would be less from mini_batch to mini_batch » less regularization effect. (If this is large number, variation would be greater from mini_batch to mini_batch » more regularization effect)&lt;/li&gt;
+      &lt;li&gt;TODO: can’t sure, but i understand, this is not about &lt;code class=&quot;highlighter-rouge&quot;&gt;how to update parameter&lt;/code&gt; but about &lt;code class=&quot;highlighter-rouge&quot;&gt;how much reflect previous value when scale and shift&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;End of=&quot;&quot; Rossmann=&quot;&quot;&gt;
+
+Q. Preference between batchnorm and the other regularizations(drop out, weight decay)
+A. Nope, always try and see the results
+
+## lesson6-pets-more
+
+### Data Augmentation
+
+- Last reg
+- `get_transforms` has lots of params (even not yet learned all) -&amp;gt; check documentation
+	- Remember you can implement all the doc contents bc it's made from nbdev
+	- TODO: try this!!
+- Essence of data augmentation is you should maintain the label, while somewhat making sense.
+	- ex) tilt, because it's optically sensible, you can always change the angle of the data view.
+- zeros, border, and reflection but always `reflection` works most of the time, so that is the default
+
+### Convolutional Kernel(What is convolution?)
+
+
+- Will make heat\_map from scratch, which means the parts convolution focuses on
+
+![setosa_visualization]()
+
+- http://setosa.io/ev/image-kernels/
+	- javascript thing
+	- How convolution works
+	- Kernel. which does element-wise multiplication, and sum them up
+	- so it has on pixel less at borders -&amp;gt; so it uses padding, and fastai uses reflection as said.
+- why this Kernel(matrix) helps catching horizontal edge side?
+	- because this kernel`(picture2)` weights differently, depends on `x axis`
+	- why familiar, because it's similar intuition with fugus`(paper)` paper
+- CNN from different viewpoints`link`
+	- output of pixel is results from different linear equations.
+	- If you connect this with represents of neural network nodes, you can see that the specific inp nodes connected with specific out nodes.
+	- **Summarize**: cnn does 1) matmul some of the elements are always zero 2) same weight for every row, which is called `weight time? weight..?, 1:18:50` `(picture)`
+
+#### Further lowdown
+
+- Because generally image has 3  channels, we need rank 3 kernel.
+- And **do multiply with all channel output is one pixel**.(`draw by your self`)
+	- but this kernel will catch one feature, like horizontal, so that we make more kernel so that output becomes (h * w * kernel)
+	- And that `kernel` come to `channel`
+- **Conv2d**: with 3 by 3 kernel, stride 2 conv -&amp;gt; (h/2 * w/2 * kernel)
+	- skip or jump over input pixel
+	- to protect from memory out of control
+
+~~~python
+learn.model
+learn.summary()
+~~~
+TODO: understand yourself the blocks of conv-kernel: 
+
+- Usually use big kernel size at first layer (will study this at part2)
+
+
+- Bottom right highlighting kernel(`pic / draw`)
+- `torch.tensor.expand`: for memory efficient, because we should do RGB
+- We do not make separate kernel, but make rank 4 kernel
+	- 4d tensor is just stacked kernel
+- `t[None].shape` create new unit axis, and why? we make this -&amp;gt; it should move unit of batch, not one size image.
+
+### Average pooling, feature
+
+- suppose our pre-trained model results in size of `11 by 11 by 512 ` `pic 4` and my classification task has 37 classes
+	* take the first face of channel, which is 11 by 11 and `mean` it, so that make rank 2 tensor, 512 by 1
+	* and make 2d matrix, which is 512 by 37 and multiply so that we can get 37 by 1 matrix.
+
+- Feature, at convolution block
+	- So, when we transfer-learning without unfreeze, every element of last matrix (512 by 1) should represent(or could catch) each feature. 	
+
+### Heatmap, Hook
+
+~~~
+hook_output(model[0]) -&amp;gt; acts -&amp;gt; avg_acts
+~~~
+- if we average the block with `axis=feature`, result of matrix(11 by 11) depicts `how activated was that area?` -&amp;gt; it is heatmap, `avg_acts`
+
+- and acts comes from hook, which is more advanced pytorch feature.
+	- hook into pytorch machine itself, and run any arbitrary Pytorch code
+	- Why this is cool?: Normally it gives set of outputs of forward pass, but we can interrupt and hook the forward pass.
+	- Also can store the output of the convolutional part of the model, which is before avg_pooling
+- Thinking back when we do cut off `after` the conv part.
+	- but with fast.ai the original convolutional part of the model would be *the first thing in the model*, specifically could be given from `learn.model.eval()[0]`
+	- And this is gotten from `hooked_output` and having hooked the output, we can pass our x_minibatch to output.
+	- Not directly, but with normalized, minibatch, put on to the gpu
+	- `one_item()` function do it, when we have one data `TODO: this is assignment` do it yourself without one_item function
+	- and `.cuda()` put it on gpu
+
+- you should print out very often the shape of tensor, and try think why.
+&lt;/End&gt;</content><author><name>dionne</name></author><summary type="html">Lesson 06</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/att_00069.png" /></entry><entry><title type="html">[Q&amp;amp;A] Image Segmentation, using Unet with Driving Video data</title><link href="http://localhost:4000/2020/04/qna-image-segmentation/" rel="alternate" type="text/html" title="[Q&amp;A] Image Segmentation, using Unet with Driving Video data" /><published>2020-04-02T00:00:00+09:00</published><updated>2020-04-02T00:00:00+09:00</updated><id>http://localhost:4000/2020/04/qna-image-segmentation</id><content type="html" xml:base="http://localhost:4000/2020/04/qna-image-segmentation/">&lt;p&gt;This post is about my questions while I was studying &lt;a href=&quot;https://www.usfca.edu/data-institute/certificates/deep-learning-part-one&quot;&gt;USF Deep Learning course&lt;/a&gt; about image segmentation task.&lt;br /&gt;
+All the answers are from the course, source code, library document, or document. &lt;br /&gt;
+I cared about being clear at reporting information including source of information, however if there are still anything unclear, please contact me.&lt;/p&gt;
+
+&lt;p&gt;And thank you Jeremy&amp;amp;Rachael for everything. Also Thank you Cambridge Computer Vision Lab to made us to study with your labor.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The Cambridge-driving Labeled Video Database (CamVid) is the first collection of videos with object class semantic labels, complete with metadata. The database provides ground truth labels that associate each pixel with one of 32 semantic classes.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If someone is interested in this project, please check &lt;a href=&quot;http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/&quot;&gt;the site&lt;/a&gt; and see the details.&lt;/p&gt;
+
+&lt;p&gt;Now, let’s start first using jupyter’s one of tricks which I love most. It enables cell to print the code without print function.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;IPython.core.interactiveshell&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InteractiveShell&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# pretty print all cell's output and not just the last one
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InteractiveShell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ast_node_interactivity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;all&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;fastai.vision&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;fastai.callbacks.hooks&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;fastai.utils.mem&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;untar_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URLs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CAMVID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# The locations where the data and models are downloaded are set in config.yml
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I’m trying to accustomed to using &lt;code class=&quot;highlighter-rouge&quot;&gt;pathlib&lt;/code&gt; module, not just it became built-in module in python, but I felt uncomfortable myself with os module. However, still unpredictable conflicts are remain, even in the quite standard library like Pytorch, tensorflow, onnx.(it require me string for path. not PosixPath. will send PR..)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[PosixPath('/root/.fastai/data/camvid/valid.txt'),
+ PosixPath('/root/.fastai/data/camvid/images'),
+ PosixPath('/root/.fastai/data/camvid/labels'),
+ PosixPath('/root/.fastai/data/camvid/codes.txt')]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;path_img&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'images'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;path_lbl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'labels'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fnames&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_image_files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path_img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#filename
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lbl_names&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_image_files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path_lbl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;1play-with-data-my-hypothesis&quot;&gt;1.(Play with data) My Hypothesis&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;File name has &lt;code class=&quot;highlighter-rouge&quot;&gt;A_B&lt;/code&gt; format. and A / B would be at key-value position.&lt;/li&gt;
+  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;collections - defaultdict&lt;/code&gt;
+    &lt;h3 id=&quot;default-dict-link&quot;&gt;Default Dict: &lt;a href=&quot;https://docs.python.org/3.8/library/collections.html#defaultdict-objects&quot;&gt;Link&lt;/a&gt;&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;easy to group a sequence of key and value pairs into a dictionary of list?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;collections&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defaultdict&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;fnames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lbl_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(PosixPath('/root/.fastai/data/camvid/images/0001TP_009210.png'),
+ PosixPath('/root/.fastai/data/camvid/labels/0016E5_01800_P.png'))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'_'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fnames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;labels&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'_'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lbl_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defaultdict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'0001TP'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;124
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0001TP ['009210', '008850', '007350', '008970', '009840', '010140', '008490', '008520', '009540', '008250', '008340', '006840', '007860', '007410', '007740', '009870', '010080', '007890', '008790', '010020', '008400', '007080', '008280', '010380', '009330', '009060', '007470', '006810', '009720', '008580', '007110', '008730', '009150', '007680', '009780', '007800', '007290', '008760', '009510', '008640', '008310', '007440', '006900', '007500', '008460', '009030', '008130', '009480', '009900', '010230', '009270', '008040', '007590', '007950', '009990', '008550', '007260', '008100', '007530', '006960', '008190', '009420', '009930', '009000', '007830', '008940', '006690', '009570', '008880', '010170', '007560', '009300', '006750', '009360', '010200', '007320', '008010', '009120', '007620', '007200', '007140', '010320', '006720', '008670', '007230', '008370', '010260', '009690', '006930', '009090', '007770', '010290', '010350', '008610', '008070', '009600', '008430', '009450', '007380', '009240', '007710', '007170', '008160', '008910', '007020', '006780', '007050', '009960', '009810', '008220', '009180', '009750', '010050', '009660', '010110', '007920', '009630', '007650', '006990', '008700', '009390', '007980', '008820', '006870']
+0016E5 ['01290', '08159', '05760', '08133', '08063', '06660', '00960', '05850', '00750', '06960', '08035', '08107', '07975', '08017', '05610', '07140', '08119', '08027', '07170', '08400', '08093', '02100', '06390', '04470', '08340', '06060', '00600', '07470', '08151', '07800', '01620', '05730', '01530', '00690', '08430', '05940', '01980', '07320', '08069', '07965', '04380', '05430', '01410', '06780', '08007', '08087', '08079', '06600', '08109', '05490', '00901', '04590', '04680', '08045', '01770', '06690', '08085', '06810', '00420', '08011', '07440', '02190', '06300', '04800', '01500', '00450', '08029', '01470', '06330', '07997', '08067', '05370', '08013', '08190', '00840', '02370', '08049', '08135', '01440', '06870', '05820', '05280', '08051', '04440', '08091', '01380', '00630', '07290', '05520', '04770', '00540', '07995', '07999', '05550', '07920', '08101', '08141', '08053', '04620', '08103', '05160', '07350', '08057', '06030', '06000', '08550', '07963', '08089', '05970', '08047', '05640', '06240', '05220', '04350', '01590', '07959', '01950', '08117', '06180', '01560', '05400', '08043', '07680', '00780', '08081', '07050', '01020', '01350', '04530', '06720', '07969', '08149', '08003', '08131', '08129', '08033', '05460', '01650', '07530', '08023', '05340', '08640', '05100', '08075', '01230', '04980', '02070', '01080', '06210', '05910', '08009', '01800', '05190', '02400', '08083', '08019', '07620', '07200', '07890', '08059', '06990', '04410', '08121', '08123', '06930', '08137', '08147', '08095', '06570', '06150', '08153', '06840', '05250', '00510', '08370', '08580', '08113', '07410', '08097', '01200', '04950', '07770', '07650', '04710', '06090', '08055', '07110', '07981', '00990', '08250', '08127', '01920', '07985', '08220', '08005', '08157', '05130', '08071', '01140', '04830', '07740', '08143', '06120', '02040', '08111', '08115', '00660', '08280', '06420', '07983', '02220', '05700', '01860', '01260', '04920', '06510', '07020', '08073', '08105', '08125', '06360', '07860', '07993', '00810', '06540', '08099', '08139', '02010', '07973', '08155', '07991', '06630', '00480', '06750', '04890', '08001', '08025', '00870', '08490', '01830', '07977', '05010', '01170', '07961', '01680', '01050', '07987', '07080', '04560', '00930', '05310', '02340', '05790', '08460', '00720', '08031', '02280', '08039', '08037', '08065', '06270', '08077', '06900', '04650', '06480', '07230', '08041', '06450', '00570', '07989', '04740', '07979', '02250', '07380', '00390', '01710', '07590', '08021', '08520', '07500', '01110', '04500', '02310', '07971', '02130', '05580', '05880', '08610', '08310', '08145', '05670', '04860', '07260', '08015', '07967', '01740', '01320', '07560', '07830', '01890', '08061', '02160', '07710', '05070', '05040']
+Seq05VD ['f00030', 'f02550', 'f03450', 'f01110', 'f00480', 'f00210', 'f04590', 'f04170', 'f01800', 'f03990', 'f03360', 'f03900', 'f02070', 'f00810', 'f03690', 'f01350', 'f01530', 'f04980', 'f05100', 'f03060', 'f00900', 'f03870', 'f02460', 'f01470', 'f02370', 'f02820', 'f04080', 'f02760', 'f04860', 'f02250', 'f04200', 'f00270', 'f03720', 'f02850', 'f04410', 'f01200', 'f03090', 'f02010', 'f03930', 'f00090', 'f01650', 'f01890', 'f03840', 'f03030', 'f02130', 'f01230', 'f04110', 'f02520', 'f04140', 'f04020', 'f00060', 'f03420', 'f01560', 'f00120', 'f04290', 'f02340', 'f00300', 'f01380', 'f00870', 'f01860', 'f02970', 'f04560', 'f02730', 'f00330', 'f04530', 'f03780', 'f01770', 'f03390', 'f05040', 'f02430', 'f03330', 'f00660', 'f01740', 'f02100', 'f04800', 'f04050', 'f00510', 'f02790', 'f04350', 'f00690', 'f00540', 'f02490', 'f00960', 'f00930', 'f04230', 'f02880', 'f03600', 'f01020', 'f01500', 'f02400', 'f04830', 'f04470', 'f03300', 'f02670', 'f00450', 'f01980', 'f01170', 'f01620', 'f04500', 'f01080', 'f03180', 'f05070', 'f03150', 'f04950', 'f01440', 'f03510', 'f01710', 'f00360', 'f04770', 'f02910', 'f01050', 'f00630', 'f04320', 'f00570', 'f03240', 'f02190', 'f01140', 'f03540', 'f02220', 'f02640', 'f03960', 'f00000', 'f04920', 'f01950', 'f00990', 'f03480', 'f03000', 'f00420', 'f04620', 'f03210', 'f00780', 'f03570', 'f01590', 'f00750', 'f01920', 'f04650', 'f03750', 'f03630', 'f02310', 'f02610', 'f02580', 'f04740', 'f02280', 'f04680', 'f00390', 'f00720', 'f03660', 'f02040', 'f03270', 'f00180', 'f03810', 'f01410', 'f01290', 'f03120', 'f00840', 'f04440', 'f00150', 'f01260', 'f02700', 'f02940', 'f00600', 'f01830', 'f04260', 'f05010', 'f04890', 'f02160', 'f00240', 'f04380', 'f01680', 'f04710', 'f01320']
+0006R0 ['f02820', 'f03690', 'f03180', 'f02550', 'f01020', 'f03660', 'f02340', 'f01170', 'f02610', 'f02940', 'f01290', 'f02100', 'f01350', 'f03270', 'f03870', 'f01380', 'f01980', 'f03810', 'f02430', 'f02310', 'f01830', 'f03480', 'f02970', 'f01890', 'f03210', 'f03930', 'f02040', 'f02070', 'f02400', 'f01560', 'f03030', 'f01770', 'f01590', 'f01950', 'f03420', 'f01650', 'f03450', 'f00990', 'f03630', 'f01500', 'f03570', 'f00930', 'f03090', 'f03360', 'f02880', 'f02460', 'f01440', 'f01920', 'f01230', 'f03840', 'f02730', 'f01620', 'f02220', 'f03750', 'f03330', 'f03540', 'f02520', 'f02790', 'f01050', 'f03120', 'f01800', 'f01140', 'f01860', 'f01530', 'f01470', 'f02670', 'f02490', 'f01260', 'f01110', 'f02760', 'f01680', 'f03150', 'f02580', 'f03300', 'f02280', 'f01200', 'f03390', 'f03510', 'f02640', 'f02190', 'f02370', 'f01320', 'f02130', 'f03600', 'f03240', 'f03780', 'f03720', 'f02700', 'f01410', 'f01080', 'f02850', 'f01710', 'f03900', 'f03060', 'f01740', 'f02010', 'f02250', 'f00960', 'f03000', 'f02160', 'f02910']
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0001TP 124
+0016E5 305
+Seq05VD 171
+0006R0 101
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0016E5 305
+0001TP 124
+0006R0 101
+Seq05VD 171
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;labels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(('0001TP', '009210'), ('0016E5', '01800'))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;2my-question-link&quot;&gt;2.My question: &lt;a href=&quot;https://docs.fast.ai/vision.image.html#ImageSegment&quot;&gt;Link&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Why do we need masking? and does color from fastai library? (have to look into source code)&lt;/li&gt;
+  &lt;li&gt;What do the parameter alpha do?&lt;/li&gt;
+  &lt;li&gt;When people make masked img, would it be have ranged integer limit?&lt;/li&gt;
+  &lt;li&gt;Does image normalization related with this?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;lbl_sorted&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lbl_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;f_sorted&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fnames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;lbl_1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lbl_sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;f_1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f_sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open_image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lbl_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open_mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lbl_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subplots&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;figsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# img.show(ax=axs[0], y=mask, title='masked')
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;output_21_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;img_2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open_image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;mask_2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open_mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subplots&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;figsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# img.show(ax=axs[0], y=mask, title='masked')
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;img_2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'3'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;mask_2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'4'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;output_22_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;open_mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lbl_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;torch.Size([1, 720, 960])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;open_mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lbl_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;torch.Size([1, 720, 960])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;open_image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;torch.Size([3, 720, 960])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;open_image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;torch.Size([3, 720, 960])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#labeled data
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tensor([[[0.0157, 0.0157, 0.0157,  ..., 0.0824, 0.0824, 0.0824],
+         [0.0157, 0.0157, 0.0157,  ..., 0.0824, 0.0824, 0.0824],
+         [0.0157, 0.0157, 0.0157,  ..., 0.0824, 0.0824, 0.0824],
+         ...,
+         [0.0667, 0.0667, 0.0667,  ..., 0.1176, 0.1176, 0.1176],
+         [0.0667, 0.0667, 0.0667,  ..., 0.1176, 0.1176, 0.1176],
+         [0.0667, 0.0667, 0.0667,  ..., 0.1176, 0.1176, 0.1176]],
+
+        [[0.0157, 0.0157, 0.0157,  ..., 0.0824, 0.0824, 0.0824],
+         [0.0157, 0.0157, 0.0157,  ..., 0.0824, 0.0824, 0.0824],
+         [0.0157, 0.0157, 0.0157,  ..., 0.0824, 0.0824, 0.0824],
+         ...,
+         [0.0667, 0.0667, 0.0667,  ..., 0.1176, 0.1176, 0.1176],
+         [0.0667, 0.0667, 0.0667,  ..., 0.1176, 0.1176, 0.1176],
+         [0.0667, 0.0667, 0.0667,  ..., 0.1176, 0.1176, 0.1176]],
+
+        [[0.0157, 0.0157, 0.0157,  ..., 0.0824, 0.0824, 0.0824],
+         [0.0157, 0.0157, 0.0157,  ..., 0.0824, 0.0824, 0.0824],
+         [0.0157, 0.0157, 0.0157,  ..., 0.0824, 0.0824, 0.0824],
+         ...,
+         [0.0667, 0.0667, 0.0667,  ..., 0.1176, 0.1176, 0.1176],
+         [0.0667, 0.0667, 0.0667,  ..., 0.1176, 0.1176, 0.1176],
+         [0.0667, 0.0667, 0.0667,  ..., 0.1176, 0.1176, 0.1176]]])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# after mask, labeled data
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tensor([[[ 4,  4,  4,  ..., 21, 21, 21],
+         [ 4,  4,  4,  ..., 21, 21, 21],
+         [ 4,  4,  4,  ..., 21, 21, 21],
+         ...,
+         [17, 17, 17,  ..., 30, 30, 30],
+         [17, 17, 17,  ..., 30, 30, 30],
+         [17, 17, 17,  ..., 30, 30, 30]]])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;img_2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mask_2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(tensor([[[0.0706, 0.0667, 0.0706,  ..., 0.6431, 0.6549, 0.6627],
+          [0.0745, 0.0706, 0.0706,  ..., 0.6431, 0.6510, 0.6549],
+          [0.0784, 0.0706, 0.0745,  ..., 0.6392, 0.6588, 0.6588],
+          ...,
+          [0.0863, 0.0824, 0.0824,  ..., 0.1333, 0.1216, 0.1255],
+          [0.0902, 0.0863, 0.0824,  ..., 0.1255, 0.1176, 0.1216],
+          [0.0863, 0.0824, 0.0784,  ..., 0.1137, 0.1059, 0.1137]],
+ 
+         [[0.0706, 0.0667, 0.0706,  ..., 0.7490, 0.7608, 0.7686],
+          [0.0745, 0.0706, 0.0706,  ..., 0.7451, 0.7569, 0.7608],
+          [0.0784, 0.0706, 0.0745,  ..., 0.7412, 0.7529, 0.7529],
+          ...,
+          [0.0980, 0.0941, 0.0941,  ..., 0.1804, 0.1686, 0.1725],
+          [0.1059, 0.1020, 0.0980,  ..., 0.1725, 0.1647, 0.1686],
+          [0.1020, 0.0980, 0.0941,  ..., 0.1608, 0.1529, 0.1608]],
+ 
+         [[0.0784, 0.0745, 0.0784,  ..., 0.7569, 0.7686, 0.7765],
+          [0.0824, 0.0784, 0.0784,  ..., 0.7647, 0.7647, 0.7686],
+          [0.0784, 0.0706, 0.0745,  ..., 0.7608, 0.7647, 0.7647],
+          ...,
+          [0.1216, 0.1176, 0.1176,  ..., 0.2000, 0.1882, 0.1922],
+          [0.1176, 0.1137, 0.1098,  ..., 0.1843, 0.1765, 0.1804],
+          [0.1137, 0.1098, 0.1059,  ..., 0.1725, 0.1647, 0.1725]]]),
+ tensor([[[ 18,  17,  18,  ..., 183, 186, 188],
+          [ 19,  18,  18,  ..., 183, 185, 186],
+          [ 20,  18,  19,  ..., 182, 185, 185],
+          ...,
+          [ 25,  24,  24,  ...,  43,  40,  41],
+          [ 26,  25,  24,  ...,  41,  39,  40],
+          [ 25,  24,  23,  ...,  38,  36,  38]]]))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;3what-is-a-difference-between-image-and-imagesegment&quot;&gt;3.What is a difference between image and imageSegment?&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.fast.ai/vision.image.html#ImageSegment&quot;&gt;imageSegment&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;An ImageSegment object has the same properties as an Image. The only difference is that when applying the transformations to an ImageSegment, it will ignore the functions that deal with lighting and keep values of 0 and 1.&lt;/li&gt;
+  &lt;li&gt;It’s easy to show the segmentation mask over the associated Image by using the y argument of show_image.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open_image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fnames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open_mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lbl_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subplots&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;figsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'no mask'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'masked'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#seg mask over the img using y arg
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'mask only'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;output_31_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.fast.ai/vision.image.html#ImageSegment&quot;&gt;vision.image&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;##4.Why/How img div by 255 and how it results&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.fast.ai/vision.image.html#open_image&quot;&gt;fast.ai : vision.image&lt;/a&gt; - If div=True, pixel values are divided by 255. to become floats between 0. and 1.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;At times, you want to get rid of distortions caused by lights and shadows in an image.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Normalizing the RGB values of an image can at times be a simple and effective way of achieving this.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;So sum of the pixel’s value over all channels(which is &lt;code class=&quot;highlighter-rouge&quot;&gt;S&lt;/code&gt;) divides each intensified channel so that nomalized value will be &lt;code class=&quot;highlighter-rouge&quot;&gt;R/S&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;G/S&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;B/S&lt;/code&gt; (where, S=R+G+B).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aishack.in/tutorials/normalized-rgb/&quot;&gt;Detailed explain here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-python-evaluation-order&quot;&gt;4. Python &lt;a href=&quot;https://docs.python.org/3/reference/expressions.html#evaluation-order&quot;&gt;Evaluation Order&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Python evaluates expressions from left to right. Notice that while evaluating an assignment, the right-hand side is evaluated before the left-hand side.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mask_tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trg_tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;void_tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;mask_tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trg_tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;void_tmp&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mask_tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trg_tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;void_tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# (1) target is not same with void
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;True 1 10
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Example 1
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(2, 3)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Example 2
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(2, 4)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;5-model-learner-parameter--pct_start&quot;&gt;5. model learner parameter :: pct_start&lt;/h2&gt;
+
+&lt;p&gt;A: Percentage of total number of epochs when learning rate rises during one cycle.
+Q: Sorry, I still confused that one cycle in the new API only runs one epoch. How the percentage of total number of epochs works? Can you give a example? If learn.fit_one_cycle(10, slice(1e-4,1e-3,1e-2), pct_start=0.05)??
+A: Ok, strictly correct answer would be percentage of iterations, so you can have lr both increase and decrease during same epoch. In your example, say, you have 100 iterations per epoch, then for half an epoch (0.05 * (10 * 100) = 50) lr will rise, then slowly decrease.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Q2: Thanks for this explanation … so essentially, it is the percentage of overall iterations where the LR is increasing, correct?&lt;/p&gt;
+
+&lt;p&gt;So, given the default of 0.3, it means that your LR is going up for 30% of your iterations and then decreasing over the last 70%.&lt;/p&gt;
+
+&lt;p&gt;Is that a correct summation of what is happening?&lt;/p&gt;
+
+&lt;p&gt;A2: Yes, I think that’s correct.&lt;/p&gt;
+
+&lt;p&gt;You can verify that by changing its value and check:
+learn.recorder.plot_lr()&lt;/p&gt;
+
+&lt;p&gt;For example if pct_start = 0.2&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;attachment:ScreenClip.png&quot; alt=&quot;ScreenClip.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;source: &lt;a href=&quot;https://forums.fast.ai/t/what-is-the-pct-start-mean/26168/10&quot;&gt;forums.fastai&lt;/a&gt;&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This post is about my questions while I was studying USF Deep Learning course about image segmentation task. All the answers are from the course, source code, library document, or document. I cared about being clear at reporting information including source of information, however if there are still anything unclear, please contact me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/output_31_0.png" /></entry><entry><title type="html">Gradient backward, Chain Rule, Refactoring</title><link href="http://localhost:4000/2020/03/note08-fastai-4/" rel="alternate" type="text/html" title="Gradient backward, Chain Rule, Refactoring" /><published>2020-03-02T00:00:00+09:00</published><updated>2020-03-02T00:00:00+09:00</updated><id>http://localhost:4000/2020/03/note08-fastai-4</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-4/">&lt;ul&gt;
+  &lt;li&gt;This note is divided into 4 section.
+    &lt;ul&gt;
+      &lt;li&gt;Section1: &lt;a href=&quot;https://spellonyou.github.io/2020/02/note08-fastai-1/&quot;&gt;What is the meaning of ‘deep-learning from foundations?’&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Section2: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-2/&quot;&gt;What’s inside Pytorch Operator?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Section3: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-3/&quot;&gt;Implement forward&amp;amp;backward pass from scratch&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Section4: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-4/&quot;&gt;Gradient backward, Chain Rule, Refactoring&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
@@ -282,6 +780,7 @@
       &lt;li&gt;So it saves our time to differentiate ourselves&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;Postfix underscore means in pytorch, &lt;code class=&quot;highlighter-rouge&quot;&gt;in-place&lt;/code&gt; function, &lt;a href=&quot;https://discuss.pytorch.org/t/what-is-in-place-operation/16244&quot;&gt;What is in-place function?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;⤵️ THis is benchmark…..&lt;/p&gt;
@@ -463,7 +962,7 @@ def backward(self):
       &lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/34439/finding-what-methods-a-python-object-has/34452#34452&quot;&gt;stackoverflow - finding methods a object has&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/4-classlin.png" /></entry><entry><title type="html">What’s inside Pytorch Operator?</title><link href="http://localhost:4000/2020/03/note08-fastai-2/" rel="alternate" type="text/html" title="What's inside Pytorch Operator?" /><published>2020-03-01T00:00:00+01:00</published><updated>2020-03-01T00:00:00+01:00</updated><id>http://localhost:4000/2020/03/note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-2/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="sticky" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/4-classlin.png" /></entry><entry><title type="html">What’s inside Pytorch Operator?</title><link href="http://localhost:4000/2020/03/note08-fastai-2/" rel="alternate" type="text/html" title="What's inside Pytorch Operator?" /><published>2020-03-01T00:00:00+09:00</published><updated>2020-03-01T00:00:00+09:00</updated><id>http://localhost:4000/2020/03/note08-fastai-2</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-2/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Section1: &lt;a href=&quot;https://spellonyou.github.io/2020/02/note08-fastai-1/&quot;&gt;What is the meaning of ‘deep-learning from foundations?’&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Section2: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-2/&quot;&gt;What’s inside Pytorch Operator?&lt;/a&gt;&lt;/li&gt;
@@ -783,7 +1282,7 @@ a.k.a&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docs.scipy.org/doc/numpy/reference/generated/numpy.einsum.html&quot;&gt;np.einsum Review&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;h&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/30.png" /></entry><entry><title type="html">Implement forward&amp;amp;backward pass from scratch</title><link href="http://localhost:4000/2020/03/note08-fastai-3/" rel="alternate" type="text/html" title="Implement forward&amp;backward pass from scratch" /><published>2020-03-01T00:00:00+01:00</published><updated>2020-03-01T00:00:00+01:00</updated><id>http://localhost:4000/2020/03/note08-fastai-3</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-3/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
+&lt;p&gt;h&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/30.png" /></entry><entry><title type="html">Implement forward&amp;amp;backward pass from scratch</title><link href="http://localhost:4000/2020/03/note08-fastai-3/" rel="alternate" type="text/html" title="Implement forward&amp;backward pass from scratch" /><published>2020-03-01T00:00:00+09:00</published><updated>2020-03-01T00:00:00+09:00</updated><id>http://localhost:4000/2020/03/note08-fastai-3</id><content type="html" xml:base="http://localhost:4000/2020/03/note08-fastai-3/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Section1: &lt;a href=&quot;https://spellonyou.github.io/2020/02/note08-fastai-1/&quot;&gt;What is the meaning of ‘deep-learning from foundations?’&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Section2: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-2/&quot;&gt;What’s inside Pytorch Operator?&lt;/a&gt;&lt;/li&gt;
@@ -1058,7 +1557,7 @@ a.k.a&lt;/li&gt;
       &lt;p&gt;&lt;a href=&quot;https://discuss.pytorch.org/t/why-the-default-negative-slope-for-kaiming-uniform-initialization-of-convolution-and-linear-layers-is-5/29290&quot;&gt;Pytorch kaiming init explained&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/4-backward3.png" /></entry><entry><title type="html">What is the meaning of ‘deep-learning from foundations?’</title><link href="http://localhost:4000/2020/02/note08-fastai-1/" rel="alternate" type="text/html" title="What is the meaning of 'deep-learning from foundations?'" /><published>2020-02-29T00:00:00+01:00</published><updated>2020-02-29T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/note08-fastai-1</id><content type="html" xml:base="http://localhost:4000/2020/02/note08-fastai-1/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/4-backward3.png" /></entry><entry><title type="html">What is the meaning of ‘deep-learning from foundations?’</title><link href="http://localhost:4000/2020/02/note08-fastai-1/" rel="alternate" type="text/html" title="What is the meaning of 'deep-learning from foundations?'" /><published>2020-02-29T00:00:00+09:00</published><updated>2020-02-29T00:00:00+09:00</updated><id>http://localhost:4000/2020/02/note08-fastai-1</id><content type="html" xml:base="http://localhost:4000/2020/02/note08-fastai-1/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Section1: &lt;a href=&quot;https://spellonyou.github.io/2020/02/note08-fastai-1/&quot;&gt;What is the meaning of ‘deep-learning from foundations?’&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Section2: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-2/&quot;&gt;What’s inside Pytorch Operator?&lt;/a&gt;&lt;/li&gt;
@@ -1254,7 +1753,7 @@ a.k.a&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/18QwDI25Lf0ld0-cEugu7LxjwTc2NRkha/view&quot;&gt;material&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://course.fast.ai/videos/?lesson=8&quot;&gt;video&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1bIPBcf-p9iqNG8BGmIVlJCFa4jEsbOZvcPXGTYe5pjI/edit#gid=0&quot;&gt;broadcasting excel&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1-matmul.png" /></entry><entry><title type="html">Digging into convolution</title><link href="http://localhost:4000/2020/02/what-is-convolution/" rel="alternate" type="text/html" title="Digging into convolution" /><published>2020-02-28T00:00:00+01:00</published><updated>2020-02-28T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/what-is-convolution</id><content type="html" xml:base="http://localhost:4000/2020/02/what-is-convolution/">&lt;p&gt;Issues &lt;br /&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1-matmul.png" /></entry><entry><title type="html">Digging into convolution</title><link href="http://localhost:4000/2020/02/what-is-convolution/" rel="alternate" type="text/html" title="Digging into convolution" /><published>2020-02-28T00:00:00+09:00</published><updated>2020-02-28T00:00:00+09:00</updated><id>http://localhost:4000/2020/02/what-is-convolution</id><content type="html" xml:base="http://localhost:4000/2020/02/what-is-convolution/">&lt;p&gt;Issues &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;1) Kaiming Initializtion in Pytorch was in trouble.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;br /&gt;&lt;/p&gt;
 
@@ -1410,46 +1909,34 @@ a.k.a&lt;/li&gt;
       &lt;p&gt;&lt;a href=&quot;https://youtu.be/hkBa9pU-H48?t=4937&quot;&gt;stack kernel and make new rank of tensor at output, Lesson06-2019&lt;/a&gt; &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="feature" /><summary type="html">Issues</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn-jiwon.png" /></entry><entry><title type="html">Digital Product School week 8&amp;amp;9</title><link href="http://localhost:4000/2020/02/dps-week8/" rel="alternate" type="text/html" title="Digital Product School week 8&amp;9" /><published>2020-02-24T00:00:00+01:00</published><updated>2020-02-24T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week8</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week8/">&lt;p&gt;The 8th week retropect at Digital Product School&lt;/p&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="feature" /><summary type="html">Issues</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn-jiwon.png" /></entry><entry><title type="html">My life in Digital Product School - week 8/19/10</title><link href="http://localhost:4000/2020/02/dps-week8/" rel="alternate" type="text/html" title="My life in Digital Product School - week 8/19/10" /><published>2020-02-24T00:00:00+09:00</published><updated>2020-02-24T00:00:00+09:00</updated><id>http://localhost:4000/2020/02/dps-week8</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week8/">&lt;p&gt;The 8/9/10th week retropect at Digital Product School&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Week 8/9 - Ship your MVP/Release next iteration each day&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Week 8 - Ship your MVP&lt;br /&gt;
+Week 9/10 - Release next iteration each day&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center&quot;&gt;
     &lt;img src=&quot;/assets/images/week8/schedule.png&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
-    &lt;figcaption&gt;This week's schedule&lt;/figcaption&gt;    
+    &lt;figcaption&gt;Week 8th schedule&lt;/figcaption&gt;    
 &lt;/div&gt;
 
 &lt;h2 class=&quot;no_toc&quot; id=&quot;content&quot;&gt;CONTENT&lt;/h2&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#preparing-engineering-weekly&quot; id=&quot;markdown-toc-preparing-engineering-weekly&quot;&gt;Preparing engineering weekly&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#agile-process&quot; id=&quot;markdown-toc-agile-process&quot;&gt;Agile Process&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#daily-stand-up&quot; id=&quot;markdown-toc-daily-stand-up&quot;&gt;Daily Stand-up&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#making-application-flowchart-feat-drawio---er-diagram&quot; id=&quot;markdown-toc-making-application-flowchart-feat-drawio---er-diagram&quot;&gt;Making application flowchart (feat draw.io) /  ER diagram&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#flowchart-understaning-user-journey&quot; id=&quot;markdown-toc-flowchart-understaning-user-journey&quot;&gt;Flowchart, understaning user journey&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#er-diagram&quot; id=&quot;markdown-toc-er-diagram&quot;&gt;ER diagram&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#agile-product-development&quot; id=&quot;markdown-toc-agile-product-development&quot;&gt;Agile Product Development&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#daily-stand-upplanning&quot; id=&quot;markdown-toc-daily-stand-upplanning&quot;&gt;Daily Stand-up(planning)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#gemba-walk&quot; id=&quot;markdown-toc-gemba-walk&quot;&gt;Gemba Walk&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#sprint-reviews&quot; id=&quot;markdown-toc-sprint-reviews&quot;&gt;Sprint Reviews&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#engineering-weekly&quot; id=&quot;markdown-toc-engineering-weekly&quot;&gt;Engineering weekly&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#ai-lunch&quot; id=&quot;markdown-toc-ai-lunch&quot;&gt;AI lunch&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#connecting-firebase-and&quot; id=&quot;markdown-toc-connecting-firebase-and&quot;&gt;Connecting firebase and&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;preparing-engineering-weekly&quot;&gt;Preparing engineering weekly&lt;/h2&gt;
+&lt;h2 id=&quot;agile-product-development&quot;&gt;Agile Product Development&lt;/h2&gt;
+&lt;p&gt;One of a priceless lesson I learnt from digital product school, was experience of doing agile work. Before I came here, it was a little bit vague concept. I’m still not sure ‘what is agile’ but this is how we tried to make agile process. &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;This week at Wednesday, I planned to explain the &lt;em&gt;Language Modelings&lt;/em&gt;, mainly focusing ELMo, ULMFiT, BERT and GPT-2.&lt;br /&gt;
-Slides is available &lt;a href=&quot;https://docs.google.com/presentation/d/1-oTUqgFq0x3N8QpcN7gHay5KhIN2KdFGOTxzujr75ck/edit?usp=sharing&quot;&gt;here&lt;/a&gt; 
-Changed the presentation, because there were people who are not in ML domain. &lt;a href=&quot;https://www.slideshare.net/JiWenKim/applicable-bert&quot;&gt;here&lt;/a&gt;&lt;br /&gt;
-Whenever I do the presentation, I learn more than the information I give them. At the same time, I realize I need to learn more than I know.&lt;/p&gt;
-
-&lt;h2 id=&quot;agile-process&quot;&gt;Agile Process&lt;/h2&gt;
-&lt;p&gt;One of a priceless lesson I learnt from digital product school, was experience of doing agile work. Before I came here, it was a little bit vague concept. I’m not sure ‘what is agile’ but this is what we tried to make agile process. &lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;daily-stand-up&quot;&gt;Daily Stand-up&lt;/h3&gt;
+&lt;h3 id=&quot;daily-stand-upplanning&quot;&gt;Daily Stand-up(planning)&lt;/h3&gt;
 
 &lt;p&gt;Sharing the works everyday helps interdisciplinary team to work better. Since product started to get higher fidelity, the gap between engineer and non-engineer increased. Actually I didn’t planned to explain concept because I thougth I would be lose my audience when I start to explain. But as daily stand-up, which shares our progess, goes day by day, I planed and reported the issues. And it made each other’s topic feel more &lt;strong&gt;familiar&lt;/strong&gt;. I think point is very important, because at that point people start to be curious. So we can actively ask to the others, and that momwnr, we can explain the point teammate dosen’t know.&lt;/p&gt;
 
@@ -1465,39 +1952,35 @@ Whenever I do the presentation, I learn more than the information I give them. A
 
 &lt;p&gt;Each of us try to explain what we are doing, but things become easier when we are asked. Because we explained something was important to us before, but if we asked it is something important for the others.&lt;/p&gt;
 
-&lt;h2 id=&quot;making-application-flowchart-feat-drawio---er-diagram&quot;&gt;Making application flowchart (feat draw.io) /  ER diagram&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/week8/draw-io.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Before we start the party, we should clarify the flowchart and ER diagram of our application.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;flowchart-understaning-user-journey&quot;&gt;Flowchart, understaning user journey&lt;/h3&gt;
-
-&lt;p&gt;Thanks for google, we could use draw.io for our framechart framework. Actually, we cana choice other good flatform, but draw.io has connected app throgh google drive, most of our engineer was used to it. And after this job, I got to know there is also (&lt;em&gt;of course&lt;/em&gt;) rule with the symbols, color, size, space, scaling and direction of arrow -&lt;a href=&quot;https://creately.com/blog/diagrams/flowchart-guide-flowchart-tutorial&quot;&gt;reference&lt;/a&gt;. &lt;br /&gt;
-But why we should do this? WE have made our storymap before!! I think storymap is for visualize our status and app. So it should be shared with whole the team, and they should able to understand each role’s issue. But flowchart is more like testing technical feasibility, and error that user can experience. So it could be little more specific, complicated, and hypothetical.&lt;/p&gt;
+&lt;h3 id=&quot;gemba-walk&quot;&gt;Gemba Walk&lt;/h3&gt;
 
 &lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week8/flowchart.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot; /&gt;
-    &lt;figcaption&gt;This week engineer's main plan&lt;/figcaption&gt;    
+    &lt;img src=&quot;/assets/images/gembawalk.png&quot; width=&quot;50%&quot; height=&quot;50%&quot; /&gt;
+    &lt;figcaption&gt;Team Cero with core team&lt;/figcaption&gt;    
 &lt;/div&gt;
 
-&lt;h3 id=&quot;er-diagram&quot;&gt;ER diagram&lt;/h3&gt;
+&lt;p&gt;Every 2 weeks, we do the Gemba work, which is ‘question everything to the core team’ time. At this period, people can ask anything related to our product, workshop, and framework. Core team will help just for each team, and each team can solve the problem related to their work. &amp;lt; br/&amp;gt;
+Why we need this session? because with workshop and general schedule, core team has no time just focus on each team. So through this session, we can have opportunity to understand each program and workshop, like why we are using this platform, and when is the due of our small project, and &lt;code class=&quot;highlighter-rouge&quot;&gt;we have this problem and we need help for this&lt;/code&gt;. whatever small problem you have, core team is always willing to help you.&lt;/p&gt;
 
-&lt;p&gt;Even if we use NoSQL database through firebase, my team was accustomed to SQL more. That what we educated when we were at college, so we had to organize our concept while we were learning NoSQL.&lt;/p&gt;
+&lt;h3 id=&quot;sprint-reviews&quot;&gt;Sprint Reviews&lt;/h3&gt;
+
+&lt;p&gt;Every Friday, we have time to summarise what we did for the week. Maybe we need &lt;code class=&quot;highlighter-rouge&quot;&gt;HMW question&lt;/code&gt; and our &lt;code class=&quot;highlighter-rouge&quot;&gt;storymap&lt;/code&gt; to share our process and then tell and share what we did try, what point we succeeded and what point it was deviant of our prediction, and why we tried it..&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/images/gembawalk.png&quot; width=&quot;50%&quot; height=&quot;50%&quot; /&gt;
+    &lt;figcaption&gt;Sprint of Ve-link&lt;/figcaption&gt;    
+&lt;/div&gt;
+
+&lt;p&gt;And then, just after all team’s ppt, we do vote with such a cute marvel. Always it’s very difficult to vote (of course you can’t vote to your team!) Because it depends on criteria what do I value!&lt;br /&gt;
+But since this is process of our agile work, I try to focus on &lt;code class=&quot;highlighter-rouge&quot;&gt;what they have changed since last week, and why they did it, how they did it&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;engineering-weekly&quot;&gt;Engineering weekly&lt;/h2&gt;
 
-&lt;p&gt;Every engineering weekly we exchange our knowledge each other so that we can grow together.&lt;/p&gt;
+&lt;p&gt;Every engineering weekly we exchange our knowledge each other so that we can grow together. Everyone have their knowledge to share and we can be tutor and at the same time can be of tutee.&lt;/p&gt;
 
-&lt;p&gt;Before today, my AI collegues presented &lt;code class=&quot;highlighter-rouge&quot;&gt;regression, knn&lt;/code&gt; and it was my turn. I prepared slide that explain about &lt;a href=&quot;https://www.slideshare.net/JiWenKim/pre-trained-language-model&quot;&gt;pre-trained language model&lt;/a&gt;, but my header advised me if I go deep of theoretical things, I would lose my audience. So I decided to brief &lt;a href=&quot;https://www.slideshare.net/JiWenKim/applicable-bert&quot;&gt;BERT mode&lt;/a&gt;, how I can contribute to other team’s project. Since BERT was breakthrough of NLP industry, I tried to explain how it can be applied to hands on product and how it can help people in their product.&lt;/p&gt;
+&lt;p&gt;Previously, my AI collegues presented &lt;code class=&quot;highlighter-rouge&quot;&gt;regression&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;knn&lt;/code&gt;. And because I’m somewhat specialized to NLP, I prepared slide that explain about &lt;a href=&quot;https://www.slideshare.net/JiWenKim/pre-trained-language-model&quot;&gt;pre-trained language model&lt;/a&gt;, but my header advised me if I go deep of theoretical things, I would lose my audience. So I decided to brief &lt;a href=&quot;https://www.slideshare.net/JiWenKim/applicable-bert&quot;&gt;BERT mode&lt;/a&gt;, how I can contribute to other team’s project. Since BERT was breakthrough of NLP industry, I tried to explain how it can be applied to hands on product and how it can help people in their product.&lt;/p&gt;
 
-&lt;p&gt;The result was quite motivative to me. They gave feedback that since it wasn’t that much theoretical, they could enjoy it, and useful information. Someone asked me do I had learned of presentation before. I was really happy with their feedback!&lt;/p&gt;
-
-&lt;h2 id=&quot;ai-lunch&quot;&gt;AI lunch&lt;/h2&gt;
-
-&lt;h2 id=&quot;connecting-firebase-and&quot;&gt;Connecting firebase and&lt;/h2&gt;</content><author><name>dionne</name></author><summary type="html">The 8th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week8/gate.png" /></entry><entry><title type="html">Algorithmic bias</title><link href="http://localhost:4000/2020/02/fast.ai-nlp-note-16/" rel="alternate" type="text/html" title="Algorithmic bias" /><published>2020-02-20T00:00:00+01:00</published><updated>2020-02-20T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/fast.ai-nlp-note-16</id><content type="html" xml:base="http://localhost:4000/2020/02/fast.ai-nlp-note-16/">&lt;p&gt;&lt;strong&gt;Algorithms can encode &amp;amp; magnify human bias&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The result was quite motivative to me. They gave feedback that since it wasn’t that much theoretical, they could enjoy it, and useful information. Someone asked me do I had learned of presentation before. I was really happy with their feedback!&lt;/p&gt;</content><author><name>dionne</name></author><summary type="html">The 8/9/10th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week8/gate.png" /></entry><entry><title type="html">Algorithmic bias</title><link href="http://localhost:4000/2020/02/fast.ai-nlp-note-16/" rel="alternate" type="text/html" title="Algorithmic bias" /><published>2020-02-20T00:00:00+09:00</published><updated>2020-02-20T00:00:00+09:00</updated><id>http://localhost:4000/2020/02/fast.ai-nlp-note-16</id><content type="html" xml:base="http://localhost:4000/2020/02/fast.ai-nlp-note-16/">&lt;p&gt;&lt;strong&gt;Algorithms can encode &amp;amp; magnify human bias&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;case-study-1-facial-recognition--predictive-policing&quot;&gt;Case Study 1: Facial Recognition &amp;amp; Predictive Policing&lt;/h3&gt;
 
@@ -1637,7 +2120,7 @@ They’re the result of a complex process that starts with years of historical c
   &lt;li&gt;Increase diversity in our workspace&lt;/li&gt;
   &lt;li&gt;Advocate for good policy&lt;/li&gt;
   &lt;li&gt;Be on the ongoing lookout for bias&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>dionne</name></author><summary type="html">Algorithms can encode &amp;amp; magnify human bias</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/13.png" /></entry><entry><title type="html">Making a classifier with image dataset made from gooogle</title><link href="http://localhost:4000/2020/02/classifier-city/" rel="alternate" type="text/html" title="Making a classifier with image dataset made from gooogle" /><published>2020-02-15T00:00:00+01:00</published><updated>2020-02-15T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/classifier-city</id><content type="html" xml:base="http://localhost:4000/2020/02/classifier-city/">&lt;h3 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h3&gt;
+&lt;/ol&gt;</content><author><name>dionne</name></author><summary type="html">Algorithms can encode &amp;amp; magnify human bias</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/13.png" /></entry><entry><title type="html">Making a classifier with image dataset made from gooogle</title><link href="http://localhost:4000/2020/02/classifier-city/" rel="alternate" type="text/html" title="Making a classifier with image dataset made from gooogle" /><published>2020-02-15T00:00:00+09:00</published><updated>2020-02-15T00:00:00+09:00</updated><id>http://localhost:4000/2020/02/classifier-city</id><content type="html" xml:base="http://localhost:4000/2020/02/classifier-city/">&lt;h3 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h3&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#creating-dataset-from-google-images&quot; id=&quot;markdown-toc-creating-dataset-from-google-images&quot;&gt;Creating dataset from google images&lt;/a&gt;    &lt;ul&gt;
@@ -1823,205 +2306,4 @@ And it gets way more better result(even it’s still underfitting!)&lt;/p&gt;
       &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Accuracy_and_precision&quot;&gt;Accuracy_and_precision&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="feature" /><summary type="html">CONTENTS</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/munich2.jpg" /></entry><entry><title type="html">Digital Product School week 5</title><link href="http://localhost:4000/2020/02/dps-week5/" rel="alternate" type="text/html" title="Digital Product School week 5" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/dps-week5</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week5/">&lt;p&gt;The 5th week retropect at Digital Product School&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Week 5 - Create a Storymap and sync it with Lean Canvas&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week5/feb-3-1.png&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
-    &lt;figcaption&gt;This week's schedule&lt;/figcaption&gt;    
-&lt;/div&gt;
-
-&lt;h2 class=&quot;no_toc&quot; id=&quot;content&quot;&gt;CONTENT&lt;/h2&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#how-to-create-our-story-map&quot; id=&quot;markdown-toc-how-to-create-our-story-map&quot;&gt;How to create our story map&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#prepare-your-story&quot; id=&quot;markdown-toc-prepare-your-story&quot;&gt;Prepare your story&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#discover-your-products-ai-potential&quot; id=&quot;markdown-toc-discover-your-products-ai-potential&quot;&gt;Discover your product’s AI potential&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 class=&quot;no_toc&quot; id=&quot;monday&quot;&gt;Monday&lt;/h1&gt;
-
-&lt;h2 id=&quot;how-to-create-our-story-map&quot;&gt;How to create our story map&lt;/h2&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week5/aha-moment.png&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
-    &lt;figcaption&gt;We need this 'aha' moment&lt;/figcaption&gt;    
-&lt;/div&gt;
-
-&lt;p&gt;There was a Milestone workshop, about our weekly goal. As we are agile working, we go fast and change every week’s goal. This week we will finalize our &lt;a href=&quot;http://shop.oreilly.com/product/0636920033851.do&quot;&gt;story map&lt;/a&gt; based on user’s pain-point and HMW questions.&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week5/storymap.png&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
-    &lt;figcaption&gt;How should we make our story-map&lt;/figcaption&gt;    
-&lt;/div&gt;
-
-&lt;p&gt;Basically we should make story map based on this rule&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Tell stories, don’t just write them!&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;We always need context, that means all the story component should be connected&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Visualize your product to establish a shared understanding and speed up discussions!&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Post-it filled of text is not enough, we should fill it with visualizations then team mates can understand it fast&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Only discuss in front our your story map! (Speed)&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;So we can update our story-map as soon as we change our opinion&lt;/li&gt;
-      &lt;li&gt;And also&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Use a story map to find the parts that matter most and to identify holes in your idea!&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Since the story map consists of techinical part, we should consider each story’s technical feasibility&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Minimise output, maximise outcome and impact!&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Build tests to figure out what’s minimum and what’s viable!&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;This story map functions to find out our minimum value of ideas&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Work iteratively: Change your story map according to your learnings!&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;We should repeat this process again and again&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;PMs: Make sure Storymap is up to date!&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;prepare-your-story&quot;&gt;Prepare your story&lt;/h2&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week5/storymap-1.png&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
-    &lt;figcaption&gt;team cero, our whole story map&lt;/figcaption&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week5/storymap-5.png&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
-    &lt;figcaption&gt;Our goal&lt;/figcaption&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week5/storymap-3.png&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
-    &lt;figcaption&gt;Technical feasibility of our story&lt;/figcaption&gt;
-&lt;/div&gt;
-
-&lt;p&gt;What is your strategy to make user achieve something? This would be our expand point&lt;/p&gt;
-
-&lt;h2 id=&quot;discover-your-products-ai-potential&quot;&gt;Discover your product’s AI potential&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;How can we apply AI to our product? Let’s write down our ‘HMW’ questions, and find out all p ossibilities.&lt;/em&gt; &lt;br /&gt;
-These are suggestion of possibilities, so don’t attached to feasibility (we will do in at lean start-up)&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week5/se.jpg&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
-    &lt;figcaption&gt;Software section's expectation&lt;/figcaption&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week5/ai.JPG&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
-    &lt;figcaption&gt;AI section's expectation&lt;/figcaption&gt;
-&lt;/div&gt;
-
-&lt;h1 class=&quot;no_toc&quot; id=&quot;tuesday&quot;&gt;Tuesday&lt;/h1&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week5/simulator.png&quot; width=&quot;60%&quot; height=&quot;60%&quot; /&gt;
-    &lt;figcaption&gt;Engineer's task, week5&lt;/figcaption&gt;
-&lt;/div&gt;
-
-&lt;p&gt;This 5th week, engineers settled&lt;/p&gt;
-
-&lt;h1 class=&quot;no_toc&quot; id=&quot;wendesday&quot;&gt;Wendesday&lt;/h1&gt;
-
-&lt;h1 class=&quot;no_toc&quot; id=&quot;thursday&quot;&gt;Thursday&lt;/h1&gt;
-
-&lt;h1 class=&quot;no_toc&quot; id=&quot;friday&quot;&gt;Friday&lt;/h1&gt;</content><author><name>dionne</name></author><summary type="html">The 5th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week5/user-storymap.png" /></entry><entry><title type="html">4 reasons took much time to setting GPU for fast.ai than I expected</title><link href="http://localhost:4000/2020/02/GPU-time/" rel="alternate" type="text/html" title="4 reasons took much time to setting GPU for fast.ai than I expected" /><published>2020-02-05T00:00:00+01:00</published><updated>2020-02-05T00:00:00+01:00</updated><id>http://localhost:4000/2020/02/GPU-time</id><content type="html" xml:base="http://localhost:4000/2020/02/GPU-time/">&lt;h2 id=&quot;motivation&quot;&gt;Motivation&lt;/h2&gt;
-
-&lt;p&gt;Before now, me as a undergraduate student, I was parsimony who usually depend on colab, kaggle, friend’s server(occasional) whenever i need GPU..&lt;br /&gt;
-&lt;br /&gt;
-And this time it’s been for a while to install GPU than I expected and I share the several component that stood in my way.&lt;br /&gt;
-&lt;br /&gt;
-&lt;strong&gt;&lt;span style=&quot;color:red&quot;&gt;Written at Oct 24 2019, if you think this is deprecated, please do not have a leap of faith.&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Just for the record, I’ve used Kaggle, Colab, GCP, Azure, EC2 as GPU cloud.
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;1-did-not-know-there-is-jupyterlab-option-in-google-cloud-platform&quot;&gt;1. Did not know there is &lt;em&gt;JupyterLab&lt;/em&gt; option in &lt;strong&gt;Google Cloud Platform&lt;/strong&gt;.&lt;/h3&gt;
-
-&lt;p&gt;At the first time when GCP came out, there was no &lt;strong&gt;AI  Platform&lt;/strong&gt; service. So from starting vm instance to launching jupyter and installing packages, I did all of the things myself. (and I learned 🤗)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/8.png&quot; alt=&quot;installing-conda-cli&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$	curl -O https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p align=&quot;center&quot;&gt;[Downloading conda in ssh]&lt;/p&gt;
-
-&lt;p&gt;I created VM instance,selected zone, machine type and disk type. Then, define firewall rules and in ssh terminal, install jupyter and other packages.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;But you can do all of these things just using AI Platform.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/9.png&quot; alt=&quot;installing-conda-cli&quot; /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;[AI Platform]&lt;/p&gt;
-
-&lt;p&gt;I think it especially save your time if you are living in Asia-Pacific, which google doesn’t support not that much GPU resources.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;2-consider-if-the-platform-has-limited-resources-in-a-region-you-live-in&quot;&gt;2. Consider if the platform has limited resources in a region you live in.&lt;/h3&gt;
-&lt;p&gt;&lt;br /&gt;
-I live in &lt;em&gt;South Korea, East Asia&lt;/em&gt;, and it seems like this region has lots of limitation in GPU (except quite expensive AWS)&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;And the Taiwan which was the only one region where I can launch my own VM with GPU (I tried all the other regions in the list) sometimes do normaly, but not always. 😥&lt;br /&gt;
-After launching, I did several works and next day I could not start VM. (I didn’t count it, but tried it a few hours because I didn’t want cost any more time…)&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-Endlessly failed to start instance, then I choose to move AWS as an alternative way.&lt;/p&gt;
-
-&lt;h3 id=&quot;3-fastai-gives-deliberate-guide-and-i-didnt-know-it&quot;&gt;3. &lt;span style=&quot;color:blue&quot;&gt;Fast.ai gives deliberate &lt;a href=&quot;https://course.fast.ai/start_gcp.html&quot;&gt;guide&lt;/a&gt; and I didn’t know it.&lt;/span&gt;&lt;/h3&gt;
-
-&lt;p&gt;Fast.ai offer the guide for all available platform. (Colab, salamander, Gradient, Kaggle, Colab, and so on)&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;It is so important, and really needs, because cloud computing options are vary as occasion and purpose arise.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;I didn’t know fast.ai has manual to running GCP, and I think it’s as good a reason as any for me to be have taken time.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;It helped me so much when I had aws and shortened my time.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;I don’t want to read all of the manual in amazno.. (It is recommended.. but I’d rather read &lt;a href=&quot;https://git-scm.com/book/en/v2&quot;&gt;GIT PRO&lt;/a&gt; now…)&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -i ~/.ssh/&amp;lt;your_private_key_pair&amp;gt; -L localhost:8888:localhost:8888 ubuntu@&amp;lt;your instance IP&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;4-you-should-wait-to-add-more-volume-just-after-add-volume-by-building-aws-ec2&quot;&gt;4. You should wait to add more volume just after add volume, by building AWS EC2.&lt;/h3&gt;
-
-&lt;p&gt;Since Elastic Block Store(EBS) storage supports optimized storage, users can’t extend storage volume two times in a row. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, at the first time, I didn’t know it (again 👻) and when VM lacked volume, I doubled dist capacity (76*2) at a rough but It needs more. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;!–&lt;/p&gt;
-
-&lt;p&gt;this time I installed GPU in two years, and it became little complicated compared to 2 years ago.
-And this time for the first time(maybe not the first time.. but i handled it in my class or with my friend. but it’s my first time on my own.) I 
-very I’m started to using used google colab, kaggle
-and, GCP-JupyterLab, ec2 - friend made, 
-aws vm machine but I had a environment variable but i did not know of it.
-On these days, I could not get a resources from taiwan…&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;I couldn’t notice a deliberate&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Anyway, as a result I tried myself gcp myself and aws ec2 with fast.ai But I think doing on my self surely takes much time (in this point I wonder why I’m doing this, and should remind me, especially I was studying disk volume optimization)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;disk-volume-exceed---httpsaskubuntucomquestions919748no-space-left-on-device-even-though-there-is&quot;&gt;disk volume exceed - https://askubuntu.com/questions/919748/no-space-left-on-device-even-though-there-is&lt;/h2&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>dionne</name></author><summary type="html">Motivation</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/10.png" /></entry></feed>
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="feature" /><summary type="html">CONTENTS</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/munich2.jpg" /></entry></feed>

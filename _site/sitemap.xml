@@ -81,6 +81,10 @@
 <lastmod>2020-04-15T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/2020/04/v4-2020-lesson06/</loc>
+<lastmod>2020-04-23T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/404/</loc>
 </url>
 <url>
@@ -112,5 +116,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/page2/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page3/</loc>
 </url>
 </urlset>

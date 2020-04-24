@@ -1,4 +1,422 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-23T22:15:03+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">fastai 2019 course-v3 Part1, lesson06</title><link href="http://localhost:4000/2020/04/v3-2019-lesson06-note/" rel="alternate" type="text/html" title="fastai 2019 course-v3 Part1, lesson06" /><published>2020-04-15T00:00:00+09:00</published><updated>2020-04-15T00:00:00+09:00</updated><id>http://localhost:4000/2020/04/v3-2019-lesson06-note</id><content type="html" xml:base="http://localhost:4000/2020/04/v3-2019-lesson06-note/">&lt;h1 id=&quot;lesson-06&quot;&gt;Lesson 06&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-24T16:21:10+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">fastai 2020 course-v4 Part1, lesson06</title><link href="http://localhost:4000/2020/04/v4-2020-lesson06/" rel="alternate" type="text/html" title="fastai 2020 course-v4 Part1, lesson06" /><published>2020-04-23T00:00:00+09:00</published><updated>2020-04-23T00:00:00+09:00</updated><id>http://localhost:4000/2020/04/v4-2020-lesson06</id><content type="html" xml:base="http://localhost:4000/2020/04/v4-2020-lesson06/">&lt;p&gt;Jeremy:note lesson6 for: &lt;a href=&quot;https://www.usfca.edu/data-institute/certificates/deep-learning-part-one&quot;&gt;Deep Learning Part 1 of Spring 2020 at USF&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Today we will study&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Image Classification&lt;/li&gt;
+  &lt;li&gt;Multi-label classification&lt;/li&gt;
+  &lt;li&gt;Collaborative filtering&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h2&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#image-classification&quot; id=&quot;markdown-toc-image-classification&quot;&gt;Image Classification&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#model-interpretation&quot; id=&quot;markdown-toc-model-interpretation&quot;&gt;Model Interpretation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#improving-our-model&quot; id=&quot;markdown-toc-improving-our-model&quot;&gt;Improving our model&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#learning-rate-finder&quot; id=&quot;markdown-toc-learning-rate-finder&quot;&gt;Learning rate finder&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#unfreezing-and-transfer-learning&quot; id=&quot;markdown-toc-unfreezing-and-transfer-learning&quot;&gt;Unfreezing and transfer learning&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#discriminative-learning-rates&quot; id=&quot;markdown-toc-discriminative-learning-rates&quot;&gt;Discriminative learning rates&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#selecting-the-number-of-epochs&quot; id=&quot;markdown-toc-selecting-the-number-of-epochs&quot;&gt;Selecting the number of epochs&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#deeper-architectures&quot; id=&quot;markdown-toc-deeper-architectures&quot;&gt;Deeper architectures&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#jeremysignment&quot; id=&quot;markdown-toc-jeremysignment&quot;&gt;Jeremy:signment&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#multi-label-classification&quot; id=&quot;markdown-toc-multi-label-classification&quot;&gt;Multi-label classification&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#constructing-a-data-block&quot; id=&quot;markdown-toc-constructing-a-data-block&quot;&gt;Constructing a data block&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#binary-cross-entropy&quot; id=&quot;markdown-toc-binary-cross-entropy&quot;&gt;Binary cross entropy&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#regression&quot; id=&quot;markdown-toc-regression&quot;&gt;Regression&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#jeremysemble-the-data&quot; id=&quot;markdown-toc-jeremysemble-the-data&quot;&gt;Jeremy:semble the data&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#training-a-mode&quot; id=&quot;markdown-toc-training-a-mode&quot;&gt;Training a mode&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#jeremysignment-1&quot; id=&quot;markdown-toc-jeremysignment-1&quot;&gt;Jeremy:signment&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#collaborative-filtering&quot; id=&quot;markdown-toc-collaborative-filtering&quot;&gt;Collaborative filtering&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#learning-the-latent-factors&quot; id=&quot;markdown-toc-learning-the-latent-factors&quot;&gt;Learning the latent factors&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#creating-the-dataloaders&quot; id=&quot;markdown-toc-creating-the-dataloaders&quot;&gt;Creating the DataLoaders&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#collaborative-filtering-from-scratch&quot; id=&quot;markdown-toc-collaborative-filtering-from-scratch&quot;&gt;Collaborative filtering from scratch&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Previous; Recap of last class&lt;/p&gt;
+
+&lt;h2 id=&quot;image-classification&quot;&gt;Image Classification&lt;/h2&gt;
+
+&lt;h3 id=&quot;model-interpretation&quot;&gt;Model Interpretation&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://render.githubusercontent.com/view/ipynb?commit=56ab576a6826ecea66ed555b3b46a90ed409bb19&amp;amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6661737461692f636f757273652d76342f353661623537366136383236656365613636656435353562336234366139306564343039626231392f6e62732f30355f7065745f6272656564732e6970796e62&amp;amp;nwo=fastai%2Fcourse-v4&amp;amp;path=nbs%2F05_pet_breeds.ipynb&amp;amp;repository_id=248051827&amp;amp;repository_type=Repository#Model-Interpretation&quot;&gt;course link&lt;/a&gt;, &lt;a href=&quot;https://render.githubusercontent.com/view/ipynb?commit=56ab576a6826ecea66ed555b3b46a90ed409bb19&amp;amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6661737461692f636f757273652d76342f353661623537366136383236656365613636656435353562336234366139306564343039626231392f6e62732f30355f7065745f6272656564732e6970796e62&amp;amp;nwo=fastai%2Fcourse-v4&amp;amp;path=nbs%2F05_pet_breeds.ipynb&amp;amp;repository_id=248051827&amp;amp;repository_type=Repository#Model-Interpretation&quot;&gt;Book link&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;When you have many categories, use &lt;code class=&quot;highlighter-rouge&quot;&gt;most_confused()&lt;/code&gt; method rather than plotting confusion matrix (#q) no way to see with regression model?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;improving-our-model&quot;&gt;Improving our model&lt;/h3&gt;
+
+&lt;h4 id=&quot;learning-rate-finder&quot;&gt;Learning rate finder&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;learn.fine_tune()&lt;/code&gt; has &lt;code class=&quot;highlighter-rouge&quot;&gt;base_lr&lt;/code&gt;parameter (changed from &lt;code class=&quot;highlighter-rouge&quot;&gt;fit_one_cyle&lt;/code&gt; of fastai_v1)&lt;/li&gt;
+  &lt;li&gt;If learning rate is too high, loss validation gets too high compared to loss of train
+    &lt;ul&gt;
+      &lt;li&gt;why? because it diverges&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If learning rate is too small, train loss decreases too slowly, and there are much gap between train and valid loss.
+    &lt;ul&gt;
+      &lt;li&gt;(#q) But how do I know if loss decreases slowly or not?&lt;/li&gt;
+      &lt;li&gt;So it will take long time, means too many epochs, resulting overfitting&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;meaning of &lt;code class=&quot;highlighter-rouge&quot;&gt;learning rate graph&lt;/code&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;loss&lt;/code&gt; graph
+    &lt;ul&gt;
+      &lt;li&gt;(#q) Is it train loss or valid loss what plot shows&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;lr\_find()&lt;/code&gt; goes through (#f)one batch?
+Jeremy: no, each lr candidate goes through one minibatch for each lr, 
+why steepest? why not minimum?
+Jeremy: we want our model to enhance learning while training
+	- (#q) Is this related to fit_one_cycle learning?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;unfreezing-and-transfer-learning&quot;&gt;Unfreezing and transfer learning&lt;/h4&gt;
+
+&lt;p&gt;(#f)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;learn.find_tune??
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;(#q) what’s diff from fit_one_cycle?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;calling &lt;code class=&quot;highlighter-rouge&quot;&gt;cnn_learner&lt;/code&gt; freeze our model, so don’t have to do it seperately&lt;/li&gt;
+  &lt;li&gt;We can do better because we just used the same learning rate for a whole training&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;discriminative-learning-rates&quot;&gt;Discriminative learning rates&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/discriminative_lr.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;use &lt;code class=&quot;highlighter-rouge&quot;&gt;slice&lt;/code&gt; at lr_max parameter means discriminative learning rate
+    &lt;ul&gt;
+      &lt;li&gt;why &lt;em&gt;lr_max&lt;/em&gt;? first layer use use left value of slice, and last layer use right value of slice (#q)(I need to study more of scheduled learning)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;selecting-the-number-of-epochs&quot;&gt;Selecting the number of epochs&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you choose too big epoch, valid_loss will not change from specific point, and this is related to &lt;code class=&quot;highlighter-rouge&quot;&gt;fit_one_cycle&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What &lt;code class=&quot;highlighter-rouge&quot;&gt;fit_one_cycle&lt;/code&gt; does?&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;(#f) &lt;code class=&quot;highlighter-rouge&quot;&gt;???? -  couldn't get why&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;if error_rate stop from specific epoch, use that epoch as epoch and do it again&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;deeper-architectures&quot;&gt;Deeper architectures&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Generally people don’t use resnet18, resnet34&lt;/li&gt;
+  &lt;li&gt;about, &lt;code class=&quot;highlighter-rouge&quot;&gt;.to_fp16()&lt;/code&gt;: NVIDIJeremy:GPU support special tensor and it’s faster about 2x/3x (#q) import what module?: from fastai2.callback.fp16 import *&lt;/li&gt;
+  &lt;li&gt;Try a small model before scaling up the model &amp;lt; because bigger model doesn’t guarantee better performance&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;jeremysignment&quot;&gt;Jeremy:signment&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Read paper, &lt;a href=&quot;https://arxiv.org/abs/1506.01186&quot;&gt;Cyclical Learning Rates for Training Neural Networks&lt;/a&gt; and see how you can get best results with adjusting learning rate, find out best learning rate by yourself!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;about &lt;code class=&quot;highlighter-rouge&quot;&gt;.to_fp16()&lt;/code&gt; (#f)
+Jeremy: (#f)
+ (#f)
+Jeremy: not does machine learning but  deep learning specifically. For more info, see Rachael’s Linear Jeremy:gebra course.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;multi-label-classification&quot;&gt;Multi-label classification&lt;/h2&gt;
+
+&lt;h3 id=&quot;constructing-a-data-block&quot;&gt;Constructing a data block&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;dataset is abstract idea of class
+    &lt;ul&gt;
+      &lt;li&gt;If you index it mostly get tuple, independent variable and dependent variable.(#todo) diff between &lt;code class=&quot;highlighter-rouge&quot;&gt;(a,)&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;(a)&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;when you use (#f) &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; is independent(input), and &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt; is dependent variable(target)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dataloader is (#f)
+(#f) (#todo) &lt;a href=&quot;https://render.githubusercontent.com/view/ipynb?commit=b7f3f0d750196e155de05b0788725a352faa7732&amp;amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6661737461692f66617374626f6f6b2f623766336630643735303139366531353564653035623037383837323561333532666161373733322f30365f6d756c74696361742e6970796e62&amp;amp;nwo=fastai%2Ffastbook&amp;amp;path=06_multicat.ipynb&amp;amp;repository_id=243838973&amp;amp;repository_type=Repository#Constructing-a-data-block&quot;&gt;read the book&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Datablock does male train and valid set for us&lt;/li&gt;
+  &lt;li&gt;Randomly split so we have different output when we call dataset (#todo) use random.seed to get a same output&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dblock = DataBlock(blocks=(ImageBlock, MultiCategoryBlock),
+                   get_x = get_x, get_y = get_y)
+dsets = dblock.datasets(df)
+dsets.train[0]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
+(PILImage mode=RGB size=500x375,
+ TensorMultiCategory([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0.]))&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;PILImage mode=RGB size=500x375&lt;/code&gt;: independent variable, which is a input&lt;/li&gt;
+  &lt;li&gt;(#f) make image size same, and call data loaders&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;why we don’t train with 8 bit data
+Jeremy: (#f) couldn’t hear, but bumpy…?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;one hot encoding is int, but why output(&lt;code class=&quot;highlighter-rouge&quot;&gt;TensorMultiCategory([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0.]))&lt;/code&gt;) is float?
+Jeremy: because we &lt;em&gt;will&lt;/em&gt; use cross-entropy style loss.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Is it possible that I make a data loaders with character label like ‘desk’?
+Jeremy: Yes. Use index if it’s category and will study next time when it’s continuous variable.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;binary-cross-entropy&quot;&gt;Binary cross entropy&lt;/h4&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cnn_learner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resnet18&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dls&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;one_batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;activs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;activs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;when you render the one size of batch to the model, you can get an output.&lt;/li&gt;
+  &lt;li&gt;Use a&lt;code class=&quot;highlighter-rouge&quot;&gt;dls.train.one_batch()&lt;/code&gt; function when you check what’s going in and out, especially see a shape of tensor.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;binary_cross_entropy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;inputs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inputs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sigmoid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inputs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;result is 0 to 1 but we get a variable between 0 and 1 so that we use sigmoid&lt;/li&gt;
+  &lt;li&gt;(#todo) find out why use .log last chapter`&lt;/li&gt;
+  &lt;li&gt;(#todo) &lt;a href=&quot;https://render.githubusercontent.com/view/ipynb?commit=b7f3f0d750196e155de05b0788725a352faa7732&amp;amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6661737461692f66617374626f6f6b2f623766336630643735303139366531353564653035623037383837323561333532666161373733322f30365f6d756c74696361742e6970796e62&amp;amp;nwo=fastai%2Ffastbook&amp;amp;path=06_multicat.ipynb&amp;amp;repository_id=243838973&amp;amp;repository_type=Repository#Binary-cross-entropy&quot;&gt;read the book&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(#f)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;One-hot encoded target, use &lt;code class=&quot;highlighter-rouge&quot;&gt;BCELoss&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;accuracy as a metric only works at single label dataset
+    &lt;ul&gt;
+      &lt;li&gt;because accuracy uses argmax which chooses single number&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;so doing multi-categorical problem, use accuracy which check threshold(not selecting one value), and pass the number over threshold&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;partial&lt;/code&gt; function is used when you want to fix one parameter (#f) (#q) why we have to fix&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;learn = cnn_learner(dls, resnet50, metrics=partial(accuracy_multi, thresh=0.2))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How can I get &lt;em&gt;best&lt;/em&gt; threshold?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;preds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_preds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linspace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.05&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.95&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;accs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accuracy_multi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;preds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thresh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmoid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;(#f) about overfitting because we selected best number&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;regression&quot;&gt;&lt;a href=&quot;https://render.githubusercontent.com/view/ipynb?commit=b7f3f0d750196e155de05b0788725a352faa7732&amp;amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6661737461692f66617374626f6f6b2f623766336630643735303139366531353564653035623037383837323561333532666161373733322f30365f6d756c74696361742e6970796e62&amp;amp;nwo=fastai%2Ffastbook&amp;amp;path=06_multicat.ipynb&amp;amp;repository_id=243838973&amp;amp;repository_type=Repository#Regression&quot;&gt;Regression&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h4 id=&quot;jeremysemble-the-data&quot;&gt;Jeremy:semble the data&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;get_image_files&lt;/code&gt; gather image recursively&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;splitter&lt;/code&gt; why select exact person? -&amp;gt; it’s continuous frame, so if you just select random data, it would be overestimated.&lt;/li&gt;
+  &lt;li&gt;do the same thing using one_batch, and then see shape of output.&lt;/li&gt;
+  &lt;li&gt;image as 3 channel, you can see the version of &lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;G&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;B&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;you can draw bear using this code (#f) no code at course note&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;can we give multi-channel bigger than 3?
+Jeremy: yes, it used often like when you use satellite image. But your pre-trained model is usually for a 3-channel and fastai (#f) could not listen&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;training-a-mode&quot;&gt;Training a mode&lt;/h4&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show_results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ds_idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;figsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;left of output is target, right is prediction&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Notice&lt;/em&gt; that we used pre-trained model, which did classification task. But it works well when you do regression with it.
+    &lt;ul&gt;
+      &lt;li&gt;why? pre-trained model from ImageNet is collection of image’s features like, objects, color, texture, shadow and so on&lt;/li&gt;
+      &lt;li&gt;so from pre-trained model, we can get the &lt;em&gt;features&lt;/em&gt; of an image, and do the &lt;em&gt;other job&lt;/em&gt;(e.g., regression) with fine-tuning&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;jeremysignment-1&quot;&gt;Jeremy:signment&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;go to the bear classifier, and find out when you give image which is not included in label and see what happens (#q) why?&lt;/li&gt;
+  &lt;li&gt;This will be helpful when you change from multiple-category … (#f)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;used cross-validation doing machine learning . Do we use it at deep learning?
+Jeremy: First, nowadays cross-validations are less common(at least at kaggle), because cross-validation was used there were not lots of data. Second, cross-validation is not related selection between machine learning and deep learning&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;CF algorithm used other than recommendation system.(#f)
+Jeremy: whatever it’s kind of recommendation system.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;how can i make data set if I have video? how split?(time phrase)
+Jeremy: rank-5 tensor by (time, h, w, batch, (#f)). you can make this theoretically but it is not practically used because too big tensor leads to out of memory&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;collaborative-filtering&quot;&gt;&lt;a href=&quot;https://render.githubusercontent.com/view/ipynb?commit=b7f3f0d750196e155de05b0788725a352faa7732&amp;amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6661737461692f66617374626f6f6b2f623766336630643735303139366531353564653035623037383837323561333532666161373733322f30385f636f6c6c61622e6970796e62&amp;amp;nwo=fastai%2Ffastbook&amp;amp;path=08_collab.ipynb&amp;amp;repository_id=243838973&amp;amp;repository_type=Repository#Collaborative-filtering-deep-dive&quot;&gt;Collaborative filtering&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;(#todo) Read the fastbook&lt;/li&gt;
+  &lt;li&gt;CF algorithm is related to &lt;em&gt;latent&lt;/em&gt;  variable(;factors) since we don’t have &lt;em&gt;a label explaining/depicting properties&lt;/em&gt; which made you choose specific movie
+    &lt;ul&gt;
+      &lt;li&gt;In other words, there is no specific label how we could predict the dependent variable(recommendation; movies user didn’t watch) results from independent var(rating regarding user and movie)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/pic1-v4-L6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;upper and below part represent same info&lt;/li&gt;
+  &lt;li&gt;It does dot product and sum with user and movie weight matrix&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;learning-the-latent-factors&quot;&gt;Learning the latent factors&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;randomly create user’s factor(;latent, hidden) and movie’s factor. and do matrix multiplication with those, which is dot product.&lt;/li&gt;
+  &lt;li&gt;and sum it and compare with target, so that you can learn parameters, which were randomly initialized&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;creating-the-dataloaders&quot;&gt;Creating the DataLoaders&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Let’s make DataLoaders using basic python and PyTorch!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;user and movie is represented using index, label,..,called look up in an index&lt;/li&gt;
+  &lt;li&gt;but &lt;em&gt;look up in an index&lt;/em&gt; is not the thing that deep learning models know how to do with. (#q) why?: I think because it can’t do matrix multiplication
+    &lt;ul&gt;
+      &lt;li&gt;so that we make one-hot encoding matrix&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;how to do with sparse data?
+Jeremy: see course rachael’s linear algebra&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;embedding layer: multiplying by a one hot encoded matrix, using the computational shortcut that it can be implemented by simply indexing directly.(#todo) watch again this part of v3, Jeremy explained with excel
+    &lt;ul&gt;
+      &lt;li&gt;This is important : embedding is not magic, it’s just computational shortcut to make kind of one-hot encoding mat mul with look up index&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;collaborative-filtering-from-scratch&quot;&gt;Collaborative filtering from scratch&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;importance of dunder method of python. (like &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__&lt;/code&gt;)
+    &lt;ul&gt;
+      &lt;li&gt;explained OOP concept&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Inheritance of python&lt;/li&gt;
+  &lt;li&gt;Module is fast.ai version of pytorch’s nn.Module&lt;/li&gt;
+  &lt;li&gt;Remember Embedding is just kind of shortcut to make a one-hot encoding matrix&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DotProduct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_users&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_movies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_factors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user_factors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Embedding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n_users&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_factors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;movie_factors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Embedding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n_movies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_factors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;forward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user_factors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;movies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;movie_factors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;movies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;64: size of mini_batch, 2: index&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;x,y = dls.one_batch()
+x.shape
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;torch.Size([64, 2])&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We use bias to represent specific character of &lt;em&gt;each user and movie&lt;/em&gt;, because user/movie weight can’t show users’ character, who usually give good rates, or are fond of animation(movie also)&lt;/li&gt;
+  &lt;li&gt;what should we do when model is overfitting very quickly with small epoch(#q) how do we know it’s quick or not? i.e. it’s overfitting or not?&lt;/li&gt;
+  &lt;li&gt;what should we do to evade overfitting and don’t want to lessen epoch?
+    &lt;ul&gt;
+      &lt;li&gt;do regularization, which is panalize the fast learning&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;(#q) why just doesn’t leave it to learn fast?: I think fast learning doesn’t mean model did learn generalized feature. -&amp;gt; then how do we know this is the moment model learned genralized feature?&lt;/li&gt;
+  &lt;li&gt;(#q) Isn’t there any side effects when you did too much regularization?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Collaborative filtering algorithm works better than svd or kind of that?
+Jeremy: yes&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use generic &lt;code class=&quot;highlighter-rouge&quot;&gt;Learner&lt;/code&gt; not cnn_learner of kind of that. and so that we should render loss function, and model (not using default params)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(#todo) comment about hashtags, check toc&lt;/p&gt;</content><author><name>dionne</name></author><summary type="html">Jeremy:note lesson6 for: Deep Learning Part 1 of Spring 2020 at USF</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/lesson6-v4.png" /></entry><entry><title type="html">fastai 2019 course-v3 Part1, lesson06</title><link href="http://localhost:4000/2020/04/v3-2019-lesson06-note/" rel="alternate" type="text/html" title="fastai 2019 course-v3 Part1, lesson06" /><published>2020-04-15T00:00:00+09:00</published><updated>2020-04-15T00:00:00+09:00</updated><id>http://localhost:4000/2020/04/v3-2019-lesson06-note</id><content type="html" xml:base="http://localhost:4000/2020/04/v3-2019-lesson06-note/">&lt;h1 id=&quot;lesson-06&quot;&gt;Lesson 06&lt;/h1&gt;
 
 &lt;h2 id=&quot;rossmanntabular&quot;&gt;Rossmann(Tabular)&lt;/h2&gt;
 
@@ -2120,190 +2538,4 @@ They’re the result of a complex process that starts with years of historical c
   &lt;li&gt;Increase diversity in our workspace&lt;/li&gt;
   &lt;li&gt;Advocate for good policy&lt;/li&gt;
   &lt;li&gt;Be on the ongoing lookout for bias&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>dionne</name></author><summary type="html">Algorithms can encode &amp;amp; magnify human bias</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/13.png" /></entry><entry><title type="html">Making a classifier with image dataset made from gooogle</title><link href="http://localhost:4000/2020/02/classifier-city/" rel="alternate" type="text/html" title="Making a classifier with image dataset made from gooogle" /><published>2020-02-15T00:00:00+09:00</published><updated>2020-02-15T00:00:00+09:00</updated><id>http://localhost:4000/2020/02/classifier-city</id><content type="html" xml:base="http://localhost:4000/2020/02/classifier-city/">&lt;h3 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h3&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#creating-dataset-from-google-images&quot; id=&quot;markdown-toc-creating-dataset-from-google-images&quot;&gt;Creating dataset from google images&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#using-google_images_download&quot; id=&quot;markdown-toc-using-google_images_download&quot;&gt;Using &lt;code class=&quot;highlighter-rouge&quot;&gt;google_images_download&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#create-imagedatabunch&quot; id=&quot;markdown-toc-create-imagedatabunch&quot;&gt;Create ImageDataBunch&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#train-model&quot; id=&quot;markdown-toc-train-model&quot;&gt;Train model&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#fit_one_cycle&quot; id=&quot;markdown-toc-fit_one_cycle&quot;&gt;fit_one_cycle()&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#lets-find-tune&quot; id=&quot;markdown-toc-lets-find-tune&quot;&gt;Let’s find-tune&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#lets-train-the-whole-model&quot; id=&quot;markdown-toc-lets-train-the-whole-model&quot;&gt;Let’s train the whole model!&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#lets-make-batch-size-bigger&quot; id=&quot;markdown-toc-lets-make-batch-size-bigger&quot;&gt;Let’s make batch size bigger!&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#interpretation&quot; id=&quot;markdown-toc-interpretation&quot;&gt;Interpretation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#model-in-production&quot; id=&quot;markdown-toc-model-in-production&quot;&gt;Model in production&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Code can be found &lt;a href=&quot;https://github.com/SpellOnYou/dlff-note/blob/master/toy-project/What_is_your_city_lesson02.ipynb&quot;&gt;here&lt;/a&gt;&lt;br /&gt;
-Deployed model &lt;a href=&quot;https://my-city-classifier.onrender.com/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Making a classifier which can distinguish &lt;span style=&quot;color: red&quot;&gt;Seoul&lt;/span&gt; from &lt;span style=&quot;color: red&quot;&gt;Munich&lt;/span&gt; and &lt;span style=&quot;color: red&quot;&gt;Sanfrancisco&lt;/span&gt;!
-(hoping my well in Munich!)&lt;/p&gt;
-
-&lt;h3 id=&quot;creating-dataset-from-google-images&quot;&gt;Creating dataset from google images&lt;/h3&gt;
-
-&lt;p&gt;In machine learning, you always need data before you build your model.&lt;/p&gt;
-
-&lt;p&gt;You can use either URLs or &lt;code class=&quot;highlighter-rouge&quot;&gt;google_images_download&lt;/code&gt; package. Since &lt;a href=&quot;&quot;&gt;Jeremy explained specifically&lt;/a&gt;, I will try the other.&lt;/p&gt;
-
-&lt;h4 id=&quot;using-google_images_download&quot;&gt;Using &lt;code class=&quot;highlighter-rouge&quot;&gt;google_images_download&lt;/code&gt;&lt;/h4&gt;
-
-&lt;p&gt;note: &lt;em&gt;This is not google official package&lt;/em&gt; &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Refer to &lt;a href=&quot;https://google-images-download.readthedocs.io/en/latest/index.html&quot;&gt;Official Doncument&lt;/a&gt;, put that arguments.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;google_images_download&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;google_images_download&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;google_images_download&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;googleimagesdownload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;#class instantiation
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;abspath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'../../materials/dataset/pkg/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;keywords&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Cebu,Munich,Seoul&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-             &lt;span class=&quot;s&quot;&gt;&quot;print_urls&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-             &lt;span class=&quot;s&quot;&gt;&quot;suffix_keywords&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;city&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-             &lt;span class=&quot;s&quot;&gt;&quot;output_directory&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-             &lt;span class=&quot;s&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;photo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;paths&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;download&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;#passing the arguments to the function
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paths&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;and if you need, here is &lt;a href=&quot;https://github.com/hardikvasa/google-images-download/blob/master/google_images_download/google_images_download.py&quot;&gt;main&lt;/a&gt; code.&lt;/p&gt;
-
-&lt;h4 id=&quot;create-imagedatabunch&quot;&gt;Create ImageDataBunch&lt;/h4&gt;
-
-&lt;p&gt;We need to separate validation set because we just &lt;em&gt;grabbed&lt;/em&gt; these imagese from Google.&lt;br /&gt; Most of the dataset we use (kaggle/research) splited into &lt;code class=&quot;highlighter-rouge&quot;&gt;train / validation / test&lt;/code&gt;&lt;br /&gt; so if they are not devided beforehand we should make databunch, and Jeremy recommended assign 20% to validation.&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Help&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verify_images&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fastai&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vision&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;verify_images&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pathlib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_workers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recurse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pathlib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_channels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;interp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img_format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resume&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kwargs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Check&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;images&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`path`&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aren&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'t broken, maybe resize them and copy it in `dest`.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Data from &lt;strong&gt;google image url&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/02-url.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Data from &lt;strong&gt;package&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/02-pkg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;train-model&quot;&gt;Train model&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;len(class)&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;len(train)&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;len(valid)&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Data_url&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;432&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;108&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Data_pkg&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;216&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;53&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;
-Uisng model: &lt;strong&gt;restnet34&lt;/strong&gt; &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, Measurement: &lt;strong&gt;accuracy&lt;/strong&gt; &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;fit_one_cycle&quot;&gt;fit_one_cycle()&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;What is fit one cycle?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1506.01186.pdf&quot;&gt;Cyclical Learning Rates for Training Neural Networks&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;One of the way to find &lt;em&gt;good&lt;/em&gt; learning rate. Core idea is to start with small learning rate (like 1e-4, 1e-3) and increase the learning rate after each mini-batch till &lt;strong&gt;loss starts exploding&lt;/strong&gt;. And pick up learning rate one order lower than exploding point. For example, plotted learning rate is like below picture, picking up around 1e-2 is the best way.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/lr-finder.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Why this methods&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Traditionally, the learning rate is decreased as the learning starts converging with time. But this paper suggests to cycle our learning rate, because it makes us avoid &lt;em&gt;local minimum&lt;/em&gt;. Basically this cyclic method enables us to explore whole of loss function so that find out global minimum. In other words, higher learning rate behaves like &lt;em&gt;regularisation&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h4 id=&quot;lets-find-tune&quot;&gt;Let’s find-tune&lt;/h4&gt;
-
-&lt;p&gt;Do train just one last layer by learning rate found by &lt;em&gt;find_lr&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;This section you should find the strongest downward slope that kind of sticking around for quite a while. And choose just one order lower than lowest point. As explained before, I will pick up 1e-2. And of course, this is fine-tuning, we don’t need discriminative learning rate yet.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/fine-tune.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;lets-train-the-whole-model&quot;&gt;Let’s train the whole model!&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://colab.research.google.com/github/SpellOnYou/dlff-note/blob/master/toy-project/What_is_your_city_lesson02.ipynb?authuser=1#scrollTo=8iumhHtskuDz&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;When you plot the learning rate again, maybe you will get soaring shape of learning rate. 
-&lt;strong&gt;Rule of thumb&lt;/strong&gt;, When you slice the learning rate, use learning rate you used at unfrozen part. Divide it by 5 or 10 and put it on maximum bound. At minimum bound, get the point just before it soared, and divide it by 10.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/whole_lr.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;lets-make-batch-size-bigger&quot;&gt;Let’s make batch size bigger!&lt;/h4&gt;
-
-&lt;p&gt;Since default batch size is 64, I tried it to 128.
-And it gets way more better result(even it’s still underfitting!)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/lr_bigger.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;And if I freeze model and train whole model again, the model would be better. Also, you can use this method to the other big dataset model training!&lt;/p&gt;
-
-&lt;h3 id=&quot;interpretation&quot;&gt;Interpretation&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/interp.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;See the confusion matrix. Result is quite great.&lt;/p&gt;
-
-&lt;p&gt;*Since I’m using colab, I will skip data cleansing. But I highly recommend you to use &lt;code class=&quot;highlighter-rouge&quot;&gt;ImageCleaner&lt;/code&gt; widget, only if you are using jupyter notebook (not jupyter lab)&lt;/p&gt;
-
-&lt;h3 id=&quot;model-in-production&quot;&gt;Model in production&lt;/h3&gt;
-
-&lt;p&gt;You can deploy your model in simple way. I referred fast.ai, and used render(it’s free for limited time). You can find detailed document &lt;a href=&quot;https://course.fast.ai/deployment_render.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;and you can create a route like this.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;route&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/classify-url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;methods&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;GET&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;classify_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;bytes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_bytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open_image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BytesIO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;bytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;losses&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;learner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JSONResponse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&quot;predictions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;nb&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cat_learner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;classes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;losses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;You can find my deployed model &lt;a href=&quot;https://my-city-classifier.onrender.com/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 class=&quot;no_toc&quot; id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.pyimagesearch.com/2017/12/04/how-to-create-a-deep-learning-dataset-using-google-images/&quot;&gt;How to create a deep learning dataset using Google Images&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://towardsdatascience.com/finding-good-learning-rate-and-the-one-cycle-policy-7159fe1db5d6&quot;&gt;towardsdatascience - one cycle policy&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1512.03385&quot;&gt;Deep Residual Learning for Image Recognition&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Accuracy_and_precision&quot;&gt;Accuracy_and_precision&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="feature" /><summary type="html">CONTENTS</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/munich2.jpg" /></entry></feed>
+&lt;/ol&gt;</content><author><name>dionne</name></author><summary type="html">Algorithms can encode &amp;amp; magnify human bias</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/13.png" /></entry></feed>

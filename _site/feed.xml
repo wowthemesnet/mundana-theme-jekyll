@@ -1,4 +1,474 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-29T09:59:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">fastai 2020 course-v4 Part1, lesson06</title><link href="http://localhost:4000/2020/04/v4-2020-lesson06/" rel="alternate" type="text/html" title="fastai 2020 course-v4 Part1, lesson06" /><published>2020-04-23T00:00:00+09:00</published><updated>2020-04-23T00:00:00+09:00</updated><id>http://localhost:4000/2020/04/v4-2020-lesson06</id><content type="html" xml:base="http://localhost:4000/2020/04/v4-2020-lesson06/">&lt;p&gt;Note of lesson6 : &lt;a href=&quot;https://www.usfca.edu/data-institute/certificates/deep-learning-part-one&quot;&gt;Deep Learning Part 1 of Spring 2020 at USF&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-29T13:04:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">fastai 2020 course-v4 Part1, lesson07</title><link href="http://localhost:4000/2020/04/v4-2020-lesson07/" rel="alternate" type="text/html" title="fastai 2020 course-v4 Part1, lesson07" /><published>2020-04-29T00:00:00+09:00</published><updated>2020-04-29T00:00:00+09:00</updated><id>http://localhost:4000/2020/04/v4-2020-lesson07</id><content type="html" xml:base="http://localhost:4000/2020/04/v4-2020-lesson07/">&lt;p&gt;Note of lesson7 : &lt;a href=&quot;https://www.usfca.edu/data-institute/certificates/deep-learning-part-one&quot;&gt;Deep Learning Part 1 of Spring 2020 at USF&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Today we will study&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Collaborative Filtering&lt;/li&gt;
+  &lt;li&gt;Tabular modelling&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h2&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#collaborative-filtering&quot; id=&quot;markdown-toc-collaborative-filtering&quot;&gt;Collaborative Filtering&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#collaborative-filtering-from-scratch&quot; id=&quot;markdown-toc-collaborative-filtering-from-scratch&quot;&gt;Collaborative filtering from scratch&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#weight-decay&quot; id=&quot;markdown-toc-weight-decay&quot;&gt;Weight decay&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#creating-our-own-embedding-module&quot; id=&quot;markdown-toc-creating-our-own-embedding-module&quot;&gt;Creating our own Embedding module&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#interpreting-embeddings-and-biases&quot; id=&quot;markdown-toc-interpreting-embeddings-and-biases&quot;&gt;Interpreting embeddings and biases&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#using-fastaicollab&quot; id=&quot;markdown-toc-using-fastaicollab&quot;&gt;Using fastai.collab&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#embedding-distance&quot; id=&quot;markdown-toc-embedding-distance&quot;&gt;Embedding distance&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#boot-strapping-a-collaborative-filtering&quot; id=&quot;markdown-toc-boot-strapping-a-collaborative-filtering&quot;&gt;Boot strapping a collaborative filtering&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#deep-learning-for-collaborative-filtering&quot; id=&quot;markdown-toc-deep-learning-for-collaborative-filtering&quot;&gt;Deep Learning for collaborative filtering&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#sidebar-kwargs-and-delegates&quot; id=&quot;markdown-toc-sidebar-kwargs-and-delegates&quot;&gt;Sidebar: kwargs and delegates&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#end-sidebar&quot; id=&quot;markdown-toc-end-sidebar&quot;&gt;End sidebar&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#conclusion&quot; id=&quot;markdown-toc-conclusion&quot;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#questionnaire&quot; id=&quot;markdown-toc-questionnaire&quot;&gt;Questionnaire&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tabular-modelling&quot; id=&quot;markdown-toc-tabular-modelling&quot;&gt;Tabular modelling&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#categorical-embeddings&quot; id=&quot;markdown-toc-categorical-embeddings&quot;&gt;Categorical embeddings&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#beyond-deep-learning&quot; id=&quot;markdown-toc-beyond-deep-learning&quot;&gt;Beyond Deep Learning&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-dataset&quot; id=&quot;markdown-toc-the-dataset&quot;&gt;The dataset&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#kaggle-competitions&quot; id=&quot;markdown-toc-kaggle-competitions&quot;&gt;kaggle Competitions&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#look-at-the-data&quot; id=&quot;markdown-toc-look-at-the-data&quot;&gt;Look at the data&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#decision-trees&quot; id=&quot;markdown-toc-decision-trees&quot;&gt;Decision trees&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#handling-dates&quot; id=&quot;markdown-toc-handling-dates&quot;&gt;Handling dates&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#using-tabularpandas-and-tabularproc&quot; id=&quot;markdown-toc-using-tabularpandas-and-tabularproc&quot;&gt;Using TabularPandas and TabularProc&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#creating-the-decision-tree&quot; id=&quot;markdown-toc-creating-the-decision-tree&quot;&gt;Creating the decision tree&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#categorical-variables&quot; id=&quot;markdown-toc-categorical-variables&quot;&gt;Categorical variables&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#random-forests&quot; id=&quot;markdown-toc-random-forests&quot;&gt;Random forests&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#creating-a-random-forest&quot; id=&quot;markdown-toc-creating-a-random-forest&quot;&gt;Creating a random forest&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#out-of-bag-error&quot; id=&quot;markdown-toc-out-of-bag-error&quot;&gt;Out-of-bag error&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#model-interpretation&quot; id=&quot;markdown-toc-model-interpretation&quot;&gt;Model interpretation&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#tree-variance-for-prediction-confidence&quot; id=&quot;markdown-toc-tree-variance-for-prediction-confidence&quot;&gt;Tree variance for prediction confidence&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#feature-importance&quot; id=&quot;markdown-toc-feature-importance&quot;&gt;Feature importance&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#removing-low-importance-variables&quot; id=&quot;markdown-toc-removing-low-importance-variables&quot;&gt;Removing low-importance variables&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#removing-redundant-features&quot; id=&quot;markdown-toc-removing-redundant-features&quot;&gt;Removing redundant features&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#partical-dependence&quot; id=&quot;markdown-toc-partical-dependence&quot;&gt;Partical dependence&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#data-leakage&quot; id=&quot;markdown-toc-data-leakage&quot;&gt;Data leakage&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#tree-interpreter&quot; id=&quot;markdown-toc-tree-interpreter&quot;&gt;Tree interpreter&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#extrapolation-and-neural-networks&quot; id=&quot;markdown-toc-extrapolation-and-neural-networks&quot;&gt;Extrapolation and neural networks&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#finding-out-of-domain-data&quot; id=&quot;markdown-toc-finding-out-of-domain-data&quot;&gt;Finding out of domain data&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#using-a-neural-network&quot; id=&quot;markdown-toc-using-a-neural-network&quot;&gt;Using a neural network&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#sidebar-fastais-tabular-classes&quot; id=&quot;markdown-toc-sidebar-fastais-tabular-classes&quot;&gt;Sidebar: fastai’s Tabular classes&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#end-sidebar-1&quot; id=&quot;markdown-toc-end-sidebar-1&quot;&gt;End sidebar&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#ensembling&quot; id=&quot;markdown-toc-ensembling&quot;&gt;Ensembling&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#boosting&quot; id=&quot;markdown-toc-boosting&quot;&gt;Boosting&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#combining-embeddings-with-other-methods&quot; id=&quot;markdown-toc-combining-embeddings-with-other-methods&quot;&gt;Combining embeddings with other methods&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#conclusion-our-advice-for-tabular-modeling&quot; id=&quot;markdown-toc-conclusion-our-advice-for-tabular-modeling&quot;&gt;Conclusion: our advice for tabular modeling&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#questionnaire-1&quot; id=&quot;markdown-toc-questionnaire-1&quot;&gt;Questionnaire&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;collaborative-filtering&quot;&gt;Collaborative Filtering&lt;/h2&gt;
+
+&lt;h3 id=&quot;collaborative-filtering-from-scratch&quot;&gt;Collaborative filtering from scratch&lt;/h3&gt;
+
+&lt;p&gt;Last time issue: We are overfitting with just small batch&amp;lt;/br&amp;gt;
+Capacity of model, normally reducing the parameter of model ends up very shallow model&lt;/p&gt;
+
+&lt;h4 id=&quot;weight-decay&quot;&gt;Weight decay&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;a= 50&lt;/code&gt; means just small change will give you big results.&lt;/p&gt;
+
+&lt;p&gt;(#f)&lt;/p&gt;
+
+&lt;p&gt;weight decay means adding some valud to the gradients, so that it makes more shallow and less bumpy loss.&lt;/p&gt;
+
+&lt;p&gt;Be cautious, when you do statistical model, they lessen the parameter to evade overfitting but modern machine learning doesn’t do that, and add regularization&lt;/p&gt;
+
+&lt;h4 id=&quot;creating-our-own-embedding-module&quot;&gt;Creating our own Embedding module&lt;/h4&gt;
+
+&lt;p&gt;Embedding is just indexing into an array&lt;/p&gt;
+
+&lt;p&gt;Normally layer is made from inhertancing of module&lt;/p&gt;
+
+&lt;p&gt;when you call torch and make tensor, they doesn’t have parameter, and you should define it using &lt;code class=&quot;highlighter-rouge&quot;&gt;nn.parameter&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;create_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Parameter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DotProductBias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_users&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_movies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_factors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_range&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;5.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user_factors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;create_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n_users&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_factors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user_bias&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;create_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n_users&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;movie_factors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;create_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n_movies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_factors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;movie_bias&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;create_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n_movies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y_range&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_range&lt;/span&gt;
+        
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;forward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user_factors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;movies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;movie_factors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;users&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;movies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user_bias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;movie_bias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmoid_range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y_range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;pytorch has autograd so that we don’t have to calculate gradient manually&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What’s our advantage making our own embedding instead of using pytorch one
+J: no advantage just implementing by yourself and easily learn concept.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;interpreting-embeddings-and-biases&quot;&gt;Interpreting embeddings and biases&lt;/h3&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;movie_bias&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;movie_bias&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;squeeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;idxs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;movie_bias&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argsort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dls&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;classes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'title'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idxs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;meaning of this, not just &lt;em&gt;(#f)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;we can use pca, and filter factors to 3, so we can select some kind of latent factors. &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;using-fastaicollab&quot;&gt;Using fastai.collab&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;collab_learner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_factors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_range&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;5.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit_one_cycle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;5e-3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;you can get similar results using fastai&lt;/p&gt;
+
+&lt;h4 id=&quot;embedding-distance&quot;&gt;Embedding distance&lt;/h4&gt;
+
+&lt;p&gt;Distance between two movies.&lt;/p&gt;
+
+&lt;p&gt;Let’s pick some movie and find distance, form one movie to every other movies.&lt;/p&gt;
+
+&lt;p&gt;(#f)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;(#f) J: visualization part is just what’s going in and..? sound quality is not good&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;boot-strapping-a-collaborative-filtering&quot;&gt;Boot strapping a collaborative filtering&lt;/h3&gt;
+
+&lt;h3 id=&quot;deep-learning-for-collaborative-filtering&quot;&gt;Deep Learning for collaborative filtering&lt;/h3&gt;
+
+&lt;p&gt;the other way to do collab, we can concatenate the embeddings&lt;/p&gt;
+
+&lt;p&gt;(#q) can’t understand&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;get_emb_sz&lt;/code&gt; method, fast.ai will give you the layer’s tensor size&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;collab_learner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;use_nn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_range&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;5.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;layers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit_one_cycle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;5e-3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;if you use params &lt;code class=&quot;highlighter-rouge&quot;&gt;use_nn=True&lt;/code&gt;, you can use concat version of collab&lt;/p&gt;
+
+&lt;h4 id=&quot;sidebar-kwargs-and-delegates&quot;&gt;Sidebar: kwargs and delegates&lt;/h4&gt;
+
+&lt;h4 id=&quot;end-sidebar&quot;&gt;End sidebar&lt;/h4&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;h3 id=&quot;questionnaire&quot;&gt;Questionnaire&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;tabular-modelling&quot;&gt;Tabular modelling&lt;/h2&gt;
+
+&lt;h3 id=&quot;categorical-embeddings&quot;&gt;Categorical embeddings&lt;/h3&gt;
+
+&lt;p&gt;It’s been a not much time that tabular data is used for deep learning model.&lt;/p&gt;
+
+&lt;p&gt;Ex) German regions in embedding, if we draw embedding of the german city, it resembles actual german map&lt;/p&gt;
+
+&lt;p&gt;many kinds of information of the world can be represented using embedding&lt;/p&gt;
+
+&lt;p&gt;This is how google’s recommendation system works.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/google_collab.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;They use collab, which is concatenation of embeddingsgoogoo&lt;/p&gt;
+
+&lt;h3 id=&quot;beyond-deep-learning&quot;&gt;Beyond Deep Learning&lt;/h3&gt;
+
+&lt;p&gt;sometimes the other model, which is not deep learning models(classical model) do better than modern deep learning model&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Ensembles of decision trees (i.e. Random Forests and Gradient Boosting Machines), mainly for structured data (such as you might find in a database table at most companies)&lt;/li&gt;
+  &lt;li&gt;Multi-layered neural networks learnt with SGD (i.e. shallow and/or deep learning), mainly for unstructured data (such as audio, vision, and natural language)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;try 1 first, and after that try 2.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;How the decision tree ensenble works?&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;we usually scikit-learn library.&lt;/p&gt;
+
+&lt;p&gt;Refer &lt;a href=&quot;https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1491957662/ref=asap_bc?ie=UTF8&quot;&gt;this book&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;when you use y_range maximum as 5.5? J: because it uses sigmoid, which can’t reach to the max, min value &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Do you recommend real-time service using decision-tree? for my own experience it was too slow.
+J:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;the-dataset&quot;&gt;The dataset&lt;/h3&gt;
+
+&lt;h4 id=&quot;kaggle-competitions&quot;&gt;kaggle Competitions&lt;/h4&gt;
+
+&lt;h4 id=&quot;look-at-the-data&quot;&gt;Look at the data&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;At this point, a good next step is to handle ordinal columns&lt;/code&gt; and in this case, it is size of the product. we can make it as a categorical variables&lt;/p&gt;
+
+&lt;p&gt;Jeremy read &lt;a href=&quot;https://render.githubusercontent.com/view/ipynb?commit=5b70a64d66d0880977881cc589cebe38812550f8&amp;amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6661737461692f66617374626f6f6b2f356237306136346436366430383830393737383831636335383963656265333838313235353066382f30395f746162756c61722e6970796e62&amp;amp;nwo=fastai%2Ffastbook&amp;amp;path=09_tabular.ipynb&amp;amp;repository_id=243838973&amp;amp;repository_type=Repository#Decision-trees&quot;&gt;this part&lt;/a&gt;, this it when I do review&lt;/p&gt;
+
+&lt;h3 id=&quot;decision-trees&quot;&gt;Decision trees&lt;/h3&gt;
+
+&lt;p&gt;It doesn’t require you special coding skill&lt;/p&gt;
+
+&lt;p&gt;This is some good example of feature engineering&lt;/p&gt;
+
+&lt;h4 id=&quot;handling-dates&quot;&gt;Handling dates&lt;/h4&gt;
+
+&lt;h4 id=&quot;using-tabularpandas-and-tabularproc&quot;&gt;Using TabularPandas and TabularProc&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TabularProc&lt;/code&gt; - Tabular process, which is in-place function.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Categorify&lt;/code&gt; - make column with a numeric value, which is same with we saw at vocab.&lt;/p&gt;
+
+&lt;p&gt;And we should think about valiation, and at this case, making test set as random is not enough. because this is basically related to time.&lt;/p&gt;
+
+&lt;p&gt;See how test set is divided, and we can set the validation set as future time data.&lt;/p&gt;
+
+&lt;h4 id=&quot;creating-the-decision-tree&quot;&gt;Creating the decision tree&lt;/h4&gt;
+
+&lt;p&gt;DecisionTree Regressor, something when we want to predict continuous variable.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Data augmentation for tabular data, do you have idea? J: Not sure, but will think about data semantics
+unordered, and ordered category, does fast.ai distinguish between these? J: yes&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;you can use fastai function when drawing decision tree.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;draw_tree&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;leaves_parallel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;precision&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;look at diagram from top to bottom. it’s the best way.&lt;/p&gt;
+
+&lt;p&gt;basic way to do regression is predict the average.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;leaf-node&lt;/strong&gt;: not further trees when it is &lt;code class=&quot;highlighter-rouge&quot;&gt;False&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;if you want to train further, we can choice leaf-note number bigger&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;m_rmse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;means we made perfect model, but when we check validation model, it’s bigger than 0
+	- one reason is related to leaf-node&lt;/p&gt;
+
+&lt;p&gt;So we made our leaf-note to 25, and our result&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;do random tree (#f) ??&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;categorical-variables&quot;&gt;Categorical variables&lt;/h4&gt;
+
+&lt;p&gt;related to categorical variables, we don’t have to do one-hot encode like using neural net! (we can make it, but there is no evidence it’s better)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What can I do with categorical missing value? J: (#f)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;random-forests&quot;&gt;Random forests&lt;/h3&gt;
+
+&lt;p&gt;(#q could not understand much)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.stat.berkeley.edu/~breiman/bagging.pdf&quot;&gt;bagging predictors&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;: “Bagging predictors is a method for generating multiple versions of a predictor and using these to get an aggregated predictor. The aggregation averages over the versions… The multiple versions are formed by making bootstrap replicates of the learning set and using these as new learning sets. Tests… show that bagging can give substantial gains in accuracy. The vital element is the instability of the prediction method. If perturbing the learning set can cause significant changes in the predictor constructed, then bagging can improve accuracy.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;random subset&lt;/code&gt;, when you average the error, it is zero???&lt;/p&gt;
+
+&lt;p&gt;Also randomly choose the subset of columns&lt;/p&gt;
+
+&lt;h4 id=&quot;creating-a-random-forest&quot;&gt;Creating a random forest&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_estimators&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_samples&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200_000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;max_features&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min_samples_leaf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kwargs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RandomForestRegressor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n_jobs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_estimators&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n_estimators&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;max_samples&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max_samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_features&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max_features&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;min_samples_leaf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min_samples_leaf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oob_score&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;in general, when you increase the &lt;code class=&quot;highlighter-rouge&quot;&gt;n_estimators&lt;/code&gt;, the accuracy enhances more&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r_mse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;preds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;valid_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/error.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;we can set up our own methods, to see what’s going on. you just picked first element of the result, and show them.&lt;/p&gt;
+
+&lt;p&gt;but our evaluation get low. why?&lt;/p&gt;
+
+&lt;h4 id=&quot;out-of-bag-error&quot;&gt;Out-of-bag error&lt;/h4&gt;
+
+&lt;p&gt;it’s not about time set, we don’t need validation set to do it.&lt;/p&gt;
+
+&lt;h3 id=&quot;model-interpretation&quot;&gt;Model interpretation&lt;/h3&gt;
+
+&lt;h4 id=&quot;tree-variance-for-prediction-confidence&quot;&gt;Tree variance for prediction confidence&lt;/h4&gt;
+
+&lt;p&gt;How confident are we in our predictions using a particular row of data?&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;look at the standard deviation of the tree, how much did the tree were varied, and if we were very varied, it means we didn’t confident that much&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;feature-importance&quot;&gt;Feature importance&lt;/h4&gt;
+
+&lt;p&gt;For predicting with a particular row of data, what were the most important factors, and how did they influence that prediction?&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;m.feature_importance&lt;/code&gt; attribute&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;removing-low-importance-variables&quot;&gt;Removing low-importance variables&lt;/h4&gt;
+
+&lt;p&gt;Which columns are the strongest predictors, which can we ignore?&lt;/p&gt;
+
+&lt;p&gt;remove the ignorable tree, and re train, accuracy is about to same, but the number of feature decreased.
+after&lt;/p&gt;
+
+&lt;p&gt;before we had this much features&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/before.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It decreased!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/after.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;removing-redundant-features&quot;&gt;Removing redundant features&lt;/h4&gt;
+
+&lt;p&gt;Which columns are effectively redundant with each other, for purposes of prediction?
+How do predictions vary, as we vary these columns?&lt;/p&gt;
+
+&lt;p&gt;in this way we can get simpler and simpler model, remaining the accuracy&lt;/p&gt;
+
+&lt;h4 id=&quot;partical-dependence&quot;&gt;Partical dependence&lt;/h4&gt;
+
+&lt;p&gt;best way is to draw histogram.&lt;/p&gt;
+
+&lt;p&gt;we can draw depends on each label, and see parti&lt;/p&gt;
+
+&lt;p&gt;what is said, how &lt;code class=&quot;highlighter-rouge&quot;&gt;YearMade&lt;/code&gt; impact sales, if all other valud is equal?&lt;/p&gt;
+
+&lt;p&gt;What might be impact just mitigate specific variable?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/partial.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;is cluster doing something related to hierarchical J: yes&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;How to the feature importance values related to correlation? J: if you used to linear regression (#f) / Larry D. Here is an answer from Fra Pochetti: If 2 features are highly correlated their relative feature importance would be reduced compared to keeping just one of the two. Here why. A random forest selects features randomly at each split (in general). If 2 variables are correlated, they more or less carry the same signal wrt the dependent variable. Hence you can expect a tree to split on either of the 2 evenly. As an end result, your 2 features will have much less importance, just because they are carrying the same information. They hide each other. I generally remove correlated features even if it is not strictly needed, just to be able to uncover these kind of hidden relationships and spot truly important variables.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;data-leakage&quot;&gt;Data leakage&lt;/h4&gt;
+
+&lt;h4 id=&quot;tree-interpreter&quot;&gt;Tree interpreter&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;treeinterpreter&lt;/code&gt; module&lt;/p&gt;
+
+&lt;p&gt;So we take that one row of data, and put it through the first decision tree, looking to see what split is used at each point throughout the tree.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;prediction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contributions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;extrapolation-and-neural-networks&quot;&gt;Extrapolation and neural networks&lt;/h3&gt;
+
+&lt;p&gt;Jeremy usually index using special value ‘None’, not unsqeeze.&lt;/p&gt;
+
+&lt;p&gt;random forest can’t extrapolate out side of train set, what it has seen, and this is big problem&lt;/p&gt;
+
+&lt;h4 id=&quot;finding-out-of-domain-data&quot;&gt;Finding out of domain data&lt;/h4&gt;
+
+&lt;p&gt;concatenating all of the independent variable,&lt;/p&gt;
+
+&lt;p&gt;and ask is this data from training set or validation set?&lt;/p&gt;
+
+&lt;p&gt;difference between valid data and train set,&lt;/p&gt;
+
+&lt;p&gt;and extrapolation will not happen if it’s neural net.&lt;/p&gt;
+
+&lt;h4 id=&quot;using-a-neural-network&quot;&gt;Using a neural network&lt;/h4&gt;
+
+&lt;h4 id=&quot;sidebar-fastais-tabular-classes&quot;&gt;Sidebar: fastai’s Tabular classes&lt;/h4&gt;
+
+&lt;p&gt;In fastai, a tabular model is simply a model which takes columns of continuous or categorical data, and predicts a category (a classification model) or a continuous value (a regression model). Categorical independent variables are passed through an embedding, and concatenated, as we saw in the neural net we used for collaborative filtering, and then continuous variables are concatenated as well.&lt;/p&gt;
+
+&lt;h4 id=&quot;end-sidebar-1&quot;&gt;End sidebar&lt;/h4&gt;
+
+&lt;h4 id=&quot;ensembling&quot;&gt;Ensembling&lt;/h4&gt;
+
+&lt;p&gt;It’s simple we can just do average.&lt;/p&gt;
+
+&lt;h4 id=&quot;boosting&quot;&gt;Boosting&lt;/h4&gt;
+
+&lt;p&gt;another approach when we do ensemble,&lt;/p&gt;
+
+&lt;p&gt;this is pretty sensitive to hyper-parameters&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;with tabular, dropping the feature is better than regularization? J: 
+(#f) J:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;combining-embeddings-with-other-methods&quot;&gt;Combining embeddings with other methods&lt;/h4&gt;
+
+&lt;p&gt;Entity embedding, which is &lt;code class=&quot;highlighter-rouge&quot;&gt;EE&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion-our-advice-for-tabular-modeling&quot;&gt;Conclusion: our advice for tabular modeling&lt;/h3&gt;
+
+&lt;p&gt;slow regarding inference time, because they have to infer at every tree&lt;/p&gt;
+
+&lt;h3 id=&quot;questionnaire-1&quot;&gt;Questionnaire&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Jiwon, here is an answer from Jona R on the forum: Not certain, but I think that “0” was not actually a choice that users could rate. It seemed to me like it was used as a placeholder for “no rating” in some of Jeremy’s models.
+That means that the lowest you would need to predict is “1”, which means that setting range 0 provides sufficient buffer.&lt;/p&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;wasn’t it 3d? how can we draw it using 2d drawing? &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;why it does not use minimum to minus? like [-0.5, 5.5] &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">Note of lesson7 : Deep Learning Part 1 of Spring 2020 at USF</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/wd.png" /></entry><entry><title type="html">fastai 2020 course-v4 Part1, lesson06</title><link href="http://localhost:4000/2020/04/v4-2020-lesson06/" rel="alternate" type="text/html" title="fastai 2020 course-v4 Part1, lesson06" /><published>2020-04-23T00:00:00+09:00</published><updated>2020-04-23T00:00:00+09:00</updated><id>http://localhost:4000/2020/04/v4-2020-lesson06</id><content type="html" xml:base="http://localhost:4000/2020/04/v4-2020-lesson06/">&lt;p&gt;Note of lesson6 : &lt;a href=&quot;https://www.usfca.edu/data-institute/certificates/deep-learning-part-one&quot;&gt;Deep Learning Part 1 of Spring 2020 at USF&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Today we will study&lt;/p&gt;
 &lt;ol&gt;
@@ -630,7 +1100,7 @@ J: yes&lt;/p&gt;
       &lt;li&gt;And that &lt;code class=&quot;highlighter-rouge&quot;&gt;kernel&lt;/code&gt; come to &lt;code class=&quot;highlighter-rouge&quot;&gt;channel&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Conv2d&lt;/strong&gt;: with 3 by 3 kernel, stride 2 conv -&amp;gt; (h/2 * w/2 * kernel)
+  &lt;li&gt;&lt;strong&gt;Stride 2 conv&lt;/strong&gt;: with 3 by 3 kernel, stride 2 conv -&amp;gt; (h/2 * w/2 * kernel) &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
     &lt;ul&gt;
       &lt;li&gt;skip or jump over input pixel&lt;/li&gt;
       &lt;li&gt;to protect from memory out of control&lt;/li&gt;
@@ -645,7 +1115,7 @@ J: yes&lt;/p&gt;
 &lt;p&gt;TODO: understand yourself the blocks of conv-kernel:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Usually use big kernel size at first layer (will study this at part2)&lt;/li&gt;
+  &lt;li&gt;Usually use big kernel size at first layer (will study this at part2) &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
   &lt;li&gt;Bottom&amp;amp;right highlighting kernel, since that parts are positive numbers&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -709,7 +1179,20 @@ J: yes&lt;/p&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;you should print out very often the shape of tensor, and try think why.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><summary type="html">Lesson 06</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/att_00069.png" /></entry><entry><title type="html">[Q&amp;amp;A] Image Segmentation, using Unet with Driving Video data</title><link href="http://localhost:4000/2020/04/qna-image-segmentation/" rel="alternate" type="text/html" title="[Q&amp;A] Image Segmentation, using Unet with Driving Video data" /><published>2020-04-02T00:00:00+09:00</published><updated>2020-04-02T00:00:00+09:00</updated><id>http://localhost:4000/2020/04/qna-image-segmentation</id><content type="html" xml:base="http://localhost:4000/2020/04/qna-image-segmentation/">&lt;p&gt;This post is about my questions while I was studying &lt;a href=&quot;https://www.usfca.edu/data-institute/certificates/deep-learning-part-one&quot;&gt;USF Deep Learning course&lt;/a&gt; about image segmentation task.&lt;br /&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;what is conv1d, conv2d, conv3d? &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;why use comparatively huge kernel at first layer? &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">Lesson 06</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/att_00069.png" /></entry><entry><title type="html">[Q&amp;amp;A] Image Segmentation, using Unet with Driving Video data</title><link href="http://localhost:4000/2020/04/qna-image-segmentation/" rel="alternate" type="text/html" title="[Q&amp;A] Image Segmentation, using Unet with Driving Video data" /><published>2020-04-02T00:00:00+09:00</published><updated>2020-04-02T00:00:00+09:00</updated><id>http://localhost:4000/2020/04/qna-image-segmentation</id><content type="html" xml:base="http://localhost:4000/2020/04/qna-image-segmentation/">&lt;p&gt;This post is about my questions while I was studying &lt;a href=&quot;https://www.usfca.edu/data-institute/certificates/deep-learning-part-one&quot;&gt;USF Deep Learning course&lt;/a&gt; about image segmentation task.&lt;br /&gt;
 All the answers are from the course, source code, library document, or document. &lt;br /&gt;
 I cared about being clear at reporting information including source of information, however if there are still anything unclear, please contact me.&lt;/p&gt;
 
@@ -2554,75 +3037,4 @@ a.k.a&lt;/li&gt;
       &lt;p&gt;&lt;a href=&quot;https://youtu.be/hkBa9pU-H48?t=4937&quot;&gt;stack kernel and make new rank of tensor at output, Lesson06-2019&lt;/a&gt; &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="feature" /><summary type="html">Issues</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn-jiwon.png" /></entry><entry><title type="html">My life in Digital Product School - week 8/9/10</title><link href="http://localhost:4000/2020/02/dps-week8/" rel="alternate" type="text/html" title="My life in Digital Product School - week 8/9/10" /><published>2020-02-24T00:00:00+09:00</published><updated>2020-02-24T00:00:00+09:00</updated><id>http://localhost:4000/2020/02/dps-week8</id><content type="html" xml:base="http://localhost:4000/2020/02/dps-week8/">&lt;p&gt;The 8/9/10th week retropect at Digital Product School&lt;/p&gt;
-
-&lt;p&gt;Week 8 - Ship your MVP&lt;br /&gt;
-Week 9/10 - Release next iteration each day&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/week8/schedule.png&quot; width=&quot;70%&quot; height=&quot;70%&quot; /&gt;
-    &lt;figcaption&gt;Week 8th schedule&lt;/figcaption&gt;    
-&lt;/div&gt;
-
-&lt;h2 class=&quot;no_toc&quot; id=&quot;content&quot;&gt;CONTENT&lt;/h2&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#agile-product-development&quot; id=&quot;markdown-toc-agile-product-development&quot;&gt;Agile Product Development&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#daily-stand-upplanning&quot; id=&quot;markdown-toc-daily-stand-upplanning&quot;&gt;Daily Stand-up(planning)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#gemba-walk&quot; id=&quot;markdown-toc-gemba-walk&quot;&gt;Gemba Walk&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#sprint-reviews&quot; id=&quot;markdown-toc-sprint-reviews&quot;&gt;Sprint Reviews&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#engineering-weekly&quot; id=&quot;markdown-toc-engineering-weekly&quot;&gt;Engineering weekly&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;agile-product-development&quot;&gt;Agile Product Development&lt;/h2&gt;
-&lt;p&gt;One of a priceless lesson I learnt from digital product school, was experience of doing agile work. Before I came here, it was a little bit vague concept. I’m still not sure ‘what is agile’ but this is how we tried to make agile process. &lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;daily-stand-upplanning&quot;&gt;Daily Stand-up(planning)&lt;/h3&gt;
-
-&lt;p&gt;Sharing the works everyday helps interdisciplinary team to work better. Since product started to get higher fidelity, the gap between engineer and non-engineer increased. Actually I didn’t planned to explain concept because I thougth I would be lose my audience when I start to explain. But as daily stand-up, which shares our progess, goes day by day, I planed and reported the issues. And it made each other’s topic feel more &lt;strong&gt;familiar&lt;/strong&gt;. I think point is very important, because at that point people start to be curious. So we can actively ask to the others, and that momwnr, we can explain the point teammate dosen’t know.&lt;/p&gt;
-
-&lt;div style=&quot;text-align:left&quot;&gt;
-    &lt;img src=&quot;/assets/images/week8/daily-standup.JPG&quot; width=&quot;50%&quot; height=&quot;50%&quot; /&gt;
-    &lt;figcaption&gt;Each color means every different section. Red: Our team goal, Blue: Interaction designer, Green: Product manager, Yellow: Software/AI engineer&lt;/figcaption&gt;    
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align:right&quot;&gt;
-    &lt;img src=&quot;/assets/images/week8/daily-standup.png&quot; width=&quot;50%&quot; height=&quot;50%&quot; /&gt;
-    &lt;figcaption&gt;This week engineer's main plan&lt;/figcaption&gt;    
-&lt;/div&gt;
-
-&lt;p&gt;Each of us try to explain what we are doing, but things become easier when we are asked. Because we explained something was important to us before, but if we asked it is something important for the others.&lt;/p&gt;
-
-&lt;h3 id=&quot;gemba-walk&quot;&gt;Gemba Walk&lt;/h3&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/gembawalk.png&quot; width=&quot;50%&quot; height=&quot;50%&quot; /&gt;
-    &lt;figcaption&gt;Team Cero with core team&lt;/figcaption&gt;    
-&lt;/div&gt;
-
-&lt;p&gt;Every 2 weeks, we do the Gemba work, which is ‘question everything to the core team’ time. At this period, people can ask anything related to our product, workshop, and framework. Core team will help just for each team, and each team can solve the problem related to their work. &amp;lt; br/&amp;gt;
-Why we need this session? because with workshop and general schedule, core team has no time just focus on each team. So through this session, we can have opportunity to understand each program and workshop, like why we are using this platform, and when is the due of our small project, and &lt;code class=&quot;highlighter-rouge&quot;&gt;we have this problem and we need help for this&lt;/code&gt;. whatever small problem you have, core team is always willing to help you.&lt;/p&gt;
-
-&lt;h3 id=&quot;sprint-reviews&quot;&gt;Sprint Reviews&lt;/h3&gt;
-
-&lt;p&gt;Every Friday, we have time to summarise what we did for the week. Maybe we need &lt;code class=&quot;highlighter-rouge&quot;&gt;HMW question&lt;/code&gt; and our &lt;code class=&quot;highlighter-rouge&quot;&gt;storymap&lt;/code&gt; to share our process and then tell and share what we did try, what point we succeeded and what point it was deviant of our prediction, and why we tried it..&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/gembawalk.png&quot; width=&quot;50%&quot; height=&quot;50%&quot; /&gt;
-    &lt;figcaption&gt;Sprint of Ve-link&lt;/figcaption&gt;    
-&lt;/div&gt;
-
-&lt;p&gt;And then, just after all team’s ppt, we do vote with such a cute marvel. Always it’s very difficult to vote (of course you can’t vote to your team!) Because it depends on criteria what do I value!&lt;br /&gt;
-But since this is process of our agile work, I try to focus on &lt;code class=&quot;highlighter-rouge&quot;&gt;what they have changed since last week, and why they did it, how they did it&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;engineering-weekly&quot;&gt;Engineering weekly&lt;/h2&gt;
-
-&lt;p&gt;Every engineering weekly we exchange our knowledge each other so that we can grow together. Everyone have their knowledge to share and we can be tutor and at the same time can be of tutee.&lt;/p&gt;
-
-&lt;p&gt;Previously, my AI collegues presented &lt;code class=&quot;highlighter-rouge&quot;&gt;regression&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;knn&lt;/code&gt;. And because I’m somewhat specialized to NLP, I prepared slide that explain about &lt;a href=&quot;https://www.slideshare.net/JiWenKim/pre-trained-language-model&quot;&gt;pre-trained language model&lt;/a&gt;, but my header advised me if I go deep of theoretical things, I would lose my audience. So I decided to brief &lt;a href=&quot;https://www.slideshare.net/JiWenKim/applicable-bert&quot;&gt;BERT mode&lt;/a&gt;, how I can contribute to other team’s project. Since BERT was breakthrough of NLP industry, I tried to explain how it can be applied to hands on product and how it can help people in their product.&lt;/p&gt;
-
-&lt;p&gt;The result was quite motivative to me. They gave feedback that since it wasn’t that much theoretical, they could enjoy it, and useful information. Someone asked me do I had learned of presentation before. I was really happy with their feedback!&lt;/p&gt;</content><author><name>dionne</name></author><summary type="html">The 8/9/10th week retropect at Digital Product School</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/week8/gate.png" /></entry></feed>
+&lt;/div&gt;</content><author><name>dionne</name></author><category term="feature" /><summary type="html">Issues</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn-jiwon.png" /></entry></feed>

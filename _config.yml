@@ -1,11 +1,11 @@
 # Site
-name: 'Mundana'
-description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
-logo: 'assets/images/logo.png'
+name: 'Buytionary'
+description: 'Philippines Largest Online Shopping Database'
+logo: 'assets/images/logo.PNG'
 favicon: 'assets/images/favicon.ico'
-baseurl: '/mundana-theme-jekyll'
+baseurl: '/'
 disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
+email: 'mrgabonijeff@gmail.com'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 include: ["_pages"]
@@ -19,22 +19,22 @@ plugins:
   - jekyll-seo-tag
   
 authors:
-    sal:
-      name:           Sal
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
-      email:          wowthemesnet@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
+    jeff:
+      name:           Jeff
+      site:           http://www.getbuya.club/
+      avatar:         assets/images/avatar1.jpg
+      bio:            "Hi, I am Jeff, Fullstack Web Developer + Coffee Lover!"
+      email:          mrgabonijeff@gmail.com
+      facebook:        https://facebook.com/iamthenewking
 
-    jane:
-      name:           Jane
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar2.jpg
-      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
-      email:          fakemail@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
- 
+    eper:
+      name:           Eper
+      site:           https://www.epergaboni.com
+      avatar:         assets/images/me-2.jpg
+      bio:            "Philippine based web designer & web developer focused on crafting beautiful & user-friendly experiences.
+                        I’ve built roughly 768 user interfaces around the globe. Say hi@epergaboni.com if you need my help. "
+      email:          epergaboni@gmail.com
+      facebook:        https://facebook.com/epergab
 # Defaults
 defaults:
 
@@ -43,8 +43,8 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: sal
-      avatar: /assets/images/avatar1.jpg
+      author: jeff
+      avatar: assets/images/avatar1.jpg
       
   # all pages
   - scope:
@@ -63,3 +63,4 @@ paginate: 10
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
 exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+theme: jekyll-theme-leap-day

@@ -78,8 +78,8 @@ On my way I passed by the Isar river and reached to Marienplatz through Tal str.
 </div>
 <div class="row">
   <div class="column">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/artwork_gallery.jpg" alt="artwork gallery" width="350">
-    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/dancing_figurenes.jpg" alt="dancing figurenes" width="300">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/artwork_gallery.jpg" alt="artwork gallery" width="200">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/dancing_figurenes.jpg" alt="dancing figurenes" width="200">
   </div>
   <div class="column">
   </div>

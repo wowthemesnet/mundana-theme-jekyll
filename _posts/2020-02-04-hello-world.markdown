@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Why I made this blog"
-categories: [ Stories ]
+categories: [ Jekyll ]
 image: assets/images/PostsImages/WhyIMadeThisBlog/demo1.jpg
 author : Noor
 ---

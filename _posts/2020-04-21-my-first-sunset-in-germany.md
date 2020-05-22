@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "My first sunset in Germany and a new year's start"
-categories: [ Resolutions, Career, Travel, Germany  ]
-image: assets/images/PostsImages/MyFirstSunsetInGermany/hofgarten.jpg
+categories: [ Resolutions, Career, Travel, Germany, sticky]
+image: assets/images/PostsImages/MyFirstSunsetInGermany/hofgarten1.jpg
 author : Noor
 ---
 
@@ -112,6 +112,9 @@ On my way I passed by the Isar river and reached to Marienplatz through Tal str.
   </div>
   <div class="column">
     <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/selfie_with_dome.jpg" alt="selfie with hofgarten dome" width="250">
+  </div>
+    <div class="column">
+    <img src="/assets/images/PostsImages/MyFirstSunsetInGermany/hofgarten2.jpg" alt="hofgarten" width="250">
   </div>
 </div>
 

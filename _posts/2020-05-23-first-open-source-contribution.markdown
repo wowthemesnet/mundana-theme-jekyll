@@ -67,6 +67,8 @@ Contributing to OS code is easier than it seemed to me and was really impactful 
 
 4. procrastinating stuff thinking that you're never ready enough for it is a myth. you'll never be ready for anything and the only thing to do is to go for it and learn through it.
 
+5. You'll get some sleepless nights trying to figure out something, it can get a bit frustrating but it's completely rewarding once you're done with it so don't give up on it no matter how intimidating or out of your scope it might seem, anything is solved by googling and reaching out to the community or the maintainers of the code themselves.
+
 for anyone interested in contributing to open source, just pick a language or a project you're passionate about and go find its repo online and read through it and check the issue and just try, you won't lost anything trying, but you;ll definetly learn.
 
 also these are resources that might help kickstarting the journey : 

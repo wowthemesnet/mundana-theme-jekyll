@@ -89,6 +89,8 @@ also these are resources that might help kickstarting the journey :
 
 Thank you for reading through. Tell me about your first open source contribution encounters or if you willing to go for it after reading this. it would defintely make my day.
 
+This is part of a series about open source contribution I'm willing to make to document my journey. Stay tuned.
+
 
 
 

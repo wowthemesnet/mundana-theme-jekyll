@@ -1,4 +1,374 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-29T13:04:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">fastai 2020 course-v4 Part1, lesson07</title><link href="http://localhost:4000/2020/04/v4-2020-lesson07/" rel="alternate" type="text/html" title="fastai 2020 course-v4 Part1, lesson07" /><published>2020-04-29T00:00:00+09:00</published><updated>2020-04-29T00:00:00+09:00</updated><id>http://localhost:4000/2020/04/v4-2020-lesson07</id><content type="html" xml:base="http://localhost:4000/2020/04/v4-2020-lesson07/">&lt;p&gt;Note of lesson7 : &lt;a href=&quot;https://www.usfca.edu/data-institute/certificates/deep-learning-part-one&quot;&gt;Deep Learning Part 1 of Spring 2020 at USF&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-21T19:20:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">Training Neural Machine Translation with PyTorch</title><link href="http://localhost:4000/2020/05/research-nmt-genderbias/" rel="alternate" type="text/html" title="Training  Neural Machine Translation with PyTorch" /><published>2020-05-19T00:00:00+09:00</published><updated>2020-05-19T00:00:00+09:00</updated><id>http://localhost:4000/2020/05/research-nmt-genderbias</id><content type="html" xml:base="http://localhost:4000/2020/05/research-nmt-genderbias/">&lt;p&gt;● This document is on editting&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;issue-1-understanding-gpu-memory-usage&quot;&gt;Issue 1. understanding GPU memory usage&lt;/h3&gt;
+
+&lt;p&gt;I’m stuck with this error while &lt;code class=&quot;highlighter-rouge&quot;&gt;finding learning rate&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;RuntimeError: CUDA out of memory. Tried to allocate 10.33 GiB (GPU 0; 15.90 GiB total capacity; 1.56 GiB already allocated; 3.72 GiB free; 11.48 GiB reserved in total by PyTorch)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;What I’m reading recently to get a solution&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fastai Forums - NVIDIA context, pytorch memory allocator and caching, memory leaks, memory re-use and reclaim.&lt;/li&gt;
+  &lt;li&gt;Pytorch Forums - &lt;a href=&quot;https://discuss.pytorch.org/t/high-gpu-memory-usage-problem/34694&quot;&gt;Understanding GPU memory allocation according to training process&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;issue-2-understanding-dataloader-data-loaders-databunch-dataset&quot;&gt;Issue 2. Understanding &lt;code class=&quot;highlighter-rouge&quot;&gt;Dataloader&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Data loader's'&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Databunch&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Dataset&lt;/code&gt;&lt;/h3&gt;</content><author><name>dionne</name></author><category term="bias" /><category term="NMT" /><summary type="html">● This document is on editting</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/att_00069.png" /></entry><entry><title type="html">fastai 2019 course-v3 Part1, lesson07</title><link href="http://localhost:4000/2020/04/v3-2019-lesson07-note/" rel="alternate" type="text/html" title="fastai 2019 course-v3 Part1, lesson07" /><published>2020-04-29T00:00:00+09:00</published><updated>2020-04-29T00:00:00+09:00</updated><id>http://localhost:4000/2020/04/v3-2019-lesson07-note</id><content type="html" xml:base="http://localhost:4000/2020/04/v3-2019-lesson07-note/">&lt;p&gt;Note of lesson7 : Deep Learning Part 1 of Spring 2019 at USF, version 3 course&lt;/p&gt;
+
+&lt;p&gt;Today we will study lots of things so don’t be frustrated.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;ResNets&lt;/li&gt;
+  &lt;li&gt;Unets&lt;/li&gt;
+  &lt;li&gt;GANs&lt;/li&gt;
+  &lt;li&gt;RNNs&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h2&gt;
+
+&lt;p&gt;@reshama at fastai forum, who deployed app using fastai both of ios and android version.&lt;/p&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#lesson7-resnet-mnistipynb&quot; id=&quot;markdown-toc-lesson7-resnet-mnistipynb&quot;&gt;lesson7-resnet-mnist.ipynb&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#basic-cnn-with-batchnorm&quot; id=&quot;markdown-toc-basic-cnn-with-batchnorm&quot;&gt;Basic CNN with batchnorm&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#refactor&quot; id=&quot;markdown-toc-refactor&quot;&gt;Refactor&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#resnet-ish&quot; id=&quot;markdown-toc-resnet-ish&quot;&gt;Resnet-ish&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#lesson3-camvidipynb&quot; id=&quot;markdown-toc-lesson3-camvidipynb&quot;&gt;lesson3-camvid.ipynb&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#lesson7-suprres-gan&quot; id=&quot;markdown-toc-lesson7-suprres-gan&quot;&gt;lesson7-suprres-gan&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#crappified-data&quot; id=&quot;markdown-toc-crappified-data&quot;&gt;Crappified data&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#gans&quot; id=&quot;markdown-toc-gans&quot;&gt;GANs&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#save-generated-images&quot; id=&quot;markdown-toc-save-generated-images&quot;&gt;Save generated images&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#lesson7-wgan&quot; id=&quot;markdown-toc-lesson7-wgan&quot;&gt;lesson7-wgan&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#lesson7-superres&quot; id=&quot;markdown-toc-lesson7-superres&quot;&gt;lesson7-superres&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#rnns&quot; id=&quot;markdown-toc-rnns&quot;&gt;RNNs&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#maintain-state&quot; id=&quot;markdown-toc-maintain-state&quot;&gt;maintain state&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#nnrnn&quot; id=&quot;markdown-toc-nnrnn&quot;&gt;nn.RNN&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#2-layer-gru&quot; id=&quot;markdown-toc-2-layer-gru&quot;&gt;2-layer GRU&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(#f) what do learn&lt;/p&gt;
+
+&lt;h2 id=&quot;lesson7-resnet-mnistipynb&quot;&gt;&lt;a href=&quot;https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson7-resnet-mnist.ipynb&quot;&gt;lesson7-resnet-mnist.ipynb&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;data block API&lt;/p&gt;
+
+&lt;p&gt;pillow’s convert mode &lt;code class=&quot;highlighter-rouge&quot;&gt;L&lt;/code&gt;, which is grey scale&lt;/p&gt;
+
+&lt;p&gt;items attribute is kind of the thing we get from data&lt;/p&gt;
+
+&lt;p&gt;binary color map, refer to matplotlib for more info&lt;/p&gt;
+
+&lt;p&gt;remember that pytorch put channel first&lt;/p&gt;
+
+&lt;p&gt;you have to say how to split (when using fastai lib)&lt;/p&gt;
+
+&lt;p&gt;validation is (of course) has labels&lt;/p&gt;
+
+&lt;p&gt;1) have itemlist 2) split it 3) label it&lt;/p&gt;
+
+&lt;p&gt;y are category object for now mnist&lt;/p&gt;
+
+&lt;p&gt;transforms&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;kind of digit, you don’t want to rotate or flip since it will change the digit’s meaning&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So Jeremy added random crop and added padding&lt;/p&gt;
+
+&lt;p&gt;[]: empty is transforms for validation set, no need for transform for validation set.&lt;/p&gt;
+
+&lt;p&gt;we don’t use pre-trained model, so we don’t need image net stats. (#f)&lt;/p&gt;
+
+&lt;p&gt;plot_multi can show you results of calling some function, which grab the dataset, how many transformed version we create?: infinite, each time we call it, we grab the new transformed dataset.&lt;/p&gt;
+
+&lt;p&gt;(batch_size, channel, row, col)&lt;/p&gt;
+
+&lt;h3 id=&quot;basic-cnn-with-batchnorm&quot;&gt;Basic CNN with batchnorm&lt;/h3&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;nn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Conv2d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ni&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kernel_size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stride&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;how many channels you want? -&amp;gt; as much as you want&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(#f)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;(1,8) -&amp;gt; one channel coming in,  &lt;code class=&quot;highlighter-rouge&quot;&gt;8&lt;/code&gt;: how many filters you want to come out&lt;/p&gt;
+
+&lt;p&gt;conv(ni, nf) &amp;lt;- ni, nf is input / output channel&lt;/p&gt;
+
+&lt;p&gt;so as a result, 10 by 1 by 1 (which means grid size is 1)&lt;/p&gt;
+
+&lt;p&gt;careful of the comment, which represents grid size&lt;/p&gt;
+
+&lt;p&gt;it decreases by half since &lt;code class=&quot;highlighter-rouge&quot;&gt;stride = 2&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;refactor&quot;&gt;Refactor&lt;/h3&gt;
+
+&lt;p&gt;exactly the same neural net.&lt;/p&gt;
+
+&lt;p&gt;how can we improve this?&lt;/p&gt;
+
+&lt;h3 id=&quot;resnet-ish&quot;&gt;Resnet-ish&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1512.03385&quot;&gt;Deep Residual Learning for Image Recognition&lt;/a&gt; - skip connection, identity, res block&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Motivation of the paper: 56 layer is way more worse than the 20-layer(shallow) network.&lt;/li&gt;
+  &lt;li&gt;Idea: keep the 56 layers but make results identical with shallow version&lt;/li&gt;
+  &lt;li&gt;How: &lt;code class=&quot;highlighter-rouge&quot;&gt;a building block&lt;/code&gt;, every two convolutions, add the results together with input&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;and this became legendary architecture&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1712.09913&quot;&gt;Visualising the Loss Landscape of Neural Nets&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;x, y - weight space, y - loss&lt;/li&gt;
+  &lt;li&gt;without identity connection, it’s very bumpy and with res connection, and this is little bit similar with batch norm.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;except the last one, jeremy added res block without last layer.&lt;/p&gt;
+
+&lt;p&gt;don’t forget to refactor your code&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.9954&lt;/code&gt;, and NIPS 2015 the best paper was 0.45% error - sota changes so fast&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MergeLayer&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;SequentialEx : Sequential extended (#f)&lt;/p&gt;
+
+&lt;p&gt;and real code, we don’t add, but &lt;code class=&quot;highlighter-rouge&quot;&gt;concat&lt;/code&gt;.  and this is &lt;strong&gt;dense net&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;memory intensive because how deep you go in, you have original data, but very little parameter (#q) (#f)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;really work well for segmentation&lt;/p&gt;
+
+&lt;p&gt;(#f) re-building the modern architecture, and he keep trying to show …..(#f)&lt;/p&gt;
+
+&lt;h2 id=&quot;lesson3-camvidipynb&quot;&gt;&lt;a href=&quot;https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson3-camvid-tiramisu.ipynb&quot;&gt;lesson3-camvid.ipynb&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;in order to color cluster, it has to know what that it is&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1603.07285&quot;&gt;A guide to convolution arithmetic for deep learning&lt;/a&gt; - great picture show what does 3 by 3 half stride conv looks like.&lt;/p&gt;
+
+&lt;p&gt;U-net, down sampling path. size keep decreasing, channels keep increasing. And at last the grid size came back to same.&lt;/p&gt;
+
+&lt;p&gt;Then, how do we double the grid size?&lt;/p&gt;
+
+&lt;p&gt;stride - half convolution -&amp;gt; transposed convolution, deconvolution,&lt;/p&gt;
+
+&lt;p&gt;and this is maybe 1, 2 years ago.
+why?&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;nearly all of the pixel is zero&lt;/li&gt;
+  &lt;li&gt;different amount of information to the different convolution path (see the paper, and understand myself)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution:&lt;/strong&gt; (1) Nearest neighbour interpolation&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;just copy twice, no zero, no computation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(2) bilinear interpolation - weighted average (this is pretty standard with picture)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;/assets/images/lesson03-1.png&quot; /&gt; - kind of skip connection but not added to the every 2 conv block, but to the same stage of the downsampling to the same stage of the upsampling&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;see the code how fastai implemented this&lt;/p&gt;
+
+&lt;p&gt;encoder refers to the downsampling part, which is substituted with resnet&lt;/p&gt;
+
+&lt;p&gt;unet_block is connection between the up-sampling and down-sampling&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class UnetBlock
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;they grab the hook, to use resnet, and &lt;code class=&quot;highlighter-rouge&quot;&gt;up_out&lt;/code&gt; using up-sampling&lt;/p&gt;
+
+&lt;p&gt;each time you see two convolutions like &lt;code class=&quot;highlighter-rouge&quot;&gt;conv2(conv1())&lt;/code&gt;, you can think of what if I add the res block? probably you would get a better results.&lt;/p&gt;
+
+&lt;p&gt;identity connection is done with 1) add 2) concat&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Q. why call concat before conv1, conv2 and not after? (#q - see the code) /  J: there’s no way to interact with channel (???) remember if you do 2 conv, it’s actually 3d, (#f)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Q. size of image feature layer changes, how does dense net work since it concatenate. / J: ?? (#f) 53:00:00&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;lesson7-suprres-gan&quot;&gt;&lt;a href=&quot;https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson7-superres-gan.ipynb&quot;&gt;lesson7-suprres-gan&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;will use to another task, &lt;em&gt;image restoration&lt;/em&gt;, which starts from the image but will make &lt;em&gt;better&lt;/em&gt; image, like black-white to color, resolution, .. (#f)&lt;/p&gt;
+
+&lt;h3 id=&quot;crappified-data&quot;&gt;Crappified data&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;paraLLeL(crappify, il.items)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;fastai’s function which does crappification(it takes time quite much)&lt;/p&gt;
+
+&lt;p&gt;we gonna use, pre-trained model, since we added some noise and we have to catch what original picture was., which is watermark removal&lt;/p&gt;
+
+&lt;p&gt;use MESLoss, and it normally expects two vectors, which can compare so we flat version.&lt;/p&gt;
+
+&lt;p&gt;pre-trained part of unet is down-sampling part.&lt;/p&gt;
+
+&lt;h3 id=&quot;gans&quot;&gt;GANs&lt;/h3&gt;
+
+&lt;p&gt;Motivation of GAN: Our loss function doesn’t represent what we want.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;we are missing the texture of pillow, blanket&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;-&amp;gt; the emergent of GAN.
+it uses another models(&lt;strong&gt;Critic, discriminator&lt;/strong&gt;) for loss function&lt;/p&gt;
+
+&lt;p&gt;t = 3761 » Jeremy explaination of GAN&lt;/p&gt;
+
+&lt;p&gt;cons: if you don’t have pre-trained Critic/Generator, it’s kind of blind vs blind&lt;/p&gt;
+
+&lt;h3 id=&quot;save-generated-images&quot;&gt;Save generated images&lt;/h3&gt;
+
+&lt;p&gt;let’s create Critics&lt;/p&gt;
+
+&lt;p&gt;(#q) reconstruct = True&lt;/p&gt;
+
+&lt;p&gt;we will learn more of what’s going on inside at part2&lt;/p&gt;
+
+&lt;p&gt;if you don’t want to re-initiate the gpu ram, you can gc.collect() which will remove caching gpu.&lt;/p&gt;
+
+&lt;p&gt;we will use Binary Cross Entropy but will not use resnot&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Because of weight could be increased much that we can’t handle that, but will learn at part2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;we should be careful when using gan, loss which uses adaptive loss&lt;/p&gt;
+
+&lt;p&gt;we not only use the critic to loss function, but also MSE loss because if we use only the Critics as loss function, generator could make irrelevant photo of the original image.&lt;/p&gt;
+
+&lt;p&gt;GANs hates momentum. - but nobody figured it out.&lt;/p&gt;
+
+&lt;p&gt;tough things of training gan - loss number is meaningless. / so you have to see the results from time to time&lt;/p&gt;
+
+&lt;p&gt;(original craffied picture / generated picture / original picture)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Q. What kind of task you will not use U-net? / J: Unet is used when size of output is aligned to the input. so any kind of generative modelling and segmentation is also generative modelling because we should out pixel segments which is responding to original pixel. and it would be absurd if we use unet to the classification, because we just need the down-sampling process.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;lesson7-wgan&quot;&gt;&lt;a href=&quot;https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson7-wgan.ipynb&quot;&gt;lesson7-wgan&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;(skipped so fast…)&lt;/p&gt;
+
+&lt;p&gt;interesting because we use bedrooms dataset&lt;/p&gt;
+
+&lt;p&gt;the approach that we use is ‘can we create a bedroom?’&lt;/p&gt;
+
+&lt;p&gt;we feed the generator &lt;strong&gt;random noise&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;and generator should return the de-noised bedroom.&lt;/p&gt;
+
+&lt;h2 id=&quot;lesson7-superres&quot;&gt;&lt;a href=&quot;https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson7-superres-gan.ipynb&quot;&gt;lesson7-superres&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1603.08155&quot;&gt;Perceptual Losses for Real-Time Style Transfer and Super-Resolution&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;doesn’t like the term ‘perceptual’ - jeremy prefers to say it is feature losses&lt;/p&gt;
+
+&lt;p&gt;down-sampling part is called encoder, and vice versa&lt;/p&gt;
+
+&lt;p&gt;same color represents same grid size&lt;/p&gt;
+
+&lt;p&gt;(#f) explained idea but could not get. - &lt;em&gt;t=5022&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;pick the l1 loss or mse ( no matter)&lt;/p&gt;
+
+&lt;p&gt;grad is false since we will use only the loss&lt;/p&gt;
+
+&lt;p&gt;class featureloss is the implementation of the paper&lt;/p&gt;
+
+&lt;p&gt;(abandoned to write -&amp;gt; too hard…. and too fast)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;upsize medium res data, and you can see the pixels enlarged focus.&lt;/p&gt;
+
+&lt;p&gt;results is quite good&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jantic/DeOldify&quot;&gt;DeOldify&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;the student of fast.ai, made colored picture who had the fast.ai course.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(#f) and also said lots of idea related to this. we can new way of Crappification.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Q. how about using unet or gan to nlp, kind of generating shakespear’s novel. / J: possible, and it’s quite blue ocean, and will look thorough little bit at part2&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Be sure not to understand at once, go through this at least 3 times or more&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;rnns&quot;&gt;&lt;a href=&quot;https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson7-human-numbers.ipynb&quot;&gt;RNNs&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;square - input / arrow - layer / circle - activation / triangle - output&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;go to the learn.summary and see the specifics&lt;/p&gt;
+
+&lt;p&gt;we will do mat mul and non-linearity one(or more) more, but (??) will use same weight.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bptt&lt;/code&gt; - back prop through time&lt;/p&gt;
+
+&lt;p&gt;13017 / 70 / bs - all dataset divide first  by batch size, and after that, divide by length limit (but why??????)&lt;/p&gt;
+
+&lt;p&gt;every mini-batch joins up with previous mini-batch (that’s why he showed textify)&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;how we convert the diagram to the code&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;rnn is just a refactoring, there’s nothing new.&lt;/p&gt;
+
+&lt;p&gt;-&amp;gt; but only just predicting last word is wasteful, so we will predict every word, which means just triangle comes inside the model.&lt;/p&gt;
+
+&lt;h3 id=&quot;maintain-state&quot;&gt;maintain state&lt;/h3&gt;
+
+&lt;p&gt;Let’s keep the hidden state.&lt;/p&gt;
+
+&lt;p&gt;(rnn is totally normal nn but just refactored)&lt;/p&gt;
+
+&lt;h3 id=&quot;nnrnn&quot;&gt;nn.RNN&lt;/h3&gt;
+
+&lt;p&gt;this time we will render the output the other loop, which is &lt;code class=&quot;highlighter-rouge&quot;&gt;nn.RNN&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;bptt 20 means 20 layers of the diagram.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-layer-gru&quot;&gt;2-layer GRU&lt;/h3&gt;
+
+&lt;p&gt;there are small nn which decide how much apply the nodes.&lt;/p&gt;
+
+&lt;p&gt;GRU/lstm is depended on specifics&lt;/p&gt;</content><author><name>dionne</name></author><summary type="html">Note of lesson7 : Deep Learning Part 1 of Spring 2019 at USF, version 3 course</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/gan.jpeg" /></entry><entry><title type="html">fastai 2020 course-v4 Part1, lesson07</title><link href="http://localhost:4000/2020/04/v4-2020-lesson07/" rel="alternate" type="text/html" title="fastai 2020 course-v4 Part1, lesson07" /><published>2020-04-29T00:00:00+09:00</published><updated>2020-04-29T00:00:00+09:00</updated><id>http://localhost:4000/2020/04/v4-2020-lesson07</id><content type="html" xml:base="http://localhost:4000/2020/04/v4-2020-lesson07/">&lt;p&gt;Note of lesson7 : &lt;a href=&quot;https://www.usfca.edu/data-institute/certificates/deep-learning-part-one&quot;&gt;Deep Learning Part 1 of Spring 2020 at USF&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Today we will study&lt;/p&gt;
 &lt;ol&gt;
@@ -964,6 +1334,8 @@ J: yes&lt;/p&gt;
   &lt;/ol&gt;
 &lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">Note of lesson6 : Deep Learning Part 1 of Spring 2020 at USF</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/lesson6-v4.png" /></entry><entry><title type="html">fastai 2019 course-v3 Part1, lesson06</title><link href="http://localhost:4000/2020/04/v3-2019-lesson06-note/" rel="alternate" type="text/html" title="fastai 2019 course-v3 Part1, lesson06" /><published>2020-04-15T00:00:00+09:00</published><updated>2020-04-15T00:00:00+09:00</updated><id>http://localhost:4000/2020/04/v3-2019-lesson06-note</id><content type="html" xml:base="http://localhost:4000/2020/04/v3-2019-lesson06-note/">&lt;h1 id=&quot;lesson-06&quot;&gt;Lesson 06&lt;/h1&gt;
 
+&lt;p&gt;Will find official notes &lt;a href=&quot;https://github.com/fastai/course-v3/blob/master/files/dl-2019/notes/notes-1-6.md&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;rossmanntabular&quot;&gt;Rossmann(Tabular)&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -1008,7 +1380,7 @@ J: yes&lt;/p&gt;
     &lt;ul&gt;
       &lt;li&gt;Let $$ \hat{y}  = f(w_1, w_2, w_3, … , x) $$ ,  loss = MSE , Then &lt;code class=&quot;highlighter-rouge&quot;&gt;y_range&lt;/code&gt; should be between 1 and 5&lt;/li&gt;
       &lt;li&gt;And Activation function ends with &lt;code class=&quot;highlighter-rouge&quot;&gt;-1 -&amp;gt; +1&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;To mitigate this problem, we can add the other parameter, like $$w_n$$&lt;/li&gt;
+      &lt;li&gt;To mitigate this problem, we can add another parameter, like $$w_n$$&lt;/li&gt;
       &lt;li&gt;But there’re so much interactions in the process so just re-scale the output.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -1183,6 +1555,16 @@ J: yes&lt;/p&gt;
 
 &lt;hr /&gt;
 
+&lt;p&gt;(personal) Further research&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Yes, as notes of official course, the ConvNN have become more and more important for other ML model but computer vision. (see &lt;a href=&quot;https://arxiv.org/pdf/1807.06521.pdf&quot;&gt;Convolutional Block Attention Module&lt;/a&gt; relationship paper) and nlp is much more fall behind of computer vision at modern deep learning research, less augmentation method, resource optimization, performance(even not comparable, they both has standard task), … &lt;strong&gt;SO&lt;/strong&gt; How about enhance nlp model using this (kind of) relationship? &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Footnote&lt;/p&gt;
+
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
@@ -1190,6 +1572,9 @@ J: yes&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
       &lt;p&gt;why use comparatively huge kernel at first layer? &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;Actually already going on similarly [] &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">Lesson 06</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/att_00069.png" /></entry><entry><title type="html">[Q&amp;amp;A] Image Segmentation, using Unet with Driving Video data</title><link href="http://localhost:4000/2020/04/qna-image-segmentation/" rel="alternate" type="text/html" title="[Q&amp;A] Image Segmentation, using Unet with Driving Video data" /><published>2020-04-02T00:00:00+09:00</published><updated>2020-04-02T00:00:00+09:00</updated><id>http://localhost:4000/2020/04/qna-image-segmentation</id><content type="html" xml:base="http://localhost:4000/2020/04/qna-image-segmentation/">&lt;p&gt;This post is about my questions while I was studying &lt;a href=&quot;https://www.usfca.edu/data-institute/certificates/deep-learning-part-one&quot;&gt;USF Deep Learning course&lt;/a&gt; about image segmentation task.&lt;br /&gt;
@@ -2685,356 +3070,4 @@ a.k.a&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docs.scipy.org/doc/numpy/reference/generated/numpy.einsum.html&quot;&gt;np.einsum Review&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;h&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/30.png" /></entry><entry><title type="html">What is the meaning of ‘deep-learning from foundations?’</title><link href="http://localhost:4000/2020/02/note08-fastai-1/" rel="alternate" type="text/html" title="What is the meaning of 'deep-learning from foundations?'" /><published>2020-02-29T00:00:00+09:00</published><updated>2020-02-29T00:00:00+09:00</updated><id>http://localhost:4000/2020/02/note08-fastai-1</id><content type="html" xml:base="http://localhost:4000/2020/02/note08-fastai-1/">&lt;p&gt;This note is divided into 4 section.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Section1: &lt;a href=&quot;https://spellonyou.github.io/2020/02/note08-fastai-1/&quot;&gt;What is the meaning of ‘deep-learning from foundations?’&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Section2: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-2/&quot;&gt;What’s inside Pytorch Operator?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Section3: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-3/&quot;&gt;Implement forward&amp;amp;backward pass from scratch&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Section4: &lt;a href=&quot;https://spellonyou.github.io/2020/03/note08-fastai-4/&quot;&gt;Gradient backward, Chain Rule, Refactoring&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;” Lecture 08 - Deep Learning From Foundations-part2 “&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;em&gt;I don’t know if you read this article, but I heartily appreciate Rachael Thomas and Jeremy Howard for providing these priceless lectures for free&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 class=&quot;no_toc&quot; id=&quot;homework&quot;&gt;Homework&lt;/h3&gt;
-
-&lt;ul style=&quot;color:grey; font-size: 90%;&quot;&gt;
-  &lt;li&gt;Review concepts 16 concepts from Course 1 (lessons 1 - 7)
-(1) Affine Functions &amp;amp; non-linearities; 2) Parameters &amp;amp; activations; 3) Random initialization &amp;amp; transfer learning; 4) SGD, Momentum, Adam; 5) Convolutions; Batch-norm; 6) Dropout; 7) Data augmentation; 8) Weight decay; 9) Res/dense blocks; 10) Image classification and regression; 11)Embeddings; 12) Continuous &amp;amp; Categorical variables; 13) Collaborative filtering; 14) Language models; 15) NLP classification; 16) Segmentation; U-net; GANS)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Make sure you understand broadcasting&lt;/li&gt;
-  &lt;li&gt;Read section 2.2 in &lt;a href=&quot;https://arxiv.org/abs/1502.01852&quot;&gt;Delving Deep into Rectifiers&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Try to replicate as much of the notebooks as you can without peeking; when you get stuck, peek at the lesson notebook, but then close it and try to do it yourself&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://explained.ai/matrix-calculus/index.html&quot;&gt;calculus for machine learning&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;based on weight…&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://rockt.github.io/2018/04/30/einsum&quot;&gt;einsum convention&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;CONTENTS&lt;/h3&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#what-is-going-on-in-this-course&quot; id=&quot;markdown-toc-what-is-going-on-in-this-course&quot;&gt;What is going on in this course?&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#what-is-from-foundations&quot; id=&quot;markdown-toc-what-is-from-foundations&quot;&gt;What is &lt;em&gt;‘from foundations’&lt;/em&gt;?&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#steps-to-a-basic-modern-cnn-model&quot; id=&quot;markdown-toc-steps-to-a-basic-modern-cnn-model&quot;&gt;Steps to a basic modern CNN model&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#todays-implementation-goal-1-matmul---4-fc-backward&quot; id=&quot;markdown-toc-todays-implementation-goal-1-matmul---4-fc-backward&quot;&gt;Today’s implementation goal: 1) matmul -&amp;gt; 4) FC backward&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#library-development-using-jupyter-notebook&quot; id=&quot;markdown-toc-library-development-using-jupyter-notebook&quot;&gt;Library development using jupyter notebook&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#jupyter-notebook-certainly-can-make-module&quot; id=&quot;markdown-toc-jupyter-notebook-certainly-can-make-module&quot;&gt;jupyter notebook certainly can make module&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#elementwise-ops&quot; id=&quot;markdown-toc-elementwise-ops&quot;&gt;Elementwise ops&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#how-can-we-make-python-faster&quot; id=&quot;markdown-toc-how-can-we-make-python-faster&quot;&gt;How can we make python faster?&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#what-is-element-wise-operation&quot; id=&quot;markdown-toc-what-is-element-wise-operation&quot;&gt;What is element wise operation?&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#footnote&quot; id=&quot;markdown-toc-footnote&quot;&gt;Footnote&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;what-is-going-on-in-this-course&quot;&gt;What is going on in this course?&lt;/h2&gt;
-
-&lt;h3 id=&quot;what-is-from-foundations&quot;&gt;What is &lt;em&gt;‘from foundations’&lt;/em&gt;?&lt;/h3&gt;
-
-&lt;p&gt;1) Recreate fast.ai and Pytorch&lt;/p&gt;
-
-&lt;p&gt;2) using pure python
-&lt;br /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Evade Overfitting&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Overfit : validation error getting worse
-&lt;del&gt;training loss &amp;lt; validation loss&lt;/del&gt;
-&lt;br /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Know the name of the symbol you use&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;find in this page if you don’t know the symbol that you are using&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_mathematical_symbols&quot;&gt;&lt;/a&gt; or just draw it &lt;a href=&quot;http://detexify.kirelabs.org/classify.html&quot;&gt;here&lt;/a&gt; (run by ML!)&lt;/p&gt;
-
-&lt;h3 id=&quot;steps-to-a-basic-modern-cnn-model&quot;&gt;Steps to a basic modern CNN model&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;1) Matrix multiplication -&amp;gt; 2) Relu/Initialization -&amp;gt; 3) Fully-connected Forward
--&amp;gt; 4) Fully-connected Backward -&amp;gt; 5) Train loop -&amp;gt; 6) Convolution-&amp;gt; 7) Optimization -&amp;gt;
-8) Batchnormalization -&amp;gt; 9) Resnet&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;todays-implementation-goal-1-matmul---4-fc-backward&quot;&gt;Today’s implementation goal: 1) matmul -&amp;gt; 4) FC backward&lt;/h3&gt;
-
-&lt;h2 id=&quot;library-development-using-jupyter-notebook&quot;&gt;Library development using jupyter notebook&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://dbader.org/blog/python-assert-tutorial&quot;&gt;what is assers?&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;jupyter-notebook-certainly-can-make-module&quot;&gt;jupyter notebook certainly can make module&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;There will be &lt;em&gt;#export&lt;/em&gt; tag that Howard (and we) want to extract&lt;/li&gt;
-  &lt;li&gt;special &lt;em&gt;notebook2script.py&lt;/em&gt; will detect sign of &lt;em&gt;#expert&lt;/em&gt; and convert following into python module
-&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;and test it&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code&gt;test\_eq(TEST,'test')&lt;br /&gt;test\_eq(TEST,'test1')&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;what is &lt;strong&gt;run_notebook.py&lt;/strong&gt;?
-    &lt;ul&gt;
-      &lt;li&gt;when you want to test your module in command line interface&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code&gt;		!python run\_notebook.py 01_matmul.ipynb&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Is there any difference between 1) and 2)?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;1) test -&amp;gt; test01 
-2) test01 -&amp;gt; test&lt;/p&gt;
-
-&lt;p&gt;#TODO I don’t know yet&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;look into &lt;em&gt;run_notebook.py&lt;/em&gt;, package &lt;strong&gt;fire&lt;/strong&gt; Jeremy used. What is that?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;read and run the code in a notebook, and in the process, Jeremy made &lt;a href=&quot;https://opensource.googleblog.com/2017/03/python-fire-command-line.html&quot;&gt;Python Fire&lt;/a&gt; library called!shockingly, fire takes any kind of function and converts into CLI command.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;fire library was released by Google open source, Thursday, March 2, 2017&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Get data&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;pytorch and numpy are pretty much same.&lt;/li&gt;
-  &lt;li&gt;variable c explains how many pixels there are in in MNIST, 28 pixels&lt;/li&gt;
-  &lt;li&gt;PyTorch’s &lt;em&gt;view()&lt;/em&gt; method: torch function that manipulating tensor, and squeeze() in torch &amp;amp; mathmatical operation similar function&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.oreilly.com/library/view/natural-language-processing/9781491978221/&quot;&gt;Rao &amp;amp; McMahan&lt;/a&gt; said usually this functions result in feature vector.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;In part 1, you can use view function several times.
-&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Initial python model&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Which is Linear, like $Xw$(weight)$+a$(bias) $= Y$&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;If you don’t know hou to multiple matrix, refer this site &lt;a href=&quot;http://matrixmultiplication.xyz&quot;&gt;matmul visulization site&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;How many time spends if we we use pure python&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;function &lt;span style=&quot;color:blue&quot;&gt;matmul&lt;/span&gt;, typical matrix multiplication function, takes about 1 second for calculating 1 single train data! (maybe assumed stochastic, 5 data points in validation)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;it takes about 11.36 hours to update parameters even single layer and 1 iteration! (if that was my computer, it would be 14 hours..)🤪&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;THIS is why we need to consider ‘time’&amp;amp;’space’&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This is kinda slow - what if we could speed it up by 50,000 times? Let’s try!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;elementwise-ops&quot;&gt;Elementwise ops&lt;/h2&gt;
-
-&lt;h3 id=&quot;how-can-we-make-python-faster&quot;&gt;How can we make python faster?&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;If we want to calculate faster, then do remove pythonic calcuation, by passing its computation down to something that is written something other than python, like pytorch.&lt;/li&gt;
-  &lt;li&gt;According to PyTorch &lt;a href=&quot;https://pytorch.org/cppdocs/#aten&quot;&gt;doc&lt;/a&gt; it  uses C++ (via ATen), so we are going to implement that function with python.
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;what-is-element-wise-operation&quot;&gt;What is element wise operation?&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;items makes a pair, operate corresponding component
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;footnote&quot;&gt;Footnote&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/fastai/course-v3/blob/master/nbs/dl2/01_matmul.ipynb&quot;&gt;notebooks&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://drive.google.com/file/d/18QwDI25Lf0ld0-cEugu7LxjwTc2NRkha/view&quot;&gt;material&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://course.fast.ai/videos/?lesson=8&quot;&gt;video&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1bIPBcf-p9iqNG8BGmIVlJCFa4jEsbOZvcPXGTYe5pjI/edit#gid=0&quot;&gt;broadcasting excel&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1-matmul.png" /></entry><entry><title type="html">Digging into convolution</title><link href="http://localhost:4000/2020/02/what-is-convolution/" rel="alternate" type="text/html" title="Digging into convolution" /><published>2020-02-28T00:00:00+09:00</published><updated>2020-02-28T00:00:00+09:00</updated><id>http://localhost:4000/2020/02/what-is-convolution</id><content type="html" xml:base="http://localhost:4000/2020/02/what-is-convolution/">&lt;p&gt;Issues &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;1) Kaiming Initializtion in Pytorch was in trouble.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;2) Jeremy started to dig in, in lesson09, but I didn’t know why the size of tensor is &lt;sup id=&quot;fnref:5x5x5&quot;&gt;&lt;a href=&quot;#fn:5x5x5&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and even understand this spreadsheet data.&lt;sup id=&quot;fnref:conv&quot;&gt;&lt;a href=&quot;#fn:conv&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; &lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 class=&quot;no_toc&quot; id=&quot;homework&quot;&gt;Homework&lt;/h4&gt;
-
-&lt;p&gt;Read &lt;a href=&quot;https://arxiv.org/pdf/1311.2901.pdf&quot;&gt;Visualizing and Understanding Convolutional Networks
-&lt;/a&gt; paper&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#what-is-a-convolution&quot; id=&quot;markdown-toc-what-is-a-convolution&quot;&gt;What is a convolution?&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#visualization&quot; id=&quot;markdown-toc-visualization&quot;&gt;Visualization&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#one-kernel&quot; id=&quot;markdown-toc-one-kernel&quot;&gt;one kernel&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#matthew-d-zeiler--rob-fergus-paper&quot; id=&quot;markdown-toc-matthew-d-zeiler--rob-fergus-paper&quot;&gt;Matthew D Zeiler &amp;amp; Rob Fergus Paper&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#convolution-can-be-represented-as-matmul&quot; id=&quot;markdown-toc-convolution-can-be-represented-as-matmul&quot;&gt;Convolution can be represented as matmul&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#padding&quot; id=&quot;markdown-toc-padding&quot;&gt;Padding&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#kernel-has-rank-3&quot; id=&quot;markdown-toc-kernel-has-rank-3&quot;&gt;Kernel has rank 3&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight&quot; id=&quot;markdown-toc-how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight&quot;&gt;How can we find a side-edge, a gradient and area of constant weight?&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;what-is-a-convolution&quot;&gt;What is a convolution?&lt;/h3&gt;
-
-&lt;p&gt;A convolutional neural network is that your red, green, and blue pixels go into the simple computation, and something comes out of that, and then the result of that goes into a second layer, and the result of that goes into the third layer and so forth.&lt;/p&gt;
-
-&lt;h4 id=&quot;visualization&quot;&gt;Visualization&lt;/h4&gt;
-
-&lt;h5 id=&quot;one-kernel&quot;&gt;one kernel&lt;/h5&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Refer this &lt;a href=&quot;http://setosa.io/ev/image-kernels/&quot;&gt;site&lt;/a&gt; for visualizing CNN filtering&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&quot;matthew-d-zeiler--rob-fergus-paper&quot;&gt;Matthew D Zeiler &amp;amp; Rob Fergus Paper&lt;/h5&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://youtu.be/BWWm4AzsdLk?t=4588&quot;&gt;Lecture01&lt;/a&gt;&lt;/p&gt;
-
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/images/cnn-nine.png&quot; /&gt;
-    &lt;figcaption&gt;Nine examples of the actual coefficients from the **first layer**&lt;/figcaption&gt;    
-&lt;/div&gt;
-
-&lt;h4 id=&quot;convolution-can-be-represented-as-matmul&quot;&gt;Convolution can be represented as matmul&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/impactai/cnns-from-different-viewpoints-fab7f52d159c&quot;&gt;CNNs from different viewpoints&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/cnn-result.png&quot; alt=&quot;&quot; /&gt;{align-items: center;}&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/cnn-result2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;[A B C D E F G H I J] is 3 by 3 image data flatten to vector.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;As a result, convolution is a just matrix just two things happens
-    &lt;ul&gt;
-      &lt;li&gt;Some of entries are set to zeros at all the times&lt;/li&gt;
-      &lt;li&gt;same color always have the same weight. That called &lt;strong&gt;weight time / wegith sharing&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;So, we can implement a convolution with matrix multiplication. But, we don’t do that because it’s slow!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;padding&quot;&gt;Padding&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What most of libraries do is just put zeros asdie of matrix&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/padding2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/padding.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;fast.ai uses reflection paddings (what is this? Jeremy said he uttered it)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;kernel-has-rank-3&quot;&gt;Kernel has rank 3&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;As standard picture input would be &lt;sup id=&quot;fnref:RGB&quot;&gt;&lt;a href=&quot;#fn:RGB&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;, it would be actually 3d, not 2d.&lt;/li&gt;
-  &lt;li&gt;If we make kernel as a 3x3 size, we pass over same kernel all the different Red, Green, Blue Pixels.
-    &lt;ul&gt;
-      &lt;li&gt;This could make problem, because, if we want to detect frog, which is green, we would want more activations on the green(I made a test cell in my colab &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;how-can-we-find-a-side-edge-a-gradient-and-area-of-constant-weight&quot;&gt;How can we find a side-edge, a gradient and area of constant weight?&lt;/h4&gt;
-
-&lt;p&gt;Not top-edge!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;One kernel can find only the top-edge, so we should stack the kernels &lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-  &lt;li&gt;So, we pass it through bunch of kernels to the input images, and that process gives us height x width x corresponding number of kernels.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/aassets/images/tensors.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Usually that number of chanel is 16&lt;/li&gt;
-  &lt;li&gt;And if we want to get the more channels and features, we should repeat that process
-    &lt;ul&gt;
-      &lt;li&gt;This process gives rise to memory out of control, we do the &lt;strong&gt;stride&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=V2h3IOBDvrA&quot;&gt;conv-example.xlsx&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;2 convolutional filters&lt;/li&gt;
-  &lt;li&gt;At a second layer, filter is 3x3x2 tensor, because to add up together the first layer’s channel.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!-- Actually, what I wanted to know part :  --&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 class=&quot;no_toc&quot; id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Problem was &lt;em&gt;math.sqrt(5)&lt;/em&gt; was not kaiming initialization formula, &lt;a href=&quot;https://github.com/pytorch/pytorch/blob/3df79f403e8b9621d5adb0447266becd10d633b0/torch/nn/modules/linear.py#L58-L63&quot;&gt;Implementation in Pytorch&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:5x5x5&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://youtu.be/AcA8HAYh7IE?list=PLBRuZVGXwM3l2HesxBCrvwYacG1AWrVmM&amp;amp;t=251&quot;&gt;size of tensor, lecture09&lt;/a&gt; &lt;a href=&quot;#fnref:5x5x5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:conv&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://github.com/fastai/course-v3/blob/bc034b471d839bdf5bc72bd7fec1061fac648ccd/files/xl/conv-example.xlsx&quot;&gt;conv-example.xlsx&lt;/a&gt; &lt;a href=&quot;#fnref:conv&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:RGB&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://www.quora.com/Why-do-computers-use-red-green-and-blue-instead-of-the-primary-colors&quot;&gt;Why do computer use red, green and blue instead of primary colors&lt;/a&gt; &lt;a href=&quot;#fnref:RGB&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;Grayscale is a group of shades without any visible color. … Each of these dots has its own brightness level as well and, therefore, can be converted to grayscale. A grayscale image is one with all color information removed. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://brohrer.github.io/convert_rgb_to_grayscale.html&quot;&gt;Testing RGB and grayscale&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:5&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://youtu.be/hkBa9pU-H48?t=4937&quot;&gt;stack kernel and make new rank of tensor at output, Lesson06-2019&lt;/a&gt; &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>dionne</name></author><category term="feature" /><summary type="html">Issues</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cnn-jiwon.png" /></entry></feed>
+&lt;p&gt;h&lt;/p&gt;</content><author><name>dionne</name></author><category term="featured" /><summary type="html">This note is divided into 4 section. Section1: What is the meaning of ‘deep-learning from foundations?’ Section2: What’s inside Pytorch Operator? Section3: Implement forward&amp;amp;backward pass from scratch Section4: Gradient backward, Chain Rule, Refactoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/30.png" /></entry></feed>

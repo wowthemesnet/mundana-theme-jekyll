@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How started working on the Firefox iOS app and my intro to contributing to open source code "
+title:  "How I started working on the Firefox iOS app and my intro to contributing to open source code "
 categories: [ Open Source, Code, iOS ]
 image: 
 author : Noor

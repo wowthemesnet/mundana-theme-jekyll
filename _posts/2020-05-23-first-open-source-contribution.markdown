@@ -73,15 +73,15 @@ for anyone interested in contributing to open source, just pick a language or a 
 
 also these are resources that might help kickstarting the journey : 
 
-1. Outreachy Internship 
+1. *Outreachy Internship* 
     https://www.outreachy.org/
-2. Google Summer of Code
+2. *Google Summer of Code*
     https://summerofcode.withgoogle.com/
-3. Guide to Open Source contribution by Github
+3. *Guide to Open Source contribution by Github*
     https://opensource.guide/how-to-contribute/
     
     it also has some pretty good resources at the end for places to find open issues and projects to contribute to.
-4. Browsing Github 
+4. *Browsing Github*
     contributing to open source code doesn't have to be for big code bases, you can pick any tool you enjoy or any repository that interets you and try to solve issues or suggest enhancements to it. I'm sure the maintainers will appreciate it.
 
 

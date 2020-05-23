@@ -10,7 +10,7 @@ author : Noor
 
 After working for a while on my own iOS projects, I wanted to try working on bigger ones. I have always had contributing to open source big codebases on my list but there was always a reason for me to push it for later thinking it will need a lot of time or I'm not good enough for it or ready. In college, I wanted to apply to GSoC but eventually ended up not doing it (which I regret now), after following alot of code bases and people who are contribuiting to open source code and gaining some confidence to go for it I came across a program for open source contribtuion online while browsing and this is where it all started.
 
-The program is called Outreachy and the whole purpose of it is to encourage more people to kick off their open source journies and pick a project that they contribute to for 3 months. The good thing about Outreachy as well, is that they are really inclusive and they stress in every occassion on the importance of building a supportive community that's open for all and that encourages underepresented individuals in tech to participate. 
+The program is called Outreachy and the whole purpose of it is to encourage more people to kick off their open source journies and pick a project that they contribute to full-time for 3 months and get paid. The great thing about Outreachy , is that they are really inclusive and they stress in every occassion on the importance of building a supportive community that's open for all and that encourages underepresented individuals in tech to participate, the community organisers are responsive and so is the maintainers/mentors responsible for each project depending on which one you pick.
 
 <a href="https://www.outreachy.org/"><img src="/assets/images/PostsImages/firstOpenSourceContribution/outreachy.png" alt="first issue" height="170"></a>
 
@@ -23,13 +23,21 @@ my first encounter with the code was a bit overwhelming, I picked one of the sim
 
 after navigating through the code and reading different classes and their purpose, I got a grip around it and could fix my first issue which was a UI issue. but I gained alot regarding the code base as I got used to it and knew which parts were related to which components of the app. skimming through the code more than once can have benefits :D 
 
-My friends where xcode's search and documentation browsing (option button + choose the keyword) to jump to definitions and different classes.
+My friends where 
+1. xcode's code search and file search
+    <img src="/assets/images/PostsImages/firstOpenSourceContribution/search.png" alt="first issue" height="100">
+2. and documentation browsing (option button + choose the keyword) to jump to definitions and different classes.
+    <img src="/assets/images/PostsImages/firstOpenSourceContribution/optionFinder.png" alt="first issue" height="150">
 
-One trick while working with firefox project though and if it's a UI fix or a functionality that has related UI, is that you can search for the relevant code component searching by the UI element related to it. 
+One trick while working with firefox project though and if it's a UI fix or a functionality that has related UI, is that you can search for the relevant code component by the UI element related to it. 
 
 my first issue was this 
 
 <a href="https://github.com/mozilla-mobile/firefox-ios/pull/6324"><img src="/assets/images/PostsImages/firstOpenSourceContribution/firstIssue.png" alt="first issue" height="170"></a>
+
+so it had to do with UI and adjusting the length of the account email being shown in the menu. So, I had to find the relevant component to edit the label. as this component was in a menu, I thought maybe it would be good to search for "menu" and find all the componnets that handled menus, but turna out that the associated class was named as "PhotonActionSheet", so it wasn't helpful and also I was  it had a placeholder logo beside it 
+
+
 
 
 

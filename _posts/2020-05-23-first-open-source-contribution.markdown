@@ -16,8 +16,10 @@ The program is called Outreachy and the whole purpose of it is to encourage more
 
 The projects that took part in the program were very interesting and they were sophisticated enough for you to enhance your skills and learn while building them but at the same time there were enough projects for different levels of expertise for everyone to pick. The companies and institutions who took part were big to mention some : Apache, Mozilla, CC, Wikimedia, Fedora and Tor and various other recognizable entites in the open source community.
 
-Since I've recently been coding in Swift and Python, I searched for the related projects written in both and decided to pick Mozilla's Firefox as my first open source project to contribute to. 
+Since I've recently been coding in Swift and Python, I searched for the related projects written in both and decided to pick Mozilla's Firefox iOS app as my first open source project to contribute to. 
 First, because it was a big project, so I would learn alot while working on it and getting used to working with alot of files and code components. Second, because it's an app that's different than the apps I worked on, it's a browser app with alot of functionality to build in different components.
+
+ <img src="/assets/images/PostsImages/firstOpenSourceContribution/firefox.jpeg" alt="first issue" height="200">
 
 my first encounter with the code was a bit overwhelming, I picked one of the simple issues first to work on untill I get more familiar with the code, but even this simple issue was hard to work on at first, not because technical complexity but because the code was too big, I couldn't find the designated part where I should edit :D
 

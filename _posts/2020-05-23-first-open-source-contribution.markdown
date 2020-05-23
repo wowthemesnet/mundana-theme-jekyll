@@ -10,7 +10,9 @@ author : Noor
 
 After working for a while on my own iOS projects, I wanted to try working on bigger ones. I have always had contributing to open source big codebases on my list but there was always a reason for me to push it for later thinking it will need a lot of time or I'm not good enough for it or ready. In college, I wanted to apply to GSoC but eventually ended up not doing it (which I regret now), after following alot of code bases and people who are contribuiting to open source code and gaining some confidence to go for it I came across a program for open source contribtuion online while browsing and this is where it all started.
 
-The program is called Outreachy and the whole purpose of it is to encourage more people to kick off their open source journies and pick a project that they contribute to for 3 months. The good think about Outreachy as well, is that they are really inclusive and they stress in every occassion on the importance of building a supportive community that's open for all and that encourages underepresented individuals in tech to participate. 
+The program is called Outreachy and the whole purpose of it is to encourage more people to kick off their open source journies and pick a project that they contribute to for 3 months. The good thing about Outreachy as well, is that they are really inclusive and they stress in every occassion on the importance of building a supportive community that's open for all and that encourages underepresented individuals in tech to participate. 
+
+<a href="https://www.outreachy.org/"><img src="/assets/images/PostsImages/firstOpenSourceContribution/outreachy.png" alt="first issue" height="170"></a>
 
 The projects that took part in the program were very interesting and they were sophisticated enough for you to enhance your skills and learn while building them but at the same time there were enough projects for different levels of expertise for everyone to pick. The companies and institutions who took part were big to mention some : Apache, Mozilla, CC, Wikimedia, Fedora and Tor and various other recognizable entites in the open source community.
 
@@ -27,7 +29,7 @@ One trick while working with firefox project though and if it's a UI fix or a fu
 
 my first issue was this 
 
-<a href="https://github.com/mozilla-mobile/firefox-ios/pull/6324"><img src="/assets/images/PostsImages/firstOpenSourceContribution/firstIssue.png" alt="first issue" height="200"></a>
+<a href="https://github.com/mozilla-mobile/firefox-ios/pull/6324"><img src="/assets/images/PostsImages/firstOpenSourceContribution/firstIssue.png" alt="first issue" height="170"></a>
 
 
 

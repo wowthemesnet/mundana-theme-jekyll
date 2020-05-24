@@ -31,7 +31,7 @@ My friends where
 2. and documentation browsing (option button + choose the keyword) to jump to definitions and different classes.
     <img src="/assets/images/PostsImages/firstOpenSourceContribution/optionFinder.png" alt="option button + keyword = documentation" height="150">
 
-One trick while working with firefox project though and if it's a UI fix or a functionality that has related UI, is that you can search for the relevant code component by the UI element related to it. 
+One trick while working with firefox project though, and specially if it's a UI fix or a functionality that has related UI, is that you can search for the relevant code component by the UI element related to it. 
 
 my first issue was this 
 

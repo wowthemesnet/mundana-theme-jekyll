@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Why the hell did I make this blog"
-categories: [ Personal, sticky ]
+categories: [ Personal ]
 image: assets/images/PostsImages/WhyIMadeThisBlog/demo1.jpg
 author : Noor
 ---

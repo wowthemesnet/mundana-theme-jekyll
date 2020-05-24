@@ -61,7 +61,11 @@ usually afterwards any maintainer for the repo withh comment with code edits aft
 After this issue got fixed and merged, and me getting used to the code structure, I went to fix more than one issue and even added 2 features and got accepted to the Outreachy intern, at the time I'm writing this, I'm working with the mozilla team on upgrading the Today Widget of Firefox for iOS.
 
 # What I learned in the process
+<<<<<<< HEAD
 Contributing to open Source code is easier than it seemed to me and was really impactful to my coding experience and confidence. 
+=======
+Contributing to Open Source code is easier than it seemed to me and was really impactful to my coding experience and confidence. 
+>>>>>>> 390e6320096534fd622d1e07f63432b7640720ac
 
 1. you get the chance to see well-maintained code on a larger scale and learn coding conventions.
 

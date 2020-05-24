@@ -45,7 +45,7 @@ I decided then to search for the UI element in the assets of the app, There was 
 <img src="/assets/images/PostsImages/firstOpenSourceContribution/search.png" alt="code search" height="100">
 
 
-after finind the proper class, it was just editing two lines of code that solved the issue :D
+after finding the proper class, it was just editing two lines of code that solved the issue :D
 
 ### The usual workflow to contribute code to an open source repository is : 
 
@@ -61,7 +61,7 @@ usually afterwards any maintainer for the repo withh comment with code edits aft
 After this issue got fixed and merged, and me getting used to the code structure, I went to fix more than one issue and even added 2 features and got accepted to the Outreachy intern, at the time I'm writing this, I'm working with the mozilla team on upgrading the Today Widget of Firefox for iOS.
 
 # What I learned in the process
-Contributing to OS code is easier than it seemed to me and was really impactful to my coding experience and confidence. 
+Contributing to open Source code is easier than it seemed to me and was really impactful to my coding experience and confidence. 
 
 1. you get the chance to see well-maintained code on a larger scale and learn coding conventions.
 

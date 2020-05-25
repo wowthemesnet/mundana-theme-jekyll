@@ -58,7 +58,14 @@ after finding the proper class, it was just editing two lines of code that solve
 
 usually afterwards any maintainer for the repo withh comment with code edits after reviewing your code or tell you that it's fine but it shall be passed to tests and QA then get merged afterwards.
 
-After this issue got fixed and merged, and me getting used to the code structure, I went to fix more than one issue and even added 2 features and got accepted to the Outreachy intern, at the time I'm writing this, I'm working with the mozilla team on upgrading the Today Widget of Firefox for iOS.
+After this issue got fixed and merged, and me getting used to the code structure, I went to fix more than one issue and even added 2 features and got accepted to the Outreachy intern.
+
+<a href="https://github.com/mozilla-mobile/firefox-ios/pull/6324"><img src="/assets/images/PostsImages/firstOpenSourceContribution/PR2.png" alt="PR 2" height="120"></a>
+<a href="https://github.com/mozilla-mobile/firefox-ios/pull/6324"><img src="/assets/images/PostsImages/firstOpenSourceContribution/PR3.png" alt="PR 3" height="120"></a>
+<a href="https://github.com/mozilla-mobile/firefox-ios/pull/6324"><img src="/assets/images/PostsImages/firstOpenSourceContribution/PR4.png" alt="PR 4" height="120"></a>
+
+at the time I'm writing this, I'm working with the mozilla team on upgrading the Today Widget of Firefox for iOS.
+
 
 # What I learned in the process
 Contributing to open source code is easier than it seemed to me and was really impactful to my coding experience and confidence. 

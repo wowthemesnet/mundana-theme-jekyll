@@ -40,6 +40,8 @@ my first issue was this
 so it had to do with UI and adjusting the length of the account email being shown in the menu. I had to find the relevant component to edit the label. as this component was in a menu, I thought maybe it would be good to search for "menu" and find all the componnets that handled menus, but turns out that the associated class was named as "PhotonActionSheet", so it wasn't helpful and also I was presented with ALOT of components that handled a menu and had the keyword, so it wasn't that specific. 
 I decided then to search for the UI element in the assets of the app, There was a placeholder icon for the user and a sync circle. I used the xcode file finder and typed ".xcasset" to have all the asset folders available and navigated through them. and once I found the related UI elements, I copied their name and started searching for the related piece of code where such ui element is being defined so from there I managed to trace back to the class that handles the tableview cell I was supposed to work with and that it's called a PhotonActionSheetItem and I should be looking in the PhotonActionSheet class.
 
+<img src="/assets/images/PostsImages/firstOpenSourceContribution/placeholder.png" alt="placeholder icons" height="100" width="500">
+
 <img src="/assets/images/PostsImages/firstOpenSourceContribution/uielements.png" alt="ui elements menu" height="100" width="500">
 
 <img src="/assets/images/PostsImages/firstOpenSourceContribution/search.png" alt="code search" height="100">

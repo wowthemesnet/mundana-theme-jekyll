@@ -17,3 +17,6 @@ So, faced by this question, I had to think about the most values that matter to 
 Before speaking about my 4 core values, I will share what we did in the exercise, because it wasn't just about defining our values but also how these values are balanced when we work with a team.
 
 In this photo, an example core value was **Quietness**. When you think about a value, first think about this value exaggerated negatively and what this might entail. for quietness..
+
+
+---Draft----

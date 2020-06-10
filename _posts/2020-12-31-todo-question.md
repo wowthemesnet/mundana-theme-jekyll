@@ -47,6 +47,13 @@ reference git pro document
 
 - [Normalized h5 index of CS conference](https://medium.com/@csindexbr/normalized-h5-index-of-computer-science-conferences-bde2385fcbce)
 
+### Pytorch
+
+- what's difference between `DataLoader` / `DataLoaders`?	
+### Data format
+
+- Pickle: Usually saved with numpy format. is it required? 
+- ZIP, GZIP, etc. many formats compress data
 
 —-
 

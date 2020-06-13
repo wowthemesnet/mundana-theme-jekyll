@@ -10,3 +10,4 @@ _?.md
 _site/
 **/.DS_Store
 assets/images/profile/*
+**/.ipynb_checkpoints/

@@ -2,7 +2,7 @@
 layout: post
 title:  "What might be my true engine?"
 categories: [ Open Source, Personal, Journal ]
-image: assets/images/PostsImages/firstOpenSourceContribution/firefox.jpg
+image: 
 author : Noor
 ---
 

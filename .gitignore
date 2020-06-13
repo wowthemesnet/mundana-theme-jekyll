@@ -4,10 +4,9 @@ _candidate
 node_modules
 Gemfile.lock
 # ---dionne
-_previous-owner/*
-_posts_in_freshman/*
 _soonUpLoad/*
 how to wirte a note
 _?.md
 _site/
 **/.DS_Store
+assets/images/profile/*

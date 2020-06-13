@@ -3,3 +3,7 @@ _site
 .jekyll-metadata
 node_modules
 Gemfile.lock
+ .DS_Store
+assets/.DS_Store
+assets/images/.DS_Store
+assets/images/PostsImages/.DS_Store 

@@ -2,7 +2,6 @@
 layout: post
 title:  "What might be my true engine?"
 categories: [ Open Source, Personal, Journal ]
-image: 
 author : Noor
 ---
 

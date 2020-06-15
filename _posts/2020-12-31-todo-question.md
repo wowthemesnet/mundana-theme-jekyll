@@ -2,9 +2,11 @@
 layout: post
 title: "[Question] Tracking status of of learning"
 author: dionne
-categories: [ going further ]
+categories: [ QnA ]
 image: assets/images/lifetimestudy.jpg
 ---
+
+Most contents of this [QnA series](https://spellonyou.github.io/categories.html#qna) are based on my own trouble, curiosity and sometimes for reminding.</br>
 
 ## Reading list / Questions
 
@@ -14,13 +16,15 @@ image: assets/images/lifetimestudy.jpg
 - Fastai contribution guide
 - [Fastai test guide]() [^2]
 
-### High Performance Computing (Moore's Law / Dennard Scaling)
+### Modern electronic circuit
 
 - What is CUDA? 9.0, 10.0, 10.1 what differs? why torch conflicts when using not corresponded version?
 
 - How to evaluate TPU spec with GPU? what criterion?
 
 - How colab is limiting the GPU for colab pro user - [here](https://colab.research.google.com/signup#advantage) / so suppose I’m implementing a model and should I wait until virtually use GPU? / How awful the resource is if I use GPU all the time? [^1]
+
+- High Performance Computing (Moore's Law / Dennard Scaling)
 
 ### Container (a.k.a. kubernetes/docker .. )
 

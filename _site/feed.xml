@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-15T15:00:52+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">CS224N: NLP with Deep Learning | Winter2019 | Lecture5</title><link href="http://localhost:4000/2020/06/cs224n-19w-course5/" rel="alternate" type="text/html" title="CS224N: NLP with Deep Learning | Winter2019 | Lecture5" /><published>2020-06-10T00:00:00+09:00</published><updated>2020-06-10T00:00:00+09:00</updated><id>http://localhost:4000/2020/06/cs224n-19w-course5</id><content type="html" xml:base="http://localhost:4000/2020/06/cs224n-19w-course5/">&lt;h1 id=&quot;lecture-5-dependency-parsing&quot;&gt;Lecture 5: Dependency Parsing&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-17T19:51:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">CS224N: NLP with Deep Learning | Winter2019 | Lecture5</title><link href="http://localhost:4000/2020/06/cs224n-19w-course5/" rel="alternate" type="text/html" title="CS224N: NLP with Deep Learning | Winter2019 | Lecture5" /><published>2020-06-10T00:00:00+09:00</published><updated>2020-06-10T00:00:00+09:00</updated><id>http://localhost:4000/2020/06/cs224n-19w-course5</id><content type="html" xml:base="http://localhost:4000/2020/06/cs224n-19w-course5/">&lt;h1 id=&quot;lecture-5-dependency-parsing&quot;&gt;Lecture 5: Dependency Parsing&lt;/h1&gt;
 
 &lt;h2 id=&quot;table-of-contents&quot;&gt;Table of contents&lt;/h2&gt;
 
@@ -8,6 +8,7 @@
     &lt;li&gt;Dependency Grammar and Treebanks&lt;/li&gt;
     &lt;li&gt;Transition-based dependency parsing&lt;/li&gt;
     &lt;li&gt;Neural dependency parsing&lt;/li&gt;
+    &lt;li&gt;Assignment 3&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
@@ -37,7 +38,7 @@ organizes words into &lt;strong&gt;nested constitutes&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;2) Dependency Structure
 &lt;br /&gt;: which words &lt;em&gt;depend on&lt;/em&gt;(modify / arguments) which other words&lt;/p&gt;
 
-&lt;p&gt;Note: Having study with TWIML community, folks wondered why this is ‘Context free’&lt;/p&gt;
+&lt;p&gt;Note: Having study with TWIML community, folks wondered why this is ‘Context free’ &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;why-this-syntactic-structure-is-important&quot;&gt;Why this syntactic structure is important?&lt;/h3&gt;
 
@@ -94,7 +95,7 @@ organizes words into &lt;strong&gt;nested constitutes&lt;/strong&gt;&lt;/p&gt;
   &lt;li&gt;Mutilated body [washes up on Rio beach] to be used for Olympics beach volleyball&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;dependency-grammar&quot;&gt;Dependency Grammar&lt;/h2&gt;
+&lt;h2 id=&quot;2-dependency-grammar&quot;&gt;2. Dependency Grammar&lt;/h2&gt;
 
 &lt;p&gt;Two ways of representing the dependency structure of sentence&lt;/p&gt;
 
@@ -111,7 +112,7 @@ organizes words into &lt;strong&gt;nested constitutes&lt;/strong&gt;&lt;/p&gt;
   &lt;li&gt;Dependency Grammar/Parsing history&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;treebanks&quot;&gt;Treebanks&lt;/h2&gt;
+&lt;h2 id=&quot;2-treebanks&quot;&gt;2. Treebanks&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://universaldependencies.org/&quot;&gt;Universal Dependencies&lt;/a&gt;, cf (#todo fill out)&lt;/p&gt;
 
@@ -129,7 +130,7 @@ organizes words into &lt;strong&gt;nested constitutes&lt;/strong&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;arc-standard-transition-based-parser&quot;&gt;Arc-standard transition-based parser&lt;/h2&gt;
+&lt;h2 id=&quot;3-arc-standard-transition-based-parser&quot;&gt;3. Arc-standard transition-based parser&lt;/h2&gt;
 
 &lt;p&gt;Shift &lt;code class=&quot;highlighter-rouge&quot;&gt;Buffer&lt;/code&gt;’s element to left &lt;code class=&quot;highlighter-rouge&quot;&gt;Stack&lt;/code&gt;, until stack finds &lt;code class=&quot;highlighter-rouge&quot;&gt;Head&lt;/code&gt; component.
 &lt;br /&gt;-&amp;gt; When you find head at stack, start to reduce
@@ -144,7 +145,7 @@ organizes words into &lt;strong&gt;nested constitutes&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;But the problem of this method is how we choose the next step is uncertain.&lt;br /&gt;
 Usually these problem was handled using Dynamic programming to avoid too much selection cases.&lt;/p&gt;
 
-&lt;h2 id=&quot;neural-dependency-parsing&quot;&gt;Neural dependency parsing&lt;/h2&gt;
+&lt;h2 id=&quot;4-neural-dependency-parsing&quot;&gt;4. Neural dependency parsing&lt;/h2&gt;
 
 &lt;p&gt;1) MaltParser&lt;/p&gt;
 
@@ -184,7 +185,20 @@ Usually these problem was handled using Dynamic programming to avoid too much se
   &lt;li&gt;Using bigger, deeper networks, tuned hyperparameters&lt;/li&gt;
   &lt;li&gt;Beam search&lt;/li&gt;
   &lt;li&gt;Global inference, CRF over the decision sequence&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>dionne</name></author><summary type="html">Lecture 5: Dependency Parsing</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cs224n/gate-l5.png" /></entry><entry><title type="html">CS224N: NLP with Deep Learning | Winter2019 | Lecture2</title><link href="http://localhost:4000/2020/06/cs224n-19w-course2/" rel="alternate" type="text/html" title="CS224N: NLP with Deep Learning | Winter2019 | Lecture2" /><published>2020-06-05T00:00:00+09:00</published><updated>2020-06-05T00:00:00+09:00</updated><id>http://localhost:4000/2020/06/cs224n-19w-course2</id><content type="html" xml:base="http://localhost:4000/2020/06/cs224n-19w-course2/">&lt;p&gt;Images: Vector directions related to word classes (&lt;a href=&quot;https://www.semanticscholar.org/paper/An-Improved-Model-of-Semantic-Similarity-Based-on-Rohde-Plaut/73e6351a8fb61afc810a8bb3feaa44c41e5c5d7b&quot;&gt;Rohde et al. 2005&lt;/a&gt;)&lt;/p&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5-assignment&quot;&gt;5. Assignment&lt;/h2&gt;
+
+&lt;script src=&quot;https://gist.github.com/SpellOnYou/52755d046fc8be9aa2ac2a127ab5fe3c.js&quot;&gt;&lt;/script&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+
+      &lt;p&gt;&lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">Lecture 5: Dependency Parsing</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cs224n/gate-l5.png" /></entry><entry><title type="html">CS224N: NLP with Deep Learning | Winter2019 | Lecture2</title><link href="http://localhost:4000/2020/06/cs224n-19w-course2/" rel="alternate" type="text/html" title="CS224N: NLP with Deep Learning | Winter2019 | Lecture2" /><published>2020-06-05T00:00:00+09:00</published><updated>2020-06-05T00:00:00+09:00</updated><id>http://localhost:4000/2020/06/cs224n-19w-course2</id><content type="html" xml:base="http://localhost:4000/2020/06/cs224n-19w-course2/">&lt;p&gt;Images: Vector directions related to word classes (&lt;a href=&quot;https://www.semanticscholar.org/paper/An-Improved-Model-of-Semantic-Similarity-Based-on-Rohde-Plaut/73e6351a8fb61afc810a8bb3feaa44c41e5c5d7b&quot;&gt;Rohde et al. 2005&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;Course: &lt;a href=&quot;http://onlinehub.stanford.edu/cs224&quot;&gt;Stanford cs224n 2019 winter, lecture 02&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
 

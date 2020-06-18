@@ -1,26 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-17T19:51:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">CS224N: NLP with Deep Learning | Winter2019 | Lecture5</title><link href="http://localhost:4000/2020/06/cs224n-19w-course5/" rel="alternate" type="text/html" title="CS224N: NLP with Deep Learning | Winter2019 | Lecture5" /><published>2020-06-10T00:00:00+09:00</published><updated>2020-06-10T00:00:00+09:00</updated><id>http://localhost:4000/2020/06/cs224n-19w-course5</id><content type="html" xml:base="http://localhost:4000/2020/06/cs224n-19w-course5/">&lt;h1 id=&quot;lecture-5-dependency-parsing&quot;&gt;Lecture 5: Dependency Parsing&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-18T16:40:56+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SpellOnYou</title><subtitle>Be afraid only of standing still. Remain fresh, body and soul.</subtitle><entry><title type="html">CS224N: NLP with Deep Learning | Winter2019 | Lecture5 &amp;amp; A3 Solution</title><link href="http://localhost:4000/2020/06/cs224n-19w-course5/" rel="alternate" type="text/html" title="CS224N: NLP with Deep Learning | Winter2019 | Lecture5 &amp; A3 Solution" /><published>2020-06-10T00:00:00+09:00</published><updated>2020-06-10T00:00:00+09:00</updated><id>http://localhost:4000/2020/06/cs224n-19w-course5</id><content type="html" xml:base="http://localhost:4000/2020/06/cs224n-19w-course5/">&lt;h1 id=&quot;lecture-5-dependency-parsing&quot;&gt;Lecture 5: Dependency Parsing&lt;/h1&gt;
 
 &lt;h2 id=&quot;table-of-contents&quot;&gt;Table of contents&lt;/h2&gt;
 
-&lt;div class=&quot;special-class&quot;&gt;
-  &lt;ol&gt;
-    &lt;li&gt;Consistency and Dependency&lt;/li&gt;
-    &lt;li&gt;Dependency Grammar and Treebanks&lt;/li&gt;
-    &lt;li&gt;Transition-based dependency parsing&lt;/li&gt;
-    &lt;li&gt;Neural dependency parsing&lt;/li&gt;
-    &lt;li&gt;Assignment 3&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;Consistency and Dependency&lt;/li&gt;
+  &lt;li&gt;Dependency Grammar&lt;/li&gt;
+  &lt;li&gt;Transition-based dependency parsing&lt;/li&gt;
+  &lt;li&gt;Neural dependency parsing&lt;/li&gt;
+  &lt;li&gt;Solution of Assignment 3&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;Contents&lt;/h2&gt;
 
 &lt;p&gt;“We will focus more on how human language is made and used”&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;HW3:&lt;/strong&gt; Dependency parsing and neural network foundations &lt;a href=&quot;https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/assignments/a3.zip&quot;&gt;code&lt;/a&gt; &lt;a href=&quot;https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/assignments/a3.pdf&quot;&gt;handout&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HW3:&lt;/strong&gt; Dependency parsing and neural network foundations&lt;br /&gt; you can find material: &lt;a href=&quot;https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/assignments/a3.zip&quot;&gt;code&lt;/a&gt; &lt;a href=&quot;https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/assignments/a3.pdf&quot;&gt;handout&lt;/a&gt;&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;consistency-and-dependency&quot;&gt;Consistency and Dependency&lt;/h2&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2 id=&quot;1-consistency-and-dependency&quot;&gt;1. Consistency and Dependency&lt;/h2&gt;
 
 &lt;p&gt;1) Phrase Structure [Grammar]&lt;br /&gt;
 organizes words into &lt;strong&gt;nested constitutes&lt;/strong&gt;&lt;/p&gt;
@@ -40,7 +36,7 @@ organizes words into &lt;strong&gt;nested constitutes&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Note: Having study with TWIML community, folks wondered why this is ‘Context free’ &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;why-this-syntactic-structure-is-important&quot;&gt;Why this syntactic structure is important?&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Why this syntactic structure is important?&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;1) Prepositional phrase attachment &lt;strong&gt;ambiguity&lt;/strong&gt;&lt;/p&gt;
 
@@ -187,15 +183,126 @@ Usually these problem was handled using Dynamic programming to avoid too much se
   &lt;li&gt;Global inference, CRF over the decision sequence&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;5-assignment&quot;&gt;5. Assignment&lt;/h2&gt;
+&lt;h2 id=&quot;5solution-of-assignment3&quot;&gt;5.Solution of Assignment3&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-machine-learning--neural-networks-8-points&quot;&gt;1. Machine Learning &amp;amp; Neural Networks (8 points)&lt;/h3&gt;
+
+&lt;p&gt;(a) Adam Optimizer&lt;/p&gt;
+
+&lt;p&gt;i. Momentum is working as acceleration reflecting the previous gradients tendency.&lt;br /&gt;
+Hight variance is well known to raising overfitting problem.&lt;/p&gt;
+
+&lt;p&gt;ii. Parameters that previous gradients are small and not volatile get larger updates.&lt;br /&gt;
+This helps model to handle with sparse gradients(merits of AdaGrad) and also non-stationary objectives(merits of RMSProp)&lt;/p&gt;
+
+&lt;p&gt;(b) Dropout&lt;/p&gt;
+
+&lt;p&gt;i. &lt;script type=&quot;math/tex&quot;&gt;\gamma = \frac{1}{1-P_{drop}}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/cs224n/a3-1-b.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ii. Drop out is one of the regularizations, which restrict an overfitting. Randomly setting units zero is for make units stronger on abrupt absence of other units.&lt;/p&gt;
+
+&lt;p&gt;And evaluation is made from train, to model being improved. But if we use drop out also at evaluation, it does re-trained with same circumstances, so that can’t do well in test.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-neural-transition-based-dependency-parsing-42-points&quot;&gt;2. Neural Transition-Based Dependency Parsing (42 points)&lt;/h3&gt;
+
+&lt;p&gt;(a)&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Stack&lt;/th&gt;
+      &lt;th&gt;Buffer&lt;/th&gt;
+      &lt;th&gt;New dependency&lt;/th&gt;
+      &lt;th&gt;Transition&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ROOT]&lt;/td&gt;
+      &lt;td&gt;[I, parsed, this, sentence, correctly]&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;SHIFT&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ROOT, I]&lt;/td&gt;
+      &lt;td&gt;[parsed, this, sentence, correctly]&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;SHIFT&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ROOT, I, parsed]&lt;/td&gt;
+      &lt;td&gt;[this, sentence, correctly]&lt;/td&gt;
+      &lt;td&gt;parsed$\rightarrow$&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;LEFT-ARC&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ROOT, parsed]&lt;/td&gt;
+      &lt;td&gt;[this, sentence, correctly]&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;SHIFT&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ROOT, parsed, this]&lt;/td&gt;
+      &lt;td&gt;[sentence, correctly]&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;SHIFT&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ROOT, parsed, this, sentence]&lt;/td&gt;
+      &lt;td&gt;[correctly]&lt;/td&gt;
+      &lt;td&gt;sentence$\rightarrow$this&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;LEFT-ARC&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ROOT, parsed, sentence]&lt;/td&gt;
+      &lt;td&gt;[correctly]&lt;/td&gt;
+      &lt;td&gt;parsed$\rightarrow$sentence&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;RIGHT-ARC&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ROOT, parsed]&lt;/td&gt;
+      &lt;td&gt;[correctly]&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;shift&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ROOT, parsed, correctly]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;parsed$\rightarrow$correctly&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;RIGHT-ARC&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ROOT, parsed]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;ROOT$\rightarrow$parsed&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;RIGHT-ARC&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ROOT]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(b)&lt;/p&gt;
+
+&lt;p&gt;n steps ($\because$ one-to-one mapping)&lt;/p&gt;
+
+&lt;p&gt;(c), (d), (e)&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/SpellOnYou/52755d046fc8be9aa2ac2a127ab5fe3c.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Tips: problem 2-d needs shallow copy, not deep copy and TA advised not to use &lt;code class=&quot;highlighter-rouge&quot;&gt;del&lt;/code&gt; function, here is good explaination &lt;a href=&quot;https://stackoverflow.com/a/45572488/7934832&quot;&gt;remove vs del&lt;/a&gt;
+&lt;img src=&quot;/assets/images/cs224n/a3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-
-      &lt;p&gt;&lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;D. Jurafsky and J. H. Martin, &lt;em&gt;Speech and Language Processing&lt;/em&gt;, 2/e, Prentice Hall, 2008. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;</content><author><name>dionne</name></author><summary type="html">Lecture 5: Dependency Parsing</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/cs224n/gate-l5.png" /></entry><entry><title type="html">CS224N: NLP with Deep Learning | Winter2019 | Lecture2</title><link href="http://localhost:4000/2020/06/cs224n-19w-course2/" rel="alternate" type="text/html" title="CS224N: NLP with Deep Learning | Winter2019 | Lecture2" /><published>2020-06-05T00:00:00+09:00</published><updated>2020-06-05T00:00:00+09:00</updated><id>http://localhost:4000/2020/06/cs224n-19w-course2</id><content type="html" xml:base="http://localhost:4000/2020/06/cs224n-19w-course2/">&lt;p&gt;Images: Vector directions related to word classes (&lt;a href=&quot;https://www.semanticscholar.org/paper/An-Improved-Model-of-Semantic-Similarity-Based-on-Rohde-Plaut/73e6351a8fb61afc810a8bb3feaa44c41e5c5d7b&quot;&gt;Rohde et al. 2005&lt;/a&gt;)&lt;/p&gt;

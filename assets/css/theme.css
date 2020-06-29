@@ -205,7 +205,6 @@ a.text-dark:hover {
 .navbar-brand {
 	margin-right:2rem;
 	font-size:1.55rem;
-    font-family:"Georgia","Times New Roman",serif;
 }
 .dropdown-item {
 	font-weight:400;
@@ -654,10 +653,10 @@ footer {
 article {
 	font-size:20px;
 	line-height:1.86;
-    font-family:Lora;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .article-headline {
-    font-family: Georgia,Times,"Times New Roman",serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 3.2rem;
     font-weight: 400;
     line-height: 1.15;

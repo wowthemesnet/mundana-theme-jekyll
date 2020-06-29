@@ -19,13 +19,12 @@ plugins:
   - jekyll-seo-tag
   
 authors:
-    sal:
-      name:           Sal
-      site:           https://www.wowthemes.net
+    samuel:
+      name:           Samuel
+      site:           https://hubofco.de
       avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
-      email:          wowthemesnet@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
+      bio:            "I'm a backend engineer at Architrave"
+      twitter:        https://twitter.com/samueljabiodun
 
     jane:
       name:           Jane

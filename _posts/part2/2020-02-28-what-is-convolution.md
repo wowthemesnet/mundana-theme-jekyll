@@ -2,7 +2,7 @@
 layout: post
 title: "Digging into convolution"
 author: dionne
-categories: [ FastAI-v3]
+categories: [ fastai.v3]
 image: assets/images/cnn-jiwon.png
 tags: [ feature ]
 ---

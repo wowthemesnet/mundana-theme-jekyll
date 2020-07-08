@@ -2,7 +2,7 @@
 layout: post
 title: "[Q&A] Image Segmentation, using Unet with Driving Video data"
 author: dionne
-categories: [FastAI-v3]
+categories: [fastai.v3]
 image: assets/images/output_31_0.png
 tags: [ featured ]
 ---

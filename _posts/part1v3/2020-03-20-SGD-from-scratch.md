@@ -2,7 +2,7 @@
 layout: post
 title: "SGD from scratch"
 author: dionne
-categories: [FastAI-v3]
+categories: [fastai.v3]
 image: assets/images/sgd.png
 tags: [ ]
 ---

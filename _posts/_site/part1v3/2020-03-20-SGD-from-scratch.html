@@ -1,0 +1,89 @@
+<h2 id="stochastic-gradient-descent-from-scratch">Stochastic Gradient Descent from scratch</h2>
+
+<ul>
+  <li>Tensor means array
+    <ul>
+      <li>2D tensor means matrix</li>
+      <li>row * height * col</li>
+      <li><em>rank</em> - how many dimensions / axes are there</li>
+    </ul>
+  </li>
+  <li><a href="https://youtu.be/ccMHJeQU4Qw?t=4302">Resnet34 is just a function</a></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">learn</span> <span class="o">=</span> <span class="n">create_cnn</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">resnet34</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="n">error_rate</span><span class="p">,</span> <span class="n">pretrained</span><span class="o">=</span><span class="n">Flase</span><span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<ul>
+  <li>Y=aX+b
+    <ul>
+      <li>Y = a_1 X_1 + a_2 X_2 (X_2=1)</li>
+      <li>a: coefficient(a_1: slope, a_2: intercept)</li>
+      <li>X: parameter</li>
+      <li>This is dot product - two thing multiplied and added</li>
+    </ul>
+  </li>
+  <li>Optimization
+    <ul>
+      <li>loss.backward(): calculate the gradient</li>
+      <li>a.sub_(lr * a.grad): take coefficient a, and substract gradient and multiply with learning rate, and substitute the value</li>
+      <li>How gradient is calculated: <a href="https://explained.ai/matrix-calculus/index.html">The matrix calculus you need for deep learning</a></li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="n">y_hat</span> <span class="o">=</span> <span class="n">x</span><span class="o">@</span><span class="n">a</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">mse</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_hat</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">t</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+    <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+        <span class="n">a</span><span class="o">.</span><span class="n">sub_</span><span class="p">(</span><span class="n">lr</span> <span class="o">*</span> <span class="n">a</span><span class="o">.</span><span class="n">grad</span><span class="p">)</span>
+        <span class="n">a</span><span class="o">.</span><span class="n">grad</span><span class="o">.</span><span class="n">zero_</span><span class="p">()</span>
+</code></pre></div></div>
+
+<ul>
+  <li>with torch.no_grad(): # turn gradient calculation off when you do sgd update</li>
+  <li>at the real code, we make batch size, and slice some matrix (ex: y[:rand_idx]) and update the value.</li>
+</ul>
+
+<hr />
+
+<p>Recap the terminology</p>
+
+<ul>
+  <li>Learning rate: a thing that we multiply our gradient by, to decide how much to update the weights by</li>
+  <li>Epoch: one complete run through all of our data points(highly related to overfitting)</li>
+  <li>minibatch: random bunch of points that you use to update your weights</li>
+  <li>SGD: gradient descent using minibatch</li>
+  <li>Model / Architecture: kind of mean same thing. Architecture is the mathematical function that you’re fitting the parameters to.</li>
+  <li>Parameter: Also known as coefficients, and also known as weights, are the number that you are updating.</li>
+  <li>Loss function: the thing that’s telling you how far away or how close you are to correct answer</li>
+</ul>
+
+<p>Bonus note</p>
+<ul>
+  <li>When I was going to draw the prediction value, I got this error</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">---------------------------------------------------------------------------</span>
+<span class="nb">RuntimeError</span>                              <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">58</span><span class="o">-</span><span class="mi">1650</span><span class="n">cee19828</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+      <span class="mi">1</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="p">)</span>
+<span class="o">----&gt;</span> <span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="o">@</span><span class="n">a</span><span class="p">)</span>
+
+<span class="mi">7</span> <span class="n">frames</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.6</span><span class="o">/</span><span class="n">dist</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">torch</span><span class="o">/</span><span class="n">tensor</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="n">__array__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span>
+    <span class="mi">484</span>     <span class="k">def</span> <span class="nf">__array__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="mi">485</span>         <span class="k">if</span> <span class="n">dtype</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+<span class="o">--&gt;</span> <span class="mi">486</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+    <span class="mi">487</span>         <span class="k">else</span><span class="p">:</span>
+    <span class="mi">488</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="nb">RuntimeError</span><span class="p">:</span> <span class="n">Can</span><span class="s">'t call numpy() on Variable that requires grad. Use var.detach().numpy() instead.</span><span class="err">
+</span></code></pre></div></div>
+
+<p>Regarding to <a href="https://discuss.pytorch.org/t/cant-call-numpy-on-variable-that-requires-grad/20763">pytorch forum</a>, When I try to scatter it, it moves to numpy and meanwhile I will lose the gradient. so that I should <code class="highlighter-rouge">detach()</code> so that make Tensor does not requiring grad. And after that can move to numpy.</p>
+

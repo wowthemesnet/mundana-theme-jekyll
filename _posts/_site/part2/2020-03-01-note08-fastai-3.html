@@ -1,0 +1,276 @@
+<p>This note is divided into 4 section.</p>
+<ul>
+  <li>Section1: <a href="https://spellonyou.github.io/2020/02/note08-fastai-1/">What is the meaning of ‘deep-learning from foundations?’</a></li>
+  <li>Section2: <a href="https://spellonyou.github.io/2020/03/note08-fastai-2/">What’s inside Pytorch Operator?</a></li>
+  <li>Section3: <a href="https://spellonyou.github.io/2020/03/note08-fastai-3/">Implement forward&amp;backward pass from scratch</a></li>
+  <li>Section4: <a href="https://spellonyou.github.io/2020/03/note08-fastai-4/">Gradient backward, Chain Rule, Refactoring</a></li>
+</ul>
+
+<h3 id="1-the-forward-and-backward-passes">1. The forward and backward passes</h3>
+
+<h4 id="11-normalization">1.1 Normalization</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_mean</span><span class="p">,</span><span class="n">train_std</span> <span class="o">=</span> <span class="n">x_train</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="n">x_train</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">train_mean</span><span class="p">,</span><span class="n">train_std</span>
+<span class="p">(</span><span class="n">tensor</span><span class="p">(</span><span class="mf">0.1304</span><span class="p">),</span> <span class="n">tensor</span><span class="p">(</span><span class="mf">0.3073</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Remember!</p>
+<ul>
+  <li>Dataset, which is x_train, mean and standard deviation is not 0&amp;1. <strong>But we need them to be</strong> which means we should substract means and divide data by std.</li>
+  <li>You should not standarlize <em>validation set</em> because training set and validation set should be aparted.</li>
+  <li>after normalize, mean is close to zero, and standard deviation is close to 1.</li>
+</ul>
+
+<h4 id="12-variable-definition">1.2 Variable definition</h4>
+
+<ul>
+  <li><strong>n,m</strong>: size of the training set</li>
+  <li><strong>c</strong>: the number of activations we need in our model</li>
+</ul>
+
+<h3 id="2-foundation-version">2. Foundation Version</h3>
+<h4 id="21-basic-architecture">2.1 Basic architecture</h4>
+
+<ul>
+  <li>Our model has one hidden layer, output to have 10 activations, used in cross entropy.</li>
+  <li>
+    <p>But in process of building architecture, we will use mean square error, output to have 1 activations and lator change it to cross entropy</p>
+  </li>
+  <li>number of hidden unit; 50</li>
+</ul>
+
+<p>see below pic</p>
+
+<p><img src="/assets/images/model.jpg" alt="" height="80%" width="80%" /></p>
+
+<ul>
+  <li>We want to make w1&amp;w2 mean and std be 0&amp;1.
+    <ul>
+      <li>why initializating and make mean zero and std one is important?</li>
+      <li>paper highlighting importance of normalisation - training 10,000 layer network without regularisation<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="211-simplified-kaiming-init">2.1.1 <em>simplified</em> kaiming init</h5>
+
+<p>Q: Why we did init, normalize with only validation data? Because we can not handle and get statistics from each value of x_valid?{: style=”color:red; font-size: 130%; text-align: center;”}</p>
+
+<ul>
+  <li>what about hidden(first) layer?</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">w1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">nh</span><span class="p">)</span>
+<span class="n">b1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nh</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">x_valid</span><span class="p">,</span> <span class="n">w1</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span> <span class="c1"># hidden
+</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">t</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="p">((</span><span class="n">tensor</span><span class="p">(</span><span class="mf">2.3191</span><span class="p">),</span> <span class="n">tensor</span><span class="p">(</span><span class="mf">27.0303</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>In output(second) layer,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">w2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">nh</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">b2</span><span class="p">)</span> <span class="c1"># output
+</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t2</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">t2</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="p">(</span><span class="n">tensor</span><span class="p">(</span><span class="o">-</span><span class="mf">58.2665</span><span class="p">),</span> <span class="n">tensor</span><span class="p">(</span><span class="mf">170.9717</span><span class="p">))</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>which is terribly far from normalzed value.</p>
+  </li>
+  <li>
+    <p>But if we apply simplified kaiming init</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">w1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">nh</span><span class="p">)</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">m</span><span class="p">);</span> <span class="n">b1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nh</span><span class="p">)</span>
+<span class="n">w2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">nh</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">nh</span><span class="p">);</span> <span class="n">b2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">x_valid</span><span class="p">,</span> <span class="n">w1</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="n">t</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">tensor</span><span class="p">(</span><span class="o">-</span><span class="mf">0.0516</span><span class="p">),</span> <span class="n">tensor</span><span class="p">(</span><span class="mf">0.9354</span><span class="p">))</span>
+</code></pre></div></div>
+
+<ul>
+  <li>But, actually, we use activations not only linear function</li>
+  <li>After applying activations relu at linear layer, mean and deviation became 0.5.</li>
+</ul>
+
+<p><img src="/assets/images/relu.jpg" alt="" height="70%" width="70%" /></p>
+
+<h5 id="212-glorrot-initialization">2.1.2 Glorrot initialization</h5>
+
+<p>Paper2: <a href="http://proceedings.mlr.press/v9/glorot10a.html">Understanding the difficulty of training deep feedforward neural networks</a></p>
+<ul>
+  <li>Gaussian(, bell shaped, normal distributions) is not trained very well.</li>
+  <li>How to initialize neural nets?</li>
+</ul>
+
+<p><img src="/assets/images/xavier.png" alt="" height="80%" width="80%" /></p>
+
+<p>with <script type="math/tex">n_i</script> the size of layer <script type="math/tex">n</script>, the number of filters <script type="math/tex">i</script>.</p>
+
+<ul>
+  <li>But there is <strong>No acount</strong> for import of ReLU</li>
+  <li>If we got 1000 layers, vanishing gradients problem emerges</li>
+</ul>
+
+<h5 id="213-kaiming-initializating">2.1.3 Kaiming initializating</h5>
+
+<p>Paper3: <a href="https://arxiv.org/abs/1502.01852">Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</a></p>
+<ul>
+  <li>Kaiming He, explained <a href="https://pouannes.github.io/blog/initialization/">here</a></li>
+  <li>rectifier: rectified linear unit</li>
+  <li>rectifier network: neural network with rectifier linear units</li>
+</ul>
+
+<p><img src="/assets/images/kaiming.png" alt="" height="80%" width="80%" /></p>
+
+<ul>
+  <li>This is kaiming init, and why suddenly replace one to two on a top?
+    <ul>
+      <li>to avoid vanishing gradient(weights)</li>
+      <li><span style="color: red">But it doesn’t give very nice mean tough.</span></li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="214-pytorch-package">2.1.4 Pytorch package</h5>
+
+<ul>
+  <li>Why fan_out?
+    <ul>
+      <li>according to pytorch documentation,</li>
+    </ul>
+  </li>
+</ul>
+
+<p><code class="highlighter-rouge">choosing 'fan_in' preserves the magnitude of the variance of the wights in the forward pass.</code></p>
+
+<p><code class="highlighter-rouge">choosing 'fan_out' preserves the magnitues in the backward pass(, which means matmul; with transposed matrix)</code></p>
+
+<p>➡️ in the other words, torch use fan_out cz pytorch transpose in linear transformaton.</p>
+
+<ul>
+  <li>What about CNN in Pytorch?</li>
+</ul>
+
+<p>I tried</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="o">.</span><span class="n">conv2d_forward</span><span class="err">??</span>
+</code></pre></div></div>
+<p><img src="/assets/images/2-forward-conv2d.jpg" alt="" height="90%" width="90%" /></p>
+
+<p>Jeremy digged into using</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">modules</span><span class="o">.</span><span class="n">conv</span><span class="o">.</span><span class="n">_ConvNd</span><span class="o">.</span><span class="n">reset_parameters</span><span class="err">??</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/2-torch-nn-conv-jeremy.jpg" alt="" height="90%" width="90%" /></p>
+
+<p><img src="/assets/images/2-torch-nn-conv-jeremy-2.jpg" alt="" height="90%" width="90%" /><br />
+<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup></p>
+
+<ul>
+  <li>in Pytorch, it doesn’t seem to be implemented kaiming init in right formula. so we should use our own operation.</li>
+  <li>But actually, this has been discussed in Pytorch community before.<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>  <sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup></li>
+  <li>Jeremy said it enhanced variance also, so I sampled 100 times and counted better results.</li>
+</ul>
+
+<p><img src="/assets/images/2-100times-sampling.png" alt="" /></p>
+
+<ul>
+  <li>To make sure the shape seems sensible. check with assert. (remember we will replace 1 to 10 in <em>cross entropy</em>)</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">assert</span> <span class="n">model</span><span class="p">(</span><span class="n">x_valid</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="o">==</span><span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="n">x_valid</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">model</span><span class="p">(</span><span class="n">x_valid</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>We have made Relu, init, linear, it seems we can forward pass</li>
+  <li>code we need for basic architecture</li>
+</ul>
+
+<p><img src="/assets/images/3-fc.png" alt="" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">nh</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="k">def</span> <span class="nf">lin</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="o">@</span><span class="n">w</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">w1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">nh</span><span class="p">)</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">2.</span><span class="o">/</span><span class="n">m</span> <span class="p">);</span> <span class="n">b1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nh</span><span class="p">)</span>
+<span class="n">w2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">nh</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span> <span class="n">b2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">relu</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="n">clamp_min</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="n">relu</span><span class="p">(</span><span class="n">lin</span><span class="p">(</span><span class="n">x_valid</span><span class="p">,</span> <span class="n">w1</span><span class="p">,</span> <span class="n">b1</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="n">xb</span><span class="p">):</span>
+    <span class="n">l1</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">xb</span><span class="p">,</span> <span class="n">w1</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span>
+    <span class="n">l2</span> <span class="o">=</span> <span class="n">relu</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span>
+    <span class="n">l3</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">l2</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">b2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">l3</span>
+</code></pre></div></div>
+
+<h4 id="22-loss-function-mse">2.2 Loss function: MSE</h4>
+
+<ul>
+  <li>Mean squared error need unit vector, so we remove unit axis.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">mse</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span> <span class="k">return</span> <span class="p">(</span><span class="n">output</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">targ</span><span class="p">)</span><span class="o">.</span><span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+  <li>In python, in case you remove axis, you use ‘squeeze’, or add axis use ‘unsqueeze’</li>
+  <li><a href="https://pytorch.org/docs/stable/torch.html#torch.squeeze">torch.squeeze</a> where code commonly broken. so, when you use squeeze, <strong>clarify</strong> dimension axis you want to remove</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tmp</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">tmp</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+</code></pre></div></div>
+
+<ul>
+  <li>make sure to make as float when you calculate</li>
+</ul>
+
+<p>But why??? because it is tensor?{: style=”color:red; font-size: 130%;”}</p>
+
+<p>Here’s the error when I don’t transform the data type</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">---------------------------------------------------------------------------</span>
+<span class="nb">TypeError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">22</span><span class="o">-</span><span class="n">ae6009bef8b4</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># call data again
+</span>      <span class="mi">2</span> <span class="n">mse</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="nb">TypeError</span><span class="p">:</span> <span class="s">'map'</span> <span class="nb">object</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">subscriptable</span>
+</code></pre></div></div>
+
+<ul>
+  <li>This is forward pass</li>
+</ul>
+
+<h3 id="footnote">Footnote</h3>
+
+<h3 id="other-materials">Other materials</h3>
+
+<ul>
+  <li><a href="http://proceedings.mlr.press/v9/glorot10a.html">Understanding the difficulty of training deep feedforward neural networks</a>, paper that introduced Xavier initialization</li>
+</ul>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><a href="https://arxiv.org/abs/1901.09321">Fixup Initialization: Residual Learning Without Normalization</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p><a href="https://github.com/pytorch/pytorch/blob/3df79f403e8b9621d5adb0447266becd10d633b0/torch/nn/modules/linear.py#L58-L63">Pytorch implementaion on Kaiming init of conv and linear layers</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p><a href="https://github.com/pytorch/pytorch/issues/15314">Pytorch kaiming init issue</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p><a href="https://discuss.pytorch.org/t/why-the-default-negative-slope-for-kaiming-uniform-initialization-of-convolution-and-linear-layers-is-5/29290">Pytorch kaiming init explained</a> <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>

@@ -1,0 +1,471 @@
+<p>Note of lesson7 : <a href="https://www.usfca.edu/data-institute/certificates/deep-learning-part-one">Deep Learning Part 1 of Spring 2020 at USF</a></p>
+
+<p>Today we will study</p>
+<ol>
+  <li>Collaborative Filtering</li>
+  <li>Tabular modelling</li>
+</ol>
+
+<h2 class="no_toc" id="contents">CONTENTS</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#collaborative-filtering" id="markdown-toc-collaborative-filtering">Collaborative Filtering</a>    <ul>
+      <li><a href="#collaborative-filtering-from-scratch" id="markdown-toc-collaborative-filtering-from-scratch">Collaborative filtering from scratch</a>        <ul>
+          <li><a href="#weight-decay" id="markdown-toc-weight-decay">Weight decay</a></li>
+          <li><a href="#creating-our-own-embedding-module" id="markdown-toc-creating-our-own-embedding-module">Creating our own Embedding module</a></li>
+        </ul>
+      </li>
+      <li><a href="#interpreting-embeddings-and-biases" id="markdown-toc-interpreting-embeddings-and-biases">Interpreting embeddings and biases</a>        <ul>
+          <li><a href="#using-fastaicollab" id="markdown-toc-using-fastaicollab">Using fastai.collab</a></li>
+          <li><a href="#embedding-distance" id="markdown-toc-embedding-distance">Embedding distance</a></li>
+        </ul>
+      </li>
+      <li><a href="#boot-strapping-a-collaborative-filtering" id="markdown-toc-boot-strapping-a-collaborative-filtering">Boot strapping a collaborative filtering</a></li>
+      <li><a href="#deep-learning-for-collaborative-filtering" id="markdown-toc-deep-learning-for-collaborative-filtering">Deep Learning for collaborative filtering</a>        <ul>
+          <li><a href="#sidebar-kwargs-and-delegates" id="markdown-toc-sidebar-kwargs-and-delegates">Sidebar: kwargs and delegates</a></li>
+          <li><a href="#end-sidebar" id="markdown-toc-end-sidebar">End sidebar</a></li>
+        </ul>
+      </li>
+      <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+      <li><a href="#questionnaire" id="markdown-toc-questionnaire">Questionnaire</a></li>
+    </ul>
+  </li>
+  <li><a href="#tabular-modelling" id="markdown-toc-tabular-modelling">Tabular modelling</a>    <ul>
+      <li><a href="#categorical-embeddings" id="markdown-toc-categorical-embeddings">Categorical embeddings</a></li>
+      <li><a href="#beyond-deep-learning" id="markdown-toc-beyond-deep-learning">Beyond Deep Learning</a></li>
+      <li><a href="#the-dataset" id="markdown-toc-the-dataset">The dataset</a>        <ul>
+          <li><a href="#kaggle-competitions" id="markdown-toc-kaggle-competitions">kaggle Competitions</a></li>
+          <li><a href="#look-at-the-data" id="markdown-toc-look-at-the-data">Look at the data</a></li>
+        </ul>
+      </li>
+      <li><a href="#decision-trees" id="markdown-toc-decision-trees">Decision trees</a>        <ul>
+          <li><a href="#handling-dates" id="markdown-toc-handling-dates">Handling dates</a></li>
+          <li><a href="#using-tabularpandas-and-tabularproc" id="markdown-toc-using-tabularpandas-and-tabularproc">Using TabularPandas and TabularProc</a></li>
+          <li><a href="#creating-the-decision-tree" id="markdown-toc-creating-the-decision-tree">Creating the decision tree</a></li>
+          <li><a href="#categorical-variables" id="markdown-toc-categorical-variables">Categorical variables</a></li>
+        </ul>
+      </li>
+      <li><a href="#random-forests" id="markdown-toc-random-forests">Random forests</a>        <ul>
+          <li><a href="#creating-a-random-forest" id="markdown-toc-creating-a-random-forest">Creating a random forest</a></li>
+          <li><a href="#out-of-bag-error" id="markdown-toc-out-of-bag-error">Out-of-bag error</a></li>
+        </ul>
+      </li>
+      <li><a href="#model-interpretation" id="markdown-toc-model-interpretation">Model interpretation</a>        <ul>
+          <li><a href="#tree-variance-for-prediction-confidence" id="markdown-toc-tree-variance-for-prediction-confidence">Tree variance for prediction confidence</a></li>
+          <li><a href="#feature-importance" id="markdown-toc-feature-importance">Feature importance</a></li>
+          <li><a href="#removing-low-importance-variables" id="markdown-toc-removing-low-importance-variables">Removing low-importance variables</a></li>
+          <li><a href="#removing-redundant-features" id="markdown-toc-removing-redundant-features">Removing redundant features</a></li>
+          <li><a href="#partical-dependence" id="markdown-toc-partical-dependence">Partical dependence</a></li>
+          <li><a href="#data-leakage" id="markdown-toc-data-leakage">Data leakage</a></li>
+          <li><a href="#tree-interpreter" id="markdown-toc-tree-interpreter">Tree interpreter</a></li>
+        </ul>
+      </li>
+      <li><a href="#extrapolation-and-neural-networks" id="markdown-toc-extrapolation-and-neural-networks">Extrapolation and neural networks</a>        <ul>
+          <li><a href="#finding-out-of-domain-data" id="markdown-toc-finding-out-of-domain-data">Finding out of domain data</a></li>
+          <li><a href="#using-a-neural-network" id="markdown-toc-using-a-neural-network">Using a neural network</a></li>
+          <li><a href="#sidebar-fastais-tabular-classes" id="markdown-toc-sidebar-fastais-tabular-classes">Sidebar: fastai’s Tabular classes</a></li>
+          <li><a href="#end-sidebar-1" id="markdown-toc-end-sidebar-1">End sidebar</a></li>
+          <li><a href="#ensembling" id="markdown-toc-ensembling">Ensembling</a></li>
+          <li><a href="#boosting" id="markdown-toc-boosting">Boosting</a></li>
+          <li><a href="#combining-embeddings-with-other-methods" id="markdown-toc-combining-embeddings-with-other-methods">Combining embeddings with other methods</a></li>
+        </ul>
+      </li>
+      <li><a href="#conclusion-our-advice-for-tabular-modeling" id="markdown-toc-conclusion-our-advice-for-tabular-modeling">Conclusion: our advice for tabular modeling</a></li>
+      <li><a href="#questionnaire-1" id="markdown-toc-questionnaire-1">Questionnaire</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="collaborative-filtering">Collaborative Filtering</h2>
+
+<h3 id="collaborative-filtering-from-scratch">Collaborative filtering from scratch</h3>
+
+<p>Last time issue: We are overfitting with just small batch&lt;/br&gt;
+Capacity of model, normally reducing the parameter of model ends up very shallow model</p>
+
+<h4 id="weight-decay">Weight decay</h4>
+
+<p><code class="highlighter-rouge">a= 50</code> means just small change will give you big results.</p>
+
+<p>(#f)</p>
+
+<p>weight decay means adding some valud to the gradients, so that it makes more shallow and less bumpy loss.</p>
+
+<p>Be cautious, when you do statistical model, they lessen the parameter to evade overfitting but modern machine learning doesn’t do that, and add regularization</p>
+
+<h4 id="creating-our-own-embedding-module">Creating our own Embedding module</h4>
+
+<p>Embedding is just indexing into an array</p>
+
+<p>Normally layer is made from inhertancing of module</p>
+
+<p>when you call torch and make tensor, they doesn’t have parameter, and you should define it using <code class="highlighter-rouge">nn.parameter</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">def</span> <span class="nf">create_params</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="o">*</span><span class="n">size</span><span class="p">)</span><span class="o">.</span><span class="n">normal_</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">))</span>
+
+<span class="k">class</span> <span class="nc">DotProductBias</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_users</span><span class="p">,</span> <span class="n">n_movies</span><span class="p">,</span> <span class="n">n_factors</span><span class="p">,</span> <span class="n">y_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">5.5</span><span class="p">)):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user_factors</span> <span class="o">=</span> <span class="n">create_params</span><span class="p">([</span><span class="n">n_users</span><span class="p">,</span> <span class="n">n_factors</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user_bias</span> <span class="o">=</span> <span class="n">create_params</span><span class="p">([</span><span class="n">n_users</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">movie_factors</span> <span class="o">=</span> <span class="n">create_params</span><span class="p">([</span><span class="n">n_movies</span><span class="p">,</span> <span class="n">n_factors</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">movie_bias</span> <span class="o">=</span> <span class="n">create_params</span><span class="p">([</span><span class="n">n_movies</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y_range</span> <span class="o">=</span> <span class="n">y_range</span>
+        
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">users</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_factors</span><span class="p">[</span><span class="n">x</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]]</span>
+        <span class="n">movies</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">movie_factors</span><span class="p">[</span><span class="n">x</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">(</span><span class="n">users</span><span class="o">*</span><span class="n">movies</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_bias</span><span class="p">[</span><span class="n">x</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">movie_bias</span><span class="p">[</span><span class="n">x</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="k">return</span> <span class="n">sigmoid_range</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">y_range</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p>pytorch has autograd so that we don’t have to calculate gradient manually</p>
+
+<blockquote>
+  <p>What’s our advantage making our own embedding instead of using pytorch one
+J: no advantage just implementing by yourself and easily learn concept.</p>
+</blockquote>
+
+<h3 id="interpreting-embeddings-and-biases">Interpreting embeddings and biases</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">movie_bias</span> <span class="o">=</span> <span class="n">learn</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">movie_bias</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+<span class="n">idxs</span> <span class="o">=</span> <span class="n">movie_bias</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[:</span><span class="mi">5</span><span class="p">]</span>
+<span class="p">[</span><span class="n">dls</span><span class="o">.</span><span class="n">classes</span><span class="p">[</span><span class="s">'title'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">idxs</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>meaning of this, not just <em>(#f)</em></p>
+
+<p>we can use pca, and filter factors to 3, so we can select some kind of latent factors. <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+
+<h4 id="using-fastaicollab">Using fastai.collab</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">learn</span> <span class="o">=</span> <span class="n">collab_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">n_factors</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">y_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">))</span>
+<span class="n">learn</span><span class="o">.</span><span class="n">fit_one_cycle</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">5e-3</span><span class="p">,</span> <span class="n">wd</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>you can get similar results using fastai</p>
+
+<h4 id="embedding-distance">Embedding distance</h4>
+
+<p>Distance between two movies.</p>
+
+<p>Let’s pick some movie and find distance, form one movie to every other movies.</p>
+
+<p>(#f)</p>
+
+<blockquote>
+  <p>(#f) J: visualization part is just what’s going in and..? sound quality is not good</p>
+</blockquote>
+
+<h3 id="boot-strapping-a-collaborative-filtering">Boot strapping a collaborative filtering</h3>
+
+<h3 id="deep-learning-for-collaborative-filtering">Deep Learning for collaborative filtering</h3>
+
+<p>the other way to do collab, we can concatenate the embeddings</p>
+
+<p>(#q) can’t understand</p>
+
+<p><code class="highlighter-rouge">get_emb_sz</code> method, fast.ai will give you the layer’s tensor size</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">learn</span> <span class="o">=</span> <span class="n">collab_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">use_nn</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">y_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">),</span> <span class="n">layers</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">50</span><span class="p">])</span>
+<span class="n">learn</span><span class="o">.</span><span class="n">fit_one_cycle</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">5e-3</span><span class="p">,</span> <span class="n">wd</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>if you use params <code class="highlighter-rouge">use_nn=True</code>, you can use concat version of collab</p>
+
+<h4 id="sidebar-kwargs-and-delegates">Sidebar: kwargs and delegates</h4>
+
+<h4 id="end-sidebar">End sidebar</h4>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<h3 id="questionnaire">Questionnaire</h3>
+
+<hr />
+
+<h2 id="tabular-modelling">Tabular modelling</h2>
+
+<h3 id="categorical-embeddings">Categorical embeddings</h3>
+
+<p>It’s been a not much time that tabular data is used for deep learning model.</p>
+
+<p>Ex) German regions in embedding, if we draw embedding of the german city, it resembles actual german map</p>
+
+<p>many kinds of information of the world can be represented using embedding</p>
+
+<p>This is how google’s recommendation system works.</p>
+
+<p><img src="/assets/images/google_collab.png" alt="" /></p>
+
+<p>They use collab, which is concatenation of embeddingsgoogoo</p>
+
+<h3 id="beyond-deep-learning">Beyond Deep Learning</h3>
+
+<p>sometimes the other model, which is not deep learning models(classical model) do better than modern deep learning model</p>
+
+<ol>
+  <li>Ensembles of decision trees (i.e. Random Forests and Gradient Boosting Machines), mainly for structured data (such as you might find in a database table at most companies)</li>
+  <li>Multi-layered neural networks learnt with SGD (i.e. shallow and/or deep learning), mainly for unstructured data (such as audio, vision, and natural language)</li>
+</ol>
+
+<p>try 1 first, and after that try 2.</p>
+
+<p><code class="highlighter-rouge">How the decision tree ensenble works?</code></p>
+
+<p>we usually scikit-learn library.</p>
+
+<p>Refer <a href="https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1491957662/ref=asap_bc?ie=UTF8">this book</a></p>
+
+<blockquote>
+  <p>when you use y_range maximum as 5.5? J: because it uses sigmoid, which can’t reach to the max, min value <sup id="fnref:3"><a href="#fn:3" class="footnote">2</a></sup></p>
+</blockquote>
+
+<blockquote>
+  <p>Do you recommend real-time service using decision-tree? for my own experience it was too slow.
+J:</p>
+</blockquote>
+
+<h3 id="the-dataset">The dataset</h3>
+
+<h4 id="kaggle-competitions">kaggle Competitions</h4>
+
+<h4 id="look-at-the-data">Look at the data</h4>
+
+<p><code class="highlighter-rouge">At this point, a good next step is to handle ordinal columns</code> and in this case, it is size of the product. we can make it as a categorical variables</p>
+
+<p>Jeremy read <a href="https://render.githubusercontent.com/view/ipynb?commit=5b70a64d66d0880977881cc589cebe38812550f8&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6661737461692f66617374626f6f6b2f356237306136346436366430383830393737383831636335383963656265333838313235353066382f30395f746162756c61722e6970796e62&amp;nwo=fastai%2Ffastbook&amp;path=09_tabular.ipynb&amp;repository_id=243838973&amp;repository_type=Repository#Decision-trees">this part</a>, this it when I do review</p>
+
+<h3 id="decision-trees">Decision trees</h3>
+
+<p>It doesn’t require you special coding skill</p>
+
+<p>This is some good example of feature engineering</p>
+
+<h4 id="handling-dates">Handling dates</h4>
+
+<h4 id="using-tabularpandas-and-tabularproc">Using TabularPandas and TabularProc</h4>
+
+<p><code class="highlighter-rouge">TabularProc</code> - Tabular process, which is in-place function.</p>
+
+<p><code class="highlighter-rouge">Categorify</code> - make column with a numeric value, which is same with we saw at vocab.</p>
+
+<p>And we should think about valiation, and at this case, making test set as random is not enough. because this is basically related to time.</p>
+
+<p>See how test set is divided, and we can set the validation set as future time data.</p>
+
+<h4 id="creating-the-decision-tree">Creating the decision tree</h4>
+
+<p>DecisionTree Regressor, something when we want to predict continuous variable.</p>
+
+<blockquote>
+  <p>Data augmentation for tabular data, do you have idea? J: Not sure, but will think about data semantics
+unordered, and ordered category, does fast.ai distinguish between these? J: yes</p>
+</blockquote>
+
+<p>you can use fastai function when drawing decision tree.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">draw_tree</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">leaves_parallel</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>look at diagram from top to bottom. it’s the best way.</p>
+
+<p>basic way to do regression is predict the average.</p>
+
+<p><strong>leaf-node</strong>: not further trees when it is <code class="highlighter-rouge">False</code></p>
+
+<p>if you want to train further, we can choice leaf-note number bigger</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">m_rmse</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="mf">0.0</span>
+</code></pre></div></div>
+
+<p>means we made perfect model, but when we check validation model, it’s bigger than 0
+	- one reason is related to leaf-node</p>
+
+<p>So we made our leaf-note to 25, and our result</p>
+
+<blockquote>
+  <p>do random tree (#f) ??</p>
+</blockquote>
+
+<h4 id="categorical-variables">Categorical variables</h4>
+
+<p>related to categorical variables, we don’t have to do one-hot encode like using neural net! (we can make it, but there is no evidence it’s better)</p>
+
+<blockquote>
+  <p>What can I do with categorical missing value? J: (#f)</p>
+</blockquote>
+
+<h3 id="random-forests">Random forests</h3>
+
+<p>(#q could not understand much)</p>
+
+<p><a href="https://www.stat.berkeley.edu/~breiman/bagging.pdf">bagging predictors</a></p>
+
+<blockquote>
+  <p>: “Bagging predictors is a method for generating multiple versions of a predictor and using these to get an aggregated predictor. The aggregation averages over the versions… The multiple versions are formed by making bootstrap replicates of the learning set and using these as new learning sets. Tests… show that bagging can give substantial gains in accuracy. The vital element is the instability of the prediction method. If perturbing the learning set can cause significant changes in the predictor constructed, then bagging can improve accuracy.”</p>
+</blockquote>
+
+<p><code class="highlighter-rouge">random subset</code>, when you average the error, it is zero???</p>
+
+<p>Also randomly choose the subset of columns</p>
+
+<h4 id="creating-a-random-forest">Creating a random forest</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">rf</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">max_samples</span><span class="o">=</span><span class="mi">200_000</span><span class="p">,</span>
+       <span class="n">max_features</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="n">n_estimators</span><span class="p">,</span>
+        <span class="n">max_samples</span><span class="o">=</span><span class="n">max_samples</span><span class="p">,</span> <span class="n">max_features</span><span class="o">=</span><span class="n">max_features</span><span class="p">,</span>
+        <span class="n">min_samples_leaf</span><span class="o">=</span><span class="n">min_samples_leaf</span><span class="p">,</span> <span class="n">oob_score</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>in general, when you increase the <code class="highlighter-rouge">n_estimators</code>, the accuracy enhances more</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">r_mse</span><span class="p">(</span><span class="n">preds</span><span class="p">[:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">valid_y</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">40</span><span class="p">)]);</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/error.png" alt="" /></p>
+
+<p>we can set up our own methods, to see what’s going on. you just picked first element of the result, and show them.</p>
+
+<p>but our evaluation get low. why?</p>
+
+<h4 id="out-of-bag-error">Out-of-bag error</h4>
+
+<p>it’s not about time set, we don’t need validation set to do it.</p>
+
+<h3 id="model-interpretation">Model interpretation</h3>
+
+<h4 id="tree-variance-for-prediction-confidence">Tree variance for prediction confidence</h4>
+
+<p>How confident are we in our predictions using a particular row of data?</p>
+<ul>
+  <li>look at the standard deviation of the tree, how much did the tree were varied, and if we were very varied, it means we didn’t confident that much</li>
+</ul>
+
+<h4 id="feature-importance">Feature importance</h4>
+
+<p>For predicting with a particular row of data, what were the most important factors, and how did they influence that prediction?</p>
+<ul>
+  <li><code class="highlighter-rouge">m.feature_importance</code> attribute</li>
+</ul>
+
+<h4 id="removing-low-importance-variables">Removing low-importance variables</h4>
+
+<p>Which columns are the strongest predictors, which can we ignore?</p>
+
+<p>remove the ignorable tree, and re train, accuracy is about to same, but the number of feature decreased.
+after</p>
+
+<p>before we had this much features</p>
+
+<p><img src="/assets/images/before.png" alt="" /></p>
+
+<p>It decreased!</p>
+
+<p><img src="/assets/images/after.png" alt="" /></p>
+
+<h4 id="removing-redundant-features">Removing redundant features</h4>
+
+<p>Which columns are effectively redundant with each other, for purposes of prediction?
+How do predictions vary, as we vary these columns?</p>
+
+<p>in this way we can get simpler and simpler model, remaining the accuracy</p>
+
+<h4 id="partical-dependence">Partical dependence</h4>
+
+<p>best way is to draw histogram.</p>
+
+<p>we can draw depends on each label, and see parti</p>
+
+<p>what is said, how <code class="highlighter-rouge">YearMade</code> impact sales, if all other valud is equal?</p>
+
+<p>What might be impact just mitigate specific variable?</p>
+
+<p><img src="/assets/images/partial.png" alt="" /></p>
+
+<blockquote>
+  <p>is cluster doing something related to hierarchical J: yes</p>
+</blockquote>
+
+<blockquote>
+  <p>How to the feature importance values related to correlation? J: if you used to linear regression (#f) / Larry D. Here is an answer from Fra Pochetti: If 2 features are highly correlated their relative feature importance would be reduced compared to keeping just one of the two. Here why. A random forest selects features randomly at each split (in general). If 2 variables are correlated, they more or less carry the same signal wrt the dependent variable. Hence you can expect a tree to split on either of the 2 evenly. As an end result, your 2 features will have much less importance, just because they are carrying the same information. They hide each other. I generally remove correlated features even if it is not strictly needed, just to be able to uncover these kind of hidden relationships and spot truly important variables.</p>
+</blockquote>
+
+<h4 id="data-leakage">Data leakage</h4>
+
+<h4 id="tree-interpreter">Tree interpreter</h4>
+
+<p><code class="highlighter-rouge">treeinterpreter</code> module</p>
+
+<p>So we take that one row of data, and put it through the first decision tree, looking to see what split is used at each point throughout the tree.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">prediction</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">bias</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">contributions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="extrapolation-and-neural-networks">Extrapolation and neural networks</h3>
+
+<p>Jeremy usually index using special value ‘None’, not unsqeeze.</p>
+
+<p>random forest can’t extrapolate out side of train set, what it has seen, and this is big problem</p>
+
+<h4 id="finding-out-of-domain-data">Finding out of domain data</h4>
+
+<p>concatenating all of the independent variable,</p>
+
+<p>and ask is this data from training set or validation set?</p>
+
+<p>difference between valid data and train set,</p>
+
+<p>and extrapolation will not happen if it’s neural net.</p>
+
+<h4 id="using-a-neural-network">Using a neural network</h4>
+
+<h4 id="sidebar-fastais-tabular-classes">Sidebar: fastai’s Tabular classes</h4>
+
+<p>In fastai, a tabular model is simply a model which takes columns of continuous or categorical data, and predicts a category (a classification model) or a continuous value (a regression model). Categorical independent variables are passed through an embedding, and concatenated, as we saw in the neural net we used for collaborative filtering, and then continuous variables are concatenated as well.</p>
+
+<h4 id="end-sidebar-1">End sidebar</h4>
+
+<h4 id="ensembling">Ensembling</h4>
+
+<p>It’s simple we can just do average.</p>
+
+<h4 id="boosting">Boosting</h4>
+
+<p>another approach when we do ensemble,</p>
+
+<p>this is pretty sensitive to hyper-parameters</p>
+
+<blockquote>
+  <p>with tabular, dropping the feature is better than regularization? J: 
+(#f) J:</p>
+</blockquote>
+
+<h4 id="combining-embeddings-with-other-methods">Combining embeddings with other methods</h4>
+
+<p>Entity embedding, which is <code class="highlighter-rouge">EE</code></p>
+
+<h3 id="conclusion-our-advice-for-tabular-modeling">Conclusion: our advice for tabular modeling</h3>
+
+<p>slow regarding inference time, because they have to infer at every tree</p>
+
+<h3 id="questionnaire-1">Questionnaire</h3>
+
+<hr />
+
+<p>Jiwon, here is an answer from Jona R on the forum: Not certain, but I think that “0” was not actually a choice that users could rate. It seemed to me like it was used as a placeholder for “no rating” in some of Jeremy’s models.
+That means that the lowest you would need to predict is “1”, which means that setting range 0 provides sufficient buffer.</p>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>wasn’t it 3d? how can we draw it using 2d drawing? <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>why it does not use minimum to minus? like [-0.5, 5.5] <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>

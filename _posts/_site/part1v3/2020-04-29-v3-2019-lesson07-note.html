@@ -1,0 +1,354 @@
+<p>Note of lesson7 : Deep Learning Part 1 of Spring 2019 at USF, version 3 course</p>
+
+<p>Today we will study lots of things so don’t be frustrated.</p>
+
+<ol>
+  <li>ResNets</li>
+  <li>Unets</li>
+  <li>GANs</li>
+  <li>RNNs</li>
+</ol>
+
+<h2 class="no_toc" id="contents">CONTENTS</h2>
+
+<p>@reshama at fastai forum, who deployed app using fastai both of ios and android version.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#lesson7-resnet-mnistipynb" id="markdown-toc-lesson7-resnet-mnistipynb">lesson7-resnet-mnist.ipynb</a>    <ul>
+      <li><a href="#basic-cnn-with-batchnorm" id="markdown-toc-basic-cnn-with-batchnorm">Basic CNN with batchnorm</a></li>
+      <li><a href="#refactor" id="markdown-toc-refactor">Refactor</a></li>
+      <li><a href="#resnet-ish" id="markdown-toc-resnet-ish">Resnet-ish</a></li>
+    </ul>
+  </li>
+  <li><a href="#lesson3-camvidipynb" id="markdown-toc-lesson3-camvidipynb">lesson3-camvid.ipynb</a></li>
+  <li><a href="#lesson7-suprres-gan" id="markdown-toc-lesson7-suprres-gan">lesson7-suprres-gan</a>    <ul>
+      <li><a href="#crappified-data" id="markdown-toc-crappified-data">Crappified data</a></li>
+      <li><a href="#gans" id="markdown-toc-gans">GANs</a></li>
+      <li><a href="#save-generated-images" id="markdown-toc-save-generated-images">Save generated images</a></li>
+    </ul>
+  </li>
+  <li><a href="#lesson7-wgan" id="markdown-toc-lesson7-wgan">lesson7-wgan</a></li>
+  <li><a href="#lesson7-superres" id="markdown-toc-lesson7-superres">lesson7-superres</a></li>
+  <li><a href="#rnns" id="markdown-toc-rnns">RNNs</a>    <ul>
+      <li><a href="#maintain-state" id="markdown-toc-maintain-state">maintain state</a></li>
+      <li><a href="#nnrnn" id="markdown-toc-nnrnn">nn.RNN</a></li>
+      <li><a href="#2-layer-gru" id="markdown-toc-2-layer-gru">2-layer GRU</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>(#f) what do learn</p>
+
+<h2 id="lesson7-resnet-mnistipynb"><a href="https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson7-resnet-mnist.ipynb">lesson7-resnet-mnist.ipynb</a></h2>
+
+<p>data block API</p>
+
+<p>pillow’s convert mode <code class="highlighter-rouge">L</code>, which is grey scale</p>
+
+<p>items attribute is kind of the thing we get from data</p>
+
+<p>binary color map, refer to matplotlib for more info</p>
+
+<p>remember that pytorch put channel first</p>
+
+<p>you have to say how to split (when using fastai lib)</p>
+
+<p>validation is (of course) has labels</p>
+
+<p>1) have itemlist 2) split it 3) label it</p>
+
+<p>y are category object for now mnist</p>
+
+<p>transforms</p>
+<ul>
+  <li>kind of digit, you don’t want to rotate or flip since it will change the digit’s meaning</li>
+</ul>
+
+<p>So Jeremy added random crop and added padding</p>
+
+<p>[]: empty is transforms for validation set, no need for transform for validation set.</p>
+
+<p>we don’t use pre-trained model, so we don’t need image net stats. (#f)</p>
+
+<p>plot_multi can show you results of calling some function, which grab the dataset, how many transformed version we create?: infinite, each time we call it, we grab the new transformed dataset.</p>
+
+<p>(batch_size, channel, row, col)</p>
+
+<h3 id="basic-cnn-with-batchnorm">Basic CNN with batchnorm</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="n">ni</span><span class="p">,</span> <span class="n">nf</span><span class="p">,</span> <span class="n">kernel_size</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>how many channels you want? -&gt; as much as you want</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(#f)
+</code></pre></div></div>
+
+<p>(1,8) -&gt; one channel coming in,  <code class="highlighter-rouge">8</code>: how many filters you want to come out</p>
+
+<p>conv(ni, nf) &lt;- ni, nf is input / output channel</p>
+
+<p>so as a result, 10 by 1 by 1 (which means grid size is 1)</p>
+
+<p>careful of the comment, which represents grid size</p>
+
+<p>it decreases by half since <code class="highlighter-rouge">stride = 2</code></p>
+
+<h3 id="refactor">Refactor</h3>
+
+<p>exactly the same neural net.</p>
+
+<p>how can we improve this?</p>
+
+<h3 id="resnet-ish">Resnet-ish</h3>
+
+<p><a href="https://arxiv.org/abs/1512.03385">Deep Residual Learning for Image Recognition</a> - skip connection, identity, res block</p>
+<ul>
+  <li>Motivation of the paper: 56 layer is way more worse than the 20-layer(shallow) network.</li>
+  <li>Idea: keep the 56 layers but make results identical with shallow version</li>
+  <li>How: <code class="highlighter-rouge">a building block</code>, every two convolutions, add the results together with input</li>
+</ul>
+
+<p><em>and this became legendary architecture</em></p>
+
+<p><a href="https://arxiv.org/abs/1712.09913">Visualising the Loss Landscape of Neural Nets</a></p>
+<ul>
+  <li>x, y - weight space, y - loss</li>
+  <li>without identity connection, it’s very bumpy and with res connection, and this is little bit similar with batch norm.</li>
+</ul>
+
+<p>except the last one, jeremy added res block without last layer.</p>
+
+<p>don’t forget to refactor your code</p>
+
+<p><code class="highlighter-rouge">.9954</code>, and NIPS 2015 the best paper was 0.45% error - sota changes so fast</p>
+
+<p><code class="highlighter-rouge">MergeLayer</code></p>
+
+<p>SequentialEx : Sequential extended (#f)</p>
+
+<p>and real code, we don’t add, but <code class="highlighter-rouge">concat</code>.  and this is <strong>dense net</strong>.</p>
+<ul>
+  <li>memory intensive because how deep you go in, you have original data, but very little parameter (#q) (#f)</li>
+</ul>
+
+<p>really work well for segmentation</p>
+
+<p>(#f) re-building the modern architecture, and he keep trying to show …..(#f)</p>
+
+<h2 id="lesson3-camvidipynb"><a href="https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson3-camvid-tiramisu.ipynb">lesson3-camvid.ipynb</a></h2>
+
+<p>in order to color cluster, it has to know what that it is</p>
+
+<p><a href="https://arxiv.org/abs/1603.07285">A guide to convolution arithmetic for deep learning</a> - great picture show what does 3 by 3 half stride conv looks like.</p>
+
+<p>U-net, down sampling path. size keep decreasing, channels keep increasing. And at last the grid size came back to same.</p>
+
+<p>Then, how do we double the grid size?</p>
+
+<p>stride - half convolution -&gt; transposed convolution, deconvolution,</p>
+
+<p>and this is maybe 1, 2 years ago.
+why?</p>
+<ol>
+  <li>nearly all of the pixel is zero</li>
+  <li>different amount of information to the different convolution path (see the paper, and understand myself)</li>
+</ol>
+
+<p><strong>Solution:</strong> (1) Nearest neighbour interpolation</p>
+<ul>
+  <li>just copy twice, no zero, no computation.</li>
+</ul>
+
+<p>(2) bilinear interpolation - weighted average (this is pretty standard with picture)</p>
+
+<p><img src="" alt="/assets/images/lesson03-1.png" /> - kind of skip connection but not added to the every 2 conv block, but to the same stage of the downsampling to the same stage of the upsampling</p>
+
+<hr />
+
+<p>see the code how fastai implemented this</p>
+
+<p>encoder refers to the downsampling part, which is substituted with resnet</p>
+
+<p>unet_block is connection between the up-sampling and down-sampling</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class UnetBlock
+</code></pre></div></div>
+
+<p>they grab the hook, to use resnet, and <code class="highlighter-rouge">up_out</code> using up-sampling</p>
+
+<p>each time you see two convolutions like <code class="highlighter-rouge">conv2(conv1())</code>, you can think of what if I add the res block? probably you would get a better results.</p>
+
+<p>identity connection is done with 1) add 2) concat</p>
+
+<hr />
+
+<blockquote>
+  <p>Q. why call concat before conv1, conv2 and not after? (#q - see the code) /  J: there’s no way to interact with channel (???) remember if you do 2 conv, it’s actually 3d, (#f)</p>
+</blockquote>
+
+<blockquote>
+  <p>Q. size of image feature layer changes, how does dense net work since it concatenate. / J: ?? (#f) 53:00:00</p>
+</blockquote>
+
+<hr />
+
+<h2 id="lesson7-suprres-gan"><a href="https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson7-superres-gan.ipynb">lesson7-suprres-gan</a></h2>
+
+<p>will use to another task, <em>image restoration</em>, which starts from the image but will make <em>better</em> image, like black-white to color, resolution, .. (#f)</p>
+
+<h3 id="crappified-data">Crappified data</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>paraLLeL(crappify, il.items)
+</code></pre></div></div>
+
+<p>fastai’s function which does crappification(it takes time quite much)</p>
+
+<p>we gonna use, pre-trained model, since we added some noise and we have to catch what original picture was., which is watermark removal</p>
+
+<p>use MESLoss, and it normally expects two vectors, which can compare so we flat version.</p>
+
+<p>pre-trained part of unet is down-sampling part.</p>
+
+<h3 id="gans">GANs</h3>
+
+<p>Motivation of GAN: Our loss function doesn’t represent what we want.</p>
+<ul>
+  <li>we are missing the texture of pillow, blanket</li>
+</ul>
+
+<p>-&gt; the emergent of GAN.
+it uses another models(<strong>Critic, discriminator</strong>) for loss function</p>
+
+<p>t = 3761 » Jeremy explaination of GAN</p>
+
+<p>cons: if you don’t have pre-trained Critic/Generator, it’s kind of blind vs blind</p>
+
+<h3 id="save-generated-images">Save generated images</h3>
+
+<p>let’s create Critics</p>
+
+<p>(#q) reconstruct = True</p>
+
+<p>we will learn more of what’s going on inside at part2</p>
+
+<p>if you don’t want to re-initiate the gpu ram, you can gc.collect() which will remove caching gpu.</p>
+
+<p>we will use Binary Cross Entropy but will not use resnot</p>
+<ul>
+  <li>Because of weight could be increased much that we can’t handle that, but will learn at part2</li>
+</ul>
+
+<p>we should be careful when using gan, loss which uses adaptive loss</p>
+
+<p>we not only use the critic to loss function, but also MSE loss because if we use only the Critics as loss function, generator could make irrelevant photo of the original image.</p>
+
+<p>GANs hates momentum. - but nobody figured it out.</p>
+
+<p>tough things of training gan - loss number is meaningless. / so you have to see the results from time to time</p>
+
+<p>(original craffied picture / generated picture / original picture)</p>
+
+<hr />
+
+<blockquote>
+  <p>Q. What kind of task you will not use U-net? / J: Unet is used when size of output is aligned to the input. so any kind of generative modelling and segmentation is also generative modelling because we should out pixel segments which is responding to original pixel. and it would be absurd if we use unet to the classification, because we just need the down-sampling process.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="lesson7-wgan"><a href="https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson7-wgan.ipynb">lesson7-wgan</a></h2>
+
+<p>(skipped so fast…)</p>
+
+<p>interesting because we use bedrooms dataset</p>
+
+<p>the approach that we use is ‘can we create a bedroom?’</p>
+
+<p>we feed the generator <strong>random noise</strong></p>
+
+<p>and generator should return the de-noised bedroom.</p>
+
+<h2 id="lesson7-superres"><a href="https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson7-superres-gan.ipynb">lesson7-superres</a></h2>
+
+<p><a href="https://arxiv.org/abs/1603.08155">Perceptual Losses for Real-Time Style Transfer and Super-Resolution</a></p>
+
+<p>doesn’t like the term ‘perceptual’ - jeremy prefers to say it is feature losses</p>
+
+<p>down-sampling part is called encoder, and vice versa</p>
+
+<p>same color represents same grid size</p>
+
+<p>(#f) explained idea but could not get. - <em>t=5022</em></p>
+
+<p>pick the l1 loss or mse ( no matter)</p>
+
+<p>grad is false since we will use only the loss</p>
+
+<p>class featureloss is the implementation of the paper</p>
+
+<p>(abandoned to write -&gt; too hard…. and too fast)</p>
+
+<hr />
+
+<p>upsize medium res data, and you can see the pixels enlarged focus.</p>
+
+<p>results is quite good</p>
+
+<p><a href="https://github.com/jantic/DeOldify">DeOldify</a></p>
+<ul>
+  <li>the student of fast.ai, made colored picture who had the fast.ai course.</li>
+</ul>
+
+<p>(#f) and also said lots of idea related to this. we can new way of Crappification.</p>
+
+<hr />
+
+<blockquote>
+  <p>Q. how about using unet or gan to nlp, kind of generating shakespear’s novel. / J: possible, and it’s quite blue ocean, and will look thorough little bit at part2</p>
+</blockquote>
+
+<p>Be sure not to understand at once, go through this at least 3 times or more</p>
+
+<hr />
+
+<h2 id="rnns"><a href="https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson7-human-numbers.ipynb">RNNs</a></h2>
+
+<ul>
+  <li>square - input / arrow - layer / circle - activation / triangle - output</li>
+</ul>
+
+<p>go to the learn.summary and see the specifics</p>
+
+<p>we will do mat mul and non-linearity one(or more) more, but (??) will use same weight.</p>
+
+<p><code class="highlighter-rouge">bptt</code> - back prop through time</p>
+
+<p>13017 / 70 / bs - all dataset divide first  by batch size, and after that, divide by length limit (but why??????)</p>
+
+<p>every mini-batch joins up with previous mini-batch (that’s why he showed textify)</p>
+
+<p><code class="highlighter-rouge">how we convert the diagram to the code</code></p>
+
+<p>rnn is just a refactoring, there’s nothing new.</p>
+
+<p>-&gt; but only just predicting last word is wasteful, so we will predict every word, which means just triangle comes inside the model.</p>
+
+<h3 id="maintain-state">maintain state</h3>
+
+<p>Let’s keep the hidden state.</p>
+
+<p>(rnn is totally normal nn but just refactored)</p>
+
+<h3 id="nnrnn">nn.RNN</h3>
+
+<p>this time we will render the output the other loop, which is <code class="highlighter-rouge">nn.RNN</code></p>
+
+<p>bptt 20 means 20 layers of the diagram.</p>
+
+<h3 id="2-layer-gru">2-layer GRU</h3>
+
+<p>there are small nn which decide how much apply the nodes.</p>
+
+<p>GRU/lstm is depended on specifics</p>
+

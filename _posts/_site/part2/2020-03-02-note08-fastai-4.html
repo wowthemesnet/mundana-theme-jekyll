@@ -1,0 +1,470 @@
+<ul>
+  <li>This note is divided into 4 section.
+    <ul>
+      <li>Section1: <a href="https://spellonyou.github.io/2020/02/note08-fastai-1/">What is the meaning of ‘deep-learning from foundations?’</a></li>
+      <li>Section2: <a href="https://spellonyou.github.io/2020/03/note08-fastai-2/">What’s inside Pytorch Operator?</a></li>
+      <li>Section3: <a href="https://spellonyou.github.io/2020/03/note08-fastai-3/">Implement forward&amp;backward pass from scratch</a></li>
+      <li>Section4: <a href="https://spellonyou.github.io/2020/03/note08-fastai-4/">Gradient backward, Chain Rule, Refactoring</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>” Lecture 08 - Deep Learning From Foundations-part2 “</p>
+
+<h3 class="no_toc" id="homework">Homework</h3>
+
+<ul>
+  <li><a href="https://explained.ai/matrix-calculus/index.html">calculus for machine learning</a></li>
+  <li><a href="https://rockt.github.io/2018/04/30/einsum">einsum convention</a></li>
+</ul>
+
+<h3 class="no_toc" id="contents">CONTENTS</h3>
+
+<ul id="markdown-toc">
+  <li><a href="#foundation-version" id="markdown-toc-foundation-version">Foundation version</a>    <ul>
+      <li><a href="#gradients-backward-pass" id="markdown-toc-gradients-backward-pass">Gradients backward pass</a>        <ul>
+          <li><a href="#decompose-function" id="markdown-toc-decompose-function">decompose function</a></li>
+          <li><a href="#chain-rule-with-code" id="markdown-toc-chain-rule-with-code">chain rule with code</a></li>
+          <li><a href="#check-the-result-using-pytorch-autograd" id="markdown-toc-check-the-result-using-pytorch-autograd">check the result using Pytorch autograd</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#refactor-model" id="markdown-toc-refactor-model">Refactor model</a>    <ul>
+      <li><a href="#layers-as-classes" id="markdown-toc-layers-as-classes">Layers as classes</a></li>
+      <li><a href="#modueforward" id="markdown-toc-modueforward">Modue.forward()</a></li>
+      <li><a href="#without-einsum" id="markdown-toc-without-einsum">Without einsum</a></li>
+      <li><a href="#nnlinear-and-nnmodule" id="markdown-toc-nnlinear-and-nnmodule">nn.Linear and nn.Module</a></li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li>Forward process</li>
+</ul>
+
+<p><img src="/assets/images/4-forward.png" alt="" /></p>
+
+<h3 id="foundation-version">Foundation version</h3>
+
+<h4 id="gradients-backward-pass">Gradients backward pass</h4>
+
+<ul>
+  <li>Gradients is output with respect to parameter</li>
+  <li>we’ve done this work in this path(below)</li>
+</ul>
+
+<p><img src="/assets/images/4-calculus.jpeg" alt="" /></p>
+
+<ul>
+  <li>to simplify this calculus, we can just change it into</li>
+</ul>
+
+<p><script type="math/tex">y=f(u)</script>,
+<script type="math/tex">u=g(x)</script></p>
+
+<ul>
+  <li>So, you should know of the derivative of each bit on its own, and then you multiply them all together. As a result, it would be <script type="math/tex">dy</script> over <script type="math/tex">dx</script> cross over the data.</li>
+</ul>
+
+<p><img src="/assets/images/4-derivative.png" alt="" /></p>
+
+<ul>
+  <li>So you can get gradient, output with respect to parameter</li>
+</ul>
+
+<p><img src="/assets/images/4-chain_rule.png" alt="" /></p>
+
+<ul>
+  <li>What order should we calculate?</li>
+</ul>
+
+<p><img src="/assets/images/4-calculus.jpeg" alt="" /></p>
+
+<p style="color:gray; font-size: 110%; text-align: center;">BTW, why Jeremy wrote <script type="math/tex">\hat y</script>, not <em>Loss function</em>?<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+
+<h5 id="decompose-function">decompose function</h5>
+
+<ul>
+  <li>We want to get derivative of <script type="math/tex"> w_1 </script> which forms <script type="math/tex">t=x_1 @ w_1 + b_1</script></li>
+  <li>But, we have a estimation of answer (<em>we call it y hat</em>) now</li>
+  <li>So, I will decompose funciton to trace target variable.</li>
+</ul>
+
+<script type="math/tex; mode=display">\overset{\rightharpoonup}{u}\ \ linear_1\ \ \overset{\rightharpoonup}{w}\ \ ReLU\ \ \overset{\rightharpoonup}{v}\ \ linear_2\ \ \overset{\rightharpoonup}{a}\ \ MSE = \hat y</script>
+
+<ul>
+  <li>Using the above forward pass, we can suppose some function from the end.</li>
+  <li>start from <script type="math/tex">  \hat y </script>, We know MSE funciton got two parameters, output, <script type="math/tex">u</script> and target <script type="math/tex">y</script>.</li>
+  <li>from MSE’s input we know <script type="math/tex">  linear_2</script> function’s output and supposing v is input of that function, <script type="math/tex">linear_2(v) = u</script></li>
+  <li>similarly, <em>v</em> became output of <script type="math/tex">ReLU, ReLU(t) = v</script></li>
+</ul>
+
+<p><img src="/assets/images/4-backward3.jpeg" alt="" height="70%" width="70%" /></p>
+
+<h5 id="chain-rule-with-code">chain rule with code</h5>
+
+<ul>
+  <li>
+    <p>examplify backward process by random sampling</p>
+  </li>
+  <li>
+    <p>To get a variable, I modified forward model a little</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">model_ping</span><span class="p">(</span><span class="n">out</span> <span class="o">=</span> <span class="s">'x_train'</span><span class="p">):</span>
+    <span class="n">l1</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">w1</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span> <span class="c1"># one linear layer
+</span>    <span class="n">l2</span> <span class="o">=</span> <span class="n">relu</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span> <span class="c1"># one relu layer
+</span>    <span class="n">l3</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">l2</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">b2</span><span class="p">)</span> <span class="c1"># one more linear layer
+</span>    <span class="k">return</span> <span class="nb">eval</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Be careful we don’t use mse_loss in backward process</li>
+</ul>
+
+<p>1) start with the very last function, which is loss funciton. MSE</p>
+
+<p><img src="/assets/images/4-mse.jpeg" alt="" height="40%" width="40%" class="center-image;" /></p>
+
+<script type="math/tex; mode=display">\color{red}{\frac{\partial}{\partial u}MSE(u,y)} \times\frac{\partial}{\partial v}l_2(v)\times\frac{\partial}{\partial t}ReLU(t)\times\frac{\partial}{\partial x}l_1(x)</script>
+
+<ul>
+  <li>If we codify this formula,</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">mse_grad</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span>  <span class="c1">#mse_input(1000,1), mse_targ (1000,1)
+</span>    <span class="c1"># grad of loss with respect to output of previous layer
+</span>    <span class="n">inp</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="mf">2.</span> <span class="o">*</span> <span class="p">(</span><span class="n">inp</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span> <span class="o">-</span> <span class="n">targ</span><span class="p">)</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">inp</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div></div>
+
+<ul>
+  <li>And, this can be examplified like below.</li>
+  <li>Notice that input of gradient function is same with forward function</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">y_hat</span> <span class="o">=</span> <span class="n">model_ping</span><span class="p">(</span><span class="s">'l3'</span><span class="p">)</span> <span class="c1">#get value from forward model
+</span><span class="n">y_hat</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="p">((</span><span class="n">y_hat</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="n">y_hat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">y_hat</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">shape</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">50000</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+</code></pre></div></div>
+
+<ul>
+  <li>We can just calculate using broadcasting, not using squeeze. then why should do and unsqueeze again?<br />
+🎯 It’s related with random access memory(RAM).. If I don’t <em>squeeze</em>, (I’m using colab) <strong>it out of RAM</strong>.</li>
+</ul>
+
+<p>2) Derivative of linear2 function</p>
+
+<script type="math/tex; mode=display">\frac{\partial}{\partial u}MSE(u,y) \times\color{red}{\frac{\partial}{\partial v}l_2(v)} \times \frac {\partial}{\partial t}ReLU(t)\times\frac{\partial}{\partial x}l_1(x)</script>
+
+<ul>
+  <li>This process’s weight dimensions defined by axis=1, axis=2.</li>
+  <li>axis=0 dimension means size of data. This will be summazed by .sum(0) method.</li>
+  <li>unsqeeze(-1)&amp;unsqeeze(1) seperates the dimension, and make a dot product, and vanish axis=0 dimension.</li>
+</ul>
+
+<p><img src="/assets/images/4-wayofbackward.jpeg" alt="" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">lin_grad</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="c1"># grad of matmul with respect to input
+</span>    <span class="n">inp</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span> <span class="o">@</span> <span class="n">w</span><span class="o">.</span><span class="n">t</span><span class="p">()</span>
+    <span class="n">w</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">inp</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Examplified below</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lin2</span> <span class="o">=</span> <span class="n">model_ping</span><span class="p">(</span><span class="s">'l2'</span><span class="p">);</span> <span class="c1">#get value from forward model
+</span><span class="n">lin2</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="n">y_hat</span><span class="o">.</span><span class="n">g</span><span class="o">@</span><span class="n">w2</span><span class="o">.</span><span class="n">t</span><span class="p">();</span> 
+<span class="n">w2</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">lin2</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">y_hat</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">b2</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="n">y_hat</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lin2</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">w2</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">b2</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">shape</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">50000</span><span class="p">,</span> <span class="mi">50</span><span class="p">])</span><span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">50</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span><span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">1</span><span class="p">])</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Notice going reverse order, we’re passing in gradient backward</li>
+</ul>
+
+<p>3) derivative of ReLU</p>
+
+<p><img src="/assets/images/4-relu.png" alt="" /></p>
+
+<p><img src="/assets/images/4-relugrad.png" alt="" /></p>
+
+<script type="math/tex; mode=display">\frac{\partial}{\partial u}MSE(u,y) \times \frac{\partial}{\partial v}l_2(v) \times \color{red}{\frac{\partial}{\partial t}ReLU(t)}\times\frac{\partial}{\partial x}l_1(x)</script>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">relu_grad</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">out</span><span class="p">):</span>
+    <span class="c1"># grad of relu with respect to input activations
+</span>    <span class="n">inp</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">inp</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="nb">float</span><span class="p">()</span> <span class="o">*</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Examplified below</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lin1</span><span class="o">=</span><span class="n">model_ping</span><span class="p">(</span><span class="s">'l1'</span><span class="p">)</span> <span class="c1">#get value from forward model
+</span><span class="n">lin1</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">lin1</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="nb">float</span><span class="p">()</span> <span class="o">*</span> <span class="n">lin2</span><span class="o">.</span><span class="n">g</span><span class="p">;</span>
+<span class="n">lin1</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">shape</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">50000</span><span class="p">,</span> <span class="mi">50</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>4) Derivative of linear1</p>
+
+<ul>
+  <li>Same process with 2) but, this process’s weight has</li>
+</ul>
+
+<script type="math/tex; mode=display">\frac{\partial}{\partial u}MSE(u,y) \times \frac{\partial}{\partial v}l_2(v) \times \frac{\partial}{\partial t}ReLU(t)\times\color{red}{\frac{\partial}{\partial x}l_1(x)}</script>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">lin_grad</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="c1"># grad of matmul with respect to input
+</span>    <span class="n">inp</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span> <span class="o">@</span> <span class="n">w</span><span class="o">.</span><span class="n">t</span><span class="p">()</span>
+    <span class="n">w</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">inp</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Examplified below</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x_train</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="n">lin1</span><span class="o">.</span><span class="n">g</span> <span class="o">@</span> <span class="n">w1</span><span class="o">.</span><span class="n">t</span><span class="p">();</span> 
+<span class="n">w1</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">x_train</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">lin1</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> 
+<span class="n">b1</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="n">lin1</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="n">x_train</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">w1</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">b1</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">shape</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">50000</span><span class="p">,</span> <span class="mi">784</span><span class="p">])</span><span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">784</span><span class="p">,</span> <span class="mi">50</span><span class="p">])</span><span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">50</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>5) Then it goes backward pass</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">forward_and_backward</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span>
+    <span class="c1"># forward pass:
+</span>    <span class="n">l1</span> <span class="o">=</span> <span class="n">inp</span> <span class="o">@</span> <span class="n">w1</span> <span class="o">+</span> <span class="n">b1</span>
+    <span class="n">l2</span> <span class="o">=</span> <span class="n">relu</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">l2</span> <span class="o">@</span> <span class="n">w2</span> <span class="o">+</span> <span class="n">b2</span>
+    <span class="c1"># we don't actually need the loss in backward!
+</span>    <span class="n">loss</span> <span class="o">=</span> <span class="n">mse</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">targ</span><span class="p">)</span>
+    
+    <span class="c1"># backward pass:
+</span>    <span class="n">mse_grad</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">targ</span><span class="p">)</span>
+    <span class="n">lin_grad</span><span class="p">(</span><span class="n">l2</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">b2</span><span class="p">)</span>
+    <span class="n">relu_grad</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">)</span>
+    <span class="n">lin_grad</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">l1</span><span class="p">,</span> <span class="n">w1</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p style="color:red; font-size:110;">Version 1 (Basic)- Wall time: 1.95 s</p>
+
+<p style="color:gray; font-size: 130%; text-align: left;">Summary</p>
+
+<ul>
+  <li>Notice that output of function at forward pass became input of backward pass</li>
+  <li>backpropagation is just the chain rule</li>
+  <li>value loss <em>(loss=mse(out,targ))</em> is not used in gradient calcuation.
+    <ul>
+      <li>Because, it doesn’t appear with the weight.</li>
+    </ul>
+  </li>
+  <li>w1g, w2g, b1g, b2g, ig will be used for optimizer</li>
+</ul>
+
+<h5 id="check-the-result-using-pytorch-autograd">check the result using Pytorch autograd</h5>
+
+<ul>
+  <li><em>require_grad_</em> is the magical function, which can automatic differentiation.<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>
+    <ul>
+      <li>This magical auto gradified tensor <strong>keep track</strong> what happend in forward (taking loss function),</li>
+      <li>and do the backward<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup></li>
+      <li>So it saves our time to differentiate ourselves</li>
+    </ul>
+  </li>
+  <li>Postfix underscore means in pytorch, <code class="highlighter-rouge">in-place</code> function, <a href="https://discuss.pytorch.org/t/what-is-in-place-operation/16244">What is in-place function?</a></li>
+</ul>
+
+<p>⤵️ THis is benchmark…..</p>
+
+<p style="color:red; font-size:110;">Version 2 (torch autograd)- Wall time: 3.81 µs</p>
+
+<h3 id="refactor-model">Refactor model</h3>
+
+<ul>
+  <li>Amazingly, just refactoring our main pieces, it comes down up to Pytorch package.</li>
+</ul>
+
+<p style="color:red; font-size: 140%; text-align: center;">🌟 Implement yourself, Practice, practice, practice! 🌟</p>
+
+<h4 id="layers-as-classes">Layers as classes</h4>
+
+<ul>
+  <li>
+    <p>Relu and Linear are layers in oue neural net. -&gt; make it as classes</p>
+  </li>
+  <li>
+    <p>For the forward, using __call__ for the both of forward &amp; backward. Because ‘<strong>call</strong>’ means we treat this as a function.</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Lin</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">w</span><span class="p">,</span><span class="n">b</span>
+        
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inp</span> <span class="o">=</span> <span class="n">inp</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">out</span> <span class="o">=</span> <span class="n">inp</span><span class="o">@</span><span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">out</span>
+    
+    <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inp</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">g</span> <span class="o">@</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="o">.</span><span class="n">t</span><span class="p">()</span>
+        <span class="c1"># Creating a giant outer product, just to sum it, is inefficient!
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inp</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Remember that in <em>lin_grad</em> function, we save bias&amp;weight!!!!!</li>
+</ul>
+
+<p>💬 inp.g : gradient of the output with respect to the input.
+{: style=”color:grey; font-size: 90%; text-align: center;”} <br />
+💬 w.g : gradient of the output with respect to the weight.
+{: style=”color:grey; font-size: 90%; text-align: center;”} <br />
+💬 b.g : gradient of the output with respect to the bias.
+{: style=”color:grey; font-size: 90%; text-align: center;”} <br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Model</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">w1</span><span class="p">,</span> <span class="n">b1</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">b2</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="p">[</span><span class="n">Lin</span><span class="p">(</span><span class="n">w1</span><span class="p">,</span><span class="n">b1</span><span class="p">),</span> <span class="n">Relu</span><span class="p">(),</span> <span class="n">Lin</span><span class="p">(</span><span class="n">w2</span><span class="p">,</span><span class="n">b2</span><span class="p">)]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">loss</span> <span class="o">=</span> <span class="n">Mse</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">targ</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">:</span> <span class="n">x</span> <span class="o">=</span> <span class="n">l</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">targ</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">):</span> <span class="n">l</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>refer to Jeremy’s <strong>Model</strong> class, he put layers in list</p>
+  </li>
+  <li>Dionne’s self-study note: Decomposing Jeremy’s Model class
+    <ol>
+      <li>init needs weight, bias but not <strong>x data</strong></li>
+      <li>when call that class(a.k.a function) it gave x data and y label!</li>
+      <li>jeremy composited function in layers. x = l(x) <em>so concise…..</em></li>
+      <li>also utilized that layer list when backward ust reversing it (using python list’s method)</li>
+    </ol>
+  </li>
+  <li>And he is recursively calling the function on the result of the previous thing. ⬇️</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">l</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Q2: Don’t I need to declare magical autograd function, <em>requires_grad_</em>?{: style=”color:red; font-size: 130%; text-align: center;”}</p>
+
+<p>[The questions migrated to this article]</p>
+
+<p style="color:red; font-size:110;">Version 3 (refactoring - layer to class)- Wall time: 5.25 µs</p>
+
+<h4 id="modueforward">Modue.forward()</h4>
+
+<ol>
+  <li><strong>Duplicate code</strong> makes execution time slow.
+    <ul>
+      <li>Role of <code class="highlighter-rouge">__call__</code> changed. No more <code class="highlighter-rouge">__call__</code> for <strong>implementing</strong> forward pass.</li>
+      <li>By initializing the forward with <code class="highlighter-rouge">__call__</code>, Module.forward() use overriding to maximize reusability. So any layer inherit Module, can use parent’s function.</li>
+    </ul>
+  </li>
+  <li>gradient of the output with respect to the weight
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inp</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <p>can be reexpressed using einsum,</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">torch</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s">"bi,bj-&gt;ij"</span><span class="p">,</span> <span class="n">inp</span><span class="p">,</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<ul>
+  <li>Defining forward and Module enables Pytorch to out almost duplicates</li>
+</ul>
+
+<p style="color:red; font-size:110;">Version 4 (Module &amp; einsum)- Wall time: 4.29 µs</p>
+
+<p>Q2: Isn’t there any way to use broadcasting? Why we should use outer product?{: style=”color:red; font-size: 130%; text-align: center;”}</p>
+
+<h4 id="without-einsum">Without einsum</h4>
+
+<p>Replacing einsum to matrix product is even more faster.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">torch</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s">"bi,bj-&gt;ij"</span><span class="p">,</span> <span class="n">inp</span><span class="p">,</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span><span class="p">)</span>
+</code></pre></div></div>
+<p>can be reexpressed using matrix product,</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">inp</span><span class="o">.</span><span class="n">t</span><span class="p">()</span> <span class="o">@</span> <span class="n">out</span><span class="o">.</span><span class="n">g</span>
+</code></pre></div></div>
+
+<p style="color:red; font-size:110;">Version 5 (without einsum)- Wall time: 3.81 µs</p>
+
+<h4 id="nnlinear-and-nnmodule">nn.Linear and nn.Module</h4>
+
+<p>Torch’s package nn.Linear and nn.Module</p>
+
+<p style="color:red; font-size:110;">Version 6 (torch package)- Wall time: 5.01 µs</p>
+
+<ul>
+  <li>Final, Using torch.nn.Linear &amp; torch.nn.Module
+~~~python</li>
+</ul>
+
+<p>class Model(nn.Module):
+    def <strong>init</strong>(self, n_in, nh, n_out):
+        super().<strong>init</strong>()
+        self.layers = [nn.Linear(n_in,nh), nn.ReLU(), nn.Linear(nh,n_out)]
+        self.loss = mse</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def __call__(self, x, targ):
+    for l in self.layers: x = l(x)
+    return self.loss(x.squeeze(), targ)
+</code></pre></div></div>
+
+<p>class Model():
+    def <strong>init</strong>(self):
+        self.layers = [Lin(w1,b1), Relu(), Lin(w2,b2)]
+        self.loss = Mse()</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def __call__(self, x, targ):
+    for l in self.layers: x = l(x)
+    return self.loss(x, targ)
+
+def backward(self):
+    self.loss.backward()
+    for l in reversed(self.layers): l.backward()        
+</code></pre></div></div>
+
+<p>~~~</p>
+
+<h3 class="no_toc" id="footnote">Footnote</h3>
+<hr />
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><a href="https://forums.fast.ai/t/lesson-8-2019-discussion-wiki/41323/433">fast.ai forums Lesson-8</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p><a href="https://pytorch.org/docs/stable/autograd.html">pytorch docs - autograd</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p><a href="https://stackoverflow.com/questions/34439/finding-what-methods-a-python-object-has/34452#34452">stackoverflow - finding methods a object has</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>

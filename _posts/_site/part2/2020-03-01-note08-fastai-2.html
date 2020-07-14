@@ -1,0 +1,321 @@
+<p>This note is divided into 4 section.</p>
+<ul>
+  <li>Section1: <a href="https://spellonyou.github.io/2020/02/note08-fastai-1/">What is the meaning of ‘deep-learning from foundations?’</a></li>
+  <li>Section2: <a href="https://spellonyou.github.io/2020/03/note08-fastai-2/">What’s inside Pytorch Operator?</a></li>
+  <li>Section3: <a href="https://spellonyou.github.io/2020/03/note08-fastai-3/">Implement forward&amp;backward pass from scratch</a></li>
+  <li>Section4: <a href="https://spellonyou.github.io/2020/03/note08-fastai-4/">Gradient backward, Chain Rule, Refactoring</a></li>
+</ul>
+
+<h2 id="whats-inside-pytorch-operator">What’s inside Pytorch Operator?</h2>
+
+<p>Section02</p>
+
+<h3 class="no_toc" id="time-comparison-with-pure-python">Time comparison with pure Python</h3>
+
+<ul>
+  <li>
+    <p>Matmul with broadcasting<br />
+&gt; 3194.95 times faster</p>
+  </li>
+  <li>
+    <p>Einstein summation<br />
+&gt; 16090.91 times faster</p>
+  </li>
+  <li>
+    <p>Pytorch’s operator<br />
+&gt; 49166.67 times faster</p>
+  </li>
+</ul>
+
+<h3 id="1-elementwise-op">1. Elementwise op</h3>
+
+<h4 id="11-frobenius-norm">1.1 Frobenius norm</h4>
+
+<p><img src="/assets/images/7.png" alt="" /> <br /></p>
+
+<ul>
+  <li>above converted into <br /></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">m</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sqrt</span><span class="p">()</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Plus, don’t suffer from mathmatical symbols. He also copy and paste that equations from wikipedia.</li>
+  <li>and if you need latex form, download it from archive.</li>
+</ul>
+
+<h3 id="2-elementwise-matmul">2. Elementwise Matmul</h3>
+
+<ul>
+  <li>What is the meaning of elementwise?</li>
+  <li>
+    <p>We do not calculate each component. But all of the component at once. Because, length of column of A and row of B are fixed.</p>
+  </li>
+  <li>How much time we saved?</li>
+</ul>
+
+<p><img src="/assets/images/4.png" alt="" /></p>
+
+<ul>
+  <li>So now that takes 1.37ms. We have removed one line of code and it is a 178 times faster…</li>
+</ul>
+
+<p>#TODO
+I don’t know where the <code class="highlighter-rouge">5</code> from. but keep it.
+Maybe this is related with frobenius norm…?
+as a result, <strong>the code before</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ac</span><span class="p">):</span>
+    <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>the code after<br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span> <span class="o">*</span> <span class="n">b</span><span class="p">[:,</span><span class="n">j</span><span class="p">])</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>To compare it (result betweet <em>original</em> and <em>adjusted</em> version) we use not test_eq but other function. The reason for this is that due to rounding errors from math operations, matrices may not be exactly the same. As a result, we want a function that will “is a equal to b <strong>within some tolerance</strong>”</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#export
+</span><span class="k">def</span> <span class="nf">near</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span> 
+    <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_near</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span> 
+    <span class="n">test</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">near</span><span class="p">)</span>
+
+<span class="n">test_near</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">matmul</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h3 id="3-broadcasting">3. Broadcasting</h3>
+
+<ul>
+  <li>Now, we will use the broadcasting and remove</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span> <span class="o">*</span> <span class="n">b</span><span class="p">[:,</span><span class="n">j</span><span class="p">])</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span>
+</code></pre></div></div>
+
+<ul>
+  <li>How it works?</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+          <span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">],</span>
+          <span class="p">[</span><span class="mi">30</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">30</span><span class="p">]])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=</span><span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,])</span>
+</code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span>
+    
+<span class="p">(</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">]]),</span>
+<span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+         
+</code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+
+<span class="n">tensor</span><span class="p">([[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">31</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">33</span><span class="p">]])</span>
+
+</code></pre></div></div>
+<p><img src="/assets/images/3.png" alt="" /></p>
+<ul>
+  <li>&lt;Figure 2&gt; demonstrated how array <strong>b</strong> is broadcasting(or copied but not occupy memory) to compatible with <strong>a</strong>. <em>Refered from <a href="https://www.tutorialspoint.com/numpy/numpy_broadcasting.htm">numpy_tutorial</a></em></li>
+</ul>
+
+<ul>
+  <li>
+    <p>there is no loop, but it seems there is exactly the loop.</p>
+  </li>
+  <li>
+    <p>This is not from jeremy (actually after a moment he cover it) but i wondered How to broadcast an array by columns?</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span><span class="o">=</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">]])</span>
+<span class="n">a</span><span class="o">+</span><span class="n">c</span>
+</code></pre></div></div>
+
+<p><em>tensor([[11, 11, 11],
+        [22, 22, 22],
+        [33, 33, 33]])</em>s</p>
+
+<hr />
+
+<ul>
+  <li>What is tensor.stride()?</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">help</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">stride</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><em>Help on built-in function stride:<br />
+    stride(…) method of torch.<br />
+Tensor instance<br />
+stride(dim) -&gt; tuple or int<br />
+Returns the stride of :attr:’self’ tensor.<br />
+Stride is the jump necessary to go from one element to the next one in the specified dimension :attr:’dim’.<br />
+A tuple of all strides is returned when no argument is passed in.<br />
+Otherwise, an integer value is returned as the stride in the particular dimension :attr:’dim’.<br /></em></p>
+
+<p>Args:
+    dim (int, optional): the desired dimension in which stride is required
+Example::*</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]])</span><span class="err">`</span>
+<span class="n">x</span><span class="o">.</span><span class="n">stride</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">stride</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span>
+<span class="n">x</span><span class="o">.</span><span class="n">stride</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>unsqueeze &amp; None index</p>
+  </li>
+  <li>We can manipulate rank of tensor</li>
+  <li>Special value ‘None’, which means please squeeze a new axis here<br />
+<strong>== please broadcast here</strong></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">])</span>
+<span class="n">c</span><span class="p">[</span><span class="bp">None</span><span class="p">,:]</span>
+</code></pre></div></div>
+
+<ul>
+  <li>in c, <em>squeeze a new axis in here please.</em></li>
+</ul>
+
+<h4 id="22-matmul-with-broadcasting">2.2 Matmul with broadcasting</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ar</span><span class="p">):</span>
+<span class="c1">#   c[i,j] = (a[i,:]).          *[:,j].sum() #previous
+</span>    <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>   <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>And Using <code class="highlighter-rouge">None</code> also (As howard teached)</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>   <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span>  <span class="p">]</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#howard
+</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>   <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">][:,</span><span class="bp">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># using None
+</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>   <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,:,</span><span class="bp">None</span><span class="p">]</span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>⭐️Tips🌟  <br />
+1) <em>Anytime there’s a trailinng(final) colon in numpy or pytorch you can delete it</em>
+  <em>ex) c[i, :] = c [i]</em>
+2) any number of colon commas at the start, you can switch it with the single elipsis.
+  <em>ex) c[:,:,:,:,i] = c […,i]</em></p>
+
+<h4 id="23-broadcasting-rules">2.3 Broadcasting Rules</h4>
+
+<ul>
+  <li>What if we <code class="highlighter-rouge">tensor.size([1,3]) * tensor.size([3,1])</code>?
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What is scale????</li>
+  <li>
+    <p>What if they are one array is <code class="highlighter-rouge">times</code> of the other array?
+ <br /> ex) 
+<code class="highlighter-rouge">Image : 256 x 256 x 3</code><br />
+<code class="highlighter-rouge">Scale : 128 x 256 x 3</code><br />
+<code class="highlighter-rouge">Result: ?</code></p>
+  </li>
+  <li>Why I did not inserted axis via None, but happened broadcasting? <br /></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">*</span> <span class="n">c</span><span class="p">[:,</span><span class="bp">None</span><span class="p">]</span>
+<span class="n">tensor</span><span class="p">([[</span><span class="mf">100.</span><span class="p">,</span> <span class="mf">200.</span><span class="p">,</span> <span class="mf">300.</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">200.</span><span class="p">,</span> <span class="mf">400.</span><span class="p">,</span> <span class="mf">600.</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">300.</span><span class="p">,</span> <span class="mf">600.</span><span class="p">,</span> <span class="mf">900.</span><span class="p">]])</span>
+</code></pre></div></div>
+
+<p>maybe it broadcast cz following array has 3 rows<br /></p>
+
+<p>as same principle, no matter what nature shape was, <em>if we do the operation</em> tensor broadcasts to the other.<br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="o">==</span><span class="n">c</span><span class="p">[</span><span class="bp">None</span><span class="p">]</span>
+<span class="n">tensor</span><span class="p">([[</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">]])</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="p">[</span><span class="bp">None</span><span class="p">]</span><span class="o">==</span><span class="n">c</span><span class="p">[</span><span class="bp">None</span><span class="p">,:]</span>
+<span class="n">tensor</span><span class="p">([[</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">]])</span>
+
+<span class="o">&gt;&gt;&gt;</span><span class="n">c</span><span class="p">[</span><span class="bp">None</span><span class="p">,:]</span><span class="o">==</span><span class="n">c</span>
+<span class="n">tensor</span><span class="p">([[</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">]])</span>
+</code></pre></div></div>
+
+<h3 id="3-einstein-summation">3. Einstein summation</h3>
+
+<p><img src="/assets/images/this-is-einsum.jpg" alt="" /></p>
+
+<ul>
+  <li>Creates batch-wise, remove inner most loop, and replaced it with an elementwise product
+a.k.a</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">b</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>
+</code></pre></div></div>
+<p>inner most loop</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span> <span class="o">*</span> <span class="n">b</span><span class="p">[:,</span><span class="n">j</span><span class="p">])</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>elementwise product</p>
+
+<ul>
+  <li>Because K is repeated so we do a dot product. And it is torch.</li>
+</ul>
+
+<p>Usage of <a href="https://pytorch.org/docs/stable/torch.html#torch.einsum">einsum()</a>
+1) transpose
+2) diagnalisation tracing
+3) batch-wise (matmul)</p>
+
+<p>…</p>
+
+<ul>
+  <li>einstein summation notation</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">matmul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span> <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s">'ik,kj-&gt;ij'</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>so after all, we are now 16000 times faster than Python.</p>
+
+<h3 id="4-pytorch-op">4. Pytorch op</h3>
+
+<p>49166.67 times faster than pure python</p>
+
+<p>And we will use this matrix multiplication in Fully Connect forward, with some initialized parameters and ReLU.</p>
+
+<p>But before that, we need initialized parameters and ReLU,</p>
+
+<hr />
+
+<h4 id="footnote">Footnote</h4>
+
+<ul>
+  <li><a href="http://mathworld.wolfram.com/TensorRank.html">TensorRank</a></li>
+  <li><a href="https://forums.fast.ai/t/forum-markdown-notes-lesson-8/41896">ti note</a></li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li>Frobenius Norm Review</li>
+  <li>Broadcasting Review (especially <em><a href="https://docs.scipy.org/doc/numpy-1.13.0/user/basics.broadcasting.html#general-broadcasting-rules">Rule</a></em>)
+    <ul>
+      <li>Refer <a href="https://render.githubusercontent.com/view/ipynb?commit=2bfe4a95aac864b23bd0c0729d2720c92e169f8c&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f5370656c6c4f6e596f752f646c66662d6e6f74652f326266653461393561616338363462323362643063303732396432373230633932653136396638632f6e62732f646c322f30315f6d61746d756c5f70726163746963652e6970796e62&amp;nwo=SpellOnYou%2Fdlff-note&amp;path=nbs%2Fdl2%2F01_matmul_practice.ipynb&amp;repository_id=221963162&amp;repository_type=Repository#Broadcasting">colab!</a> (I totally confused with extension of arrays)</li>
+    </ul>
+  </li>
+  <li>torch.allclose Review</li>
+  <li><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.einsum.html">np.einsum Review</a></li>
+</ul>
+
+<p>h</p>

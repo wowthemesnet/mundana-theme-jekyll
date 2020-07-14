@@ -1,0 +1,267 @@
+<h1 class="no_toc" id="lesson-06">Lesson 06</h1>
+
+<h2 class="no_toc" id="contents">CONTENTS</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#rossmanntabular" id="markdown-toc-rossmanntabular">Rossmann(Tabular)</a>    <ul>
+      <li><a href="#what-is-dropout-and-embedding-dropout" id="markdown-toc-what-is-dropout-and-embedding-dropout">What is dropout and embedding dropout?</a></li>
+      <li><a href="#batch-normalization" id="markdown-toc-batch-normalization">Batch Normalization</a></li>
+      <li><a href="#momentum-parameter-at-batchnorm1d" id="markdown-toc-momentum-parameter-at-batchnorm1d">Momentum parameter at BatchNorm1d</a></li>
+    </ul>
+  </li>
+  <li><a href="#lesson6-pets-moreipynb" id="markdown-toc-lesson6-pets-moreipynb">lesson6-pets-more.ipynb</a>    <ul>
+      <li><a href="#data-augmentation" id="markdown-toc-data-augmentation">Data Augmentation</a></li>
+      <li><a href="#convolutional-kernelwhat-is-convolution" id="markdown-toc-convolutional-kernelwhat-is-convolution">Convolutional Kernel(What is convolution?)</a>        <ul>
+          <li><a href="#further-lowdown" id="markdown-toc-further-lowdown">Further lowdown</a></li>
+        </ul>
+      </li>
+      <li><a href="#average-pooling-feature" id="markdown-toc-average-pooling-feature">Average pooling, feature</a></li>
+      <li><a href="#heatmap-hook" id="markdown-toc-heatmap-hook">Heatmap, Hook</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Will find official notes <a href="https://github.com/fastai/course-v3/blob/master/files/dl-2019/notes/notes-1-6.md">here</a></p>
+
+<h2 id="rossmanntabular">Rossmann(Tabular)</h2>
+
+<ul>
+  <li>Tabular data: be careful on Categorical variable vs Continuous variable.</li>
+  <li>if datatype is int, fastai think it is classification, not a regression.</li>
+  <li>Root mean square percentage error. as loss function.</li>
+  <li>When you assign the y_range, it’s better to assign little bit more than actual maximum. &gt; because it’s sigmoid.</li>
+  <li>Intermediate layers, which is weight matrix is 1) 1000, and 2) 500 -&gt; which means our parameter would be 500*1000.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">learn</span><span class="o">.</span><span class="n">model</span>
+</code></pre></div></div>
+
+<h3 id="what-is-dropout-and-embedding-dropout">What is dropout and embedding dropout?</h3>
+
+<p><a href="http://jmlr.org/papers/v15/srivastava14a.html">Nitish Srivastava, Dropout: A Simple way to prevent Neural Networks from Overfitting</a></p>
+
+<ul>
+  <li>you can dropout with <code class="highlighter-rouge">p</code> value, make it specified to specific layer, or make it applied to all the layers.</li>
+  <li>Pytorch code 1) bernoulli, which decides whether you will hold it? 2) and divide the noise value depends on noise value. so noise became 2 or remain 0.
+    <ul>
+      <li>According to pytorch code, We do change at training time, but we do nothing at test time. and this means you don’t have to do anything special with inference time.’</li>
+      <li><b>TODO</b>: find at forums <code class="highlighter-rouge">what is inference time</code> - Related to NVIDIA, GPU.</li>
+    </ul>
+  </li>
+  <li>Embedding dropout is just a dropout.
+    <ul>
+      <li>It’s different between continuous variable and embedding layer.  <b>TODO</b> Still can’t understand. why embedding dropout is effective. or,… in need.</li>
+      <li>Let’s delete at random, some of the results of the embedding.</li>
+      <li>and It worked well especially at Kaggle</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="batch-normalization">Batch Normalization</h3>
+
+<p><a href="https://arxiv.org/pdf/1502.03167.pdf">Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift</a> -&gt; came out false! According to <a href="https://arxiv.org/pdf/1805.11604.pdf">How Does Batch Normalization Help Optimization?</a></p>
+
+<ul>
+  <li>The key was  <code class="highlighter-rouge">multiplicative</code> bias <em>gamma</em> and <code class="highlighter-rouge">additive</code> bias <em>beta</em></li>
+  <li>Explain
+    <ul>
+      <li>Let $$ \hat{y}  = f(w_1, w_2, w_3, … , x) $$ ,  loss = MSE , Then <code class="highlighter-rouge">y_range</code> should be between 1 and 5</li>
+      <li>And Activation function ends with <code class="highlighter-rouge">-1 -&gt; +1</code></li>
+      <li>To mitigate this problem, we can add another parameter, like $$w_n$$</li>
+      <li>But there’re so much interactions in the process so just re-scale the output.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="momentum-parameter-at-batchnorm1d">Momentum parameter at BatchNorm1d</h3>
+<ul>
+  <li>Different from momentum like in optimization.</li>
+  <li>This momentum is Exponentially weighted moving average of the mean, instead of deviation.
+    <ul>
+      <li>If this is small number: <code class="highlighter-rouge">mean standard deviation</code> would be less from mini_batch to mini_batch » less regularization effect. (If this is large number, variation would be greater from mini_batch to mini_batch » more regularization effect)</li>
+      <li>TODO: can’t sure, but i understand, this is not about <code class="highlighter-rouge">how to update parameter</code> but about <code class="highlighter-rouge">how much reflect previous value when scale and shift</code></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<p>Q. Preference between batchnorm and the other regularizations(drop out, weight decay)<br /></p>
+
+<p>A. Nope, always try and see the results</p>
+
+<hr />
+
+<h2 id="lesson6-pets-moreipynb">lesson6-pets-more.ipynb</h2>
+
+<h3 id="data-augmentation">Data Augmentation</h3>
+
+<ul>
+  <li>Last reg</li>
+  <li><code class="highlighter-rouge">get_transforms</code> has lots of params (even not yet learned all) -&gt; check documentation
+    <ul>
+      <li>Remember you can implement all the doc contents bc it’s made from nbdev</li>
+      <li>TODO: try this!!</li>
+    </ul>
+  </li>
+  <li>Essence of data augmentation is you should maintain the label, while somewhat making sense.
+    <ul>
+      <li>ex) tilt, because it’s optically sensible, you can always change the angle of the data view.</li>
+    </ul>
+  </li>
+  <li>zeros, border, and reflection but always <code class="highlighter-rouge">reflection</code> works most of the time, so that is the default</li>
+</ul>
+
+<h3 id="convolutional-kernelwhat-is-convolution">Convolutional Kernel(What is convolution?)</h3>
+
+<ul>
+  <li>Will make heat_map from scratch, which means the parts convolution focuses on</li>
+</ul>
+
+<p><img src="/assets/images/setosa_visualization.png" alt="setosa_visualization" /></p>
+
+<ul>
+  <li>http://setosa.io/ev/image-kernels/
+    <ul>
+      <li>javascript thing</li>
+      <li>How convolution works</li>
+      <li>Kernel. which does element-wise multiplication, and sum them up</li>
+      <li>so it has on pixel less at borders -&gt; so it uses padding, and fastai uses reflection as said.</li>
+    </ul>
+  </li>
+  <li>why this Kernel(matrix) helps catching horizontal edge side?
+    <ul>
+      <li>because below kernel weights differently, depends on <code class="highlighter-rouge">x axis</code></li>
+      <li>why familiar, because it’s similar intuition with Zeiler/Fergus <a href="https://arxiv.org/abs/1311.2901">Visualizing and Understanding Convolutional Networks</a> paper</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/assets/images/matrix-kernel.png" alt="" /></p>
+
+<ul>
+  <li><a href="https://medium.com/impactai/cnns-from-different-viewpoints-fab7f52d159c">CNN from different viewpoints</a>
+    <ul>
+      <li>output of pixel is results from different linear equations.</li>
+      <li>If you connect this with represents of neural network nodes, you can see that the specific inp nodes connected with specific out nodes.</li>
+      <li><strong>Summarize</strong>: cnn does 1) matmul some of the elements are always zero 2) same weight for every row, which is called <code class="highlighter-rouge">weight time? weight..?, 1:18:50</code> <code class="highlighter-rouge">(picture)</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="further-lowdown">Further lowdown</h4>
+
+<ul>
+  <li>Because generally image has 3  channels, we need rank 3 kernel.</li>
+  <li>And <strong>do multiply with all channel output is one pixel</strong>.(<code class="highlighter-rouge">draw by your self</code>)
+    <ul>
+      <li>but this kernel will catch one feature, like horizontal, so that we make more kernel so that output becomes (h * w * kernel)</li>
+      <li>And that <code class="highlighter-rouge">kernel</code> come to <code class="highlighter-rouge">channel</code></li>
+    </ul>
+  </li>
+  <li><strong>Stride 2 conv</strong>: with 3 by 3 kernel, stride 2 conv -&gt; (h/2 * w/2 * kernel) <sup id="fnref:2"><a href="#fn:2" class="footnote">1</a></sup>
+    <ul>
+      <li>skip or jump over input pixel</li>
+      <li>to protect from memory out of control</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">learn</span><span class="o">.</span><span class="n">model</span>
+<span class="n">learn</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>TODO: understand yourself the blocks of conv-kernel:</p>
+
+<ul>
+  <li>Usually use big kernel size at first layer (will study this at part2) <sup id="fnref:1"><a href="#fn:1" class="footnote">2</a></sup></li>
+  <li>Bottom&amp;right highlighting kernel, since that parts are positive numbers</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>k = tensor([
+    [0.  ,-5/3,1],
+    [-5/3,-5/3,1],
+    [1.  ,1   ,1],
+]).expand(1,3,3,3)/6
+</code></pre></div></div>
+
+<ul>
+  <li>Why divided by 6, when doing expand? : <a href="https://forums.fast.ai/t/lesson-6-in-class-discussion/31440/353?u=spellonyou">forum answer</a></li>
+  <li><code class="highlighter-rouge">torch.tensor.expand</code>: for memory efficient, because we should do RGB</li>
+  <li>We do not make separate kernel, but make rank 4 kernel
+    <ul>
+      <li>4d tensor is just stacked kernel</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">t[None].shape</code> create new unit axis, and why? we make this -&gt; it should move unit of batch, not one size image.</li>
+</ul>
+
+<h3 id="average-pooling-feature">Average pooling, feature</h3>
+
+<ul>
+  <li>suppose our pre-trained model results in size of <code class="highlighter-rouge">11 by 11 by 512 </code> and my classification task has 37 classes
+    <ul>
+      <li>take the first face of channel, which is 11 by 11 and <code class="highlighter-rouge">mean</code> it, so that make rank 2 tensor, 512 by 1</li>
+      <li>and make 2d matrix, which is 512 by 37 and multiply so that we can get 37 by 1 matrix.</li>
+    </ul>
+  </li>
+  <li>Feature, at convolution block
+    <ul>
+      <li>So, when we transfer-learning without unfreeze, every element of last matrix (512 by 1) should represent(or could catch) each feature.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="heatmap-hook">Heatmap, Hook</h3>
+
+<p><img src="/assets/images/heatmap.png" alt="" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hook_output(model[0]) -&gt; acts -&gt; avg_acts
+</code></pre></div></div>
+
+<ul>
+  <li>if we average the block with <code class="highlighter-rouge">axis=feature</code>, result of matrix(11 by 11) depicts <code class="highlighter-rouge">how activated was that area?</code> -&gt; it is heatmap, <code class="highlighter-rouge">avg_acts</code></li>
+  <li>and acts comes from hook, which is more advanced pytorch feature.
+    <ul>
+      <li>hook into pytorch machine itself, and run any arbitrary Pytorch code</li>
+      <li>Why this is cool?: Normally it gives set of outputs of forward pass, but we can interrupt and hook the forward pass.</li>
+      <li>Also can store the output of the convolutional part of the model, which is before avg_pooling</li>
+    </ul>
+  </li>
+  <li>Thinking back when we do cut off <code class="highlighter-rouge">after</code> the conv part.
+    <ul>
+      <li>but with fast.ai the original convolutional part of the model would be <em>the first thing in the model</em>, specifically could be given from <code class="highlighter-rouge">learn.model.eval()[0]</code></li>
+      <li>And this is gotten from <code class="highlighter-rouge">hooked_output</code> and having hooked the output, we can pass our x_minibatch to output.</li>
+      <li>Not directly, but with normalized, minibatch, put on to the gpu</li>
+      <li><code class="highlighter-rouge">one_item()</code> function do it, when we have one data <code class="highlighter-rouge">TODO: this is assignment</code> do it yourself without one_item function</li>
+      <li>and <code class="highlighter-rouge">.cuda()</code> put it on gpu</li>
+    </ul>
+  </li>
+  <li>you should print out very often the shape of tensor, and try think why.</li>
+</ul>
+
+<hr />
+
+<p>(personal) Further research</p>
+
+<ul>
+  <li>Yes, as notes of official course, the ConvNN have become more and more important for other ML model but computer vision. (see <a href="https://arxiv.org/pdf/1807.06521.pdf">Convolutional Block Attention Module</a> relationship paper) and nlp is much more fall behind of computer vision at modern deep learning research, less augmentation method, resource optimization, performance(even not comparable, they both has standard task), … <strong>SO</strong> How about enhance nlp model using this (kind of) relationship? <sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup></li>
+</ul>
+
+<hr />
+
+<p>Footnote</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:2">
+      <p>what is conv1d, conv2d, conv3d? <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:1">
+      <p>why use comparatively huge kernel at first layer? <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>Actually already going on similarly [] <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>

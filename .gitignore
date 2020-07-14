@@ -8,7 +8,7 @@ Gemfile.lock
 _soonUpLoad/*
 how to wirte a note
 _?.md
-_site/
+_site/*
 .DS_Store
 assets/images/profile/*
 **/.ipynb_checkpoints/

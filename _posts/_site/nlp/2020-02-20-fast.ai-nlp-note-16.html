@@ -1,0 +1,141 @@
+<p><strong>Algorithms can encode &amp; magnify human bias</strong></p>
+
+<h3 id="case-study-1-facial-recognition--predictive-policing">Case Study 1: Facial Recognition &amp; Predictive Policing</h3>
+
+<ul>
+  <li><a href="http://proceedings.mlr.press/v81/buolamwini18a.html">Joy Buolamwini &amp; Timnit Gebru</a>, gendershades.org
+    <ul>
+      <li>Microsoft, FACE+, IBM - All of these things are sell now.</li>
+      <li>Largest gap between $\therefore\  Lighter Male\ &gt;\  Darker\ Female $</li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://qz.com/co/2405308/this-us-mayor-joked-cops-should-mount-50-caliber-guns-where-ai-predicts-crime/">This US mayor joked cops should “mount .50-caliber” guns where AI predicts crime</a></p>
+
+    <blockquote>
+      <p>With machine learning, with automation, there’s a 99% success, so that robot is ㅡwill beㅡ99% accurate in telling us what is going to happen next, which is really interesting.</p>
+    </blockquote>
+
+    <p>- city official in Lancater, CA, approving on using IBM for public security</p>
+  </li>
+</ul>
+
+<h2 id="bias">Bias</h2>
+
+<ul>
+  <li>Bias is type of error</li>
+  <li><strong>Statistical Bias</strong>: difference between a statistic’s expected value and the true value</li>
+  <li><strong>Unjust Bias</strong>: disproportionate preference for or prejudice against a group</li>
+  <li><strong>Unconscious bias</strong>: bias that we don’t realize we have</li>
+</ul>
+
+<blockquote>
+  <p>But, term bias is too generic to be productive.</p>
+</blockquote>
+
+<p>Different sources of bias have different causes</p>
+
+<p><strong>Representation Bias</strong>: Dataset was not representative of the algorithm that might be used on later.</p>
+
+<p>Above : Data is okay, but algorithm has some problem.<br /></p>
+
+<p>Below : Data has error. <br /></p>
+
+<p>For example, object detection production that performs very well in common product of US.<br />
+But in contrast, change of target product region, like Zimbabwe, Solomon Island, and so on, reduced the performence remarkably.<br /></p>
+
+<p>It is not the algorithmic problem, so we should care about data volume of region.</p>
+
+<p><strong>Evaluation Bias</strong>: Benchmark datasets spur on research, 4.4% of IJB-A images are dark-skinned women. 2/3 of ImageNet images from the West (Sharkar et al, 2017) <img src="https://spellonyou.github.io/images/shankar.png" alt="" /></p>
+
+<hr />
+
+<h3 id="case-study-2-recidivism-algorithm-used-prison-sentencing">Case Study 2: Recidivism Algorithm Used Prison Sentencing</h3>
+
+<hr />
+
+<h3 id="case-study-3-online-ad-delivery">Case Study 3: Online Ad Delivery</h3>
+
+<hr />
+
+<h3 id="bias-in-nlp">Bias in NLP</h3>
+
+<p>( Nothing to do with the course, but I’m researching this field these days.)</p>
+
+<ul>
+  <li>
+    <p>But all about Englsih</p>
+  </li>
+  <li>
+    <p>Impact
+The person is doctor. The person is nurse -&gt; 그는 의사다. 그녀는 간호사다.</p>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="concept-of-biased-data-often-too-generic-to-be-useful">Concept of “biased data” often too generic to be useful</h3>
+
+<ul>
+  <li>Different sources of bias have different sources</li>
+</ul>
+
+<blockquote>
+  <p>Data, models and systems are not unchanging numbers on a screen.
+They’re the result of a complex process that starts with years of historical context and involves a series of choices and norms, from data measurement to model evaluation to human interpretation.</p>
+</blockquote>
+
+<p>- <em>Harini Suresh</em>, <a href="https://medium.com/@harinisuresh/the-problem-with-biased-data-5700005e514c">“The problem with Biased Data”</a></p>
+
+<h2 id="five-sources-of-bias-in-ml">Five Sources of Bias in ML</h2>
+
+<ul>
+  <li>Representation Bias</li>
+  <li>Evaluation Bias</li>
+  <li>Measurement Bias</li>
+  <li>Aggregation Bias(46:02)</li>
+  <li>Historical Bias(46:26)
+    <ul>
+      <li>A few studies(47:13)</li>
+      <li>Racial Bias, Even when we have good intentions(new york times)(47:10)</li>
+      <li>gender(48:59)</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="humans-are-biased-so-why-does-algorithmic-bias-matter">Humans are biased, so why does algorithmic bias matter?</h3>
+
+<p><strong>Algorithms &amp; humans are used differently (<em>humans are usually decision maker</em>)</strong></p>
+<ul>
+  <li>Algorithms are accurate and objective</li>
+  <li>No way to apeal if there if error</li>
+  <li>processed large scale</li>
+  <li>cheap<br /> <img src="https://cphoto.asiae.co.kr/listimglink/1/2018121911092829374_1545185366.jpg" alt="" /></li>
+</ul>
+
+<p><strong>Machine learning can amplify bias</strong></p>
+
+<p><strong>Machine learning can create feedback loops.</strong></p>
+
+<p><strong>Technology is power. And with that comes responsibility.</strong></p>
+
+<hr />
+
+<h2 id="solutions">Solutions</h2>
+
+<ol>
+  <li>Analyze a project at work/school:
+    <ul>
+      <li>Questions about AI</li>
+      <li>5 types of bias <a href="https://arxiv.org/abs/1901.10002">(Suresh &amp; Guttag)</a></li>
+      <li>Datasheets for datasets, Modelcards for model reporting</li>
+      <li>Accuracy rate on different sub-groups</li>
+    </ul>
+  </li>
+  <li>Work with domain experts &amp; those impacted</li>
+  <li>Increase diversity in our workspace</li>
+  <li>Advocate for good policy</li>
+  <li>Be on the ongoing lookout for bias</li>
+</ol>

@@ -1,0 +1,495 @@
+<p>Note of lesson6 : <a href="https://www.usfca.edu/data-institute/certificates/deep-learning-part-one">Deep Learning Part 1 of Spring 2020 at USF</a></p>
+
+<p>Today we will study</p>
+<ol>
+  <li>Image Classification</li>
+  <li>Multi-label classification</li>
+  <li>Collaborative filtering</li>
+</ol>
+
+<h2 class="no_toc" id="contents">CONTENTS</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#image-classification" id="markdown-toc-image-classification">Image Classification</a>    <ul>
+      <li><a href="#model-interpretation-course-link-book-link" id="markdown-toc-model-interpretation-course-link-book-link">Model Interpretation: Course link, Book link</a></li>
+      <li><a href="#improving-our-model" id="markdown-toc-improving-our-model">Improving our model</a>        <ul>
+          <li><a href="#learning-rate-finder" id="markdown-toc-learning-rate-finder">Learning rate finder</a></li>
+          <li><a href="#unfreezing-and-transfer-learning" id="markdown-toc-unfreezing-and-transfer-learning">Unfreezing and transfer learning</a></li>
+          <li><a href="#discriminative-learning-rates" id="markdown-toc-discriminative-learning-rates">Discriminative learning rates</a></li>
+          <li><a href="#selecting-the-number-of-epochs" id="markdown-toc-selecting-the-number-of-epochs">Selecting the number of epochs</a></li>
+          <li><a href="#deeper-architectures" id="markdown-toc-deeper-architectures">Deeper architectures</a></li>
+        </ul>
+      </li>
+      <li><a href="#assignment" id="markdown-toc-assignment">Assignment</a></li>
+    </ul>
+  </li>
+  <li><a href="#multi-label-classification" id="markdown-toc-multi-label-classification">Multi-label classification</a>    <ul>
+      <li><a href="#constructing-a-data-block" id="markdown-toc-constructing-a-data-block">Constructing a data block</a>        <ul>
+          <li><a href="#binary-cross-entropy" id="markdown-toc-binary-cross-entropy">Binary cross entropy</a></li>
+        </ul>
+      </li>
+      <li><a href="#regression" id="markdown-toc-regression">Regression</a>        <ul>
+          <li><a href="#assemble-the-data" id="markdown-toc-assemble-the-data">Assemble the data</a></li>
+          <li><a href="#training-a-mode" id="markdown-toc-training-a-mode">Training a mode</a></li>
+        </ul>
+      </li>
+      <li><a href="#assignment-1" id="markdown-toc-assignment-1">Assignment</a></li>
+    </ul>
+  </li>
+  <li><a href="#collaborative-filtering" id="markdown-toc-collaborative-filtering">Collaborative filtering</a>    <ul>
+      <li><a href="#learning-the-latent-factors" id="markdown-toc-learning-the-latent-factors">Learning the latent factors</a></li>
+      <li><a href="#creating-the-dataloaders" id="markdown-toc-creating-the-dataloaders">Creating the DataLoaders</a></li>
+      <li><a href="#collaborative-filtering-from-scratch" id="markdown-toc-collaborative-filtering-from-scratch">Collaborative filtering from scratch</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Previous; Recap of last class</p>
+
+<h2 id="image-classification">Image Classification</h2>
+
+<h3 id="model-interpretation-course-link-book-link">Model Interpretation: <a href="https://render.githubusercontent.com/view/ipynb?commit=56ab576a6826ecea66ed555b3b46a90ed409bb19&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6661737461692f636f757273652d76342f353661623537366136383236656365613636656435353562336234366139306564343039626231392f6e62732f30355f7065745f6272656564732e6970796e62&amp;nwo=fastai%2Fcourse-v4&amp;path=nbs%2F05_pet_breeds.ipynb&amp;repository_id=248051827&amp;repository_type=Repository#Model-Interpretation">Course link</a>, <a href="https://render.githubusercontent.com/view/ipynb?commit=56ab576a6826ecea66ed555b3b46a90ed409bb19&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6661737461692f636f757273652d76342f353661623537366136383236656365613636656435353562336234366139306564343039626231392f6e62732f30355f7065745f6272656564732e6970796e62&amp;nwo=fastai%2Fcourse-v4&amp;path=nbs%2F05_pet_breeds.ipynb&amp;repository_id=248051827&amp;repository_type=Repository#Model-Interpretation">Book link</a></h3>
+
+<ul>
+  <li>When you have many categories, use <code class="highlighter-rouge">most_confused()</code> method rather than plotting confusion matrix <sup id="fnref:q1"><a href="#fn:q1" class="footnote">1</a></sup></li>
+</ul>
+
+<h3 id="improving-our-model">Improving our model</h3>
+
+<h4 id="learning-rate-finder">Learning rate finder</h4>
+
+<ul>
+  <li>We can try to learn <em>fast</em> which is done by epoch 1~2 and set learning rate big</li>
+  <li><code class="highlighter-rouge">learn.fine_tune()</code> has <code class="highlighter-rouge">base_lr</code> parameter</li>
+  <li>If learning rate is too high, loss validation gets too high compared to loss of train
+    <ul>
+      <li>why? because it diverges</li>
+    </ul>
+  </li>
+  <li>If learning rate is too small, train loss decreases too slowly, and there are much gap between train and valid loss. <sup id="fnref:q2"><a href="#fn:q2" class="footnote">2</a></sup>
+    <ul>
+      <li>So it will take long time, means too many epochs, resulting overfitting</li>
+    </ul>
+  </li>
+  <li>meaning of <code class="highlighter-rouge">learning rate </code>~ <code class="highlighter-rouge">loss</code> graph
+    <ul>
+      <li>find optimal lr drawing loss depends on learning rate</li>
+      <li>careful it’s logarithm scale</li>
+      <li>this method was invented at 15 and before that people just experimented</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><code class="highlighter-rouge">lr_find()</code> goes through one sing mini-batch?
+J: no, it’s just working through data-loader, and diff is we try many lrs</p>
+</blockquote>
+
+<blockquote>
+  <p>why steepest? why not minimum?
+J: at the minimum we don’t learn anymore. we want our model to enhance learning while training <br /> R: About lr_find(), it’s natural that it seems too simple</p>
+</blockquote>
+
+<h4 id="unfreezing-and-transfer-learning">Unfreezing and transfer learning</h4>
+
+<ul>
+  <li>we throw away last layer, and re-train depends on our data/task</li>
+  <li>And the below function is easy way when we do just fine-tune</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>learn.find_tune??
+</code></pre></div></div>
+
+<ul>
+  <li>calling <code class="highlighter-rouge">cnn_learner</code> freeze our model, so don’t have to do it separately</li>
+  <li>But when you do unfreeze, which means you train all the params, you need to adjust the learning rate more.</li>
+  <li>We can do better because we just used the same learning rate for a whole training</li>
+</ul>
+
+<h4 id="discriminative-learning-rates">Discriminative learning rates</h4>
+
+<p><img src="/assets/images/discriminative_lr.png" alt="" /></p>
+
+<ul>
+  <li>use <code class="highlighter-rouge">slice</code> at lr_max parameter means discriminative learning rate <sup id="fnref:q4"><a href="#fn:q4" class="footnote">3</a></sup></li>
+</ul>
+
+<h4 id="selecting-the-number-of-epochs">Selecting the number of epochs</h4>
+
+<ul>
+  <li>
+    <p>If you choose too big epoch, valid_loss will not change from specific point, and this is related to <code class="highlighter-rouge">fit_one_cycle</code></p>
+  </li>
+  <li>What <code class="highlighter-rouge">fit_one_cycle</code> does?
+    <ul>
+      <li>different from just <code class="highlighter-rouge">fit</code>.</li>
+      <li>start purposely from low learning rate. and from the point of highest point, they decrease lr again</li>
+      <li>if error_rate stop from specific epoch, use that epoch as epoch and do it again</li>
+    </ul>
+  </li>
+  <li>Loss is just a thing we want to approximate, so always care <code class="highlighter-rouge">error</code></li>
+</ul>
+
+<h4 id="deeper-architectures">Deeper architectures</h4>
+
+<ul>
+  <li>It would be possible that you don’t want pre-trained but usually it’s helpful</li>
+  <li>usually out of memory happens
+    <ul>
+      <li>about, <code class="highlighter-rouge">.to_fp16()</code>: <code class="highlighter-rouge">half precision floating point</code>, NVIDIA GPU support special tensor and it’s faster about 2x/3x</li>
+      <li>you can use this using module <code class="highlighter-rouge">from fastai2.callback.fp16 import *</code></li>
+    </ul>
+  </li>
+  <li>Try a small model before scaling up the model &lt; because bigger model doesn’t guarantee better performance</li>
+</ul>
+
+<h3 id="assignment">Assignment</h3>
+
+<ul>
+  <li>Don’t forget the questionnaire</li>
+  <li>Read paper, <a href="https://arxiv.org/abs/1506.01186">Cyclical Learning Rates for Training Neural Networks</a> and see how you can get best results with adjusting learning rate, find out best learning rate by yourself!
+    <ul>
+      <li>of course you can see fast.ai learning rate source code</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<blockquote>
+  <p>How do you know you can do better?
+J: you don’t know, who knows. just try and experiment</p>
+</blockquote>
+
+<blockquote>
+  <p>about <code class="highlighter-rouge">.to_fp16()</code> it doesn’t affect result?
+J: less bumpy, little bit better but not that big deal</p>
+</blockquote>
+
+<blockquote>
+  <p>question about random
+J: not does machine learning but  deep learning specifically. For more info, see Rachael’s Linear Algebra course.</p>
+</blockquote>
+
+<h2 id="multi-label-classification">Multi-label classification</h2>
+
+<h3 id="constructing-a-data-block">Constructing a data block</h3>
+
+<ul>
+  <li>pandas, which is for dataframe
+    <ul>
+      <li>when you slicing, <code class="highlighter-rouge">:</code> is always optional</li>
+      <li>Read <code class="highlighter-rouge">Python for Data Analysis</code> class written by person who made pandas</li>
+    </ul>
+  </li>
+  <li>dataset is abstract idea of class
+    <ul>
+      <li>If you get <em>index</em>, and <em>length</em>, it’s dataset.</li>
+      <li><code class="highlighter-rouge">string.ascii_lowercase</code> is qualified dataset since it has length and index</li>
+      <li>If you index it mostly get tuple, independent variable and dependent variable.</li>
+    </ul>
+  </li>
+  <li>Datasets is usually composed of not stack of data and label
+    <ul>
+      <li>fast.ai, we implemented use file name as independent variable, and through function we get dependent variable</li>
+    </ul>
+  </li>
+  <li>
+    <p>Dataloader divides Datasets to batches, <a href="https://render.githubusercontent.com/view/ipynb?commit=b7f3f0d750196e155de05b0788725a352faa7732&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6661737461692f66617374626f6f6b2f623766336630643735303139366531353564653035623037383837323561333532666161373733322f30365f6d756c74696361742e6970796e62&amp;nwo=fastai%2Ffastbook&amp;path=06_multicat.ipynb&amp;repository_id=243838973&amp;repository_type=Repository#Constructing-a-data-block">read the book</a></p>
+  </li>
+  <li>Datablock assumes basically we have 2 kind of variable
+    <ul>
+      <li>randomly select different validation set so we have different output whenever we call dataset</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dblock = DataBlock(blocks=(ImageBlock, MultiCategoryBlock),
+                   get_x = get_x, get_y = get_y)
+dsets = dblock.datasets(df)
+dsets.train[0]
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">
+(PILImage mode=RGB size=500x375,
+ TensorMultiCategory([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0.]))</code></p>
+
+<ul>
+  <li><code class="highlighter-rouge">PILImage mode=RGB size=500x375</code>: independent variable, which is a input
+    <ul>
+      <li>we did transform filename to tensors</li>
+      <li>output is one-hot encoding</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Shouldn’t it be an integer but why output(<code class="highlighter-rouge">TensorMultiCategory([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0.]))</code>) is float?
+J: because we <em>will</em> use cross-entropy style loss, which does floating calculation</p>
+</blockquote>
+
+<blockquote>
+  <p>why we don’t use with floating point 8 bit?
+J: could be fast, but low precision (but maybe possible)</p>
+</blockquote>
+
+<h4 id="binary-cross-entropy">Binary cross entropy</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">learn</span> <span class="o">=</span> <span class="n">cnn_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">resnet18</span><span class="p">)</span>
+<span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">dls</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">one_batch</span><span class="p">()</span>
+<span class="n">activs</span> <span class="o">=</span> <span class="n">learn</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">activs</span><span class="o">.</span><span class="n">shape</span>
+</code></pre></div></div>
+<ul>
+  <li>you can try grapping the one batch of the data to the model, you can get an output.
+    <ul>
+      <li>Use a<code class="highlighter-rouge">dls.train.one_batch()</code> function to ensure what’s going in and out</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_cross_entropy</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">targets</span><span class="p">):</span>
+    <span class="n">inputs</span> <span class="o">=</span> <span class="n">inputs</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">()</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">torch</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">targets</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="n">inputs</span><span class="p">)</span><span class="o">.</span><span class="n">log</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</code></pre></div></div>
+
+<ul>
+  <li>result is 0 to 1 but we get a variable between 0 and 1 so that we use sigmoid</li>
+  <li>
+    <p>same reason as we said at softmax, normally we use <code class="highlighter-rouge">log </code> (fast and acurate)</p>
+  </li>
+  <li>
+    <p>explained <a href="https://render.githubusercontent.com/view/ipynb?commit=b7f3f0d750196e155de05b0788725a352faa7732&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6661737461692f66617374626f6f6b2f623766336630643735303139366531353564653035623037383837323561333532666161373733322f30365f6d756c74696361742e6970796e62&amp;nwo=fastai%2Ffastbook&amp;path=06_multicat.ipynb&amp;repository_id=243838973&amp;repository_type=Repository#Binary-cross-entropy">the book</a></p>
+  </li>
+  <li>One-hot encoded target, use <code class="highlighter-rouge">BCELoss</code></li>
+  <li>accuracy as a metric only works for single label dataset
+    <ul>
+      <li>because accuracy does <code class="highlighter-rouge">argmax</code> which chooses largest number</li>
+    </ul>
+  </li>
+  <li>so doing multi-categorical problem, use metrics which can compare each activation with some threshold(not selecting one value), and pass if the number over threshold
+    <ul>
+      <li>but we might want to change threshold depends on the input, so that we use <code class="highlighter-rouge">partial function</code> which sets default variable, and change if we want</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>learn = cnn_learner(dls, resnet50, metrics=partial(accuracy_multi, thresh=0.2))
+</code></pre></div></div>
+
+<ul>
+  <li>the accuracy changes if I use different threshold
+    <ul>
+      <li>How can I get <em>best</em> threshold?</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">preds</span><span class="p">,</span><span class="n">targs</span> <span class="o">=</span> <span class="n">learn</span><span class="o">.</span><span class="n">get_preds</span><span class="p">()</span>
+<span class="n">xs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.95</span><span class="p">,</span><span class="mi">29</span><span class="p">)</span>
+<span class="n">accs</span> <span class="o">=</span> <span class="p">[</span><span class="n">accuracy_multi</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">targs</span><span class="p">,</span> <span class="n">thresh</span><span class="o">=</span><span class="n">i</span><span class="p">,</span> <span class="n">sigmoid</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xs</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span><span class="n">accs</span><span class="p">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li>we can plot and select the best number and don’t have to care of overfitting (because it’s not that bumpy as rule of thumb)</li>
+</ul>
+
+<h3 id="regression"><a href="https://render.githubusercontent.com/view/ipynb?commit=b7f3f0d750196e155de05b0788725a352faa7732&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6661737461692f66617374626f6f6b2f623766336630643735303139366531353564653035623037383837323561333532666161373733322f30365f6d756c74696361742e6970796e62&amp;nwo=fastai%2Ffastbook&amp;path=06_multicat.ipynb&amp;repository_id=243838973&amp;repository_type=Repository#Regression">Regression</a></h3>
+
+<ul>
+  <li>two types of task at supervised learning 1) classification(discrete variable) 2) regression(continuous variable)</li>
+</ul>
+
+<h4 id="assemble-the-data">Assemble the data</h4>
+
+<ul>
+  <li><code class="highlighter-rouge">get_image_files</code> gather image recursively</li>
+  <li>here, it important to setting evaluation to a specific person using<code class="highlighter-rouge">splitter</code>, not randomly selection -&gt; it’s continuous frame, so if you just select random data, it would be overestimated.</li>
+  <li>pytorch has tensor <code class="highlighter-rouge">batch</code>, <code class="highlighter-rouge">channel</code>, <code class="highlighter-rouge">height</code>, <code class="highlighter-rouge">width</code></li>
+  <li>regarding channel, image has 3 channels
+    <ul>
+      <li>you can see the version of <code class="highlighter-rouge">R</code>, <code class="highlighter-rouge">G</code>, <code class="highlighter-rouge">B</code> using the below code</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">im</span> <span class="o">=</span> <span class="n">image2tensor</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="s">'image/grizzly.jpg'</span><span class="p">))</span>
+<span class="n">_</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">bear</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">axs</span><span class="p">,</span> <span class="p">(</span><span class="s">'Reds'</span><span class="p">,</span> <span class="s">'Greens'</span><span class="p">,</span> <span class="s">'Blues'</span><span class="p">)):</span>
+	<span class="n">show_images</span><span class="p">(</span><span class="mi">255</span><span class="o">-</span><span class="n">bear</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>can we give multi-channel bigger than 3?
+J: yes, it used often like when you use satellite image. But your pre-trained model is usually for a 3-channel and fastai handles that case, but is is just problem of axis</p>
+</blockquote>
+
+<h4 id="training-a-mode">Training a mode</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">learn</span><span class="o">.</span><span class="n">show_results</span><span class="p">(</span><span class="n">ds_idx</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_n</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+</code></pre></div></div>
+
+<ul>
+  <li>left of output is target, right is prediction</li>
+  <li><em>Notice</em>  It’s interesting that basically our pre-trained model was trained for classification task. But it works well when you do regression
+    <ul>
+      <li>why? pre-trained model from ImageNet is collection of image’s features like, objects, color, texture, shadow and so on</li>
+      <li>so from pre-trained model, we can get the <em>features</em> of an image, and do the <em>other job</em>(e.g., regression) with fine-tuning</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="assignment-1">Assignment</h3>
+
+<ul>
+  <li>go to the bear classifier, and find out when you give image which is not included in label and see what happens.  change model from single labelling to multi-labelling, and tell what happened at fastai forum</li>
+</ul>
+
+<hr />
+
+<blockquote>
+  <p>at traditional machine learning we used cross-validation, we don’t use it at deep learning?
+J: First, nowadays cross-validations are less common(if not on kaggle, because praction of data is important), because cross-validation was used there were not lots of data. Second, cross-validation is not related selection between machine learning and deep learning</p>
+</blockquote>
+
+<blockquote>
+  <p>CF algorithm used other than recommendation system
+J: whatever it’s kind of recommendation system, if concept is finding out the other candidates using the previous behaviour</p>
+</blockquote>
+
+<blockquote>
+  <p>how can i make data set if I have video? how split?(time phrase)
+J: like full color movie, rank-5 tensor by (time, h, w, batch, channel). but usually it would be 4 tensor, because of size of tensor or key problem, but theoretically possible.</p>
+</blockquote>
+
+<h2 id="collaborative-filtering"><a href="https://render.githubusercontent.com/view/ipynb?commit=b7f3f0d750196e155de05b0788725a352faa7732&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6661737461692f66617374626f6f6b2f623766336630643735303139366531353564653035623037383837323561333532666161373733322f30385f636f6c6c61622e6970796e62&amp;nwo=fastai%2Ffastbook&amp;path=08_collab.ipynb&amp;repository_id=243838973&amp;repository_type=Repository#Collaborative-filtering-deep-dive">Collaborative filtering</a></h2>
+
+<ul>
+  <li>empty part means user didn’t watch or rate the movie</li>
+  <li>upper and below part represent same info</li>
+</ul>
+
+<p><img src="/assets/images/pic1-v4-L6.png" alt="" /></p>
+
+<h3 id="learning-the-latent-factors">Learning the latent factors</h3>
+
+<ul>
+  <li>CF algorithm is related to <em>latent</em>  variable(;factors) since we don’t have <em>a label explaining/depicting properties</em> which made you choose specific movie
+    <ul>
+      <li>In other words, there is no specific label how we could predict the dependent variable(recommendation; movies user didn’t watch) results from independent var(rating regarding user and movie)</li>
+      <li>but we can assume it has labels like genres and make matrix representing it</li>
+    </ul>
+  </li>
+  <li>randomly create user’s factor(;latent, hidden) and movie’s factor. and do matrix multiplication with those, which is dot product.</li>
+  <li>and sum it and compare with target, so that you can learn parameters, which were randomly initialized</li>
+</ul>
+
+<h3 id="creating-the-dataloaders">Creating the DataLoaders</h3>
+
+<ul>
+  <li>
+    <p>Let’s make DataLoaders using basic python and PyTorch!</p>
+  </li>
+  <li>user and movie is represented using index, label,..,called <em>look up in an index</em>
+    <ul>
+      <li>but this is problem, because DL treats only kind of matrix multiplication.</li>
+      <li>so that we make one-hot encoding matrix</li>
+    </ul>
+  </li>
+  <li>And this is quite amazing because it came out with any kind of discrete value, we can make it work using arrays</li>
+</ul>
+
+<blockquote>
+  <p>how is different when you treat actual data between dense and sparse data?
+J: we will not treat sparse data, but there’s course Rachael’s linear algebra</p>
+</blockquote>
+
+<ul>
+  <li>embedding layer: multiplying by a one hot encoded matrix, using the computational shortcut that it can be implemented by simply indexing directly.
+    <ul>
+      <li>there is excel explaining detailed computation</li>
+      <li>This is important because usually people think embedding is something difficult, but it’s just computational shortcut to do matrix multiplication</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="collaborative-filtering-from-scratch">Collaborative filtering from scratch</h3>
+
+<ul>
+  <li>importance of dunder method of python. (like <code class="highlighter-rouge">__init__</code>)
+    <ul>
+      <li>explained OOP concept</li>
+    </ul>
+  </li>
+  <li>Inheritance of python, which used DotProduct class
+    <ul>
+      <li>Module is fast.ai version of pytorch’s nn.Module</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">forward</code>function grab embedding, using specific index
+    <ul>
+      <li>(again) Remember Embedding is just kind of shortcut to make a one-hot encoding matrix</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">DotProduct</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_users</span><span class="p">,</span> <span class="n">n_movies</span><span class="p">,</span> <span class="n">n_factors</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user_factors</span> <span class="o">=</span> <span class="n">Embedding</span><span class="p">(</span><span class="n">n_users</span><span class="p">,</span> <span class="n">n_factors</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">movie_factors</span> <span class="o">=</span> <span class="n">Embedding</span><span class="p">(</span><span class="n">n_movies</span><span class="p">,</span> <span class="n">n_factors</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">users</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_factors</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">movies</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">movie_factors</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">users</span> <span class="o">*</span> <span class="n">movies</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>64: size of mini_batch, 2: index</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x,y = dls.one_batch()
+x.shape
+</code></pre></div></div>
+<p><code class="highlighter-rouge">torch.Size([64, 2])</code></p>
+
+<ul>
+  <li>
+    <p>We use bias to represent specific character of <em>each user</em> and <em>movie</em>, because embedding of user/movie doesn’t show users’ character, who might generally doesn’t like movie</p>
+  </li>
+  <li>
+    <p>what should we do when my model is overfitting very quickly with small epoch</p>
+    <ul>
+      <li>i.e., what should we do to evade overfitting and don’t want to lessen epoch?</li>
+      <li>augmentation can be one solution but we can’t do augmentation with this data</li>
+      <li>in this case, we do other regularization, which means panellize the fast learning <sup id="fnref:q5"><a href="#fn:q5" class="footnote">4</a></sup></li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Collaborative filtering algorithm works better than svd or kind of that?
+J: yes</p>
+</blockquote>
+
+<hr />
+
+<p>My Questions</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:q1">
+      <p>no way to see with regression model? <a href="#fnref:q1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:q2">
+      <p>But how do I know if loss decreases slowly or not? <a href="#fnref:q2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:q4">
+      <p>I need to study more of scheduled learning <a href="#fnref:q4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:q5">
+      <p>Isn’t there any side effects when you did too much regularization? <a href="#fnref:q5" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>

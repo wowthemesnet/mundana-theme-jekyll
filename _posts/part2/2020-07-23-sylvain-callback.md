@@ -7,9 +7,9 @@ image: assets/images/fastai/gate.png
 tags: [ feature ]
 ---
 
-Note from Sylvain Gugger's talk at a joint NYC AI & ML x NYC PyTorch on 03/20/2019. [Video](https://www.youtube.com/watch?v=roc-dOSeehM) / [Slide](https://drive.google.com/file/d/1eWWpyHeENyNNCVTtblX2Jm02WZWw-Kes/view)</br>
+Note from Sylvain Gugger's talk at a joint NYC AI & ML x NYC PyTorch on 03/20/2019. [Video](https://www.youtube.com/watch?v=roc-dOSeehM) / [Slide](https://drive.google.com/file/d/1eWWpyHeENyNNCVTtblX2Jm02WZWw-Kes/view) </br>
 
-(*Sylvain's talk starts around 7m 30s)
+(*Sylvain's talk starts at around 7m 30s)
 
 * [What is callback?](#what-is-callback?)
 {:toc}

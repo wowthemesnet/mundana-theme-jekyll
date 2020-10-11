@@ -1,12 +1,12 @@
 # Site
-name: 'Mundana'
-description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+name: 'Alex Carvalho'
+description: 'Alex explores learning from different perspectives.'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
-baseurl: '/mundana-theme-jekyll'
-disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+baseurl: ''
+disqus:
+email: 'af.carvalho@live.com'
+mailchimp-list:
 
 include: ["_pages"]
 permalink: /:title/
@@ -19,8 +19,8 @@ plugins:
   - jekyll-seo-tag
   
 authors:
-    sal:
-      name:           Sal
+    alex:
+      name:           Alex Carvalho
       site:           https://www.wowthemes.net
       avatar:         /assets/images/avatar1.jpg
       bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
@@ -43,7 +43,7 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: sal
+      author: alex
       avatar: /assets/images/avatar1.jpg
       
   # all pages

@@ -1,10 +1,10 @@
 # Site
-name: 'Mundana'
-description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+name: 'Around-AI'
+description: 'Những điều thú vị xung quanh AI'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: ''
-disqus: 'demowebsite'
+domain: around-ai.com
 email: 'thuc248997@gmail.com'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
@@ -19,21 +19,13 @@ plugins:
   - jekyll-seo-tag
   
 authors:
-    sal:
-      name:           Sal
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
-      email:          wowthemesnet@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
-
-    jane:
-      name:           Jane
-      site:           https://www.wowthemes.net
+    thuc:
+      name:           thuc
+      site:           https://www.around-ai.com
       avatar:         /assets/images/avatar2.jpg
-      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
-      email:          fakemail@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
+      bio:            "Xin chào. Mình là Thức. Mình là tác giả chính của trang này. Blog của mình hiện tại chủ yếu viết về chủ đề xoay quanh Artificial intelligence(AI)."
+      email:          thuc248997@gmail.com
+      twitter:        https://twitter.com/thuc248997
  
 # Defaults
 defaults:
@@ -54,9 +46,12 @@ defaults:
       
 # Syntax
 markdown: kramdown
-highlighter: rouge
-
-# Paginate
+mathjax: true
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
 paginate: 10
 
 

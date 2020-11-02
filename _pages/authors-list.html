@@ -1,33 +1,46 @@
 ---
-title: "Authors"
-layout: default
+title: Các tác giả
 permalink: "/authors-list.html"
+layout: default
 ---
 
 <div class="container">
-<h4 class="font-weight-bold spanborder"><span>{{page.title}}</span></h4>
+    <h4 class="font-weight-bold spanborder"><span>{{page.title}}</span></h4>
     <div class="row gap-y listrecent listrecent listauthor">
-    {% for author in site.authors %}
+        {% for author in site.authors %}
         <div class="col-lg-6 mb-4">
             <div class="p-4 border rounded">
-            <div class="row">
-            <div class="col-md-3 mb-4 mb-md-0"><img alt="{{ author[1].name }}" src="{{site.baseurl}}/{{ author[1].avatar }}" class="rounded-circle" height="80" width="80"></div>
-            <div class="col-md-9">
-            <a href="{{site.baseurl}}/author-{{ author[1].name | slugify }}">
-            <h4 class="text-dark mb-0"> {{ author[1].name }} </h4>
-            <small class="d-inline-block mt-1 mb-3 font-weight-normal">(View Posts)</small>
-            <div class="excerpt">{{ author[1].bio }}</div>
-            </a>
-            <div class="icon-block mt-3 d-flex justify-content-between">  
-            <div>
-            <a target="_blank" href="{{ author[1].twitter }}"><i class="fab fa-twitter text-muted" aria-hidden="true"></i></a>  &nbsp;
-            <a target="_blank" href="{{ author[1].site }}"><i class="fa fa-globe text-muted" aria-hidden="true"></i></a> &nbsp;
-            </div>
-            </div>
-            </div>
-            </div>
+                <div class="row">
+                    <div class="col-md-3 mb-4 mb-md-0"><img alt="{{ author[1].name }}" src="{{ author[1].avatar }}"
+                            class="rounded-circle" height="80" width="80"></div>
+                    <div class="col-md-9">
+                        <h4 class="text-dark mb-0"> {{ author[1].name }} </h4>
+                        <p><a href="https://around-ai.com/about" target="_blank">https://around-ai.com</a></p>
+                        
+                        <div class="excerpt">{{ author[1].bio }}</div>
+                        <div class="text-right">
+                            <a class="btn btn-sm btn-light btn-round" href="{{site.baseurl}}/author-{{ author[1].username }}">Xem các bài viết &gt;</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    {% endfor %}
+        {% endfor %}
+        <div class="col-lg-6 mb-4">
+            <div class="p-4 border rounded">
+                <div class="row">
+                    <div class="col-md-3 mb-4 mb-md-0"><img alt="You" src="/assets/images/question-avatar.png"
+                            class="rounded-circle" height="80" width="80"></div>
+                    <div class="col-md-9">
+                        <h4 class="text-dark mb-0"> You? </h4>
+                        
+                        <div class="excerpt">Bạn muốn đóng góp bài viết? Bạn muốn cùng tôi xây dựng website? Tôi luôn chào đón bạn cùng chung tay xây dựng blog này ngày càng hoàn thiện hơn.</div>
+                        <div class="text-right">
+                            <a class="btn btn-sm btn-success btn-round" href="/contact.html">Liên hệ ngay &gt;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

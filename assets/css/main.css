@@ -29,7 +29,7 @@
   --dark: #212529;
   --white: #fff;
   --purple: #ad6edd;
-  --salmon: #ff977a;
+  --thucmon: #ff977a;
   --cyan: #35bdff;
   --gray: #ced4da;
   --indigo: #502c6c;
@@ -1198,15 +1198,15 @@ pre {
   .table-hover .table-purple:hover > th {
     background-color: #ddc2f0; }
 
-.table-salmon,
-.table-salmon > th,
-.table-salmon > td {
+.table-thucmon,
+.table-thucmon > th,
+.table-thucmon > td {
   background-color: #ffe2da; }
 
-.table-hover .table-salmon:hover {
+.table-hover .table-thucmon:hover {
   background-color: #ffcec1; }
-  .table-hover .table-salmon:hover > td,
-  .table-hover .table-salmon:hover > th {
+  .table-hover .table-thucmon:hover > td,
+  .table-hover .table-thucmon:hover > th {
     background-color: #ffcec1; }
 
 .table-cyan,
@@ -1965,27 +1965,27 @@ fieldset:disabled a.btn {
     .show > .btn-purple.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(173, 110, 221, 0.5); }
 
-.btn-salmon {
+.btn-thucmon {
   color: #212529;
   background-color: #ff977a;
   border-color: #ff977a; }
-  .btn-salmon:hover {
+  .btn-thucmon:hover {
     color: #212529;
     background-color: #ff7954;
     border-color: #ff6f47; }
-  .btn-salmon:focus, .btn-salmon.focus {
+  .btn-thucmon:focus, .btn-thucmon.focus {
     box-shadow: 0 0 0 0.2rem rgba(255, 151, 122, 0.5); }
-  .btn-salmon.disabled, .btn-salmon:disabled {
+  .btn-thucmon.disabled, .btn-thucmon:disabled {
     color: #212529;
     background-color: #ff977a;
     border-color: #ff977a; }
-  .btn-salmon:not(:disabled):not(.disabled):active, .btn-salmon:not(:disabled):not(.disabled).active,
-  .show > .btn-salmon.dropdown-toggle {
+  .btn-thucmon:not(:disabled):not(.disabled):active, .btn-thucmon:not(:disabled):not(.disabled).active,
+  .show > .btn-thucmon.dropdown-toggle {
     color: #fff;
     background-color: #ff6f47;
     border-color: #ff653a; }
-    .btn-salmon:not(:disabled):not(.disabled):active:focus, .btn-salmon:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-salmon.dropdown-toggle:focus {
+    .btn-thucmon:not(:disabled):not(.disabled):active:focus, .btn-thucmon:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-thucmon.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(255, 151, 122, 0.5); }
 
 .btn-cyan {
@@ -2333,27 +2333,27 @@ fieldset:disabled a.btn {
     .show > .btn-outline-purple.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(173, 110, 221, 0.5); }
 
-.btn-outline-salmon {
+.btn-outline-thucmon {
   color: #ff977a;
   background-color: transparent;
   background-image: none;
   border-color: #ff977a; }
-  .btn-outline-salmon:hover {
+  .btn-outline-thucmon:hover {
     color: #212529;
     background-color: #ff977a;
     border-color: #ff977a; }
-  .btn-outline-salmon:focus, .btn-outline-salmon.focus {
+  .btn-outline-thucmon:focus, .btn-outline-thucmon.focus {
     box-shadow: 0 0 0 0.2rem rgba(255, 151, 122, 0.5); }
-  .btn-outline-salmon.disabled, .btn-outline-salmon:disabled {
+  .btn-outline-thucmon.disabled, .btn-outline-thucmon:disabled {
     color: #ff977a;
     background-color: transparent; }
-  .btn-outline-salmon:not(:disabled):not(.disabled):active, .btn-outline-salmon:not(:disabled):not(.disabled).active,
-  .show > .btn-outline-salmon.dropdown-toggle {
+  .btn-outline-thucmon:not(:disabled):not(.disabled):active, .btn-outline-thucmon:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-thucmon.dropdown-toggle {
     color: #212529;
     background-color: #ff977a;
     border-color: #ff977a; }
-    .btn-outline-salmon:not(:disabled):not(.disabled):active:focus, .btn-outline-salmon:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-outline-salmon.dropdown-toggle:focus {
+    .btn-outline-thucmon:not(:disabled):not(.disabled):active:focus, .btn-outline-thucmon:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-outline-thucmon.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(255, 151, 122, 0.5); }
 
 .btn-outline-cyan {
@@ -3939,10 +3939,10 @@ input[type="button"].btn-block {
     text-decoration: none;
     background-color: #9645d3; }
 
-.badge-salmon {
+.badge-thucmon {
   color: #212529;
   background-color: #ff977a; }
-  .badge-salmon[href]:hover, .badge-salmon[href]:focus {
+  .badge-thucmon[href]:hover, .badge-thucmon[href]:focus {
     color: #212529;
     text-decoration: none;
     background-color: #ff6f47; }
@@ -4113,13 +4113,13 @@ input[type="button"].btn-block {
   .alert-purple .alert-link {
     color: #9645d3; }
 
-.alert-salmon {
+.alert-thucmon {
   color: #ff977a;
   background-color: #ff977a;
   border-color: #ff977a; }
-  .alert-salmon hr {
+  .alert-thucmon hr {
     border-top-color: #ff8361; }
-  .alert-salmon .alert-link {
+  .alert-thucmon .alert-link {
     color: #ff6f47; }
 
 .alert-cyan {
@@ -4380,13 +4380,13 @@ input[type="button"].btn-block {
     background-color: #5a3973;
     border-color: #5a3973; }
 
-.list-group-item-salmon {
+.list-group-item-thucmon {
   color: #854f3f;
   background-color: #ffe2da; }
-  .list-group-item-salmon.list-group-item-action:hover, .list-group-item-salmon.list-group-item-action:focus {
+  .list-group-item-thucmon.list-group-item-action:hover, .list-group-item-thucmon.list-group-item-action:focus {
     color: #854f3f;
     background-color: #ffcec1; }
-  .list-group-item-salmon.list-group-item-action.active {
+  .list-group-item-thucmon.list-group-item-action.active {
     color: #fff;
     background-color: #854f3f;
     border-color: #854f3f; }
@@ -5096,12 +5096,12 @@ button.bg-purple:hover,
 button.bg-purple:focus {
   background-color: #9645d3 !important; }
 
-.bg-salmon {
+.bg-thucmon {
   background-color: #ff977a !important; }
 
-a.bg-salmon:hover, a.bg-salmon:focus,
-button.bg-salmon:hover,
-button.bg-salmon:focus {
+a.bg-thucmon:hover, a.bg-thucmon:focus,
+button.bg-thucmon:hover,
+button.bg-thucmon:focus {
   background-color: #ff6f47 !important; }
 
 .bg-cyan {
@@ -5210,7 +5210,7 @@ button.bg-lightblue:focus {
 .border-purple {
   border-color: #ad6edd !important; }
 
-.border-salmon {
+.border-thucmon {
   border-color: #ff977a !important; }
 
 .border-cyan {
@@ -7220,10 +7220,10 @@ a.text-white:hover, a.text-white:focus {
 a.text-purple:hover, a.text-purple:focus {
   color: #9645d3 !important; }
 
-.text-salmon {
+.text-thucmon {
   color: #ff977a !important; }
 
-a.text-salmon:hover, a.text-salmon:focus {
+a.text-thucmon:hover, a.text-thucmon:focus {
   color: #ff6f47 !important; }
 
 .text-cyan {

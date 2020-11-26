@@ -20,7 +20,7 @@ plugins:
   
 authors:
     thuc:
-      name:           thuc
+      name:           Thuc
       site:           https://www.around-ai.com
       avatar:         /assets/images/avatar2.jpg
       bio:            "Xin chào. Mình là Thức. Mình là tác giả chính của trang này. Blog của mình hiện tại chủ yếu viết về chủ đề xoay quanh Artificial intelligence(AI)."
@@ -35,7 +35,7 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: sal
+      author: Thuc
       avatar: /assets/images/avatar1.jpg
       
   # all pages

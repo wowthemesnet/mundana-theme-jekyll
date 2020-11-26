@@ -151,7 +151,7 @@ a.text-dark:hover {
 	color:#ad6edd;
 	border-color:transparent;
 }
-.btn-link.btn-salmon {
+.btn-link.btn-thucmon {
 	color:#ff977a;
 	border-color:transparent;
 }
@@ -363,7 +363,7 @@ a.text-dark:hover {
 .bg-purple {
 	fill:#ad6edd !important;
 }
-.bg-salmon {
+.bg-thucmon {
 	fill:#ff977a !important;
 }
 .bg-cyan {
@@ -545,15 +545,15 @@ a.text-dark:hover {
 .alert-purple .alert-link {
 	color:#e6e6e6;
 }
-.alert-salmon {
+.alert-thucmon {
 	color:#fff;
 	background-color:#ff977a;
 	border-color:#ff977a;
 }
-.alert-salmon hr {
+.alert-thucmon hr {
 	border-top-color:#ff8361;
 }
-.alert-salmon .alert-link {
+.alert-thucmon .alert-link {
 	color:#e6e6e6;
 }
 .alert-cyan {

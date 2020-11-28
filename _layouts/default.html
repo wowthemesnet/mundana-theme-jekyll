@@ -8,34 +8,25 @@
 
     {% seo %}
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{site.favicon}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/{{site.favicon}}">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <!-- Google Fonts-->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet"> -->
-    <!-- Code snippet to speed up Google Fonts rendering: googlefonts.3perf.com --> 
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"> 
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" as="fetch" crossorigin="anonymous"> 
-    <script type="text/javascript"> 
-    !function(e,n,t){"use strict";var o="https://fonts.googleapis.com/css?family=Lora:400,400i,700",r="__3perf_googleFontsStylesheet";function c(e){(n.head||n.body).appendChild(e)}function a(){var e=n.createElement("link");e.href=o,e.rel="stylesheet",c(e)}function f(e){if(!n.getElementById(r)){var t=n.createElement("style");t.id=r,c(t)}n.getElementById(r).innerHTML=e}e.FontFace&&e.FontFace.prototype.hasOwnProperty("display")?(t[r]&&f(t[r]),fetch(o).then(function(e){return e.text()}).then(function(e){return e.replace(/@font-face {/g,"@font-face{font-display:swap;")}).then(function(e){return t[r]=e}).then(f).catch(a)):a()}(window,document,localStorage); 
-    </script>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
 
-    <!-- Bootstrap -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <!-- Bootstrap Modified -->
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
 
-    <!-- Code highlighter -->
-    <!-- <link rel="stylesheet" href="{{site.baseurl}}/assets/css/tango-code-highlight.css"> -->
-    
     <!-- Theme Stylesheet -->
-    <!-- <link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.css"> -->
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.css">
 
-    </style>
-        {% include css/bootstrap-4.1.3.min.css %}
-        {% include css/syntax-highlighter-theme-tango.css %}
-        {% include css/syntax-highlighter.css %}
-        {% include css/theme.css %}
-    </style>
-    
+    <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 
     {% include tracking-header.html %}
 
@@ -47,23 +38,25 @@
     <!-- Navbar -->
     <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="{{ site.baseurl }}/">
-            <!-- <strong>{{site.name}}</strong> -->
-            <img src="{{ site.logo }}" style="height: 3rem">
-        </a>
+        <a class="navbar-brand" href="{{ site.baseurl }}/index.html"><strong>{{site.name}}</strong></a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-collapse collapse" id="navbarColor02">
+        <div class="navbar-collapse collapse" id="navbarColor02" style="">
             <ul class="navbar-nav mr-auto d-flex align-items-center">
                {% include menu-header.html %}
             </ul>
             <ul class="navbar-nav ml-auto d-flex align-items-center">
-                {% include search.html %}
+                {% include search-lunr.html %}
             </ul>
         </div>
     </div>
     </nav>
+
+    <!-- Search Results -->
+    <div id="lunrsearchresults">
+        <ul class="mb-0"></ul>
+    </div>
 
     <!-- Content -->
     <main role="main" class="site-content">
@@ -71,53 +64,12 @@
     </main>
 
 
-    <!-- Scripts: jQuery, popper, bootstrap, theme -->
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Scripts: popper, bootstrap, theme, lunr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 
-    <script src="{{site.baseurl}}/assets/js/theme.js"></script> -->
-   
-    <!-- Include all js -->
-    <script src="{{site.baseurl}}/assets/js/main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-    <!-- Math -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.0/katex.min.css" integrity="sha256-KoSSCu31XsbWh8THRt4pvxhcYkj3sEwDw/ZnIErNr4g=" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.0/katex.min.js" integrity="sha256-UTMi9bSp9SYQppvYopnHcOGcZW7M2pZqiYwFmP4oXDE=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.0/contrib/auto-render.min.js" integrity="sha256-90d2pnfw0r4K8CZAWPko4rpFXQsZvJhTBGYNkipDprI=" crossorigin="anonymous"></script>
-
-    <script>
-    $("script[type='math/tex']").replaceWith(
-    function(){
-        var tex = $(this).text();
-        return "<span class=\"inline-equation\">" + 
-            katex.renderToString(tex) +
-            "</span>";
-    });
-
-    $("script[type='math/tex; mode=display']").replaceWith(
-    function(){
-        var tex = $(this).text();
-        return "<div class=\"equation\">" + 
-            katex.renderToString("\\displaystyle "+tex) +
-            "</div>";
-    });
-    </script>
-
-   
-    <script>
-        renderMathInElement(
-            document.body,
-            {
-                delimiters: [
-                    {left: "$$", right: "$$", display: true},
-                    {left: "\\[", right: "\\]", display: true},
-                    {left: "$", right: "$", display: false},
-                    {left: "\\(", right: "\\)", display: false}
-                ]
-            }
-        );
-    </script>
+    <script src="{{site.baseurl}}/assets/js/theme.js"></script>
 
 
     <!-- Footer -->
@@ -125,12 +77,15 @@
         <div class="container">
         <div class="row align-items-center justify-content-between">
             <div>
-                <span class="navbar-brand mr-2 mb-0"><img src="{{ site.logo_without_description }}" style="height: 1.6rem"></span>
-                <a class="text-dark ml-1" target="_blank" href="https://around-ai.com"> Blog về Machine Learning và Computer Vision</a>
+                <span class="navbar-brand mr-2 mb-0"><strong>Mundana</strong></span>
+                <span>Copyright © <script>document.write(new Date().getFullYear())</script>.</span>
+
+                <!--  Github Repo Star Btn-->
+                <a class="text-dark ml-1" target="_blank" href="https://github.com/wowthemesnet/mundana-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
 
             </div>
             <div>
-                © <script>document.write(new Date().getFullYear())</script> All Rights Reserved.
+                Made with <a target="_blank" class="text-dark font-weight-bold" href="https://www.wowthemes.net/mundana-jekyll-theme/"> Mundana Jekyll Theme </a> by <a class="text-dark" target="_blank" href="https://www.wowthemes.net">WowThemes</a>.
             </div>
         </div>
         </div>

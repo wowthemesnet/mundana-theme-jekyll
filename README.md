@@ -1,4 +1,4 @@
 # Around-Ai
 ## I. Introduction:
 
-Blog's ThucPD
+ThucPD's Blog

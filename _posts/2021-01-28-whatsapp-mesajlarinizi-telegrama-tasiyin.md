@@ -1,10 +1,9 @@
 ---
 layout: post
 title:  "WhatsApp mesajlarınızı Telegram'a taşıyın"
-author: jane
 categories: [ Teknoloji ]
 image: assets/images/whatsapp-to-telegram-tool.jpg
-tags: [summer]
+tags: [telegram]
 ---
 TPek çok kullanıcı için mesajların anlamı çok büyük olabilir. Sevdikleri insanlar ile paylaştıkları değerli duyguların kelimeye dökülmesi veya artık aramızda olmayanlara ait duygusal hatıraları bu satırlardan oluşuyor. Sadece bu nedenle kullanıcıların bir kısmı WhatsApp'ten farklı bir platforma geçmekte zorlanıyor. Telegram'a gelen 7.4 güncellemesi ile beraber kullanıcıların yaşadığı bu sorun da artık çözümsüz kalmıyor.
 

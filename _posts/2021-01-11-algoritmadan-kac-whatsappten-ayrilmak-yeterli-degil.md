@@ -2,7 +2,7 @@
 layout: post
 title:  "Algoritmadan Kaç: WhatsApp'ten ayrılmak yeterli değil"
 categories: [ Teknoloji ]
-image: assets/images/whatsapp-to-telegram.jpg
+image: assets/images/escapethealgorithm.png
 tags: [ vero ]
 ---
 Peki algoritmadan kaçmak için WhatsApp'ten ayrılmak yeterli mi? Maalesef değil, işte size Facebook ve Instagram yerine kullanabileceğiniz sosyal medya servisi olan Vero'yu tanıtacağım. Ama önce neler oldu ve bitti bir hatırlayalım.

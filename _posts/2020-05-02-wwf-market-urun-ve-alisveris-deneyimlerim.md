@@ -2,7 +2,7 @@
 layout: post
 title:  "WWF Market ürün ve alışveriş deneyimlerim"
 categories: [ Moda ]
-image: assets/images/home.jpg
+image: assets/images/wwfmarket.jpg
 tags: [yapışkan]
 ---
 

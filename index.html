@@ -144,7 +144,7 @@ description: "Tolga Altaş'ın teknoloji, yeme-içme, moda, oyun, sinema-televiz
                 <p class="mb-3 lead">
                     {{ post.excerpt | strip_html | strip_newlines | truncate: 136 }}
                 </p>
-                <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark">Read More</a>
+                <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark">Devamını Oku</a>
             </div>
             <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({{site.baseurl}}/{{ post.image }});">	
             </div>
@@ -168,7 +168,7 @@ description: "Tolga Altaş'ın teknoloji, yeme-içme, moda, oyun, sinema-televiz
    
     <div class="col-md-8 main-loop">
         
-        <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
+        <h4 class="font-weight-bold spanborder"><span>Tüm Gönderiler</span></h4>
         
 
         {% for post in paginator.posts %}
@@ -182,7 +182,7 @@ description: "Tolga Altaş'ın teknoloji, yeme-içme, moda, oyun, sinema-televiz
             {% if paginator.total_pages > 1 %}
             <ul class="pagination"> 
               {% if paginator.previous_page %}
-                <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
+                <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Önceki</a></li>
               {% else %}
                 <li class="page-item disabled"><span class="prev page-link">&laquo;</span></li>
               {% endif %}
@@ -198,7 +198,7 @@ description: "Tolga Altaş'ın teknoloji, yeme-içme, moda, oyun, sinema-televiz
               {% endfor %}
 
               {% if paginator.next_page %}
-                <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
+                <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Sonraki &raquo;</a></li>
               {% else %}
                 <li class="page-item disabled"><span class="next page-link">&raquo;</span></li>
               {% endif %}

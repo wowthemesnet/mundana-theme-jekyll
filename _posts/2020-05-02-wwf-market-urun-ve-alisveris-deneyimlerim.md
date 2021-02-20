@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "WWF Market ürün ve alışveriş deneyimlerim"
-author: tolga
 categories: [ Moda ]
 image: assets/images/home.jpg
 tags: [yapışkan]

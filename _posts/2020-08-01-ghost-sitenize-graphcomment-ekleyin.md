@@ -3,7 +3,7 @@ layout: post
 title:  "Ghost CMS tabanlı sitenize GraphComment ekleyin"
 categories: [ Teknoloji ]
 image: assets/images/ghost-graphcomment.jpg
-tags: [ ghost ]
+tags: [ ghost, graphcomment ]
 ---
 Pek çok internet sitesi sahibi bazı sebeplerden dolayı Disqus'ı ([benim gibi](/yorumlarda-disqus-yerine-graphcomment-tercih-ettim/)) sevmiyor. İnternette üçüncü parti yorumlar için Facebook Comments, Commento ve CommentBox gibi pek çok alternatif mevcut, GraphComment da onlardan birisi. Ghost'unuzda kullanması (tıpkı Disqus ve diğer alternatifler gibi) oldukça basittir. GraphComment temelde ücretsiz bir servistir ancak iki adet [ödeme planı](https://graphcomment.com/en/pricing.html) da bulunmaktadır. Ancak pek çok internet sitesi sahibi için 1,000,000 veri yüklenmesi için erişilemeyecek bir limittir.
 

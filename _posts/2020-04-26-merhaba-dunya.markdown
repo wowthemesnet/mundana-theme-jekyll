@@ -2,7 +2,7 @@
 layout: post
 title:  "Merhaba dünya!"
 categories: [ Blog ]
-image: assets/images/demo1.jpg
+image: assets/images/hello.png
 ---
 Bildiğim kadarıyla kişisel bloglamanın şanından geliyor dünyaya seslenmek, daha önceden her ne kadar çok farklı platformlarda bulunsam da ilk defa bir kişisel bloga sahip oluyorum. Bu da elbette benim için oldukça farklı bir tat olacak ve umarım sadece benim için değil, internetin köşesindeki birkaç kişiye daha ulaşır. Kaldı ki her ne kadar adsoyad.com bir alan adı olsa da en başından aklımda olan Konuk Yazar konseptine de oldukça sıcağım. Buranın sadece benim gevezeleme alanımın olması dışında görüşlerine saygı duyduğum dostlarımın da bir şeyler karalayabildiği bir yer olması kanısındayım. Kişisel bir alan adı için bu konsept çok uygun olmasa da burası tamamen kişisel olduğu için kuralları da ben koyuyorum diye düşünüyorum. En nihayetinde bir topluluk yok ~(f*ck community)~.
 

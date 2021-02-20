@@ -2,7 +2,6 @@
 title: "Hakkımda"
 layout: page
 permalink: "/hakkimda.html"
-comments: true
 ---
 Herkese merhaba!
 Ben Tolga Altaş, 17 Mayıs 1995 yılında Samsun'da doğdum. İlkokul ve Lise yıllarımı doğduğum şehir olan Samsun'da tamamladım. Lisans eğitimimi Konya Selçuk Üniversitesi Turizm İşletmeciliği üzerine gerçekleştirdim, şimdi ise Ankara Hacı Bayram Veli Üniversitesi (Gazi Üniversitesi olarak da bilinir) Lisansüstü Enstitüsünde Turizm İşletmeciliği yüksek lisansı programındayım.

@@ -34,4 +34,4 @@ Bugün itibariyle ise benim görüntülediğim yeni bir sadakat programının te
 
 Şu anda %50'ye Varan Bahar İndirimi mevcut olduğu için özellikle kışlık ürünler daha satın alınabilir fiyatlarda olduğundan hemen bir şeyler almak isteyebilirsiniz, zira indirim olmadığında ürünlerin fiyatları biraz yüksek ve kargo maliyeti de işin içine girdiğinde tüketicinin tadını tuzunu kaçırabiliyor. Umarım Bahar İndirimi yeni sezon ürünler de geldiğinde devam eder de ben de biraz daha uyguna alışverişen azından Beyaz Panda'yı indirimli almış olurum.
 
-[2020 Yaz Avustralya Serisi](/wwf-market-2020-yaz-avustralya-serisi-deneyimlerim.html) hakkındaki deneyimlerimi de okuyabilirsiniz.
+[2020 Yaz Avustralya Serisi](/wwf-market-2020-yaz-avustralya-serisi-deneyimlerim) hakkındaki deneyimlerimi de okuyabilirsiniz.

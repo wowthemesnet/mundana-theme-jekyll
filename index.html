@@ -34,7 +34,7 @@ description: "Tolga Altaş'ın teknoloji, yeme-içme, moda, oyun, sinema-televiz
         <small class="d-block text-muted">
                 <span class="catlist">
                 {% for category in latest_post.categories %}
-                <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
+                <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/etiketler.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
                 {% endfor %}
                 </span> etiketinde                   
         </small>
@@ -63,11 +63,11 @@ description: "Tolga Altaş'ın teknoloji, yeme-içme, moda, oyun, sinema-televiz
                     <a class="text-dark" href="{{site.baseurl}}{{second_post.url}}">{{ second_post.title }}</a>
                     </h2>
                     <small class="d-block text-muted">
-                        In <span class="catlist">
+                        <span class="catlist">
                         {% for category in second_post.categories %}
-                        <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
+                        <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/etiketler.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
                         {% endfor %}
-                        </span>                   
+                        </span> etiketinde                  
                     </small>
                     <small class="text-muted">
                         {{ second_post.date | date: '%b %d, %Y' }}
@@ -90,11 +90,11 @@ description: "Tolga Altaş'ın teknoloji, yeme-içme, moda, oyun, sinema-televiz
                     <a class="text-dark" href="{{site.baseurl}}{{third_post.url}}">{{ third_post.title }}</a>
                     </h2>
                     <small class="d-block text-muted">
-                        In <span class="catlist">
+                        <span class="catlist">
                         {% for category in third_post.categories %}
-                        <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
+                        <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/etiketler.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
                         {% endfor %}
-                        </span>                   
+                        </span> etiketinde                    
                     </small>
                     <small class="text-muted">
                         {{ third_post.date | date: '%b %d, %Y' }}
@@ -117,11 +117,11 @@ description: "Tolga Altaş'ın teknoloji, yeme-içme, moda, oyun, sinema-televiz
                     <a class="text-dark" href="{{site.baseurl}}{{fourth_post.url}}">{{ fourth_post.title }}</a>
                     </h2>
                     <small class="d-block text-muted">
-                        In <span class="catlist">
+                        <span class="catlist">
                         {% for category in fourth_post.categories %}
-                        <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
+                        <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/etiketler.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
                         {% endfor %}
-                        </span>                   
+                        </span> etiketinde                   
                     </small>
                     <small class="text-muted">
                         {{ fourth_post.date | date: '%b %d, %Y' }}

@@ -27,7 +27,7 @@ Kutudan iki adet fırça başlığı çıkıyor, bunlardan bir tanesi yazıda da
 
 Ürünün borusunda yer alan dahili fırça ile harici bir aparat takıp sökmekten kurtuluyorsunuz. Bu da sizin sürekli bir aparat aramanızın ve vakit kaybetmenizin önüne geçiyor. LED'li fırça başlığını söktükten sonra fırçayı aktif ederek zemin ve tavan köşeleri ile dar alanları kolaylıkla temizleyebilirsiniz.
 
-![Philips SpeedPro Max'in gövde yapısı](assets/images/philips-speedmax-pro.jpgphilips-speedmax-pro.jpg)
+![Philips SpeedPro Max'in gövde yapısı](assets/images/speedpro-max-2_optimized)
 
 ### Eksi Yönler
 Elbette bir ürün hiçbir zaman kusursuz olamaz. Philips SpeedPro Max'in de kendince bazı kusurları mevcut ve bu kusurlar pek çok tüketicinin satın alma kararını etkileyebilir.

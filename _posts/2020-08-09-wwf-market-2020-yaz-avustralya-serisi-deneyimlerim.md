@@ -3,6 +3,7 @@ layout: post
 title:  "WWF Market 2020 Yaz Avustralya Serisi ürün ve alışveriş deneyimlerim"
 categories: [ Moda ]
 image: assets/images/wwf-market-2020-yaz-avustralya.jpg
+tags: [ wwf market ]
 ---
 WWF Market'ten ne kadar mutlu olduğumu zaten kendileri ile ilgili yazdığım [bir önceki yazımda](/wwf-market-urun-ve-alisveris-deneyimlerim/) bahsetmiştim. Ürünlerin sürdürülebilir olarak tamamen Türkiye'de üretilmesi bir yana, satın alımlarınızdan elde edilen kârın %40'ının [WWF Türkiye](https://www.wwf.org.tr/)'ye aktarılması da önemli bir satın alma tercihi oluşturuyor. En azından kuru kuruya iyi bir ürün almanın yanı sıra satın alımınızın sonucunda vakfın da yararına bir kısım ayrılması tüketici açısından tercih edilebilirliği iyice arttırıyor.
 

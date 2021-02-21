@@ -17,5 +17,6 @@ permalink: "/iletisim.html"
 <input class="btn btn-success" type="submit" value="Gönder">
 </form>
 
+
 Aşağıdaki takvime göre uygunluk zamanımı görüntüleyebilirsiniz.
-<iframe src="https://calendar.yandex.com/embed/week?&amp;layer_ids=11648673&amp;tz_id=Europe/Istanbul&amp;layer_names=My events" width="800" height="450" frameborder="0" style="border: 1px solid #eee"></iframe>
+<iframe src="https://calendar.yandex.com/embed/week?&layer_ids=11648673&tz_id=Europe/Istanbul&layer_names=My events" width="800" height="450" frameborder="0" style="border: 1px solid #eee"></iframe>

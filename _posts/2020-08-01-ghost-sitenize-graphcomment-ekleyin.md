@@ -40,7 +40,7 @@ Her şeyden önce bir [GraphComment](https://graphcomment.com/admin/#/register) 
 ## Yorum kodunu post.hbs dosyasına yapıştırın
 Ardından, Ghost temanızda yorumların gözükmesini istediğiniz yere kodu ekleyin. Bu genellikle `post.hbs` içeriğin hemen ardında gözükmesi için dosyasıdır. Casper temasında, yorum servisi eklemeniz için özel bir alan zaten belirtilmiştir, bu GraphComment kodunu yerleştirmeniz için iyi bir alan olabilir.
 
-![65. ve 69. satırlarını temizlediğinize emin olun.](assets/images/graphcomment-code.jpg "65. ve 69. satırlarını temizlediğinize emin olun.")
+![65. ve 69. satırlarını temizlediğinize emin olun.](/assets/images/graphcomment-code.jpg "65. ve 69. satırlarını temizlediğinize emin olun.")
 
 ## GraphComment ID'nizi bulun
 Ardından GraphComment Backoffice'i ziyaret edip Setup sekmesinden kendinize ait ID'yi temin edebilirsiniz.

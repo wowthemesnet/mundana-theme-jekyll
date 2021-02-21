@@ -2,7 +2,7 @@
 layout: post
 title:  "Windows 10X: Şimdi nerede?"
 categories: [ Teknoloji ]
-image: assets/images/Windows-10X.jpg
+image: assets/images/windows-10x-cover.png
 tags: [Windows 10X]
 ---
 Surface Neo, Duo'nun aksine Android işletim sistemine sahip değil, Microsoft'tan beklenenin aksine Windows 10 ile de çalışmıyor. Microsoft, işletim sistemini modernize etmek ve son kullanıcıya odaklı yapmak için Windows 10X ile beraber Surface Neo'yu geliştiriyor. Bu yeni işletim sistemi, profesyonel bilgisayar kullanıcıları için değil, tablet ve akıllı telefonlar ile daha fazla vakit geçiren ve daha düşük donanımlarla daha basit işlemleri daha hızlı gerçekleştirmek isteyenler için geliyor.
@@ -21,6 +21,8 @@ Yukarda da açıkladığım gibi aslında ikisi için de tasarlanmış bir işle
 - Yeni nesil tek ekranlı cihazlar
 - Yeni nesil 2'si 1 arada cihazlar
 - Katlanabilir iki ekranlı cihazlar
+
+![assets/images/windows-10x-dual.jpg]
 
 ## Windows 10X'in Windows 10'dan farkı nedir?
 Temelde Windows 10X'in Windows 10'e kıyasla Android'e yakın bir deneyim sunduğunu söylemiştim, dolayısıyla kabuk olarak her ne kadar birbirleri ile benzerlik sağlasalar da büyük farklılıklara da sahipler. En büyük fark, Windows 10X üzerinde çalışacak tüm uygulamalar container üzerinde çalışacak. Bu uygulamaların tabanları UWP, PWA ve Win32 olabilecek. Uygulamaların container üzerinde çalışması işletim sisteminin daha güvenli olmasını ve ve özellikle Win32 tabanlı uygulamaların Microsoft Store üzerinden edinilmesini sağlayacak.

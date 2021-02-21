@@ -2,7 +2,7 @@
 name: 'Tolga Altaş'
 description: 'Kişisel günceleme alanı.'
 logo: 'assets/images/logo.png'
-favicon: 'assets/images/favicon.ico'
+favicon: 'assets/images/favicontolga.png'
 baseurl: '/'
 disqus: 'tolgaaltas'
 email: 'info@tolgaaltas.com'

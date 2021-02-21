@@ -43,16 +43,16 @@ WhatsApp’ten uzaklaşmayı planlıyorsanız (ki bu iyi bir şey) bunu şimdi y
 ## En iyi WhatsApp alternatifi nedir?
 Açıkçası WhatsApp'ten çok daha iyi ve güvenli bir mesajlaşma yazılımı hali hazırda mevcut: [Telegram](https://telegram.org/). Telegram zengin mesajlaşma, 200.000 kişilik devasa gruplar, modern uygulama ve masaüstü istemcileri, büyük boyutlarda sıkıştırımadan dosya paylaşımı, bulut altyapısı ve uçtan uca şifreleme ile kullanıcılara WhatsApp'ten daha zengin bir deneyim sunuyor.
 
-| Özellik                                       | WhatsApp     | Telegram |
-|-----------------------------------------------|--------------|----------|
-| Dosya Gönderim Limiti                         | 100 MB       | 1.5 GB   |
-| Gizli Sohbet                                  | Mevcut değil | Mevcut   |
-| SIM kartsız kullanım                          | Mevcut değil | Mevcut   |
-| Ekran görüntüsü bildirimi (Gizli sohbetlerde) | Mevcut değil | Mevcut   |
-| Süreli mesajlar                               | Mevcut değil | Mevcut   |
-| Gönderilmiş mesajı düzenleme                  | Mevcut değil | Mevcut   |
-| Uçtan uca şifreleme                           | Mevcut       | Mevcut   |
-| Kullanıcı adıyla sohbet                       | Mevcut değil | Mevcut   |
+| Özellik                                                  | WhatsApp     | Telegram |
+|----------------------------------------------------------|--------------|----------|
+| Dosya Gönderim Limiti                                    | 100 MB       | 1.5 GB   |
+| Gizli Sohbet                                             | Mevcut değil | Mevcut   |
+| SIM kartsız kullanım                                     | Mevcut değil | Mevcut   |
+| Ekran görüntüsü bildirimi <sup>(Gizli sohbetlerde)</sup> | Mevcut değil | Mevcut   |
+| Süreli mesajlar                                          | Mevcut değil | Mevcut   |
+| Gönderilmiş mesajı düzenleme                             | Mevcut değil | Mevcut   |
+| Uçtan uca şifreleme                                      | Mevcut       | Mevcut   |
+| Kullanıcı adıyla sohbet                                  | Mevcut değil | Mevcut   |
 
 ### Telegram'ı kurmak
 Arkadaşlarınız ve aileniz ile WhatsApp’ten Telegram’a geçiş yapmak zor olabilir ama imkansız değil. Dijitalleşen dünyamızda bireylerin gizlilikleri konusunda bilinçli olmaları, kayıtsız kalamayacak kadar önemli. WhatsApp’ten Telegram’a nasıl geçiş yapacağınızı adım adım açıklıyorum. Aşağıdaki rehberde Android için Telegram'ın modern istemcisi olan Telegram X yer almaktadır. Eğer isterseniz Android için klasik Telegram istemcisini de Play Store'dan edinebilirsiniz.

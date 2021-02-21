@@ -3,7 +3,7 @@ layout: post
 title:  "WWF Market ürün ve alışveriş deneyimlerim"
 categories: [ Moda ]
 image: assets/images/wwfmarket.jpg
-tags: [yapışkan]
+tags: [ sticky, featured ]
 ---
 
 WWF Market'ten oldukça memnun olmamın iki sebebi var, ürünleri çok güzel ve alışveriş esnasında sizinle kurdukları iletişim gerçekten hızlı. Bu nedenle [Reflect Studio](https://www.reflectstudio.com/) tarafından üretilen bu ürünleri sizlere de tanıtmak istiyorum.

@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Lifalif Ay Çekirdekli & Domatesli Yulaf Topları"
+categories: [ Yeme-İçme ]
+image: assets/images/lifalif.jpg
+tags: lifalif
+---
+That Sugar Film'i izlememin ardından şekeri hızlıca hayata çıkartmaya karar verdim. Abur cuburlar gündelik hayatımın bir parçasıydı ve bu parçayı daha önce kola gibi soğuk meşrubatları kestiğim gibi kolayca hayatımdan çıkartabileceğime güvendim. Abur cuburlar hayatımdan çıksa da şeker tüketimine hazır gıdalarda her zaman dikkat etmek zorundasınız maalesef. Bugün tükettiğimiz kahvaltı gevreklerinde bile şeker ilavesi mevcut olduğunu göz önünde bulundurursak -ki pek çok insan bunları sağlıkli diyet ürünü olarak tüketiyor- bir ürünü tüketmeyi geçtim, satın almadan önce şeker oranına göz atmak lazım. Tabi burada şekerin kaynağı da oldukça önemli, glikoz veya fruktoz ilaveli bir ürün kullanıyorsanız vay geldi halinize. Bu, kesinlikle bir meyveden alacağınız doğal şeker ile kıyaslanamaz.
+
+Sıvı gıdalarda alternatifler boldu; su, süt, ayran ve kefir tüketebilirdim. Ama söz konusu atıştırmalık abur cubur olduğunda açıp tüketilebilir bir şey bulmak oldukça zor. Bu ihtiyacı gidermek için genellikle yoğurt ile yulaf tüketmeye gayret gösterdim ama hepimiz karantinadayız yalan söylemenin alemi yok, insanın bir yerden sonra kendi için bile olsa bir şey yapası gelmiyor. Ben de bu sıkıntılar ile cebelleşirken Lifalif Yulaf Topları adlı ürünü gördüm. Ürünü iki farklı varyasyonu mevcut; birisi başlıkta da yer alan ay çekirdeği ve domates içeren, diğeri ise kuru incir ve fındık içeren. Dürüst olmak gerekirse ben bu ikili arasından başlıkta da yer verdiğim ay çekirdeği ve domates olanı beğendim. Kuru üzümlü ve fındıklı olan Lifalif Yulaf Toplarındaki tatlı aroma beni yerken çok baydı.
+
+Eğer sağlıklı, hazır ve kolay tüketilebilir bir atıştırmalık ürün arıyorsanız muhtemelen Lifalif'in Yulaf Topları tercih edebileceğiniz en iyi seçeneklerden birisi olacaktır. Yukarıda şeker de şeker diye geveledim ama ürünün besin öğelerine baktığınızda şeker göreceksiniz, korkmayın. Buradaki şeker değeri ürünün içerisinde yer alan bal veya kuru meyvelerden geliyor. Gıda Dedektifi adlı site henüz bu ürünleri incelememiş, ancak Eti Lifalif Yulaf Ezmesi ürününü inceleyip içerisindekilerin paketle uyuştuğunu görünce ben markaya kafadan bir güvendim. Eğer olur da Gıda Dedektifi içerisindeki şekerin farklı kaynaklardan geldiğini doğrulayan bir şey yayınlarda ben tüketmeyi keserim ve bu yazıyı da güncellemiş olurum. Ama o zamana kadar sağlılı atıştırmalık tercihlerim arasında kendisi bir numara olarak kalacak.

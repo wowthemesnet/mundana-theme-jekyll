@@ -3,7 +3,7 @@ layout: post
 title: "Ghost CMS için Biron Themes Temaları artık Türkçe"
 categories: [ Teknoloji ]
 tags: [ ghost ]
-images: assets/images/bironthemes.png
+image: assets/images/bironthemes.png
 ---
 Geçtiğimiz aylarda Ghost CMS için ücretsiz temalar yayınlayan [GodoFredo](/ghost-cms-icin-godofredo-temalari-artik-turkce/) ve ücretli temalar hazırlayan [Aspire Themes](/ghost-cms-icin-aspire-themes-temalari-artik-turkce/)'in temalarını çevirmiştim.
 

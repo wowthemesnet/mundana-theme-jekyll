@@ -3,6 +3,7 @@ layout: post
 title:  "Ghost CMS için Google News site haritası oluşturma"
 categories: [ Teknoloji ]
 image: assets/images/ghost-google-news.jpg
+tags: [ Ghost ]
 ---
 Ghost her ne kadar diğer içerik yönetim sistemlerine kıyasla bilinirlik konusunda zayıf olsa da özellikle özgür basın ve habercilik açısından oldukça büyük bir potansiyele sahip. Kendi içerisinde barındırdığı ücretli abonelik ve bülten hizmetleri ile diğer içerik yönetim sistemlerinde harici olarak satın almanız gereken pek çok servisi Ghost size üçüncü parti entegrasyonları ile kendi içerisinde sunuyor.
 

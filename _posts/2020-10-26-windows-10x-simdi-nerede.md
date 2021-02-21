@@ -22,7 +22,7 @@ Yukarda da açıkladığım gibi aslında ikisi için de tasarlanmış bir işle
 - Yeni nesil 2'si 1 arada cihazlar
 - Katlanabilir iki ekranlı cihazlar
 
-![Windows 10X çift ekranlı cihazlara sonra gelecek](assets/images/windows-10x-dual.jpg)
+![Windows 10X çift ekranlı cihazlara sonra gelecek](/assets/images/windows-10x-dual.jpg)
 
 ## Windows 10X'in Windows 10'dan farkı nedir?
 Temelde Windows 10X'in Windows 10'e kıyasla Android'e yakın bir deneyim sunduğunu söylemiştim, dolayısıyla kabuk olarak her ne kadar birbirleri ile benzerlik sağlasalar da büyük farklılıklara da sahipler. En büyük fark, Windows 10X üzerinde çalışacak tüm uygulamalar container üzerinde çalışacak. Bu uygulamaların tabanları UWP, PWA ve Win32 olabilecek. Uygulamaların container üzerinde çalışması işletim sisteminin daha güvenli olmasını ve ve özellikle Win32 tabanlı uygulamaların Microsoft Store üzerinden edinilmesini sağlayacak.

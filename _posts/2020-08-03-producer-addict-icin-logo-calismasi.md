@@ -2,7 +2,7 @@
 layout: post
 title:  "Producer Addict için logo çalışması"
 categories: [ Blog ]
-image: assets/images/1.jpg
+image: assets/images/producer-addict.jpg
 tags: [ tasarım ]
 ---
 Bir süredir parçası olduğum [Flarum Topluluğunda](https://discuss.flarum.org/d/24596-logo-design-competition-100-prize/) gördüğüm bir tartışma üzerine Producer Addict ile karşılaştım. Açıkçası ilk başta bir çalışma yapıp katılmayı pek fazla düşünmesem de yapılan başvuruları pek beğenmediğim için topluluktaki bir kullanıcıya yardımcı olabilmesi açısından kendi çalışmamı oluşturup gönderdim.

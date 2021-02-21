@@ -3,7 +3,7 @@ layout: post
 title:  "WhatsApp'ten kaçış: Mesajlarınızı Facebook ile paylaşmak zorundasınız"
 categories: [ Teknoloji ]
 image: assets/images/whatsapp-to-telegram.jpg
-tags: [ telegram ]
+tags: [ telegram, featured ]
 ---
 Facebook, WhatsApp’i Şubat 2014’te 19 milyar dolara satın almıştı. Satın alındığı tarihte 500 milyon kullanıcısı olan platformun şu anda 2 milyardan fazla kullanıcısı var.
 

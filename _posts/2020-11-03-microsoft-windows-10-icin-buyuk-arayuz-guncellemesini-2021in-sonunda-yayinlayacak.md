@@ -3,7 +3,7 @@ layout: post
 title: "Microsoft, Windows 10 için büyük arayüz güncellemesini 2021'in sonunda yayınlayacak"
 categories: [ Teknoloji ]
 tags: [ microsoft ]
-images: assets/images/windows-10-sun-valley.jpg
+image: assets/images/windows-10-sun-valley.jpg
 ---
 Microsoft, 2021'in ikinci yarısında yayınlayacağı güncelleme ile birlikte Windows 10'un arayüzünde büyük değişiklikler gerçekleştiricek. "Sun Valley" kod adı ile hazırlanan bu pakette neleri göreceğimize göz atalım.
 

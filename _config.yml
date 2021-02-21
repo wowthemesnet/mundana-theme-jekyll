@@ -6,7 +6,7 @@ favicon: 'assets/images/favicon.ico'
 baseurl: '/'
 disqus: 'tolgaaltas'
 email: 'info@tolgaaltas.com'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+mailchimp-list: 'https://tolgaaltas.us8.list-manage.com/subscribe/post?u=f466b0644dff94a7d92722e31&amp;id=87a6d466a0'
 
 include: ["_pages"]
 permalink: /:title/

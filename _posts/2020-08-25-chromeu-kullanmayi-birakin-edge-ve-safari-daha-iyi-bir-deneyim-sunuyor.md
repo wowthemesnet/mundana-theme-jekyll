@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Chrome'u kullanmayı bırakın, Edge ve Safari daha iyi bir deneyim sunuyor"
+categories: [ Teknoloji ]
 image: assets/images/browsers-1.jpg
 tags: [ microsoft ]
 ---

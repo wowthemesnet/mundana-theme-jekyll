@@ -2,6 +2,7 @@
 layout: post
 title: "Microsoft Modern Mobile: Taşınabilir ve Ergonomik"
 image: assets/images/ms-modern-mobile.png
+categories: [ Teknoloji ]
 tags: [ microsoft ]
 ---
 Microsoft'un Modern Mobile Bluetooth faresi aslında yeni bir model değil, ilk olarak Designer olarak bildiğimiz model daha sonraları Surface Mouse olarak yayınlandı. Şimdilerde ise farklı renk seçenekleri ile tekrar satışta.

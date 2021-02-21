@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Merhaba dünya!"
+categories: [ Oyun ]
+image: assets/images/the-medium.png
+---
+7 Mayıs'ta Xbox tarafından gerçekleştirilen etkinlikte Xbox Series X için pek çok oyun gösterildi. Polonyalı stüdyo olan Bloober Team, The Medium adlı korku oyunlarını da bu etkinlikle beraber bizlere gösterdi. Oyun hakkında bilgiler oldukça az, ancak gizemli tanıtım videosu şimdiden bizi heyecanlandırmaya yetti bile. Oyun yalnızca Xbox Series X için değil, aynı zamanda bilgisayarda da yayınlanıyor olacak.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Yw2DGm280Pg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[Bloober Team](https://www.blooberteam.com/)'i daha önceden Layers of Fear, Observer ve Blair Witch oyunlarını da geliştirmiş bir stüdyo. The Medium ise yeni nesil konsollar için geliştirdikleri ilk oyunları. İnternette farklı kaynaklardan edindiğim bilgilere göre oyun 2012 yılında bir konsept fikir olarak ilk şeklini almaya başlamış. Stüdyonun önceki oyunlarının birinci şahıs bakış açısına sahip olması nedeniyle The Medium için de aynı beklentiye sahip olabilirsiniz, fakat stüdyo burada farklı bir karar alarak  üçüncü bakış sabit kamera açısını tercih etmiş. Eğer bu terimlere yakın değilseniz, oyundaki karakterleri PlayStation 4'a çıkan Until Dawn'daki gibi göreceğiz diyebiliriz. Oyundaki ana karakterimizin adı Marianne, kendisi çocukların ölümlerini içeren bazı görgülere sahip. Oyun başlangıç olarak Marianne'nin terk edilmiş bir tatil beldesine olan yolculuğu ile başlıyor. Oyunda iki dünyamız var; gerçek dünyamıza ait müzikleri Reikowski yapıyor, ancak adını bilmediğimiz diğer dünyaya ait müzikleri ise Silent Hill efsanesinden bildiğimiz Akira Yamaoka yapıyor. Sanırım trailerda da yer verilen parça Yamaoka'ya ait. Oyun Xbox Series X'te 4K ve DirextX Ray Tracing desteği ile gelecek, ayrıca asla yüklenme ekranına sahip olmayacak.
+
+Tanıtım videosunu ilk izlediğimde bebek konseptinin olduğunu görünce aklıma doğrudan Death Stranding geldi ve bu kötü bir şey değildi. Kojima'nın oyunlarındaki tutarlı evrenini her zaman sevdiğimden, Death Stranding'in kendine has evrenine de bayılmıştım. Dolayısıyla The Medium içerisindeki bu bebek konsepti de benim için ilgi çekiciydi, ancak nasıl işlediklerine göre bu durum değişiklik gösterecektir.
+
+Tanıtım videosunda sevdiğim bir diğer detay ise oyundaki iki dünya arasındaki geçişlerdi. Çoğu insan 2005 yılında beyaz perdeye uyarlanan [Constantine](https://www.imdb.com/title/tt0360486/)'i karakterin aslına uygun olmadığından dolayı sevmese de ben sevenler arasındayım. The Medium'da iki evren arasındaki geçiş de bana Constantine'i o kadar çok anımsattı ki kendimi bir an filmin evreninde geçen başka bir karakterin oyunun tanıtım videosunu izliyormuş zannettim.
+
+Oyuna dair en büyük endişem ise Marianne'in kilisede dua ediyor olmasıydı. Elbette karakterin inancı ile ilgili bir endişeden kaynaklanmıyor bu durum, ama oyunun temelinde Hristiyan inancına ait materyallerin fazla olması hikayeyi bizlerin anlamasını zorlaştırabilir. Nitekim ben bu sorunu Outlast 2'da yaşadım, Red Barrels oyunun hikayesini zaten ilk oyuna göre çok daha derin işlediği için çoğu kişi oyunu anlamadı ve sevilmedi. Ben yine de karakterin inancına ait öğeler varsa bize İncil açtırıp araştırma yaptırtmamasını, karakterlerden birinin ilgili referansları biraz bize aktarmasını isterim.
+
+Videonun son parçasında ise diğer dünyaya geçiş yapıldığında ufukta büyük canlıların (ya da yaratıkların) olduğunu görüyoruz. Ne yazık ki ne buna, ne de videonun biraz daha ilerisinde ve yazının başlık resmindeki küçük kız çocuğuna ait bir bilgi henüz bulunmuyor.
+
+Oyunu muhtemelen bu yıl gelen vergilerden dolayı bir Xbox Series X sahibi olamayacağımdan gerçeği karşısında bilgisayarda oynarım diye düşünüyorum. Yukarıda benim sevdiğim materyallere sahip olması nedeniyle ve Yamaoka'nın müziklerini dinleme hevesiyle bekliyor olacağım. Her ne kadar Outlast ile uzaktan yakından alakası olmadığı belli olsa da korku oyunları arasında Outlast kadar başarılı bir çıkış sağlayabilmesini temenni ediyorum.

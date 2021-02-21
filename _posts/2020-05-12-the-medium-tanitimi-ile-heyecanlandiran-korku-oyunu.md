@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Merhaba dünya!"
+title:  "The Medium: Tanıtımı ile heyecanlandıran korku oyunu"
 categories: [ Oyun ]
 image: assets/images/the-medium.png
 ---

@@ -5,7 +5,7 @@ categories: [ Teknoloji ]
 image: assets/images/whatsapp-to-telegram-tool.jpg
 tags: [telegram]
 ---
-TPek çok kullanıcı için mesajların anlamı çok büyük olabilir. Sevdikleri insanlar ile paylaştıkları değerli duyguların kelimeye dökülmesi veya artık aramızda olmayanlara ait duygusal hatıraları bu satırlardan oluşuyor. Sadece bu nedenle kullanıcıların bir kısmı WhatsApp'ten farklı bir platforma geçmekte zorlanıyor. Telegram'a gelen 7.4 güncellemesi ile beraber kullanıcıların yaşadığı bu sorun da artık çözümsüz kalmıyor.
+Pek çok kullanıcı için mesajların anlamı çok büyük olabilir. Sevdikleri insanlar ile paylaştıkları değerli duyguların kelimeye dökülmesi veya artık aramızda olmayanlara ait duygusal hatıraları bu satırlardan oluşuyor. Sadece bu nedenle kullanıcıların bir kısmı WhatsApp'ten farklı bir platforma geçmekte zorlanıyor. Telegram'a gelen 7.4 güncellemesi ile beraber kullanıcıların yaşadığı bu sorun da artık çözümsüz kalmıyor.
 
 Hem iOS'te hem de Android'de bulunan bu özellik ile değerli gördüğünüz sohbet mesajlarınızı kolayca taşıyabilirsiniz. Telegram için yayınlanan 7.4 güncellemesi yalnızca WhatsApp görüşmelerinizi değil, aynı zamanda Line ve KakoTalk dahil diğer mesajlaşma uygulamalarından da mesajlarınızı içe aktarabilirsiniz. Görünen o ki iOS tarafında sunulan bu güncelleme de henüz tüm iOS cihazlar için kullanılabilir değil. [9toMac](https://9to5mac.com/2021/01/27/amid-whatsapp-privacy-backlash-telegram-building-new-tool-for-importing-chats-from-other-apps/)'in haberine göre bu araç bir sonraki güncelleme ile kaldırıldı, ancak önümüzdeki güncellemeler ile beraber tekrar gelmesi bekleniyor.
 

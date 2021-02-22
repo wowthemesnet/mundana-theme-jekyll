@@ -16,9 +16,7 @@ permalink: "/iletisim.html"
 <textarea rows="8" class="form-control mb-3" name="message" placeholder="Mesaj*" required></textarea>    
 <input class="btn btn-success" type="submit" value="Gönder">
 </form>
-
-
-
+___
 Aşağıdaki takvime göre uygunluk zamanımı görüntüleyebilirsiniz.
 
 **Dipçe:** Bazı etkinlikler tabloda yer almayabilir, bu nedenle tablodaki her boşluk uygun olduğum anlamına gelmez.

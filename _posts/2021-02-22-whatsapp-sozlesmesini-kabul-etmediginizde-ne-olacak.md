@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "WhatsApp sözleşmesini kabul etmediğinizde ne olacak?"
-image: assets/images/whatsapp-sozlesme.webp
+image: assets/images/whatsapp-sozlesme.jpg
 categories: [ Teknoloji ]
 tags: [ whatsapp, telegram ]
 ---

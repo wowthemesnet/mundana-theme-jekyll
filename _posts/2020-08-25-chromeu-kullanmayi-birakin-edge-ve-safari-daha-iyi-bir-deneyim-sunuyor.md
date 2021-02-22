@@ -28,7 +28,7 @@ Pil konusunda abisi daha iyi bir deneyim sunsa da Chromium tabanlı yeni Microso
 
 Muhtemelen bu yazıyı okuduktan sonra eğer Edge'e geçmeyi tercih ederseniz en çok sevdiğiniz özelliklerden birisi kesinlikle Koleksiyonlar olacaktır. Microsoft Edge'in eski sürümünde Sekmeleri Kaydederek Kaldır olarak adlandırılan özellik, yeni Edge'de daha da geliştirilerek Koleksiyonlar olarak adlandırıldı. Belirli sekmeleri ve içerikleri gruplarak kaydedip not tutmanızı sağlıyor. Alışveriş mi yapmak istiyorsunuz? Çoğu sitenin favorilere ekleme ve liste oluşturma özelliği yok, bu nedenle Koleksiyonları tercih edebilirsiniz. Ödeviniz veya araştırmanız için kaynak mı araştırıyorsunuz? Hepsini bir grup içerisine notlar alarak eklemeniz mümkün.
 
-![Microsoft, kullanıcılara üç farklı gizlilik seçeneği sunar, varsayılan olarak "Dengeli" seçili gelir.](/assests/images/edge-gizlilik.jpg)
+![Microsoft, kullanıcılara üç farklı gizlilik seçeneği sunar, varsayılan olarak "Dengeli" seçili gelir.](/assets/images/edge-gizlilik.jpg)
 
 Bazı kullanıcılar gizlilik konusunda oldukça takıntılı olabilir. İnternet sitelerinin büyük bir kısmı gizlilik konusunda şeffaf bir politika uygulasa da bazı kötü niyetli kaynaklar sizi istemediğiniz halde takip edebilir. Microsoft Edge ise gizliliğinizi yönetebilmeniz için size üç farklı seçenek sunar; varsayılan olarak gelen "Dengeli" mod daha önce ziyaret etmediğiniz web sitelerine ait izleyicileri engeller ve sizin ilgi alanlarınıza yönelik reklamlara maruz kalmanızı azaltır. "Katı" mod ise tüm web sitesindeki izleyicilerin büyük çoğunluğunu engeller. Bu özelliğin bir benzeri Firefox'ta da mevcut. Chrome'da ise çerezlerin sizi takip etmesine yönelik ayarlar hakkında daha derin seçenekler sunulması için üçüncü parti uzantılara ihtiyacınız var.
 

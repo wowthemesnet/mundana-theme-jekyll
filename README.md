@@ -1,8 +1,8 @@
-![Kişisel güncelleme alanı](https://tolgaaltas.com/assets/images/logo.png)
-
 # Kişisel günceleme alanı
 
 Ghost temelli kişisel günceleme alanımı daha da basitleştirmek için Git temelli bir hale getirdim. Bunun en büyük nedenlerinden bir tanesi Ghost'un temelde dijital gelir modeline sahip güncelere yönelik olmasıydı. Bu nedenle benim ihtiyacım olmayan pek çok fonksiyona sahipti. Yaklaşık 10 aylık bir Ghost macerasının ardından Jekyll ile Git üzerinde bir şeyler oluşturma fırsatı yakaladım. @melihcaliskan'ın da el atması ile birlikte Jekyll'a bir şekilde ikna oldum.
+
+![Kişisel güncelleme alanı](https://tolgaaltas.com/assets/images/logo.png)
 
 ## Jekyll ile Git tabanlı günce oluşturma
 Birkaç kolay adım ile Git üzerinde barındırabileceğiniz kendi güncenizi oluşturabilirsiniz. Tek yapmanız gereken [Jekyll Now](/barryclark/jekyll-now)'ı çatallamak (fork etmek) ve gerekli ayarları gerçekleştirmek. Daha detaylı bilgi için reposunu kontrol etmelisiniz.

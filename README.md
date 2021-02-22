@@ -9,7 +9,7 @@ Birkaç kolay adım ile Git üzerinde barındırabileceğiniz kendi güncenizi o
 
 ### Tema
 
-Temanın tüm hakları WowThemes'den [Sal](https://www.wowthemes.net)'a aittir. Temelde Medium'un tasarımını Jekyll ile birleştirmiş.
+Temanın tüm hakları WowThemes'den [Sal](https://www.wowthemes.net)'a aittir. Temelde Medium'un tasarımını Jekyll ile birleştirmiş. WowThemes'e ait pek çok Jekyll temelli ücretsiz tema mevcut, hemen birini çatallayarak kullanmaya başlayabilirsiniz.
 
 [Canlı Test](https://wowthemesnet.github.io/mundana-theme-jekyll/) &nbsp; | &nbsp; 
 [İndir](https://github.com/wowthemesnet/mundana-theme-jekyll/archive/master.zip) &nbsp; | &nbsp; 

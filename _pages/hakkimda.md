@@ -1,6 +1,6 @@
 ---
 title: "Hakkımda"
-layout: page
+layout: page-sidebar
 permalink: "/hakkimda.html"
 ---
 Herkese merhaba!

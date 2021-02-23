@@ -34,7 +34,7 @@ Jekyll, öncelikle minimum maliyetle yayın yapmak isteyenler için en iyi seçe
 
 Kutudan çıktığı haliyle gelirsiz günce oluşturmak açısından ideal. Üstelik genişletmeye de elverişli. Bu sayede gerekli gördüğünüz koşullarda genişletebilirsiniz. Hatta yeterince genişletirseniz ücretsiz barındırdığınız bir CMS'e de sahip olabilirsiniz ([jekyll-manager](https://github.com/ashmaroli/jekyll-manager) veya [jekyll-admin](https://github.com/jekyll/jekyll-admin). Uzantıların yüklemesi WordPress kadar kolay değil, yine bir şeyler bilmek gerekiyor ancak basitçe GitHub'daki repoları forklayıp (çatallayıp) kullanmaya başlayabilirsiniz.
 
-### Kimler Jekyll kimler için değil?
+### Jekyll kimler için değil?
 Eğer hiçbir kodlama bilgisine sahip değilseniz ve öğrenme hevesiniz yoksa Jekyll sizin için kabusa dönüşebilir. Dolayısıyla biraz daha paraya kıyıp WordPress'e yönelmenizde fayda var. Kimileri için Markdown ile metin formatlamak bile bir çile olabilir. Dolayısıyla Jekyll ile günce oluşturmak zevk almaktan çok çileye dönüşebilir. Ama küçük bir yardım ile ücretsiz barındırabileceğiniz harika bir günceye sahip olabilirsiniz.
 
 Çok fonksiyonlu bir site oluşturmak istiyorsanız yine Ghost gibi Jekyll de size ilerde beklentilerinizi sunamayabilir. Dolayısıyla ne yapmak istediğinize iyi karar vermek konusuna dikkat edin.

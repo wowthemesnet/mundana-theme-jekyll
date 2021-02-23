@@ -3,7 +3,7 @@ layout: post
 title: "WhatsApp sözleşmesini kabul etmediğinizde ne olacak?"
 image: assets/images/whatsapp-sozlesme.jpg
 categories: [ Teknoloji ]
-tags: [ whatsapp, telegram ]
+tags: [ whatsapp, telegram, featured ]
 ---
 İlk duyurulduğunda her ne kadar büyük bir tartışma konusu yaratsa da Facebook'un yeni veri paylaşım politikasını ertelemesi haberleri bir süreliğine de olsa yatıştırdı, ancak bu son değil. 15 Mayıs 2021 yaklaştıkça WhatsApp'in verilerinizi Facebook, Instagram ve bazı diğer ortakları ile paylaşması, tarih yaklaştıkça yeniden alevlenmeye başlayacak. Bu durumda henüz ortalık sakinken belki [hafıza tazelemek isteyebilirsiniz](/whatsappten-kacis-mesajlarinizi-facebook-ile-paylasmak-zorundasiniz/).
 

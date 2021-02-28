@@ -21,6 +21,6 @@ Mantık, yukarıda gördüğünüz kadar basit. Hepsi size kalmış. Ancak yine 
 - Videolu konferanslarda eğer katılımcıların sizi görmesine gerek yoksa görüntünüzü kapatın. Bu sayede ciddi anlamda veri transferinin önüne geçebilirsiniz.
 - YouTube'da veya diğer platformlarda video izlerken yüksek çözünürlükten vazgeçebilirsiniz. Eğer bir videoyu arkaplanda yalnızca dinleyecekseniz 144p'ye indirebilir veya arada sırada göz atacaksanız 360p'ye alabilirsiniz. Çoğu zaman için ekrana mesafeli oturanlar 480p videoları izlerken rahatsızlık hissetmiyor.
 - Gereksiz belge paylaşımını durdurun. Elektronik postanın ekine belge ekleyip paylaşmak yerine belgeyi buluta yükleyip üstünde birlikte çalışın. Bu sayede daha az veri transferi gerçekleştireceksiniz.
-- Aynı şey fotoğraflarınız veya videolarınız için de geçerli. 24 saat sonra kaybolması için yüklediğiniz bir veri genellikle bir defa görüntüleniyor ama uzun süre servislerin sunucularında barındırılmaya devam ediyor. Bunun için de depolama alanları üretiliyor ve yine enerji tüketimi artıyor. 24 saat sonra yok olacak bir veriyi üretmememeyi tercih edebilirsin.
+- Aynı şey fotoğraflarınız veya videolarınız için de geçerli. 24 saat sonra kaybolması için yüklediğiniz bir veri genellikle bir defa görüntüleniyor ama uzun süre servislerin sunucularında barındırılmaya devam ediyor. Bunun için de depolama alanları üretiliyor ve yine enerji tüketimi artıyor. 24 saat sonra yok olacak bir veriyi üretmemeyi tercih edebilirsin.
 
 Aklıma geldikçe tüm bu örnekleri güncellemeye devam edeceğim.

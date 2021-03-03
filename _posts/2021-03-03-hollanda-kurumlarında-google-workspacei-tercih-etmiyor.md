@@ -3,7 +3,7 @@ layout: post
 title: "Hollanda, kurumlarında Google Workspace'i tercih etmiyor"
 category: [ Teknoloji ]
 tags: [ google, microsoft ]
-image: assets/images/workspace
+image: assets/images/workspace.jpg
 ---
 
 Google’ın veri gizlilik politikası daima eleştirilen konulardan bir tanesi olmuştur. Özellikle son bir yıldır evimizden sürdürmeye çalıştığımız sosyal, iş ve eğitim hayatımız söz konusu olduğunda çevrimiçi servislerin gizlilikleri daha da önem kazanıyor.

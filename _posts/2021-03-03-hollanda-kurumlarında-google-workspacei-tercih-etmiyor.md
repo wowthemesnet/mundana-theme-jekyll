@@ -22,7 +22,7 @@ Ancak Google G Suite ve G Suite for Education (yeni adıyla Workspace) kullanıl
 > Endişeleri gidermek adına halihazırda birkaç önlem aldık ve Hollanda hükümeti ile görüşmeye devam ediyoruz.
 -Google
 
-## Adalet Bakanlığı da Google Workspace’i tercih etmiyor.
+## Adalet Bakanlığı da Google Workspace’i tercih etmiyor
 Hollanda Kabinesi, verilerin işlenmesini düzene somak için Google ve Avrupa Birliği Komisyonu ile görüşüyor. Ancak Google ile endişeli olan tek kurum Eğitim Bakanlığı değil, Hollanda Adalet Bakanlığı da bu konuda çekincelere sahip. Adalet Bakanı Grapperhaus, parlamentoya gönderdiği [mektupta](https://www.tweedekamer.nl/kamerstukken/brieven_regering/detail?id=2021Z04014&did=2021D08772), memurların şimdilik Google Workspace’i kullanmayacaklarını bildirmiş durumda. Geçtiğimiz yıl konu ile ilgili bakanlık ve Google bir araya gelmiş ancak itirazların yalnızca küçük bir kısmı çözüme kavuşmuştu. 2020 ortasından 2021 Şubat ayına kadar gerçekleştirilen görüşmelerde servis içerisinde yer alan Gmail, Calendar, Hangouts, Sheets, Slide, Cloudsearch ve Drive’da ortaya çıkan veri koruma riskleri ele alınmış ancak 12 Şubat’ta gerçekleştirilen yeniden değerlendirme sonucunda sekiz adet yüksek riskin varlığı tespit edilmiş.
 
 Yüksek riskler arasında veri işlenmesinde amaç sınırlamasının olmaması, şeffaflık eksiklikleri, gizlilik dostu ayarların bulunmaması, alt hizmetler üzerinde kontrol eksikliği ve veri koruması için erişim izninin bulunmaması yer alıyor. 

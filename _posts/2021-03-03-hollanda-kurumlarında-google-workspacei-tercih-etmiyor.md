@@ -1,5 +1,5 @@
 ---
-layout:post
+layout: post
 title: "Hollanda, kurumlarında Google Workspace'i tercih etmiyor"
 category: [ Teknoloji ]
 tags: [ google, microsoft ]

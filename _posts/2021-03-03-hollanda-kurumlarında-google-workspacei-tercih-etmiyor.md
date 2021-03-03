@@ -47,4 +47,3 @@ Yukarıdaki satırlarda Microsoft ürünleri için bir takım gizlilik ayarları
 - Office Mobile'daki tanılama verileri düzeyini en düşük seviyeye ayarlayın.
 
 Raporda daha fazlası da mevcut, ancak ben Felemenkçe (veya Hollandaca) bilmediğim için çevrimiçi kaynaklardan doğruladıklarımla bu kaynağı oluşturdum. Dolayısıyla kullanılan terimlerde çeviri hatalı yanlışlıklar olabileceğini göz önünde bulundurmanız hakkında sizi uyarmalıyım.
-- 

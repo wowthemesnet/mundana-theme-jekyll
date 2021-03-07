@@ -1,8 +1,8 @@
 ---
 layout: post
-title: “Stanford çalışması Zoom toplantılarının normal toplantılardan daha yorucu olduğunu ortaya koyuyor”
-categories: Teknoloji
-tags: zoom
+title: Stanford çalışması Zoom toplantılarının normal toplantılardan daha yorucu olduğunu ortaya koyuyor
+categories: [ Teknoloji ]
+tags: [ zoom ]
 image: assets/images/zoom.jpg
 ---
 Stanford Üniversitesi iletişim uzmanı Jeremy Bailenson, uzaktan çalışmanın etkilerinden birisi olan “Zoom Yorgunluğu” konusu hakkında bir araştırma gerçekleştirmiş. Bailenson, uzaktan gerçekleştirilen video konferanslarının geleneksel yöntemlerle gerçekleştirilen toplantılara kıyasla daha yorucu olmasını dört temel nedene bağlıyor ve yorgunluğu azaltmak için basit çözümler öneriyor.

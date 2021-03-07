@@ -62,7 +62,7 @@ Yirmi beş yol önce yazar David Foster Wallace'ın destansı romanı Sonsuz Jes
 Wallace, görüntülü görüşmelerin yeniliği ortadan kalktığında, insanların hızla yalnızca sesli iletişime geri döneeklerini betimledi. Yalnızca sesli iletişimin güçlü yönlerinden birisinin, insanların konuşurken diğer küçük faaliyetleri yerine getirebildiklerini olduğunu aktardı.
 
 > Sadece işitler geleneksel yöntemlere dayanan bir konuşma otoyolda araç sürerkenki yarı dikkatli konumda olmanıza izin verir. Sohbet ederken odanın etrafına bakabilir, karalama yapabilir, tırnak etlerinizin ölü deri parçalarını soyabilirsiniz, ocakta bir şeyler karıştırabilirsiniz... Hatta telefonla konuşurken aynı odada bulunan kişilerle farklı bir işaret dili ve abartılı yüz ifadeleri ile iletişimde kalmaya devam edebilirsiniz. Tüm bunlarla ilgilenirken yine de bir şekilde dikkatiniz karşı taraftaki kişinin aktardıklarında olur.
-> (Wallace (1996))[https://kottke.org/10/06/david-foster-wallace-on-iphone-4s-facetime]
+> (Wallace - 1996)[https://kottke.org/10/06/david-foster-wallace-on-iphone-4s-facetime]
 
 Bailenson, artan bir araştırma grubunun bilişel performansı iyileştirebileceğini bulduğuna da dikkat çekiyor. Örneğin [yeni bir çalışmaya](https://psycnet.apa.org/record/2014-14435-001) göre, bir koşu bandında yürürken düşünmek, oturmaya kıyasla daha iyi olabilir.
 

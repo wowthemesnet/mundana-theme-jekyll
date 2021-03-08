@@ -7,7 +7,7 @@ tags: [ ghost ]
 ---
 Yandex Turbo Pages, Google'ın AMP teknolojisine benzer bir servistir. AMP'e kıyasla geliştiricilerin sistemlerine entegrasyonu oldukça basittir. Turbo Pages için yeni bir RSS oluşturarak kullanmaya hemen başlayabilirsiniz.
 
-Ancak Yandex'in Turbo Pages özelliği genellikle Avrupa ve Amerika bölgelerinde geliştirilen içerik yönetim sistemleri tarafından varsayılan olarak desteklenmez. Neyse ki AMP'e göre entegrasyonu çok daha kolay olduğundan Yandex Turbo Pages'i kendi sisteminize de kolaylıkla entegre edebilirsiniz, tıpkı Ghost'a entegre edebileceğimiz gibi. Bu içerik temel olarak [Kartashev]/https://kartashev.me/en/how-to-connect-yandex-turbo-pages-to-ghost-blog/)'in blogundan edinilen bilgiler ışığında hazırlanmıştır.
+Ancak Yandex'in Turbo Pages özelliği genellikle Avrupa ve Amerika bölgelerinde geliştirilen içerik yönetim sistemleri tarafından varsayılan olarak desteklenmez. Neyse ki AMP'e göre entegrasyonu çok daha kolay olduğundan Yandex Turbo Pages'i kendi sisteminize de kolaylıkla entegre edebilirsiniz, tıpkı Ghost'a entegre edebileceğimiz gibi. Bu içerik temel olarak [Kartashev](https://kartashev.me/en/how-to-connect-yandex-turbo-pages-to-ghost-blog/)'in blogundan edinilen bilgiler ışığında hazırlanmıştır.
 
 ## Kurulum
 Kurulum için öncelikle temamızın dosyaları arasına yeni bir dosya daha eklememiz gerekiyor. Bunun için öncelikle Ghost paneline gidelim, Settings altında bulunan Design sekmesinde yer alan Installed Themes'de yer alan kullandığımız temayı indirelim. Tema dosyalarımızın içerisinde turbo.hbs adlı bir dosya oluşturalım ve içerisine aşağıdaki kodları ekleyelim;

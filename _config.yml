@@ -1,11 +1,12 @@
 # Site
-name: 'Mundana'
-description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+name: 'Amod0017-Blog'
+description: 'I use this space to jot down my ideas and experience'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: '/blog'
 disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
+email: 'amod0017@gmail.com'
+#mailchimp to be updated
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 include: ["_pages"]
@@ -20,11 +21,11 @@ plugins:
   
 authors:
     sal:
-      name:           Sal
-      site:           https://www.wowthemes.net
+      name:           Amod
+      site:           https://amod0017.github.io/blog
       avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
-      email:          wowthemesnet@gmail.com
+      bio:            "Hi, I am Amod, the author of Mundana, the theme you're currently previewing. I hope you like it!"
+      email:          amod0017@gmail.com
       twitter:        https://twitter.com/wowthemesnet
 
     jane:

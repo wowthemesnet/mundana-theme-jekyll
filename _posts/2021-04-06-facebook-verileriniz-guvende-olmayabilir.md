@@ -2,7 +2,7 @@
 layout: post
 title: Facebook verileriniz güvende olmayabilir
 categories: [ Teknoloji ]
-tags: [ zoom ]
+tags: [ facebook ]
 image: assets/images/facebook.jpg
 ---
 500 milyondan fazla Facebok hesabına ait bilgiler ele geçirildi ve bunlardan birisi de sizin olabilir. Ancak riskte olup olmadığınızı kontrol etmek oldukça basittir.

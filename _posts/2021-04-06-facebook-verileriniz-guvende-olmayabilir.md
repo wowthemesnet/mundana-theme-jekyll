@@ -7,7 +7,7 @@ image: assets/images/facebook.jpg
 ---
 500 milyondan fazla Facebok hesabına ait bilgiler ele geçirildi ve bunlardan birisi de sizin olabilir. Ancak riskte olup olmadığınızı kontrol etmek oldukça basittir.
 
-Elde edilen bilgiler doğrultusunda saldırının ilk olarak 2019 yılında gerçekleştirildiği ve o zamandan itibaren bu veri havuzunun internette dolaştığı tespit edildi. Sızan veriler arasında **telefon numarası, elektronik posta adresi ve diğer bazı hassas bilgiler** yer alıyor. Herkese açık olarak paylaşılan bu veriler ile potansiyel veri saldırganları sizi hedeflerine alabilir veya verilerinizi kullanabilir. Türkiye'den de yaklaşık 30 milyon hesaba ait verinin sızdırıldığı bilgisi paylaşıldıysa da benim gibi risk altında olmayabilirsiniz.
+Elde edilen bilgiler doğrultusunda saldırının ilk olarak 2019 yılında gerçekleştirildiği ve o zamandan itibaren bu veri havuzunun internette dolaştığı tespit edildi. Sızan veriler arasında **telefon numarası, elektronik posta adresi, cinsiyet, şehir, ülke, meslek ve evlilik gibi hassas** yer alıyor. Herkese açık olarak paylaşılan bu veriler ile potansiyel veri saldırganları sizi hedeflerine alabilir veya verilerinizi kullanabilir. Türkiye'den de yaklaşık 30 milyon hesaba ait verinin sızdırıldığı bilgisi paylaşıldıysa da benim gibi risk altında olmayabilirsiniz.
 
 "[Have I Been Pwned?](https://haveibeenpwned.com/)" adlı internet sitesini kullanarak elektronik postanızın veya cep telefonu numaranızın Facebook sızıntısı dahil diğer internet siteleri sızıntıları arasında arıyor ve sizi uyarıyor. Unutmayın, cep telefonunuza dair bir veritabanı araması yapmak için E.164 uluslararası telefon numarası formatını kullanmanız gerekiyor. Aslında bu, telefonunuzun başına ülke kodunu eklemeniz gerektiğinin süslü bir yolu.
 

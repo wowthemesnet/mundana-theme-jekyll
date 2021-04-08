@@ -38,7 +38,7 @@ Hem dikey, hem de yatay baskıya karşı ucu koruyan mekanizması ile uç kıran
 DelGuard da tıpkı Kuru Toga gibi farklı modellere sahiptir. Standart model tamamen plastik bir yapıdayken Type-LX metal gövdeye sahiptir. Bu sayede kalem daha ağır ve yazım esnasında iyi hissettirir. Ancak bazıları gibi silikon kavrama noktasından vazgeçemiyorsanız Type-ER modeli de sizin için bir alternatif olabilir. Standart ve Type-LX modeline göre kavrama noktası biraz daha geniş olan bu model aynı zamanda ilginç silgi yapısı ile de öne çıkıyor. Kalemi baş aşağı yaptığınızda otomatik açılan silgi, silme işlemi esnasında içe kaçmıyor ve kalemi tekrar düz pozisyona getirdiğinizde otomatik gizleniyor. Türkiye'de kalemlerin silgi gibi yedek parçalarını bulmak zor olacağı için endişelenmeyin, kutusundan iki adet yedek silgi de çıkmakta.
 
 ### Pentel PG5 - Hafiflik en büyük avantajınız
-Bu kısım hazırlanıyor.
+Bu alanı hazırlıyorum.
 
 ### Pentel Orenz Metal Grip - Asla uç için uğraşmayın
 Pentel'in Orenz modeli uzun yıllardır piyasada mevcut. En öne çıkan özelliği ise otomatik uç besleyen başlık tasarımı. Bu uç besleyen tasarım aynı zamanda ucu fazla bastırdığınızda içe alarak kırılmaya karşı bir nebze koruma da sağlıyor. Elbette üzerinde yer alan talimatları okumak oldukça önemli, ucu fazla açtığınız taktirde bu mekanizma doğru olarak çalışmayacaktır. Orenz'in uzun uç başlığı sayesinde özellikle cetvel gibi araçlarla yaptığınız çizimleri, tam da çizim esnasında görmek oldukça kolaydır. Plastik sürümü her ne kadar iyi olsa da Metal kavrama noktası varken yükseltme yapmamak anlamsız olur. Orenz'in Metal Grip modeli hem denge açısından hem de kavrama noktasındaki tutuş hissiniz açısından fiyatına değecek bir yükseltme olacaktır. Orenz'in Nero modeli normalde en üst seviyesi ancak o modelin kavrama noktası oval olmadığı için tutuşu yeterince güçlü değil.
@@ -65,12 +65,13 @@ Adından da anlayacağınız üzere bu kalemde her marifet var. Utanmasa Transfo
 Bu üründen bağımsız olarak Ohto'nun üretim kalitesinden pek memnun değilim. Super Promecha 1500'ü hiç elime almadım ancak Horizon modeli gibi teknik sorunlara sahipse kısa sürede bozulabilir. Bu nedenle sizi satın almadan önce iyi bir araştırma yapmaya davet ediyorum.
 
 ### Platinium Pro-Use
+Bu alanı hazırlıyorum.
 
 ## Destekleyici ürünler
 Kalemleri satın aldıktan sonra bir de kalemliğe ve onu dolduracak ürünlere ihtiyacınız olacaktır. 
 
 ### Silgi tavsiyesi
-
+Bu alanı hazırlıyorum ancak tavsiyem Pentel Hi-Polymer Eraser.
 
 ### Uç tavsiyesi
 Elbette bir mekanik kalemi uç olmadan kullanmak olmaz. Uç, kırtasiyeden gidip kolayca alabileceğiniz bir ürün olsa da aslında satın alırken en az kalem kadar dikkat etmeniz gereken bir ürün. Ucun dayanıklılığı, koyuluğu ve yazım hissiyatı gibi etmenler kalemi de önemli derecede etkilemektedir.
@@ -83,3 +84,9 @@ Nano Dia uç ailesi ülkemizde maalesef çok kolay bulunmuyor ve oldukça pahal�
 
 ### Kalemlik tavsiyesi
 Bu alan için önerebileceğim çok fazla ürün yok, çünkü ben genellikle sırt çantalarımdaki kalem alanlarını kullanıyorum bunun için. Ancak masada, çantada, kalemlikte ve cekette kullanabileceğiniz iki önerim var. Bu iki ürüne de sahip olduğum için rahatlıkla tavsiye edebiliyorum.
+
+#### Lamy Safari Metal Kutu
+Bu alanı hazırlıyorum.
+
+#### Lamy KLF-MG Tekli Deri Kılıf
+Bu alanı hazırlıyorum.

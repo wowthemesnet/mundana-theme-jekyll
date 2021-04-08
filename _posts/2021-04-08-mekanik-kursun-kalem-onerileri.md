@@ -20,12 +20,15 @@ Tikky 2, Grip 2'ye kıyasla daha güçlü bir gövde kalitesine sahiptir. Ancak 
 Benim önerilerim belirli bir sıralamaya sahip değiller, ancak seçenekler arasında elbette birbirine üstün gelebilecek bazı ürünler var. Bu nedenle kendinize en uygun olanı seçmeniz gerekiyor. 
 
 ### Pentel Sharp Kerry - Görünüşünüzden ödün vermeyin
+![Pentel Sharp Kerry](/assets/images/kerry.jpg)
 Görebileceğiniz en tarz sahibi mekanik kalemlerden birisi ile karşı karşıyasınız. Şık olmasının yanında kullanımı oldukça pratik kapaklı yapısıyla da uç başlığınızın kıyafetlerinize zarar vermesini engeller. Kapak kapalıyken de açıkken de kaleme uç vermeye devam edebilirsiniz, kapağını kapatırken arkasına basılı tuttuğunuzda beslenen uç kapağı için fazla uzunsa içeri doğru saklanır. İnce kavrama noktası ile ve sağlam iç mekanizması ile uzun yıllar kullanmaktan keyif alacaksınız.
 
 ### Pentel Smash - Denge ve rahatlığın tadını çıkartın
+![Pentel Smash](/assets/images/smash.jpg)
 Benim Pentel ile tanışmama vesile olan ve lisans ile lisansüstü eğitimimde bana eşlik eden kalem Smash olmuştu. İlk başta GraphGear 500 veya GraphGear 1000 arasında gidip gelirken daha sonra yazım için daha uygun olduğunu düşündüğüm Smash'i tercih ettim.  Smash, yine orta ağırlıktaki gövdesi ve hem silikon ve metalden oluşan hibrit kavrama noktalı tasarımıyla yazımda ve teknik çizimlerde sizi memnun edecektir. Bana ilk başta bu hibrit tasarım çok mantıklı gelmese de kullandıkça rahatlığının farkına vardım ve hayranı oldum. Kalemin dengesi de çok iyi olduğundan dolayı sağlam gövde kalitesi ile sizi uzun yıllar yarı yolda bırakmayacaktır. Hangi ucu taktığını hatırlamakta zorluk çekenler için güzel bir göstergesi de mevcut.
 
 ### Uni Kuru Toga Advance Upgrade - Her zaman aynı kalınlıkta yazın
+![Uni Kuru Toga Advance Upgrade](/assets/images/kuru-toga.jpg)
 Uni, Kuru Toga'yı tanıttığında aslında uçlu kalemler için bir devrim yarattı desem yanlış olmaz. Geleneksel mekanik kurşun kalemler uzun süreli yazımda silikleşme ve genişleme yaratırken Kuru Toga'nın ucu döndüren eşsiz mekanizması ucu yüzeye her temas ettirdiğinizde döndürür ve ucun farklı bir yüzeyini kullanmanızı sağlar.
 
 İlk nesil Kuru Toga Modelleri (Standart, High Grade, Pipe Slide, Alpha Gel ve Roulette) ucun 40 temasta tam tur dönmesini gerçekleştirirken Advance modelleri (Advance Standart ve Advance Upgrade) bu işlemi iki kat hızlandırarak 20 temasta turu tamamlar. İlk nesilde turun daha yavaş tamamlanması mekanizmada bazen takılmalara ve mekanizmanın beklendiği gibi çalışmamasına neden oluyordu. Yenilenen mekanizma ile aynı zamanda içe saklanan uç başlığı da standart hale geliyor. Böylece düşme sonucu borunun ezilmesi veya taşırken kıyafetlere zarar verme durumu da ortadan kalkıyor.
@@ -33,14 +36,17 @@ Uni, Kuru Toga'yı tanıttığında aslında uçlu kalemler için bir devrim yar
 Kuru Toga Advance yerine Kuru Toga Advance Upgrade tercih etmenizi önermemin en büyük nedenlerinden birisi malzeme kalitesinin verdiği hissiyat. Kuru Toga Advance'in plastik kasası Pentel ürünlerindeki kadar güvenli bir izlenim uyandırmıyor. Dolayısıyla kaleme gözünüz gibi bakmanız gerektiğini düşünüyorum. Mekanizma ve kasanın büyük bir kısmı plastik malzemelerden oluştuğu için darbelere karşı dayanıklılığı şüphe uyandırıcı. Ancak Advance Upgrade modeli metal kasası ile çok daha korunaklı bir yapıya sahip. Onun da tek eksisi silginin bulunduğu yerden ses gelmesi ancak rahatsız edecek kadar bir ses olmadığını söylememde fayda var. Uni Kuru Toga Advance Upgrade modeli henüz ülkemizde bulunmuyor ancak AliExpress, Ebay veya Amazon'dan elde etmek mümkün. 
 
 ### Zebra DelGuard Type-LX - Asla uç kırmayın
+![Zebra DelGuard Type-LX](/assets/images/delguard.jpg)
 Hem dikey, hem de yatay baskıya karşı ucu koruyan mekanizması ile uç kıranların korkulu rüyalarını sona erdiren bir kalemdir kendisi. Dikey baskıda ucu içeri saklayan, yatay baskıda boruyu uzatan tasarımı ile bundan sonra kabuslarınız geride kalacak. Kaleminizi ister dikey, ister yatay tutun fark etmez.
 
 DelGuard da tıpkı Kuru Toga gibi farklı modellere sahiptir. Standart model tamamen plastik bir yapıdayken Type-LX metal gövdeye sahiptir. Bu sayede kalem daha ağır ve yazım esnasında iyi hissettirir. Ancak bazıları gibi silikon kavrama noktasından vazgeçemiyorsanız Type-ER modeli de sizin için bir alternatif olabilir. Standart ve Type-LX modeline göre kavrama noktası biraz daha geniş olan bu model aynı zamanda ilginç silgi yapısı ile de öne çıkıyor. Kalemi baş aşağı yaptığınızda otomatik açılan silgi, silme işlemi esnasında içe kaçmıyor ve kalemi tekrar düz pozisyona getirdiğinizde otomatik gizleniyor. Türkiye'de kalemlerin silgi gibi yedek parçalarını bulmak zor olacağı için endişelenmeyin, kutusundan iki adet yedek silgi de çıkmakta.
 
 ### Pentel PG5 - Hafiflik en büyük avantajınız
+![Pentel PG5](/assets/images/pg5.jpg)
 Bu alanı hazırlıyorum.
 
 ### Pentel Orenz Metal Grip - Asla uç için uğraşmayın
+![Pentel Orenz](/assets/images/orenz.jpg)
 Pentel'in Orenz modeli uzun yıllardır piyasada mevcut. En öne çıkan özelliği ise otomatik uç besleyen başlık tasarımı. Bu uç besleyen tasarım aynı zamanda ucu fazla bastırdığınızda içe alarak kırılmaya karşı bir nebze koruma da sağlıyor. Elbette üzerinde yer alan talimatları okumak oldukça önemli, ucu fazla açtığınız taktirde bu mekanizma doğru olarak çalışmayacaktır. Orenz'in uzun uç başlığı sayesinde özellikle cetvel gibi araçlarla yaptığınız çizimleri, tam da çizim esnasında görmek oldukça kolaydır. Plastik sürümü her ne kadar iyi olsa da Metal kavrama noktası varken yükseltme yapmamak anlamsız olur. Orenz'in Metal Grip modeli hem denge açısından hem de kavrama noktasındaki tutuş hissiniz açısından fiyatına değecek bir yükseltme olacaktır. Orenz'in Nero modeli normalde en üst seviyesi ancak o modelin kavrama noktası oval olmadığı için tutuşu yeterince güçlü değil.
 
 ### Steadtler Graphite 779 - Konforlu yazımın tadını çıkarın

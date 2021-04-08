@@ -93,7 +93,9 @@ Nano Dia uç ailesi ülkemizde maalesef çok kolay bulunmuyor ve oldukça pahal�
 Bu alan için önerebileceğim çok fazla ürün yok, çünkü ben genellikle sırt çantalarımdaki kalem alanlarını kullanıyorum bunun için. Ancak masada, çantada, kalemlikte ve cekette kullanabileceğiniz iki önerim var. Bu iki ürüne de sahip olduğum için rahatlıkla tavsiye edebiliyorum.
 
 #### Lamy Safari Metal Kutu
+![Lamy Safari Metal Kutu](/assets/images/lamy-kutu.jpg)
 Bu alanı hazırlıyorum.
 
-#### Lamy KLF-MG Tekli Deri Kılıf
+#### Lamy Safari Deri Kılıf
+![Lamy Safari Deri Kılıf](/assets/images/lamy-deri.jpg)
 Bu alanı hazırlıyorum.

@@ -3,7 +3,7 @@ layout: post
 title:  "Acer, Aspire Vero ile teknolojiyi sürdürülebilir kılıyor"
 categories: [ Teknoloji ]
 tags: [ sürdürülebilir ]
-image: assets/images/aspire-vero.png
+image: assets/images/aspire-vero.jpg
 ---
 Teknoloji ve ekolojiyi bir araya getiren Acer, çevreye duyarlı olan Aspire Vero modelini tanıttı. 2035 yılına kadar %100 yenilenebilir enerji kullanma taahhüdünde bulunan RE100 girişimine katılan firma aynı zamanda Earthion platformunu da destekliyor. Earthion’un yeşil tasarım prensibine uygun olarak da Acer yeni Aspire Vero dizüstü bilgisayarını duyurdu.
 

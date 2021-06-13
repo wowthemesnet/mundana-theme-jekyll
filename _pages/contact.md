@@ -2,13 +2,8 @@
 title: "Contact"
 permalink: "/contact.html"
 ---
-<blockquote># changed 2021-06-13
-		<p>
-			华山再高，顶有过路。
-			<br>
-			No matter how high the mountain is, one can always ascend to its top.
-		</p>   
-<form action="https://formspree.io/{{site.email}}" method="POST">    
+<form action="https://formspree.io/{{site.email}}" method="POST">
+
 <p class="mb-4">Please send your message to {{site.name}}. I will reply as soon as possible!</p>
 <div class="form-group row">
 <div class="col-md-6">

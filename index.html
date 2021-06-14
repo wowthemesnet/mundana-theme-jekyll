@@ -191,7 +191,7 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
                 {% if page == paginator.page %}
                 <li class="page-item disabled"><span class="webjeda page-link">{{ page }}</span></li>
                 {% elsif page == 1 %}
-                <li class="page-item"><a class="page-link" href="{{site.baseurl}}/">{{ page }}</a></li>
+                <li class="page-item"><a class="page-link" href="{{site.paginate_path}}/">{{ page }}</a></li>
                 {% else %}
                 <li class="page-item"><a class="page-link" href="{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
                 {% endif %}

@@ -182,7 +182,7 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
             {% if paginator.total_pages > 1 %}
             <ul class="pagination">
               {% if paginator.previous_page %}
-                <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | replace: '//', '/' }}">&laquo; Prev</a></li>
+                <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
               {% else %}
                 <li class="page-item disabled"><span class="prev page-link">&laquo;</span></li>
               {% endif %}
@@ -191,14 +191,14 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
                 {% if page == paginator.page %}
                 <li class="page-item disabled"><span class="webjeda page-link">{{ page }}</span></li>
                 {% elsif page == 1 %}
-                <li class="page-item"><a class="page-link" href="{{site.paginate_path}}/">{{ page }}</a></li>
+                <li class="page-item"><a class="page-link" href="{{site.baseurl}}/">{{ page }}</a></li>
                 {% else %}
-                <li class="page-item"><a class="page-link" href="{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+                <li class="page-item"><a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
                 {% endif %}
               {% endfor %}
 
               {% if paginator.next_page %}
-                <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path | replace: '//', '/' }}">Next &raquo;</a></li>
+                <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
               {% else %}
                 <li class="page-item disabled"><span class="next page-link">&raquo;</span></li>
               {% endif %}

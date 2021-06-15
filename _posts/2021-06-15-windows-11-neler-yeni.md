@@ -30,5 +30,9 @@ Tüm bunlar haricinde görmekten utandığım öğeler de var. Bazıları Window
 Uzun zamandır dokunmatik ekranlar için herhangi bir iyileştirme almayan Windows 10, yine Windows 10X için hazırlanan bazı materyalleri Windows 11'e aktarmış. Aşağıdaki örnekteki gibi bazı jestler ile birlikte Windows 11'i dokunmatik ekranlarda çok daha sezgisel kullanmak mümkün olacak. Yine de Windows'un ARM üzerinde güçlü bir şekilde çalışmadığı sürece tabletlerde başarı kaydetmesi mümkün değil. Dokunmatik ekranlı cihazlar (Surface Hub, Surface Studio veya diğer taşınabilir Surface ürünler) buna dahil değil. Çünkü onlar taşınabilir dizüstü bilgisayarlar ve genellikle hibrit bir şekilde kullanılıyorlar. Yani birisini doğrudan tablet olarak kullanmak pek mümkün değil. Bunun en büyük nedeni de pil süresi. Maalesef bunun için tek bilinen yol da ARM gibi duruyor.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Windows 11 gestures <a href="https://t.co/ndtOKgeNnE">pic.twitter.com/ndtOKgeNnE</a></p>&mdash; ADeltaX (@ADeltaXForce) <a href="https://twitter.com/ADeltaXForce/status/1404873173569507330?ref_src=twsrc%5Etfw">June 15, 2021</a></blockquote>
+
+Görseller size pek hitap etmiyorsa bir de WindowsCentral'dan Zac Bowden'ın hazırladığı bu videoya göz atmanızı tavsiye ederim. Zac hali hazırda tüketiciler açısından Microsoft ürün ve hizmetlerini en yakından takip eden yabancı basın üyelerinden bir tanesi.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VMHgM_hTzlw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   
 24 Haziran 2021 etkinliği hiç şüphesiz Microsoft severler için heyecan verici olacak. Görünen o ki Microsoft'un da alması gereken çok yol var. Umarız Microsoft Design ekibinin geçtiğimiz 5 yıl içerisinde hazırladığı videolardaki tasarım anlayışına en azından bir nebze de yaklaşabilirler.

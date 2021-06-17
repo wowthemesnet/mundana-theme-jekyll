@@ -36,7 +36,7 @@ defaults:
     values:
       layout: post
       author: sal
-      avatar: /assets/images/taltas.jpg
+      avatar: /assets/images/2021.jpg
       
   # all pages
   - scope:

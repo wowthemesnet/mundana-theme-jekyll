@@ -7,7 +7,7 @@ image: assets/images/windows-11-chat.jpg
 ---
 Microsoft, Windows 11 ile insanların sohbet yazılımını kullanmayı kolaylaştırıyor. Yeni yayınlanan sürüm ile beraber Windows 11 ile Skype ön yüklü olarak gelmeyecek. Bunun yerine Microsoft, Teams’in basit erişilebilir bir halini durum çubuğuna sabitleyecek ve kişileriniz ile erişimi kolaylaştıracak. Bu, Windows 10’da yer alan Kişilerime (My People) bir alternatif olacak hem de Skype’ın yerini Microsoft Teams ile değiştirecek.
 
-## Nasıl kurulur?
+## Nasıl kurulur?
 Ancak ilk iki Windows 11 güncellemesini cihazlarına kuranlar Sohbet özelliğinin henüz işletim sisteminde yer almadığını görmüşlerdir. Eğer sohbeti hemen kullanmak istiyorsanız bunun için Microsoft Teams’in Electron tabanını terk edip PWA tabanıyla yeniden geliştirilen [sürümünü](https://statics.teams.cdn.office.net/production-windows-x64/lkg/MicrosoftTeams-x64.msix) bilgisayarınıza kurmanız gerekiyor. Bu sürümü kişisel bilgisayarınıza kurduktan sonra giriş yapın ve cihazınızı yeniden başlatın. Yeniden başlatma tamamlandıktan sonra Sohbet simgesini durum çubuğunda görebilirsiniz. Sohbet özelliğini kullanmaya başlayabilmeniz için Microsoft hesabınıza telefon numaranızı girmeniz gerektiğini unutmayınız, eğer henüz sisteme telefon numaranızı girmediyseniz yazılımı başlattığınızda sistem sizden ilerlemeden önce girmenizi isteyecektir.
 
 ## Mesajlaşma deneyimi

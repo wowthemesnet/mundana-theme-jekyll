@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Windows 11 başlat çubuğu ve dosya gezgini hatası çözüldü"
+categories: [ Teknoloji ]
+tags: [ microsoft, windows 11 ]
+image: assets/images/windows-11-explorer.jpg
+---
+Microsoft’un bir sonraki işletim sistemi olan Windows 11’i birkaç haftadır evde kardeşimin günlük kullandığı cihazda birlikte test ediyoruz. Yıllardır beklediğimiz modern ve tutarlı tasarıma sahip Windows sürümü nihayet elimizin altında derken büyük bir sorunla boğuşmak zorunda kaldık: explorer.exe
+
+Bu sorunla henüz karşılaşmayanlar veya karşılaşıp neden meydana geldiğini anlamayanlar için açıklayayım; sadece Türkçe kurulum yapılmış dizüstü bilgisayarlarda meydana gelen bu hata, cihazın pil kapasitesi %100’e geldiğinde explorer.exe’nin sonsuza kadar kendini kapatıp yeniden başlatmasına neden oluyordu. Bunun için elinizde iki çözüm yolu var;
+Cihazınızı bataryası ile kullanmaya devam etmek: Bu, cihazınızın %100’de kalmamasına ve explorer.exe’nin düzenli olarak çökmemesine olanak tanıyacaktır. Ancak performans gerektiren işlemlerde cihazınızın pilini hızlı bitirecek veya güç tasarruf nedeniyle tam performansta çalışmayacaktır. Dolayısıyla cihazınızın pilini olabildiğince düşürüp şarj etmeye başladığınızda üretkenlik veya eğlence işlemlerini gerçekleştirmeniz gerekiyordu.
+Microsoft ACPI sürücüsünü devredışı bırakmak: Bu da cihazınızın pilini %100 iken kullanmanıza olanak sağlayacak. Ancak bunun en büyük eksisi ise harici ekran kartını cihazın tanımasını engellemesi. Açıkçası sürücünün çalışma prensibini tam olarak incelemedim fakat benim anladığım şekliyle cihazın pil durumunu kontrol etmesini sağlayan bu sürücüyü kapattığımızda pil verilerine ve güç seçeneklerine erişemiyorsunuz. Bu, aynı zamanda yüksek performans ve enerji tüketimi sağlayan ekran kartının da tanınmamasını sağlıyor, bir nedenle harici ekran kartına güç iletimini etkileyen bir durum yani.
+
+İlk yapı boyunca durumu anlamadığımız için bir süre sonra Windows 10’a geri döndük, daha sonra ACPI çözümü ile karşılaştık (teşekkürler [PC PROGRAMCI](https://www.youtube.com/watch?v=UmgZjMkZ7hE) YouTube kanalı). Yukarıda belirttiğim gibi bu durum harici ekran kartının sistem tarafından tanımlanmasını engellediği için ilk yönteme geçiş yaptık. Çünkü kardeşim hem oyun geliştiriyor, hem de çizim ile uğraşıyor. Bu durumu yabancı kaynaklarda araştırarak bir çözüm bulmaya çalıştık. İlk başta Intel’ın Windows 11 için özel sürücü yayınlamasına heyecanlandık fakat çözüm olmadı. Birkaç gün ardından Nvidia’nın GeForce sürücüleri de Windows 11 için güncellenince galiba ACPI için bir çözüm içerir diye düşündük. Maalesef bu da beklediğimiz sonucu bize vermedi. Nvidia, Microsoft ve Intel topluluk forumlarında yaptığımız araştırmalar da bizi bir çözüme kavuşturmayınca yıldık ve herhalde bize özgü bir durum deyip arkamıza yaslandık.
+
+Bugün ise yayınlanan 22000.100 yapısı ile aslında bu durumun sadece Türkçe dil paketini kullanan Windows 11 kullanıcılarının başına geldiğini ve bu yapı ile beraber çözüldüğünü görünce içimiz rahatladı. [Güncelleme notlarına](https://blogs.windows.com/windows-insider/2021/07/22/announcing-windows-11-insider-preview-build-22000-100/) baktığınızda zaten ilk sırada bu hatanın çözüldüğünü görebilirsiniz.
+> Explorer.exe crashes in a loop for Insiders using the Turkish display language when battery charge is at 100%.
+
+Sonuç olarak bu hata ile ilgili Türkçe veya İngilizce tek bir kaynak yok. Türk yayınlarda da test etmelerine rağmen bu hata ile ilgili bir makale bulamadım açıkçası. Bu nedenle bunu yazılı olarak yayınlamanın diğer Türk Windows 11 Insider kullanıcıları için faydalı olabileceğini düşünüyorum. Eğer siz de bir süredir Windows 11 Insider yapılarını kurduktan sonra anlamsızca bu hata ile uğraştıysanız şimdi gönül rahatlığı ile Windows 10’dan Windows 11’e yükseltme yapabilirsiniz veya hali hazırda kurulu olan Windows 11 yapınızı güncelleyebilirsiniz.

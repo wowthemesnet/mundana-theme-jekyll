@@ -2,7 +2,7 @@
 layout: post
 title:  "Bu kadar maskeye ne olacak?"
 categories: [ Sağlık-Spor ]
-tags: [ maske, geri dönüşüm ]
+tags: [ maske, geri dönüşüm, featured ]
 image: assets/images/mask.jpg
 ---
 COVID-19 pandemisi nedeniyle insan ırkının solunum yollarını korumak amacıyla günlük hijyenik maske kullanım ihtiyacı bir anda neredeyse zorunlu hale geldi. Neredeyse 8 milyar olan insan nüfusu bir ayda 30 milyar adet hijyenik maske atığı oluşturuyor. Maskelerde kullanılan üretim malzemeleri nedeniyle doğada kendi başlarına yok olmaları 500 yılı bulabiliyor. Eğer bu pandamı orta çağda yaşanmış olsaydı bugün hala orta çağdan kalma maskelere rastlıyor olabilirdik demek oluyor.

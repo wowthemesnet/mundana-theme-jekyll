@@ -2,7 +2,7 @@
 layout: post
 title:  "Mekanik kurşun kalem önerileri"
 categories: [ Blog ]
-tags: [ kalem ]
+tags: [ kalem, featured ]
 image: assets/images/kalemler.jpg
 ---
 Mekanik kalemler kişisel ve eğitim amaçlı notlarımızda tüketicilerin ihtiyaç duydukları en önemli araçlardan bir tanesidir. Türkiye'de ve dünyada milyonlarca insan, bir şekilde not alırken mekanik veya diğer adıyla versatil kalemlere ihtiyaç duyuyorlar. Peki bu kalemler hakkında ne kadar bilgiye sahibiz? Benim izlenimlerime göre tüketiciler genellikle piyasada en çok kullanılan modelleri tercih ediyorlar. Türkiye'de ise bu pazarı domine eden iki marka ve birer modelleri var. Bunlardan birisi elbette ilk akla gelen Faber-Castell Grip II (eskiden ilk modeldi), bir diğeri ise Rotring Tikky II (yine önceden ilk modeldi). Bu modeller genellikle perakende mağazalardan kolaylıkla elde edilebilir ve uygun fiyatlıdırlar. Ancak her ikisinin de kendisine has problemleri vardır.

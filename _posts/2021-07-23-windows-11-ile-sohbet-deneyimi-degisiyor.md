@@ -2,7 +2,7 @@
 layout: post
 title:  "Windows 11 ile sohbet deneyimi değiştiyor"
 categories: [ Teknoloji ]
-tags: [ microsoft, windows 11 ]
+tags: [ microsoft, windows 11, featured ]
 image: assets/images/windows-11-chat.jpg
 ---
 Microsoft, Windows 11 ile insanların sohbet yazılımını kullanmayı kolaylaştırıyor. Yeni yayınlanan sürüm ile beraber Windows 11 ile Skype ön yüklü olarak gelmeyecek. Bunun yerine Microsoft, Teams’in basit erişilebilir bir halini durum çubuğuna sabitleyecek ve kişileriniz ile erişimi kolaylaştıracak. Bu, Windows 10’da yer alan Kişilerime (My People) bir alternatif olacak hem de Skype’ın yerini Microsoft Teams ile değiştirecek.

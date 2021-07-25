@@ -3,7 +3,6 @@ layout: post
 title:  "SuCo ürün ve alışveriş deneyimlerim"
 categories: [ Moda ]
 image: assets/images/suco.png
-tags: featured
 ---
 SuCo'yu muhtemelen ilk gördüğünüzde en gereksiz ürünlerden birisi olarak değerlendirmiş olabilirsiniz. Satın almadan önce açıkçası ben de bu ürünün bir ihtiyaç mı yoksa lüks mü olduğu konusunda şüpheye sahiptim. Ekşi Sözlük ve diğer mecralarda da insanlar aslında ikiye ayrılmış durumdalar; bir kısım ürünün argo anlamıyla keriz silkeleme aracı olduğunu düşünürken, diğer bir kısım ise faydalı olduğunu iddia ediyorlar. Ben ise fayalı bir ürün ile heves olduğu konusunda arada kalanlardanım ve yalnız değilim. Aslında Ekşi'de ürün hakkındaki değerlendirmeleri okurken bir kullanıcının da buna benzer bir durumla karşılaştığını görmüştüm, bundan dolayı içim rahat. Bu heves konusuna yazının ilerleyen satırlarında değineceğim ama ilk önce SuCo nedir onunla başlayalım;
 

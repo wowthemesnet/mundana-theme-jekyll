@@ -2,7 +2,7 @@
 layout: post
 title:  "Windows 11 başlat çubuğu ve dosya gezgini hatası çözüldü"
 categories: [ Teknoloji ]
-tags: [ microsoft, windows 11 ]
+tags: [ microsoft, windows 11, featured ]
 image: assets/images/windows-11-explorer.jpg
 ---
 Microsoft’un bir sonraki işletim sistemi olan Windows 11’i birkaç haftadır evde kardeşimin günlük kullandığı cihazda birlikte test ediyoruz. Yıllardır beklediğimiz modern ve tutarlı tasarıma sahip Windows sürümü nihayet elimizin altında derken büyük bir sorunla boğuşmak zorunda kaldık: explorer.exe

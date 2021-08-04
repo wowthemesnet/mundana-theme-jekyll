@@ -2,7 +2,7 @@
 layout: post
 title:  "Windows 11 ile dosya gezgini modern mika görünümüne kavuşuyor"
 categories: [ Teknoloji ]
-tags: [ microsoft, windows 11, featured ]
+tags: [ microsoft, windows 11 ]
 image: assets/images/windows-11-file.jpg
 ---
 Dosya Gezgini, Windows 7’den itibaren neredeyse bütün bir güncelleme almadı. Genellikle işletim sisteminin o dönemki tasarım tarzına göre simge ve bağlam menülerinde değişikliğe gidilse de işletim sisteminin genel itibariyle yeni ve bütünsel arayüzüne uyum sağlamıyordu. Ancak bu durum Windows 11 ile birlikte değişiyor.

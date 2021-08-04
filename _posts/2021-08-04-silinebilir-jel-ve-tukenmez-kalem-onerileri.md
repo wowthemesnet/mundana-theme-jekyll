@@ -25,6 +25,7 @@ Uni-Ball’un Signo serisi zaten jel kalem sevenler arasında hatrı sayılır b
 Uni-Ball Signo Erasable, evrensel silgiler ile çalışan mürekkebi ile kolayca silinebiliyor. 0.5 uçlu yapısı ile çok daha ince yazı yazmak mümkün. Ürün sınırlı üretim (Limited Edition) olduğu için temini her zaman kolay olamayabiliyor. Bu nedenle stok yapmak gerekebilir.
 
 ## Silinebilir tükenmez kalem önerilerim
+Herkes jel kalem kullanmaktan hoşlanmayabilir, bu nedenle silinebilir tükenmez kalemler de tüketiciler tarafından ilgi görüyor. Nasıl silinebilir jel kalemler oldukça sınırlı sayıda ise silinebilir tükenmez kalemlere erişmek de oldukça sınırlı.
 
 ### Paper Mate Replay
 ![Paper Mate Replay](/assets/images/replay.jpg)

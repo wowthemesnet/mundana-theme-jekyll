@@ -6,6 +6,8 @@ image: assets/images/yazi.jpg
 ---
 Ne kadar iyi bir kaleminiz olursa olsun bir süre sonra yazı yazmak elde ağrılara veya kramplara yol açabilir. Birkaç basit egzersiz ile bu ağrıları hafifletmek sizin elinizde. Ancak yine de el ağrısı şikayetiniz varsa birkaç basit yöntemle elinizi rahatlatmak için önerilerde bulunabilirim.
 
+**Şununla da ilgilenebilirsiniz: [Mekanik kurşun kalem önerileri](/mekanik-kursun-kalem-onerileri/)**
+
 ## Egzersizler
 Aşağıdaki egzersizleri yazı yazmaya bağlı olarak oluşan eklem ağrılarınızı gerçimek üzere uygulayabilirsiniz.
 
@@ -40,3 +42,5 @@ Germe çok basit bir egzersiz olarak gözükse de oldukça etkili olabilir.
 
 ## Sonuç
 Bu egzersizleri uygulayarak umarım uzun süre yazı yazmaya bağlı olarak oluşan el ağrılarınızı geçirebilirsiniz. Farklı kaynaklardan derlediğim bu egzersizleri kendim uyguladığımda elimdeki ağrıları azalttığına dair etkisini olumlu yönde gözlemledim. Yine de buradaki egzersizlerin bir sağlık uzmanı tarafından hazırlanmadığını belirtmem gerekiyor. Derlediğim kaynaklarda bu tür bir ifade bulunmadığı için egzersizleri uygularken vücudunuzda oluşabilecek geçiçi veya kalıcı hasarlardan kendinizin sorumlu olabileceğinizi unutmayınız.
+
+**Şununla da ilgilenebilirsiniz: [Silinebilir tükenmez ve jel kalem önerileri](/silinebilir-jel-ve-tukenmez-kalem-onerileri/)**

@@ -7,6 +7,8 @@ image: assets/images/kalemler.jpg
 ---
 Mekanik kalemler kişisel ve eğitim amaçlı notlarımızda tüketicilerin ihtiyaç duydukları en önemli araçlardan bir tanesidir. Türkiye'de ve dünyada milyonlarca insan, bir şekilde not alırken mekanik veya diğer adıyla versatil kalemlere ihtiyaç duyuyorlar. Peki bu kalemler hakkında ne kadar bilgiye sahibiz? Benim izlenimlerime göre tüketiciler genellikle piyasada en çok kullanılan modelleri tercih ediyorlar. Türkiye'de ise bu pazarı domine eden iki marka ve birer modelleri var. Bunlardan birisi elbette ilk akla gelen Faber-Castell Grip II (eskiden ilk modeldi), bir diğeri ise Rotring Tikky II (yine önceden ilk modeldi). Bu modeller genellikle perakende mağazalardan kolaylıkla elde edilebilir ve uygun fiyatlıdırlar. Ancak her ikisinin de kendisine has problemleri vardır.
 
+**Şununla da ilgilenebilirsiniz: [Silinebilir tükenmez ve jel kalem önerileri](/silinebilir-jel-ve-tukenmez-kalem-onerileri/)**
+
 ## Çok tercih edilen mekanik kalemlerin sorunları
 Yazımın başlangıcında bahsettiğim gibi Faber-Castell Grip II ve Rotring Tikky II her ne kadar popüler olsalar da kendi açılarından bazı problemlere sahiptirler. Bu ürünler uygun fiyatlı olduğundan dolayı yeniden temin etmek zor olmuyor, ancak buna gerek var mı? Daha iyi bir mekanik kurşun kalem satın alarak uzun yıllar boyunca tasarruf edebileceğiniz gerçeğini unutmayın. Benim önerilerime geçmeden önce yazının bu kısmında başlıktan da görebileceğiniz üzere en çok satılan bu kalemlerin tüketiciler tarafından en sık rastlanılan sorunlarına değinmek istiyorum. Burada bahsettiğim sorunlar kronik demek istemiyorum, ancak kullanıma bağlı olarak pek çok tüketicinin başına geliyorlar. Başlıklarda güncel modelleri yazacağım ancak sorunlar aslında eski jenerasyon ürünleri için de geçerli.
 
@@ -62,6 +64,8 @@ Baştan söyleyeyim, bu kalemin artık üretimde olup olmadığından bile emin 
 | Pentel PG5 | 0.5 | Saklanamaz | Plastik / Yuvarlak | Yok | Kapaklı | Yok |
 | Pentel Orenz Metal Grip | 0.2, 0.3 ve 0.5 | Saklanabilir | Metal / Yuvarlak | Uç Besleme Mekanizması | Kapaklı | Var |
 | Staedtler Graphite 779 | 0.5 ve 0.7 | Saklanabilir | Silikon / Yuvarlak | Yok | Kapaklı | Yok |
+
+**Şununla da ilgilenebilirsiniz: [Yazı yazarken oluşan el ağrısını geçirme yöntemleri](/yazi-yazarken-olusan-el-agrisini-gecirme-yontemleri/)**
 
 ## Bahsetmeye değer ancak kullanmadığım kalemler
 Burada daha önce kullanma ve satın alma fırsatına sahip olmadığım birkaç mekanik kaleme de yer vermek istedim. Kendileri hakkında uzun okumalar yaptım ama bahsettiğim gibi kullanmadığım için doğrudan gidin, alın ve kullanın diyemeyeceğim.

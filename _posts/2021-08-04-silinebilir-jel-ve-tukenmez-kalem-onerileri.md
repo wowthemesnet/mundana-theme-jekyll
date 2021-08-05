@@ -9,6 +9,8 @@ Silinebilir tükenmez ve jel kalemler ülkemizde fazla yaygın olan kırtasiye �
 
 Silinebilir kalemlerin hemen hemen hepsi oldukça kolay silinebilmektedir ve kısmen kağıt üzerinde leke bırakmamaktadırlar. Kırmızı renkli mürekkepler, diğer renklere oranla biraz daha zor çıkabiliyor olsa da yine silinebilir olarak anılabilirler. Kırmızı lekeler zaten tekstil ürünlerinde de oldukça zor çıkmaktadır, dolayısıyla benzer deneyimi elde etmek beni şaşırtmadı.
 
+**Şununla da ilgilenebilirsiniz: [Mekanik kurşun kalem önerileri](/mekanik-kursun-kalem-onerileri/)**
+
 ## Silinebilir jel kalem önerilerim
 Silinebilir jel kalemler arasında ülkemizde çevrimiçi satışlarda kolaylıkla bulabileceğiniz iki ürün grubu var. Bunlardan birisi Pilot’ın FriXion serisi iken diğer Uni-ball’un Signo Erasable serisi. Her iki serinin de birbirinden farklı yazım karakteristikleri ve özellikleri bulunmakta, yazının devamında bu iki kalem serisinin karakteristik özelliklerine bakacağız.
 
@@ -26,6 +28,8 @@ Uni-Ball Signo Erasable, evrensel silgiler ile çalışan mürekkebi ile kolayca
 
 ## Silinebilir tükenmez kalem önerilerim
 Herkes jel kalem kullanmaktan hoşlanmayabilir, bu nedenle silinebilir tükenmez kalemler de tüketiciler tarafından ilgi görüyor. Nasıl silinebilir jel kalemler oldukça sınırlı sayıda ise silinebilir tükenmez kalemlere erişmek de oldukça sınırlı.
+
+**Şununla da ilgilenebilirsiniz: [Yazı yazarken oluşan el ağrısını geçirme yöntemleri](/yazi-yazarken-olusan-el-agrisini-gecirme-yontemleri/)**
 
 ### Paper Mate Replay
 ![Paper Mate Replay](/assets/images/replay.jpg)

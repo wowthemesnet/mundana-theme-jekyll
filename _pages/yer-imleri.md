@@ -9,4 +9,5 @@ Bu sayfada hem kendim için hem de takipçilerim için faydalı olabileceğini d
 ---
 
 ## Ağustos 2021
+
 - [Farklı Düşün](https://farkli-dusun.simplecast.com/)

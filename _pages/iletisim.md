@@ -3,7 +3,7 @@ title: "İletişim"
 permalink: "/iletisim.html"
 ---
 
-<form action="https://formspree.io/f/tolgaaltas@yandex.com.tr" method="POST">    
+<form action="https://formspree.io/f/mvodwjzw" method="POST">    
 <p class="mb-4">Aşağıda yer alan iletişim formundan yazdıklarınıza 24 saat içerisinde geri dönüş sağlamaya dikkat ediyorum. Bir aksilik sonucu yanıt veremediysem lütfen benimle Vero üzerinden iletişime geçmeyi deneyin.</p>
 <div class="form-group row">
 <div class="col-md-6">

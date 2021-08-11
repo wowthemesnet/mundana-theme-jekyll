@@ -10,4 +10,5 @@ Bu sayfada hem kendim için hem de takipçilerim için faydalı olabileceğini d
 
 ## Ağustos 2021
 
+- [Grilli Type](https://www.grillitype.com)
 - [Farklı Düşün](https://farkli-dusun.simplecast.com/)

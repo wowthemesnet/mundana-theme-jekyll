@@ -10,5 +10,6 @@ Bu sayfada hem kendim için hem de takipçilerim için faydalı olabileceğini d
 
 ## Ağustos 2021
 
+- [How to create a BIMI record](https://www.dmarcanalyzer.com/bimi/how-to-create-a-bimi-record/)
 - [Grilli Type](https://www.grillitype.com)
 - [Farklı Düşün](https://farkli-dusun.simplecast.com/)

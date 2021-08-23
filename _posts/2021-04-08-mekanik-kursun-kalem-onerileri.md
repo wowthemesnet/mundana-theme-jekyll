@@ -45,7 +45,7 @@ DelGuard da tıpkı Kuru Toga gibi farklı modellere sahiptir. Standart model ta
 
 ### Pentel PG5 - Hafiflik en büyük avantajınız
 ![Pentel PG5](/assets/images/pg5.jpg)
-Bu alanı hazırlıyorum.
+Eğer ağır kalemlerden hoşlanmıyorsanız Pentel PG5 muhtemelen tercih listenizin başında olmalı. PG5 modeli dayanıklı dış gövde yapısına sahip olmasına rağmen oldukça hafiftir ve ağırlık dengesi ergonomiyi olumsuz etkilemez. Uzun gövde yapısı nedeniyle alışılmışın dışında olsa da yazım deneyimi açısından kusursuza oldukça yakındır. Uzun uç kısmı, karakteristik sarı göstergeli tasarımı ile temelde çizim yapanlar için tavsiye edilse de uzun süreli yazımlarda da gönül rahatlığı ile tercih edilebilir.
 
 ### Pentel Orenz Metal Grip - Asla uç için uğraşmayın
 ![Pentel Orenz](/assets/images/orenz.jpg)
@@ -94,12 +94,12 @@ Elbette bir mekanik kalemi uç olmadan kullanmak olmaz. Uç, kırtasiyeden gidip
 Nano Dia uç ailesi ülkemizde maalesef çok kolay bulunmuyor ve oldukça pahalı. 12'li küçük paketleri ile Ain Stein'in 40'lı paketleri karşılaştırılınca maliyetinden dolayı yanaşmak istemeyebilirsiniz. Yine de tıpkı Ain Stein gibi dayanıklılık ve kararlı koyuluk açısından oldukça iyi bir uç olarak aklınızda kalmalı.
 
 ### Kalemlik tavsiyesi
-Bu alan için önerebileceğim çok fazla ürün yok, çünkü ben genellikle sırt çantalarımdaki kalem alanlarını kullanıyorum bunun için. Ancak masada, çantada, kalemlikte ve cekette kullanabileceğiniz iki önerim var. Bu iki ürüne de sahip olduğum için rahatlıkla tavsiye edebiliyorum.
+Bu alan için önerebileceğim çok fazla ürün yok, çünkü ben genellikle sırt çantalarımdaki kalem alanlarını kullanıyorum bunun için. Ancak masada, çantada, kalemlikte ve cekette kullanabileceğiniz iki önerim var. Bu iki ürüne de sahip olduğum için rahatlıkla tavsiye edebiliyorum. Bunlar dışında almayı düşündüğüm ancak Türkiye pazarında olmayan bir iki tane Kore ve Japon menşeili kalemlikler var, eğer bir gün temin edersem yazının bu kısmını da güncelleyeceğim.
 
 #### Lamy Safari Metal Kutu
 ![Lamy Safari Metal Kutu](/assets/images/lamy-kutu.jpg)
-Bu alanı hazırlıyorum.
+Temelde ürünün adından da anlayabileceğiniz gibi iki önerim de Lamy Safari ürünleri için ancak bu ürünleri yerine göre kullanabilmek mümkün. Her iki ürün de yanında fazla kalem taşımayanlar için tercih edilmek üzere önerilmekte. Temelde Metal Kutu modeli iki veya üç kalem içi tasarlanmışken içerisindeki sert ayırıcıyı çıkarttığınızda aslında eski metal saklama kapları gibi kullanılabilir. Tabi ben bu kutuyu Pentel Sharp Kerry, Kutu Toga Advance Upgrade ve Platinum Preppy için kullanıyorum. Tercih tamamen size kalmış.
 
 #### Lamy Safari Deri Kılıf
 ![Lamy Safari Deri Kılıf](/assets/images/lamy-deri.jpg)
-Bu alanı hazırlıyorum.
+Deri Kılıf modeli ise özellikle tek bir kalemi muhafaza etmek isteyen ve kalemini göğüs cebinde taşıyanlar için çok daha uygun bir model. Pentel PG5 gibi ince bir kalem ile kullanıldığında çok daha uzun süre yapısını korurken kıyafetlerinizi de mürekkep akma riskine ve kalemlerin uç kısmı tarafından deforme olmasına karşı koruyor. Yalnızca kullanıma bağlı olarak çabuk kirleniyor, bu nedenle vakit ayırıp temizliğe ihtiyaç duyduğunu hatırlatmak isterim.

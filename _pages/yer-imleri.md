@@ -8,6 +8,12 @@ Bu sayfada hem kendim için hem de takipçilerim için faydalı olabileceğini d
 
 ---
 
+## Eylül 2021
+
+- [Workman Keyboard Layout](https://workmanlayout.org)
+- [Typing Study](https://www.typingstudy.com/tr-turkish_q-2/)
+
+
 ## Ağustos 2021
 
 - [How to create a BIMI record](https://www.dmarcanalyzer.com/bimi/how-to-create-a-bimi-record/)

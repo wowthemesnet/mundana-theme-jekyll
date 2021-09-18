@@ -10,6 +10,7 @@ Bu sayfada hem kendim için hem de takipçilerim için faydalı olabileceğini d
 
 ## Eylül 2021
 
+- [Material Design Theme & Palette Color Generator](http://mcg.mbitson.com/)
 - [Hakim El Hattab](https://hakim.se)
 - [Shapefest](https://www.shapefest.com)
 - [Workman Keyboard Layout](https://workmanlayout.org)

@@ -2,7 +2,7 @@
 layout: post
 title:  "Microsoft, Skype'ı yeniliyor ama başarılı olması zor"
 categories: [ Teknoloji ]
-image: assets/images/skype.png
+image: assets/images/skype.jpg
 ---
 Microsoft, geçtiğimiz günlerde Skype'a dair gelecek planlarını paylaştı ve servisin geleceğinin teminatını verdi. Firma yeni Skype'ı "geliştirilmiş, hızlı, güvenilir ve süper modern" olarak tanımlıyor. Microsoft her ne kadar Skype'ın üzerine düşse de kaybolan popülaritesi ve pandemide bile yeterince yaygınlaşmaması servisin gerçek geleceğini gösteriyor.
 

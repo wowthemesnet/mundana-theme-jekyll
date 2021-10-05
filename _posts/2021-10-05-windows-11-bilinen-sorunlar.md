@@ -4,7 +4,7 @@ title:  "Windows 11’e yükseltmeden önce bilinen sorunlara göz atmak isteyeb
 categories: [ Teknoloji ]
 image: assets/images/win11-hata.jpg
 ---
-Windows 11, resmi olarak şu anda bazı kullanıcı grupları için yayınlandı ve resmi olarak cihazlarını kararlı sürüme yükseltebiliyorlar. Microsoft, herkes için yükseltmenin kolay yapılabilmesi adına Windows 11’in ISO belgelerini de yayınladı. Eğer ISO belgeleri ile yükseltme yapmak sizin için karmaşık geliyorsa Medya Oluşturma Aracı ile de yükseltme yapmak mümkün.
+Windows 11, resmi olarak şu anda bazı kullanıcı grupları için yayınlandı ve resmi olarak cihazlarını kararlı sürüme yükseltebiliyorlar. Microsoft, herkes için yükseltmenin kolay yapılabilmesi adına Windows 11’in [ISO belgelerini de yayınladı](https://www.microsoft.com/en-au/software-download/windows11). Eğer ISO belgeleri ile yükseltme yapmak sizin için karmaşık geliyorsa [Medya Oluşturma Aracı](https://go.microsoft.com/fwlink/?linkid=2156295) ile de yükseltme yapmak mümkün.
 
 Şirket, geçtiğimiz 3 ay boyunca Windows 11’i Insiderlar ile test ediyor. Bu testler sonucunda kararlı sürümün olabilecek en iyi haliyle yayınlanması hedefleniyor.
 

@@ -8,6 +8,10 @@ Bu sayfada hem kendim için hem de takipçilerim için faydalı olabileceğini d
 
 ---
 
+## Ekim 2021
+- [Doodle Ipsum](https://doodleipsum.com/)
+- [Dracula Theme](https://draculatheme.com/)
+
 ## Eylül 2021
 
 - [Material Design Theme & Palette Color Generator](http://mcg.mbitson.com/)

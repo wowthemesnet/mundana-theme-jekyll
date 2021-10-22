@@ -9,6 +9,7 @@ Bu sayfada hem kendim için hem de takipçilerim için faydalı olabileceğini d
 ---
 
 ## Ekim 2021
+- [Epicons](https://www.epicons.co/)
 - [Collected](https://collected.jonaspelzer.com/)
 - [Mesh Gradients](https://www.meshgradients.com/)
 - [3dicons](https://3dicons.co/)

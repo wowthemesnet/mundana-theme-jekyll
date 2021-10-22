@@ -9,6 +9,7 @@ Bu sayfada hem kendim için hem de takipçilerim için faydalı olabileceğini d
 ---
 
 ## Ekim 2021
+- [3dicons](https://3dicons.co/)
 - [Doodle Ipsum](https://doodleipsum.com/)
 - [Dracula Theme](https://draculatheme.com/)
 

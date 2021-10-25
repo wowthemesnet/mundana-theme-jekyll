@@ -9,6 +9,16 @@ Bu sayfada hem kendim için hem de takipçilerim için faydalı olabileceğini d
 ---
 
 ## Ekim 2021
+- [Awwwards](https://www.awwwards.com/)
+- [Siteinspire](https://www.siteinspire.com/)
+- [Collect UI](https://collectui.com/)
+- [Mobbin Design](https://mobbin.design/)
+- [UpLabs](https://www.uplabs.com/)
+- [Scrnshts](https://scrnshts.club/)
+- [ecomm.design](https://ecomm.design/)
+- [lapa.ninja](https://www.lapa.ninja/)
+- [Siiimple](https://siiimple.com/)
+- [Land Book](https://land-book.com/)
 - [Animated Backgrounds](https://animatedbackgrounds.me/)
 - [Twake](https://twake.app/)
 - [Epicons](https://www.epicons.co/)

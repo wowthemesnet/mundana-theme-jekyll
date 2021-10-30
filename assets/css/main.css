@@ -5136,12 +5136,12 @@ button.bg-orange:hover,
 button.bg-orange:focus {
   background-color: #c89000 !important; }
 
+/*todo: idk why this only lets me change color here */
 .bg-lightblue {
-  background-color: #e8f3ec !important; }
+  background-color: #F4ECF0 !important; }
 
 .bg-mauve {
-  fill: #c8a3b5 !important;
-}
+  fill: #c8a3b5 !important; }
 
 a.bg-lightblue:hover, a.bg-lightblue:focus,
 button.bg-lightblue:hover,

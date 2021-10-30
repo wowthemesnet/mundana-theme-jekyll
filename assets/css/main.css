@@ -5139,6 +5139,10 @@ button.bg-orange:focus {
 .bg-lightblue {
   background-color: #e8f3ec !important; }
 
+.bg-mauve {
+  fill: #c8a3b5 !important;
+}
+
 a.bg-lightblue:hover, a.bg-lightblue:focus,
 button.bg-lightblue:hover,
 button.bg-lightblue:focus {

@@ -1,11 +1,11 @@
 # Site
-name: 'Mundana'
+name: 'Brooke K. Ryan'
 description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
 logo: 'assets/images/logo.png'
-favicon: 'assets/images/favicon.ico'
-baseurl: '/mundana-theme-jekyll'
-disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
+favicon: 'assets/images/brooke_ghostie.png'
+baseurl: ''
+disqus: 'brookekryan'
+email: 'brookekelseyryan@gmail.com'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 include: ["_pages"]
@@ -17,24 +17,24 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
-  
-authors:
-    sal:
-      name:           Sal
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
-      email:          wowthemesnet@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
 
-    jane:
-      name:           Jane
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar2.jpg
-      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
-      email:          fakemail@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
- 
+teaching:
+  information-retrieval:
+    name:           Information Retrieval
+    site:           https://www.brookekryan.com
+    avatar:         /assets/images/brooke_avatar.jpg
+    description:    "An introduction to information retrieval including indexing, retrieval, classifying and clustering text and multimedia documents."
+    role:           teaching assistant
+    number:         CS-141
+
+authors:
+    brooke:
+      name:           Brooke Ryan
+      site:           https://www.brookekryan.com
+      avatar:         /assets/images/brooke_avatar.jpg
+      bio:            "I'm a writer and graduate student in Computer Science at UC Irvine."
+      email:          brooke.ryan@uci.edu
+
 # Defaults
 defaults:
 

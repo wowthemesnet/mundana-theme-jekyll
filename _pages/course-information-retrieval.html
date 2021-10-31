@@ -9,15 +9,17 @@ permalink: "/course-information-retrieval.html"
         <div class="row align-items-center mb-5">
             <div class="col-md-9">
                 <h2 class="font-weight-bold">{{page.title}}</h2>
-                <p><a href="{{ site.authors.brooke.site }}">{{ site.authors.brooke.site }}</a></p>
-                <p class="excerpt">{{ site.authors.brooke.bio }}</p>
+<!--                <p><a href="{{ site.uci-courses.information-retrieval.site }}">{{ site.authors.brooke.site }}</a></p>-->
+                <small class="font-weight-normal">{{ site.uci-courses.information-retrieval.department }}</small> <br>
+                <small class="font-weight-normal">{{ site.uci-courses.information-retrieval.institution }}: {{ site.uci-courses.information-retrieval.quarter }}</small>
+                <p class="excerpt">{{ site.uci-courses.information-retrieval.description }}</p>
             </div>
             <div class="col-md-3 text-right">
-                <img alt="{{ site.authors.brooke.name }}" src="{{ site.authors.brooke.avatar }}" class="rounded-circle" height="100" width="100">
+                <img alt="{{ site.uci-courses.information-retrieval.name }}" src="{{ site.uci-courses.information-retrieval.avatar }}" class="rounded-circle" height="100" width="100">
             </div>
         </div>
-        <h4 class="font-weight-bold spanborder"><span>Posts tagged with {{page.title}}</span></h4>
-            {% assign posts = site.posts | where:"information retrieval", "info" %}
+        <h4 class="font-weight-bold spanborder"><span>Posts related to {{page.title}}</span></h4>
+            {% assign posts = site.posts | where: "courses", "SWE-262P" %}
             {% for post in posts %}
             {% include main-loop-card.html %}
             {% endfor %}

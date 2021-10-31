@@ -28,7 +28,7 @@ uci-courses:
     avatar: "assets/images/UCI.png"
     description: "This course exposes students to principal concepts related to information retrieval, including text analyzers (e.g., stemming and tokenization), text indexing, inverted index, search (boolean expressions, phrase search), and ranking. It will also cover topics of Web search and vertical search, with related techniques such as crawling and search engine optimization. A significant part of the course is to implement a search engine using Java."
     role: teaching assistant
-    number: cs-141
+    number: CS-141
   reverse-engineering-and-modeling:
     name: Reverse Engineering and Modeling
     institution: UC Irvine
@@ -37,7 +37,7 @@ uci-courses:
     avatar: "assets/images/UCI.png"
     description: "Introduces theories, concepts, representations, techniques, and case studies in understanding large-scale, complex software systems. Topics include static and dynamic modeling notations, manual and (semi-)automated reverse engineering techniques, APIs, patterns, and styles. A significant, hands-on project is included."
     role: Teaching assistant
-    number: SWE 265P
+    number: SWE-265P
   programming-styles:
     name: Programming Styles
     institution: UC Irvine
@@ -46,7 +46,7 @@ uci-courses:
     avatar: "assets/images/UCI.png"
     description: "Designed to teach students the various ways software can be decomposed and put back together. Students are exposed to a variety of different programming styles and composition mechanisms."
     role: Teaching assistant
-    number: SWE 262P
+    number: SWE-262P
 ucsd-courses:
   eng-100d:
     name: Humanitarian Engineering
@@ -56,7 +56,7 @@ ucsd-courses:
     avatar: "assets/images/UCSD.png"
     description: "Students learn the fundamentals of human-centered design in a humanitarian context. Students work with a non-profit client for a single quarter to lay the foundation for a humanitarian engineering project. Certain projects are then carried out over the course of a few quarters to a few years by students enrolled."
     role: Undergraduate project advisor
-    number: ENG 100D
+    number: ENG-100D
   eng-100l:
     name: Global Teams in Engineering
     institution: UC San Diego
@@ -65,7 +65,7 @@ ucsd-courses:
     avatar: "assets/images/UCSD.png"
     description: "Global Ties partners interdisciplinary teams of UC San Diego students with nonprofits and NGOs to co-create solutions to socially urgent problems in San Diego and the developing world."
     role: Undergraduate project advisor
-    number: ENG 100L
+    number: ENG-100L
 gwc-courses:
   virtual-summer-immersion:
     name: Virtual Summer Immersion Program
@@ -74,7 +74,7 @@ gwc-courses:
     avatar: "assets/images/GWC.png"
     description: "2-week virtual program teaches girls—trans and cis—and non-binary students the computer science skills they need to make an impact in their community while preparing for a career in tech. Participants will get exposure to tech jobs, meet women in tech careers, and join a supportive sisterhood of girls in tech."
     role: Lead Instructor
-    number: SIP
+    number: SIP-V
   summer-immersion:
     name: Summer Immersion Program
     institution: Girls Who Code
@@ -82,7 +82,7 @@ gwc-courses:
     avatar: "assets/images/GWC.png"
     description: "7-week summer program, taught students the fundamentals of computer science including Scratch, Python, Arduino, C, JavaScript, CSS, and HTML."
     role: Lead Instructor
-    number: SIP
+    number: SIP-B
 
 
 
@@ -90,9 +90,9 @@ gwc-courses:
 authors:
   brooke:
     name: Brooke Ryan
-    site: https://www.brookekryan.com
-    avatar: /assets/images/brooke_avatar.jpg
-    bio: "I'm currently a graduate student at UC Irvine pursuing my master's in computer science. My goal is to increase accessibility in Artificial Intelligence and Computer Science more broadly."
+    avatar: "assets/images/brooke_avatar.jpg"
+    bio: "I'm currently a graduate student at UC Irvine pursuing my master's in Computer Science. My goal is to increase accessibility in Artificial Intelligence and Computer Science more broadly."
+    long_bio: "I'm currently a graduate student at UC Irvine pursuing my master's in Computer Science. My goal is to increase accessibility in Artificial Intelligence and Computer Science more broadly. Generally, I write about things that I wish I knew or things I find important enough to teach or talk about—this can range from topics on introductory software engineering, tutorials related to courses I've taught, navigating tools for neural networks research, and anything in between. I'm also really passionate about helping increase underrepresented groups in Computer Science—whether that's women, queer folks, people of color, or people with disabilities. My goal is to reignite the joy of science and the process of discovery for anyone who has ever thought they weren't good enough to do so!"
     email: brooke.ryan@uci.edu
 
 # Defaults

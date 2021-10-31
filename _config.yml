@@ -18,12 +18,12 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
 
-teaching:
+courses:
   information-retrieval:
     name:           Information Retrieval
     site:           https://www.brookekryan.com
-    avatar:         /assets/images/brooke_avatar.jpg
-    description:    "An introduction to information retrieval including indexing, retrieval, classifying and clustering text and multimedia documents."
+    avatar:         "/assets/images/uci.jpg"
+    bio:            "An introduction to information retrieval including indexing, retrieval, classifying and clustering text and multimedia documents."
     role:           teaching assistant
     number:         CS-141
 

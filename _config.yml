@@ -8,32 +8,91 @@ disqus: 'brookekryan'
 email: 'brookekelseyryan@gmail.com'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
-include: ["_pages"]
+include: [ "_pages" ]
 permalink: /:title/
 
 # Plugins
-plugins: 
+plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
 
-courses:
+uci-courses:
   information-retrieval:
-    name:           Information Retrieval
-    site:           https://www.brookekryan.com
-    avatar:         "/assets/images/uci.jpg"
-    bio:            "An introduction to information retrieval including indexing, retrieval, classifying and clustering text and multimedia documents."
-    role:           teaching assistant
-    number:         CS-141
+    name: Information Retrieval
+    institution: UC Irvine
+    department: Donald Bren School of Information and Computer Sciences
+    quarter: Fall 2021
+    avatar: "/assets/images/UCI.png"
+    description: "This course exposes students to principal concepts related to information retrieval, including text analyzers (e.g., stemming and tokenization), text indexing, inverted index, search (boolean expressions, phrase search), and ranking. It will also cover topics of Web search and vertical search, with related techniques such as crawling and search engine optimization. A significant part of the course is to implement a search engine using Java."
+    role: teaching assistant
+    number: cs-141
+  reverse-engineering-and-modeling:
+    name: Reverse Engineering and Modeling
+    institution: UC Irvine
+    department: Professional Master of Software Engineering
+    quarter: Spring 2021
+    avatar: "/assets/images/UCI.png"
+    description: "Introduces theories, concepts, representations, techniques, and case studies in understanding large-scale, complex software systems. Topics include static and dynamic modeling notations, manual and (semi-)automated reverse engineering techniques, APIs, patterns, and styles. A significant, hands-on project is included."
+    role: Teaching assistant
+    number: SWE 265P
+  programming-styles:
+    name: Programming Styles
+    institution: UC Irvine
+    department: Professional Master of Software Engineering
+    quarter: Winter 2021
+    avatar: "/assets/images/UCI.png"
+    description: "Designed to teach students the various ways software can be decomposed and put back together. Students are exposed to a variety of different programming styles and composition mechanisms."
+    role: Teaching assistant
+    number: SWE 262P
+ucsd-courses:
+  eng-100d:
+    name: Humanitarian Engineering
+    institution: UC San Diego
+    department: Jacobs School of Engineering
+    quarter: 2015 - 2017
+    avatar: "/assets/images/UCSD.png"
+    description: "Students learn the fundamentals of human-centered design in a humanitarian context. Students work with a non-profit client for a single quarter to lay the foundation for a humanitarian engineering project. Certain projects are then carried out over the course of a few quarters to a few years by students enrolled."
+    role: Undergraduate project advisor
+    number: ENG 100D
+  eng-100l:
+    name: Global Teams in Engineering
+    institution: UC San Diego
+    department: Jacobs School of Engineering
+    quarter: 2015 - 2017
+    avatar: "/assets/images/UCSD.png"
+    description: "Global Ties partners interdisciplinary teams of UC San Diego students with nonprofits and NGOs to co-create solutions to socially urgent problems in San Diego and the developing world."
+    role: Undergraduate project advisor
+    number: ENG 100L
+gwc-courses:
+  virtual-summer-immersion:
+    name: Virtual Summer Immersion Program
+    institution: Girls Who Code
+    quarter: Summer 2021
+    avatar: "/assets/images/GWC.png"
+    description: "2-week virtual program teaches girls—trans and cis—and non-binary students the computer science skills they need to make an impact in their community while preparing for a career in tech. Participants will get exposure to tech jobs, meet women in tech careers, and join a supportive sisterhood of girls in tech."
+    role: Lead Instructor
+    number: SIP
+  summer-immersion:
+    name: Summer Immersion Program
+    institution: Girls Who Code
+    quarter: Summer 2019
+    avatar: "/assets/images/GWC.png"
+    description: "7-week summer program, taught students the fundamentals of computer science including Scratch, Python, Arduino, C, JavaScript, CSS, and HTML."
+    role: Lead Instructor
+    number: SIP
+
+
+
 
 authors:
-    brooke:
-      name:           Brooke Ryan
-      site:           https://www.brookekryan.com
-      avatar:         /assets/images/brooke_avatar.jpg
-      bio:            "I'm a writer and graduate student in Computer Science at UC Irvine."
-      email:          brooke.ryan@uci.edu
+  brooke:
+    name: Brooke Ryan
+    site: https://www.brookekryan.com
+    avatar: /assets/images/brooke_avatar.jpg
+    bio: "I'm a writer and graduate student in Computer Science at UC Irvine."
+    email: brooke.ryan@uci.edu
 
 # Defaults
 defaults:
@@ -45,13 +104,13 @@ defaults:
       layout: post
       author: sal
       avatar: /assets/images/avatar1.jpg
-      
+
   # all pages
   - scope:
       path: "_pages"
     values:
       layout: page
-      
+
 # Syntax
 markdown: kramdown
 highlighter: rouge
@@ -62,4 +121,4 @@ paginate: 10
 
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
-exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+exclude: [ README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules ]

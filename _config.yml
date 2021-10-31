@@ -38,7 +38,7 @@ authors:
 # Defaults
 defaults:
 
-  # all posts
+  # all _posts
   - scope:
       path: "_posts"
     values:

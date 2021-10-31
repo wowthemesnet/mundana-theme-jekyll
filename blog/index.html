@@ -1,15 +1,16 @@
 ---
-title: "Mundana Free Jekyll Theme"
+title: "Blog"
 layout: default
 pagination:
 enabled: true
 description: "A great Jekyll theme developed by Sal @wowthemesnet."
+permalink: "/blog/"
 ---
 
 
 <div class="container">
 
-    {% if page.url == "/" %}
+<!--    {% if page.url == "/blog.html" %}-->
 
 
 
@@ -158,7 +159,7 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
 
 
 
-{% endif %} <!--endif page url is / -->
+<!--{% endif %} &lt;!&ndash;endif page url is / &ndash;&gt;-->
 
 
 
@@ -170,8 +171,9 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
 
         <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
 
+        PAGINATIN BOIIIIS
 
-        {% for post in paginator.posts %}
+        {% for post in site.paginator.posts %}
 
         PAGINATIN BOIIIIS
 

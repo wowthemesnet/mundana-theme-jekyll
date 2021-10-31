@@ -100,10 +100,9 @@ defaults:
 
   # all _posts
   - scope:
-      path: "_posts"
+      path: "_posts/"
     values:
       layout: post
-      author: sal
       avatar: /assets/images/avatar1.jpg
 
   # all pages
@@ -117,7 +116,11 @@ markdown: kramdown
 highlighter: rouge
 
 # Paginate
+#gems: [jekyll-paginate]
 paginate: 10
+paginate_path: "/blog/page:num"
+#paginate_path: "page:num"
+
 
 
 

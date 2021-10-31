@@ -1,21 +1,51 @@
 <div class="sticky-top sticky-top-offset">
-    <h4 class="font-weight-bold spanborder"><span>Featured</span></h4>  
-    <ol class="list-featured">				
-        {% for post in site.tags.featured %}                
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="{{site.baseurl}}{{ post.url }}" class="text-dark">{{ post.title }}</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    {% for category in post.categories %}
-                    <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
-                    {% endfor %}
-                    </span>
-                </span>
-            </span>
-            </li>                
-        {% endfor %}   
+    <h4 class="font-weight-bold spanborder"><span>About the Author</span></h4>
+    <ol class="list-featured">
+        <div class="row align-items-center mb-5">
+            <div class="col-md-9">
+                <div class="text-left excerpt">
+                    <img style="margin-right: 1rem; float:left" alt="{{ site.authors.brooke.name }}" src="{{ site.authors.brooke.avatar }}" class="rounded-circle" height="80" width="80">
+                    <div>
+                        <p >{{ site.authors.brooke.bio }}</p>
+
+                    </div>
+                    <a href="https://github.com/brookekelseyryan" class="btn btn-faicon"><i class="fab fa-github "></i></a>
+                    <a href="https://linkedin.com/in/bkryan" class="btn btn-faicon"><i class="fab fa-linkedin-in "></i></a>
+                    <a href="{{site.baseurl}}/assets/docs/Brooke_Ryan_CV.pdf" class="btn btn-faicon"><i class="ai ai-cv ai-1x"></i></a>
+                    <a href="mailto:brooke.ryan@uci.edu" class="btn btn-faicon"><i class="far fa-envelope "></i></a>
+                </div>
+
+<!--                <p class="excerpt">{{ site.authors.brooke.bio }}</p>-->
+            </div>
+
+        </div>
+
+<!--        My name is Brooke Ryan. I'm currently a graduate student at UC Irvine pursuing my master's in computer science. This site contains my writing, as well as a repository of previous courses I've taught.-->
+
+<!--        <br>-->
+
+<!--        <div class="excerpt">-->
+<!--        <a href="https://github.com/brookekelseyryan" class="btn btn-faicon"><i class="fab fa-github fa-2x"></i></a>-->
+<!--        <a href="https://linkedin.com/in/bkryan" class="btn btn-faicon"><i class="fab fa-linkedin-in fa-2x"></i></a>-->
+<!--        <a href="{{site.baseurl}}/assets/docs/Brooke_Ryan_CV.pdf" class="btn btn-faicon"><i class="ai ai-cv ai-3x"></i></a>-->
+<!--        <a href="mailto:brooke.ryan@uci.edu" class="btn btn-faicon"><i class="far fa-envelope fa-2x"></i></a>-->
+<!--        </div>-->
+
+        <!--        {% for post in site.tags.featured %}                -->
+<!--            <li class="mb-4">-->
+<!--            <span>-->
+<!--                <h6 class="font-weight-bold">-->
+<!--                    <a href="{{site.baseurl}}{{ post.url }}" class="text-dark">{{ post.title }}</a>-->
+<!--                </h6>-->
+<!--                <span class="d-block text-muted">-->
+<!--                    In <span class="catlist">-->
+<!--                    {% for category in post.categories %}-->
+<!--                    <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>-->
+<!--                    {% endfor %}-->
+<!--                    </span>-->
+<!--                </span>-->
+<!--            </span>-->
+<!--            </li>                -->
+<!--        {% endfor %}   -->
     </ol>
 </div> 

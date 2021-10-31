@@ -1,12 +1,13 @@
 # Site
 name: 'Brooke K. Ryan'
-description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+description: 'Personal website and blog.'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/brooke_ghostie.png'
+url: 'brookekryan.com'
 baseurl: ''
 disqus: 'brookekryan'
 email: 'brookekelseyryan@gmail.com'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+#mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 include: [ "_pages" ]
 permalink: /:title/

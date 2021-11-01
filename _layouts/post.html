@@ -23,6 +23,9 @@ layout: default
                             <span class="text-muted d-block mt-1">{{ page.date | date: '%b %d, %Y' }} · {% include meta-read-time.html %}</span>
 						</small>
 					</div>
+					{% if page.triggers %}
+					<p class="excerpt" style="margin-top: 20px; font-style: italic">Trigger warnings: {{ page.triggers }}</p>
+					{% endif %}
 				</div>
                 {% if page.image %}
 				<div class="col-md-6 pr-0 align-self-center">
@@ -34,15 +37,11 @@ layout: default
 	</div>
 </div>
 
-
-
-
-
 <div class="container-lg pt-4 pb-4">
+
 	<div class="row justify-content-center">
-        
-        
-        <!-- Share -->
+
+		<!-- Share -->
 		<div class="col-lg-2 pr-4 mb-4 col-md-12">
 			<div class="sticky-top sticky-top-offset text-center">
 				<div class="text-muted">

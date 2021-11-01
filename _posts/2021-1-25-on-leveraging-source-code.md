@@ -5,6 +5,7 @@ author: brooke
 categories: [ software engineering, introductory, source code, java ]
 courses: [SWE-262P, SWE-265P]
 image: assets/images/software-developer.jpg
+
 ---
 One of the most important principles you'll in Software Engineering, is to *leverage existing source code*. As a rule of thumb, if you're writing something completely from scratch, *you're probably doing it wrong*!
 

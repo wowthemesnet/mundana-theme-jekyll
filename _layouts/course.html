@@ -6,10 +6,10 @@ layout: default
 <div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
 		<div class="h-100 tofront">
 			<div class="row {% if page.image %} justify-content-between {% else %} justify-content-center {% endif %}">
-				<div class="{% if page.image %} col-md-6 {% else %} col-md-8 {% endif %} pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+				<div class="{% if page.image %} col-md-6 {% else %} col-sm-11 {% endif %} pr-0 pr-md-4 pt-4 align-self-center">
 					<h1 class="display-4 article-headline">{{ course.name }}</h1>
-					<h1 class="display-5 course-subtitle mb-4">{{course.role}}</h1>
-					<div class="d-flex align-items-center">
+					<h2 class="display-5 course-subtitle mb-4">{{course.role}}</h2>
+					<div class="d-flex ">
 						{% if course.avatar %}
 						<img class="rounded-circle" src="{{site.baseurl}}/{{course.avatar}}" alt="{{course.name}}" width="70"/>
 						{% endif %}
@@ -26,10 +26,28 @@ layout: default
 
 
 <div class="container-lg pt-4 pb-4">
-	<div class="row justify-content-center">
-        
+	<div class="row justify-content-center" style="margin-top: -1em">
 
-		<div class="col-md-12 col-lg-8">
+		<!-- Share -->
+<!--		<div class="col-sm-auto">-->
+<!--			<div class="sticky-top sticky-top-offset text-center">-->
+<!--				<div class="text-muted">-->
+<!--					Office Hours-->
+<!--				</div>-->
+<!--				<div class="share d-inline-block">-->
+<!--					&lt;!&ndash; AddToAny BEGIN &ndash;&gt;-->
+<!--					<div class="a2a_kit a2a_kit_size_32 a2a_default_style">-->
+<!--						<a class="a2a_dd" href="https://www.addtoany.com/share"></a>-->
+<!--						<a class="a2a_button_facebook"></a>-->
+<!--						<a class="a2a_button_twitter"></a>-->
+<!--					</div>-->
+<!--					<script async src="https://static.addtoany.com/menu/page.js"></script>-->
+<!--					&lt;!&ndash; AddToAny END &ndash;&gt;-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+
+		<div class="col-sm-9">
             
             <!-- Article -->
 			<course class="article-post">
@@ -48,6 +66,7 @@ layout: default
 			{% endif %}
 
 		</div>
+
         
         
 	</div>

@@ -674,6 +674,14 @@ article {
     line-height: 1.15;
     color: #222222;
 }
+.course-subtitle {
+	font-family: Georgia,Times,"Times New Roman",serif;
+	font-size: 2rem;
+	font-weight: 300;
+	line-height: 1.15;
+	color: #222222;
+}
+
 article p,article pre,article figure,article img,article blockquote,article iframed,article embed {
 	margin-bottom:2rem;
 }
@@ -705,6 +713,45 @@ article h1,article h2,article h3,article h4,article h5,article h6,article .h1,ar
 	margin-top:2rem;
 	font-weight:600;
 }
+
+course {
+	font-size:20px;
+	line-height:1.86;
+	font-family:Lora;
+}
+.course-headline {
+	font-family: Georgia,Times,"Times New Roman",serif;
+	font-size: 3.2rem;
+	font-weight: 400;
+	line-height: 1.15;
+	color: #222222;
+}
+course p,course pre,course figure,course img,course blockquote,course iframed,course embed {
+	margin-bottom:2rem;
+}
+course blockquote {
+	padding-left:40px;
+	margin-left:0px;
+	font-style:italic;
+	position:relative;
+}
+course blockquote:before {
+	content:"“";
+	font-family:Georgia;
+	font-size:8rem;
+	margin:-1rem 2rem 0 -3.9rem;
+	position:absolute;
+	opacity:1;
+	float:left;
+	line-height:1;
+}
+course h1,course h2,course h3,course h4,course h5,course h6,course .h1,course .h2,course .h3,course .h4,course .h5,course .h6 {
+	margin-bottom:2rem;
+	margin-top:2rem;
+	font-weight:600;
+}
+
+
 .alertbar {
 	box-shadow:0 -3px 10px 0 rgba(0,0,0,.0785);
 	position:fixed;

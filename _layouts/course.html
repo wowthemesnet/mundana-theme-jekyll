@@ -36,12 +36,16 @@ layout: default
 			{{ content }}                
 			</course>
 
-			<h4 class="font-weight-bold spanborder"><span>Posts related to {{course.name}}</span></h4>
 			{% assign posts = site.posts | where:"courses", page.course %}
+			{% if posts.size > 0%}
+
+			<h4 class="font-weight-bold spanborder"><span>Posts related to {{course.name}}</span></h4>
+<!--			{% assign posts = site.posts | where:"courses", page.course %}-->
 			{% for post in posts %}
 			{% include main-loop-card.html %}
 			{% endfor %}
 
+			{% endif %}
 
 		</div>
         

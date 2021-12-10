@@ -8,6 +8,9 @@ Bu sayfada hem kendim için hem de takipçilerim için faydalı olabileceğini d
 
 ---
 
+## Aralık 2021
+- [Customizing Colors - Tailwind 3](https://tailwindcss.com/docs/customizing-colors)
+
 ## Ekim 2021
 - [Awwwards](https://www.awwwards.com/)
 - [Siteinspire](https://www.siteinspire.com/)

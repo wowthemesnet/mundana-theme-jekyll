@@ -8,6 +8,9 @@ Bu sayfada hem kendim için hem de takipçilerim için faydalı olabileceğini d
 
 ---
 
+## Ocak 2022
+- [Colourpalette](https://colourpalette.xyz)
+
 ## Aralık 2021
 - [Customizing Colors - Tailwind 3](https://tailwindcss.com/docs/customizing-colors)
 

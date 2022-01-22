@@ -1,6 +1,13 @@
 # Kişisel günceleme alanı
 
+
 Ghost temelli kişisel günceleme alanımı daha da basitleştirmek için Git temelli bir hale getirdim. Bunun en büyük nedenlerinden bir tanesi Ghost'un temelde dijital gelir modeline sahip güncelere yönelik olmasıydı. Bu nedenle benim ihtiyacım olmayan pek çok fonksiyona sahipti. Yaklaşık 10 aylık bir Ghost macerasının ardından Jekyll ile Git üzerinde bir şeyler oluşturma fırsatı yakaladım. [@melihcaliskan](https://github.com/melihcaliskan)'ın da el atması ile birlikte Jekyll'a bir şekilde ikna oldum.
+=======
+[Live Demo](https://wowthemesnet.github.io/mundana-theme-jekyll/) &nbsp; | &nbsp; 
+[Download](https://github.com/wowthemesnet/mundana-theme-jekyll/archive/master.zip) &nbsp; | &nbsp; 
+[Buy me a coffe](https://www.wowthemes.net/donate/) &nbsp; | &nbsp; [Documentation](https://bootstrapstarter.com/mundana-theme-jekyll/) &nbsp; | &nbsp; 
+[WordPress version](https://www.wowthemes.net/themes/mundana-wordpress/) 
+
 
 ![Kişisel güncelleme alanı](https://tolgaaltas.com/assets/images/logo.png)
 

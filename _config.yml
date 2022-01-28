@@ -1,43 +1,42 @@
 # Site
-name: 'Bitcoin Sozial'
-description: 'Das deutschsprachige Kollektiv für Soziale Fragen im Zeitalter von Bitcoin.'
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/favicon.ico'
-baseurl: '/'
-disqus: 'xxx'
-email: 'wowthemesnet@gmail.com'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+name: "Bitcoin Sozial"
+description: "Das deutschsprachige Kollektiv für Soziale Fragen im Zeitalter von Bitcoin."
+logo: "assets/images/logo.png"
+favicon: "assets/images/favicon.ico"
+baseurl: ""
+disqus: "xxx"
+email: "wowthemesnet@gmail.com"
+mailchimp-list: "https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b"
 
 include: ["_pages"]
 permalink: /:title/
 
 # Plugins
-plugins: 
+plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
-  
-authors:
-    sal:
-      name:           Sal
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
-      email:          wowthemesnet@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
 
-    jane:
-      name:           Jane
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar2.jpg
-      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
-      email:          fakemail@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
- 
+authors:
+  sal:
+    name: Sal
+    site: https://www.wowthemes.net
+    avatar: assets/images/avatar1.jpg
+    bio: "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
+    email: wowthemesnet@gmail.com
+    twitter: https://twitter.com/wowthemesnet
+
+  jane:
+    name: Jane
+    site: https://www.wowthemes.net
+    avatar: assets/images/avatar2.jpg
+    bio: "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
+    email: fakemail@gmail.com
+    twitter: https://twitter.com/wowthemesnet
+
 # Defaults
 defaults:
-
   # all posts
   - scope:
       path: "_posts"
@@ -45,13 +44,13 @@ defaults:
       layout: post
       author: sal
       avatar: /assets/images/avatar1.jpg
-      
+
   # all pages
   - scope:
       path: "_pages"
     values:
       layout: page
-      
+
 # Syntax
 markdown: kramdown
 highlighter: rouge
@@ -59,7 +58,13 @@ highlighter: rouge
 # Paginate
 paginate: 10
 
-
-
 # Exclude metadata and development time dependencies (like Grunt plugins)
-exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+exclude:
+  [
+    README.markdown,
+    package.json,
+    grunt.js,
+    Gruntfile.js,
+    Gruntfile.coffee,
+    node_modules,
+  ]

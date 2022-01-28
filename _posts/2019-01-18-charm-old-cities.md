@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Could we reinvent the charm of old cities"
+title: "Bitcoin entbändigt: Wenn freies Geld für Menschenhass misbraucht wird"
 author: jane
-categories: [ Jekyll, tutorial ]
+categories: [Jekyll, tutorial]
 image: assets/images/home.jpg
 tags: [sticky]
 ---

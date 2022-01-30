@@ -45,6 +45,9 @@ Es gibt jedoch auch eine gänzlich andere Geschichte de man über Bitcoin erzäh
 
 [Alex Gladstein][alex-gladstein-bitcoin-magazine], leiter der Human Rights Foundation, berichtet über [monetären Kolonialismus](https://bitcoinmagazine.com/culture/bitcoin-a-currency-of-decolonization) und wie Bitcoin in [Orten der Welt](https://twitter.com/gladstein/status/1368822142775652352), die vom westlichen Finanzsystem [ausgeschlossen](https://bitcoinmagazine.com/culture/bitcoin-financial-freedom-in-afghanistan) oder gewissermaßen durch die bestehenden Strukturen [ausgebeutet](https://bitcoinmagazine.com/culture/check-your-financial-privilege) werden, Menschen die Möglichkeit gibt, ihr finanzielles Schicksal selbst in die Hand zu nehmen und sich vom Versagen internationaler Solidarität unabhängig zu machen.
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Alex Gladstein (@gladstein) <a href="https://twitter.com/gladstein/status/1368822142775652352">https://twitter.com/gladstein/status/1368822142775652352</a></p>&mdash; Alex Gladstein (@gladstein) <a href="https://twitter.com/gladstein/status/1368822142775652352"></a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 #### Feminismus und finanzielles Patriarchat
 
 Anita Posch reist mit ihrem [Podcast][anita-posch-podcast] seit Jahren vor allem in Länder des globalen Südens und erzählt die Geschichte von Menschen, die durch Bitcoin ein Stück Selbstbestimmung wiedererlangen, egal ob sie von Armut betroffen sind unter dem Versagen der Regierungen leiden, unter denen sie leben. Ihr Fokus liegt dabei vor allem darauf, wie Frauen überall auf der Welt Bitcoin nutzen, um sich von [patriarchalen Strukturen][anita-patriarchy] zu befreien, indem Sie die Kontrolle über ihr eigenes Geld wieder an sich reißen.
@@ -60,6 +63,9 @@ Mehrere Grassroots Projekte an verschiedenen Orden der Welt, zeigen, wie Bitcoin
 Während die meisten Menschen Bitcoin mit Umweltzerstörung in Verbindung bringen und dabei an Aussagen wie "Bitcoin verbraucht so viel Strom wie Land X" denken, gibt es auch Beispiele, die belegen, dass Bitcoin Mining auch durchaus positive Auswirkungen auf ökologische Energieerzeugung haben kann. Das mag zunächst kontraintuitiv wirken, hängt aber letztendlich damit zusammen, dass Energiemärkte ihre [eigenen Logiken][nic-carter-mining] haben, die entscheiden wo und wie viel Strom erzeugt und genutzt werden kann.
 
 Dazu gehört auch, dass Bitcoin, im Vergleich zu allen anderen Industriezweigen, oder auch im Vergleich zu Ländern wie Deutschland, [den höchsten Anteil][energy-mix] von [erneuerbaren Energien](https://twitter.com/ArcaneResearch/status/1453972301314084865) verwendet. Nur [selten wird erwähnt][bitcoin-verstehen-stefanwouldgo], dass Bitcoin Mining fast ausschließlich mit überschüssiger Energie betrieben, die sonst keinen Abnehmer findet. Aus diesem Grund wurde erst neulich ein stillgelegtes Wasserkraftwerk in (Guatemala?) wieder in Betrieb genommen. Bitcoin hat das Potential als [Subvention für erneuerbare Energieträger][arcane-energy-transition] zu dienen und damit einen Übergang in eine nachhaltigere Welt erleichtern.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Arcane Research (@ArcaneResearch) <a href="https://twitter.com/ArcaneResearch/status/1453972301314084865">https://twitter.com/ArcaneResearch/status/1453972301314084865</a></p>&mdash; Arcane Research (@ArcaneResearch) <a href="https://twitter.com/ArcaneResearch/status/1453972301314084865"></a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Ist unser Fiat Geldsystem zu unpolitisch?
 

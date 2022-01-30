@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Wieviel Strom verbraucht Bitcoin wirklich?"
-author: jane
+author: calle
 categories: [energie]
 image: assets/images/bitcoin-strom.png
 tags: [summer]

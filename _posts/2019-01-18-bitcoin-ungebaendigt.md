@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bitcoin ungebändigt: Wenn freies Geld für Menschenhass missbraucht wird"
-author: jane
+author: calle
 categories: [sozial]
 image: assets/images/logo.jpg
 ---

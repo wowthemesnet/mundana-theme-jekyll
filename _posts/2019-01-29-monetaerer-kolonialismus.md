@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Kolonalismus mit Geld?"
-author: sal
+author: calle
 categories: [Jekyll]
 image: assets/images/2.jpg
 ---

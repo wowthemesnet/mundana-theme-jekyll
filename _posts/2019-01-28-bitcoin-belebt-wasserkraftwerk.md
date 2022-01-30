@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bitcoin belebt stillgelegte Wasserkraftwerke. Ein Zukunftsmodell?"
-author: jane
+author: calle
 categories: [Jekyll, tutorial]
 image: assets/images/1.jpg
 tags: [featured]

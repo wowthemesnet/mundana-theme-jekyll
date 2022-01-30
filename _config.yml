@@ -20,7 +20,7 @@ plugins:
   - jekyll-target-blank
 
 authors:
-  sal:
+  calle:
     name: Calle B.
     # site: https://www.wowthemes.net
     avatar: assets/images/authors/avatar_calle.jpg
@@ -28,13 +28,13 @@ authors:
     # email: callebtc@ln.tips
     twitter: https://twitter.com/callebtc
 
-  jane:
-    name: Jane
-    site: https://www.wowthemes.net
-    avatar: assets/images/avatar2.jpg
-    bio: "Komplett erfundener Charakter der hier nust ist um den Platz zu füllen!"
-    email: fakemail@gmail.com
-    twitter: https://twitter.com/wowthemesnet
+  lola:
+    name: L0la L33tz
+    # site: https://www.wowthemes.net
+    avatar: assets/images/authors/avatar_lola.jpg
+    bio: "Accidental Cryptoanarchist"
+    # email: fakemail@gmail.com
+    twitter: https://twitter.com/L0laL33tz
 
 # Defaults
 defaults:
@@ -43,7 +43,7 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: sal
+      author: calle
       avatar: /assets/images/avatar1.jpg
 
   # all pages

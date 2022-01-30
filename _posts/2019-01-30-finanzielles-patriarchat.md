@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Finanzielles Patriarchat mit Anita Posch"
-author: sal
+author: calle
 categories: [feminismus]
 image: assets/images/anita-posch.jpg
 ---

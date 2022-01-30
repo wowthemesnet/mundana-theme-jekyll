@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Code gegen Unterdrückung"
-author: sal
+author: calle
 categories: [Jekyll, tutorial]
 image: assets/images/2.jpg
 ---

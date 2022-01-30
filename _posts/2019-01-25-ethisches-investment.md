@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Gibt es ethisches Investment?"
-author: sal
+author: calle
 categories: [Jekyll, tutorial]
 image: assets/images/7.jpg
 ---

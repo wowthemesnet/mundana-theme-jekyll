@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Feminist Coalition in Nigeria hält sich mit Bitcoin Spenden am Leben"
-author: sal
+author: calle
 categories: [feminismus, aktivismus]
 image: assets/images/feminist-coalition.png
 tags: [featured]

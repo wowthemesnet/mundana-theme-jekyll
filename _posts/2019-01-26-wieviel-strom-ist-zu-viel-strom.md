@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Wieviel Strom ist zu viel Strom?"
-author: sal
+author: calle
 categories: [Jekyll, tutorial]
 image: assets/images/3.jpg
 ---

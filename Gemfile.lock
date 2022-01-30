@@ -41,6 +41,7 @@ GEM
     jekyll-target-blank (2.0.0)
       jekyll (>= 3.0, < 5.0)
       nokogiri (~> 1.10)
+    jekyll-twitter-plugin (2.1.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.3.1)
@@ -80,6 +81,7 @@ DEPENDENCIES
   jekyll-seo-tag
   jekyll-sitemap
   jekyll-target-blank
+  jekyll-twitter-plugin
   kramdown-parser-gfm
   webrick (~> 1.7)
 

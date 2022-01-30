@@ -59,6 +59,8 @@ Während die meisten Menschen Bitcoin mit Umweltzerstörung in Verbindung bringe
 
 Dazu gehört auch, dass Bitcoin, im Vergleich zu allen anderen Industriezweigen, oder auch im Vergleich zu Ländern wie Deutschland, [den höchsten Anteil][energy-mix] von erneuerbaren Energien verwendet. Nur [selten wird erwähnt][bitcoin-verstehen-stefanwouldgo], dass Bitcoin Mining fast ausschließlich mit überschüssiger Energie betrieben, die sonst keinen Abnehmer findet. Aus diesem Grund wurde erst neulich ein stillgelegtes Wasserkraftwerk in (Guatemala?) wieder in Betrieb genommen. Bitcoin hat das Potential als [Subvention für erneuerbare Energieträger][arcane-energy-transition] zu dienen und damit einen Übergang in eine nachhaltigere Welt erleichtern.
 
+{% twitter https://twitter.com/ArcaneResearch/status/1453972301314084865 %}
+
 ## Ist unser Fiat Geldsystem zu unpolitisch?
 
 Diese Beispiele sollen veranschaulichen, wie breit das Themenfeld ist, wenn man Bitcoin und seine Auswirkungen auf die Welt untersucht. Dabei fällt auch auf, wie wenig wir uns als Gesellschaft mit diesen Fragen im Kontext unseres heute bestehenden Fiat Geldsystems beschäftigen.

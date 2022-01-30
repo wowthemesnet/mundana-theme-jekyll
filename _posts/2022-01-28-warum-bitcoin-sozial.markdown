@@ -45,7 +45,9 @@ Es gibt jedoch auch eine gänzlich andere Geschichte de man über Bitcoin erzäh
 
 [Alex Gladstein][alex-gladstein-bitcoin-magazine], leiter der Human Rights Foundation, berichtet über [monetären Kolonialismus](https://bitcoinmagazine.com/culture/bitcoin-a-currency-of-decolonization) und wie Bitcoin in Orten der Welt, die vom westlichen Finanzsystem [ausgeschlossen](https://bitcoinmagazine.com/culture/bitcoin-financial-freedom-in-afghanistan) oder gewissermaßen durch die bestehenden Strukturen [ausgebeutet](https://bitcoinmagazine.com/culture/check-your-financial-privilege) werden, Menschen die Möglichkeit gibt, ihr finanzielles Schicksal selbst in die Hand zu nehmen und sich vom Versagen internationaler Solidarität unabhängig zu machen.
 
+<div class='jekyll-twitter-plugin' align="center">
 {% twitter https://twitter.com/gladstein/status/1368822142775652352 %}
+</div>
 
 #### Feminismus und finanzielles Patriarchat
 

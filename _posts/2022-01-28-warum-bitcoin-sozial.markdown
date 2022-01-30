@@ -1,8 +1,10 @@
 ---
 layout: post
+author: calle
 title: "Warum Bitcoin Sozial?"
 categories: [Intro]
-image: assets/images/warum-bitcoin-sozial.png
+image: assets/images/logo.jpg
+tags: [sticky]
 ---
 
 Bitcoin verändert schon heute die Welt und trägt dazu bei sie gerechter, ökologisch verantwortungsbewusster und finanziell inklusiver zu gestalten. Ungeachtet dessen herrscht in der deutschsprachigen Netzszene immer mehr Skepsis gegen das dezentrale Geldsystem. Bitcoin Sozial ist ein Kollektiv aus Bitcoiner\*innen, die sich mit Themen run um Bitcoin und dem dadurch verursachten sozialen Wandel auseinandersetzen.

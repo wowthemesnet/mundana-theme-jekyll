@@ -18,7 +18,6 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-target-blank
-  - jekyll-twitter-plugin
   - jekyll-gist
 
 authors:

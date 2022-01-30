@@ -3,8 +3,8 @@ title: "Spenden"
 permalink: "/spenden.html"
 ---
 
-Du kannst Bitcoin Sozial unterstützen, indem du Bitcoin per Lightning spendest.
+Du kannst uns mit einer Bitcoin spende unterstützen.
 
-Vielen Dank!
+Verwende dafür den folgenden LNURL QR code Lightning für eine Spende per Lightning. Vielen Dank! 🧡⚡️
 
-<a class="btn btn-danger" href="https://www.wowthemes.net/donate/">Spenden</a>
+![LNURL1DP68GURN8GHJ7MR9VAJKUEPWD3HXY6T5WVHXXMMD9AKXUATJD3CZ7CTSDYHHVVF0D3H82UNV9UCNZD338H5YCX](/assets/images/donate/qr.png){: width="350" }

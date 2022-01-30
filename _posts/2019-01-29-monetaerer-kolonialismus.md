@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kolonalismus mit Geld?"
+title: "Alex Gladstein: Monetärer Kolonialismus"
 author: calle
 categories: [Jekyll]
 image: assets/images/2.jpg

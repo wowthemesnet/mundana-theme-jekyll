@@ -69,7 +69,7 @@ Dazu gehört auch, dass Bitcoin, im Vergleich zu allen anderen Industriezweigen,
 
 Diese Beispiele sollen veranschaulichen, wie breit das Themenfeld ist, wenn man Bitcoin und seine Auswirkungen auf die Welt untersucht. Dabei fällt auch auf, wie wenig wir uns als Gesellschaft mit diesen Fragen im Kontext unseres heute bestehenden Fiat Geldsystems beschäftigen.
 
-Was ist der Energiebedarf des weltweiten Bankensystems? Wer sollte bestimmen, wie wir unser eigenes Geld verwenden und wie viel ist uns unsere individuelle Privatsphäre dabei wert? Wieso können Zentralbanken eigenständig entscheiden, das Geldsystem zu steuern und welche demokratische Legitimation liegt dem zugrunde? Wer profitiert von diesen Entscheidungen und wer leidet darunter? Wofür sollten wir Energie erzeugen und verwenden und wofür nicht? Ist dafür ein Kollektiver Konsensus nötig oder sollte das dem Markt überlassen sein?
+Was ist der Energiebedarf des weltweiten Bankensystems? Wer sollte bestimmen, wie wir unser eigenes Geld verwenden und wie viel ist uns unsere individuelle Privatsphäre dabei wert? Wieso können Zentralbanken eigenständig entscheiden, das Geldsystem zu steuern und welche demokratische Legitimation liegt dem zugrunde? Wer profitiert von diesen Entscheidungen und wer leidet darunter? Wofür sollten wir Energie erzeugen und verwenden und wofür nicht und sollte dieser Entscheidung ein kollektiver Konsens zugrunde liegen oder sollte man das vielmehr den Marktkräften überlassen?
 
 Letztendlich sind diese und ähnliche Fragen eng mit Fragen der persönlichen Freiheit und Selbstbestimmung verwoben und betreffen uns alle, ob wir das wollen oder nicht. Es ist jetzt die Zeit, Antworten auf diese Fragen zu finden.
 

@@ -50,7 +50,7 @@ Es gibt jedoch auch eine gänzlich andere Geschichte de man über Bitcoin erzäh
 
 #### Feminismus und finanzielles Patriarchat
 
-Anita Posch reist mit ihrem [Podcast][anita-posch-podcast] seit Jahren vor allem in Länder des globalen Südens und erzählt die Geschichte von Menschen, die durch Bitcoin ein Stück Selbstbestimmung wiedererlangen, egal ob sie von Armut betroffen sind unter dem Versagen der Regierungen leiden, unter denen sie leben. Ihr Fokus liegt dabei vor allem darauf, wie Frauen überall auf der Welt Bitcoin nutzen, um sich von [patriarchalen Strukturen][anita-patriarchy] zu befreien, indem Sie die Kontrolle über ihr eigenes Geld wieder an sich reißen.
+Anita Posch reist mit ihrem [Podcast][anita-posch-podcast] seit Jahren vor allem in Länder des globalen Südens und erzählt die Geschichte von Menschen, die durch Bitcoin ein Stück Selbstbestimmung wiedererlangen, egal ob sie von Armut betroffen sind unter dem Versagen der Regierungen leiden, unter denen sie leben. Ihr Fokus liegt dabei vor allem darauf, wie [Frauen überall][der-standard-afghanistan] auf der Welt Bitcoin nutzen, um sich von [patriarchalen Strukturen][anita-patriarchy] zu befreien, indem Sie die Kontrolle über ihr eigenes Geld wieder an sich reißen.
 
 Als Beispiel sei die Geschichte der [Feminist Coalition in Nigeria][feminist-coalition] erwähnt, die, nachdem ihnen die Möglichkeit Spenden zu sammeln von staatlicher Seiten unterbrochen wurde, sich nur durch Bitcoin weiter am Leben halten konnte. Diese und andere praktische Beispiele zeigen, was Bitcoin heute schon Menschen ermöglicht, die vom westlichen modernen Finanzwesen systematisch ausgeschlossen werden.
 
@@ -93,3 +93,4 @@ Letztendlich sind diese und ähnliche Fragen eng mit Fragen der persönlichen Fr
 [wsj-wealth-distribution]: https://www.wsj.com/articles/bitcoins-one-percent-controls-lions-share-of-the-cryptocurrencys-wealth-11639996204
 [jacobin-ponzi]: https://jacobinmag.com/2022/01/cryptocurrency-scam-blockchain-bitcoin-economy-decentralization
 [anita-patriarchy]: https://www.youtube.com/watch?v=TcocGqqUt3E
+[der-standard-afghanistan]: https://www.derstandard.de/story/2000130355239/afghanistan-per-bitcoin-zum-ticket-in-die-freiheit

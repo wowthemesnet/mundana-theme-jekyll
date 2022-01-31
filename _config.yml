@@ -36,6 +36,14 @@ authors:
     # email: fakemail@gmail.com
     twitter: https://twitter.com/L0laL33tz
 
+  btctheory:
+    name: Bitcoin Theory
+    site: https://btctheory.com/
+    avatar: assets/images/authors/avatar_btctheory.jpg
+    bio: "Bitcoiner, Anarchist, and Philosopher."
+    # email: fakemail@gmail.com
+    twitter: https://twitter.com/BTCtheory
+
 # Defaults
 defaults:
   # all posts

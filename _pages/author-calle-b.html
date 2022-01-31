@@ -12,7 +12,7 @@ permalink: "/author-calle-b.html"
           <h2 class="font-weight-bold">
             {{page.title}}
             <span class="small btn btn-outline-success btn-sm btn-round"
-              ><a href="{{ site.authors.calle.twitter }}">Follow</a></span
+              ><a href="{{ site.authors.calle.twitter }}">Folgen</a></span
             >
           </h2>
           <p>
@@ -33,7 +33,7 @@ permalink: "/author-calle-b.html"
         </div>
       </div>
       <h4 class="font-weight-bold spanborder">
-        <span>Posts by {{page.title}}</span>
+        <span>Beiträge von {{page.title}}</span>
       </h4>
       {% assign posts = site.posts | where:"author","calle" %} {% for post in
       posts %} {% include main-loop-card.html %} {% endfor %}

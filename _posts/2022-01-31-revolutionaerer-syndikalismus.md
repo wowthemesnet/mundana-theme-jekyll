@@ -4,6 +4,7 @@ author: btctheory
 title: "Revolutionärer Syndikalismus des Bitcoin"
 categories: [anarchie, syndikalismus]
 image: assets/images/revolutionaerer-syndikalismus.jpg
+tags: [featured]
 ---
 
 Tief in den Annalen der Geschichte begraben finden wir die mächtige revolutionäre Praxis des Syndikalismus. Ursprünglich eine radikale Gewerkschaftsbewegung, hat der Syndikalismus seine Grundsätze aus den "Überlegungen zur Gewalt" von Georges Sorel übernommen. In diesem revolutionären Text untersucht Sorel die Gewalt und wie sie der Menschheit helfen kann, sich aus der Barbarei zu befreien, in der sie gefangen ist. Der Einfluss dieses Textes trug zur Entstehung der größten Arbeiterbewegung in Frankreich und ganz Europa zu Beginn des 20.

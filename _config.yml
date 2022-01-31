@@ -44,6 +44,14 @@ authors:
     # email: fakemail@gmail.com
     twitter: https://twitter.com/BTCtheory
 
+  troycross:
+    name: Troy Cross
+    # site: https://btctheory.com/
+    avatar: assets/images/authors/avatar_troycross.jpg
+    bio: "Philosopher. Environmentalist. Bitcoiner."
+    # email: fakemail@gmail.com
+    twitter: https://twitter.com/thetrocro
+
 # Defaults
 defaults:
   # all posts

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Gibt es ethisches Investment?"
+title: "Das Märchen von ethischen Investments"
 author: calle
 categories: [Jekyll, tutorial]
 image: assets/images/7.jpg

@@ -4,6 +4,7 @@ author: lola
 title: "Geld als Instrument politischen Handelns"
 categories: [politik]
 image: assets/images/politisches-handeln.jpg
+tags: [featured]
 ---
 
 > Sie sollten nicht davon ausgehen, dass diese Themen zu komplex für Sie sind, nur weil Sie keinen wirtschaftlichen oder juristischen Hintergrund haben. Sie sind überhaupt nicht komplex, sie sind sehr einfach. Es geht um Macht, und es geht um Demokratie.

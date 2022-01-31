@@ -1,6 +1,6 @@
 # Site
 name: "Bitcoin Sozial"
-description: "Kollektiv für Soziale Fragen im Zeitalter von Bitcoin."
+description: "Kollektiv für Soziale Fragen im Zeitalter von Bitcoin"
 logo: "assets/images/logo.png"
 favicon: "assets/images/favicon.ico"
 baseurl: ""
@@ -24,8 +24,8 @@ authors:
     name: Calle B.
     # site: https://www.wowthemes.net
     avatar: assets/images/authors/avatar_calle.jpg
-    bio: "Naturwissenschaftler und Open-Source Hacker der freie Bitcoin Software baut."
-    # email: callebtc@ln.tips
+    bio: "Wissenschaftler und Open-Source Hacker, der freie Bitcoin Software baut"
+    # email: fakemail@gmail.com
     twitter: https://twitter.com/callebtc
 
   lola:

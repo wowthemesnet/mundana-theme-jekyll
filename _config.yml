@@ -24,7 +24,7 @@ authors:
     name: Calle B.
     # site: https://www.wowthemes.net
     avatar: assets/images/authors/avatar_calle.jpg
-    bio: "Wissenschaftler und Open-Source Hacker, der freie Bitcoin Software baut"
+    bio: "Wissenschaftler und Open-Source Hacker."
     # email: fakemail@gmail.com
     twitter: https://twitter.com/callebtc
 
@@ -32,7 +32,7 @@ authors:
     name: L0la L33tz
     # site: https://www.wowthemes.net
     avatar: assets/images/authors/avatar_lola.jpg
-    bio: "Accidental Cryptoanarchist"
+    bio: "Unbeabsichtigte Kryptoanarchistin."
     # email: fakemail@gmail.com
     twitter: https://twitter.com/L0laL33tz
 
@@ -40,7 +40,7 @@ authors:
     name: Bitcoin Theory
     site: https://btctheory.com/
     avatar: assets/images/authors/avatar_btctheory.jpg
-    bio: "Bitcoiner, Anarchist, and Philosopher."
+    bio: "Bitcoiner, Anarchist und Philosoph."
     # email: fakemail@gmail.com
     twitter: https://twitter.com/BTCtheory
 
@@ -48,7 +48,7 @@ authors:
     name: Troy Cross
     # site: https://btctheory.com/
     avatar: assets/images/authors/avatar_troycross.jpg
-    bio: "Philosopher. Environmentalist. Bitcoiner."
+    bio: "Philosoph. Umweltaktivist. Bitcoiner."
     # email: fakemail@gmail.com
     twitter: https://twitter.com/thetrocro
 

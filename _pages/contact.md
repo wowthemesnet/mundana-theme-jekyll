@@ -16,3 +16,10 @@ permalink: "/contact.html"
 <textarea rows="8" class="form-control mb-3" name="message" placeholder="Nachricht*" required></textarea>    
 <input class="btn btn-success" type="submit" value="Send">
 </form>
+
+<br>
+<div class='impressum'><strong>Impressum: </strong> Angaben gemäß § 5 TMG,
+Klaus Brecht, 
+Hermannstraße 21, 
+12049 Berlin, 
+<a href="{{site.baseurl}}/privacy-policy.html">Haftungsausschluss und Datenschutz</a> </div>

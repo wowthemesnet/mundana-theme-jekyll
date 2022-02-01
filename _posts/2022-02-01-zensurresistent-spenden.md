@@ -16,7 +16,7 @@ To defend against attempts to shut us out of the global financial system, we now
 
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-PI hat dabei ziemlich schnell zu spüren bekommen, dass vermutlich nur einige Telefonate dazu ausreichten, das Handeln der gesamten Organisation stillzulegen, indem man ihr "Single Point of Failure" angreift. Da keine Organisation sich darauf verlassen kann, dass Visa, Mastercard, oder PayPal ihre Rechte im Zweifelsfall verteidigen, haben PI [erkannt](https://twitter.com/ProgIntl/status/1488122220799041541), dass nur Kryptowährungen wie Bitcoin im Notfall als zuverlässige Finanzierungsquelle dienen.
+PI hat dabei ziemlich schnell zu spüren bekommen, dass vermutlich nur einige Telefonate dazu ausreichten, das Handeln der gesamten Organisation stillzulegen, indem man ihr "Single Point of Failure" angreift. Da keine Organisation sich darauf verlassen kann, dass Visa, Mastercard, oder PayPal ihre Rechte im Zweifelsfall verteidigen, haben PI [erkannt](https://twitter.com/ProgIntl/status/1488122220799041541), dass nur Bitcoin im Notfall als zuverlässige Finanzierungsquelle dienen kann.
 
 #### Die ideologische Richtung spielt keine Rolle
 

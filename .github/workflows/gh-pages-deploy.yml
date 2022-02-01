@@ -6,16 +6,17 @@ on:
       - master
 
 jobs:
-    github-pages:
+  github-pages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
-      - uses: helaili/jekyll-action@v2
+      - name: deploy
+        uses: actions/checkout@v2
+        uses: actions/cache@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+        uses: helaili/jekyll-action@v2
+          with:
+            token: ${{ secrets.GITHUB_TOKEN }}

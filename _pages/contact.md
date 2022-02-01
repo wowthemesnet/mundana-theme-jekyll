@@ -4,7 +4,7 @@ permalink: "/contact.html"
 ---
 
 <form action="https://formspree.io/f/mgedaald" method="POST">    
-<p class="mb-4">Du möchtest einen Beitrag auf {{site.name}} veröffentlichen? Oder einfach einen Kommentar an uns senden? Wir freuen uns auf eine Nachricht!</p>
+<p class="mb-4">Du möchtest einen Beitrag auf {{site.name}} veröffentlichen? Oder einfach einen Kommentar an uns senden? Wir freuen uns auf deine Nachricht!</p>
 <div class="form-group row">
 <div class="col-md-6">
 <input class="form-control" type="text" name="name" placeholder="Name*" required>

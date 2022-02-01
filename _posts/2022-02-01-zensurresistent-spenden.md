@@ -3,7 +3,7 @@ layout: post
 author: calle
 title: "Der zentralisierte Spendenhahn"
 categories: [zensur]
-image: assets/images/feminist-coalition.png
+image: assets/images/cuba-donate.png
 ---
 
 Die meisten aktivistischen Strukturen finanzieren sich durch Spenden von Unterstützer\*innen. Viel zu oft verlassen sich Aktivist\*innen darauf, dass Kreditkartenunternehmen, Banken, und Zahlungsdienstleister ihnen wohlgesonnen sind und dabei mitspielen. Leider gehört es aber zum Standardarsenal autoritärer Systeme, denen den Geldhahn zuzudrehen, die unangenehm werden, wie auch jetzt wieder zu beobachten ist im Fall der [Progressive International](https://progressive.international/) (PI), einer weltweiten aktivistischen Bewegung.

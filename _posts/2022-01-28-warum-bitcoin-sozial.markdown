@@ -7,7 +7,7 @@ image: assets/images/logo.jpg
 tags: [sticky]
 ---
 
-Bitcoin verändert schon heute die Welt und trägt dazu bei sie gerechter, ökologisch verantwortungsbewusster und finanziell inklusiver zu machen. Dennoch herrscht in der deutschsprachigen Netzszene immer mehr Skepsis gegenüber das dezentrale Geldsystem. Bitcoin Sozial ist ein Kollektiv aus Bitcoiner\*innen, die Auswirkungen von Bitcoin auf die Gesellschaft auseinandersetzen.
+Bitcoin verändert schon heute die Welt und trägt dazu bei sie gerechter, ökologisch verantwortungsbewusster und finanziell inklusiver zu machen. Dennoch herrscht in der deutschsprachigen Netzszene immer mehr Skepsis gegenüber dem dezentralen Geldsystem. Bitcoin Sozial ist ein Kollektiv aus Bitcoiner\*innen, die Auswirkungen von Bitcoin auf die Gesellschaft auseinandersetzen.
 
 Wir verstehen Bitcoin als ein faires und offeneres Geldsystem, an dem alle gleichberechtigt teilnehmen können. Ein Geldsystem mit unveränderlichen Regeln, von den Menschen für die Menschen. Ein Geldsystem von unten.
 

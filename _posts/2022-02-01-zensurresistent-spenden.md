@@ -10,11 +10,7 @@ Die meisten aktivistischen Strukturen finanzieren sich durch Spenden von Unterst
 
 Nach eigenen Angaben wurden dieser Organisation nun die Möglichkeit genommen Spenden zu empfangen, nachdem Sie angekündigt haben eine COVID-19 [Impfkampagne in Cuba](https://progressive.international/wire/2022-01-17-we-are-going-to-cuba-to-help-vaccinate-the-world/en) unterstützen zu wollen.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Last week, several companies blocked donations to the @progintl campaign of solidarity with Cuba and its ambitions to help vaccinate the world.
-
-To defend against attempts to shut us out of the global financial system, we now accept donations in crypto. Our addresses are below.</p>&mdash; Progressive International (@ProgIntl) <a href="https://twitter.com/ProgIntl/status/1488122218274070534"></a></blockquote>
-
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% twitter https://twitter.com/ProgIntl/status/1488122218274070534 %}
 
 PI hat dabei ziemlich schnell zu spüren bekommen, dass vermutlich nur einige Telefonate dazu ausreichten, das Handeln der gesamten Organisation stillzulegen, indem man ihr "Single Point of Failure" angreift. Da keine Organisation sich darauf verlassen kann, dass Visa, Mastercard, oder PayPal ihre Rechte im Zweifelsfall verteidigen, haben PI [erkannt](https://twitter.com/ProgIntl/status/1488122220799041541), dass nur Bitcoin im Notfall als zuverlässige Finanzierungsquelle dienen kann.
 
@@ -22,7 +18,7 @@ PI hat dabei ziemlich schnell zu spüren bekommen, dass vermutlich nur einige Te
 
 Man sollte nicht annehmen, dass die ideologische Richtung der Kampagne eine tragende Rolle dabei spielte, als es darum ging, ihr das Leben zu erschweren. Am selben Tag, an dem Spenden an die PI verhindert wurden, ist offenbar das GoFundMe Spendenkonto von insgesamt 10 Millionen Dollar des [Trucker Konvois in Canada](https://www.tagesschau.de/ausland/amerika/proteste-corona-kanada-101.html), die _gegen_ die dortigen Pandemiemaßnamen demonstrieren, gesperrt worden.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">JUST IN - #Ottawa City Councillor launches court proceedings against Canada's trucker convoy, targeting the nearly $10,000,000 in funds frozen by @GoFundMe to "cover the City expenses."</p>&mdash; Disclose.tv (@disclosetv) <a href="https://twitter.com/disclosetv/status/1488183534443548676"></a></blockquote>
+{% twitter https://twitter.com/disclosetv/status/1488183534443548676 %}
 
 ### Präzedenzfälle: Feminist Coalition Nigeria und Wikileaks
 

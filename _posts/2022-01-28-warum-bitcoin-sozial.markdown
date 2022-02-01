@@ -34,8 +34,7 @@ Es gibt jedoch auch eine ganz andere Geschichte die man über Bitcoin erzählen 
 
 [Alex Gladstein][alex-gladstein-bitcoin-magazine], leiter der Human Rights Foundation, berichtet über [monetären Kolonialismus](https://bitcoinmagazine.com/culture/bitcoin-a-currency-of-decolonization) und wie Bitcoin in Orten der Welt, die vom westlichen Finanzsystem [ausgeschlossen](https://bitcoinmagazine.com/culture/bitcoin-financial-freedom-in-afghanistan) oder gewissermaßen durch die bestehenden Strukturen [ausgebeutet](https://bitcoinmagazine.com/culture/check-your-financial-privilege) werden, Menschen die Möglichkeit gibt, ihr finanzielles Schicksal in die Hand zu nehmen und sich vom Versagen internationaler Solidarität unabhängig zu machen.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Alex Gladstein (@gladstein) <a href="https://twitter.com/gladstein/status/1368822142775652352">https://twitter.com/gladstein/status/1368822142775652352</a></p>&mdash; Alex Gladstein (@gladstein) <a href="https://twitter.com/gladstein/status/1368822142775652352"></a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% twitter https://twitter.com/gladstein/status/1368822142775652352 %}
 
 #### Feminismus und finanzielles Patriarchat
 
@@ -53,8 +52,7 @@ Während die meisten Menschen Bitcoin mit Umweltzerstörung in Verbindung bringe
 
 Dazu gehört auch, dass Bitcoin, im Vergleich zu allen anderen Industriezweigen, oder auch im Vergleich zu Ländern wie Deutschland, [den höheren Anteil][energy-mix] von [erneuerbaren Energien](https://twitter.com/ArcaneResearch/status/1453972301314084865) verwendet. Nur [selten wird erwähnt][bitcoin-verstehen-stefanwouldgo], dass Bitcoin Mining fast ausschließlich mit überschüssiger Energie betrieben wird, die sonst keinen Abnehmer findet. Aus diesem Grund wurde neulich ein stillgelegtes [Wasserkraftwerk](https://www.reuters.com/technology/costa-rica-hydro-plant-gets-new-lease-life-crypto-mining-2022-01-11/) in Costa Rica wieder in Betrieb genommen. Bitcoin hat das Potential als [Subvention für erneuerbare Energieträger][arcane-energy-transition] zu dienen und damit einen Übergang in eine nachhaltigere Welt erleichtern.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Arcane Research (@ArcaneResearch) <a href="https://twitter.com/ArcaneResearch/status/1453972301314084865">https://twitter.com/ArcaneResearch/status/1453972301314084865</a></p>&mdash; Arcane Research (@ArcaneResearch) <a href="https://twitter.com/ArcaneResearch/status/1453972301314084865"></a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% twitter https://twitter.com/ArcaneResearch/status/1453972301314084865 %}
 
 ## Ist unser Fiat Geldsystem zu unpolitisch?
 

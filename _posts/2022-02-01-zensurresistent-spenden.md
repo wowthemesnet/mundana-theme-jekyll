@@ -2,7 +2,7 @@
 layout: post
 author: calle
 title: "Der zentralisierte Spendenhahn"
-categories: [zensur]
+categories: [zensur, aktivismus]
 image: assets/images/cuba-donate.png
 ---
 

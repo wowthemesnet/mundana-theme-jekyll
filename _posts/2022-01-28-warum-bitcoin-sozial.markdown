@@ -44,7 +44,7 @@ Als Beispiel sei auch die Geschichte der [Feminist Coalition in Nigeria][feminis
 
 #### Bürgerbewegungen und autonome Strukturen
 
-Mehrere grassroots Projekte an verschiedenen Orden der Welt, zeigen, wie Bitcoin Menschen dazu bringt, sich zu organisieren und autonome Wirtschaftsstrukturen aufzubauen. Beispiele dafür sind [Bitcoin Beach][bitcoin-beach] in El Salvador, deren Erfolg letztendlich dazu geführt hat, dass El Salvador Bitcoin als Nationalwährung eingeführt hat, aber auch weniger bekannte Projekte, wie [Lake Bitcoin][lake-bitcoin] in Guatemala, oder [Bitcoin Ekasi][bitcoin-ekasi] in Südafrika.
+Mehrere grassroots Projekte an verschiedenen Orten der Welt, zeigen, wie Bitcoin Menschen dazu bringt, sich zu organisieren und autonome Wirtschaftsstrukturen aufzubauen. Beispiele dafür sind [Bitcoin Beach][bitcoin-beach] in El Salvador, deren Erfolg letztendlich dazu geführt hat, dass El Salvador Bitcoin als Nationalwährung eingeführt hat, aber auch weniger bekannte Projekte, wie [Lake Bitcoin][lake-bitcoin] in Guatemala, oder [Bitcoin Ekasi][bitcoin-ekasi] in Südafrika.
 
 #### Ökologie
 
@@ -64,7 +64,7 @@ Was ist der Energiebedarf des weltweiten Bankensystems? Wer sollte bestimmen, wi
 
 So wie auch das Internet die dunklen Seiten des Menschen offenlegen kann, so kann das auch Bitcoin, was nicht zuletzt in der Dichotomie vieler Errungenschaften liegt. Sowohl das Internet, als auch Bitcoin gehören zu den Technologien, die uns neue Formen der Freiheit, der Verbundenheit, und der Gemeinschaft ermöglichen können und dabei viele neuartige Fragen aufwerfen. Es ist jetzt an der Zeit, Antworten auf diese Fragen zu finden.
 
-_Bemerkung des Authors: Die besprochenen Aspekte, haben wenig bis nichts mit dem Marktwert, sondern beschäftigen sich mit Fragen von technischer und gesellschaftlicher Natur. Deswegen sollen die Überlegungen auf diesem Blog ausdrücklich nicht als eine Empfehlung in Bitcoin zu investieren gelten._
+_Bemerkung des Authors: Die besprochenen Aspekte haben wenig bis nichts mit dem Marktwert zu tun, sondern beschäftigen sich mit Fragen von technischer und gesellschaftlicher Natur. Deswegen sollen die Überlegungen auf diesem Blog ausdrücklich nicht als eine Empfehlung in Bitcoin zu investieren gelten._
 
 [progressive-bitcoiner]: https://theprogressivebitcoiner.com/
 [volksverpetzer-nazi]: https://www.volksverpetzer.de/aktuelles/bitcoin-rechtsextrem/

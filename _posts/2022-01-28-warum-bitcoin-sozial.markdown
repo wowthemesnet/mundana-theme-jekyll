@@ -11,7 +11,7 @@ Bitcoin verändert schon heute die Welt und trägt dazu bei sie gerechter, ökol
 
 Wir verstehen Bitcoin als ein faires und offeneres Geldsystem, an dem alle gleichberechtigt teilnehmen können. Ein Geldsystem mit unveränderlichen Regeln, von den Menschen für die Menschen. Ein Geldsystem von unten.
 
-Bitcoin Sozial ist ein Ort des respektvollen Dialog zwischen Menschen, die eine faire Zukunft für alle mitgestalten wollen, in der ein ökologisch verantwortungsvoller Umgang mit der Natur und eine gerechtere Wirtschaftsordnung herrscht. Wir denken, dass unser jetziges Geldsystem bestehende Machtstrukturen wie den Einfluss von multinationalen Großkonzernen und weltweit eine Form des finanziellen Kolonialismus befördert. Dagegen haben wir eine Lösung und sie lautet Bitcoin.
+Bitcoin Sozial ist ein Ort des respektvollen Dialog zwischen Menschen, die eine faire Zukunft für alle mitgestalten wollen, in der ein ökologisch verantwortungsvoller Umgang mit der Natur und eine gerechtere Wirtschaftsordnung herrscht. Wir denken, dass unser jetziges Geldsystem bestehende Machtstrukturen wie den Einfluss von multinationalen Großkonzernen und weltweit eine Form des finanziellen Kolonialismus befördert. Dagegen haben wir eine Lösung, und sie lautet Bitcoin.
 
 ## Bitcoin ist progressiv
 
@@ -24,7 +24,7 @@ Damit wir diese Transformationen besser verstehen können, werden wir auf oft ge
 
 Diese und ähnliche Kritik werden oft mit Bitcoin assoziiert und regelmäßig wiederholt und zementieren entsprechend negative Cliches in der breiten Öffentlichkeit. Gerade fortschrittliche Institutionen wie der [Chaos Computer Club][ccc-blockchain102] oder journalistische Verbände wie [Netzpolitik][netzpolitik-stromverbrauch] ignorieren es dabei gänzlich auf die gesellschaftlichen Transformation einzugehen, die Bitcoin mit sich bringen kann. Genau da sehen wir unsere Rolle, das Vakuum zu füllen.
 
-Während ein Teil der Bitcoin Community im US-Amerikanischen Raum sich bereits tiefgehender mit den gesellschaftlichen Implikationen von Bitcoin beschäftigt (wie zum Beispiel das Projekt [Progressive Bitcoiner][progressive-bitcoiner]), verstärkt sich immer mehr der Eindruck, dass die deutschsprachige Szene bei der Kritik verharrt und sich zu oft einer Auseinandersetzung mit den Vorteilen verweigert, die Bitcoin für die Gesellschaft haben könnte. Anstatt diese Veränderungen aktiv Mitzugestalten, isolieren sich die Krikier\*innen und hoffen, dass sich das von allein (oder durch den Gesetzgeber) schon selbst irgendwie löst.
+Während ein Teil der Bitcoin Community im US-Amerikanischen Raum sich bereits tiefgehender mit den gesellschaftlichen Implikationen von Bitcoin beschäftigt (wie zum Beispiel das Projekt [Progressive Bitcoiner][progressive-bitcoiner]), verstärkt sich immer mehr der Eindruck, dass die deutschsprachige Szene bei der Kritik verharrt und sich zu oft einer Auseinandersetzung mit den Vorteilen verweigert, die Bitcoin für die Gesellschaft haben könnte. Anstatt diese Veränderungen aktiv Mitzugestalten, isolieren sich die Kritiker\*innen und hoffen, dass sich das von allein (oder durch den Gesetzgeber) schon selbst irgendwie löst.
 
 ## Checke deine finanziellen Privilegien
 

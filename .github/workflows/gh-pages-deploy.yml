@@ -9,14 +9,16 @@ jobs:
   github-pages:
     runs-on: ubuntu-latest
     steps:
-      - name: deploy
+      - name: checkout
         uses: actions/checkout@v2
+      - name: cache
         uses: actions/cache@v2
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
+      - name: jekyl
         uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

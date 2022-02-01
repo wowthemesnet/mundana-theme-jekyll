@@ -11,14 +11,20 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: cache
+      - name: Bundler Cache
         uses: actions/cache@v2
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-      - name: jekyl
-        uses: helaili/jekyll-action@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: jekyl
+      #   uses: helaili/jekyll-action@v2
+      #   with:
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build & Deploy to GitHub Pages
+          uses: joshlarsen/jekyll4-deploy-gh-pages@master
+          env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
+              GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}

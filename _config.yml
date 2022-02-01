@@ -17,7 +17,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
-  - jekyll-target-blank
+  # - jekyll-target-blank
 
 authors:
   calle:

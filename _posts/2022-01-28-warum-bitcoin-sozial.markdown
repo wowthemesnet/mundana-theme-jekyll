@@ -7,9 +7,9 @@ image: assets/images/logo.jpg
 tags: [sticky]
 ---
 
-Bitcoin verändert schon heute die Welt und trägt dazu bei, sie gerechter, ökologisch verantwortungsbewusster und finanziell inklusiver zu machen. Dennoch herrscht in der deutschsprachigen Netzszene immer mehr Skepsis gegenüber dem dezentralen Geldsystem. Bitcoin Sozial ist ein Kollektiv aus Bitcoiner\*innen, die Auswirkungen von Bitcoin auf die Gesellschaft auseinandersetzen.
+Bitcoin verändert schon heute die Welt und trägt dazu bei, sie gerechter, ökologisch verantwortungsbewusster und finanziell inklusiver zu machen. Dennoch herrscht in der deutschsprachigen Netzgemeinde immer mehr Skepsis gegenüber dem dezentralen Geldsystem. Bitcoin Sozial ist ein Kollektiv aus Bitcoiner\*innen, die Auswirkungen von Bitcoin auf die Gesellschaft auseinandersetzen.
 
-Wir verstehen Bitcoin als ein faires und offeneres Geldsystem, an dem alle gleichberechtigt teilnehmen können. Ein Geldsystem mit unveränderlichen Regeln, von den Menschen für die Menschen. Ein Geldsystem von unten.
+Wir verstehen Bitcoin als ein faires und offenes Geldsystem, an dem alle gleichberechtigt teilnehmen können. Ein Geldsystem mit unveränderlichen Regeln, von den Menschen für die Menschen. Ein Geldsystem von unten.
 
 Bitcoin Sozial ist ein Ort des respektvollen Dialogs zwischen Menschen, die eine faire Zukunft für alle mitgestalten wollen, in der ein ökologisch verantwortungsvoller Umgang mit der Natur und eine gerechtere Wirtschaftsordnung herrscht. Wir denken, dass unser jetziges Geldsystem bestehende Machtstrukturen wie den Einfluss von multinationalen Großkonzernen und weltweit eine Form des finanziellen Kolonialismus befördert. Dagegen haben wir eine Lösung, und sie lautet Bitcoin.
 
@@ -20,7 +20,7 @@ Damit wir diese Transformationen besser verstehen können, werden wir auf oft ge
 - Bitcoin ist nichts als [Spekulation][jacobin-ponzi].
 - Bitcoin ist nur für [böse Menschen][volksverpetzer-nazi].
 - Bitcoin ist [klimaschädlich][netzpolitik-stromverbrauch].
-- Bitcoin löst nicht die [Verteilungsungerechtigkeit][wsj-wealth-distribution].
+- Bitcoin löst nicht die [Verteilungsgerechtigkeit][wsj-wealth-distribution].
 
 Diese und ähnliche Kritik werden oft mit Bitcoin assoziiert und regelmäßig wiederholt und zementieren entsprechend negative Klischees in der breiten Öffentlichkeit. Gerade fortschrittliche Institutionen wie der [Chaos Computer Club][ccc-blockchain102] oder journalistische Verbände wie [Netzpolitik][netzpolitik-stromverbrauch] ignorieren es dabei gänzlich auf die gesellschaftlichen Transformationen einzugehen, die Bitcoin mit sich bringen kann. Genau da sehen wir unsere Rolle, das Vakuum zu füllen.
 
@@ -44,7 +44,7 @@ Als Beispiel sei auch die Geschichte der [Feminist Coalition in Nigeria][feminis
 
 #### Bürgerbewegungen und autonome Strukturen
 
-Mehrere grassroots Projekte an verschiedenen Orten der Welt, zeigen, wie Bitcoin Menschen dazu bringt, sich zu organisieren und autonome Wirtschaftsstrukturen aufzubauen. Beispiele dafür sind [Bitcoin Beach][bitcoin-beach] in El Salvador, deren Erfolg letztendlich dazu geführt hat, dass El Salvador Bitcoin als Nationalwährung eingeführt hat, aber auch weniger bekannte Projekte, wie [Lake Bitcoin][lake-bitcoin] in Guatemala, oder [Bitcoin Ekasi][bitcoin-ekasi] in Südafrika.
+Mehrere grassroots Projekte an verschiedenen Orten der Welt, zeigen, wie Bitcoin Menschen dazu bringt, sich zu organisieren und autonome Wirtschaftsstrukturen aufzubauen. Beispiele dafür sind [Bitcoin Beach][bitcoin-beach] in El Salvador, deren Erfolg letztendlich dazu geführt hat, dass El Salvador Bitcoin als nationale Währung eingeführt hat, aber auch weniger bekannte Projekte, wie [Lake Bitcoin][lake-bitcoin] in Guatemala, oder [Bitcoin Ekasi][bitcoin-ekasi] in Südafrika.
 
 #### Ökologie
 
@@ -64,7 +64,7 @@ Was ist der Energiebedarf des weltweiten Bankensystems? Wer sollte bestimmen, wi
 
 So wie auch das Internet die dunklen Seiten des Menschen offenlegen kann, so kann das auch Bitcoin, was nicht zuletzt in der Dichotomie vieler Errungenschaften liegt. Sowohl das Internet, als auch Bitcoin gehören zu den Technologien, die uns neue Formen der Freiheit, der Verbundenheit, und der Gemeinschaft ermöglichen können und dabei viele neuartige Fragen aufwerfen. Es ist jetzt an der Zeit, Antworten auf diese Fragen zu finden.
 
-_Bemerkung des Authors: Die besprochenen Aspekte haben wenig bis nichts mit dem Marktwert zu tun, sondern beschäftigen sich mit Fragen von technischer und gesellschaftlicher Natur. Deswegen sollen die Überlegungen auf diesem Blog ausdrücklich nicht als eine Empfehlung in Bitcoin zu investieren gelten._
+_Bemerkung des Autors: Die besprochenen Aspekte haben wenig bis nichts mit dem Marktwert zu tun, sondern beschäftigen sich mit Fragen von technischer und gesellschaftlicher Natur. Deswegen sollen die Überlegungen auf diesem Blog ausdrücklich nicht als eine Empfehlung in Bitcoin zu investieren gelten._
 
 [progressive-bitcoiner]: https://theprogressivebitcoiner.com/
 [volksverpetzer-nazi]: https://www.volksverpetzer.de/aktuelles/bitcoin-rechtsextrem/

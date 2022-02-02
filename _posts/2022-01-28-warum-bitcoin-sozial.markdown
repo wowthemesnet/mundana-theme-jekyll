@@ -7,11 +7,11 @@ image: assets/images/logo.jpg
 tags: [sticky]
 ---
 
-Bitcoin verändert schon heute die Welt und trägt dazu bei sie gerechter, ökologisch verantwortungsbewusster und finanziell inklusiver zu machen. Dennoch herrscht in der deutschsprachigen Netzszene immer mehr Skepsis gegenüber dem dezentralen Geldsystem. Bitcoin Sozial ist ein Kollektiv aus Bitcoiner\*innen, die Auswirkungen von Bitcoin auf die Gesellschaft auseinandersetzen.
+Bitcoin verändert schon heute die Welt und trägt dazu bei, sie gerechter, ökologisch verantwortungsbewusster und finanziell inklusiver zu machen. Dennoch herrscht in der deutschsprachigen Netzszene immer mehr Skepsis gegenüber dem dezentralen Geldsystem. Bitcoin Sozial ist ein Kollektiv aus Bitcoiner\*innen, die Auswirkungen von Bitcoin auf die Gesellschaft auseinandersetzen.
 
 Wir verstehen Bitcoin als ein faires und offeneres Geldsystem, an dem alle gleichberechtigt teilnehmen können. Ein Geldsystem mit unveränderlichen Regeln, von den Menschen für die Menschen. Ein Geldsystem von unten.
 
-Bitcoin Sozial ist ein Ort des respektvollen Dialog zwischen Menschen, die eine faire Zukunft für alle mitgestalten wollen, in der ein ökologisch verantwortungsvoller Umgang mit der Natur und eine gerechtere Wirtschaftsordnung herrscht. Wir denken, dass unser jetziges Geldsystem bestehende Machtstrukturen wie den Einfluss von multinationalen Großkonzernen und weltweit eine Form des finanziellen Kolonialismus befördert. Dagegen haben wir eine Lösung, und sie lautet Bitcoin.
+Bitcoin Sozial ist ein Ort des respektvollen Dialogs zwischen Menschen, die eine faire Zukunft für alle mitgestalten wollen, in der ein ökologisch verantwortungsvoller Umgang mit der Natur und eine gerechtere Wirtschaftsordnung herrscht. Wir denken, dass unser jetziges Geldsystem bestehende Machtstrukturen wie den Einfluss von multinationalen Großkonzernen und weltweit eine Form des finanziellen Kolonialismus befördert. Dagegen haben wir eine Lösung, und sie lautet Bitcoin.
 
 ## Bitcoin ist progressiv
 
@@ -22,17 +22,17 @@ Damit wir diese Transformationen besser verstehen können, werden wir auf oft ge
 - Bitcoin ist [klimaschädlich][netzpolitik-stromverbrauch].
 - Bitcoin löst nicht die [Verteilungsungerechtigkeit][wsj-wealth-distribution].
 
-Diese und ähnliche Kritik werden oft mit Bitcoin assoziiert und regelmäßig wiederholt und zementieren entsprechend negative Cliches in der breiten Öffentlichkeit. Gerade fortschrittliche Institutionen wie der [Chaos Computer Club][ccc-blockchain102] oder journalistische Verbände wie [Netzpolitik][netzpolitik-stromverbrauch] ignorieren es dabei gänzlich auf die gesellschaftlichen Transformation einzugehen, die Bitcoin mit sich bringen kann. Genau da sehen wir unsere Rolle, das Vakuum zu füllen.
+Diese und ähnliche Kritik werden oft mit Bitcoin assoziiert und regelmäßig wiederholt und zementieren entsprechend negative Klischees in der breiten Öffentlichkeit. Gerade fortschrittliche Institutionen wie der [Chaos Computer Club][ccc-blockchain102] oder journalistische Verbände wie [Netzpolitik][netzpolitik-stromverbrauch] ignorieren es dabei gänzlich auf die gesellschaftlichen Transformationen einzugehen, die Bitcoin mit sich bringen kann. Genau da sehen wir unsere Rolle, das Vakuum zu füllen.
 
-Während ein Teil der Bitcoin Community im US-Amerikanischen Raum sich bereits tiefgehender mit den gesellschaftlichen Implikationen von Bitcoin beschäftigt (wie zum Beispiel das Projekt [Progressive Bitcoiner][progressive-bitcoiner]), verstärkt sich immer mehr der Eindruck, dass die deutschsprachige Szene bei der Kritik verharrt und sich zu oft einer Auseinandersetzung mit den Vorteilen verweigert, die Bitcoin für die Gesellschaft haben könnte. Anstatt diese Veränderungen aktiv Mitzugestalten, isolieren sich die Kritiker\*innen und hoffen, dass sich das von allein (oder durch den Gesetzgeber) schon selbst irgendwie löst.
+Während ein Teil der Bitcoin Community im US-amerikanischen Raum sich bereits tiefgehender mit den gesellschaftlichen Implikationen von Bitcoin beschäftigt (wie zum Beispiel das Projekt [Progressive Bitcoiner][progressive-bitcoiner]), verstärkt sich immer mehr der Eindruck, dass die deutschsprachige Szene bei der Kritik verharrt und sich zu oft einer Auseinandersetzung mit den Vorteilen verweigert, die Bitcoin für die Gesellschaft haben könnte. Anstatt diese Veränderungen aktiv mitzugestalten, isolieren sich die Kritiker\*innen und hoffen, dass sich das von allein (oder durch den Gesetzgeber) schon selbst irgendwie löst.
 
 ## Checke deine finanziellen Privilegien
 
-Es gibt jedoch auch eine ganz andere Geschichte die man über Bitcoin erzählen kann. Eine von Menschenrechten, Freiheit vor staatlicher Unterdrückung, finanzieller Emanzipation, Feminismus, autonomer Organisation, und einer modernen Ökologie.
+Es gibt jedoch auch eine ganz andere Geschichte die man über Bitcoin erzählen kann. Eine von Menschenrechten, Freiheit vor staatlicher Unterdrückung, finanzieller Emanzipation, Feminismus, autonomer Organisation und einer modernen Ökologie.
 
-#### Bitcoin, Menschenrechte, und Kolonialismus
+#### Bitcoin, Menschenrechte und Kolonialismus
 
-[Alex Gladstein][alex-gladstein-bitcoin-magazine], leiter der Human Rights Foundation, berichtet über [monetären Kolonialismus](https://bitcoinmagazine.com/culture/bitcoin-a-currency-of-decolonization) und wie Bitcoin in Orten der Welt, die vom westlichen Finanzsystem [ausgeschlossen](https://bitcoinmagazine.com/culture/bitcoin-financial-freedom-in-afghanistan) oder gewissermaßen durch die bestehenden Strukturen [ausgebeutet](https://bitcoinmagazine.com/culture/check-your-financial-privilege) werden, Menschen die Möglichkeit gibt, ihr finanzielles Schicksal in die Hand zu nehmen und sich vom Versagen internationaler Solidarität unabhängig zu machen.
+[Alex Gladstein][alex-gladstein-bitcoin-magazine], Leiter der Human Rights Foundation, berichtet über [monetären Kolonialismus](https://bitcoinmagazine.com/culture/bitcoin-a-currency-of-decolonization) und wie Bitcoin in Orten der Welt, die vom westlichen Finanzsystem [ausgeschlossen](https://bitcoinmagazine.com/culture/bitcoin-financial-freedom-in-afghanistan) oder gewissermaßen durch die bestehenden Strukturen [ausgebeutet](https://bitcoinmagazine.com/culture/check-your-financial-privilege) werden, Menschen die Möglichkeit gibt, ihr finanzielles Schicksal in die Hand zu nehmen und sich vom Versagen internationaler Solidarität unabhängig zu machen.
 
 {% twitter https://twitter.com/gladstein/status/1368822142775652352 %}
 

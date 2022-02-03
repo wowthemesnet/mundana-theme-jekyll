@@ -12,7 +12,7 @@ Nach eigenen Angaben wurden dieser Organisation nun die Möglichkeit genommen Sp
 
 {% twitter https://twitter.com/ProgIntl/status/1488122218274070534 %}
 
-PI hat dabei ziemlich schnell zu spüren bekommen, dass vermutlich nur einige Telefonate dazu ausreichten, das Handeln der gesamten Organisation stillzulegen, indem man ihr "Single Point of Failure" angreift. Da keine Organisation sich darauf verlassen kann, dass Visa, Mastercard, oder PayPal ihre Rechte im Zweifelsfall verteidigen, haben PI [erkannt](https://twitter.com/ProgIntl/status/1488122220799041541), dass nur Bitcoin im Notfall als zuverlässige Finanzierungsquelle dienen kann.
+PI hat dabei ziemlich schnell zu spüren bekommen, dass vermutlich nur einige Telefonate dazu ausgereicht haben, um das Handeln der gesamten Organisation stillzulegen, indem man ihren "Single Point of Failure" angriff. Da keine Organisation sich darauf verlassen kann, dass Visa, Mastercard, oder PayPal ihre Rechte im Zweifelsfall verteidigen, haben PI [erkannt](https://twitter.com/ProgIntl/status/1488122220799041541), dass nur Bitcoin im Notfall als zuverlässige Finanzierungsquelle dienen kann.
 
 #### Die ideologische Richtung spielt keine Rolle
 
@@ -24,7 +24,7 @@ Man sollte nicht annehmen, dass die ideologische Richtung der Kampagne eine trag
 
 Auch dies zeigt, wie schnell und einfach eine Bewegung in die Knie gezwungen werden kann. Bitcoin hat schon mehrfach bewiesen, dass es als rettender Strohhalm dienen kann, wenn eine Regierung den Geldfluss behindert. Ein Beispiel aus 2020 ist die [Feminist Coalition](https://bitcoinmagazine.com/culture/nigerian-protest-group-finds-sovereign-lifeline-in-bitcoin) in Nigeria, die binnen kurzer Zeit auf Bitcoin umsteigen musste, als die Regierung ihnen die Möglichkeit Spenden zu sammeln versperrte.
 
-Fast schon zum Gründungsmythos von Bitcoin gehört der Fall Wikileaks, denen PayPal 2010 nach dem Veröffentlichen der "Afghan War Diaries" [ihr Konto einfror](https://wikileaks.org/PayPal-freezes-WikiLeaks-donations.html). Damals [wurde gefordert](https://bitcointalk.org/index.php?topic=1735.msg26999#msg26999), dass Bitcoin Wikileaks zu Hilfe kommen solle. Satoshi Nakamoto, Erfinder/in von Bitcoin, war zurückhaltend, weil er/sie wusste, dass ungewünschte Aufmerksamkeit dem jungen Projekt schaden könnte:
+Fast schon zum Gründungsmythos von Bitcoin gehört der Fall Wikileaks, denen PayPal 2010 nach dem Veröffentlichen der "Afghan War Diaries" [ihr Konto einfror](https://wikileaks.org/PayPal-freezes-WikiLeaks-donations.html). Damals [wurde gefordert](https://bitcointalk.org/index.php?topic=1735.msg26999#msg26999), dass Bitcoin Wikileaks zu Hilfe kommen solle. Satoshi Nakamoto, Erfinder/in von Bitcoin, war zurückhaltend, weil er/sie wusste, dass unerwünschte Aufmerksamkeit dem jungen Projekt schaden könnte:
 
 > It would have been nice to get this attention in any other context. WikiLeaks has kicked the hornet's nest, and the swarm is headed towards us.
 

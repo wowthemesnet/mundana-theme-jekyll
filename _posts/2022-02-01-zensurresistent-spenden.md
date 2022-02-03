@@ -32,4 +32,4 @@ Fast schon zum Gründungsmythos von Bitcoin gehört der Fall Wikileaks, denen Pa
 
 Er/sie war so besorgt, dass dies der letzter Post in dem bitcointalk Forum sein sollte. Wikileaks hat danach dennoch angefangen Bitcoin Spenden zu [akzeptieren](https://www.forbes.com/sites/andygreenberg/2011/06/14/wikileaks-asks-for-anonymous-bitcoin-donations/).
 
-Unbequeme Bewegungen dürfen nicht erst dann, wenn es zu spät ist auf zensurresistente Finanzierungswege umsteigen, denn eingefrorene Konten bleiben meist unerreichbar. Bitcoin fragt nicht, warum man es benutzen möchte. Es ist ein zuverlässiges Mittel, ein Projekt zu finanzieren und sollte daher immer schon von Anfang an als Spendenoption in Betracht gezogen werden.
+Unbequeme Bewegungen dürfen nicht erst dann, wenn es zu spät ist, auf zensurresistente Finanzierungswege umsteigen, denn eingefrorene Konten bleiben meist unerreichbar. Bitcoin fragt nicht, warum man es benutzen möchte. Es ist ein zuverlässiges Mittel, ein Projekt zu finanzieren und sollte daher immer schon von Anfang an als Spendenoption in Betracht gezogen werden.

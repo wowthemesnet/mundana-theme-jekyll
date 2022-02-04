@@ -6,8 +6,6 @@ categories: [gesellschaft]
 image: assets/images/banksy-01.jpg
 ---
 
-Man könnte meinen, Bitcoin sei eine Kreatur der politischen Rechten. Das ist falsch - und eine Politisierung von Technologie kontraproduktiv. Im Jahr 2022 zählen Kryptowährungen zum Mainstream.
-
 Wenn amerikanische Stars wie Tom Brady und [Matt Damon](https://adage.com/article/digital-marketing-ad-tech-news/cryptocom-hires-matt-damon-new-campaign/2376496) nicht Beweis genug sind, sollten Sie sich die lautstarken konservativen Fans von bitcoin ansehen. Tucker Carlson, Ted Cruz und Newt Gingrich preisen Bitcoin als digitales Eigentum, das für Stromnetze nützlich ist, und als Reservewährung. Bitcoin ersetzt in der Werbung im konservativen Talk-Radio zunehmend das Gold. Das rechtspopulistische Regime von [Nayib Bukele](https://foreignpolicy.com/2021/07/19/el-salvador-bukele-bitcoin-hustle-bro-populism/) hat ihn in El Salvador sogar zum gesetzlichen Zahlungsmittel erklärt.
 
 Man könnte meinen, dass Bitcoin ein Werkzeug der politischen Rechten ist und für diese geschaffen wurde. Das ist falsch - und eine Politisierung der Technologie ist kontraproduktiv.

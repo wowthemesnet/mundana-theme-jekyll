@@ -54,6 +54,14 @@ authors:
     # email: fakemail@gmail.com
     twitter: https://twitter.com/thetrocro
 
+  resistancemoney:
+    name: Resistance Money
+    site: http://resistance.money/
+    avatar: assets/images/authors/avatar_resistancemoney.jpg
+    bio: "Ein bitcoin Forschungskollektiv. Andrew M. Bailey (Yale-NUS College), Bradley Rettler (University of Wyoming), Craig Warmke (Northern Illinois University)"
+    # email: fakemail@gmail.com
+    twitter: https://twitter.com/resistancemoney
+
 # Defaults
 defaults:
   # all posts

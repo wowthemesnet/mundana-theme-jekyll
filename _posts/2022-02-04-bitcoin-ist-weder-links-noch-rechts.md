@@ -10,7 +10,7 @@ Im Jahr 2022 zählen Kryptowährungen zum Mainstream. Wenn amerikanische Stars w
 
 Man könnte meinen, dass Bitcoin ein Werkzeug der politischen Rechten ist und für diese geschaffen wurde. Das ist falsch - und eine Politisierung der Technologie ist kontraproduktiv.
 
-### Wohlstand aufbauen: Schwarze, Latino- und LGBTQ-Investoren sehen in Kryptowährungen wie Bitcoin einen "neuen Weg" zu Wohlstand und Gerechtigkeit
+#### Wohlstand aufbauen: Schwarze, Latino- und LGBTQ-Investoren sehen in Kryptowährungen wie Bitcoin einen "neuen Weg" zu Wohlstand und Gerechtigkeit
 
 Dennoch bezeichnen prominente Politiker der US-Demokraten Bitcoin immer noch als unreguliert, [umweltbelastend](https://www.bloomberg.com/news/articles/2021-12-02/elizabeth-warren-grills-new-york-bitcoin-miner-on-climate-impact), riskant und [nützlicher für Terroristen](https://finance.yahoo.com/news/warren-calls-clampdown-defi-stablecoins-150606464.html) und Glücksspieler als für normale Bürger. Die frühere Außenministerin Hillary Clinton sagt, der Bitcoin könne [den Dollar verdrängen](https://www.forbes.com/sites/billybambrough/2021/11/21/undermining-the-dollar-hillary-clinton-issues-a-surprise-crypto-warning-as-the-bitcoin-price-suddenly-surges-back/?sh=4d94b164fd38) und die Demokratien überall destabilisieren. Andere befürchten, dass er Aufstände finanziert und weiße Rassisten bereichert. Die Senatorin Elizabeth Warren möchte das [Mining virtueller Kryptowährungen eindämmen](https://twitter.com/SenWarren/status/1402725005113364486).
 

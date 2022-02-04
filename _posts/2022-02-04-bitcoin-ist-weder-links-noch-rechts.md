@@ -20,13 +20,13 @@ Stellen Sie sich vor, in den Anfängen des Internets wäre die Nutzung von Krypt
 
 Zu den Gegnern von Bitcoin gehören Persönlichkeiten, die mit Senatorin Warren nicht viel gemein haben. Dazu gehören [Donald Trump](https://www.bbc.com/news/business-57392734), [Wladimir Putin](https://www.cnbc.com/2021/10/14/russias-putin-says-crypto-has-value-but-maybe-not-for-trading-oil.html) und der türkische Präsident [Recep Tayyip Erdogan](https://www.wsj.com/articles/turkeys-erdogan-meets-el-salvadors-bitcoin-boosting-leader-amid-economic-crisis-11642678083). Persönlichkeiten aus dem Establishment wie Jamie Dimon, Chef von JPMorgan Chase, der [Internationale Währungsfonds](https://blogs.imf.org/2021/07/26/cryptoassets-as-national-currency-a-step-too-far/), [die Weltbank](https://www.reuters.com/business/el-salvador-keep-dollar-legal-tender-seeks-world-bank-help-with-bitcoin-2021-06-16/), US-Finanzministerin [Janet Yellen](https://www.reuters.com/world/uk/boes-bailey-tells-banks-be-careful-with-crypto-2021-12-13/) und [Andrew Bailey](https://www.reuters.com/world/uk/boes-bailey-tells-banks-be-careful-with-crypto-2021-12-13/) von der Bank of England lehnen den Bitcoin offenbar ebenfalls ab. Der Investor Charlie Munger nannte es "widerlich und gegen die Interessen der Zivilisation" und bewundert China für sein Verbot.
 
-All dies passt nicht zu der Theorie, dass Bitcoin rechtslastig ist. Seine schärfsten Kritiker scheinen den finanziellen Status quo einem dezentralen Netzwerk vorzuziehen, das Staaten, Unternehmen und Autokraten nicht kontrollieren können.
+All dies passt nicht zu der Theorie, dass Bitcoin rechtslastig sei. Bitcoins schärfste Kritiker scheinen den finanziellen Status quo einem dezentralen Netzwerk vorzuziehen, das Staaten, Unternehmen und Autokraten nicht kontrollieren können.
 
 Dies ist kein Aufruf, Bitcoin zu kaufen - es ist der Aufruf dazu, eine Wahl zuzulassen.
 
 Es geht auch nicht darum, die Nachteile zu leugnen. Das Internet hat dunkle Ecken, die böses Treiben begünstigen. Aber es stärkt auch Bürgerrechte und eröffnet neue Möglichkeiten des Austauschs und globaler Zusammenarbeit. Bitcoin tut dasselbe, nicht mit Informationen, sondern mit Geld.
 
-In diesem Sinne sind das Design und die Verwendung von Bitcoin nicht rechtslastiger als das Internet selbst. Durch die Inklusion von Minderheiten und Unterdrückten, unterstützt er Werte, die von Linken, Sozialdemokraten und Progressiven geteilt werden.
+In diesem Sinne sind das Design und die Verwendung von Bitcoin nicht rechtslastiger, als das Internet selbst. Durch die Inklusion von Minderheiten und Unterdrückten, unterstützt er Werte, die von Linken, Sozialdemokraten und Progressiven geteilt werden.
 
 ### Banken haben Minderheiten ausgeschlossen
 
@@ -38,7 +38,7 @@ Jeder, der ein günstiges Smartphone besitzt, kann damit Geldwerte senden oder e
 
 #### Minderheiten nehmen Bitcoin schneller an
 
-So wie jeder im Grunde kostenlos E-Mails verschicken kann, kann die Menschen jetzt nahezu kostenlos Vermögenswerte übertragen. Und Millionen tun es. Es ist daher nicht überraschend, dass ethnische Minderheiten in den USA Bitcoin [schneller angenommen haben](https://www.pewresearch.org/fact-tank/2021/11/11/16-of-americans-say-they-have-ever-invested-in-traded-or-used-cryptocurrency/) als ihre weißen Altersgenossen. Anstatt sich vor Veränderungen zu fürchten, sollten wir uns fragen, warum dies der Fall ist.
+So wie jeder im Grunde kostenlos E-Mails verschicken kann, können Menschen jetzt nahezu kostenlos Vermögenswerte übertragen. Und Millionen tun es. Es ist daher nicht überraschend, dass ethnische Minderheiten in den USA Bitcoin [schneller angenommen haben](https://www.pewresearch.org/fact-tank/2021/11/11/16-of-americans-say-they-have-ever-invested-in-traded-or-used-cryptocurrency/) als ihre weißen Altersgenossen. Anstatt sich vor Veränderungen zu fürchten, sollten wir uns fragen, warum dies der Fall ist.
 
 Weltweit leben etwa [eine Milliarde Menschen](https://news.bitcoin.com/1-2-billion-people-live-under-double-digit-inflation-many-have-found-escape-in-bitcoin-says-hrfs-alex-gladstein/) unter einer [zweistelligen Inflation](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?most_recent_value_desc=true), die in erster Linie den Armen schadet. Wenn man mit dem brasilianischen Real oder der türkischen Lira feststeckt, sind die finanziellen Aussichten nicht gerade hoffnungsvoll: Die Preise steigen, die Löhne hinken hinterher und Sachwerte bleiben auf der Strecke.
 

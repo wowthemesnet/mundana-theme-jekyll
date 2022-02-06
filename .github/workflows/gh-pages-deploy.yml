@@ -26,18 +26,17 @@ jobs:
           sudo ldconfig
           echo "I PRINT THE PATH BRO"
           echo $LD_LIBRARY_PATH
-          LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/my_library/
-          export LD_LIBRARY_PATH
+          export LD_LIBRARY_PATH=/usr/local/lib
           echo "I PRINT THE PATH BRO"
           echo $LD_LIBRARY_PATH
-      # - name: Build & Deploy to GitHub Pages
-      #   uses: joshlarsen/jekyll4-deploy-gh-pages@master
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
-      #     GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
       - name: Build & Deploy to GitHub Pages
-        uses: jeffreytse/jekyll-deploy-action@master
-        with:
-          provider: "github"
-          token: ${{ secrets.GITHUB_TOKEN }}
+        uses: joshlarsen/jekyll4-deploy-gh-pages@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
+          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+      # - name: Build & Deploy to GitHub Pages
+      #   uses: jeffreytse/jekyll-deploy-action@master
+      #   with:
+      #     provider: "github"
+      #     token: ${{ secrets.GITHUB_TOKEN }}

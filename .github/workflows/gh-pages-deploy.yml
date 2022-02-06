@@ -23,32 +23,14 @@ jobs:
         run: |
           # sudo -E apt-get update -qq -o Acquire::Retries=3
           sudo -E apt-get install -y libvips
-          echo "I PRINT THE PATH BRO"
-          echo $LD_LIBRARY_PATH
-          export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/:/usr/lib/:/usr/lib64/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/
-          echo "I PRINT THE PATH BRO"
-          echo $LD_LIBRARY_PATH
-          echo "/lib/x86_64-linux-gnu"
-          sudo ls /lib/x86_64-linux-gnu
-          echo "/usr/local"
-          sudo ls /usr/local
-          echo "/usr/lib"
-          sudo ls /usr/lib
-          # echo "LDCONFIG"
-          # sudo ldconfig -v
-          echo "LD_LIBRARY_PATH=/usr/lib/" >> $GITHUB_ENV
-      - name: Echo
-        run: |
-          echo $LD_LIBRARY_PATH
-          ls -alh /usr/lib/x86_64-linux-gnu/libvips.so.42
-          sudo cp /usr/lib/x86_64-linux-gnu/libvips.so.42 /usr/lib/
+          # echo "LD_LIBRARY_PATH=/usr/lib/" >> $GITHUB_ENV
       - name: Build Jeckyll
         run: |
           echo "Installing bundler"
           sudo gem install bundler
           echo "Installing gems..."
-          sudo bundle config path vendor/bundle
-          sudo bundle install
+          bundle config path vendor/bundle
+          bundle install
           echo "Building Jekyll site..."
           JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build
       # - name: Build & Deploy to GitHub Pages

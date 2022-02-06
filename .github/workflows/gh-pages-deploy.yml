@@ -44,6 +44,8 @@ jobs:
           sudo cp /usr/lib/x86_64-linux-gnu/libvips.so.42 /usr/lib/
       - name: Build Jeckyll
         run: |
+          echo "Installing bundler"
+          gem install bundler
           echo "Installing gems..."
           bundle config path vendor/bundle
           bundle install

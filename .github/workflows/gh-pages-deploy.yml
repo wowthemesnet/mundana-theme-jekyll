@@ -45,10 +45,10 @@ jobs:
       - name: Build Jeckyll
         run: |
           echo "Installing bundler"
-          gem install bundler
+          sudo gem install bundler
           echo "Installing gems..."
-          bundle config path vendor/bundle
-          bundle install
+          sudo bundle config path vendor/bundle
+          sudo bundle install
           echo "Building Jekyll site..."
           JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build
       # - name: Build & Deploy to GitHub Pages

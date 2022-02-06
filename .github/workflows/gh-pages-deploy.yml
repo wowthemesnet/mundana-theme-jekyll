@@ -21,8 +21,8 @@ jobs:
       - name: Install libvips via apt
         if: runner.os == 'Linux'
         run: |
-          sudo -E apt-get update -qq -o Acquire::Retries=3
-          sudo -E apt-get install -y libvips libvips-dev
+          # sudo -E apt-get update -qq -o Acquire::Retries=3
+          sudo -E apt-get install -y libvips42
           sudo ldconfig
           echo "I PRINT THE PATH BRO"
           echo $LD_LIBRARY_PATH

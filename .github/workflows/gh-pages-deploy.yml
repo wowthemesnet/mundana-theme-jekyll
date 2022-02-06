@@ -18,11 +18,13 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-      # - name: Install libvips via apt
-      #   if: runner.os == 'Linux'
-      #   run: |
-      #     sudo -E apt-get update -qq -o Acquire::Retries=3
-      #     sudo -E apt-get install -y libvips
+      - name: Install libvips via apt
+        if: runner.os == 'Linux'
+        run: |
+          sudo -E apt-get update -qq -o Acquire::Retries=3
+          sudo -E apt-get install -y libvips
+          echo "I PRINT THE PATH BRO"
+          echo $LD_LIBRARY_PATH
       # - name: Build & Deploy to GitHub Pages
       #   uses: joshlarsen/jekyll4-deploy-gh-pages@master
       #   env:
@@ -30,7 +32,7 @@ jobs:
       #     GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
       #     GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
       - name: Build & Deploy to GitHub Pages
-        uses: jeffreytse/jekyll-deploy-action@v0.3.1
+        uses: jeffreytse/jekyll-deploy-action@master
         with:
           provider: "github"
           token: ${{ secrets.GITHUB_TOKEN }}

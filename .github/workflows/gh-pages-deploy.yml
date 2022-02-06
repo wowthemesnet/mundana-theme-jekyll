@@ -36,6 +36,7 @@ jobs:
           sudo ls /usr/lib
           # echo "LDCONFIG"
           # sudo ldconfig -v
+          echo "LD_LIBRARY_PATH=/usr/local/lib/:/usr/lib/:/usr/lib64/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/" >> $GITHUB_ENV
       - name: Build & Deploy to GitHub Pages
         uses: joshlarsen/jekyll4-deploy-gh-pages@master
         env:

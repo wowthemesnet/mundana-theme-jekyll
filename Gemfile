@@ -19,6 +19,7 @@ group :jekyll_plugins do
     gem 'jekyll-sitemap'
     gem 'jekyll-paginate'
     gem 'jekyll-seo-tag'
+    gem 'jekyll_picture_tag', '~> 2.0'
 end
 
 gem "webrick", "~> 1.7"

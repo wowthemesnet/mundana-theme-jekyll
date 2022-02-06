@@ -24,22 +24,36 @@ jobs:
           # sudo -E apt-get update -qq -o Acquire::Retries=3
           sudo -E apt-get install -y libvips imagemagick libvips-tools
           # echo "LD_LIBRARY_PATH=/usr/lib/" >> $GITHUB_ENV
-      # - name: Build Jeckyll
-      #   run: |
-      #     echo "Installing bundler"
-      #     sudo gem install bundler
-      #     echo "Installing gems..."
-      #     bundle config path vendor/bundle
-      #     bundle install
-      #     echo "Building Jekyll site..."
-      #     JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build
-      - name: Build & Deploy to GitHub Pages
-        uses: joshlarsen/jekyll4-deploy-gh-pages@master
+      - name: Build Jeckyll
+        run: |
+          echo "Installing bundler"
+          sudo gem install bundler
+          echo "Installing gems..."
+          bundle config path vendor/bundle
+          bundle install
+          echo "Building Jekyll site..."
+          JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build
+      - name: Publishing page
+        run: |
+          echo "Publishing..."
+          cd ${DEST}
+          git init
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git add .
+          git commit -m "published by GitHub Actions"
+          git push --force ${REPO} master:${BRANCH}
         env:
-          LD_LIBRARY_PATH: /usr/lib/
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+      # - name: Build & Deploy to GitHub Pages
+      #   uses: joshlarsen/jekyll4-deploy-gh-pages@master
+      #   env:
+      #     LD_LIBRARY_PATH: /usr/lib/
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
+      #     GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
       # - name: Build & Deploy to GitHub Pages
       #   uses: jeffreytse/jekyll-deploy-action@master
       #   with:

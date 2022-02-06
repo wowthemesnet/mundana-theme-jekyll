@@ -23,20 +23,19 @@ jobs:
         run: |
           # sudo -E apt-get update -qq -o Acquire::Retries=3
           sudo -E apt-get install -y libvips42
-          sudo ldconfig
           echo "I PRINT THE PATH BRO"
           echo $LD_LIBRARY_PATH
-          export LD_LIBRARY_PATH=/usr/lib
+          export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/:/usr/lib/:/usr/lib64/:/lib/x86_64-linux-gnu/
           echo "I PRINT THE PATH BRO"
           echo $LD_LIBRARY_PATH
-          echo "/usr/local/lib/"
-          sudo ls /usr/local/lib/
+          echo "/lib/x86_64-linux-gnu"
+          sudo ls /lib/x86_64-linux-gnu
           echo "/usr/local"
           sudo ls /usr/local
           echo "/usr/lib"
           sudo ls /usr/lib
-          echo "LDCONFIG"
-          sudo ldconfig -v
+          # echo "LDCONFIG"
+          # sudo ldconfig -v
       - name: Build & Deploy to GitHub Pages
         uses: joshlarsen/jekyll4-deploy-gh-pages@master
         env:

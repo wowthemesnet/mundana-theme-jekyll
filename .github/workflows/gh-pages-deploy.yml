@@ -3,7 +3,7 @@ name: Build and deploy Jekyll site to GitHub Pages
 on:
   push:
     branches:
-      - '*'
+      - "*"
 
 jobs:
   github-pages:
@@ -42,7 +42,7 @@ jobs:
           echo $LD_LIBRARY_PATH
           ls -alh /usr/lib/x86_64-linux-gnu/libvips.so.42
           sudo cp /usr/lib/x86_64-linux-gnu/libvips.so.42 /usr/lib/
-      - name Build Jeckyll
+      - name: Build Jeckyll
         run: |
           echo "Installing gems..."
           bundle config path vendor/bundle

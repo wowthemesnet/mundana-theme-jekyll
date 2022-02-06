@@ -6,7 +6,7 @@
       >
     </h2>
     <p class="excerpt">
-      {{ post.excerpt | strip_html | strip_newlines | truncate: 186}}
+      {{ post.excerpt | strip_html | strip_newlines | truncatewords: 20}}
     </p>
     <small class="d-block text-muted">
       <span class="catlist">

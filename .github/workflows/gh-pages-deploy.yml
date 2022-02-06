@@ -18,10 +18,13 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-      # - name: Build & Deploy to GitHub Pages
-      #   uses: helaili/jekyll-action@v2
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install libvips via apt
+        if: runner.os == 'Linux'
+        run: |
+          sudo -E apt-get update -qq -o Acquire::Retries=3
+          sudo -E apt-get install --fix-missing -qq -o Acquire::Retries=3
+            libvips libpng libwebp
+
       - name: Build & Deploy to GitHub Pages
         uses: joshlarsen/jekyll4-deploy-gh-pages@master
         env:

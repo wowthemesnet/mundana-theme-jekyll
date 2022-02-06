@@ -24,9 +24,13 @@
   {% if post.image %}
   <div class="col-md-3 pr-0 text-right">
     <a href="{{site.baseurl}}{{post.url}}">
-      <img class="w-100" src="{% if post.image contains "://" %}{{ post.image
-      }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{
-      post.title }}">
+      {% if post.image contains "://" %} {% picture "{{ post.image}}" --alt {{
+      post.title --img class="w-100" }} %} {% else %} {% picture "{{
+      site.baseurl }}/{{ post.image }}" --alt {{ post.title }} --img
+      class="w-100" %} {% endif %}
+      <!-- <img class="w-100" src="{% if
+      post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl
+      }}/{{ post.image }}{% endif %}" alt="{{ post.title }}"> -->
     </a>
   </div>
   {% endif %}

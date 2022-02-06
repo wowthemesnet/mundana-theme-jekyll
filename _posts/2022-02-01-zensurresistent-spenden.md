@@ -28,7 +28,7 @@ Fast schon zum Gründungsmythos von Bitcoin gehört der Fall Wikileaks, denen Pa
 
 > It would have been nice to get this attention in any other context. WikiLeaks has kicked the hornet's nest, and the swarm is headed towards us.
 
-![walking]({{ site.baseurl }}/assets/images/wikileaks-hornets-nest.png)
+{% picture assets/images/wikileaks-hornets-nest.png %}
 
 Er/sie war so besorgt, dass dies der letzter Post in dem bitcointalk Forum sein sollte. Wikileaks hat danach dennoch angefangen Bitcoin Spenden zu [akzeptieren](https://www.forbes.com/sites/andygreenberg/2011/06/14/wikileaks-asks-for-anonymous-bitcoin-donations/).
 

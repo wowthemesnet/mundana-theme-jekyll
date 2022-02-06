@@ -44,6 +44,13 @@ GEM
     jekyll-twitter-plugin (2.1.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    jekyll_picture_tag (2.0.3)
+      addressable (~> 2.6)
+      jekyll (~> 4.0)
+      mime-types (~> 3.0)
+      objective_elements (~> 1.1)
+      rainbow (~> 3.0)
+      ruby-vips (~> 2.0.17)
     kramdown (2.3.1)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -53,17 +60,24 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
+    mime-types (3.4.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2022.0105)
     nokogiri (1.13.1-x86_64-darwin)
       racc (~> 1.4)
+    objective_elements (1.1.2)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
     racc (1.6.0)
+    rainbow (3.1.1)
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rexml (3.2.5)
     rouge (3.27.0)
+    ruby-vips (2.0.17)
+      ffi (~> 1.9)
     safe_yaml (1.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -82,6 +96,7 @@ DEPENDENCIES
   jekyll-sitemap
   jekyll-target-blank
   jekyll-twitter-plugin
+  jekyll_picture_tag (~> 2.0)
   kramdown-parser-gfm
   webrick (~> 1.7)
 

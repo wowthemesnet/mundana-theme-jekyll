@@ -38,7 +38,9 @@ jobs:
           # sudo ldconfig -v
           echo "LD_LIBRARY_PATH=/usr/local/lib/:/usr/lib/:/usr/lib64/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/" >> $GITHUB_ENV
       - name: Echo
-        run: echo $LD_LIBRARY_PATH
+        run: |
+          echo $LD_LIBRARY_PATH
+          ls -alh /usr/lib/x86_64-linux-gnu/libvips.so.42
       - name: Build & Deploy to GitHub Pages
         uses: joshlarsen/jekyll4-deploy-gh-pages@master
         env:

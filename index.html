@@ -35,8 +35,8 @@ image: assets/images/logo.jpg
             >
           </h2>
           <p class="excerpt">
-            {{ latest_post.excerpt | strip_html | strip_newlines | truncate: 136
-            }}
+            {{ latest_post.excerpt | strip_html | strip_newlines |
+            truncatewords: 20 }}
           </p>
           <div>
             <small class="d-block text-muted">
@@ -176,7 +176,7 @@ image: assets/images/logo.jpg
         <div class="col-md-6 pt-6 pb-6 pr-lg-4 align-self-center">
           <h1 class="mb-3">{{post.title}}</h1>
           <p class="mb-3 lead">
-            {{ post.excerpt | strip_html | strip_newlines | truncate: 136 }}
+            {{ post.excerpt | strip_html | strip_newlines | truncatewords: 20 }}
           </p>
           <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark"
             >Weiterlesen</a

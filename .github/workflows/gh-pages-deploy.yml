@@ -24,9 +24,14 @@ jobs:
           sudo -E apt-get update -qq -o Acquire::Retries=3
           sudo -E apt-get install -y libvips
 
+      # - name: Build & Deploy to GitHub Pages
+      #   uses: joshlarsen/jekyll4-deploy-gh-pages@master
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
+      #     GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
       - name: Build & Deploy to GitHub Pages
-        uses: jeffreytse/jekyll-deploy-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
-          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+        uses: jeffreytse/jekyll-deploy-action@v0.3.1
+        with:
+          provider: "github"
+          token: ${{ secrets.GITHUB_TOKEN }}

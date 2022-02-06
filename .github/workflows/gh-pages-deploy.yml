@@ -25,7 +25,7 @@ jobs:
           sudo -E apt-get install -y libvips42
           echo "I PRINT THE PATH BRO"
           echo $LD_LIBRARY_PATH
-          export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/:/usr/lib/:/usr/lib64/:/lib/x86_64-linux-gnu/
+          export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/:/usr/lib/:/usr/lib64/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/
           echo "I PRINT THE PATH BRO"
           echo $LD_LIBRARY_PATH
           echo "/lib/x86_64-linux-gnu"

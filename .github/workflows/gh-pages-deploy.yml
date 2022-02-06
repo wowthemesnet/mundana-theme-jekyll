@@ -41,6 +41,7 @@ jobs:
         run: |
           echo $LD_LIBRARY_PATH
           ls -alh /usr/lib/x86_64-linux-gnu/libvips.so.42
+          sudo cp /usr/lib/x86_64-linux-gnu/libvips.so.42 /usr/lib/
       - name: Build & Deploy to GitHub Pages
         uses: joshlarsen/jekyll4-deploy-gh-pages@master
         env:

@@ -62,6 +62,14 @@ authors:
     # email: fakemail@gmail.com
     twitter: https://twitter.com/resistancemoney
 
+  bitcoinersforfuture:
+    name: Stephan (Bitcoiners for Future)
+    # site: http://resistance.money/
+    avatar: assets/images/authors/avatar_bitcoinersforfuture.jpg
+    bio: "We may not have a planet B, but we have a plan ₿."
+    # email: fakemail@gmail.com
+    twitter: https://twitter.com/BTCersforfuture
+
 # Defaults
 defaults:
   # all posts

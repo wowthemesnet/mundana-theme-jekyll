@@ -24,7 +24,7 @@ jobs:
           # sudo -E apt-get update -qq -o Acquire::Retries=3
           sudo -E apt-get install -y libvips imagemagick libvips-tools
           # echo "LD_LIBRARY_PATH=/usr/lib/" >> $GITHUB_ENV
-      - name: Build Jeckyll
+      - name: Build Jeckyll site
         run: |
           echo "Installing bundler"
           sudo gem install bundler
@@ -33,7 +33,7 @@ jobs:
           bundle install
           echo "Building Jekyll site..."
           JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build
-      - name: Publishing page
+      - name: Publish page
         run: |
           set -e
           DEST="${JEKYLL_DESTINATION:-_site}"

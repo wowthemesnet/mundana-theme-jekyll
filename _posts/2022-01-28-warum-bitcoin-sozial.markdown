@@ -60,7 +60,7 @@ All diese Beispiele sollen veranschaulichen, wie weit das Themenfeld gefächert 
 
 Was ist der Energiebedarf des weltweiten Bankensystems? Wer sollte bestimmen, wie wir unser eigenes Geld verwenden und wie viel ist uns unsere individuelle Privatsphäre dabei wert? Wieso können Zentralbanken eigenständig entscheiden, das Geldsystem zu steuern und welche demokratische Legitimation liegt dem zugrunde? Wer profitiert von diesen Entscheidungen und wer leidet darunter? Wofür sollten wir Energie verwenden und wofür nicht? Sollte dieser Frage ein kollektiver Konsens zugrunde liegen oder sollten Marktkräfte dies entscheiden?
 
-### Bitcoin ist gekommen zu bleiben
+### Bitcoin ist gekommen um zu bleiben
 
 So wie auch das Internet die dunklen Seiten des Menschen offenlegen kann, so kann das auch Bitcoin, was nicht zuletzt in der Dichotomie vieler Errungenschaften liegt. Sowohl das Internet, als auch Bitcoin gehören zu den Technologien, die uns neue Formen der Freiheit, der Verbundenheit, und der Gemeinschaft ermöglichen können und dabei viele neuartige Fragen aufwerfen. Es ist jetzt an der Zeit, Antworten auf diese Fragen zu finden.
 

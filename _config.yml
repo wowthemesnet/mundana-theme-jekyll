@@ -70,6 +70,14 @@ authors:
     # email: fakemail@gmail.com
     twitter: https://twitter.com/BTCersforfuture
 
+  phil:
+    name: Phil
+    # site: http://resistance.money/
+    avatar: assets/images/authors/avatar_phil.jpg
+    bio: "Schreibt gegen häufige Irrtümer über Bitcoin."
+    # email: fakemail@gmail.com
+    twitter: https://twitter.com/OfBehodler
+
 # Defaults
 defaults:
   # all posts

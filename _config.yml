@@ -78,6 +78,14 @@ authors:
     # email: fakemail@gmail.com
     twitter: https://twitter.com/OfBehodler
 
+  tommaxwell:
+    name: Tom Maxwell
+    site: https://tomjmaxwell.medium.com/
+    avatar: assets/images/authors/avatar_tommaxwell.jpg
+    bio: "Liberty, Equality, Solidarity"
+    # email: fakemail@gmail.com
+    twitter: https://twitter.com/tomjmaxwell
+
 # Defaults
 defaults:
   # all posts

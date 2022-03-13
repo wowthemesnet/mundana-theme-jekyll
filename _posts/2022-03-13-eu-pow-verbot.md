@@ -1,6 +1,6 @@
 ---
 layout: post
-author: calle
+author: bitcoinsozial
 title: "Offener Brief: EU Proof-of-Work Verbot verhindern!"
 categories: [pow, politik]
 image: assets/images/european-union.png

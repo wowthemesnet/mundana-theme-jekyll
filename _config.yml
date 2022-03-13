@@ -22,6 +22,14 @@ plugins:
   - jekyll-twitter-plugin
 
 authors:
+  bitcoinsozial:
+    name: Bitcoin Sozial
+    site: https://www.bitcoinsozial.de/
+    avatar: assets/images/logo.jpg
+    bio: "Kollektiv für soziale Fragen im Zeitalter von Bitcoin"
+    # email: fakemail@gmail.com
+    twitter: https://twitter.com/bitcoinsozial
+
   calle:
     name: Calle B.
     # site: https://www.wowthemes.net

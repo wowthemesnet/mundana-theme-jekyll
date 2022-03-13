@@ -17,6 +17,6 @@ Die EU sollte digitale Währungen wie Bitcoin unterstützen und diesen aufstrebe
 
 Im Kontrast dazu, und wie immer wieder belegt werden konnte, ist der größte Teil des Strommixes, den Bitcoin verwendet, aus erneuerbaren Energien zusammengesetzt und könnte damit sogar eines Tages eine [Förderung des Ausbaus](https://assets.ctfassets.net/2d5q1td6cyxq/2D2BnksJjavw4a6SUvAPwZ/c42a9e3a520b0cc3b230cda3b43eead5/BCEI_White_Paper_.pdf) erneuerbarer Energieprojekte mit sich führen, indem es diese direkt finanziell unterstützt und den überschüssigen Strom eines Kraftwerks “aufkauft”, ein Phänomen was vor allem bei erneuerbarer Stromerzeugung unvermeidbar und daher weit verbreitet ist.
 
-Dies soll zeigen, dass der Bewertung der Klimabilanz von Bitcoin viele ungeklärte und wichtige Details unterliegen, die die EU erforschen und fördern sollte, anstatt drastische und voreingenommene Maßnahmen zu beschließen. Ich bitte Sie daher, am Montag der alternativen Version des Paragraphs 2a zuzustimmen, die von Dr. Stefan Berger unterstützt wird. Damit verhindern Sie ein EU-weites Verbot von Proof-of-Work Währungen.
+Dies soll zeigen, dass der Bewertung der Klimabilanz von Bitcoin viele ungeklärte und wichtige Details unterliegen, die die EU erforschen und fördern sollte, anstatt drastische und voreingenommene Maßnahmen zu beschließen. Wir bitten Sie daher dringlich, am Montag der alternativen Version des Paragraphs 2a zuzustimmen, die von Dr. Stefan Berger unterstützt wird. Damit verhindern Sie ein EU-weites Verbot von Proof-of-Work Währungen.
 
 Vielen Dank.

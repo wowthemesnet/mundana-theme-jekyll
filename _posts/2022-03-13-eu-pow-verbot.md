@@ -1,7 +1,7 @@
 ---
 layout: post
 author: calle
-title: "Offener Brief: EU Proof-of-Work verbot verhindern!"
+title: "Offener Brief: EU Proof-of-Work Verbot verhindern!"
 categories: [pow, politik]
 image: assets/images/european-union.png
 tags: [featured]

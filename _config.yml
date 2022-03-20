@@ -94,6 +94,14 @@ authors:
     # email: fakemail@gmail.com
     twitter: https://twitter.com/tomjmaxwell
 
+  weezel:
+    name: Weezel
+    # site: https://tomjmaxwell.medium.com/
+    avatar: assets/images/authors/avatar_weezel.jpg
+    bio: "Scientific Bitcoin enthusiast"
+    # email: fakemail@gmail.com
+    twitter: https://twitter.com/magicolen
+
 # Defaults
 defaults:
   # all posts

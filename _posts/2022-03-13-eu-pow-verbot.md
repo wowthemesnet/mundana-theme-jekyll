@@ -4,7 +4,6 @@ author: bitcoinsozial
 title: "Offener Brief: EU Proof-of-Work Verbot verhindern!"
 categories: [pow, politik]
 image: assets/images/european-union.png
-tags: [featured]
 ---
 
 Sehr geehrte Mitglieder des Europäischen Parlaments,

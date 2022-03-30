@@ -3,9 +3,11 @@ title: "Spenden"
 permalink: "/spenden.html"
 ---
 
-Du kannst uns mit einer Bitcoin spende unterstützen.
+Bitcoin Sozial finanziert sich zu 100% aus Bitcoin Spenden. Dazu gehören Kosten für unsere Infrastruktur, sowie kleine Bounties an unsere Autor\*innen. Value for value.
 
-Verwende dafür den folgenden LNURL QR code Lightning für eine Spende per Lightning.
+Eine Spende per Lightning hilft uns dabei, weiterhin hochwertige Inhalte auf deutsch zu erzeugen.
+
+Verwende dafür den folgenden LNURL QR code.
 
 Vielen Dank! 🧡⚡️
 

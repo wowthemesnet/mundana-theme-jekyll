@@ -12,7 +12,6 @@ url: "https://bitcoinsozial.de"
 include:
   - _pages
   - .well-known
-
 permalink: /:title/
 
 # Plugins

@@ -104,6 +104,14 @@ authors:
     # email: fakemail@gmail.com
     twitter: https://twitter.com/magicolen
 
+  vitalik:
+    name: Vitalik Buterin
+    site: https://vitalik.ca/
+    avatar: assets/images/authors/avatar_vitalik.jpg
+    bio: "Gründer von Ethereum"
+    # email: fakemail@gmail.com
+    twitter: https://twitter.com/VitalikButerin
+
 # Defaults
 defaults:
   # all posts

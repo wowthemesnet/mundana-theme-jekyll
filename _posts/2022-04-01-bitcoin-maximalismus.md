@@ -7,7 +7,7 @@ image: assets/images/2022-04-01-bitcoin-maximalismus.png
 tags: [featured]
 ---
 
-_Bemerkung der Redaktion: Dieser Beitrag wurde vom Ethereum-Gründer Vitalik Buterin verfasst und am 1. April 2022 auf seinem [persönlichen Blog](https://vitalik.ca/general/2022/04/01/maximalist.html) veröffentlicht._
+_Bemerkung der Redaktion: Dieser Beitrag wurde im englischen Original vom Ethereum-Gründer Vitalik Buterin verfasst und am 1. April 2022 auf seinem [persönlichen Blog](https://vitalik.ca/general/2022/04/01/maximalist.html) veröffentlicht._
 
 Wir hören schon seit Jahren, dass die Zukunft der [Blockchain gehört, nicht Bitcoin](https://www.law.ox.ac.uk/business-law-blog/blog/2020/07/blockchain-not-bitcoin-represents-next-step-financial-evolution-and). Die Zukunft der Welt wird nicht eine große Kryptowährung sein, oder auch nur einige wenige, sondern viele Kryptowährungen - und die erfolgreichen werden eine starke Rolle unter einem zentralen Dach spielen, um den Bedürfnissen der Nutzer nach Skalierung genügen. Bitcoin ist ein [Boomer](https://www.cnbc.com/2021/05/20/some-millennials-call-bitcoin-boomer-coin-prefer-dogecoin-altcoins.html)-[Coin](https://www.reddit.com/r/CryptoCurrency/comments/lrw9e4/bitcoin_is_now_boomer_crypto_prove_me_wrong/), und Ethereum wird dem bald folgen; es werden neuere und energischere Assets sein, die Massen von neuen Nutzern anziehen, die sich nicht um eine seltsame libertäre Ideologie oder eine "souveräne Verifizierung" scheren, die von Toxizität und einer Anti-Regierungs-Mentalität abgeschreckt werden und einfach nur Blockchain-Defi und Spiele wollen, die _schnell_ sind und _funktionieren_.
 

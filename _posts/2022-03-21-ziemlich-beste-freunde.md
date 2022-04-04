@@ -75,7 +75,7 @@ Nach dem Mining Ban in China fanden viele Bitcoin Miner Zuflucht in Kasachstan, 
 
 Die Energie in Kasachstan wird allerdings nicht aus Atomkraft, sondern zu über 97% aus Kohle, Gas und Öl erzeugt. Die kWh kostet dort durchschnittlich [3,9 cent](https://www.cable.co.uk/energy/worldwide-pricing/). Das ist aber nicht der reale Marktpreis. Die [Energie in Kasachstan](https://www.german-energy-solutions.de/GES/Redaktion/DE/Publikationen/Kurzinformationen/2018/fs_kasachstan_2018.pdf) ist staatlich subventioniert und insbesondere die Tarife für Privatverbraucher werden nicht von den Märkten bestimmt.
 
-Wenn Energieträger stark subventioniert sind, verzerrt das den Markt und es entstehen aberwitzige Preise, wie z.B. in Lybien. Dort gibt es mit durchschnittlich [0,7 cent/kWh](https://www.cable.co.uk/energy/worldwide-pricing/) den günstigsten Strom der Welt. Zum Vergleich: Einen Tesla voll zu tanken würde dort 70 cent kosten; in Deutschland 40 Euro.
+Wenn Energieträger stark subventioniert sind, verzerrt das den Markt und es entstehen aberwitzige Preise, wie z.B. in Libyen. Dort gibt es mit durchschnittlich [0,7 cent/kWh](https://www.cable.co.uk/energy/worldwide-pricing/) den günstigsten Strom der Welt. Zum Vergleich: Einen Tesla voll zu tanken würde dort 70 cent kosten; in Deutschland 40 Euro.
 
 Subventionen für fossile Brennstoffe sind leider ein weltweites Phänomen. 2020 beliefen sich diese weltweit auf 5,9 Billionen Dollar (ca. 6,8% des BIP). Laut einer [Studie des IMF](https://www.elibrary.imf.org/view/journals/001/2021/236/article-A001-en.xml) könnte eine effizientere Preisgestaltung für Kraftstoffe die globalen Kohlendioxidemissionen um 36% senken.
 

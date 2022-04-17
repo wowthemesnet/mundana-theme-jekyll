@@ -20,16 +20,16 @@ Creating energy out of nothing is physically impossible. In the long term, it is
 Two paths money printed out of thin air can take:
 
 ```
-Expansion of the money supply  =>  a) Inflation _or_
+Expansion of the money supply  =>  a) Inflation or
                                    b) Economic growth on credit
 ```
 
 In fact, there is a clear correlation between the expansion of the money supply (here using the US dollar as an example) and CO2 emissions as well as consumption-based CO2 emissions over the last few decades.
 
 {% picture assets/images/2022-02-07-transformator-oekologische-gesellschaft/1.png %}
-_Geldmengenausweitung des US-Dollars (Quelle: [boerse.de](https://www.boerse.de/devisen/geldmenge-m2-usa/grafik))_
+_Money supply expansion of the US dollar (source: [boerse.de](https://www.boerse.de/devisen/geldmenge-m2-usa/grafik))_
 {% picture assets/images/2022-02-07-transformator-oekologische-gesellschaft/2.jpg %}
-_CO2-Emissionen und konsumbasierte CO2-Emissionen (Quelle: [Global Carbon Project](https://klimadelegation.de/wirtschaftswachstum-und-klimakrise/))_
+_CO2 emissions and consumption-based CO2 emissions (source: [Global Carbon Project](https://klimadelegation.de/wirtschaftswachstum-und-klimakrise/))_
 
 ### **What ecological advantages does** **Sound Money** **bring?** _**or**_ **The Magic of Low Time Preference**
 
@@ -38,7 +38,7 @@ If money is not available in unlimited amounts, i.e. it cannot be inflated, its 
 The two important pillars in combating the climate crisis, savings and sustainable innovations or investments, would be strengthened:
 
 ```
-Low time preference  =>  a) Saving => Resource conservation _and/or_
+Low time preference  =>  a) Saving => Resource conservation and/or
                          b) Sustainable innovations and investments => Resource conservation
 ```
 
@@ -49,7 +49,7 @@ Bitcoin's carbon footprint is difficult to measure because it is not yet known e
 According to 2021 data from the Bitcoin Mining Council, Bitcoin consumes only 0.1% of global energy production.
 
 {% picture assets/images/2022-02-07-transformator-oekologische-gesellschaft/3.jpg %}
-_Energieverbrauch Bitcoins (Quelle: [Bitcoin Mining Council 2021](https://bitcoinminingcouncil.com/wp-content/uploads/2021/07/2021.07.01-BMC-Q2-2021-Materials.pdf))_
+_Bitcoin Energy Consumption (source: [Bitcoin Mining Council 2021](https://bitcoinminingcouncil.com/wp-content/uploads/2021/07/2021.07.01-BMC-Q2-2021-Materials.pdf))_
 
 In view of the transformation potential of Bitcoin in the direction of consumption reduction and sustainability, its own electricity consumption can certainly be classified as justified.
 

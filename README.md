@@ -6,7 +6,7 @@ Welcome to the `~code~` behind my [blog](https://brookekryan.com/)!
 
 ## How to View on Local Server
 
-1. In terminal, navigate to the directory where your brooke-blog source code is located.
+1. In terminal, navigate to the directory where your `brooke-blog` source code is located.
 
 2. Run the command `bundle exec jekyll serve --verbose`.
 

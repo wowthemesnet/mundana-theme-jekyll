@@ -6,7 +6,7 @@ Welcome to the `~code~` behind my [blog](https://brookekryan.com/)!
 
 ## How to View on Local Server
 
-1. In terminal, navigate to the directory where your source code is located.
+1. In terminal, navigate to the directory where your `brooke-blog` source code is located.
 
 2. Run the command `bundle exec jekyll serve --verbose`.
 
@@ -24,7 +24,7 @@ Welcome to the `~code~` behind my [blog](https://brookekryan.com/)!
 ### If you make a change...
 
 5. Save your file, then wait another 3 seconds or so. 
-6. Your changes *should* be visible again on the page. Sometimes, if you change an asset though, you might need to start again from step 1. 
+6. Your changes *should* be visible again on the page. Sometimes, if you change an asset though, you might need to Ctrl+C and start again from step 1. 
 
 
 

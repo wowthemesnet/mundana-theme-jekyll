@@ -1,51 +1,42 @@
-# Jekyll Theme - Mundana by WowThemes.net
+# Brooke Blog
 
-[Live Demo](https://wowthemesnet.github.io/mundana-theme-jekyll/) &nbsp; | &nbsp; 
-[Download](https://github.com/wowthemesnet/mundana-theme-jekyll/archive/master.zip) &nbsp; | &nbsp; 
-[Buy me a coffe](https://www.wowthemes.net/donate/) &nbsp; | &nbsp; [Documentation](https://bootstrapstarter.com/mundana-theme-jekyll/) &nbsp; | &nbsp; 
-[WordPress version](https://www.wowthemes.net/themes/mundana-wordpress/) 
-
-![mundana jekyll theme screenshot](assets/images/screenshot.jpg)
-
-### Documentation
-
-[How to install & use](https://bootstrapstarter.com/bootstrap-templates/mundana-theme-jekyll/)
-
-### Contribute to Mundana repository
-
-1. In the top-right corner of this page, click **Fork**.
-
-2. Clone a copy of your fork on your local, replacing *YOUR-USERNAME* with your Github username.
-
-   `git clone https://github.com/YOUR-USERNAME/mundana-theme-jekyll.git`
-
-3. **Create a branch**: 
-
-   `git checkout -b <my-new-feature-or-fix>`
-
-4. **Make necessary changes and commit those changes**:
-
-   `git add .`
-
-   `git commit -m "new feature or fix"`
-
-5. **Push changes**, replacing `<add-your-branch-name>` with the name of the branch you created earlier at step #3. :
-
-   `git push origin <add-your-branch-name>`
-
-6. Submit your changes for review. Go to your repository on GitHub, you'll see a **Compare & pull request** button. Click on that button. Now submit the pull request.
-
-That's it! Soon I'll be merging your changes into the master branch of this project. You will get a notification email once the changes have been merged. Thank you for your contribution.
+Welcome to the `~code~` behind my [blog](https://brookekryan.com/)! 
 
 
-### Copyright
 
-Copyright (C) 2019 WowThemes.net.
+## How to View Your Blog on Local Server
 
-Theme designed and developed by [Sal](https://www.wowthemes.net), *free* under MIT license. 
+1. In terminal, navigate to the directory where your source code is located.
 
-<a href="https://www.wowthemes.net/donate/" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+2. Run the command `bundle exec jekyll serve --verbose`.
 
-### Live Demo
+3. After about 3 seconds or so, there should be a comment that looks something like this: 
 
-[Live Demo](https://wowthemesnet.github.io/mundana-theme-jekyll/)
+   ```
+   [2022-04-21 18:18:54] DEBUG Jekyll::Commands::Serve::Servlet is mounted on .
+       Server address: http://127.0.0.1:4000/
+   ```
+
+4. Open that server address into your browser of choice. (I think it usually is http://127.0.0.1:4000/ but not 100% sure if thats always the case🤷🏼‍♀️)
+
+---
+
+### If you make a change...
+
+5. Save your file, then wait another 3 seconds or so. 
+6. Your changes *should* be visible again on the page. Sometimes, if you change an asset though, you might need to start again from step 1. 
+
+
+
+## Theme Credits
+
+As you can see, I forked the template from the [Mundana theme](https://bootstrapstarter.com/mundana-theme-jekyll/) by [WowThemes.net](https://www.wowthemes.net/). While I did make a fair amount of changes (are all documented in the commit history) to tailor it to my needs, I am very grateful for Sal's work to create this theme. It is the only free, Medium-looking template I'm aware of, and its really beautiful. 
+
+If you like my alterations of the template (minimalistic front page, coursework page, etc.) you are also welcome to use it, but please ensure that [Sal](https://www.wowthemes.net/donate/) (original template creator) and I are both credited somewhere.
+
+
+
+## Copyright
+
+Copyright (C) 2022 Brooke Ryan
+

@@ -4,7 +4,7 @@ Welcome to the `~code~` behind my [blog](https://brookekryan.com/)!
 
 
 
-## How to View Your Blog on Local Server
+## How to View on Local Server
 
 1. In terminal, navigate to the directory where your source code is located.
 
@@ -28,6 +28,15 @@ Welcome to the `~code~` behind my [blog](https://brookekryan.com/)!
 
 
 
+## Free Images Sources
+
+If I'm not able to take a photo myself, these are some good resources for free images that can be used without copyright:
+
+* [pexels](https://www.pexels.com/license/) 
+* [pixabay](https://pixabay.com/) 
+
+
+
 ## Theme Credits
 
 As you can see, I forked the template from the [Mundana theme](https://bootstrapstarter.com/mundana-theme-jekyll/) by [WowThemes.net](https://www.wowthemes.net/). While I did make a fair amount of changes (are all documented in the commit history) to tailor it to my needs, I am very grateful for Sal's work to create this theme. It is the only free, Medium-looking template I'm aware of, and its really beautiful. 
@@ -35,8 +44,4 @@ As you can see, I forked the template from the [Mundana theme](https://bootstrap
 If you like my alterations of the template (minimalistic front page, coursework page, etc.) you are also welcome to use it, but please ensure that [Sal](https://www.wowthemes.net/donate/) (original template creator) and I are both credited somewhere.
 
 
-
-## Copyright
-
-Copyright (C) 2022 Brooke Ryan
 

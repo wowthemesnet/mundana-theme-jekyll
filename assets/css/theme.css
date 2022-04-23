@@ -674,6 +674,11 @@ article {
     line-height: 1.15;
     color: #222222;
 }
+
+.article-subtitle {
+	font-weight: 325;
+}
+
 .course-subtitle {
 	font-family: Georgia,Times,"Times New Roman",serif;
 	font-size: 2rem;
@@ -787,12 +792,21 @@ course h1,course h2,course h3,course h4,course h5,course h6,course .h1,course .h
 	.display-4 {
 		font-size:35px;
 	}
+	.display-5 {
+		font-size:22px;
+	}
+	.display-6 {
+		font-size:22px;
+	}
 }
 @media (max-width:991.98px) {
 	.display-4 {
 		font-size:32px;
 	}
 	.display-5 {
+		font-size:22px;
+	}
+	.display-6 {
 		font-size:22px;
 	}
 	.alertbar {

@@ -27,6 +27,9 @@ Welcome to the `~code~` behind my [blog](https://brookekryan.com/)!
 6. Your changes *should* be visible again on the page. Sometimes, if you change an asset though, you might need to Ctrl+C and start again from step 1. 
 
 
+## ClickUp Integration
+_[Clickup GitHub integration Tutorial](https://docs.clickup.com/en/articles/856285-github)_
+
 
 ## Free Images Sources
 

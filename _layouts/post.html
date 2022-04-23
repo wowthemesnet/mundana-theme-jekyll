@@ -14,7 +14,8 @@ layout: default
                         {% endfor %}
                         </span>
 					</p>
-					<h1 class="display-4 mb-4 article-headline">{{ page.title }}</h1>
+					<h1 class="display-4 mb-3 article-headline">{{ page.title }}</h1>
+					<h4 class="display-6 article-subtitle mb-4">{{ page.subtitle }}</h4>
 					<div class="d-flex align-items-center">
                         {% if author.avatar %}
                         <img class="rounded-circle" src="{{site.baseurl}}/{{author.avatar}}" alt="{{author.name}}" width="70"/>

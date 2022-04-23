@@ -790,7 +790,10 @@ course h1,course h2,course h3,course h4,course h5,course h6,course .h1,course .h
 }
 @media (max-width:991.98px) {
 	.display-4 {
-		font-size:25px;
+		font-size:32px;
+	}
+	.display-5 {
+		font-size:22px;
 	}
 	.alertbar {
 		display: none !important;

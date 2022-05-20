@@ -7,7 +7,7 @@ image: assets/images/2022-05-19-bitcoin_and_degrowth_issue1.png
 tags: [featured]
 ---
 
-_Bemerkung der Redaktion: Dieser Beitrag wurde im englischen Original von Magus Perivallin verfasst und am 5. Mai 2022 auf [Medium](https://medium.com/ladies-in-bitcoin/radical-system-change-bitcoin-degrowth-issue-1-87ed96cf4dcb) veröffentlicht._
+_Bemerkung der Redaktion: Dieser Beitrag wurde im englischen Original von Magus Perivallon verfasst und am 5. Mai 2022 auf [Medium](https://medium.com/ladies-in-bitcoin/radical-system-change-bitcoin-degrowth-issue-1-87ed96cf4dcb) veröffentlicht._
 
 | ![Bitcoin & Degrowth - Ausgabe #1](assets/images/2022-05-19-bitcoin_and_degrowth_issue1/1.jpg)                                                                             |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|

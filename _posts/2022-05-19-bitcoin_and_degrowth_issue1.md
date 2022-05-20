@@ -1,17 +1,14 @@
 ---
 layout: post
-author: Magus Perivallon
+author: jynurso
 title: "Radikaler Systemwechsel: Bitcoin & Degrowth - Ausgabe #1"
 categories: [degrowth]
-image: assets/images/2022-05-19-bitcoin_and_degrowth_issue1.png
+image: assets/images/2022-05-19-bitcoin_and_degrowth_issue1.jpg
+imageCaption: "Bitcoin und Degrowth verfolgen die gleichen Ziele. Lokalismus, das Ende des Schuldengeldes und ein bescheidenes Leben. Bildnachweis: Daria Shevtsova"
 tags: [featured]
 ---
 
 _Bemerkung der Redaktion: Dieser Beitrag wurde im englischen Original von Magus Perivallon verfasst und am 5. Mai 2022 auf [Medium](https://medium.com/ladies-in-bitcoin/radical-system-change-bitcoin-degrowth-issue-1-87ed96cf4dcb) veröffentlicht._
-
-| ![Bitcoin & Degrowth - Ausgabe #1](assets/images/2022-05-19-bitcoin_and_degrowth_issue1/1.jpg)                                                                             |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *Bitcoin und Degrowth verfolgen die gleichen Ziele. Lokalismus, das Ende des Schuldengeldes und ein bescheidenes Leben. Bildnachweis: Daria Shevtsova* |
 
 _Einige Gedanken zur Verbindung zwischen Bitcoin und Elementen der "Degrowth"-Bewegung, die argumentiert, dass das unaufhörliche Wirtschaftswachstum den Planeten zerstört._
 

@@ -2,7 +2,7 @@
 layout: post
 author: jynurso
 title: "Radikaler Systemwechsel: Bitcoin & Degrowth - Ausgabe #1"
-categories: [degrowth]
+categories: [ökologie, degrowth]
 image: assets/images/2022-05-19-bitcoin_and_degrowth_issue1.jpg
 imageCaption: "Bitcoin und Degrowth verfolgen die gleichen Ziele. Lokalismus, das Ende des Schuldengeldes und ein bescheidenes Leben. Bildnachweis: Daria Shevtsova"
 tags: [featured]

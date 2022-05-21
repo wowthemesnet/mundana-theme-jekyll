@@ -64,6 +64,14 @@ authors:
     # email: fakemail@gmail.com
     twitter: https://twitter.com/thetrocro
 
+  jynurso:
+    name: Jyn Urso
+    # site: https://btctheory.com/
+    avatar: assets/images/authors/avatar_jynurso.jpg
+    bio: "Physikerin. Umweltaktivistin. Bitcoiner"
+    # email: fakemail@gmail.com
+    twitter: https://twitter.com/jyn_urso
+
   resistancemoney:
     name: Resistance Money
     site: http://resistance.money/

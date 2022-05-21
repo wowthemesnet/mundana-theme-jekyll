@@ -53,13 +53,16 @@ layout: default
           </div>
         </div>
         {% if page.image %}
-        <div class="col-md-6 pr-0 align-self-center">
+        <figure class="figure col-md-6 pr-0 align-self-center">
           <!-- <img class="rounded" src="{% if page.image contains "://" %}{{
           page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}"
           alt="{{ page.title }}">  -->
           {% picture {{ page.image }} --alt {{ page.title }} --img
           class="rounded" %}
-        </div>
+          {% if page.imageCaption %}
+          <figcaption class="figure-caption text-center"> {{ page.imageCaption }}</figcaption>
+          {% endif %}
+        </figure>
         {% endif %}
       </div>
     </div>

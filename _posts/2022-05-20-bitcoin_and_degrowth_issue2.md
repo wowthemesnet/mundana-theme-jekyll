@@ -8,8 +8,6 @@ imageCaption: "Bitcoin und Degrowth verfolgen die gleichen Ziele. Lokalismus, da
 tags: [featured]
 ---
 
-_Bemerkung der Redaktion: Dieser Beitrag wurde im englischen Original von Magus Perivallon verfasst und am 11. Mai 2022 auf [Medium](https://medium.com/ladies-in-bitcoin/radical-system-change-bitcoin-degrowth-issue-2-cd9e1651e1a3) veröffentlicht._
-
 _Einige Gedanken zur Verbindung zwischen Bitcoin und Elementen der "Degrowth"-Bewegung, die argumentiert, dass das unaufhörliche Wirtschaftswachstum den Planeten zerstört._
 
 **Das Thema dieser Ausgabe: Der Zeitpunkt, in dem ich erkannte, dass Bitcoin und Degrowth dasselbe sein könnten...**
@@ -41,4 +39,6 @@ Es ist wirklich wichtig, die Rolle des Geldes in der Degrowth Bewegung zu begrei
 
 Bis dahin...
 
+
+_Bemerkung der Redaktion: Dieser Beitrag wurde im englischen Original von Magus Perivallon verfasst und am 11. Mai 2022 auf [Medium](https://medium.com/ladies-in-bitcoin/radical-system-change-bitcoin-degrowth-issue-2-cd9e1651e1a3) veröffentlicht._
 

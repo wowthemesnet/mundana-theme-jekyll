@@ -3,7 +3,7 @@ layout: post
 author: bitcoinsozial
 title: "Wie afrikanische Geflüchtete mit Bitcoin ihre eigene Basisökonomie aufbauen"
 categories: [pow, politik]
-image: assets/images/african-refugee.webp
+image: assets/images/african-refugee.png
 ---
 
 Als Hunderttausende Menschen in der Demokratischen Republik Kongo (DRC) nach dem [Ausbruch](https://volcano.si.edu/volcano.cfm) des [Vulkans Mount Nyiragongo](https://www.unhcr.org/en-us/news/briefing/2021/5/60acb0434/unhcr-rushing-help-displaced-volcano-eruption-dr-congo.html) am [22. Mai](https://www.npr.org/2021/05/23/999586355/congos-mount-nyiragongo-volcano-erupts-sending-lava-for-miles-but-sparing-a-city) aus ihren Häusern flohen, taten sich ein Blogger und ein junger Restaurantangestellter aus der Stadt Goma zusammen und nutzten Bitcoin, um vertriebenen Familien zu helfen.

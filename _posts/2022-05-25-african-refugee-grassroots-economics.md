@@ -10,7 +10,7 @@ Als Hunderttausende Menschen in der Demokratischen Republik Kongo (DRC) nach dem
 
 [Chainglob](https://chainglob.com/) Crypto News Gründer Gloire Wanzavalere ging zu dem beinahe über Nacht entstandenen, behelfsmäßigen Geflüchtetenlager, und bot an, Bitcoin an vertriebene Familien zu verschenken.
 
-Er bewarb [sein Angebot] mündlich, indem er Leute fragte, ob sie Menschen kannten, die ihr Zuhause verloren haben. Er fand schnell heraus, dass die meisten Familien bereits ihre Telefone gegen Lebensmittel eingetauscht hatten. Zudem hatten sie große Teile ihrer Habseligkeiten zurückgelassen, verfügten also nicht über die notwendigen Papiere, um neue Bankkonten zu eröffnen oder neue Geräte zu kaufen.
+Er bewarb sein Angebot mündlich, indem er Leute fragte, ob sie Menschen kannten, die ihr Zuhause verloren haben. Er fand schnell heraus, dass die meisten Familien bereits ihre Telefone gegen Lebensmittel eingetauscht hatten. Zudem hatten sie große Teile ihrer Habseligkeiten zurückgelassen, verfügten also nicht über die notwendigen Papiere, um neue Bankkonten zu eröffnen oder neue Geräte zu kaufen.
 
 "Diese Menschen haben alles verloren. Ich verstand, dass es für sie Sinn gemacht hat, das was sie besaßen zu verkaufen, um Lebensmittel zu kaufen", sagte Wanzavalere. "Also kauften wir Telefone für acht Personen... insgesamt 12 Personen konnten von unserer Aktion profitieren, vier von ihnen hatten bereits ihr eigenes Smartphone."
 

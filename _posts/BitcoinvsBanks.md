@@ -38,3 +38,4 @@ So oder so, der erste Schritt zu einem neuen Geldsystem ist der Abschied vom bes
 
 Bitcoin ist gut für die Menschen und den Planeten.
 
+Bemerkung der Redaktion: Dieser Beitrag wurde im englischen Original von Leigh Cuen verfasst und am 10 November 2021 auf [Medium](https://medium.com/@magusperivallon/bitcoin-versus-the-banks-which-is-better-for-the-planet-ba2a7a09cc9b) veröffentlicht.

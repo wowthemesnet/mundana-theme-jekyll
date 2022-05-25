@@ -2,13 +2,11 @@
 layout: post
 author: jynurso
 title: "Radikaler Systemwechsel: Bitcoin & Degrowth - Ausgabe #1"
-categories: [degrowth]
+categories: [ökologie, degrowth]
 image: assets/images/2022-05-19-bitcoin_and_degrowth_issue1.jpg
 imageCaption: "Bitcoin und Degrowth verfolgen die gleichen Ziele. Lokalismus, das Ende des Schuldengeldes und ein bescheidenes Leben. Bildnachweis: Daria Shevtsova"
 tags: [featured]
 ---
-
-_Bemerkung der Redaktion: Dieser Beitrag wurde im englischen Original von Magus Perivallon verfasst und am 5. Mai 2022 auf [Medium](https://medium.com/ladies-in-bitcoin/radical-system-change-bitcoin-degrowth-issue-1-87ed96cf4dcb) veröffentlicht._
 
 _Einige Gedanken zur Verbindung zwischen Bitcoin und Elementen der "Degrowth"-Bewegung, die argumentiert, dass das unaufhörliche Wirtschaftswachstum den Planeten zerstört._
 
@@ -33,3 +31,5 @@ Wie passt Bitcoin in dieses Bild? Der offensichtliche Teil liegt darin, dass Bit
 Die weniger offensichtliche Verbindung ist, dass Bitcoin eine Philosophie der Dezentralisierung oder des Lokalismus propagiert. Bitcoiner sind im Allgemeinen Konsumgegner und Befürworter von Ideen wie Permakultur und lokalen Wirtschaftskreisläufen. Viele Bitcoiner sind der Auffassung, dass Inflation eine direkte Ursache von unbegrenztem Wachstum und Konsum ist. Bitcoiner verlangen auch einen Systemwechsel. Meiner Ansicht nach handelt es sich bei Degrowth und Bitcoin eigentlich um ein und dieselbe Bewegung, die allerdings aus unterschiedlichen Ursprüngen hervorgegangen sind. Das ist gar nicht so ungewöhnlich, und es ist sogar eine gute Sache. Es bedeutet, dass wir uns auf eine Konvergenz für die Lösung der Probleme des bestehenden Systems zubewegen.
 
 Das war's für den Moment. Bis zum nächsten Mal.
+
+_Bemerkung der Redaktion: Dieser Beitrag wurde im englischen Original von Magus Perivallon verfasst und am 5. Mai 2022 auf [Medium](https://medium.com/ladies-in-bitcoin/radical-system-change-bitcoin-degrowth-issue-1-87ed96cf4dcb) veröffentlicht._

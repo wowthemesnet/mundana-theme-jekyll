@@ -64,6 +64,14 @@ authors:
     # email: fakemail@gmail.com
     twitter: https://twitter.com/thetrocro
 
+  andrewbailey:
+    name: Andrew M. Bailey
+    # site: https://btctheory.com/
+    avatar: assets/images/authors/avatar_andrewbailey.jpg
+    bio: "Philosoph. Researcher. Bitcoiner."
+    # email: fakemail@gmail.com
+    twitter: https://twitter.com/resistancemoney
+
   jynurso:
     name: Jyn Urso
     # site: https://btctheory.com/
@@ -137,7 +145,7 @@ defaults:
       layout: page
 
 # Syntax
-markdown: kramdown
+markdown: Kramdown
 highlighter: rouge
 
 # Paginate

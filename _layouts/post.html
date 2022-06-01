@@ -1,8 +1,12 @@
 ---
 layout: default
 ---
+{% if page.author.first %}
+{% assign authors = page.author %}
+{% else %}
+{% assign authors = page.author | split: ',' %}
+{% endif %}
 
-{% assign author = site.authors[page.author] %}
 <div class="container">
   <div
     class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative"
@@ -26,7 +30,11 @@ layout: default
             </span>
           </p>
           <h1 class="display-4 mb-4 article-headline">{{ page.title }}</h1>
-          <div class="d-flex align-items-center">
+          <div class="d-flex flex-wrap align-items-start">
+          {% for author_label in authors %}
+          {% assign author = site.authors[author_label] %}
+
+          <div class="d-flex align-items-center mb-3 mr-3">
             {% if author.avatar %}
             <img
               class="rounded-circle"
@@ -36,7 +44,7 @@ layout: default
             />
             {% endif %}
             <small class="ml-3">
-              {{ author.name }}
+              <span class="font-weight-bold">{{ author.name }}</span>
               <span
                 ><a
                   target="_blank"
@@ -45,11 +53,17 @@ layout: default
                   >Folgen</a
                 ></span
               >
-              <span class="text-muted d-block mt-1"
-                >{{ page.date | date: '%b %d, %Y' }} · {% include
-                meta-read-time.html %}</span
-              >
             </small>
+          </div>
+          {% endfor %}
+          </div>
+          <div class="d-flex align-items-center">
+          <small>
+            <span class="text-muted d-block mt-1"
+            >{{ page.date | date: '%b %d, %Y' }} · {% include
+  meta-read-time.html %}</span
+            >
+          </small>
           </div>
         </div>
         {% if page.image %}
@@ -151,6 +165,8 @@ layout: default
       {% endif %}
 
       <!-- Author Box -->
+      {% for author_label in authors %}
+      {% assign author = site.authors[author_label] %}
       {% if page.author %}
       <div class="row mt-5">
         <div class="col-md-2 align-self-center">
@@ -165,7 +181,7 @@ layout: default
         </div>
         <div class="col-md-10">
           <h5 class="font-weight-bold">
-            Von {{ author.name }} {% if author.twitter %}<span
+            {{ author.name }} {% if author.twitter %}<span
               ><a
                 target="_blank"
                 href="{{ author.twitter }}"
@@ -178,6 +194,8 @@ layout: default
         </div>
       </div>
       {% endif %}
+      {% endfor %}
+
 
       <!-- Comments -->
     </div>

@@ -7,8 +7,6 @@ image: assets/images/2022-06-01-troy_bailey-greening/title.jpg
 tags: [featured]
 ---
 
-_Bemerkung der Redaktion: Das im englishen Original verfasste Whitepaper (Dezember 2021) finden Sie  [hier](https://docs.google.com/document/d/1N2N-5jY00cmteoY_puWI9oosM1foa4EQqsO1FFfIFR4/edit)._
-
 ## Zusammenfassung
 
 Wir schlagen eine Möglichkeit vor, in Bitcoin zu investieren, ohne einen Beitrag zu umweltschädlichem Bitcoin-Mining zu leisten. Wird im Verhältnis zu Höhe und Zeitraum des eigenen Bitcoin-Besitzes in nachhaltiges Mining investiert, setzen der eigene Bitcoin-Besitz und die Investitionen in grünes Mining zusammen keinen Anreiz zu CO2-intensivem Bitcoin-Mining. Wir schätzen, dass dafür angesichts des aktuellen Preises, der Hashrate, des Block-Rewards und der Transaktionsgebühren eine vierteljährliche Allokation von etwa 0,5 % der eigenen Bitcoin-Investition in grünes Mining ausreichend ist. Im Gegensatz zu anderen Vorschlägen, den ökologischen Fußabdruck Bitcoins zu verbessern, bewahrt unser Vorschlag die Fungibilität von Bitcoin und hat keine zusätzlichen Kosten. Er bietet sogar eine positive Rendite.

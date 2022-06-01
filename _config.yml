@@ -137,7 +137,7 @@ defaults:
       layout: page
 
 # Syntax
-markdown: kramdown
+markdown: Kramdown
 highlighter: rouge
 
 # Paginate

@@ -111,7 +111,7 @@ Der ökologische Ruf des Bitcoin-Minings ist nicht gerade glänzend. ESG-Mandate
 
 _Bemerkung der Redaktion: Dieser Beitrag wurde im englischen Original von [Troy Cross](https://twitter.com/thetrocro) und [Andrew M. Bailey](https://twitter.com/resistancemoney) verfasst und im Dezember 2021 auf [Resistance Money](https://www.resistance.money/green/) veröffentlicht._
 
-_Des Weiteren sei auf den [Online-Rechner](https://greenbitcoin.money/) von [@IslandHODL](https://twitter.com/IslandHodl) verwiesen, mithilfe jede:r einfach die äquivalente Menge an grüner Hashrate für den eigenen Bitcoin-Besitz ausrechnen kann._
+_Des Weiteren sei auf den [Online-Rechner](https://greenbitcoin.money/) von [@IslandHODL](https://twitter.com/IslandHodl) verwiesen, mithilfe man einfach die äquivalente Menge an grüner Hashrate für den eigenen Bitcoin-Besitz ausrechnen kann._
 
 ## Referenzen
 

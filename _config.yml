@@ -8,6 +8,7 @@ disqus: "xxx"
 email: "bitcoinsozial@protonmail.com"
 url: "https://bitcoinsozial.de"
 # mailchimp-list: "https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b"
+excerpt_separator: <!--more-->
 
 include:
   - _pages

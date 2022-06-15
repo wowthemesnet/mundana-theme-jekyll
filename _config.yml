@@ -81,6 +81,15 @@ authors:
     # email: fakemail@gmail.com
     twitter: https://twitter.com/jyn_urso
 
+  alexgladstein:
+    name: Alex Gladstein
+    # site: https://btctheory.com/
+    avatar: assets/images/authors/avatar_alexgladstein.jpg
+    bio: "Chief Strategy Officer @HRF. Author of Check Your Financial Privilege: http://CYFP.org"
+    # email: fakemail@gmail.com
+    twitter: https://twitter.com/gladstein
+
+
   resistancemoney:
     name: Resistance Money
     site: http://resistance.money/

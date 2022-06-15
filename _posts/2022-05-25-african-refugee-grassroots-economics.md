@@ -30,7 +30,7 @@ Bislang nutzen nur wenige Kundi:nnen des Restaurants Bitcoin, so Kombi, darunter
 
 Wanzavalere sagte, er könne die Aussage von Kombi nachvollziehen, dass Bitcoin-Bildung viel Zeit in Anspruch nimmt. Er entdeckte Bitcoin zum ersten Mal, nachdem er 2017 einem Online-Scam zum Opfer gefallen war. Das inspirierte ihn dazu, mehr über digitale Assets zu recherchieren und schließlich seinen eigenen lokalen Crypto-Nachrichten-Blog zu starten.
 
-"Die kongolesische Bevölkerung leidet sehr; sie hatte nie eine stabile Währung außer dem US-Dollar", sagte Wanzavalere. "Ich bin kein Journalist. Aber ich habe angefangen, über Bitcoin-Probleme in Afrika zu schreiben, weil es auf französisch kaum Informationen zu diesem Thema."
+"Die kongolesische Bevölkerung leidet sehr; sie hatte nie eine stabile Währung außer dem US-Dollar", sagte Wanzavalere. "Ich bin kein Journalist. Aber ich habe angefangen, über Bitcoin-Probleme in Afrika zu schreiben, weil es auf französisch kaum Informationen zu diesem Thema gibt."
 
 In der Zwischenzeit sammelte er Spenden für seine basisdemokratische Initiative, indem er internationale Bitcoin-Fans einlud, sich an einem "[Lightning Fackellauf](https://www.coindesk.com/markets/2019/03/20/im-freaking-out-how-it-feels-to-hold-the-bitcoin-lightning-torch/)" zu beteiligen. Zunächst twitterte er, dass sich jeder an dem "Fackellauf" beteiligen könne, einer Serie von Lightning Network-Transaktionen, die dadurch entsteht, dass Fremde eine Rechnung teilen und kleine Bitcoin-Beträge senden, um sie an den nächsten Rechnungsinhaber weiterzuleiten.
 

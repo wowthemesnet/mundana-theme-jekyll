@@ -4,7 +4,7 @@ author: alexgladstein
 title: "Der Weg zu finanzieller Freiheit in Afghanistan"
 categories: [gesellschaft, wirtschaft]
 image: assets/images/2022-06-09-der-weg-zu-finanzieller-freiheit-in-afghanistan/1.jpg
-imageCaption: "Bild von Mohammad Rahmani"
+imageCaption: "Bild von Mohammad Husaini"
 tags: [featured]
 ---
 

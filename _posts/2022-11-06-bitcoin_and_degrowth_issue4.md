@@ -8,9 +8,9 @@ imageCaption: "Bitcoin und Degrowth verfolgen die gleichen Ziele. Lokalismus, da
 tags: [featured]
 ---
 
-Das Thema dieser Ausgabe: Der Preis des Geldes ist der Zins und na ja, was soll's?
-
 _Einige Gedanken zur Verbindung zwischen Bitcoin und Elementen der "Degrowth"-Bewegung, die argumentiert, dass das unaufhörliche Wirtschaftswachstum uns auf einen nicht nachhaltigen und ökologisch zerstörerischen Weg führt._
+
+**Das Thema dieser Ausgabe: Der Preis des Geldes ist der Zins und na ja, was soll's?**
 
 Ein Leser empfahl mir, die Schriften von Margrit Kennedy zu lesen. Kennedy war eine Architektin und Professorin, die über zins- und inflationsfreies Geld schrieb. Ich fand eines ihrer Bücher, "Interest and Inflation Free Money: An Exchange Medium that Works for Everybody" (später veröffentlichte sie ein Buch mit dem Titel "Occupy Money"), und las am vergangenen Wochenende einige Passagen daraus.
 

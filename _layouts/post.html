@@ -19,7 +19,7 @@ layout: default
                         {% if author.avatar %}
                         <img class="rounded-circle" src="{{site.baseurl}}/{{author.avatar}}" alt="{{author.name}}" width="70"/>
                         {% endif %}
-						<small class="ml-3"> {{ author.name }} <span><a target="_blank" href="{{ author.twitter }}" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
+						<small class="ml-3"> {{ author.name }}
                             <span class="text-muted d-block mt-1">{{ page.date | date: '%b %d, %Y' }} · {% include meta-read-time.html %}</span>
 						</small>
 					</div>
@@ -77,57 +77,7 @@ layout: default
 				{% endfor %}
 				</span>
 			</div>
- 
-            <!-- Mailchimp Subscribe Form -->
-            {% if site.mailchimp-list %}
-			<div class="border p-5 bg-lightblue">
-				<div class="row justify-content-between">
-					<div class="col-md-6 mb-2 mb-md-0">
-						<h5 class="font-weight-bold">Join Newsletter</h5>
-						 Get the latest news right in your inbox. We never spam!
-					</div>
-					<div class="col-md-6">
-						<div class="row">
-                            <form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate w-100" target="_blank" novalidate>
-                            <div class="mc-field-group">
-							
-								<input type="email" placeholder="Enter e-mail address" name="EMAIL" class="required email form-control w-100" id="mce-EMAIL" autocomplete="on" required>
-							
-							
-								<button type="submit" value="Subscribe" name="subscribe" class="heart btn btn-success btn-block w-100 mt-2">Subscribe</button>
-							
-                            </div>
-                            </form>
-						</div>
-					</div>
-				</div>
-			</div>
-            {% endif %}
-            
-            
-             <!-- Author Box -->
-                {% if page.author %}				
-				<div class="row mt-5">
-					<div class="col-md-2 align-self-center">
-                         {% if author.avatar %}
-                        <img class="rounded-circle" src="{{site.baseurl}}/{{author.avatar}}" alt="{{author.name}}" width="90"/>
-                        {% endif %} 
-					</div>
-					<div class="col-md-10">		
-                        <h5 class="font-weight-bold">Written by {{ author.name }} {% if author.twitter %}<span><a target="_blank" href="{{ author.twitter }}" class="btn btn-outline-success btn-sm btn-round ml-2">Follow</a></span>{% endif %}</h5>
-						{{ author.bio }}					
-					</div>
-				</div>				
-                {% endif %}
-            
-            <!-- Comments -->
-            {% if page.comments != false %}
-                {% include comments.html %}
-            {% endif %}
-            
 		</div>
-        
-        
 	</div>
 </div>
 

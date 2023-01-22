@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Blackened Tempeh Caesar Salad"
-authors: chad
+author: chad
 categories: [lunch]
 image: assets/images/caesar.jpg
 ---

@@ -3,7 +3,7 @@ name: 'Plantifull'
 description: 'plant-based recipes that keep you full'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
-baseurl: '/mundana-theme-jekyll'
+baseurl: ''
 disqus: 'demowebsite'
 email: 'bergner.cari@gmail.com'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
@@ -21,12 +21,12 @@ plugins:
 authors:
     cari:
       name:           Cari
-      avatar:         /assets/images/avatar1.jpg
+      avatar:         assets/images/avatar1.jpg
 
     chad:
       name:           Chad
       site:           https://www.chadahunter.com
-      avatar:         /assets/images/avatar2.jpg
+      avatar:         assets/images/avatar2.jpg
 
 # Defaults
 defaults:
@@ -37,7 +37,7 @@ defaults:
     values:
       layout: post
       author: cari
-      avatar: /assets/images/avatar1.jpg
+      avatar: assets/images/avatar1.jpg
       
   # all pages
   - scope:

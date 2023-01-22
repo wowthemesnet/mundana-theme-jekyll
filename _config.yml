@@ -21,20 +21,13 @@ plugins:
 authors:
     cari:
       name:           Cari
-      site:           https://www.wowthemes.net
       avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Cari. This is my site. I hope you like it!"
-      email:          bergner.cari@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
 
     chad:
       name:           Chad
       site:           https://www.chadahunter.com
       avatar:         /assets/images/avatar2.jpg
-      bio:            "I eat a lot!"
-      email:          chadhunter17@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
- 
+
 # Defaults
 defaults:
 

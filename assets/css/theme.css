@@ -652,8 +652,8 @@ footer {
     margin-top:10px;
 }
 article {
-	font-size:20px;
-	line-height:1.86;
+	font-size:16px;
+	line-height:1.8;
     font-family:Lora;
 }
 .article-headline {
@@ -664,7 +664,7 @@ article {
     color: #222222;
 }
 article p,article pre,article figure,article img,article blockquote,article iframed,article embed {
-	margin-bottom:2rem;
+	margin-bottom:.7rem;
 }
 article blockquote {
 	padding-left:40px;
@@ -690,8 +690,8 @@ article:first-letter {
 	vertical-align:top;
 }
 article h1,article h2,article h3,article h4,article h5,article h6,article .h1,article .h2,article .h3,article .h4,article .h5,article .h6 {
-	margin-bottom:2rem;
-	margin-top:2rem;
+	margin-bottom:.7rem;
+	margin-top:.7rem;
 	font-weight:600;
 }
 .alertbar {

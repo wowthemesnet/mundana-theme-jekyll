@@ -72,11 +72,11 @@ Based on a recipe from [Cafe Gratitude's cookbook](https://cafegratitude.com/pro
 3. Remove tempeh from the pan along with any blackened seasoning that didn't stick, and cut into 1/2 inch cubes. Set aside.
 
 **Make the coconut bacon**
-1. While tempeh is marinating, preheat the oven to 250&deg;F and line a baking sheet with a Silpat or parchment paper. Heat a large skillet over medium-high heat. Combine the coconut chips, olive oil, and spices in the skillet and toast for 5-6 minutes, stirring continuously. When the coconut is a golden brown, stir in the maple syrup and cook for another minute or two.
-2. Transfer the mixture to the baking sheet and spread out. Toast in the oven for 10-15 minutes, stirring once halfway through, until the coconut chips are dry. Remove and allow to cool completely before breaking apart with your hands and storing in an airtight container.
+4. While tempeh is marinating, preheat the oven to 250&deg;F and line a baking sheet with a Silpat or parchment paper. Heat a large skillet over medium-high heat. Combine the coconut chips, olive oil, and spices in the skillet and toast for 5-6 minutes, stirring continuously. When the coconut is a golden brown, stir in the maple syrup and cook for another minute or two.
+5. Transfer the mixture to the baking sheet and spread out. Toast in the oven for 10-15 minutes, stirring once halfway through, until the coconut chips are dry. Remove and allow to cool completely before breaking apart with your hands and storing in an airtight container.
 
 **Make the cashew caesar dressing**
-1. Drain the cashews and pumpkin seeds, then combine all ingredients in a high-speed blender and blend until smooth. Taste for seasoning and add water to thin the dressing if necessary.
+6. Drain the cashews and pumpkin seeds, then combine all ingredients in a high-speed blender and blend until smooth. Taste for seasoning and add water to thin the dressing if necessary.
 
 **Assemble salad**
-1. Divide lettuce, tomato, avocado, and capers between two bowls. Top each with 1/2 cup of tempeh cubes, 1/4 cup of coconut bacon, and toss with 1/4 cup of cashew caesar dressing.
+7. Divide lettuce, tomato, avocado, and capers between two bowls. Top each with 1/2 cup of tempeh cubes, 1/4 cup of coconut bacon, and toss with 1/4 cup of cashew caesar dressing.

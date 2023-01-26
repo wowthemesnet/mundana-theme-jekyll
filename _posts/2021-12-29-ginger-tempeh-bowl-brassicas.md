@@ -1,0 +1,72 @@
+---
+id: 300
+title: 'Ginger Tempeh Bowl with Roasted Brassicas and Miso Dressing'
+date: '2021-12-29T18:22:27+00:00'
+author: Cari
+layout: post
+guid: 'https://plantifull.co/?p=300'
+permalink: /ginger-tempeh-bowl-brassicas/
+image: /wp-content/uploads/2021/12/Tempeh-Bowl_2-760x400.jpg
+categories:
+    - Lunch
+tags:
+    - bowl
+    - broccoli
+    - cabbage
+    - lunch
+    - tempeh
+---
+
+Tempeh is such an awesome vegan protein – it’s a whole food, it’s fermented, it’s nutritionally great and it doesn’t require hours of soaking time (ahem, beans)! However, I’ve come across very few recipes that pack enough flavor into tempeh to make it worth eating, and the texture can sometimes be bland. Cue Laura Wright’s [sticky ginger tempeh](https://thefirstmess.com/2020/05/27/sticky-ginger-tempeh-recipe-coconut-rice/) – it’s super flavorful and stars in this lunch bowl, which is one of my favorite lunches to meal prep and eat all week. The roasted brassicas and miso-ginger dressing combine nicely for a hearty, umami-packed meal!
+
+Summary of steps:
+
+1. Cook rice and lentils
+2. Roast veggies
+3. Saute tempeh in ginger and sauce
+4. Make miso-ginger dressing
+
+<div class="wp-block-wpzoom-recipe-card-block-recipe-card header-content-align-left block-alignment-left recipe-card-noimage is-style-newdesign" id="wpzoom-recipe-card"><div class="recipe-card-image"> <figure> ![Ginger Tempeh Bowl with Roasted Brassicas and Miso Dressing](https://i0.wp.com/plantifull.co/wp-content/uploads/2021/05/Tempeh-Bowl.jpg?resize=800%2C530&ssl=1) <figcaption><div class="wpzoom-recipe-card-print-link"> [ <svg class="wpzoom-rcb-icon-print-link" height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"> <g data-name="Layer 55" id="Layer_55"> <path class="wpzoom-rcb-print-icon" d="M28,25H25a1,1,0,0,1,0-2h3a1,1,0,0,0,1-1V10a1,1,0,0,0-1-1H4a1,1,0,0,0-1,1V22a1,1,0,0,0,1,1H7a1,1,0,0,1,0,2H4a3,3,0,0,1-3-3V10A3,3,0,0,1,4,7H28a3,3,0,0,1,3,3V22A3,3,0,0,1,28,25Z"></path> <path class="wpzoom-rcb-print-icon" d="M25,31H7a1,1,0,0,1-1-1V20a1,1,0,0,1,1-1H25a1,1,0,0,1,1,1V30A1,1,0,0,1,25,31ZM8,29H24V21H8Z"></path> <path class="wpzoom-rcb-print-icon" d="M25,9a1,1,0,0,1-1-1V3H8V8A1,1,0,0,1,6,8V2A1,1,0,0,1,7,1H25a1,1,0,0,1,1,1V8A1,1,0,0,1,25,9Z"></path> <rect class="wpzoom-rcb-print-icon" height="2" width="2" x="24" y="11"></rect> <rect class="wpzoom-rcb-print-icon" height="2" width="4" x="18" y="11"></rect> </g> </svg> <span>Print</span> ](#wpzoom-recipe-card "Print directions...") </div> </figcaption> </figure> </div><div class="recipe-card-heading">## Ginger Tempeh Bowl with Roasted Brassicas and Miso Dressing
+
+<span class="recipe-card-course">Course: <mark>Lunch</mark></span><span class="recipe-card-difficulty">Difficulty: <mark>Easy</mark></span></div><div class="recipe-card-details"><div class="details-items"><div class="detail-item detail-item-0"><span class="detail-item-icon oldicon oldicon-food" style="color: #FFA921;"></span><span class="detail-item-label">Servings</span>6
+
+<span class="detail-item-unit">servings</span></div><div class="detail-item detail-item-1"><span class="detail-item-icon oldicon oldicon-clock" style="color: #FFA921;"></span><span class="detail-item-label">Prep time</span>20
+
+<span class="detail-item-unit">minutes</span></div><div class="detail-item detail-item-2"><span class="detail-item-icon foodicons foodicons-cooking-food-in-a-hot-casserole" style="color: #FFA921;"></span><span class="detail-item-label">Cooking time</span>50
+
+<span class="detail-item-unit">minutes</span></div></div></div><div class="recipe-card-ingredients">### Ingredients
+
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 cups brown rice (or grain of choice)</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1.5 cups dried green lentils</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 large heads broccoli, chopped into florets</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 bunches of radishes, quartered</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 medium green or purple cabbage, chopped into large pieces</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 8-oz. blocks of tempeh, crumbled into small pieces\* (See Note)</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/4 cup plus 2 tbsp. soy sauce or tamari, divided</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 tbsp. brown sugar</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 tbsp. Sriracha or other hot sauce</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 tbsp. plus 1 tsp. rice vinegar, divided</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">4 tbsp. ginger, grated, divided</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">3 cloves garlic, grated, divided</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 tbsp. miso paste</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 tsp. toasted sesame oil</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">Cayenne pepper or chili flakes</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">Extra virgin olive oil</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">Avocado or other high-heat oil</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">Salt and pepper</span>
+
+</div><div class="recipe-card-directions">### Directions
+
+- Preheat the oven to 400°F.
+- Cook the brown rice and lentils according to your cooking method of choice. (For us, for the brown rice this looks like: 2 cups water and 2 cups rice for 30 minutes plus 10 minutes slow release in the Instant Pot. For the lentils, cover with water and cook for 6 minutes plus 10 minutes slow release in the IP.)
+- Toss the broccoli in a tbsp. or two of olive oil and spread onto a baking sheet. Do the same for the radish and cabbage on additional baking sheets. Roast all three for 18-25 minutes, checking until the veggies are done to your liking. Season with salt and pepper.
+- Make the tempeh: In a large frying pan, heat a few tbsp. of avocado oil over medium-high heat. Add the crumbled tempeh and cook for 3-5 minutes until the tempeh is beginning to brown. While the tempeh cooks, mix together in a small bowl 1/4 cup soy sauce, 2 tbsp. brown sugar, 1 tbsp. Sriracha, and 1 tsp. rice vinegar.
+- Add to the tempeh 2 tbsp. of grated ginger and 1 of the cloves of grated garlic and stir for another 30 seconds, then add the soy sauce mixture. Cook for another 5 minutes or so until the sauce has mostly absorbed or cooked off. Set the tempeh aside.
+- Make the miso-ginger dressing: In a bowl, combine the miso paste, 2 tbsp. soy sauce, 1 tbsp. rice vinegar, 2 tbsp. grated ginger, 2 cloves of grated garlic, sesame oil, and a few dashes of cayenne pepper or chili flakes. Add 1/4 cup of water and 1/4 cup of olive oil and blend using an immersion blender (you could also use an emulsifier or upright blender here). Stream in up to 1/4 cup of additional olive oil until the dressing reaches your desired consistency.
+- To assemble the bowls, top rice with lentils, veggies, tempeh, and dressing.
+
+</div><div class="recipe-card-notes">### Notes
+
+- To crumble tempeh, either break it up with your hands or use a potato masher or fork to do so.
+
+ </div><script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Recipe","name":"Ginger Tempeh Bowl with Roasted Brassicas and Miso Dressing","image":["https:\/\/plantifull.co\/wp-content\/uploads\/2021\/05\/Tempeh-Bowl.jpg","https:\/\/plantifull.co\/wp-content\/uploads\/2021\/05\/Tempeh-Bowl-500x500.jpg","https:\/\/plantifull.co\/wp-content\/uploads\/2021\/05\/Tempeh-Bowl-500x375.jpg","https:\/\/plantifull.co\/wp-content\/uploads\/2021\/05\/Tempeh-Bowl-480x270.jpg"],"description":"","keywords":["bowl","broccoli","cabbage","lunch","tempeh"],"author":{"@type":"Person","name":"Cari"},"datePublished":"2021-12-29T18:22:27+00:00","prepTime":"PT20M","cookTime":"PT50M","totalTime":"PT1H10M","recipeCategory":["Lunch"],"recipeCuisine":[],"recipeYield":["6","6 servings"],"nutrition":{"@type":"NutritionInformation"},"recipeIngredient":["2 cups brown rice (or grain of choice)","1.5 cups dried green lentils","2 large heads broccoli, chopped into florets","2 bunches of radishes, quartered","1 medium green or purple cabbage, chopped into large pieces","2 8-oz. blocks of tempeh, crumbled into small pieces* (See Note)","1\/4 cup plus 2 tbsp. soy sauce or tamari, divided","2 tbsp. brown sugar","1 tbsp. Sriracha or other hot sauce","1 tbsp. plus 1 tsp. rice vinegar, divided","4 tbsp. ginger, grated, divided","3 cloves garlic, grated, divided","2 tbsp. miso paste","1 tsp. toasted sesame oil","Cayenne pepper or chili flakes","Extra virgin olive oil","Avocado or other high-heat oil","Salt and pepper"],"recipeInstructions":[{"@type":"HowToStep","name":"Preheat the oven to 400°F.","text":"Preheat the oven to 400°F.","url":"https:\/\/plantifull.co\/ginger-tempeh-bowl-brassicas\/#wpzoom-rcb-direction-step-0","image":""},{"@type":"HowToStep","name":"Cook the brown rice and lentils according to your cooking method of choice. (For us, for the brown rice this looks like: 2 cups water and 2 cups rice for 30 minutes plus 10 minutes slow release in the Instant Pot. For the lentils, cover with water and cook for 6 minutes plus 10 minutes slow release in the IP.)","text":"Cook the brown rice and lentils according to your cooking method of choice. (For us, for the brown rice this looks like: 2 cups water and 2 cups rice for 30 minutes plus 10 minutes slow release in the Instant Pot. For the lentils, cover with water and cook for 6 minutes plus 10 minutes slow release in the IP.)","url":"https:\/\/plantifull.co\/ginger-tempeh-bowl-brassicas\/#wpzoom-rcb-direction-step-27","image":""},{"@type":"HowToStep","name":"Toss the broccoli in a tbsp. or two of olive oil and spread onto a baking sheet. Do the same for the radish and cabbage on additional baking sheets. Roast all three for 18-25 minutes, checking until the veggies are done to your liking. Season with salt and pepper.","text":"Toss the broccoli in a tbsp. or two of olive oil and spread onto a baking sheet. Do the same for the radish and cabbage on additional baking sheets. Roast all three for 18-25 minutes, checking until the veggies are done to your liking. Season with salt and pepper.","url":"https:\/\/plantifull.co\/ginger-tempeh-bowl-brassicas\/#wpzoom-rcb-direction-step-324","image":""},{"@type":"HowToStep","name":"Make the tempeh: In a large frying pan, heat a few tbsp. of avocado oil over medium-high heat. Add the crumbled tempeh and cook for 3-5 minutes until the tempeh is beginning to brown. While the tempeh cooks, mix together in a small bowl 1\/4 cup soy sauce, 2 tbsp. brown sugar, 1 tbsp. Sriracha, and 1 tsp. rice vinegar.","text":"Make the tempeh: In a large frying pan, heat a few tbsp. of avocado oil over medium-high heat. Add the crumbled tempeh and cook for 3-5 minutes until the tempeh is beginning to brown. While the tempeh cooks, mix together in a small bowl 1\/4 cup soy sauce, 2 tbsp. brown sugar, 1 tbsp. Sriracha, and 1 tsp. rice vinegar.","url":"https:\/\/plantifull.co\/ginger-tempeh-bowl-brassicas\/#wpzoom-rcb-direction-step-589","image":""},{"@type":"HowToStep","name":"Add to the tempeh 2 tbsp. of grated ginger and 1 of the cloves of grated garlic and stir for another 30 seconds, then add the soy sauce mixture. Cook for another 5 minutes or so until the sauce has mostly absorbed or cooked off. Set the tempeh aside.","text":"Add to the tempeh 2 tbsp. of grated ginger and 1 of the cloves of grated garlic and stir for another 30 seconds, then add the soy sauce mixture. Cook for another 5 minutes or so until the sauce has mostly absorbed or cooked off. Set the tempeh aside.","url":"https:\/\/plantifull.co\/ginger-tempeh-bowl-brassicas\/#wpzoom-rcb-direction-step-910","image":""},{"@type":"HowToStep","name":"Make the miso-ginger dressing: In a bowl, combine the miso paste, 2 tbsp. soy sauce, 1 tbsp. rice vinegar, 2 tbsp. grated ginger, 2 cloves of grated garlic, sesame oil, and a few dashes of cayenne pepper or chili flakes. Add 1\/4 cup of water and 1\/4 cup of olive oil and blend using an immersion blender (you could also use an emulsifier or upright blender here). Stream in up to 1\/4 cup of additional olive oil until the dressing reaches your desired consistency.","text":"Make the miso-ginger dressing: In a bowl, combine the miso paste, 2 tbsp. soy sauce, 1 tbsp. rice vinegar, 2 tbsp. grated ginger, 2 cloves of grated garlic, sesame oil, and a few dashes of cayenne pepper or chili flakes. Add 1\/4 cup of water and 1\/4 cup of olive oil and blend using an immersion blender (you could also use an emulsifier or upright blender here). Stream in up to 1\/4 cup of additional olive oil until the dressing reaches your desired consistency.","url":"https:\/\/plantifull.co\/ginger-tempeh-bowl-brassicas\/#wpzoom-rcb-direction-step-1161","image":""},{"@type":"HowToStep","name":"To assemble the bowls, top rice with lentils, veggies, tempeh, and dressing.","text":"To assemble the bowls, top rice with lentils, veggies, tempeh, and dressing.","url":"https:\/\/plantifull.co\/ginger-tempeh-bowl-brassicas\/#wpzoom-rcb-direction-step-1626","image":""}]}</script></div>

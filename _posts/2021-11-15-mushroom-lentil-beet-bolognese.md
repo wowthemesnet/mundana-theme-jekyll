@@ -1,0 +1,67 @@
+---
+id: 269
+title: 'Mushroom, Lentil, and Beet Bolognese'
+date: '2021-11-15T01:02:36+00:00'
+author: Cari
+layout: post
+guid: 'https://plantifull.co/?p=269'
+permalink: /mushroom-lentil-beet-bolognese/
+image: /wp-content/uploads/2021/11/Mushroom-Bolognese-760x400.jpg
+categories:
+    - Dinner
+tags:
+    - beets
+    - Italian
+    - lentils
+    - mushrooms
+    - pasta
+---
+
+This is one of my all-time favorite recipes, a showstopper that definitely requires some time and effort but is so worth it. I’d make this for a dinner party to impress even the most skeptical omnivores, or on any winter weekend night that calls for a bottle of red wine and a hearty, lovingly-made meal.
+
+The original recipe is, like many of my favorites on this site, from Laura Wright’s blog [The First Mess](https://thefirstmess.com/2019/02/06/mushroom-beet-bolognese-vegan-recipe/#wprm-recipe-container-13997). I’ve made very few modifications because the original is basically perfect, but I do increase the legume quantity a bit.
+
+Summary of steps:
+
+1. Roast beets
+2. Cook lentils
+3. Saute veggies
+4. Make cashew milk
+5. Continue cooking the bolognese sauce
+6. Cook pasta
+
+<div class="wp-block-wpzoom-recipe-card-block-recipe-card header-content-align-left block-alignment-left recipe-card-noimage is-style-newdesign" id="wpzoom-recipe-card"><div class="recipe-card-image"> <figure> ![Mushroom, Lentil, and Beet Bolognese](https://i0.wp.com/plantifull.co/wp-content/uploads/2021/11/Mushroom-Beet-Bolognese_sm.jpg?resize=800%2C530&ssl=1) <figcaption><div class="wpzoom-recipe-card-print-link"> [ <svg class="wpzoom-rcb-icon-print-link" height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"> <g data-name="Layer 55" id="Layer_55"> <path class="wpzoom-rcb-print-icon" d="M28,25H25a1,1,0,0,1,0-2h3a1,1,0,0,0,1-1V10a1,1,0,0,0-1-1H4a1,1,0,0,0-1,1V22a1,1,0,0,0,1,1H7a1,1,0,0,1,0,2H4a3,3,0,0,1-3-3V10A3,3,0,0,1,4,7H28a3,3,0,0,1,3,3V22A3,3,0,0,1,28,25Z"></path> <path class="wpzoom-rcb-print-icon" d="M25,31H7a1,1,0,0,1-1-1V20a1,1,0,0,1,1-1H25a1,1,0,0,1,1,1V30A1,1,0,0,1,25,31ZM8,29H24V21H8Z"></path> <path class="wpzoom-rcb-print-icon" d="M25,9a1,1,0,0,1-1-1V3H8V8A1,1,0,0,1,6,8V2A1,1,0,0,1,7,1H25a1,1,0,0,1,1,1V8A1,1,0,0,1,25,9Z"></path> <rect class="wpzoom-rcb-print-icon" height="2" width="2" x="24" y="11"></rect> <rect class="wpzoom-rcb-print-icon" height="2" width="4" x="18" y="11"></rect> </g> </svg> <span>Print</span> ](#wpzoom-recipe-card "Print directions...") </div> </figcaption> </figure> </div><div class="recipe-card-heading">## Mushroom, Lentil, and Beet Bolognese
+
+<span class="recipe-card-course">Course: <mark>Dinner</mark></span><span class="recipe-card-difficulty">Difficulty: <mark>Hard</mark></span></div><div class="recipe-card-details"><div class="details-items"><div class="detail-item detail-item-0"><span class="detail-item-icon oldicon oldicon-food" style="color: #FFA921;"></span><span class="detail-item-label">Servings</span>4
+
+<span class="detail-item-unit">servings</span></div></div></div><div class="recipe-card-ingredients">### Ingredients
+
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 medium beets, peeled and cut into ~1/2 inch cubes</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2/3 cup of black or green lentils, rinsed</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/3 cup raw cashews, soaked for at least 2 hours</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 lb cremini mushrooms</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">Extra virgin olive oil</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 yellow onion, diced</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 cloves garlic, minced</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/2 tsp. chili flakes</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 bay leaf</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 tbsp. miso paste</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">3 tbsp. tomato paste</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 tsp. salt</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">15 oz. can fire-roasted crushed tomatoes</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/2 cup red wine</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/2 cup parsley, chopped</span>
+- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 lb pasta – I like fettucine best here</span>
+
+</div><div class="recipe-card-directions">### Directions
+
+- Roast the beets: place the cubed beets in a foil packet with a tsp. or so of olive oil and roast at 400°F for about 40 minutes, or until the beets are fork tender.
+- While beets are roasting, cook the lentils. For us, this is in the Instant Pot for 6 minutes plus 10 min slow release, but you could also cook them on the stovetop. Once cooked, drain and set aside.
+- Prepare the mushrooms: in a food processor with the S-blade, pulse the mushrooms until they are finely minced, about 8-10 pulses. (You can also do this by hand but it’s much easier in the food processor).
+- In a large Dutch oven or heavy pot, heat a tbsp of olive oil over medium heat. Once hot, add the onions and cook until soft, about 8 minutes. Add the garlic, chili flakes, bay leaf, and cubed beets and cook for another 5-8 minutes.
+- Add the mushrooms to the pot and stir to coat. Leave them for a few minutes and then stir once they start to let off liquid. Add the cooked lentils, miso paste, tomato paste, salt, and a few generous grinds of black pepper. Keep cooking the vegetables for another 10 minutes or so, stirring at intervals.
+- While the veggies cook, drain the cashews and combine them in a blender with 3/4 cup of water. Blend on high until smooth and set aside.
+- To the pot of vegetables, add the red wine and stir, cooking for 5 minutes. Add the crushed tomatoes and cook for another 5 minutes, stirring often. Finally, add the cashew milk and cook for 5 more minutes. Check for seasoning here and keep the sauce on low heat.
+- Make the pasta according to package directions, minus 1-2 minutes. Drain the pasta and add it to the bolognese. Cook for another few minutes until the pasta is to your liking, then stir in the parsley to serve.
+
+</div><script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Recipe","name":"Mushroom, Lentil, and Beet Bolognese","image":["https:\/\/plantifull.co\/wp-content\/uploads\/2021\/11\/Mushroom-Beet-Bolognese_sm.jpg","https:\/\/plantifull.co\/wp-content\/uploads\/2021\/11\/Mushroom-Beet-Bolognese_sm-500x500.jpg","https:\/\/plantifull.co\/wp-content\/uploads\/2021\/11\/Mushroom-Beet-Bolognese_sm-500x375.jpg","https:\/\/plantifull.co\/wp-content\/uploads\/2021\/11\/Mushroom-Beet-Bolognese_sm-480x270.jpg"],"description":"","keywords":["beets","Italian","lentils","mushrooms","pasta"],"author":{"@type":"Person","name":"Cari"},"datePublished":"2021-11-15T01:02:36+00:00","prepTime":"","cookTime":"","totalTime":"","recipeCategory":["Dinner"],"recipeCuisine":[],"recipeYield":["4","4 servings"],"nutrition":{"@type":"NutritionInformation"},"recipeIngredient":["2 medium beets, peeled and cut into ~1\/2 inch cubes","2\/3 cup of black or green lentils, rinsed","1\/3 cup raw cashews, soaked for at least 2 hours","1 lb cremini mushrooms","Extra virgin olive oil","1 yellow onion, diced","2 cloves garlic, minced","1\/2 tsp. chili flakes","1 bay leaf","1 tbsp. miso paste","3 tbsp. tomato paste","1 tsp. salt","15 oz. can fire-roasted crushed tomatoes","1\/2 cup red wine","1\/2 cup parsley, chopped","1 lb pasta - I like fettucine best here"],"recipeInstructions":[{"@type":"HowToStep","name":"Roast the beets: place the cubed beets in a foil packet with a tsp. or so of olive oil and roast at 400°F for about 40 minutes, or until the beets are fork tender.","text":"Roast the beets: place the cubed beets in a foil packet with a tsp. or so of olive oil and roast at 400°F for about 40 minutes, or until the beets are fork tender.","url":"https:\/\/plantifull.co\/mushroom-lentil-beet-bolognese\/#wpzoom-rcb-direction-step-0","image":""},{"@type":"HowToStep","name":"While beets are roasting, cook the lentils. For us, this is in the Instant Pot for 6 minutes plus 10 min slow release, but you could also cook them on the stovetop. Once cooked, drain and set aside.","text":"While beets are roasting, cook the lentils. For us, this is in the Instant Pot for 6 minutes plus 10 min slow release, but you could also cook them on the stovetop. Once cooked, drain and set aside.","url":"https:\/\/plantifull.co\/mushroom-lentil-beet-bolognese\/#wpzoom-rcb-direction-step-164","image":""},{"@type":"HowToStep","name":"Prepare the mushrooms: in a food processor with the S-blade, pulse the mushrooms until they are finely minced, about 8-10 pulses. (You can also do this by hand but it's much easier in the food processor).","text":"Prepare the mushrooms: in a food processor with the S-blade, pulse the mushrooms until they are finely minced, about 8-10 pulses. (You can also do this by hand but it's much easier in the food processor).","url":"https:\/\/plantifull.co\/mushroom-lentil-beet-bolognese\/#wpzoom-rcb-direction-step-363","image":""},{"@type":"HowToStep","name":"In a large Dutch oven or heavy pot, heat a tbsp of olive oil over medium heat. Once hot, add the onions and cook until soft, about 8 minutes. Add the garlic, chili flakes, bay leaf, and cubed beets and cook for another 5-8 minutes.","text":"In a large Dutch oven or heavy pot, heat a tbsp of olive oil over medium heat. Once hot, add the onions and cook until soft, about 8 minutes. Add the garlic, chili flakes, bay leaf, and cubed beets and cook for another 5-8 minutes.","url":"https:\/\/plantifull.co\/mushroom-lentil-beet-bolognese\/#wpzoom-rcb-direction-step-568","image":""},{"@type":"HowToStep","name":"Add the mushrooms to the pot and stir to coat. Leave them for a few minutes and then stir once they start to let off liquid. Add the cooked lentils, miso paste, tomato paste, salt, and a few generous grinds of black pepper. Keep cooking the vegetables for another 10 minutes or so, stirring at intervals.","text":"Add the mushrooms to the pot and stir to coat. Leave them for a few minutes and then stir once they start to let off liquid. Add the cooked lentils, miso paste, tomato paste, salt, and a few generous grinds of black pepper. Keep cooking the vegetables for another 10 minutes or so, stirring at intervals.","url":"https:\/\/plantifull.co\/mushroom-lentil-beet-bolognese\/#wpzoom-rcb-direction-step-800","image":""},{"@type":"HowToStep","name":"While the veggies cook, drain the cashews and combine them in a blender with 3\/4 cup of water. Blend on high until smooth and set aside.","text":"While the veggies cook, drain the cashews and combine them in a blender with 3\/4 cup of water. Blend on high until smooth and set aside.","url":"https:\/\/plantifull.co\/mushroom-lentil-beet-bolognese\/#wpzoom-rcb-direction-step-1105","image":""},{"@type":"HowToStep","name":"To the pot of vegetables, add the red wine and stir, cooking for 5 minutes. Add the crushed tomatoes and cook for another 5 minutes, stirring often. Finally, add the cashew milk and cook for 5 more minutes. Check for seasoning here and keep the sauce on low heat.","text":"To the pot of vegetables, add the red wine and stir, cooking for 5 minutes. Add the crushed tomatoes and cook for another 5 minutes, stirring often. Finally, add the cashew milk and cook for 5 more minutes. Check for seasoning here and keep the sauce on low heat.","url":"https:\/\/plantifull.co\/mushroom-lentil-beet-bolognese\/#wpzoom-rcb-direction-step-1242","image":""},{"@type":"HowToStep","name":"Make the pasta according to package directions, minus 1-2 minutes. Drain the pasta and add it to the bolognese. Cook for another few minutes until the pasta is to your liking, then stir in the parsley to serve.","text":"Make the pasta according to package directions, minus 1-2 minutes. Drain the pasta and add it to the bolognese. Cook for another few minutes until the pasta is to your liking, then stir in the parsley to serve.","url":"https:\/\/plantifull.co\/mushroom-lentil-beet-bolognese\/#wpzoom-rcb-direction-step-1506","image":""}]}</script></div>

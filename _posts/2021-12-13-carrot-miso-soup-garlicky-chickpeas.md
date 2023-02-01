@@ -10,6 +10,7 @@ tags:
     - carrots
     - chickpeas
     - soup
+    - featured
 ---
 
 This is one of the simplest and best soups I’ve made in a long time – it’s perfect for a quick weeknight dinner or reheated for lunch. I adapted [Smitten Kitchen’s original](https://smittenkitchen.com/2012/01/carrot-soup-with-miso-and-sesame/) and (surprise) added chickpeas! The chickpeas add some texture to the soup, which is sweet, savory, and a little spicy if you add the cayenne pepper like I did. Serve this alongside a simple roasted vegetable and a toasted piece of fresh bread and enjoy a quintessentially soup-season meal!

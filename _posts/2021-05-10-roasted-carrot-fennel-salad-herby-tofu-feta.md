@@ -25,38 +25,38 @@ Summary of steps:
 2. Prepare and bake the tofu feta
 3. Assemble the dish
 
-<div class="wp-block-wpzoom-recipe-card-block-recipe-card header-content-align-left block-alignment-left recipe-card-noimage is-style-newdesign" id="wpzoom-recipe-card"><div class="recipe-card-image"> <figure> ![Roasted Carrot & Fennel Salad with Herby Tofu "Feta"](https://i0.wp.com/plantifull.co/wp-content/uploads/2021/05/Carrots-Fennel_sm.jpg?resize=800%2C530&ssl=1) <figcaption><div class="wpzoom-recipe-card-print-link"> [ <svg class="wpzoom-rcb-icon-print-link" height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"> <g data-name="Layer 55" id="Layer_55"> <path class="wpzoom-rcb-print-icon" d="M28,25H25a1,1,0,0,1,0-2h3a1,1,0,0,0,1-1V10a1,1,0,0,0-1-1H4a1,1,0,0,0-1,1V22a1,1,0,0,0,1,1H7a1,1,0,0,1,0,2H4a3,3,0,0,1-3-3V10A3,3,0,0,1,4,7H28a3,3,0,0,1,3,3V22A3,3,0,0,1,28,25Z"></path> <path class="wpzoom-rcb-print-icon" d="M25,31H7a1,1,0,0,1-1-1V20a1,1,0,0,1,1-1H25a1,1,0,0,1,1,1V30A1,1,0,0,1,25,31ZM8,29H24V21H8Z"></path> <path class="wpzoom-rcb-print-icon" d="M25,9a1,1,0,0,1-1-1V3H8V8A1,1,0,0,1,6,8V2A1,1,0,0,1,7,1H25a1,1,0,0,1,1,1V8A1,1,0,0,1,25,9Z"></path> <rect class="wpzoom-rcb-print-icon" height="2" width="2" x="24" y="11"></rect> <rect class="wpzoom-rcb-print-icon" height="2" width="4" x="18" y="11"></rect> </g> </svg> <span>Print</span> ](#wpzoom-recipe-card "Print directions...") </div> </figcaption> </figure> </div><div class="recipe-card-heading">## Roasted Carrot &amp; Fennel Salad with Herby Tofu “Feta”
+<div class="wp-block-wpzoom-recipe-card-block-recipe-card header-content-align-left block-alignment-left recipe-card-noimage is-style-newdesign" id="wpzoom-recipe-card"><div class="recipe-card-image"> <figure> ![Roasted Carrot & Fennel Salad with Herby Tofu "Feta"](https://i0.wp.com/plantifull.co/wp-content/uploads/2021/05/Carrots-Fennel_sm.jpg?resize=800%2C530&ssl=1) <figcaption><div class="wpzoom-recipe-card-print-link"> [ <svg class="wpzoom-rcb-icon-print-link" height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"> <g data-name="Layer 55" id="Layer_55"> <path class="wpzoom-rcb-print-icon" d="M28,25H25a1,1,0,0,1,0-2h3a1,1,0,0,0,1-1V10a1,1,0,0,0-1-1H4a1,1,0,0,0-1,1V22a1,1,0,0,0,1,1H7a1,1,0,0,1,0,2H4a3,3,0,0,1-3-3V10A3,3,0,0,1,4,7H28a3,3,0,0,1,3,3V22A3,3,0,0,1,28,25Z"></path> <path class="wpzoom-rcb-print-icon" d="M25,31H7a1,1,0,0,1-1-1V20a1,1,0,0,1,1-1H25a1,1,0,0,1,1,1V30A1,1,0,0,1,25,31ZM8,29H24V21H8Z"></path> <path class="wpzoom-rcb-print-icon" d="M25,9a1,1,0,0,1-1-1V3H8V8A1,1,0,0,1,6,8V2A1,1,0,0,1,7,1H25a1,1,0,0,1,1,1V8A1,1,0,0,1,25,9Z"></path> <rect class="wpzoom-rcb-print-icon" height="2" width="2" x="24" y="11"></rect> <rect class="wpzoom-rcb-print-icon" height="2" width="4" x="18" y="11"></rect> </g> </svg> <span>Print ](#wpzoom-recipe-card "Print directions...") </div> </figcaption> </figure> </div><div class="recipe-card-heading">## Roasted Carrot &amp; Fennel Salad with Herby Tofu “Feta”
 
-<span class="recipe-card-course">Course: <mark>Sides</mark></span><span class="recipe-card-difficulty">Difficulty: <mark>Easy</mark></span></div><div class="recipe-card-details"><div class="details-items"><div class="detail-item detail-item-0"><span class="detail-item-icon oldicon oldicon-food" style="color: #FFA921;"></span><span class="detail-item-label">Servings</span>4
+<span class="recipe-card-course">Course: <mark>Sides</mark><span class="recipe-card-difficulty">Difficulty: <mark>Easy</mark></div><div class="recipe-card-details"><div class="details-items"><div class="detail-item detail-item-0"><span class="detail-item-icon oldicon oldicon-food" style="color: #FFA921;"><span class="detail-item-label">Servings4
 
-<span class="detail-item-unit">servings</span></div><div class="detail-item detail-item-1"><span class="detail-item-icon oldicon oldicon-clock" style="color: #FFA921;"></span><span class="detail-item-label">Prep time</span>15
+<span class="detail-item-unit">servings</div><div class="detail-item detail-item-1"><span class="detail-item-icon oldicon oldicon-clock" style="color: #FFA921;"><span class="detail-item-label">Prep time15
 
-<span class="detail-item-unit">minutes</span></div><div class="detail-item detail-item-2"><span class="detail-item-icon foodicons foodicons-cooking-food-in-a-hot-casserole" style="color: #FFA921;"></span><span class="detail-item-label">Cooking time</span>35
+<span class="detail-item-unit">minutes</div><div class="detail-item detail-item-2"><span class="detail-item-icon foodicons foodicons-cooking-food-in-a-hot-casserole" style="color: #FFA921;"><span class="detail-item-label">Cooking time35
 
-<span class="detail-item-unit">minutes</span></div></div></div><div class="recipe-card-ingredients">### Ingredients
+<span class="detail-item-unit">minutes</div></div></div><div class="recipe-card-ingredients">### Ingredients
 
 - **For the salad**
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 fennel bulb</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 bunch carrots plus their tops (if you don’t have the tops, substitute 1 1/2 cups fresh parsley)</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 bunch scallions</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 tbsp. fresh lemon juice</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/2 cup walnuts, toasted and chopped (the original recipe calls for pistachios, which are also delicious here)</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">Extra virgin olive oil</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">Salt and pepper</span>
+- 1 fennel bulb
+- 1 bunch carrots plus their tops (if you don’t have the tops, substitute 1 1/2 cups fresh parsley)
+- 1 bunch scallions
+- 2 tbsp. fresh lemon juice
+- 1/2 cup walnuts, toasted and chopped (the original recipe calls for pistachios, which are also delicious here)
+- Extra virgin olive oil
+- Salt and pepper
 - **For the tofu feta**
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/2 of a 14-oz package of firm tofu, drained</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 tbsp. fresh lemon juice</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/2 tsp. apple cider vinegar</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 tbsp. extra virgin olive oil</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 tbsp. miso paste</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 tbsp. nutritional yeast</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/2 tsp. salt</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/2 tsp. dried rosemary</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/2 tsp. dried oregano</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">Leaves from 1 sprig fresh thyme, minced</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">A few grinds of black pepper</span>
+- 1/2 of a 14-oz package of firm tofu, drained
+- 2 tbsp. fresh lemon juice
+- 1/2 tsp. apple cider vinegar
+- 1 tbsp. extra virgin olive oil
+- 1 tbsp. miso paste
+- 1 tbsp. nutritional yeast
+- 1/2 tsp. salt
+- 1/2 tsp. dried rosemary
+- 1/2 tsp. dried oregano
+- Leaves from 1 sprig fresh thyme, minced
+- A few grinds of black pepper
 
-</div><div class="recipe-card-directions">### Directions
+### Directions
 
 - Preheat the oven to 400°F.
 - Prepare the veggies: cut the carrots, fennel, and scallions into sticks or wedges 2-3 inches long and about 1/2 inch thick. Toss in a few tbsp. of olive oil and spread onto a baking sheet. Roast for 20-25 minutes or until the veggies are nicely browned. Remove and let cool to room temp.

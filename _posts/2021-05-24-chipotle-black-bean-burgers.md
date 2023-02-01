@@ -24,28 +24,28 @@ Summary of steps:
 2. Saute onion and pepper
 3. Assemble and cook burgers
 
-<div class="wp-block-wpzoom-recipe-card-block-recipe-card header-content-align-left block-alignment-left recipe-card-noimage is-style-newdesign" id="wpzoom-recipe-card"><div class="recipe-card-image"> <figure> <figcaption><div class="wpzoom-recipe-card-print-link"> [ <svg class="wpzoom-rcb-icon-print-link" height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"> <g data-name="Layer 55" id="Layer_55"> <path class="wpzoom-rcb-print-icon" d="M28,25H25a1,1,0,0,1,0-2h3a1,1,0,0,0,1-1V10a1,1,0,0,0-1-1H4a1,1,0,0,0-1,1V22a1,1,0,0,0,1,1H7a1,1,0,0,1,0,2H4a3,3,0,0,1-3-3V10A3,3,0,0,1,4,7H28a3,3,0,0,1,3,3V22A3,3,0,0,1,28,25Z"></path> <path class="wpzoom-rcb-print-icon" d="M25,31H7a1,1,0,0,1-1-1V20a1,1,0,0,1,1-1H25a1,1,0,0,1,1,1V30A1,1,0,0,1,25,31ZM8,29H24V21H8Z"></path> <path class="wpzoom-rcb-print-icon" d="M25,9a1,1,0,0,1-1-1V3H8V8A1,1,0,0,1,6,8V2A1,1,0,0,1,7,1H25a1,1,0,0,1,1,1V8A1,1,0,0,1,25,9Z"></path> <rect class="wpzoom-rcb-print-icon" height="2" width="2" x="24" y="11"></rect> <rect class="wpzoom-rcb-print-icon" height="2" width="4" x="18" y="11"></rect> </g> </svg> <span>Print</span> ](#wpzoom-recipe-card "Print directions...") </div> </figcaption> </figure> </div><div class="recipe-card-heading">## Really Awesome Chipotle Black Bean Burgers 
+<div class="wp-block-wpzoom-recipe-card-block-recipe-card header-content-align-left block-alignment-left recipe-card-noimage is-style-newdesign" id="wpzoom-recipe-card"><div class="recipe-card-image"> <figure> <figcaption><div class="wpzoom-recipe-card-print-link"> [ <svg class="wpzoom-rcb-icon-print-link" height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"> <g data-name="Layer 55" id="Layer_55"> <path class="wpzoom-rcb-print-icon" d="M28,25H25a1,1,0,0,1,0-2h3a1,1,0,0,0,1-1V10a1,1,0,0,0-1-1H4a1,1,0,0,0-1,1V22a1,1,0,0,0,1,1H7a1,1,0,0,1,0,2H4a3,3,0,0,1-3-3V10A3,3,0,0,1,4,7H28a3,3,0,0,1,3,3V22A3,3,0,0,1,28,25Z"></path> <path class="wpzoom-rcb-print-icon" d="M25,31H7a1,1,0,0,1-1-1V20a1,1,0,0,1,1-1H25a1,1,0,0,1,1,1V30A1,1,0,0,1,25,31ZM8,29H24V21H8Z"></path> <path class="wpzoom-rcb-print-icon" d="M25,9a1,1,0,0,1-1-1V3H8V8A1,1,0,0,1,6,8V2A1,1,0,0,1,7,1H25a1,1,0,0,1,1,1V8A1,1,0,0,1,25,9Z"></path> <rect class="wpzoom-rcb-print-icon" height="2" width="2" x="24" y="11"></rect> <rect class="wpzoom-rcb-print-icon" height="2" width="4" x="18" y="11"></rect> </g> </svg> <span>Print ](#wpzoom-recipe-card "Print directions...") </div> </figcaption> </figure> </div><div class="recipe-card-heading">## Really Awesome Chipotle Black Bean Burgers 
 
-<span class="recipe-card-course">Course: <mark>Dinner</mark></span><span class="recipe-card-difficulty">Difficulty: <mark>Medium</mark></span></div><div class="recipe-card-details"><div class="details-items"><div class="detail-item detail-item-0"><span class="detail-item-icon oldicon oldicon-food" style="color: #FFA921;"></span><span class="detail-item-label">Servings</span>4
+<span class="recipe-card-course">Course: <mark>Dinner</mark><span class="recipe-card-difficulty">Difficulty: <mark>Medium</mark></div><div class="recipe-card-details"><div class="details-items"><div class="detail-item detail-item-0"><span class="detail-item-icon oldicon oldicon-food" style="color: #FFA921;"><span class="detail-item-label">Servings4
 
-<span class="detail-item-unit">servings</span></div><div class="detail-item detail-item-1"><span class="detail-item-icon oldicon oldicon-clock" style="color: #FFA921;"></span><span class="detail-item-label">Prep time</span>15
+<span class="detail-item-unit">servings</div><div class="detail-item detail-item-1"><span class="detail-item-icon oldicon oldicon-clock" style="color: #FFA921;"><span class="detail-item-label">Prep time15
 
-<span class="detail-item-unit">minutes</span></div><div class="detail-item detail-item-2"><span class="detail-item-icon foodicons foodicons-cooking-food-in-a-hot-casserole" style="color: #FFA921;"></span><span class="detail-item-label">Cooking time</span>45
+<span class="detail-item-unit">minutes</div><div class="detail-item detail-item-2"><span class="detail-item-icon foodicons foodicons-cooking-food-in-a-hot-casserole" style="color: #FFA921;"><span class="detail-item-label">Cooking time45
 
-<span class="detail-item-unit">minutes</span></div></div></div><div class="recipe-card-ingredients">### Ingredients
+<span class="detail-item-unit">minutes</div></div></div><div class="recipe-card-ingredients">### Ingredients
 
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1.5 cups black beans, soaked for 8+ hours (see notes if using canned beans)</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 yellow onion, diced</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 poblano pepper, diced</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">3 cloves of garlic, minced</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 chipotle chili in adobo sauce, minced, plus extra sauce to taste</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">3/4 cup roasted cashews</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">3/4 cup panko bread crumbs</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 vegan egg – such as flax egg (see notes) or from an [egg replacer](https://www.bobsredmill.com/gluten-free-vegan-egg-replacer.html) (optional, but helps with binding)</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">Salt and pepper</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">Avocado oil</span>
+- 1.5 cups black beans, soaked for 8+ hours (see notes if using canned beans)
+- 1 yellow onion, diced
+- 1 poblano pepper, diced
+- 3 cloves of garlic, minced
+- 1 chipotle chili in adobo sauce, minced, plus extra sauce to taste
+- 3/4 cup roasted cashews
+- 3/4 cup panko bread crumbs
+- 1 vegan egg – such as flax egg (see notes) or from an [egg replacer](https://www.bobsredmill.com/gluten-free-vegan-egg-replacer.html) (optional, but helps with binding)
+- Salt and pepper
+- Avocado oil
 
-</div><div class="recipe-card-directions">### Directions
+### Directions
 
 - Drain, rinse, and cook the black beans until done (this will vary depending on your cooking method. In our case, this was 18 minutes in the Instant Pot followed by a 10-minute natural release then quick release). Once cooked, drain the beans and set aside.
 - While the beans cook, heat a tbsp. of avocado oil in a frying pan over medium-high heat. When hot, add the diced onion and pepper and cook for about 5 minutes. Then add the garlic and cook for another minute or two. Finally, add the diced chipotle chili and cook for 30 seconds, stirring to combine. Remove and place the mixture in a large mixing bowl.
@@ -55,7 +55,7 @@ Summary of steps:
 - In a frying pan with a tbsp. of avocado oil over medium heat, cook patties for 4-5 minutes per side, flipping carefully.
 - Serve burgers either on buns or bunless and top with your favorite condiments (we love a spicy brown mustard here).
 
-</div><div class="recipe-card-notes">### Notes
+### Notes
 
 - 1. We primarily cook our beans from dry, and have not tested this recipe with canned beans which have a much different texture. My recommendation if using canned beans: dehydrate 3 cans’ worth of black beans in the oven (as suggested in the original recipe) for about 10 minutes at 350°F to avoid the burgers just turning into a mush. Try not to dry them out too much, or the burgers may not hold together.
 - 2. To make a flax egg, mix 1 tbsp. of ground flaxseeds with 2.5 tbsp. water and let sit for about 5 minutes until thickened.

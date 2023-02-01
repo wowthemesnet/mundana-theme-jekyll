@@ -28,50 +28,50 @@ Summary of steps:
 4. Blind bake dough
 5. Assemble flatbread and finish baking
 
-<div class="wp-block-wpzoom-recipe-card-block-recipe-card header-content-align-left block-alignment-left recipe-card-noimage is-style-newdesign" id="wpzoom-recipe-card"><div class="recipe-card-image"> <figure> ![Roasted Vegetable Flatbread with Pesto & Almond Ricotta](https://i0.wp.com/plantifull.co/wp-content/uploads/2021/04/Flatbread-with-Pesto-Almond-Ricotta_sm.jpg?resize=800%2C530&ssl=1) <figcaption><div class="wpzoom-recipe-card-print-link"> [ <svg class="wpzoom-rcb-icon-print-link" height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"> <g data-name="Layer 55" id="Layer_55"> <path class="wpzoom-rcb-print-icon" d="M28,25H25a1,1,0,0,1,0-2h3a1,1,0,0,0,1-1V10a1,1,0,0,0-1-1H4a1,1,0,0,0-1,1V22a1,1,0,0,0,1,1H7a1,1,0,0,1,0,2H4a3,3,0,0,1-3-3V10A3,3,0,0,1,4,7H28a3,3,0,0,1,3,3V22A3,3,0,0,1,28,25Z"></path> <path class="wpzoom-rcb-print-icon" d="M25,31H7a1,1,0,0,1-1-1V20a1,1,0,0,1,1-1H25a1,1,0,0,1,1,1V30A1,1,0,0,1,25,31ZM8,29H24V21H8Z"></path> <path class="wpzoom-rcb-print-icon" d="M25,9a1,1,0,0,1-1-1V3H8V8A1,1,0,0,1,6,8V2A1,1,0,0,1,7,1H25a1,1,0,0,1,1,1V8A1,1,0,0,1,25,9Z"></path> <rect class="wpzoom-rcb-print-icon" height="2" width="2" x="24" y="11"></rect> <rect class="wpzoom-rcb-print-icon" height="2" width="4" x="18" y="11"></rect> </g> </svg> <span>Print</span> ](#wpzoom-recipe-card "Print directions...") </div> </figcaption> </figure> </div><div class="recipe-card-heading">## Roasted Vegetable Flatbread with Pesto &amp; Almond Ricotta
+<div class="wp-block-wpzoom-recipe-card-block-recipe-card header-content-align-left block-alignment-left recipe-card-noimage is-style-newdesign" id="wpzoom-recipe-card"><div class="recipe-card-image"> <figure> ![Roasted Vegetable Flatbread with Pesto & Almond Ricotta](https://i0.wp.com/plantifull.co/wp-content/uploads/2021/04/Flatbread-with-Pesto-Almond-Ricotta_sm.jpg?resize=800%2C530&ssl=1) <figcaption><div class="wpzoom-recipe-card-print-link"> [ <svg class="wpzoom-rcb-icon-print-link" height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"> <g data-name="Layer 55" id="Layer_55"> <path class="wpzoom-rcb-print-icon" d="M28,25H25a1,1,0,0,1,0-2h3a1,1,0,0,0,1-1V10a1,1,0,0,0-1-1H4a1,1,0,0,0-1,1V22a1,1,0,0,0,1,1H7a1,1,0,0,1,0,2H4a3,3,0,0,1-3-3V10A3,3,0,0,1,4,7H28a3,3,0,0,1,3,3V22A3,3,0,0,1,28,25Z"></path> <path class="wpzoom-rcb-print-icon" d="M25,31H7a1,1,0,0,1-1-1V20a1,1,0,0,1,1-1H25a1,1,0,0,1,1,1V30A1,1,0,0,1,25,31ZM8,29H24V21H8Z"></path> <path class="wpzoom-rcb-print-icon" d="M25,9a1,1,0,0,1-1-1V3H8V8A1,1,0,0,1,6,8V2A1,1,0,0,1,7,1H25a1,1,0,0,1,1,1V8A1,1,0,0,1,25,9Z"></path> <rect class="wpzoom-rcb-print-icon" height="2" width="2" x="24" y="11"></rect> <rect class="wpzoom-rcb-print-icon" height="2" width="4" x="18" y="11"></rect> </g> </svg> <span>Print ](#wpzoom-recipe-card "Print directions...") </div> </figcaption> </figure> </div><div class="recipe-card-heading">## Roasted Vegetable Flatbread with Pesto &amp; Almond Ricotta
 
-<span class="recipe-card-course">Course: <mark>Dinner</mark></span><span class="recipe-card-difficulty">Difficulty: <mark>Medium</mark></span></div><div class="recipe-card-details"><div class="details-items"><div class="detail-item detail-item-0"><span class="detail-item-icon oldicon oldicon-food" style="color: #FFA921;"></span><span class="detail-item-label">Servings</span>4
+<span class="recipe-card-course">Course: <mark>Dinner</mark><span class="recipe-card-difficulty">Difficulty: <mark>Medium</mark></div><div class="recipe-card-details"><div class="details-items"><div class="detail-item detail-item-0"><span class="detail-item-icon oldicon oldicon-food" style="color: #FFA921;"><span class="detail-item-label">Servings4
 
-<span class="detail-item-unit">servings</span></div><div class="detail-item detail-item-1"><span class="detail-item-icon oldicon oldicon-clock" style="color: #FFA921;"></span><span class="detail-item-label">Prep time</span>30
+<span class="detail-item-unit">servings</div><div class="detail-item detail-item-1"><span class="detail-item-icon oldicon oldicon-clock" style="color: #FFA921;"><span class="detail-item-label">Prep time30
 
-<span class="detail-item-unit">minutes</span></div><div class="detail-item detail-item-2"><span class="detail-item-icon foodicons foodicons-cooking-food-in-a-hot-casserole" style="color: #FFA921;"></span><span class="detail-item-label">Cooking time</span>35
+<span class="detail-item-unit">minutes</div><div class="detail-item detail-item-2"><span class="detail-item-icon foodicons foodicons-cooking-food-in-a-hot-casserole" style="color: #FFA921;"><span class="detail-item-label">Cooking time35
 
-<span class="detail-item-unit">minutes</span></div></div></div><div class="recipe-card-ingredients">### Ingredients
+<span class="detail-item-unit">minutes</div></div></div><div class="recipe-card-ingredients">### Ingredients
 
 - **For the flatbread dough**
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 tsp. active dry yeast</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">3 tbsp. extra virgin olive oil</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 cups all purpose flour</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">3/4 tsp. salt</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2/3 cup lukewarm water</span>
+- 2 tsp. active dry yeast
+- 3 tbsp. extra virgin olive oil
+- 2 cups all purpose flour
+- 3/4 tsp. salt
+- 2/3 cup lukewarm water
 - **For the almond ricotta**
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 1/2 cups slivered blanched almonds, soaked for 2 hours</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/2 cup water</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/2 tsp. salt</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 tsp. nutritional yeast</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 1/2 tbsp. fresh lemon juice</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">Dash of garlic powder</span>
+- 1 1/2 cups slivered blanched almonds, soaked for 2 hours
+- 1/2 cup water
+- 1/2 tsp. salt
+- 2 tsp. nutritional yeast
+- 1 1/2 tbsp. fresh lemon juice
+- Dash of garlic powder
 - **For the white bean sauce**
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 cups cooked cannellini or other white bean</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/2 tsp. nutritional yeast</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 tbsp. fresh lemon juice</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 tsp. extra virgin olive oil</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/3 cup water</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">Up to 1 tsp. salt</span>
+- 2 cups cooked cannellini or other white bean
+- 1/2 tsp. nutritional yeast
+- 1 tbsp. fresh lemon juice
+- 2 tsp. extra virgin olive oil
+- 1/3 cup water
+- Up to 1 tsp. salt
 - **For the basil pesto**
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">3 cloves garlic</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">3/4 cup walnuts</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">4-5 cups fresh basil</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 tbsp. nutritional yeast</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">3/4 tsp. salt</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">6 tbsp. extra virgin olive oil</span>
+- 3 cloves garlic
+- 3/4 cup walnuts
+- 4-5 cups fresh basil
+- 2 tbsp. nutritional yeast
+- 3/4 tsp. salt
+- 6 tbsp. extra virgin olive oil
 - **For the roasted veggies**
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 red onion, chopped</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 broccoli crowns, cut into small florets</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 pint cherry tomatoes, sliced in half</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">Extra virgin olive oil</span>
+- 1 red onion, chopped
+- 2 broccoli crowns, cut into small florets
+- 1 pint cherry tomatoes, sliced in half
+- Extra virgin olive oil
 
-</div><div class="recipe-card-directions">### Directions
+### Directions
 
 - Preheat the oven to 400°F.
 - **Prepare the dough**

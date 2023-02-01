@@ -23,27 +23,27 @@ Summary of steps:
 
 <div class="wp-block-wpzoom-recipe-card-block-recipe-card header-content-align-left block-alignment-left recipe-card-noimage recipe-card-noimage is-style-newdesign" id="wpzoom-recipe-card"><div class="recipe-card-heading">## Best Chickpea Tahini Hummus
 
-<span class="recipe-card-course">Course: <mark>Sides</mark></span><span class="recipe-card-difficulty">Difficulty: <mark>Easy</mark></span></div><div class="recipe-card-details"><div class="details-items"><div class="detail-item detail-item-1"><span class="detail-item-icon oldicon oldicon-clock" style="color: #FFA921;"></span><span class="detail-item-label">Prep time</span>5
+<span class="recipe-card-course">Course: <mark>Sides</mark><span class="recipe-card-difficulty">Difficulty: <mark>Easy</mark></div><div class="recipe-card-details"><div class="details-items"><div class="detail-item detail-item-1"><span class="detail-item-icon oldicon oldicon-clock" style="color: #FFA921;"><span class="detail-item-label">Prep time5
 
-<span class="detail-item-unit">minutes</span></div><div class="detail-item detail-item-2"><span class="detail-item-icon foodicons foodicons-cooking-food-in-a-hot-casserole" style="color: #FFA921;"></span><span class="detail-item-label">Cooking time</span>40
+<span class="detail-item-unit">minutes</div><div class="detail-item detail-item-2"><span class="detail-item-icon foodicons foodicons-cooking-food-in-a-hot-casserole" style="color: #FFA921;"><span class="detail-item-label">Cooking time40
 
-<span class="detail-item-unit">minutes</span></div></div></div><div class="recipe-card-ingredients">### Ingredients
+<span class="detail-item-unit">minutes</div></div></div><div class="recipe-card-ingredients">### Ingredients
 
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1.5 cups dried chickpeas, soaked overnight or for ~8 hours\*</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/2 cup tahini paste</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">4 tbsp. fresh lemon juice</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">4 cloves garlic</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">6-10 tbsp. ice cold water</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1.5 tsp salt</span>
+- 1.5 cups dried chickpeas, soaked overnight or for ~8 hours\*
+- 1/2 cup tahini paste
+- 4 tbsp. fresh lemon juice
+- 4 cloves garlic
+- 6-10 tbsp. ice cold water
+- 1.5 tsp salt
 
-</div><div class="recipe-card-directions">### Directions
+### Directions
 
 - Drain and rinse the soaked chickpeas. Then cook them, either in an Instant Pot as we do or on the stovetop. For Instant Pot, add enough water to cover the beans by an inch or two and cook on high pressure for about 30 minutes (time may vary depending on your chickpeas and which IP you have). Let slow release for 10 minutes before depressuring, then drain the beans. \[Note: if using canned chickpeas simply drain and rinse them\]
 - Add the garlic cloves to the bowl of a food processor and pulse to dice them. Then add the chickpeas, tahini, lemon juice, 4 tbsp. of the ice water, and salt and puree.
 - Continue to puree, drizzling in ice water slowly until the hummus has reached your desired consistency. Taste and add more salt as needed.
 - Serve with a drizzle of olive oil and a few shakes of zaatar seasoning alongside your favorite dippers or atop toasted sourdough bread.
 
-</div><div class="recipe-card-notes">### Notes
+### Notes
 
 - \*2 15-oz. cans of cooked chickpeas can be substituted here. When making the hummus, start with a bit less water if using canned beans.
 

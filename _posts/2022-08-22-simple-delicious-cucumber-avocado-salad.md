@@ -24,22 +24,22 @@ Summary of steps:
 
 <div class="wp-block-wpzoom-recipe-card-block-recipe-card header-content-align-left block-alignment-left recipe-card-noimage recipe-card-noimage is-style-newdesign" id="wpzoom-recipe-card"><div class="recipe-card-heading">## Herby Cucumber Avocado Salad
 
-<span class="recipe-card-course">Course: <mark>Sides</mark></span><span class="recipe-card-difficulty">Difficulty: <mark>Easy</mark></span></div><div class="recipe-card-details"><div class="details-items"><div class="detail-item detail-item-0"><span class="detail-item-icon oldicon oldicon-food" style="color: #FFA921;"></span><span class="detail-item-label">Servings</span>4
+<span class="recipe-card-course">Course: <mark>Sides</mark><span class="recipe-card-difficulty">Difficulty: <mark>Easy</mark></div><div class="recipe-card-details"><div class="details-items"><div class="detail-item detail-item-0"><span class="detail-item-icon oldicon oldicon-food" style="color: #FFA921;"><span class="detail-item-label">Servings4
 
-<span class="detail-item-unit">servings</span></div><div class="detail-item detail-item-1"><span class="detail-item-icon oldicon oldicon-clock" style="color: #FFA921;"></span><span class="detail-item-label">Prep time</span>10
+<span class="detail-item-unit">servings</div><div class="detail-item detail-item-1"><span class="detail-item-icon oldicon oldicon-clock" style="color: #FFA921;"><span class="detail-item-label">Prep time10
 
-<span class="detail-item-unit">minutes</span></div><div class="detail-item detail-item-2"><span class="detail-item-icon foodicons foodicons-cooking-food-in-a-hot-casserole" style="color: #FFA921;"></span><span class="detail-item-label">Cooking time</span><span class="detail-item-unit">minutes</span></div></div></div><div class="recipe-card-ingredients">### Ingredients
+<span class="detail-item-unit">minutes</div><div class="detail-item detail-item-2"><span class="detail-item-icon foodicons foodicons-cooking-food-in-a-hot-casserole" style="color: #FFA921;"><span class="detail-item-label">Cooking time<span class="detail-item-unit">minutes</div></div></div><div class="recipe-card-ingredients">### Ingredients
 
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 medium cucumbers, chopped into ~1/2-inch cubes</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">3 scallions, thinly sliced OR 1/4 cup white onion, small diced</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 large avocado, diced</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/4 cup raw cashews, soaked for 4+ hours</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 tbsp. lime juice</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 tsp. Sriracha or other hot sauce</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/4 tsp. salt</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/4 cup flat leaf parsley, chopped</span>
+- 2 medium cucumbers, chopped into ~1/2-inch cubes
+- 3 scallions, thinly sliced OR 1/4 cup white onion, small diced
+- 1 large avocado, diced
+- 1/4 cup raw cashews, soaked for 4+ hours
+- 1 tbsp. lime juice
+- 1 tsp. Sriracha or other hot sauce
+- 1/4 tsp. salt
+- 1/4 cup flat leaf parsley, chopped
 
-</div><div class="recipe-card-directions">### Directions
+### Directions
 
 - Prepare the dressing: in a high-speed blender, combine the raw cashews with 2 tbsp. of water, the lime juice, Sriracha, and salt. Blend until smooth, adding more water to reach your desired consistency.
 - Combine all ingredients and fold together. Adjust salt and seasonings as needed.

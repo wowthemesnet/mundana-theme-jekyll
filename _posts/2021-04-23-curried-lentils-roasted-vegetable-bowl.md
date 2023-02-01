@@ -27,34 +27,34 @@ Summary of steps:
 
 <div class="wp-block-wpzoom-recipe-card-block-recipe-card header-content-align-left block-alignment-left recipe-card-noimage is-style-newdesign" id="wpzoom-recipe-card"><div class="recipe-card-image"> <figure> ![Curried Lentils and Roasted Vegetable Bowl](https://i0.wp.com/plantifull.co/wp-content/uploads/2021/04/Curried-Lentil-Bowl_sm.jpg?resize=800%2C530&ssl=1) <figcaption> </figcaption> </figure> </div><div class="recipe-card-heading">## Curried Lentils and Roasted Vegetable Bowl 
 
-<span class="recipe-card-course">Course: <mark>Lunch</mark></span><span class="recipe-card-difficulty">Difficulty: <mark>Easy</mark></span></div><div class="recipe-card-details"><div class="details-items"><div class="detail-item detail-item-0"><span class="detail-item-icon oldicon oldicon-food" style="color: #FFA921;"></span><span class="detail-item-label">Servings</span>8
+<span class="recipe-card-course">Course: <mark>Lunch</mark><span class="recipe-card-difficulty">Difficulty: <mark>Easy</mark></div><div class="recipe-card-details"><div class="details-items"><div class="detail-item detail-item-0"><span class="detail-item-icon oldicon oldicon-food" style="color: #FFA921;"><span class="detail-item-label">Servings8
 
-<span class="detail-item-unit">servings</span></div><div class="detail-item detail-item-1"><span class="detail-item-icon oldicon oldicon-clock" style="color: #FFA921;"></span><span class="detail-item-label">Prep time</span>10
+<span class="detail-item-unit">servings</div><div class="detail-item detail-item-1"><span class="detail-item-icon oldicon oldicon-clock" style="color: #FFA921;"><span class="detail-item-label">Prep time10
 
-<span class="detail-item-unit">minutes</span></div><div class="detail-item detail-item-2"><span class="detail-item-icon foodicons foodicons-cooking-food-in-a-hot-casserole" style="color: #FFA921;"></span><span class="detail-item-label">Cooking time</span>40
+<span class="detail-item-unit">minutes</div><div class="detail-item detail-item-2"><span class="detail-item-icon foodicons foodicons-cooking-food-in-a-hot-casserole" style="color: #FFA921;"><span class="detail-item-label">Cooking time40
 
-<span class="detail-item-unit">minutes</span></div></div></div><div class="recipe-card-ingredients">### Ingredients
+<span class="detail-item-unit">minutes</div></div></div><div class="recipe-card-ingredients">### Ingredients
 
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">3 medium sweet potatoes, sliced and then cut into quarter-moons</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">3 crowns broccoli, cut into florets</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">5 cups kale, chopped</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 cups brown rice or other grain</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">Extra virgin olive oil</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">Salt and pepper</span>
+- 3 medium sweet potatoes, sliced and then cut into quarter-moons
+- 3 crowns broccoli, cut into florets
+- 5 cups kale, chopped
+- 2 cups brown rice or other grain
+- Extra virgin olive oil
+- Salt and pepper
 - **For the lentils**
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">2 1/2 cups dried red lentils, rinsed</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 yellow onion, diced</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 tbsp. minced garlic</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 tbsp. grated ginger</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 1/4 tsp. curry powder</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/2 tsp. ground cumin</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/2 tsp. ground turmeric</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/2 tsp. cayenne pepper</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 1/4 tsp. salt</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1/4 cup soy sauce or tamari</span>
-- <span class="tick-circle" style="border: 2px solid #FFA921;"></span><span class="wpzoom-rcb-ingredient-name">1 14-oz. can unsweetened coconut milk</span>
+- 2 1/2 cups dried red lentils, rinsed
+- 1 yellow onion, diced
+- 1 tbsp. minced garlic
+- 1 tbsp. grated ginger
+- 1 1/4 tsp. curry powder
+- 1/2 tsp. ground cumin
+- 1/2 tsp. ground turmeric
+- 1/2 tsp. cayenne pepper
+- 1 1/4 tsp. salt
+- 1/4 cup soy sauce or tamari
+- 1 14-oz. can unsweetened coconut milk
 
-</div><div class="recipe-card-directions">### Directions
+### Directions
 
 - **Roast the vegetables**
 - Toss the prepared sweet potatoes in a tbsp. or so of olive oil and spread in a single layer on two sheet pans. Repeat with the broccoli florets. Roast in a 400°F oven for 20-30 minutes until your desired level of roastiness. Toss in salt and pepper to taste.

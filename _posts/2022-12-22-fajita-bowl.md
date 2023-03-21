@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mushroom Fajita Bowl with Cashew Queso"
-author: Cari
+author: cari
 categories: [lunch]
 permalink: /mushroom-fajita-bowl/
 image: assets/images/Fajita Bowl.jpg

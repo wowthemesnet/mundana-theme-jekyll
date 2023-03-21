@@ -1,7 +1,7 @@
 ---
 title: 'Instant Pot Lentil Soup with Coconut and Sweet Potatoes'
 date: '2022-03-07T23:53:26+00:00'
-author: Cari
+author: cari
 layout: post
 permalink: /instant-pot-lentil-soup/
 image: assets/images/Lentil Sweet Potato Soup.jpg
@@ -10,6 +10,7 @@ tags:
     - '30-minutes or less'
     - lentils
     - 'sweet potato'
+    - featured
 ---
 
 This is one of our go-to winter weeknight soups – it’s hearty and warming from the sweet potatoes, coconut milk, and ginger. Best of all, it comes together quickly and with minimal clean-up thanks to the Instant Pot! The recipe is adapted for the Instant Pot with minimal changes from Laura Wright’s original slow cooker [Golden Lentil Soup](https://thefirstmess.com/2017/11/15/slow-golden-lentil-soup-recipe/#recipe "Golden Lentil Soup"). We serve this simply with toasted sourdough bread.

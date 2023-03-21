@@ -4,7 +4,7 @@ title: "Umami Power Bowl"
 author: cari
 categories: [lunch]
 permalink: /umami-power-bowl/
-image: assets/images/Umami Power Bowl.jpg
+image: assets/images/umami-power-bowl.jpg
 ---
 
 A simple and satisfying lunch that is very meal-preppable, this bowl leans on a rich umami sauce adapted from [Andrew Weil](https://www.drweil.com/diet-nutrition/recipes/umami-sauce/). A variety of beans or pulses can be used with great results, and we encourage you to experiment with different roasted veggies too!

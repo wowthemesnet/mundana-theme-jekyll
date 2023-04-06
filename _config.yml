@@ -1,6 +1,6 @@
 # Site
-name: 'Mundana'
-description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+name: 'Computational Biology Blog'
+description: 'A scientist is happy, not in resting on his attainments but in the steady acquisition of fresh knowledge - Max Planck'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: '/mundana-theme-jekyll'

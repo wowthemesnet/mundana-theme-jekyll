@@ -4,6 +4,7 @@ description: 'A scientist is happy, not in resting on his attainments but in the
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 disqus: 'demowebsite'
+url: 'https://YubeenKim.github.io'
 email: 'oilbeen@snu.ac.kr'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
@@ -18,10 +19,10 @@ plugins:
   - jekyll-seo-tag
   
 authors:
-    sal:
+    YubeenKim:
       name:           Yubeen Kim
       site:           https://YubeenKim.github.io
-      avatar:         /assets/images/Profile1.png
+      avatar:         assets/images/Profile1.png
       bio:            "Hi, I am Yubeen, MSc student of Chemistry in SNU!"
       email:          oilbeen@snu.ac.kr
       twitter:        

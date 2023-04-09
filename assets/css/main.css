@@ -3222,6 +3222,7 @@ input[type="button"].btn-block {
     .custom-select {
       transition: none; } }
 
+      
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -8460,3 +8461,4 @@ html {
     align-self: baseline !important; }
   .align-self-xl-stretch {
     align-self: stretch !important; } }
+

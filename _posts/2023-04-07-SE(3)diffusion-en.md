@@ -3,11 +3,11 @@ layout: post
 title:  "SE(3) diffusion model with application to protein backbone generation"
 categories: [ Paper, Diffusion]
 image: https://media.arxiv-vanity.com/render-output/7307362/figures/framediff_overview.png
-lang: ko
+lang: en
 permalink: /_posts/SE(3)diffusion
 ---
 
-이 포스트는 한글로 작성되었습니다.
+This post is written by English.
 
 {% highlight ruby %}
 def print_hi(name)

@@ -3,11 +3,11 @@ layout: post
 title:  "SE(3) diffusion model with application to protein backbone generation"
 categories: [ Paper ]
 image: https://media.arxiv-vanity.com/render-output/7307362/figures/framediff_overview.png
-lang: ko
+lang: en
 permalink: /_posts/SE(3)diffusion
 ---
 
-이건 한국버전입니다.
+This is English version.
 
 Jekyll also offers powerful support for code snippets:
 

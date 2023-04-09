@@ -17,6 +17,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-polyglot
   
 authors:
     YubeenKim:
@@ -51,7 +52,10 @@ highlighter: rouge
 # Paginate
 paginate: 10
 
-
+languages: ["en", "ko"]
+default_lang: "ko"
+exclude_from_localization: ["assets"]
+parallel_localization: true
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
 exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]

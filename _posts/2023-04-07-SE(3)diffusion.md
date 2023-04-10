@@ -7,7 +7,9 @@ lang: ko
 permalink: /_posts/SE(3)diffusion
 ---
 
-이 포스트는 한글로 작성되었습니다.
+
+이건 한국버전입니다.
+
 
 {% highlight ruby %}
 def print_hi(name)

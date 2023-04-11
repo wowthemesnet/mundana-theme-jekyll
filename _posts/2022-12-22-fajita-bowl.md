@@ -4,12 +4,13 @@ title: "Mushroom Fajita Bowl with Cashew Queso"
 author: cari
 categories: [lunch]
 permalink: /mushroom-fajita-bowl/
-image: assets/images/Fajita Bowl.jpg
+image: assets/images/Fajita-Bowl.jpg
 tags:
     - mushrooms
     - black beans
     - Tex-Mex
-    - featured
+    - sticky
+    - gluten-free
 ---
 
 When we visited Los Angeles last year, we ate at the wonderful [Gracias Madre](https://graciasmadre.com/) and enjoyed some of the best vegan food I've ever tasted. Naturally when they published a [cookbook](https://www.penguinrandomhouse.com/books/609430/the-gracias-madre-cookbook-by-gracias-madre/) it was a no-brainer to add this to our bookshelf! The fajitas that inspired this lunch bowl are deceptively delicious for the low effort involved, and pair wonderfully with an oil-free cashew queso plus a few other simple components like beans and rice.

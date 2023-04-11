@@ -10,6 +10,7 @@ tags:
     - chickpeas
     - curry
     - Indian
+    - featured
 ---
 
 This is one of the simplest recipes we make, involving very few steps (as you’ll see below) and mostly pantry ingredients, but it’s a favorite nonetheless – filling from the chickpeas hearty with coconut milk and spices. Inspiration came from a curry recipe on [Smitten Kitchen](https://smittenkitchen.com/2019/10/chicken-curry/). We enjoy this curry over rice and alongside a roasted vegetable in the winter, or a fresh salad in summer (it’s pictured here with a lovely shaved asparagus salad courtesy of Bryant Terry’s [Vegetable Kingdom](https://www.bryant-terry.com/allbooks)).

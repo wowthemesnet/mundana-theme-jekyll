@@ -5,8 +5,8 @@ logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: 'https://daddyblondlegs.github.io/'
 disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+email: 'daddyblondlegs@gmail.com'
+mailchimp-list: 
 
 include: ["_pages"]
 permalink: /:title/
@@ -20,20 +20,12 @@ plugins:
   
 authors:
     sal:
-      name:           Sal
+      name:           Daddy
       site:           https://daddyblondlegs.github.io/
       avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
-      email:          wowthemesnet@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
-
-    jane:
-      name:           Jane
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar2.jpg
-      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
-      email:          fakemail@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
+      bio:            "Get me outta here!"
+      email:          daddyblondlegs@gmail.com
+      twitter:        https://twitter.com/daddyblondlegs
  
 # Defaults
 defaults:
@@ -43,7 +35,7 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: sal
+      author: Daddy
       avatar: /assets/images/avatar1.jpg
       
   # all pages

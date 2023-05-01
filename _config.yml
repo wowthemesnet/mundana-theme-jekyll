@@ -1,6 +1,6 @@
 # Site
-name: '스핀스핀'
-description: '좋아하는 이야기를 나누는 즐거움!'
+name: "스핀스핀"
+description: "좋아하는 이야기를 나누는 즐거움!"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 url: "https://mimume.github.io"

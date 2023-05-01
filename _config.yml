@@ -1,58 +1,68 @@
 # Site
 name: "스핀스핀"
 description: "좋아하는 이야기를 나누는 즐거움!"
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/favicon.ico'
+logo: "assets/images/logo.png"
+favicon: "assets/images/favicon.ico"
 url: "https://mimume.github.io"
 baseurl: ""
-disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+disqus: "demowebsite"
+email: "wowthemesnet@gmail.com"
+mailchimp-list: "https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b"
 
 include: ["_pages"]
 permalink: /:title/
 
 # Plugins
-plugins: 
+plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
-  
-authors:
-    sal:
-      name:           Sal
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
-      email:          wowthemesnet@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
 
-    jane:
-      name:           Jane
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar2.jpg
-      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
-      email:          fakemail@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
- 
+authors:
+  mimu:
+    name: Mimu
+    site: https://www.wowthemes.net
+    avatar: /assets/images/avatar1.jpg
+    role: "집념의 Product Designer"
+    bio: "안녕하세요! 미무예요. 만화, 애니메이션, 뮤지컬 등 세상의 모든 이야기를 좋아해요. 가장 자존심 상하는 일은 내가 모르는 콘텐츠가 있다는 것!"
+    email: mimu@spinspin.net
+    twitter: https://twitter.com/wowthemesnet
+
+  ky:
+    name: Ky
+    site: https://www.wowthemes.net
+    avatar: /assets/images/avatar2.jpg
+    role: "Developer"
+    bio: "저는 카이입니다."
+    email: ky@spinspin.net
+    twitter: https://twitter.com/wowthemesnet
+
+  hanna:
+    name: Hanna
+    site: https://www.wowthemes.net
+    avatar: /assets/images/avatar2.jpg
+    role: "Developer"
+    bio: "저는 한나입니다."
+    email: hanna@spinspin.net
+    twitter: https://twitter.com/wowthemesnet
+
 # Defaults
 defaults:
-
   # all posts
   - scope:
       path: "_posts"
     values:
       layout: post
-      author: sal
+      author: mimu
       avatar: /assets/images/avatar1.jpg
-      
+
   # all pages
   - scope:
       path: "_pages"
     values:
       layout: page
-      
+
 # Syntax
 markdown: kramdown
 highlighter: rouge
@@ -60,7 +70,13 @@ highlighter: rouge
 # Paginate
 paginate: 10
 
-
-
 # Exclude metadata and development time dependencies (like Grunt plugins)
-exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+exclude:
+  [
+    README.markdown,
+    package.json,
+    grunt.js,
+    Gruntfile.js,
+    Gruntfile.coffee,
+    node_modules,
+  ]

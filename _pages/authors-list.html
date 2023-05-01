@@ -1,11 +1,15 @@
 ---
-title: "Authors"
+title: "스핀스핀을 만들고 있어요🪴"
 layout: default
 permalink: "/authors-list.html"
 ---
 
 <div class="container">
+    <div class="makers-introduction-wrapper">
+        <div class="makers-introduction">
+            
 <h4 class="font-weight-bold spanborder"><span>{{page.title}}</span></h4>
+<div class="makers-introduction-list">
     <div class="row gap-y listrecent listrecent listauthor">
     {% for author in site.authors %}
         <div class="col-lg-6 mb-4">
@@ -15,7 +19,8 @@ permalink: "/authors-list.html"
             <div class="col-md-9">
             <a href="{{site.baseurl}}/author-{{ author[1].name | slugify }}">
             <h4 class="text-dark mb-0"> {{ author[1].name }} </h4>
-            <small class="d-inline-block mt-1 mb-3 font-weight-normal">(View Posts)</small>
+            <div class="excerpt" style="margin-top: 4px; font-size:medium; color:#333;">{{author[1].role}}</div>
+            <small class="d-inline-block mt-1 mb-3 font-weight-normal">(작성글 보기)</small>
             <div class="excerpt">{{ author[1].bio }}</div>
             </a>
             <div class="icon-block mt-3 d-flex justify-content-between">  
@@ -26,8 +31,13 @@ permalink: "/authors-list.html"
             </div>
             </div>
             </div>
-            </div>
         </div>
-    {% endfor %}
+        </div>
+        {% endfor %}
+        </div>
+        
     </div>
+    
+    </div>
+</div>
 </div>

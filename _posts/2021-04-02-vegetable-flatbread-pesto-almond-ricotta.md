@@ -1,5 +1,5 @@
 ---
-title: 'Roasted Vegetable Flatbread with Pesto &#038; Almond Ricotta'
+title: 'Roasted Vegetable Flatbread with Pesto and Almond Ricotta'
 date: '2021-04-02T21:52:51+00:00'
 author: Cari
 layout: post
@@ -7,7 +7,6 @@ permalink: /vegetable-flatbread-pesto-almond-ricotta/
 image: assets/images/Flatbread.jpg
 categories: [dinner]
 tags:
-    - flatbread
     - Italian
     - pesto
     - featured

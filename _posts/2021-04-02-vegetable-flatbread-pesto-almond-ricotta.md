@@ -8,7 +8,7 @@ image: assets/images/Flatbread.jpg
 categories: [dinner]
 tags:
     - Italian
-    - pesto
+    - white beans
     - featured
 ---
 

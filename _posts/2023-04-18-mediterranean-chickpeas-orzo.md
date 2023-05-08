@@ -6,7 +6,7 @@ categories: [lunch]
 permalink: /mediterranean-orzo-bowl/
 image: assets/images/mediterranean-bowl-orzo.jpg
 tags:
-    - mediterranean
+    - Mediterranean
     - chickpeas
     - '30-minutes or less'
 ---

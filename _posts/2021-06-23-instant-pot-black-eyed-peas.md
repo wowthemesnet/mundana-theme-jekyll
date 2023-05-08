@@ -7,10 +7,9 @@ permalink: /instant-pot-black-eyed-peas/
 image: assets/images/Black Eyed Peas.jpg
 categories: [dinner]
 tags:
-    - 'black-eyed peas'
-    - 'butternut squash'
-    - greens
-    - 'instant pot'
+    - instant pot
+    - gluten-free
+    - summer
 ---
 
 This recipe, based on Bryant Terry’s original from [Vegetable Kingdom](https://www.bryant-terry.com/allbooks), is deceptively delicious. For a seemingly simple preparation, the flavors and textures in this dish combine to create a lot of depth without feeling like a heavy meal – perfect for summer. We’ve adapted the recipe to be Instant Pot (and weeknight) friendly, and swapped in butternut squash for delicata as it tends to be easier to find at our grocery store. I’d guess that a variety of sturdy roasted options like squash or root veg would work well in this dish! To stretch this for more meals, we would serve this over a whole grain like millet.

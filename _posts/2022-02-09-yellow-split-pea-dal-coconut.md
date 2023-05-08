@@ -9,7 +9,8 @@ categories: [dinner]
 tags:
     - '30-minutes or less'
     - Indian
-    - 'split peas'
+    - gluten-free
+    - curry
 ---
 
 This beautiful bright yellow dal is a crowd pleaser. With warming spice from the cinnamon sticks, pops of brightness from the cardamom seeds, and toasted coconut it’s a perfect winter meal. I’m thrilled to be working my way through [Richa Hingle’s cookbook](https://www.veganricha.com/vegan-richas-indian-kitchen-cookbook/ "Richa Hingle's cookbook") and this is one I’ve already made a handful of times, with only a few minor tweaks including cooking the split peas in the Instant Pot to speed things up. Serve this over rice and alongside your choice of veg – it’s shown here with a cauliflower and carrot dish from the same cookbook.

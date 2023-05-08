@@ -6,10 +6,10 @@ layout: post
 permalink: /simple-delicious-cucumber-avocado-salad/
 categories: [sides]
 tags:
-    - '30-minutes or less'
-    - avocado
-    - cucumber
+    - 30-minutes or less
     - salad
+    - summer
+    - gluten-free
 ---
 
 This deceptively delicious salad is the perfect addition to a summer meal. Lightly adapted from [Smitten Kitchen](https://smittenkitchen.com/2015/04/obsessively-good-avocado-cucumber-salad/) to be vegan, it’s just as obsessive and craveable as advertised. I used to slightly dread the cucumber overload from our summer CSA (how many green salads can we eat before I never want to see lettuce again?), but no more – this is one I’ll happily eat all summer.

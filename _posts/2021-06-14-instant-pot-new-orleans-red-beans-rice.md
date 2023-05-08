@@ -7,9 +7,8 @@ permalink: /instant-pot-new-orleans-red-beans-rice/
 image: assets/images/Red Beans n Rice.jpg
 categories: [dinner]
 tags:
-    - creole
-    - 'instant pot'
-    - 'red beans'
+    - instant pot
+    - gluten-free
 ---
 
 While living in Baton Rouge, LA, we sampled all of the Creole fare we could – gumbo, jambalaya, po’boys, etc. Embarrassingly, while living there we never learned to cook any of these ubiquitous meals except for one ill-advised attempt to shortcut a jambalaya (lesson learned: don’t take shortcuts with jambalaya). While traditional preparations are not vegan, we’ve since found (with lots of help from pro’s like chef Bryant Terry) that Creole dishes can be fairly easily modified to be entirely plant-based.
@@ -27,7 +26,7 @@ Red beans and rice is the simplest of these vegan takes on Creole cooking, and t
 - 1 1/2 cups dried small red beans, soaked for at least 8 hours, drained and rinsed
 - 4 cups vegetable broth and/or water
 - 1 bay leaf
-- 1 tsp. soy sauce or tamari
+- 1 tsp. soy sauce (or tamari for gluten-free)
 - 1 tsp. hot sauce
 - 1/2 tsp. salt
 - Avocado oil

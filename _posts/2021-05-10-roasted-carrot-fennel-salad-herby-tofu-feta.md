@@ -8,10 +8,8 @@ image: assets/images/carrots fennel.jpg
 categories: [sides]
 tags:
     - carrots
-    - fennel
-    - feta
-    - potluck
     - salad
+    - gluten-free
 ---
 
 We love this dish for its light summery vibes yet substantial nutrition, and often serve it as a side at barbecues or other warm weather gatherings. It comes together quickly, is great served warm / cold / room temperature, and can be made in advance, adding the walnuts just before serving. Inspiration for the dish came from an original recipe in Alison Roman’s [Dining In](https://www.alisoneroman.com/dining-in), and the tofu feta is inspired by a recipe from from another favorite book, Joe Yonan’s [Cool Beans](https://www.joeyonan.com/my-books/).

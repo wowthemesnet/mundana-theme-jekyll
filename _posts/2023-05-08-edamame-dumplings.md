@@ -5,6 +5,8 @@ author: cari
 categories: [appetizer]
 permalink: /edamame-dumplings/
 image: assets/images/edamame-dumplings.jpg
+tags:
+    - Asian
 ---
 
 These Asian-inspired dumplings are a fun and easy mash-up, using store bought Chinese dumpling wrappers and pre-shelled edamame (soybeans). You can use whatever type of dumpling wrapper you prefer - I find the round Shanghai style easy to work with. I'll typically make a batch and freeze most of the dumplings; they're quick to defrost it's nice to have an easy appetizer or snack on hand! I like them pan fried best, but you could easily steam these as well.

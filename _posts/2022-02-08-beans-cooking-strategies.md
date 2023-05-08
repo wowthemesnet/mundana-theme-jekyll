@@ -6,7 +6,6 @@ layout: post
 permalink: /beans-cooking-strategies/
 categories: [basics]
 tags:
-    - beans
     - 'tips and tricks'
 ---
 

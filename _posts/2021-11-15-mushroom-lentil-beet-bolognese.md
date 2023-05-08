@@ -7,10 +7,8 @@ permalink: /mushroom-lentil-beet-bolognese/
 image: assets/images/Mushroom Bolognese.jpg
 categories: [dinner]
 tags:
-    - beets
     - Italian
     - lentils
-    - mushrooms
     - pasta
 ---
 

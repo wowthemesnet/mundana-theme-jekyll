@@ -4,6 +4,10 @@ title: "Blackened Tempeh Caesar Salad"
 author: chad
 categories: [lunch]
 image: assets/images/caesar.jpg
+tags:
+    - tempeh
+    - salad
+    - meal prep
 ---
 
 This is one of our favorite lunches to meal prep and enjoy all week. The blackened tempeh is flavorful and nutritionally awesome, the coconut bacon is sweet and salty, and the (oil-free!) cashew caesar dressing ties everything together.

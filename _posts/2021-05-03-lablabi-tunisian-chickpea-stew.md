@@ -9,7 +9,6 @@ categories: [dinner]
 tags:
     - chickpeas
     - soup
-    - stew
 ---
 
 I’m not ashamed to say that the chickpea is my favorite legume. Part of this is due to its extreme versatility as the foundation of some of my absolute favorite foods: hummus, chickpea salads, roasted chickpeas, falafel, chana masala, not to mention magical aquafaba. It’s also just a great bean – flavorful, luscious, and yes, versatile.

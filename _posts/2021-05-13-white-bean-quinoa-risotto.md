@@ -7,10 +7,11 @@ permalink: /white-bean-quinoa-risotto/
 image: assets/images/Quinoa Risotto.jpg
 categories: [dinner]
 tags:
-    - broccoli
-    - 'brussels sprouts'
-    - quinoa
-    - 'white beans'
+    - cruciferous
+    - grains
+    - white beans
+    - gluten-free
+    - Italian
 ---
 
 One of many of our go-to recipes from [Laura Wright’s First Mess](https://thefirstmess.com/the-first-mess-cookbook/) cookbook, this vegan dish perfectly captures the creamy cheesiness of risotto. It also gives me an excuse to eat crispy roasted brassicas directly off the baking sheet (truly one of my most favorite activities) while the risotto finishes. The only modification we make to this recipe is to sometimes double it, particularly if we’re cooking for 4 or more people, as it can feel a bit light. It’s also great alongside a substantial veg side such as this roasted carrot and fennel salad.

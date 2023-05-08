@@ -9,8 +9,9 @@ categories: [dinner]
 tags:
     - curry
     - Indian
-    - spinach
     - tofu
+    - chickpeas
+    - gluten-free
 ---
 
 Learning how to dabble in cooking Indian food has been one of my favorite outcomes of going plant-based. I’ve always loved the complexity of the spices in Indian cooking, and it’s been really fun to play around with different source recipes to hone in on what works best for our tastes. This dish is a crowd pleaser and also a pretty quick option for a weeknight dinner. Instead of traditional paneer cheese, we use tofu as the protein but we also love to mix and match other protein or hearty vegetable options such as chickpeas, mushrooms, and cubed potatoes. This adaptation is based on [Aarti Sequeira’s original](https://www.foodnetwork.com/recipes/aarti-sequeira/saag-paneer1-1927603).
@@ -33,8 +34,6 @@ Learning how to dabble in cooking Indian food has been one of my favorite outcom
 - Dash of cinnamon
 - 1 14-oz. can of unsweetened coconut milk
 - Salt and pepper
-- 2 cups brown rice or grain of choice
-- Naan flatbread, for serving
 
 <h3> Directions </h3>
 
@@ -45,7 +44,7 @@ Learning how to dabble in cooking Indian food has been one of my favorite outcom
 5. Add the pureed spinach, coconut milk, and 3/4 cup of water and stir to combine. Cook for another 5-10 minutes, stirring frequently. Add salt – start with 1 tsp. – and pepper to taste.
 6. While the saag is finishing cooking, in a frying pan over medium-high heat, cook the tofu for about 5 minutes, tossing throughout to ensure roughly even browning. Remove the tofu and repeat with the chickpeas (or mushrooms or potatoes – note potatoes will need more time to fully cook).
 7. Add the cooked tofu and chickpeas to the spinach curry and stir to combine.
-8. Serve the curry over rice or with naan.
+8. Serve the curry over rice.
 
 **Notes**
 

@@ -8,6 +8,9 @@ image: assets/images/Hummus.png
 categories: [sides]
 tags:
     - chickpeas
+    - Mediterranean
+    - gluten-free
+    - 30-minutes or less
 ---
 
 I truly can’t believe it’s taken me this long to post this hummus recipe since starting Plantifull. I’ve already extolled the virtues of the chickpea in a [previous post]({% post_url 2021-05-03-lablabi-tunisian-chickpea-stew %}), and hummus is probably the single most reliable item to be found in our fridge. I’ve made so many hummus recipes in my life but I’ve preferred this one over the past few years as it is heavier on the tahini, which I think results in a richer flavor, and also includes no additional oil because of the high tahini content.

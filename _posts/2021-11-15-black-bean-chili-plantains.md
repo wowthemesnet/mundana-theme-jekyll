@@ -9,7 +9,8 @@ categories: [dinner]
 tags:
     - '30-minutes or less'
     - 'black beans'
-    - chili
+    - Tex-Mex
+    - gluten-free
 ---
 
 It’s soup, chili, and stew season everyone! Vegan and plant-based friends, celebrate because it’s our time to shine. Fall and winter are my favorite times to be a plant-based eater – it’s finally time to break out the warm, comforting, bean-heavy dishes that I love so much and yet can’t bear to eat in summer.

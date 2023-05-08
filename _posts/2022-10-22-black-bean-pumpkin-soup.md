@@ -10,6 +10,7 @@ tags:
     - 'black beans'
     - soup
     - '30-minutes or less'
+    - gluten-free
 ---
 
 This black bean soup is a simple weeknight option that is flavorful, filling, and super clean; we've adapted this from [Smitten Kitchen's original](https://smittenkitchen.com/2007/11/black-bean-pumkin-soup/) to be vegan. If you're not a pumpkin soup fan, give this one a try anyway - despite the pumpkin, the flavors aren't your typical cinnamon and pie spices. We enjoy this all soup-season long, serving it alongside sourdough bread and a simple salad!

@@ -9,6 +9,7 @@ tags:
     - gluten-free
     - chickpeas
     - '30-minutes or less'
+    - meal prep
 ---
 
 Now that it's finally starting to feel like spring here, I've been craving lighter meals that can be served cold or at room temperature. This bowl featuring curried chickpeas and broccoli leans on the tahini-based dressing which is spiced, a tiny bit sweet, and bright. It's perfect for meal prepping, or you could simply serve the curried salad on its own as a side dish!

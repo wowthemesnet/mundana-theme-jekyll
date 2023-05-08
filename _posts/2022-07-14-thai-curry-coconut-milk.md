@@ -10,6 +10,7 @@ tags:
     - '30-minutes or less'
     - curry
     - tofu
+    - Asian
 ---
 
 Admittedly it’s been a long time (months, somehow) since I last posted. I’ll blame this on moving houses and busy times at work but the other equal reality is that sometimes I get in a food rut and either don’t cook anything new, cook new things that aren’t good enough to share, or forget to write down a recipe and can’t re-create it. This Thai curry is a staple for when I’m feeling uncreative or rushed, as it’s quick and crowd pleasing. You can use any variety of seasonal vegetables which makes it a great option to handle the variety from our summer CSA share. Broccoli is a favorite as it really absorbs the flavor of the curry sauce; we also love summer squash, bell peppers, and snow peas in this.

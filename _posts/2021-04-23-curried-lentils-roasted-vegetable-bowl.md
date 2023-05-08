@@ -7,10 +7,11 @@ permalink: /curried-lentils-roasted-vegetable-bowl/
 image: assets/images/Curried Lentil Bowl.jpg
 categories: [lunch]
 tags:
-    - bowl
+    - meal prep
     - Indian
     - lentils
-    - lunch
+    - cruciferous
+    - gluten-free
 ---
 
 We’re always on the hunt for a good lunch bowl. For years now, we’ve been consistent meal preppers – every Sunday afternoon we put in an hour or two of work to ensure we have tasty, filling, and easy lunches for the week. It is SO worth it, but we’ve also found the importance of a good rotation: after a week of the same lunch I’m usually ready to switch it up. This bowl is one, however, that I feel I could eat for weeks and not get sick of. The curried lentils, inspired by [Cafe Gratitude’s cookbook Love is Served](https://www.penguinrandomhouse.com/books/598239/love-is-served-by-cafe-gratitude-with-seizan-dreux-ellis/), have a perfect balance of richness from the coconut milk and spice, and so far we have yet to find any roasted veg that don’t pair well with them.
@@ -36,7 +37,7 @@ Play around with different grains and vegetables in this and let us know what yo
 - 1/2 tsp. ground turmeric
 - 1/2 tsp. cayenne pepper
 - 1 1/4 tsp. salt
-- 1/4 cup soy sauce or tamari
+- 1/4 cup soy sauce (or tamari for gluten free)
 - 1 14-oz. can unsweetened coconut milk
 
 ### Directions

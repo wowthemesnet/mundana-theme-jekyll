@@ -7,11 +7,9 @@ permalink: /grilled-eggplant-pasta-miso-chipotle-tofu/
 image: assets/images/Grilled Tofu & Pasta Salad.jpg
 categories: [dinner]
 tags:
-    - asparagus
-    - eggplant
-    - grill
     - pasta
     - tofu
+    - summer
 ---
 
 Last weekend we picked asparagus at the [farm](https://www.monroefarm.com/) where we are CSA members and ended up bringing home about 12 lbs!! Fun fact we learned: asparagus can apparently grow 4-6 inches per day in the springtime. Our favorite way to enjoy really fresh asparagus is on the grill – it’s simple but really brings out the sweetness while maintaining a good crunch. We served the asparagus alongside our favorite mains from the grill – sun-dried tomato pesto pasta salad ([adapted from Smitten Kitchen](https://smittenkitchen.com/2016/06/charred-eggplant-and-walnut-pesto-pasta-salad/)) and miso-chipotle grilled tofu ([a Serious Eats original](https://www.seriouseats.com/grilled-tofu-chipotle-miso-recipe)).

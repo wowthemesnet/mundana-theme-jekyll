@@ -7,8 +7,6 @@ permalink: /fudgy-nut-butter-cocoa-brownies/
 image: assets/images/Brownies.jpg
 categories: [dessert]
 tags:
-    - chocolate
-    - dessert
     - gluten-free
 ---
 

@@ -9,6 +9,7 @@ categories: [dinner]
 tags:
     - chickpeas
     - summer
+    - gluten-free
 ---
 
 Ratatouille will always remind me of being a kid in the summer. I’d go to the farmers market with my mom and loved helping her pick out the most beautiful tomatoes, eggplant, peppers, and squash – though truthfully I think I liked this shopping trip mostly because she would always buy me a pastry from one of the other stalls. I remember enjoying my mom’s simple yet incredibly satisfying preparation of fresh, ripe veg alongside fresh salads on long, warm summer evenings. Cooking and eating ratatouille now takes me right back to those nights as a kid.

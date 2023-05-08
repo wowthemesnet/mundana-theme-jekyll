@@ -7,7 +7,7 @@ permalink: /chipotle-black-bean-burgers/
 image: assets/images/Black Bean Burgers.jpg
 categories: [dinner]
 tags:
-    - 'black beans'
+    - black beans
     - burger
 ---
 

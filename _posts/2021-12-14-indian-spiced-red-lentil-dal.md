@@ -10,6 +10,8 @@ tags:
     - '30-minutes or less'
     - Indian
     - lentils
+    - gluten-free
+    - curry
 ---
 
 This recipe has come together over so many iterations but I’m finally ready to share it. This pantry-ready dinner is another easy weeknight option that is perfect for fall or winter – a very hearty, spiced red lentil curry. Inspiration for this recipe came from [Meera Sodha’s original](https://www.theguardian.com/food/2020/feb/29/meera-sodha-vegan-tarka-dal-recipe-maham-anjum#top), but I’ve made quite a few tweaks to it over the years. We eat this with brown rice and usually roasted cabbage, one of our easiest go-to side vegetables, but I bet it would be delicious with any number of grains or side veggies!

@@ -7,11 +7,10 @@ permalink: /ginger-tempeh-bowl-brassicas/
 image: assets/images/Tempeh Bowl.jpg
 categories: [lunch]
 tags:
-    - bowl
-    - broccoli
-    - cabbage
-    - lunch
+    - meal prep
+    - cruciferous
     - tempeh
+    - Asian
 ---
 
 Tempeh is such an awesome vegan protein – it’s a whole food, it’s fermented, it’s nutritionally great and it doesn’t require hours of soaking time (ahem, beans)! However, it can be hard to get enough flavor into tempeh to make it worth eating, and the texture can sometimes be bland. Cue Laura Wright’s [sticky ginger tempeh](https://thefirstmess.com/2020/05/27/sticky-ginger-tempeh-recipe-coconut-rice/) – it’s super flavorful and stars in this lunch bowl, which is one of my favorite lunches to meal prep and eat all week. The roasted brassicas and miso-ginger dressing combine nicely for a hearty, umami-packed meal!

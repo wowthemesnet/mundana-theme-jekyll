@@ -7,8 +7,9 @@ permalink: /breakfast-tofu-scramble/
 image: assets/images/Tofu Scramble.jpg
 categories: [breakfast]
 tags:
-    - breakfast
-    - brunch
+    - tofu
+    - gluten-free
+    - 30-minutes or less
 ---
 
 Breakfast has always been my favorite meal of the day, but when we started eating plant-based I struggled to find good savory breakfast options. As much as I’d love to have pancakes, oatmeal, or granola every day, there was still a savory, salty breakfast void in my life that I couldn’t fill with chickpea eggs and quiches, savory breakfast porridge, or anything else. I’d almost given up on finding an answer and then my sister sent us the recipe for this tofu scramble. It’s truly the best plant-based scrambled egg substitute I’ve ever had. And, the fact that it’s so easy to make means it’s become our go-to weekend breakfast or brunch option. The tofu scramble itself is also delicious in tacos (breakfast or otherwise) and fried rice.

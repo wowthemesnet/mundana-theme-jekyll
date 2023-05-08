@@ -6,10 +6,9 @@ layout: post
 permalink: /butternut-squash-farrotto/
 categories: [dinner]
 tags:
-    - 'butternut squash'
-    - comfort
-    - farro
     - grains
+    - Italian
+    - chickpeas
 ---
 
 This is vegan comfort food at its finest – hearty and warming – but also delicious and fancy-seeming enough to serve to guests. Even omnivores will love this savory risotto-inspired dish. This one is a bit time-consuming as recipes using whole farro can be. As a time saver, you could use canned pureed butternut squash (which I didn’t even know was a thing until recently – what a time to be alive!) instead of roasting and pureeing your own – however, you’ll miss out on topping the final dish with extra roasted squash.

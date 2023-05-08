@@ -5,6 +5,11 @@ author: cari
 categories: [lunch]
 permalink: /umami-power-bowl/
 image: assets/images/umami-power-bowl.jpg
+tags:
+    - meal prep
+    - lentils
+    - cruciferous
+    - gluten-free
 ---
 
 A simple and satisfying lunch that is very meal-preppable, this bowl leans on a rich umami sauce adapted from [Andrew Weil](https://www.drweil.com/diet-nutrition/recipes/umami-sauce/). A variety of beans or pulses can be used with great results, and we encourage you to experiment with different roasted veggies too!
@@ -23,7 +28,7 @@ A simple and satisfying lunch that is very meal-preppable, this bowl leans on a 
 **For the umami sauce**
 - 2 tbsp. apple cider vinegar
 - 1/2 cup nutritional yeast
-- 3 tbsp. soy sauce or tamari
+- 3 tbsp. soy sauce (or tamari for gluten free)
 - 1/2 cup extra virgin olive oil
 - 1/4 cup water
 - 3 cloves garlic

@@ -7,10 +7,11 @@ permalink: /beet-dip-walnuts-herbs/
 image: assets/images/Beet dip.jpg
 categories: [sides]
 tags:
-    - beets
+    - summer
+    - gluten-free
 ---
 
-This beautiful dip is perfect for fall gatherings! It highlights beets as the main ingredient but also has a brightness from the herbs and a nuttiness from walnuts that makes it super craveable. This beet dip is great as an appetizer served alongside your favorite crackers or sliced veggies, and we also enjoy it on toast with almond ricotta ([recipe here]({% post_url 2021-04-02-vegetable-flatbread-pesto-almond-ricotta %})). We adapted this slightly from [Always Nourished](https://www.nourishedtheblog.com/vegan-roasted-beet-dip/#tasty-recipes-5720).
+This beautiful dip is perfect for summer and fall gatherings! It highlights beets as the main ingredient but also has a brightness from the herbs and a nuttiness from walnuts that makes it super craveable. This beet dip is great as an appetizer served alongside your favorite crackers or sliced veggies, and we also enjoy it on toast with almond ricotta ([recipe here]({% post_url 2021-04-02-vegetable-flatbread-pesto-almond-ricotta %})). We adapted this slightly from [Always Nourished](https://www.nourishedtheblog.com/vegan-roasted-beet-dip/#tasty-recipes-5720).
 
 ### Ingredients
 

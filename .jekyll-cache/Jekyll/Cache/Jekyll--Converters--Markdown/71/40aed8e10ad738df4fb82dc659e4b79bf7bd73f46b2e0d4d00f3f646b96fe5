@@ -1,0 +1,106 @@
+I"�<div class="container">
+<div class="row justify-content-center">
+    <div class="col-md-8">        
+        <div class="row align-items-center mb-5">
+            <div class="col-md-9">
+                <h2 class="font-weight-bold">Sumit Srivastava <span class="small btn btn-outline-success btn-sm btn-round"><a href="https://twitter.com/sumsrvt">Follow</a></span></h2>
+                <p><a href="https://www.ithinkblah.com">https://www.ithinkblah.com</a></p>
+                <p class="excerpt">Hi, I am Sumit, and I think sometimes, often blah, I hope you like it!</p>
+            </div>
+            <div class="col-md-3 text-right">
+                <img alt="Sumit" src="/assets/images/avatar1.jpg" class="rounded-circle" height="100" width="100" />
+            </div>
+        </div>
+        <!--h4 class="font-weight-bold spanborder"><span>Posts by Sumit Srivastava</span></h4-->
+            
+            
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/priviledged/">The Priviledged!</a>
+	</h2>
+	<p class="excerpt">
+	   The privileged within us often has a peculiar fear, of the highest degree. A fear that keeps on an internal tussle, to keep building a palace of superiority complex. Yes, a palace, va...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#philosophy">philosophy</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		May 18, 2023
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/priviledged/">
+	<img class="w-100" src="/assets/images/priviledged_landscape.png" alt="The Priviledged!" />
+	</a>
+	</div>
+
+</div>
+            
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/welcome-to-jekyll/">Welcome to Jekyll!</a>
+	</h2>
+	<p class="excerpt">
+	   You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common wa...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Feb 04, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/welcome-to-jekyll/">
+	<img class="w-100" src="/assets/images/demo1.jpg" alt="Welcome to Jekyll!" />
+	</a>
+	</div>
+
+</div>
+            
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/education/">Education must also train one for quick, resolute and effective thinking.</a>
+	</h2>
+	<p class="excerpt">
+	   There are lots of powerful things you can do with the Markdown editorIf you’ve gotten pretty comfortable with writing in Markdown, then you may enjoy some more advanced tips about the...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#tutorial">tutorial</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Feb 01, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/education/">
+	<img class="w-100" src="/assets/images/3.jpg" alt="Education must also train one for quick, resolute and effective thinking." />
+	</a>
+	</div>
+
+</div>
+            
+    </div>
+</div>
+</div>
+:ET

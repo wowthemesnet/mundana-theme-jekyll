@@ -9,7 +9,7 @@ email: 'srv.sumit@gmail.com'
 mailchimp-list: ''
 include: ["_pages"]
 permalink: /:title/
-remote_theme: wowthemesnet/mundana-theme-jekyll
+remote_theme: "mmistakes/so-simple-theme@3.2.0"
 
 # Plugins
 plugins: 
@@ -55,3 +55,4 @@ paginate: 10
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
 exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+plugins: [jekyll-include-cache]

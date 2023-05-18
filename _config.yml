@@ -1,14 +1,12 @@
 # Site
 name: 'I Think Blah'
 description: ''
-logo: 'assets/images/logo.png'
+logo: 'assets/images/_tree_thinking_blah.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: ''
 disqus: ''
 email: 'srv.sumit@gmail.com'
 mailchimp-list: ''
-#mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
-
 include: ["_pages"]
 permalink: /:title/
 
@@ -20,14 +18,14 @@ plugins:
   - jekyll-seo-tag
   
 authors:
-  sumit:
-    name:           Sumit Srivastava
-    site:           https://www.ithinkblah.com
-    avatar:         assets/images/190611_2.jpg
-    bio:            "Hi, I am Sumit, the author of I Think Blah. I am PhD researcher exploring the usage of Lexical Alignment for explanations by chatbots in natural language."
-    email:          srv.sumit@gmail.com
-    twitter:        https://twitter.com/SumSrvt
-
+    sumit:
+      name:           Sumit
+      site:           https://www.ithinkblah.com
+      avatar:         assets/images/avatar1.jpg
+      bio:            "Hi, I am Sumit, and I think sometimes, often blah, I hope you like it!"
+      email:          
+      twitter:        https://twitter.com/sumsrvt
+ 
 # Defaults
 defaults:
 
@@ -36,8 +34,8 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: sal
-      avatar: /assets/images/avatar1.jpg
+      author: sumit
+      avatar: assets/images/avatar1.jpg
       
   # all pages
   - scope:

@@ -9,6 +9,7 @@ email: 'srv.sumit@gmail.com'
 mailchimp-list: ''
 include: ["_pages"]
 permalink: /:title/
+remote_theme: wowthemesnet/mundana-theme-jekyll
 
 # Plugins
 plugins: 

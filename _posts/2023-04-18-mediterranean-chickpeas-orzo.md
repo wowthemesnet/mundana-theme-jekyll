@@ -9,6 +9,7 @@ tags:
     - Mediterranean
     - chickpeas
     - '30-minutes or less'
+    - meal prep
 ---
 
 This Mediterranean-inspired bowl is a fresh yet filling option that is very meal preppable. With an oil-free dressing and lots of fresh veggies, it's perfect for spring and summer! The orzo could easily be substituted by another grain like farro or rice if you prefer.

@@ -7,7 +7,7 @@ permalink: /yellow-split-pea-dal-coconut/
 image: assets/images/yellow split pea dal.jpg
 categories: [dinner]
 tags:
-    - '30-minutes or less'
+    - 30-minutes-or-less
     - Indian
     - gluten-free
     - curry

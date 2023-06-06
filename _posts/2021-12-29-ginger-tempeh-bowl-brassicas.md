@@ -7,7 +7,7 @@ permalink: /ginger-tempeh-bowl-brassicas/
 image: assets/images/Tempeh Bowl.jpg
 categories: [lunch]
 tags:
-    - meal prep
+    - meal-prep
     - cruciferous
     - tempeh
     - Asian

@@ -7,7 +7,7 @@ permalink: /thai-curry-coconut-milk/
 image: assets/images/Thai Curry.jpg
 categories: [dinner]
 tags:
-    - '30-minutes or less'
+    - 30-minutes-or-less
     - curry
     - tofu
     - Asian

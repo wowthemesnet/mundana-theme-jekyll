@@ -7,9 +7,8 @@ permalink: /black-bean-chili-plantains/
 image: assets/images/Black Bean Plantain Chili.jpg
 categories: [dinner]
 tags:
-    - '30-minutes or less'
-    - 'black beans'
-    - Tex-Mex
+    - 30-minutes-or-less
+    - black-beans
     - gluten-free
 ---
 

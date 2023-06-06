@@ -7,7 +7,7 @@ permalink: /indian-spiced-red-lentil-dal/
 image: assets/images/Red Lentil Dal.jpg
 categories: [dinner]
 tags:
-    - '30-minutes or less'
+    - 30-minutes-or-less
     - Indian
     - lentils
     - gluten-free

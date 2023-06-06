@@ -9,7 +9,7 @@ categories: [lunch]
 tags:
     - summer
     - featured
-    - 30-minutes or less
+    - 30-minutes-or-less
 ---
 
 Since switching to a primarily plant-based diet, I’ve had a sandwich-sized hole in my stomach and heart. I LOVE good bread and sandwiches, but it is so rare to find a plant-based sandwich that is a) filling, b) nutritionally solid, and c) actually tastes good. Most of the vegan sandwiches I’ve encountered are either a sad afterthought to a pretty well thought-out meat-containing menu or they rely on plant-based meat, something I consider a once-in-awhile processed food splurge but not part of my typical diet.

@@ -6,7 +6,7 @@ layout: post
 permalink: /simple-delicious-cucumber-avocado-salad/
 categories: [sides]
 tags:
-    - 30-minutes or less
+    - 30-minutes-or-less
     - salad
     - summer
     - gluten-free

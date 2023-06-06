@@ -8,7 +8,7 @@ image: assets/images/Crispy-Potato-Bowl.jpg
 tags:
     - lentils
     - gluten-free
-    - meal prep
+    - meal-prep
 ---
 
 This recipe is one of those that takes simple ingredients and turns them into something craveable. It's a great option for a weeknight dinner or to meal prep as most of the components require little active time. Inspired by a recipe in [Bryant Terry's Vegetable Kingdom](https://www.penguinrandomhouse.com/books/564101/vegetable-kingdom-by-bryant-terry/), I simplified some of the preparation and added rice and lentils to make this a more substantial meal. The infused vinegar really brings the dish together so be generous with it!

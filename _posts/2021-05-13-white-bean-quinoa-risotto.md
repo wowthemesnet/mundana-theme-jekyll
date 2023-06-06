@@ -9,7 +9,7 @@ categories: [dinner]
 tags:
     - cruciferous
     - grains
-    - white beans
+    - white-beans
     - gluten-free
     - Italian
 ---

@@ -7,8 +7,8 @@ permalink: /black-bean-soup/
 image: assets/images/Black Bean Soup.jpg
 categories: [dinner]
 tags:
-    - 'black beans'
-    - 'instant pot'
+    - black-beans
+    - instant-pot
     - soup
     - tofu
 ---

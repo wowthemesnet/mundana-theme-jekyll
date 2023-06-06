@@ -7,7 +7,7 @@ permalink: /instant-pot-lentil-soup/
 image: assets/images/Lentil Sweet Potato Soup.jpg
 categories: [dinner]
 tags:
-    - '30-minutes or less'
+    - 30-minutes-or-less
     - lentils
     - featured
     - gluten-free

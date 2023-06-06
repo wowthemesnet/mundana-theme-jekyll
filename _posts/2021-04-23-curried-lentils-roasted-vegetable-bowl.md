@@ -7,7 +7,7 @@ permalink: /curried-lentils-roasted-vegetable-bowl/
 image: assets/images/Curried Lentil Bowl.jpg
 categories: [lunch]
 tags:
-    - meal prep
+    - meal-prep
     - Indian
     - lentils
     - cruciferous

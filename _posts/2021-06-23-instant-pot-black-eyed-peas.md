@@ -7,7 +7,7 @@ permalink: /instant-pot-black-eyed-peas/
 image: assets/images/Black Eyed Peas.jpg
 categories: [dinner]
 tags:
-    - instant pot
+    - instant-pot
     - gluten-free
     - summer
 ---

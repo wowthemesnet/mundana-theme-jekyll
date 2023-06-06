@@ -6,7 +6,7 @@ categories: [lunch]
 permalink: /umami-power-bowl/
 image: assets/images/umami-power-bowl.jpg
 tags:
-    - meal prep
+    - meal-prep
     - lentils
     - cruciferous
     - gluten-free

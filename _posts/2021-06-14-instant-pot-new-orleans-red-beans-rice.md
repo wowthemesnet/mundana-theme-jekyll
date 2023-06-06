@@ -7,7 +7,7 @@ permalink: /instant-pot-new-orleans-red-beans-rice/
 image: assets/images/Red Beans n Rice.jpg
 categories: [dinner]
 tags:
-    - instant pot
+    - instant-pot
     - gluten-free
 ---
 

@@ -7,9 +7,9 @@ permalink: /black-bean-pumpkin-soup/
 image: assets/images/Black Bean Pumpkin Soup.jpg
 categories: [dinner]
 tags:
-    - 'black beans'
+    - black-beans
     - soup
-    - '30-minutes or less'
+    - 30-minutes-or-less
     - gluten-free
 ---
 

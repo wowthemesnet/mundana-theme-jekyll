@@ -6,7 +6,7 @@ layout: post
 permalink: /beans-cooking-strategies/
 categories: [basics]
 tags:
-    - 'tips and tricks'
+    - tips-and-tricks
 ---
 
 As such an important part of a whole food, plant-based diet, I think it’s necessary to dedicate some words to beans. A quick shoutout to beans for being nutritionally amazing, versatile in preparation, and one of the most cost-effective and easily-stored forms of food out there. I could go on in my praise, but should probably get to the main points here. In this post I’ll share some thoughts about how we buy and cook beans, as well as more specific instructions for cooking beans our favorite way (spoiler alert: if you couldn’t tell from the recipes on this blog, it’s in the Instant Pot).

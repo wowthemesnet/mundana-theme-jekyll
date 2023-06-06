@@ -6,8 +6,8 @@ categories: [dinner]
 permalink: /green-chile-black-beans/
 image: assets/images/green-chile-beans.jpg
 tags:
-    - black beans
-    - instant pot
+    - black-beans
+    - instant-pot
     - gluten-free
 ---
 

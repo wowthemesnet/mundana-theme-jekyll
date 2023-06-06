@@ -9,7 +9,7 @@ tags:
     - tempeh
     - Italian
     - pasta
-    - 30-minutes or less
+    - 30-minutes-or-less
 ---
 
 This super simple recipe, adapted from [Minimalist Baker](https://minimalistbaker.com/1-pan-tempeh-bolognese/#wprm-recipe-container-40804), has an impressively deep flavor and is nutritionally awesome thanks to the tempeh. If you're cooking to impress, [this more involved bolognese]({% post_url 2021-11-15-mushroom-lentil-beet-bolognese %}) is well worth the effort, but for a quick weeknight option we love this tempeh dish! We recommend serving this alongside a roasted veg like broccoli or a green salad.

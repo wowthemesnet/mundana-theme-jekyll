@@ -1,25 +1,19 @@
 ---
 layout: post
-title:  "Welcome to Jekyll! abc yes 1234fdsfd oleh ardi"
+title:  "Selamat Datang Di Portofolio By Rama"
 categories: [ Jekyll ]
 image: assets/images/whatsapp.jpeg
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+You’ll find this uniq My Post. Isi dari portofolio ini merupakan kegiatan sehari hariku sebagai tempat media tulis dan media belajarku. Luangkan waktu sejenak untuk membaca dan mengetahui ilmu-ilmu baru yang ku share sesuai dengan jurusanku yaitu Teknologi Instrumentasi dan Kontrol. Kalian juga bisa share apa yang kalian baca ke orang lain agar keberadaan ini cukup bermanfaat, tinggalkan pesan dan request  materi apapun untuk dibahas. Pantengin terus isi portofolio ini yaaa. Oh iya jika mau buat seperti ini akan saya bantu sampe bisa dalam 2 hari, bahkan kalian bisa gunakan ini sebagai penyimpanan penulisan code script loh dan kalian share ke teman kalian
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
+Ini contoh Code Script:
 {% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+#include <iostream>
+using namespace std;
+int main () {
+ cout<<"Halo Rek";
+ return 0;
+}.
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Nah tu menurut kalian itu program apa ? yups itu Bahasa C++ , nah silahkan explore lebih lanjut profil portofolio ini. Ingat sebaik baiknya ilmu ialah yang bermanfaat untuk orang lain.

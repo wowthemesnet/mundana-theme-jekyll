@@ -1,26 +1,16 @@
 ---
 layout: post
-title:  "Powerful things you can do with the Markdown editor"
-author: sal
-categories: [ Jekyll, tutorial ]
-image: assets/images/4.jpg
+title:  "Cara Bikin Simulasi CX Designer"
+author: Rama
+categories: [ PLC, tutorial ]
+image: 
 tags: [featured]
 ---
-There are lots of powerful things you can do with the Markdown editor
+Untuk memulai simulasi silahkan siapkan aplikasi CX-Designer.
 
-If you've gotten pretty comfortable with writing in Markdown, then you may enjoy some more advanced tips about the types of things you can do with Markdown!
-
-As with the last post about the editor, you'll want to be actually editing this post as you read it so that you can see all the Markdown code we're using.
-
-
-## Special formatting
-
-As well as bold and italics, you can also use some other special formatting in Markdown when the need arises, for example:
-
-+ ~~strike through~~
-+ ==highlight==
-+ \*escaped characters\*
-
+1.Start > Program > OMRON > CX-One > CX-Designer > CX-Designer.
+2.Untuk memulai project baru pilih [File] > [New Project]
+3.Pilih model HMI Omron yang akan digunakan di bagian [Model], misalnya NS15. Untuk [System Version] gunakan default 13.0. Kemudian isikan [Project Title], [File Nime] dan [Location] penyimpanan file CX-Designer. Pilih [OK] untuk memulai project baru. 
 
 ## Writing code blocks
 
@@ -47,4 +37,4 @@ Another way to insert links in markdown is using reference lists. You might want
 
 Perhaps the best part of Markdown is that you're never limited to just Markdown. You can write HTML directly in the Markdown editor and it will just work as HTML usually does. No limits! Here's a standard YouTube embed code as an example:
 
-<p><iframe style="width:100%;" height="315" src="https://www.youtube.com/embed/Cniqsc9QfDo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></p>
+<p><iframe style="width:100%;" height="315" src="https://youtu.be/iegIQVHUE4A&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></p>

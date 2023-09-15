@@ -11,7 +11,7 @@ Wenn man der FAZ und seiner Quelle Alex de Vries Glauben schenkt, ist **Bitcoin 
 
 Ein Killer? Wie der Terminator? Die Killermaschine **T-800**, die geschickt wurde, um Sarah Connor unerbittlich zu jagen und zu töten. „What the FAZ?[!](https://leo-mattes.com/wp-content/uploads/2022/12/BitSkit-I-dontt-give-a-FUD-Too-Bit-To-Fail.mp3)“ 
 
-![](assets/images/2023-08-18-klimakiller/1.jpg)
+![](/assets/images/2023-08-18-klimakiller/1.jpg)
 
 _Abb. 1: Der T-800 (CC BY 2.0)_
 
@@ -36,7 +36,7 @@ Eine PoW Blockchain ist zudem fälschungssicherer und robuster gegenüber Störu
 
 
 
-##Energie
+##  Energie
 
 Davon nutzt das **Bitcoin Netzwerk** laut CCAF ca. **121 TWh pro Jahr**, was 0,19 % des weltweiten Energie- und 0,55% des weltweiten Stromverbrauchs ausmacht. ([Stand 09/2023, CCAF](https://ccaf.io/cbnsi/cbeci/comparisons)).
 
@@ -51,7 +51,7 @@ untersucht.
 Er berechnet und vergleicht den **Energieverbrauch des derzeitigen monetären Zahlungssystems** mit Bitcoin. Er betont, dass man alle Bereiche des klassischen monetären Zahlungssystems einbeziehen muss, die Bitcoin potentiell ersetzen kann: Erzeugung von Banknoten und Münzen, Bargeldmanagement an Bankautomaten, Kartenzahlungen, Bank- und Interbankengeschäfte. 
 
  
-![](assets/images/2023-08-18-klimakiller/2.png)
+![](/assets/images/2023-08-18-klimakiller/2.png)
 
 _Abb. 2: Vergleich des abgeschätzten, jährlichen Energieverbrauchs des Bitcoin Netzwerks mit Goldindustrie und Bankensystem. 
 Quellen: 
@@ -70,7 +70,7 @@ Eine genaue Berechnung zum Anteil erneuerbarer Energien muss also einbeziehen, w
 Die vor kurzem veröffentlichte Analysemethode von [Karim Helmy](https://twitter.com/karimhelpme)  und [Coinmetrics] (https://twitter.com/coinmetrics), in der Miningeräte (ASICs) über ihren Fingerprint identifiziert werden konnten, liefert über die Hashrate die zur Zeit [genauesten Rückschlüsse über die Energienutzung des Bitcoin Netzwerks](https://twitter.com/karimhelpme/status/1668592294440890368?s=20).
 Im Vergleich von Cambridge und Digiconomist zeigt sich, dass Digiconomist zwischenzeitlich den Verbrauch um mehr als 100% überschätzt hat. Da Digiconomist den Bitcoinpreis als Grundlage für seine Berechnung nutzt, wird zum Zeitpunkt des medialen Hypes auch ein maßlos überschätzte Energienutzung errechnet, die dann direkt als schockierende Statements abgedruckt werden.
 
-![](assets/images/2023-08-18-klimakiller/3.png)
+![](/assets/images/2023-08-18-klimakiller/3.png)
 
 _Abb. 3: [Energieverbrauch des Bitcoin Netzwerks berechnet über Nonce-Analysemthode]( 
 https://twitter.com/karimhelpme/status/1668592294440890368?s=20)_
@@ -80,7 +80,7 @@ Der [ESG-Analyst Daniel Batten](https://twitter.com/DSBatten) hat mit seinem [BE
 Nach seiner detaillierteren Berechnung verwendet das Bitcoin Netzwerk gegenwärtig mindestens **52,6% emissionsfreie Energie**. Das liegt weit über dem [globalen Durchschnitt von 36,7%]( 
 https://ourworldindata.org/electricity-mix).
 
-![](assets/images/2023-08-18-klimakiller/4.png)
+![](/assets/images/2023-08-18-klimakiller/4.png)
 
 _Abb. 4: [Bitcoins emissionsfreie Energienutzung nach BEEST Model] (https://batcoinz.com/BEEST/)_ 
 
@@ -93,7 +93,7 @@ beschreiben sie im Detail, wie sie den Cambridge Bitcoin Electricity Consumption
 
  
 
-![](assets/images/2023-08-18-klimakiller/5.png)
+![](/assets/images/2023-08-18-klimakiller/5.png)
 
 _Abb. 5: Anteil nicht-fossiler Energien des Bitcoin Netzwerks mit Goldindustrie und Bankensystem.
 Quellen: 
@@ -106,7 +106,7 @@ Quellen:
 Der Bankensektor nutzt etwa den globalen Durchschnitt (wenn man den Pendelverkehr der Bankangestellten nicht mitrechnet). Während [die Goldindustrie nur zu 1/3 elektrifiziert arbeitet](https://www.goldmoney.com/research/gold-price-framework-vol-2-the-energy-side-of-the-equation-part-ii) und bei nur 13% landet.
 Wie sehen die Treibhausgas-Emissionen im Vergleich aus?
 
-##Emissionen
+## Emissionen
 
 Basierend auf den Berechnungen von Batten oder dem CCAF liegt das Bitcoin Netzwerk bei [34-63 Mt/Jahr CO<sub>2</sub>e] (https://batcoinz.com/accurately-dynamically-calculating-bitcoin-network-emissions/). Das entspricht ca. einem Tausendstel der globalen Treibhausgasemissionen.
 
@@ -122,7 +122,7 @@ Mit Gold kann ich aber nur sehr schlecht meinen Kaffee an der Ecke, meine Rechnu
 Banken liegen laut der [Schätzung von Hass McCook]( https://hassmccook.medium.com/comparing-bitcoins-environmental-impact-f56b18014f64), die sich deckt mit dem berechneten Energieverbrauch von Michel Khazzaka und dem Anteil erneuerbarer Energien des globalen Strommixes, bei ca. **400 Mt CO2e/Jahr**. Das entspricht in etwa dem 10-fachen des Bitcoin Netzwerks. Das Paper von Michel Khazzaka [“Bitcoin: Cryptopayments Energy Efficieny”](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4125499#) überschlägt zudem, dass die Menge an Arbeitnehmern, die zu Bankfilialen pendeln müssen, diesen Wert vermutlich noch einmal mehr als verdreifachen würden.
 
 
-![](assets/images/2023-08-18-klimakiller/6.png)
+![](/assets/images/2023-08-18-klimakiller/6.png)
 
 _Abb. 6: Vergleich Treibhausgas-Emissionen des Bitcoin Netzwerks mit der Goldindustrie und dem Bankensystem. Quellen: 
 1. [Daniel Batten](https://batcoinz.com/accurately-dynamically-calculating-bitcoin-network-emissions/)
@@ -137,7 +137,7 @@ Die Emissionen, die durch globale Finanzunternehmen auf diese Art verursacht wer
 Der **US-Bankensektor war in 2020** für die [Finanzierung von schätzungsweise **2000 Mt CO<sub>2</sub>e** verantwortlich](https://static1.squarespace.com/static/6281708e8ff18c23842b1d0b/t/6283204b3556a5125ce13b37/1652760661661/The+Carbon+Bankroll+Report+%285-17-2022%29.pdf). Das entspricht ca. der **50-fachen Emissionsmenge des Bitcoin Netzwerks**. Und weil manche Autoren gerne unangebrachte Ländervergleiche machen: Wäre der US-Bankensektor ein Land, wäre er allein der fünftgrößte Treibhausgas-Emittent ([Artikel: "bitcoin vs. banks"](https://bitcoinsozial.de/bitcoin_vs_banks/))_
 
 
-##Der Trend 
+## Der Trend 
 
 Über die letzten Jahre hat sich der Anteil erneuerbarer Energien für Bitcoin-Mining erhöht und liegt mittlerweile deutlich vor anderen Sektoren. Das ist möglich durch die steigende Anzahl von Mining Projekten, die gezielt erneuerbare Energie nutzen. 
 
@@ -157,7 +157,7 @@ Das ist anders als bspw. beim Goldabbau. Unternehmen 1 baut nicht weniger ab, nu
 Da Bitcoin-Miner durch den *difficulty adjusted PoW* Mechanismus um eine mathematisch festgelegte, konstante Menge abbaubarer Bitcoin pro Zeiteinheit konkurrieren, sinken die Einnahmen für alle bereits arbeitenden Miner, wenn mehr Mining Geräte ans Netz gehen. 
 Die Einnahmen der Miner, die sie pro Rechenoperation (Hash) bekommen nennt sich Hashpreis (z.B. Dollar/TH) und dieser fällt kontinuierlich (egal ob in Bitcoin oder Dollar gemessen).
 
-![](assets/images/2023-08-18-klimakiller/7.png)
+![](/assets/images/2023-08-18-klimakiller/7.png)
 
 _Abb. 7: [Hashpreis der letzten 6 Jahre in Dollar pro Terahash (TH)](https://charts.woobull.com/bitcoin-hash-price/)_ 
 
@@ -185,7 +185,7 @@ bewerten Consolvo und Caron Bitcoin nach ESG-Maßstäben und geben zu E wie Envi
 Auch medial könnte sich der Wind also drehen, wenn diese Erkenntnisse in den Mainstream vordringen und sich weiter in der Praxis bewahrheiten.
 
 
-##Bitcoin ist der T-800 
+## Bitcoin ist der T-800 
 
 Der Klimawandel ist real und stellt uns vor eine große Aufgabe. Bitcoin läuft zwar zu mehr als 50% auf emissionsfreier Energie, aber ist noch CO<sub>2</sub>-positiv und somit in diesem Bereich noch Teil des Problems. 
 Die Emissionswerte von Gold und Banken liegen in Summe jedoch mindestens zehn Mal höher. Verglichen dazu ist Bitcoin also sicher kein „Killer".
@@ -198,5 +198,5 @@ Wir könnten in den kommenden Jahrzehnten durch die Nutzung von Bitcoin, die Emi
 
 Es wird sich zeigen, welche Rolle Bitcoin in der Zukunft spielen wird. Das Drehbuch liegt in unserer Hand. 
 
-![](assets/images/2023-08-18-klimakiller/Ende.png)
+![](/assets/images/2023-08-18-klimakiller/Ende.png)
 

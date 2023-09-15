@@ -44,8 +44,7 @@ Ist das viel oder wenig für ein globales Zahlungsnetzwerk das heute schon Milli
 
 Der **Wertspeicher Gold** und dessen Industrie verbauchen jährlich zwischen [130](https://ccaf.io/cbnsi/cbeci/comparisons) und [240](https://docsend.com/view/adwmdeeyfvqwecj2) TWh.
 Den Verbrauch des globalen **Zahlungsnetzwerks der Banken** hat Michel Khazzaka in seinem wissenschaftlichen Paper 
-“[Bitcoin: Cryptopayments Energy Efficieny]
-(https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4125499#)" 
+“[Bitcoin: Cryptopayments Energy Efficieny](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4125499#)" 
 untersucht.
 
 Er berechnet und vergleicht den **Energieverbrauch des derzeitigen monetären Zahlungssystems** mit Bitcoin. Er betont, dass man alle Bereiche des klassischen monetären Zahlungssystems einbeziehen muss, die Bitcoin potentiell ersetzen kann: Erzeugung von Banknoten und Münzen, Bargeldmanagement an Bankautomaten, Kartenzahlungen, Bank- und Interbankengeschäfte. 
@@ -53,11 +52,7 @@ Er berechnet und vergleicht den **Energieverbrauch des derzeitigen monetären Za
  
 ![](/assets/images/2023-08-18-klimakiller/2.png)
 
-_Abb. 2: Vergleich des abgeschätzten, jährlichen Energieverbrauchs des Bitcoin Netzwerks mit Goldindustrie und Bankensystem. 
-Quellen: 
-1. [CCAF](https://ccaf.io/cbnsi/cbeci/comparisons)
-2. [Galaxy Digital Bericht](https://docsend.com/view/adwmdeeyfvqwecj2)
-3. [“Bitcoin: Cryptopayments Energy Efficieny”](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4125499#)_
+_Abb. 2: Vergleich des abgeschätzten, jährlichen Energieverbrauchs des Bitcoin Netzwerks mit Goldindustrie und Bankensystem. Quellen: [CCAF](https://ccaf.io/cbnsi/cbeci/comparisons), [Galaxy Digital Bericht](https://docsend.com/view/adwmdeeyfvqwecj2), [“Bitcoin: Cryptopayments Energy Efficieny”](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4125499#)_
 
 
 **Anteil Erneuerbarer Energiequellen**
@@ -65,9 +60,9 @@ Quellen:
 Der Unterschied zum Betreiben von Banken und Goldminen ist, dass **Bitcoin ausschließlich Strom** als Treibstoff nutzt. Prinzipiell ist Bitcoin Mining somit genauso klimaschädlich wie Elektroauto fahren. Der globale Strommix besteht immer noch zu [63% aus fossilen Energieträgern.](https://ourworldindata.org/electricity-mix)
 Eine genaue Berechnung zum Anteil erneuerbarer Energien muss also einbeziehen, woher Mining Geräte ihren Strom beziehen und **welcher Strommix genutzt wird**. Während das Cambridge Centre for Alternative Finance (CCAF) einen durchschnittlichen Strommix mit 38% Erneuerbaren berechnet, kommt das Bitcoin Mining Council (BMC) auf 59% emissionsfreie Energiequellen.  Und weil das BMC quasi in Selbstauskunft berichtet und das CCAF eine unabhängige wissenschaftliche Einrichtung ist, wird medial eher der niedrigere Wert zitiert. Die [Berechnung des CCAF basiert](https://ccaf.io/cbnsi/cbeci/ghg/methodology) dabei auf der Länderzuordnung der Miner basierend auf deren IP-Adressen und dem jeweiligen Strommix des Landes (bzw. Region des Landes für China und die USA) und ist demzufolge nur eine grobe Näherung. 
 
-Übrigens, die mit Abstand am meisten zitierten Zahlen zum Bitcoin Mining basieren auf den [zurecht kritisierten Berechnungen] (https://bitcoinmagazine.com/business/not-science-digiconomist-bitcoin) des bei der niederländischen Zentralbank angestellten Datenanalysten ([Alex de Vries/Digiconomist] (https://www.linkedin.com/in/alex-de-vries-a5b51349)) – die Quelle des [Killer-FAZ-Artikels](https://www.faz.net/aktuell/finanzen/bitcoin-als-klimakiller-der-energieverbrauch-der-digitalwaehrung-18574317.html).
+Übrigens, die mit Abstand am meisten zitierten Zahlen zum Bitcoin Mining basieren auf den [zurecht kritisierten Berechnungen](https://bitcoinmagazine.com/business/not-science-digiconomist-bitcoin) des bei der niederländischen Zentralbank angestellten Datenanalysten ([Alex de Vries/Digiconomist](https://www.linkedin.com/in/alex-de-vries-a5b51349)) – die Quelle des [Killer-FAZ-Artikels](https://www.faz.net/aktuell/finanzen/bitcoin-als-klimakiller-der-energieverbrauch-der-digitalwaehrung-18574317.html).
 
-Die vor kurzem veröffentlichte Analysemethode von [Karim Helmy](https://twitter.com/karimhelpme)  und [Coinmetrics] (https://twitter.com/coinmetrics), in der Miningeräte (ASICs) über ihren Fingerprint identifiziert werden konnten, liefert über die Hashrate die zur Zeit [genauesten Rückschlüsse über die Energienutzung des Bitcoin Netzwerks](https://twitter.com/karimhelpme/status/1668592294440890368?s=20).
+Die vor kurzem veröffentlichte Analysemethode von [Karim Helmy](https://twitter.com/karimhelpme)  und [Coinmetrics](https://twitter.com/coinmetrics), in der Miningeräte (ASICs) über ihren Fingerprint identifiziert werden konnten, liefert über die Hashrate die zur Zeit [genauesten Rückschlüsse über die Energienutzung des Bitcoin Netzwerks](https://twitter.com/karimhelpme/status/1668592294440890368?s=20).
 Im Vergleich von Cambridge und Digiconomist zeigt sich, dass Digiconomist zwischenzeitlich den Verbrauch um mehr als 100% überschätzt hat. Da Digiconomist den Bitcoinpreis als Grundlage für seine Berechnung nutzt, wird zum Zeitpunkt des medialen Hypes auch ein maßlos überschätzte Energienutzung errechnet, die dann direkt als schockierende Statements abgedruckt werden.
 
 ![](/assets/images/2023-08-18-klimakiller/3.png)
@@ -82,7 +77,7 @@ https://ourworldindata.org/electricity-mix).
 
 ![](/assets/images/2023-08-18-klimakiller/4.png)
 
-_Abb. 4: [Bitcoins emissionsfreie Energienutzung nach BEEST Model] (https://batcoinz.com/BEEST/)_ 
+_Abb. 4: [Bitcoins emissionsfreie Energienutzung nach BEEST Model](https://batcoinz.com/BEEST/)_ 
 
 
 Das CCAF-Modell berücksichtigt z.B. nicht die off-grid Miner, die nicht am Stromnetz sind (10,8%), Methan Flaring (1,0%) und die Abwanderung der Miner aus Kasachstan (1,8%). Unter Berücksichtigung dieser Ausschlüsse ergibt sich ein nachhaltiger Energiemix von 52,6 %. Diese Zahl stellt eine untere Schätzung von Daniel Batten dar und ist daher nicht unvereinbar mit der BMC-Studie, die 59,9 % emissionsfreie Energie ausweist.
@@ -95,20 +90,14 @@ beschreiben sie im Detail, wie sie den Cambridge Bitcoin Electricity Consumption
 
 ![](/assets/images/2023-08-18-klimakiller/5.png)
 
-_Abb. 5: Anteil nicht-fossiler Energien des Bitcoin Netzwerks mit Goldindustrie und Bankensystem.
-Quellen: 
-1. [CCAF](https://ccaf.io/cbnsi/cbeci/ghg)
-2. [Daniel Batten](https://batcoinz.com/comparing-bitcoin-mining-to-other-industries-energy-mix/)
-3. [BMC](https://bitcoinminingcouncil.com/bitcoin-mining-council-survey-confirms-year-on-year-improvements-in-sustainable-power-and-technological-efficiency-in-h1-2023/)
-4. [Goldmoney Research Bericht](https://www.goldmoney.com/research/gold-price-framework-vol-2-the-energy-side-of-the-equation-part-ii)
-5. [Daniel Batten](https://batcoinz.com/comparing-bitcoin-mining-to-other-industries-energy-mix/)_
+_Abb. 5: Anteil nicht-fossiler Energien des Bitcoin Netzwerks mit Goldindustrie und Bankensystem. Quellen: [CCAF](https://ccaf.io/cbnsi/cbeci/ghg), [Daniel Batten](https://batcoinz.com/comparing-bitcoin-mining-to-other-industries-energy-mix/), [BMC](https://bitcoinminingcouncil.com/bitcoin-mining-council-survey-confirms-year-on-year-improvements-in-sustainable-power-and-technological-efficiency-in-h1-2023/), [Goldmoney Research Bericht](https://www.goldmoney.com/research/gold-price-framework-vol-2-the-energy-side-of-the-equation-part-ii), [Daniel Batten](https://batcoinz.com/comparing-bitcoin-mining-to-other-industries-energy-mix/)_
 
 Der Bankensektor nutzt etwa den globalen Durchschnitt (wenn man den Pendelverkehr der Bankangestellten nicht mitrechnet). Während [die Goldindustrie nur zu 1/3 elektrifiziert arbeitet](https://www.goldmoney.com/research/gold-price-framework-vol-2-the-energy-side-of-the-equation-part-ii) und bei nur 13% landet.
 Wie sehen die Treibhausgas-Emissionen im Vergleich aus?
 
 ## Emissionen
 
-Basierend auf den Berechnungen von Batten oder dem CCAF liegt das Bitcoin Netzwerk bei [34-63 Mt/Jahr CO<sub>2</sub>e] (https://batcoinz.com/accurately-dynamically-calculating-bitcoin-network-emissions/). Das entspricht ca. einem Tausendstel der globalen Treibhausgasemissionen.
+Basierend auf den Berechnungen von Batten oder dem CCAF liegt das Bitcoin Netzwerk bei [34-63 Mt/Jahr CO<sub>2</sub>e](https://batcoinz.com/accurately-dynamically-calculating-bitcoin-network-emissions/). Das entspricht ca. einem Tausendstel der globalen Treibhausgasemissionen.
 
 **Wieviel verursacht der Wertspeicher Gold?** 
 
@@ -124,11 +113,7 @@ Banken liegen laut der [Schätzung von Hass McCook]( https://hassmccook.medium.c
 
 ![](/assets/images/2023-08-18-klimakiller/6.png)
 
-_Abb. 6: Vergleich Treibhausgas-Emissionen des Bitcoin Netzwerks mit der Goldindustrie und dem Bankensystem. Quellen: 
-1. [Daniel Batten](https://batcoinz.com/accurately-dynamically-calculating-bitcoin-network-emissions/)
-2. [CCAF](https://ccaf.io/cbnsi/cbeci/ghg)
-3. [“Gold and climate change” Bericht](https://www.gold.org/download/file/14316/gold-and-climate-change-current-and-future-impacts-3.pdf)
-4. [McCook Medium](https://hassmccook.medium.com/comparing-bitcoins-environmental-impact-f56b18014f64)_ 
+_Abb. 6: Vergleich Treibhausgas-Emissionen des Bitcoin Netzwerks mit der Goldindustrie und dem Bankensystem. Quellen: [Daniel Batten](https://batcoinz.com/accurately-dynamically-calculating-bitcoin-network-emissions/), [CCAF](https://ccaf.io/cbnsi/cbeci/ghg), [“Gold and climate change” Bericht](https://www.gold.org/download/file/14316/gold-and-climate-change-current-and-future-impacts-3.pdf), [McCook Medium](https://hassmccook.medium.com/comparing-bitcoins-environmental-impact-f56b18014f64)_ 
 
 Was ebenfalls nicht ungenannt bleiben sollte: In den Emissionswerten der Banken sind die Investitionen des Bankensektors in fossile Brennstoff Industrien noch nicht eingerechnet. 
 Das Geld von Privatpersonen und Unternehmen liegt nicht nur passiv auf Bankkonten, um Zinsen zu erwirtschaften. Mit diesen Einlagen werden per Investition oder Kreditvergabe weitere Unternehmen finanziert, die weitere Emissionen verursachen.
@@ -141,7 +126,7 @@ Der **US-Bankensektor war in 2020** für die [Finanzierung von schätzungsweise 
 
 Über die letzten Jahre hat sich der Anteil erneuerbarer Energien für Bitcoin-Mining erhöht und liegt mittlerweile deutlich vor anderen Sektoren. Das ist möglich durch die steigende Anzahl von Mining Projekten, die gezielt erneuerbare Energie nutzen. 
 
-[Daniel Batten zählt] (https://twitter.com/DSBatten/status/1586551389492084736?s=20) mittlerweile **18 klimaneutrale** (Cleanspark, DPO, Blockfusion, Aspen, Bitfarms, Gryphon, Soluna, Hive, Cowa, Sato, Genesis, Iris, Gridshare, CyberianMine, DameTech, Arkon Energy, Blockstream/Block/Tesla, El Salvador + Tether) und **12 klimapositive** Unternehmen (Crusoe, GreenMiningCapital, ArthurMining, JAI, Giga, Nakamotor, Imperium Digital, Vespene, NodalPower, Scilling, Biomining).
+[Daniel Batten zählt](https://twitter.com/DSBatten/status/1586551389492084736?s=20) mittlerweile **18 klimaneutrale** (Cleanspark, DPO, Blockfusion, Aspen, Bitfarms, Gryphon, Soluna, Hive, Cowa, Sato, Genesis, Iris, Gridshare, CyberianMine, DameTech, Arkon Energy, Blockstream/Block/Tesla, El Salvador + Tether) und **12 klimapositive** Unternehmen (Crusoe, GreenMiningCapital, ArthurMining, JAI, Giga, Nakamotor, Imperium Digital, Vespene, NodalPower, Scilling, Biomining).
 Klimapositives Bitcoin Mining? Wie ist das möglich?
 Die Emissionsreduktion des potenteren Klimagases Methan durch Verbrennung zum weniger potenten CO<sub>2</sub> mindert den Treibhauseffekt des freigesetzten Gases [(Forbes)]( 
 https://www.forbes.com/sites/digital-assets/2023/07/08/bitcoin-network-to-reduce-more-emissions-than-its-energy-sources-produce/?sh=60e9ad5744d5).
@@ -164,7 +149,7 @@ _Abb. 7: [Hashpreis der letzten 6 Jahre in Dollar pro Terahash (TH)](https://cha
 Durch eine steigende Hashrate im Netzwerk wird der Hashpreis und somit die Einnahmen der Unternehmen immer geringer. Die **Nutzung von günstigen Energiequellen** wird somit immer wichtiger, um die Betriebskosten zu senken und profitabel zu bleiben. Gleichzeitig sind **erneuerbare Energiequellen** wie Solar- und Windenergie subventionsbereinigt seit ca. 10 Jahren [günstiger als fossile Energieträger]( https://www.lazard.com/research-insights/2023-levelized-cost-of-energyplus/). Die zunehmende Nutzung dieser Energiequellen im Mining-Prozess ist eine logische Folge. 
 
 Als Faustregel gilt: Nur Strom, der 5 cent/kWh oder weniger kostet ist profitabel für Miner.
-Würde fossile Energie nicht massiv subventioniert werden ([global 6,8% des BIPs] (https://www.diw.de/de/diw_01.c.827737.de/nachrichten/schluss_mit_den_gigantischen_subventionen_fuer_kohle__oel_und_gas.html)) 
+Würde fossile Energie nicht massiv subventioniert werden ([global 6,8% des BIPs](https://www.diw.de/de/diw_01.c.827737.de/nachrichten/schluss_mit_den_gigantischen_subventionen_fuer_kohle__oel_und_gas.html)) 
 wären sie deutlich teurer und die Bitcoin Hashrate vermutlich schon heute deutlich grüner.
 
 In der Debatte oft übersehen, aber ein wichtiger Sonderfall: **Am günstigsten ist Strom, wenn er keinen Abnehmer findet.** Das ist entweder der Fall, wenn der Erzeuger nicht am Stromnetz hängt und einspeisen kann („stranded energy“) oder es kurzfristig zu wenige Abnehmer für den gerade erzeugten Strom gibt. Letzteres wird zukünftig durch den [Ausbau erneuerbarer Energie häufiger der Fall sein](https://bitcoinsozial.de/ziemlich-beste-freunde/).

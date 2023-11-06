@@ -28,7 +28,7 @@ Wenn wir nun bedenken, dass es keine Alternative zu diesem Geldsystem gibt, wie 
 
 Die Apathie, die wir empfinden, ist keine Einbildung, sondern ein systemisches Merkmal eines Geldsystems, das für die Vielen von den Wenigen erdacht wurde.
 
-Heute jedoch gibt es mit Bitcoin zum ersten Mal in der Geschichte ein Geld, das andersherum funktioniert; ein Geld, das aus direkter Aktion entstanden ist, von der Basis des Internets — erdacht von den Menschen, für die Menschen. Ein Geld, das niemandem außer Ihnen gehört, das sich am besten unter der Mitwirkung jedes Einzelnen entwickelt, da wir es sind, die seine Regeln schreiben — unabhängig von unserer Nationalität, Rasse, Religion oder politischen Überzeugung.
+Heute jedoch gibt es mit Bitcoin zum ersten Mal in der Geschichte ein Geld, das andersherum funktioniert; ein Geld, das aus direkter Aktion entstanden ist, von der Basis des Internets — erdacht von den Menschen, für die Menschen. Ein Geld, das niemandem außer Ihnen gehört, das sich am besten unter der Mitwirkung jedes Einzelnen entwickelt, da wir es sind, die seine Regeln schreiben — unabhängig von unserer Nationalität, Religion oder politischen Überzeugung.
 
 Wenn wir der demokratischen Ohnmacht entkommen wollen, in die wir uns in den letzten 400 Jahren begeben zu haben scheinen, scheint es heute keine bessere Alternative zu geben.
 

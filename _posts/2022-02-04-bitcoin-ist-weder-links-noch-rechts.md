@@ -35,7 +35,7 @@ Die althergebrachten Finanzsysteme [schließen Menschen aus und zementieren Ungl
 
 Finanzielle Inklusion ist wichtig. Der Zugang zu Ersparnissen, Zahlungen und Krediten ermöglicht menschlichen Wohlstand. Bitcoin macht dies für jeden möglich, und zwar in größerem Umfang als [PayPal](https://www.independent.co.uk/life-style/gadgets-and-tech/bitcoin-paypal-2021-volume-mastercard-visa-b1964330.html). Mit gerade einmal 13 Jahren ist es bereits das umfassendste und offenste Finanznetzwerk der Welt.
 
-Jeder, der ein günstiges Smartphone besitzt, kann damit Geldwerte senden oder empfangen, unabhängig von Standort, Rasse, Geschlecht, Religion, sexueller Orientierung, Alter, Kreditwürdigkeit oder Einwanderungsstatus. Das ist gewollt.
+Jeder, der ein günstiges Smartphone besitzt, kann damit Geldwerte senden oder empfangen, unabhängig von Standort, Geschlecht, Religion, sexueller Orientierung, Alter, Kreditwürdigkeit oder Einwanderungsstatus. Das ist gewollt.
 
 #### Minderheiten nehmen Bitcoin schneller an
 

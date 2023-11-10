@@ -97,6 +97,14 @@ authors:
     # email: fakemail@gmail.com
     twitter: https://twitter.com/OfBehodler
 
+  philipp:
+    name: Philipp
+    site: https://bitcoin4good.de/
+    avatar: assets/images/authors/avatar_philipp.jpg
+    bio: "Gründer BITCOIN4GOOD"
+    # email: fakemail@gmail.com
+    twitter: https://twitter.com/bitcoin4good_de
+
   resistancemoney:
     name: Resistance Money
     site: http://resistance.money/

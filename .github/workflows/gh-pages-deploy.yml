@@ -1,0 +1,68 @@
+name: Build and deploy Jekyll site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+  schedule:
+    - cron: "0 7 * * *"
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: GitHub Checkout
+        uses: actions/checkout@v2
+      - name: Bundler Cache
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      - name: Install libvips via apt
+        if: runner.os == 'Linux'
+        run: |
+          # sudo -E apt-get update -qq -o Acquire::Retries=3
+          sudo -E apt-get install -y libvips imagemagick libvips-tools
+          # echo "LD_LIBRARY_PATH=/usr/lib/" >> $GITHUB_ENV
+      - name: Build Jeckyll site
+        run: |
+          echo "Installing bundler"
+          sudo gem install bundler
+          echo "Installing gems..."
+          bundle config path vendor/bundle
+          bundle install
+          echo "Building Jekyll site..."
+          JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build
+      - name: Publish page
+        run: |
+          set -e
+          DEST="${JEKYLL_DESTINATION:-_site}"
+          REPO="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          BRANCH="gh-pages"
+          BUNDLE_BUILD__SASSC=--disable-march-tune-native
+          echo "Publishing..."
+          cd ${DEST}
+          git init
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git add .
+          git commit -m "published by GitHub Actions"
+          git push --force ${REPO} master:${BRANCH}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
+          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+      # - name: Build & Deploy to GitHub Pages
+      #   uses: joshlarsen/jekyll4-deploy-gh-pages@master
+      #   env:
+      #     LD_LIBRARY_PATH: /usr/lib/
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
+      #     GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+      # - name: Build & Deploy to GitHub Pages
+      #   uses: jeffreytse/jekyll-deploy-action@master
+      #   with:
+      #     provider: "github"
+      #     token: ${{ secrets.GITHUB_TOKEN }}

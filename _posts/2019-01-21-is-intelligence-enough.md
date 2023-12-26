@@ -1,10 +1,14 @@
 ---
+title: Is Intelligence Enough
+date: 2019-01-21 00:00:00 Z
+categories:
+- Jekyll
+- tutorial
 layout: post
-title:  "Is Intelligence Enough"
 author: sal
-categories: [ Jekyll, tutorial ]
 image: https://images.unsplash.com/photo-1523740856324-f2ce89135981?ixlib=rb-1.2.1&auto=format&fit=crop&w=798&q=80
 ---
+
 Education must also train one for quick, resolute and effective thinking. To think incisively and to think for one's self is very difficult. We are prone to let our mental life become invaded by legions of half truths, prejudices, and propaganda. At this point, I often wonder whether or not education is fulfilling its purpose. A great majority of the so-called educated people do not think logically and scientifically. 
 
 > Even the press, the classroom, the platform, and the pulpit in many instances do not give us objective and unbiased truths. To save man from the morass of propaganda, in my opinion, is one of the chief aims of education. Education must enable one to sift and weigh evidence, to discern the true from the false, the real from the unreal, and the facts from the fiction.

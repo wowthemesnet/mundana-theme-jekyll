@@ -1,8 +1,11 @@
 ---
+title: What is Jekyll
+date: 2019-01-18 00:00:00 Z
+categories:
+- Jekyll
+- tutorial
 layout: post
-title:  "What is Jekyll"
 author: jane
-categories: [ Jekyll, tutorial ]
 image: assets/images/11.jpg
 ---
 

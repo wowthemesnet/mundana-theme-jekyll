@@ -1,11 +1,15 @@
 ---
+title: Never stopped worrying or loving the bomb
+date: 2019-01-22 00:00:00 Z
+categories:
+- Jekyll
+tags:
+- featured
 layout: post
-title:  "Never stopped worrying or loving the bomb"
 author: sal
-categories: [ Jekyll ]
 image: assets/images/14.jpg
-tags: featured
 ---
+
 I’ve been through fire and water, I tell you! From my earliest pebblehood the wildest things you could imagine have been happening to this world of ours, and I have been right in the midst of them.
 
 So begins Hallam Hawksworth’s The Strange Adventures of a Pebble. Written in the 1920s, the book was part of a series which also included The Adventures of a Grain of Dust and A Year in the Wonderland of Trees, all of which were supposed to introduce children to the world of Natural Sciences. 

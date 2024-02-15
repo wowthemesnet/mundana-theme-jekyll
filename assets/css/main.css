@@ -5032,6 +5032,10 @@ button.bg-secondary:hover,
 button.bg-secondary:focus {
   background-color: #5f1cc5 !important; }
 
+.bg-jumbotron{
+  background-color: red;
+}  
+
 .bg-success {
   background-color: #03a87c !important; }
 

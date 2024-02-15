@@ -34,6 +34,12 @@ authors:
       bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
       email:          fakemail@gmail.com
       twitter:        https://twitter.com/wowthemesnet
+    Adam:
+      name:           Adam
+      site:           https://adambougher.com
+      avatar:         /assets/images/avatar1.jpg
+      bio:            "Hay there! My Name is Adam Bougher and i work at the NIU office of innovation at 71North!"
+      email:          a.bougher1999@gmail.com
  
 # Defaults
 defaults:

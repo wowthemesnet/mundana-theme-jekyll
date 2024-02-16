@@ -5032,8 +5032,8 @@ button.bg-secondary:hover,
 button.bg-secondary:focus {
   background-color: #5f1cc5 !important; }
 
-.bg-jumbotron{
-  background-color: red;
+.bg-jumbotron-text{
+  background-color: gray;
 }  
 
 .bg-success {
@@ -8464,3 +8464,56 @@ html {
     align-self: baseline !important; }
   .align-self-xl-stretch {
     align-self: stretch !important; } }
+
+
+
+.carousel-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 44px 0;
+  transition: all 0.25s ease-in;
+}
+
+.carousel-view .item-list {
+  max-width: 950px;
+  width: 100vw;
+  height: 30vw;
+  padding: 25px 0px;
+  display: flex;
+  scroll-behavior: smooth;
+  transition: all 0.25s ease-in;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+
+.prev-btn {
+  background = none;
+  cursor: pointer;
+}
+
+.next-btn {
+  cursor: pointer;
+}
+
+.item {
+  scroll-snap-align: center;
+  width:  auto;
+  min-width: 20vw;
+  height: 100%;
+  background-color: gray;
+  object-fit: fit;
+  border-radius:8px;
+}
+
+.item .p{
+	margin-top: 25px;
+	margin-right: 10px;
+	margin-left: 10px;
+	color: black;
+	overflow: hidden;
+  }

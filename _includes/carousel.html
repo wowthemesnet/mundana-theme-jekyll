@@ -4,7 +4,7 @@
     {% if post.tags contains "sticky" %}
     <a href="{{site.baseurl}}{{post.url}}">
         <div class="mySlides">
-            <h2>{{post.title}}</h2>
+            <h2 class="text">{{post.title}}</h2>
             <img src="{{post.image}}">
         </div>
     </a>
@@ -25,7 +25,7 @@
 
     {% capture val %}{% increment val %}{% endcapture %}
 
-    <span class="dot" onclick="currentSlide({{ val }})">{{ val }}</span>
+    <span class="dot" onclick="currentSlide({{ val }})"></span>
         
 
     {% endif %}
@@ -62,3 +62,4 @@
       dots[slideIndex-1].className += " active";
     }
 </script>
+<br><br>

@@ -11,7 +11,9 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
     
 {% if page.url == "/" %}
     
-    
+{% include carousel.html %}
+
+<h1>Latest posts</h1><br>
     
 <!-- Begin post excerpts, let's highlight the first 4 posts on top -->
 <div class="row remove-site-content-margin">
@@ -132,10 +134,6 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
     </div>
     
 </div>
-
-{% include jumbotron.html %}
-
-{% include carousel.html %}
 
 {% endif %} <!--endif page url is / -->
     

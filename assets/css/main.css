@@ -8477,14 +8477,15 @@ html {
 /* Hide the images by default */
 .mySlides {
   display: none;
-  object-fit: cover;
 }
 
 .mySlides img{
-  display: block;
-  min-width: 100%;
-  min-height: 90%;
+  display: flex;
   object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: 500px;
 }
 
 /* Next & previous buttons */
@@ -8516,22 +8517,13 @@ html {
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
+  color: #000;
+  font-size: 38px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
   width: 100%;
   text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
 }
 
 /* The dots/bullets/indicators */

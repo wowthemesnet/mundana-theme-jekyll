@@ -8,16 +8,16 @@ permalink: "/author-adam.html"
     <div class="col-md-8">        
         <div class="row align-items-center mb-5">
             <div class="col-md-9">
-                <h2 class="font-weight-bold">{{page.title}} <span class="small btn btn-outline-success btn-sm btn-round"><a href="{{ site.authors.adam.twitter }}">Follow</a></span></h2>
-                <p><a href="{{ site.authors.adam.site }}">{{ site.authors.adam.site }}</a></p>
+                <h2 class="font-weight-bold">{{page.title}} <span class="small btn btn-outline-success btn-sm btn-round"><a href="{{ site.data.people.adam.twitter }}">Follow</a></span></h2>
+                <p><a href="{{ site.data.people.adam.site }}">{{ site.data.people.adam.site }}</a></p>
                 <p class="excerpt">{{ site.authors.adam.bio }}</p>
             </div>
             <div class="col-md-3 text-right">
-                <img alt="{{ site.authors.adam.name }}" src="{{site.baseurl}}/{{ site.authors.adam.avatar }}" class="rounded-circle" height="100" width="100">
+                <img alt="{{ site.data.people.adam.name }}" src="{{site.baseurl}}{{ site.data.people.adam.avatar }}" class="rounded-circle" height="100" width="100">
             </div>
         </div>
         <h4 class="font-weight-bold spanborder"><span>Posts by {{page.title}}</span></h4>
-            {% assign posts = site.posts | where:"author","Adam" %}
+            {% assign posts = site.posts | where:"author","adam" %}
             {% for post in posts %}
             {% include main-loop-card.html %}
             {% endfor %}

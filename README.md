@@ -1,7 +1,7 @@
-# Jekyll Theme - Mundana by WowThemes.net
+# my blog-Mundana theme
 
-[Live Demo](https://wowthemesnet.github.io/mundana-theme-jekyll/) &nbsp; | &nbsp; 
-[Download](https://github.com/wowthemesnet/mundana-theme-jekyll/archive/master.zip) &nbsp; | &nbsp; 
+[Live Demo](https://yeoncode.github.io/) &nbsp; | &nbsp; 
+[Download](https://yeoncode.github.io/) &nbsp; | &nbsp; 
 [Buy me a coffe](https://www.wowthemes.net/donate/) &nbsp; | &nbsp; [Documentation](https://bootstrapstarter.com/mundana-theme-jekyll/) &nbsp; | &nbsp; 
 [WordPress version](https://www.wowthemes.net/themes/mundana-wordpress/) 
 
@@ -17,7 +17,7 @@
 
 2. Clone a copy of your fork on your local, replacing *YOUR-USERNAME* with your Github username.
 
-   `git clone https://github.com/YOUR-USERNAME/mundana-theme-jekyll.git`
+   `git clone https://github.com/yeoncode/mundana-theme-jekyll.git`
 
 3. **Create a branch**: 
 
@@ -48,4 +48,4 @@ Theme designed and developed by [Sal](https://www.wowthemes.net), *free* under M
 
 ### Live Demo
 
-[Live Demo](https://wowthemesnet.github.io/mundana-theme-jekyll/)
+[Live Demo](https://yeoncode.github.io/)

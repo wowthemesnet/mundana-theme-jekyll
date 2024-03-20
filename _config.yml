@@ -1,6 +1,6 @@
 # Site
-name: hyhyhy
-description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+name: my blog
+description: 'code story.'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: '/yeoncode.github.io'

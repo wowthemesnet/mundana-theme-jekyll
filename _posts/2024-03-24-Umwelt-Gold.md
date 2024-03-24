@@ -68,6 +68,6 @@ Mindestens die Hälfte des heutigen Goldbergbaus könnte durch die Verwendung ei
 
 Wenn also das nächste Mal ein umweltbewusster Investor für Gold statt Bitcoin plädiert, sagen Sie ihm:
 
-Das **Wertaufbewahrungsmittel des 21. Jahrhunderts** sollte nicht Landschaften zerstören, Flüsse verseuchen und Menschen vergiften, sondern den [Ausbau erneuerbarer Energien subventioniert](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4634256).
+Das **Wertaufbewahrungsmittel des 21. Jahrhunderts** sollte nicht Landschaften zerstören, Flüsse verseuchen und Menschen vergiften, sondern den [Ausbau erneuerbarer Energien subventionieren](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4634256).
  
 
